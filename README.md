@@ -17,7 +17,7 @@ The issue tracker is in this GitHub repo, and the development occurs in [Smallta
 
 Acknowledgments
 ---------------
-- The [Mercap](www.mercapsoftware.com) Team and Maximiliano Tabacman for the original implementation
+- The [Mercap](http://www.mercapsoftware.com) Team and Maximiliano Tabacman for the original implementation
 - Mariano Martinez Peck for helping with the Pharo port
 
 About Highcharts Js
