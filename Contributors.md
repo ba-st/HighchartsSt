@@ -1,3 +1,3 @@
-Gabriel Omar Cotelli (gcotelli)
-Mariano Martinez Peck
-Maximiliano Tabacman
+- Gabriel Omar Cotelli (gcotelli)
+- Mariano Martinez Peck
+- Maximiliano Tabacman
