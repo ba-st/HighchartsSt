@@ -20,6 +20,5 @@ Acknowledgments
 - The [Mercap](http://www.mercapsoftware.com) Team and Maximiliano Tabacman for the original implementation
 - Mariano Martinez Peck for helping with the Pharo port
 
-About Highcharts Js
--------------------
+### About Highcharts Js
 [Highcharts Js](http://www.highcharts.com/) is an interactive Javascript charting library developed by [Highsoft AS](http://highsoft.com/). The library is Free for Non-Comercial use, for details about the library licensing see the [shop](http://shop.highsoft.com/highcharts.html)
