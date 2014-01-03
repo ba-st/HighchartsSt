@@ -15,6 +15,27 @@ Issues and Source Code
 ----------------------
 The issue tracker is in this GitHub repo, and the development occurs in [SmalltalkHub](http://smalltalkhub.com/#!/~Mercap/HighchartsSt/), mirrored to this repo. 
 
+Try me!
+-------
+To load in Pharo 2 or 3 execute the following in a workspace:
+```Smalltalk
+Gofer it 	
+	url: 'http://smalltalkhub.com/mc/Mercap/HighchartsSt/main';
+	package: 'ConfigurationOfHighchartsSt';
+load.
+
+(Smalltalk at: #ConfigurationOfHighchartsSt) project lastVersion load: #('Development').
+```
+Once the load is finished to try some demo execute: 
+```Smalltalk
+ZnZincServerAdaptor allInstancesDo: [ :each | each stop ].
+(ZnZincServerAdaptor port: 8899)
+   	codec: GRPharoUtf8Codec new;
+     	start.
+```
+
+and browse http://localhost:8899/HighchartsDemo
+
 Acknowledgments
 ---------------
 - The [Mercap](http://www.mercapsoftware.com) Team and Maximiliano Tabacman for the original implementation
