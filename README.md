@@ -34,7 +34,7 @@ ZnZincServerAdaptor allInstancesDo: [ :each | each stop ].
      	start.
 ```
 
-and browse http://localhost:8899/HighchartsDemo
+and browse [the local demo](http://localhost:8899/HighchartsDemo)
 
 Acknowledgments
 ---------------
