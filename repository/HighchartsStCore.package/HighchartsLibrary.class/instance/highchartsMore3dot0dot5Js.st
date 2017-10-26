@@ -1,0 +1,4 @@
+as yet unclassified
+highchartsMore3dot0dot5Js
+
+	self subclassResponsibility

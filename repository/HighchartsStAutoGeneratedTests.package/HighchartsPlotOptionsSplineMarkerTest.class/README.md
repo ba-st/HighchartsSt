@@ -1,0 +1,1 @@
+A HighchartsPlotOptionsSplineMarkerTest is a test class for testing the behavior of HighchartsPlotOptionsSplineMarker

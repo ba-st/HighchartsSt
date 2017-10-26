@@ -1,0 +1,1 @@
+A HighchartsSeriesPolygonTest is a test class for testing the behavior of HighchartsSeriesPolygon

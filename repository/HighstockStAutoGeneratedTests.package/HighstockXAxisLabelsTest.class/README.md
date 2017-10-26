@@ -1,0 +1,1 @@
+A HighstockXAxisLabelsTest is a test class for testing the behavior of HighstockXAxisLabels

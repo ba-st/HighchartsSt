@@ -1,0 +1,4 @@
+acccessing
+value
+
+	^self yValue

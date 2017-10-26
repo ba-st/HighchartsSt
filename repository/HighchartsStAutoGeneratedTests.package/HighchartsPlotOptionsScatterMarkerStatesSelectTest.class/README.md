@@ -1,0 +1,1 @@
+A HighchartsPlotOptionsScatterMarkerStatesSelectTest is a test class for testing the behavior of HighchartsPlotOptionsScatterMarkerStatesSelect

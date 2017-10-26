@@ -1,0 +1,1 @@
+A HighchartsSeriesArearangeEventsTest is a test class for testing the behavior of HighchartsSeriesArearangeEvents

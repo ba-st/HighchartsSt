@@ -1,0 +1,1 @@
+A HighstockPlotOptionsSeriesTest is a test class for testing the behavior of HighstockPlotOptionsSeries

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "HighchartsStTools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rootElement",
+		"deprecatedMethods",
+		"productName"
+	],
+	"name" : "HighchartsImporter",
+	"type" : "normal"
+}

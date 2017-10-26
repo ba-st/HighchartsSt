@@ -1,0 +1,1 @@
+A HighchartsPlotOptionsBarEventsTest is a test class for testing the behavior of HighchartsPlotOptionsBarEvents

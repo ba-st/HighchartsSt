@@ -1,0 +1,1 @@
+A HighstockSeriesAreasplinerangeDataGroupingTest is a test class for testing the behavior of HighstockSeriesAreasplinerangeDataGrouping

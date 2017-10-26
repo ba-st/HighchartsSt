@@ -1,0 +1,1 @@
+A HighchartsSeriesSolidgaugeTest is a test class for testing the behavior of HighchartsSeriesSolidgauge

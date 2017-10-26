@@ -1,0 +1,1 @@
+A HighchartsPlotOptionsAreasplineDataLabelsTest is a test class for testing the behavior of HighchartsPlotOptionsAreasplineDataLabels

@@ -1,0 +1,1 @@
+A HighchartsPlotOptionsSeriesTest is a test class for testing the behavior of HighchartsPlotOptionsSeries

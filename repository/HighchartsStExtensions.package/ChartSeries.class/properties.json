@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "HighchartsStExtensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"data",
+		"configuration"
+	],
+	"name" : "ChartSeries",
+	"type" : "normal"
+}

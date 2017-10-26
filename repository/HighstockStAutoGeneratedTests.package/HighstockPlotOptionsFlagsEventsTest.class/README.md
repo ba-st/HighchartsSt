@@ -1,0 +1,1 @@
+A HighstockPlotOptionsFlagsEventsTest is a test class for testing the behavior of HighstockPlotOptionsFlagsEvents

@@ -1,0 +1,1 @@
+A HighstockSeriesSplineTest is a test class for testing the behavior of HighstockSeriesSpline

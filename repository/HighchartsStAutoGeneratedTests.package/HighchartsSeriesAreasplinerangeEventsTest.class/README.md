@@ -1,0 +1,1 @@
+A HighchartsSeriesAreasplinerangeEventsTest is a test class for testing the behavior of HighchartsSeriesAreasplinerangeEvents

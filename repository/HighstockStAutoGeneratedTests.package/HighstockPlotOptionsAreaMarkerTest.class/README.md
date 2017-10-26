@@ -1,0 +1,1 @@
+A HighstockPlotOptionsAreaMarkerTest is a test class for testing the behavior of HighstockPlotOptionsAreaMarker

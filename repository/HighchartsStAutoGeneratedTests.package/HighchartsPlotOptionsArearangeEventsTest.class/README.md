@@ -1,0 +1,1 @@
+A HighchartsPlotOptionsArearangeEventsTest is a test class for testing the behavior of HighchartsPlotOptionsArearangeEvents

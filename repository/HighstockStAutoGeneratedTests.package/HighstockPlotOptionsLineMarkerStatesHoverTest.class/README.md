@@ -1,0 +1,1 @@
+A HighstockPlotOptionsLineMarkerStatesHoverTest is a test class for testing the behavior of HighstockPlotOptionsLineMarkerStatesHover

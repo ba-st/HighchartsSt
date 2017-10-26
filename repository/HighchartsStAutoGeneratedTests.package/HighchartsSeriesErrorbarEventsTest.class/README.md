@@ -1,0 +1,1 @@
+A HighchartsSeriesErrorbarEventsTest is a test class for testing the behavior of HighchartsSeriesErrorbarEvents

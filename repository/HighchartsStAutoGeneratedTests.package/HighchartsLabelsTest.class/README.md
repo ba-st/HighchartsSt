@@ -1,0 +1,1 @@
+A HighchartsLabelsTest is a test class for testing the behavior of HighchartsLabels

@@ -1,0 +1,1 @@
+A HighstockPlotOptionsSeriesEventsTest is a test class for testing the behavior of HighstockPlotOptionsSeriesEvents

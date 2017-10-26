@@ -1,0 +1,1 @@
+A HighchartsComponent is the abstract superclass of every Highcharts component.

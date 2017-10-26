@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "HighchartsStExtensions",
+	"classinstvars" : [
+		"xValue",
+		"yValue"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"xValue",
+		"name",
+		"yValue"
+	],
+	"name" : "ChartDatum",
+	"type" : "normal"
+}

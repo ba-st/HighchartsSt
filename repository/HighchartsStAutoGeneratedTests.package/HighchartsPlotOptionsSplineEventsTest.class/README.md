@@ -1,0 +1,1 @@
+A HighchartsPlotOptionsSplineEventsTest is a test class for testing the behavior of HighchartsPlotOptionsSplineEvents

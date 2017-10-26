@@ -1,0 +1,1 @@
+A HighstockSeriesColumnrangeTest is a test class for testing the behavior of HighstockSeriesColumnrange

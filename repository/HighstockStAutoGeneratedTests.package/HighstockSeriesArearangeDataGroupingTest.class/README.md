@@ -1,0 +1,1 @@
+A HighstockSeriesArearangeDataGroupingTest is a test class for testing the behavior of HighstockSeriesArearangeDataGrouping

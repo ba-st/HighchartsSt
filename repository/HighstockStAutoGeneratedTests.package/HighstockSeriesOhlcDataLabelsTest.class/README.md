@@ -1,0 +1,1 @@
+A HighstockSeriesOhlcDataLabelsTest is a test class for testing the behavior of HighstockSeriesOhlcDataLabels

@@ -1,0 +1,1 @@
+A HighstockSeriesScatterEventsTest is a test class for testing the behavior of HighstockSeriesScatterEvents

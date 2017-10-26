@@ -1,0 +1,1 @@
+A HighstockSeriesOhlcPointEventsTest is a test class for testing the behavior of HighstockSeriesOhlcPointEvents

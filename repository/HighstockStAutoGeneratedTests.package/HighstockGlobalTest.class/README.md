@@ -1,0 +1,1 @@
+A HighstockGlobalTest is a test class for testing the behavior of HighstockGlobal

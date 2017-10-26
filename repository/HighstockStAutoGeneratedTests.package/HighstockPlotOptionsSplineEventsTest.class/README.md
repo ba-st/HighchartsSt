@@ -1,0 +1,1 @@
+A HighstockPlotOptionsSplineEventsTest is a test class for testing the behavior of HighstockPlotOptionsSplineEvents

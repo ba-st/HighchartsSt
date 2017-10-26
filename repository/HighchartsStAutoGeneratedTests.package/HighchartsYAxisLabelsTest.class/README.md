@@ -1,0 +1,1 @@
+A HighchartsYAxisLabelsTest is a test class for testing the behavior of HighchartsYAxisLabels

@@ -1,0 +1,4 @@
+*HighchartsStExtensions
+newChart
+
+	^ Highchart new

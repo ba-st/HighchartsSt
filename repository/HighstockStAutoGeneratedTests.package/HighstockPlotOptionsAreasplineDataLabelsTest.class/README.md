@@ -1,0 +1,1 @@
+A HighstockPlotOptionsAreasplineDataLabelsTest is a test class for testing the behavior of HighstockPlotOptionsAreasplineDataLabels

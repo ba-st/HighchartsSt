@@ -1,0 +1,11 @@
+as yet unclassified
+testTrackBackgroundColor
+
+	| component stream |
+
+	component := HighstockScrollbar new.
+	component trackBackgroundColor: 'test'.
+	stream := WriteStream on: String new.
+	component javascriptContentOn: stream.
+
+	self assert: stream contents = '{"trackBackgroundColor":"test"}'

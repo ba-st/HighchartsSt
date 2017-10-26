@@ -1,0 +1,4 @@
+accessing
+highchartsComponentClass
+
+	^ HighchartsComponent

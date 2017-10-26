@@ -1,0 +1,1 @@
+A HighchartsSeriesSplineTest is a test class for testing the behavior of HighchartsSeriesSpline

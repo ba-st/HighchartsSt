@@ -1,0 +1,1 @@
+A HighchartsChartOptions3dFrameBottomTest is a test class for testing the behavior of HighchartsChartOptions3dFrameBottom

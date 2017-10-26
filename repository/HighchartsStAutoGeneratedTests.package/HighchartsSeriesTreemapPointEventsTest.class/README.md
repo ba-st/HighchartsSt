@@ -1,0 +1,1 @@
+A HighchartsSeriesTreemapPointEventsTest is a test class for testing the behavior of HighchartsSeriesTreemapPointEvents

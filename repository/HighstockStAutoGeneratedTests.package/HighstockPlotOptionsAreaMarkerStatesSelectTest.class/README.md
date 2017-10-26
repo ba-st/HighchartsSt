@@ -1,0 +1,1 @@
+A HighstockPlotOptionsAreaMarkerStatesSelectTest is a test class for testing the behavior of HighstockPlotOptionsAreaMarkerStatesSelect
