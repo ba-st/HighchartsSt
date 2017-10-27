@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MarianoMartinezPeck 10/26/2017 22:36",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfHighchartsSt",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfHighchartsSt",
+	"type" : "normal"
+}
