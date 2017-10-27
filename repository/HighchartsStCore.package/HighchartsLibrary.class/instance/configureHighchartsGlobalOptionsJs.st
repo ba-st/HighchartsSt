@@ -1,4 +1,4 @@
-as yet unclassified
+global options
 configureHighchartsGlobalOptionsJs
 
 	^('Highcharts.setOptions({

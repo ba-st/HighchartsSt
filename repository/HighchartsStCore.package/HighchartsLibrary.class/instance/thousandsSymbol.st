@@ -1,4 +1,4 @@
-as yet unclassified
+global options
 thousandsSymbol
 
 	^#miles asTranslatedString

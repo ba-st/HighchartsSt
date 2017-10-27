@@ -1,4 +1,4 @@
-as yet unclassified
+global options
 millionsSymbol
 
 	^#millones asTranslatedString

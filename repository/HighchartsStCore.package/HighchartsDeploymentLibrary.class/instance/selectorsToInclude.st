@@ -1,4 +1,4 @@
 accessing
 selectorsToInclude
 
-	^ #( highcharts5dot0dot2Js highchartsMore5dot0dot2Js )
+	^ #( highstock5dot0dot6Js highchartsmoreJs exportingJs highcharts3dJs draggable3dJs projectionsJs)

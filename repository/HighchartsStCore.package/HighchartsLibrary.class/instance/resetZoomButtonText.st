@@ -1,4 +1,4 @@
-as yet unclassified
+global options
 resetZoomButtonText
 
 	^#'Restaurar zoom' asTranslatedString
