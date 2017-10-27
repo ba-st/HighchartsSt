@@ -1,7 +1,7 @@
 uploaded
 highchartsmoresrcJs
 	^ '/**
- * @license Highcharts JS v5.0.2 (2016-10-26)
+ * @license Highcharts JS v5.0.6 (2016-12-07)
  *
  * (c) 2009-2016 Torstein Honsi
  *
@@ -1422,9 +1422,12 @@ highchartsmoresrcJs
             seriesType = H.seriesType,
             seriesTypes = H.seriesTypes;
 
-        /* ****************************************************************************
-         * Start Box plot series code											      *
-         *****************************************************************************/
+        /**
+         * The boxplot series type.
+         *
+         * @constructor seriesTypes.boxplot
+         * @augments seriesTypes.column
+         */
         seriesType(''boxplot'', ''column'', {
             threshold: null,
             tooltip: {
@@ -1456,8 +1459,7 @@ highchartsmoresrcJs
             whiskerWidth: 2
 
 
-            // Prototype members
-        }, {
+        }, /** @lends seriesTypes.boxplot */ {
             pointArrayMap: [''low'', ''q1'', ''median'', ''q3'', ''high''], // array point configs are mapped to this
             toYData: function(point) { // return a plain array for speedy calculation
                 return [point.low, point.q1, point.median, point.q3, point.high];
@@ -1831,11 +1833,14 @@ highchartsmoresrcJs
                     minPointLength = pick(options.minPointLength, 5),
                     threshold = options.threshold,
                     stacking = options.stacking,
+                    // Separate offsets for negative and positive columns:
+                    positiveOffset = 0,
+                    negativeOffset = 0,
+                    stackIndicator,
                     tooltipY;
 
                 // run column series translate
                 seriesTypes.column.prototype.translate.apply(this);
-                series.minPointLengthOffset = 0;
 
                 previousY = previousIntermediate = threshold;
                 points = series.points;
@@ -1848,8 +1853,9 @@ highchartsmoresrcJs
 
                     // get current stack
                     stack = stacking && yAxis.stacks[(series.negStacks && yValue < threshold ? ''-'' : '''') + series.stackKey];
+                    stackIndicator = series.getStackIndicator(stackIndicator, point.x);
                     range = stack ?
-                        stack[point.x].points[series.index + '','' + i] : [0, yValue];
+                        stack[point.x].points[series.index + '','' + i + '','' + stackIndicator.index] : [0, yValue];
 
                     // override point value for sums
                     // #3710 Update point does not propagate to sum
@@ -1866,11 +1872,13 @@ highchartsmoresrcJs
                     // sum points
                     if (point.isSum) {
                         shapeArgs.y = yAxis.toPixels(range[1], true);
-                        shapeArgs.height = Math.min(yAxis.toPixels(range[0], true), yAxis.len) - shapeArgs.y + series.minPointLengthOffset; // #4256
+                        shapeArgs.height = Math.min(yAxis.toPixels(range[0], true), yAxis.len) -
+                            shapeArgs.y + positiveOffset + negativeOffset; // #4256
 
                     } else if (point.isIntermediateSum) {
                         shapeArgs.y = yAxis.toPixels(range[1], true);
-                        shapeArgs.height = Math.min(yAxis.toPixels(previousIntermediate, true), yAxis.len) - shapeArgs.y + series.minPointLengthOffset;
+                        shapeArgs.height = Math.min(yAxis.toPixels(previousIntermediate, true), yAxis.len) -
+                            shapeArgs.y + positiveOffset + negativeOffset;
                         previousIntermediate = range[1];
 
                         // If it''s not the sum point, update previous stack end position and get
@@ -1891,21 +1899,30 @@ highchartsmoresrcJs
                     shapeArgs.height = Math.max(Math.round(shapeArgs.height), 0.001); // #3151
                     point.yBottom = shapeArgs.y + shapeArgs.height;
 
-                    if (shapeArgs.height <= minPointLength) {
+                    // Before minPointLength, apply negative offset:
+                    shapeArgs.y -= negativeOffset;
+
+
+                    if (shapeArgs.height <= minPointLength && !point.isNull) {
                         shapeArgs.height = minPointLength;
-                        series.minPointLengthOffset += minPointLength;
+                        if (point.y < 0) {
+                            negativeOffset -= minPointLength;
+                        } else {
+                            positiveOffset += minPointLength;
+                        }
                     }
 
-                    shapeArgs.y -= series.minPointLengthOffset;
+                    // After minPointLength is updated, apply positive offset:
+                    shapeArgs.y -= positiveOffset;
 
                     // Correct tooltip placement (#3014)
-                    tooltipY = point.plotY + (point.negative ? shapeArgs.height : 0) - series.minPointLengthOffset;
+                    tooltipY = point.plotY - negativeOffset - positiveOffset +
+                        (point.negative && negativeOffset >= 0 ? shapeArgs.height : 0);
                     if (series.chart.inverted) {
                         point.tooltipPos[0] = yAxis.len - tooltipY;
                     } else {
                         point.tooltipPos[1] = tooltipY;
                     }
-
                 }
             },
 
@@ -2354,7 +2371,10 @@ highchartsmoresrcJs
              */
             drawLegendSymbol: function(legend, item) {
                 var renderer = this.chart.renderer,
-                    radius = renderer.fontMetrics(legend.itemStyle.fontSize).f / 2;
+                    radius = renderer.fontMetrics(
+                        legend.itemStyle && legend.itemStyle.fontSize,
+                        item.legendItem
+                    ).f / 2;
 
                 item.legendSymbol = renderer.circle(
                     radius,
@@ -2374,8 +2394,11 @@ highchartsmoresrcJs
 
             // Point class
         }, {
-            haloPath: function() {
-                return Point.prototype.haloPath.call(this, this.shapeArgs.r + this.series.options.states.hover.halo.size);
+            haloPath: function(size) {
+                return Point.prototype.haloPath.call(
+                    this,
+                    size === 0 ? 0 : this.shapeArgs.r + size // #6067
+                );
             },
             ttBelow: false
         });
@@ -2429,7 +2452,9 @@ highchartsmoresrcJs
 
                         });
                         series.minPxSize = extremes.minSize;
-                        series.maxPxSize = extremes.maxSize;
+                        // Prioritize min size if conflict to make sure bubbles are
+                        // always visible. #5873
+                        series.maxPxSize = Math.max(extremes.maxSize, extremes.minSize);
 
                         // Find the min and max Z
                         zData = series.zData;

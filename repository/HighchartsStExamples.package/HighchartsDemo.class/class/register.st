@@ -1,4 +1,4 @@
-as yet unclassified
+tools registry
 register
 
 	| app |
@@ -8,4 +8,4 @@ register
         put: WADebugErrorHandler.
 	app 
 		addLibrary: JQDevelopmentLibrary;
-		addLibrary: HighchartsOnlineLibrary.
+		addLibrary: HighchartsDevelopmentLibrary.
