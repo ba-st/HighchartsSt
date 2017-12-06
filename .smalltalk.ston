@@ -1,0 +1,18 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'HighchartsSt',
+      #directory : 'repository',
+      #load : [ 'Development' ],
+      #platforms : [  #pharo ]
+    }
+  ],
+  #testing : {
+    #coverage : {
+       #packages : [ 'HighchartsSt*' ]
+    },
+    #include : {
+       #packages : [ 'HighchartsSt*Tests*' ]
+    }
+  }
+}
