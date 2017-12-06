@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "HighchartsComponent",
+	"category" : "HighchartsStV6",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HighchartsSeriesColumnrangeStatesSelect",
+	"type" : "normal"
+}
