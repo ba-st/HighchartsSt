@@ -1,0 +1,4 @@
+accessing
+newPoint
+ 
+	^ HighchartsPoint new

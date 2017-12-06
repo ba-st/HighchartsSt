@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "HighchartsComponent",
+	"category" : "HighstockStV6",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HighstockPlotOptionsErrorbarStatesSelectMarkerStatesSelect",
+	"type" : "normal"
+}

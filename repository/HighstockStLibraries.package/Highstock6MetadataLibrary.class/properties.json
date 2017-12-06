@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaximilianoTabacman 12/6/2017 17:10",
+	"super" : "WAFileMetadataLibrary",
+	"category" : "HighstockStLibraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Highstock6MetadataLibrary",
+	"type" : "normal"
+}

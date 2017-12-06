@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "HighchartsComponent",
+	"category" : "HighchartsStCore",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HighchartsPoint",
+	"type" : "normal"
+}
