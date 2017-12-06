@@ -1,5 +1,5 @@
 rendering
-renderContentOn: html
-	self renderBarGovermentComputersChartOn: html.
-	self renderPricePerTroyOunce: html
-	
+renderContentOn: aCanvas
+
+	self renderBarGovermentComputersChartOn: aCanvas.
+	self renderPricePerTroyOunce: aCanvas

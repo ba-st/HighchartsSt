@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaximilianoTabacman 12/5/2017 17:56",
+	"super" : "Highsoft6DumpImporter",
+	"category" : "HighchartsStTools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Highstock6DumpImporter",
+	"type" : "normal"
+}

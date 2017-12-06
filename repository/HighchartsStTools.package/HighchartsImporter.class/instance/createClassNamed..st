@@ -1,7 +1,7 @@
 class creation
 createClassNamed: aClassName
 
-	^ self highchartsComponentClass
+	^ self abstractComponentClass
 				subclass: aClassName asSymbol
 				instanceVariableNames: ''
 				classVariableNames: ''

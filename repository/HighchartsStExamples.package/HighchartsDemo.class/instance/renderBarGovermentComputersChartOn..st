@@ -1,12 +1,12 @@
 rendering
-renderBarGovermentComputersChartOn: html
+renderBarGovermentComputersChartOn: aCanvas
 
 	| chart series |
 
 	series := self govermentComputersSeries.
-	
-	html text: 'chart: '.
-	chart := html highcharts newChart.
+
+	aCanvas text: 'chart: '.
+	chart := aCanvas highcharts newChart.
 	chart yAxis title text: 'Visits'.
 	chart legend enabled: false.
 	chart chart type: 'column'.
@@ -16,8 +16,8 @@ renderBarGovermentComputersChartOn: html
 	chart xAxis type: 'category'.
 	chart plotOptions column colorByPoint: true.
 	chart plotOptions column dataLabels enabled: true.
-	(chart addSeriesForType: 'column')
+	chart series column
 		index: 0;
 		name: series name;
-		data: (series dataAsPointsOn: html).
-	html div script: chart
+		data: (series dataAsPointsOn: aCanvas).
+	aCanvas div script: chart

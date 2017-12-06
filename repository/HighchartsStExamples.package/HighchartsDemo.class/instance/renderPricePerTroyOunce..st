@@ -1,11 +1,11 @@
 rendering
-renderPricePerTroyOunce: html
+renderPricePerTroyOunce: aCanvas
 
 	| chart allSeries |
 
 	allSeries := self goldPricesSeries.
-	html text: 'chart: '.
-	chart := html highcharts newChart.
+	aCanvas text: 'chart: '.
+	chart := aCanvas highcharts newChart.
 	chart yAxis title text: 'Price Per Troy Ounce'.
 	chart chart type: 'column'.
 	chart title text: '30 DAY GOLD PRICE CHART'.
@@ -20,12 +20,12 @@ renderPricePerTroyOunce: html
 	chart credits text: 'Gold Feed Inc.'.
 	chart legend x: 10.
 	chart exporting enabled: false.
-	
+
 	allSeries
 		doWithIndex: [ :series :index | 
-			(chart addSeriesForType: 'column')
+			chart series column
 				index: index - 1;
 				name: series name;
-				data: (series dataAsPointsOn: html) ].
-			
-	html div script: chart
+				data: (series dataAsPointsOn: aCanvas) ].
+
+	aCanvas div script: chart

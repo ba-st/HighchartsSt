@@ -2,7 +2,7 @@ XML parsing
 processedMemberReturnTypeOf: aMember
 	| returnType  stream returnTypeWithPrefix |
 	returnType := self contentOf: 'span' classifiedAs: 'returnType' in: aMember.
-	returnTypeWithPrefix := returnType trimBlanks.
+	returnTypeWithPrefix := returnType trimBoth.
 	returnTypeWithPrefix := returnTypeWithPrefix copyReplaceAll: '<' with: 'Of'.
 	returnTypeWithPrefix := returnTypeWithPrefix copyReplaceAll: '&lt;' with: 'Of'.
 	returnTypeWithPrefix := returnTypeWithPrefix copyReplaceAll: '&gt;' with: ''.

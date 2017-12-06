@@ -1,4 +1,4 @@
-initialize - release
+initialization
 initializeNamed: aName locatedAt: anXValue and: anYValue
 
 	name := aName.

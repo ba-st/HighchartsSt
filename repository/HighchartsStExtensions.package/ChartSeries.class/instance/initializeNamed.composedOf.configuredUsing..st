@@ -1,4 +1,4 @@
-initialize - release
+initialization
 initializeNamed: aName composedOf: aData  configuredUsing: aOneArgumentBlock
 
 	name := aName.
