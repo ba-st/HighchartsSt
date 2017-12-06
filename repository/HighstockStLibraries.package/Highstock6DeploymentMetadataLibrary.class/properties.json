@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaximilianoTabacman 12/6/2017 18:06",
+	"super" : "Highstock6MetadataLibrary",
+	"category" : "HighstockStLibraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Highstock6DeploymentMetadataLibrary",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+accessing
+forDeployment
+
+	^ Highstock6DeploymentMetadataLibrary
