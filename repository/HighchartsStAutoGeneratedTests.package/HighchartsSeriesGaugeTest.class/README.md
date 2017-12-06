@@ -1,1 +1,0 @@
-A HighchartsSeriesGaugeTest is a test class for testing the behavior of HighchartsSeriesGauge

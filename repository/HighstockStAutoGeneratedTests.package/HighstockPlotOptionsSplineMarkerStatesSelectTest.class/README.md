@@ -1,1 +1,0 @@
-A HighstockPlotOptionsSplineMarkerStatesSelectTest is a test class for testing the behavior of HighstockPlotOptionsSplineMarkerStatesSelect

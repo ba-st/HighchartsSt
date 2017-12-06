@@ -1,1 +1,0 @@
-A HighstockSeriesLineEventsTest is a test class for testing the behavior of HighstockSeriesLineEvents

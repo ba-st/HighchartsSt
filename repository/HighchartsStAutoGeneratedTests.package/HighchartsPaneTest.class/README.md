@@ -1,1 +1,0 @@
-A HighchartsPaneTest is a test class for testing the behavior of HighchartsPane

@@ -1,1 +1,0 @@
-A HighchartsPlotOptionsLineTest is a test class for testing the behavior of HighchartsPlotOptionsLine

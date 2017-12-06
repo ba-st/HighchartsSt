@@ -1,1 +1,0 @@
-A HighchartsYAxisStackLabelsTest is a test class for testing the behavior of HighchartsYAxisStackLabels

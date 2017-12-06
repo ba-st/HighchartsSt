@@ -1,1 +1,0 @@
-A HighstockSeriesPolygonMarkerTest is a test class for testing the behavior of HighstockSeriesPolygonMarker

@@ -1,1 +1,0 @@
-A HighstockPlotOptionsAreasplineMarkerTest is a test class for testing the behavior of HighstockPlotOptionsAreasplineMarker

@@ -1,1 +1,0 @@
-A HighstockSeriesArearangeTest is a test class for testing the behavior of HighstockSeriesArearange

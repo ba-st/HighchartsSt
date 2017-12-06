@@ -1,1 +1,0 @@
-A HighstockPlotOptionsLineDataGroupingTest is a test class for testing the behavior of HighstockPlotOptionsLineDataGrouping

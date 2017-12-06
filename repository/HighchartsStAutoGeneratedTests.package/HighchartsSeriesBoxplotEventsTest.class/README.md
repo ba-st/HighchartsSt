@@ -1,1 +1,0 @@
-A HighchartsSeriesBoxplotEventsTest is a test class for testing the behavior of HighchartsSeriesBoxplotEvents

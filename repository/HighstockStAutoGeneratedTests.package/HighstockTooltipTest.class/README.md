@@ -1,1 +1,0 @@
-A HighstockTooltipTest is a test class for testing the behavior of HighstockTooltip

@@ -1,1 +1,0 @@
-A HighstockSeriesAreasplineDataLabelsTest is a test class for testing the behavior of HighstockSeriesAreasplineDataLabels

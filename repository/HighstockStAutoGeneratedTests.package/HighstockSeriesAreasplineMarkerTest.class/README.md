@@ -1,1 +1,0 @@
-A HighstockSeriesAreasplineMarkerTest is a test class for testing the behavior of HighstockSeriesAreasplineMarker

@@ -1,1 +1,0 @@
-A HighstockPlotOptionsArearangeEventsTest is a test class for testing the behavior of HighstockPlotOptionsArearangeEvents

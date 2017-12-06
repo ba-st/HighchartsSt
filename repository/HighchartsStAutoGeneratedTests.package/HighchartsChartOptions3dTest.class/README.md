@@ -1,1 +1,0 @@
-A HighchartsChartOptions3dTest is a test class for testing the behavior of HighchartsChartOptions3d

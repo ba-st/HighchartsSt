@@ -1,1 +1,0 @@
-A HighchartsPlotOptionsAreaPointEventsTest is a test class for testing the behavior of HighchartsPlotOptionsAreaPointEvents

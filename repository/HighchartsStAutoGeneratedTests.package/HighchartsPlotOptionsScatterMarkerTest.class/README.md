@@ -1,1 +1,0 @@
-A HighchartsPlotOptionsScatterMarkerTest is a test class for testing the behavior of HighchartsPlotOptionsScatterMarker
