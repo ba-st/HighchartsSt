@@ -1,0 +1,1 @@
+A Highstock6OnlineLibraryTest is a test class for testing the behavior of Highstock6OnlineLibrary
