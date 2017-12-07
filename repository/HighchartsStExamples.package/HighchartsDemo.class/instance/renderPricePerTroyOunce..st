@@ -6,8 +6,7 @@ renderPricePerTroyOunce: aCanvas
 	allSeries := self goldPricesSeries.
 	aCanvas text: 'chart: '.
 	chart := aCanvas highcharts newChart.
-	chart yAxis title text: 'Price Per Troy Ounce'.
-	chart chart type: 'column'.
+	chart addYAxis title text: 'Price Per Troy Ounce'.
 	chart title text: '30 DAY GOLD PRICE CHART'.
 	chart subtitle text: 'www.gold-feed.com'.
 	chart xAxis title text: nil.
@@ -23,7 +22,7 @@ renderPricePerTroyOunce: aCanvas
 
 	allSeries
 		doWithIndex: [ :series :index | 
-			chart series column
+			chart addSeries line
 				index: index - 1;
 				name: series name;
 				data: (series dataAsPointsOn: aCanvas) ].

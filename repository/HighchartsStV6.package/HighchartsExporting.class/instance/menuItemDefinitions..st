@@ -3,7 +3,7 @@ menuItemDefinitions: anObject
 
 	"An object consisting of definitions for the menu items in the context
 menu. Each key value pair has a key that is referenced in the
-<a href='#exporting.buttons.contextButton.menuItems'>menuItems setting,
+menuItems setting,
 and a value, which is an object with the following properties:
 
 

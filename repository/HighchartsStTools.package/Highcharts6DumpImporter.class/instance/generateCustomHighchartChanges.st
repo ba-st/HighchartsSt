@@ -1,36 +1,27 @@
-private - changes
+private - custom changes
 generateCustomHighchartChanges
 
 	self
 		generateCustomMethodChangeIn: 'Highchart'
-		with:
-			('initialize
-
-	super initialize.
-	((self alias: ''Highcharts'') access: ''<1s>'') create
-		apply: (Array with: configurationOptions)' expandMacrosWith: 'chart')
+		with: self highchartInitializeSourceCode
 		for: 'initialize'.
-
 	self
 		generateCustomMethodChangeIn: 'Highchart'
-		with:
-			'id: anId
-
-	"This message is sent from Seaside to the JS Object with the corresponding element.
-	In Highcharts, this implies configuring chart: >> renderTo:"
-
-	self chart renderTo: anId'
+		with: self highchartConfigureIdSourceCode
 		for: 'id'.
-
 	self
 		generateCustomMethodChangeIn: 'Highchart'
-		with:
-			'series
-
-	| newSeries allSeries |
-
-	allSeries := configurationOptions at: ''series'' ifAbsentPut: [ OrderedCollection new ].
-	newSeries := HighchartsSeries new.
-	allSeries add: newSeries.
-	^ newSeries'
-		for: 'series'
+		with: self highchartSeriesSourceCode
+		for: 'series'.
+	self
+		generateCustomMethodChangeIn: 'Highchart'
+		with: self highchartAddSeriesSourceCode
+		for: 'addSeries'.
+	self
+		generateCustomMethodChangeIn: 'Highchart'
+		with: self highchartYAxisSourceCode
+		for: 'yAxis'.
+	self
+		generateCustomMethodChangeIn: 'Highchart'
+		with: self highchartAddYAxisSourceCode
+		for: 'addYAxis'

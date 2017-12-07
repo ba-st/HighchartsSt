@@ -12,7 +12,7 @@ key length is 2.
 By default it returns the series name, followed by the key if
 there is more than one key. For the axis it returns the axis
 title or &quot;Category&quot; or &quot;DateTime&quot; by default.
-Return false to use Highcharts&#39; proposed header.
+Return false to use Highcharts´ proposed header.
 Defaults to nil."
 
 	configurationOptions at: 'columnHeaderFormatter' put: aFunctionOrnull

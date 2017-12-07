@@ -4,7 +4,7 @@ minRange: aNumber
 	"The minimum range to display on this axis. The entire axis will not
 be allowed to span over a smaller interval than this. For example,
 for a datetime axis the main unit is milliseconds. If minRange is
-set to 3600000, you can&#39;t zoom in more than to one hour.
+set to 3600000, you can´t zoom in more than to one hour.
 The default minRange for the x axis is five times the smallest
 interval between any of the data points.
 On a logarithmic axis, the unit for the minimum range is the power.

@@ -11,7 +11,7 @@ The x value can also be omitted, in which case the inner arrays
 should be of length 2. Then the x value is automatically calculated,
 either starting at 0 and incremented by 1, or from pointStart
 and pointInterval given in the series options.
-<code class='lang-js'>data: [
+data: [
     [0, 9, 7],
     [1, 10, 4],
     [2, 6, 3]
@@ -20,9 +20,9 @@ and pointInterval given in the series options.
 
 An array of objects with named values. The objects are point
 configuration objects as seen below. If the total number of data
-points exceeds the series&#39; <a href='#series.tilemap.turboThreshold'>turboThreshold,
+points exceeds the series´ turboThreshold,
 this option is not available.
-<code class='lang-js'>data: [{
+data: [{
     x: 1,
     y: 3,
     value: 10,
@@ -38,7 +38,7 @@ this option is not available.
 
 
 
-Note that for some <a href='#plotOptions.tilemap.tileShape'>tileShapes the grid
+Note that for some tileShapes the grid
 coordinates are offset.
 "
 	^configurationOptions at: 'data' ifAbsentPut: [HighchartsSeriesTilemapData new]

@@ -3,6 +3,6 @@ columnrange
 
 	"The column range is a cartesian series type with higher and lower
 Y values along an X axis. Requires highcharts-more.js. To display
-horizontal bars, set <a href='#chart.inverted'>chart.inverted to true.
+horizontal bars, set chart.inverted to true.
 "
 	^configurationOptions at: 'columnrange' ifAbsentPut: [HighchartsPlotOptionsColumnrange new]

@@ -1,7 +1,7 @@
 accessing
 linkedTo: aString
 
-	"The <a href='#series.id'>id of another series to link to. Additionally,
+	"The id of another series to link to. Additionally,
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.

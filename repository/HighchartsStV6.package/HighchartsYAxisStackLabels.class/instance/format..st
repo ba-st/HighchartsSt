@@ -1,7 +1,7 @@
 accessing
 format: aString
 
-	"A <a href='http://docs.highcharts.com/#formatting'>format string for the
+	"A format string for the
 data label. Available variables are the same as for formatter.
 Defaults to {total}."
 

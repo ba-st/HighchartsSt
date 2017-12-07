@@ -1,4 +1,4 @@
-private - changes
+private - custom changes
 generateCustomClassChangeOf: aClassName for: aFullName
 
 	self

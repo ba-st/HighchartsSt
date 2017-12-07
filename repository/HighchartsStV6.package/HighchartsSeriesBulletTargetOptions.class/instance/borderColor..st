@@ -2,7 +2,7 @@ accessing
 borderColor: aColor
 
 	"The border color of the rectangle representing the target. When
-not set, the  point&#39;s border color is used.
+not set, the  point´s border color is used.
 In styled mode, use class highcharts-bullet-target instead.
 "
 

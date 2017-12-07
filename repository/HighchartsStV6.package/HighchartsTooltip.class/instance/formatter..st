@@ -4,7 +4,7 @@ formatter: aFunction
 	"Callback function to format the text of the tooltip from scratch. Return
 false to disable tooltip for a specific point on series.
 A subset of HTML is supported. Unless useHTML is true, the HTML of the
-tooltip is parsed and converted to SVG, therefore this isn&#39;t a complete HTML
+tooltip is parsed and converted to SVG, therefore this isn´t a complete HTML
 renderer. The following tags are supported: &lt;b&gt;, &lt;strong&gt;, &lt;i&gt;, &lt;em&gt;,
 &lt;br/&gt;, &lt;span&gt;. Spans can be styled with a style attribute,
 but only text-related CSS that is shared with SVG is handled.
@@ -18,7 +18,7 @@ Available data are:
 
 this.percentage (not shared) / this.points[i].percentage (shared)
 
-Stacked series and pies only. The point&#39;s percentage of the total.
+Stacked series and pies only. The point´s percentage of the total.
 
 
 this.point (not shared) / this.points[i].point (shared)
@@ -38,7 +38,7 @@ this.series.name.
 
 this.total (not shared) / this.points[i].total (shared)
 
-Stacked series only. The total value at this point&#39;s x value.
+Stacked series only. The total value at this point´s x value.
 
 
 this.x

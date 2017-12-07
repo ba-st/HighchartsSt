@@ -1,9 +1,9 @@
 accessing
 zThreshold: aNumber
 
-	"When <a href='#plotOptions.bubble.displayNegative'>displayNegative is false,
+	"When displayNegative is false,
 bubbles with lower Z values are skipped. When displayNegative
-is true and a <a href='#plotOptions.bubble.negativeColor'>negativeColor
+is true and a negativeColor
 is given, points with lower Z is colored.
 Defaults to 0."
 
