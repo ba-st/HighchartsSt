@@ -11,7 +11,7 @@ The x value can also be omitted, in which case the inner arrays
 should be of length 2. Then the x value is automatically calculated,
 either starting at 0 and incremented by 1, or from pointStart
 and pointInterval given in the series options.
-<code class='lang-js'>data: [
+data: [
     [0, 0, 5],
     [1, 9, 1],
     [2, 5, 2]
@@ -20,9 +20,8 @@ and pointInterval given in the series options.
 
 An array of objects with named values. The objects are point
 configuration objects as seen below. If the total number of data
-points exceeds the series&#39; <a href='#series.areasplinerange.
-turboThreshold'>turboThreshold, this option is not available.
-<code class='lang-js'>data: [{
+points exceeds the series´ turboThreshold, this option is not available.
+data: [{
     x: 1,
     low: 5,
     high: 0,

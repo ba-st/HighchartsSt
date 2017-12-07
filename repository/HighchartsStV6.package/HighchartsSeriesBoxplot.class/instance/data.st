@@ -11,7 +11,7 @@ is inferred. The x value can also be omitted, in which case the
 inner arrays should be of length 5. Then the x value is automatically
 calculated, either starting at 0 and incremented by 1, or from pointStart
 and pointInterval given in the series options.
-<code class='lang-js'>data: [
+data: [
     [0, 3, 0, 10, 3, 5],
     [1, 7, 8, 7, 2, 9],
     [2, 6, 9, 5, 1, 3]
@@ -20,9 +20,9 @@ and pointInterval given in the series options.
 
 An array of objects with named values. The objects are point
 configuration objects as seen below. If the total number of data
-points exceeds the series&#39; <a href='#series.boxplot.turboThreshold'>turboThreshold,
+points exceeds the series´ turboThreshold,
 this option is not available.
-<code class='lang-js'>data: [{
+data: [{
     x: 1,
     low: 4,
     q1: 9,

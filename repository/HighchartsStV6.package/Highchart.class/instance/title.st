@@ -1,6 +1,6 @@
 accessing
 title
 
-	"The chart&#39;s main title.
+	"The chart´s main title.
 "
 	^configurationOptions at: 'title' ifAbsentPut: [HighchartsTitle new]

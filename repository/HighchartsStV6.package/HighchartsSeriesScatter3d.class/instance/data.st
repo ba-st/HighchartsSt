@@ -7,7 +7,7 @@ type, points can be given in the following ways:
 An array of arrays with 3 values. In this case, the values correspond
 to x,y,z. If the first value is a string, it is applied as the name
 of the point, and the x value is inferred.
-<code class='lang-js'>data: [
+data: [
     [0, 0, 1],
     [1, 8, 7],
     [2, 9, 2]
@@ -16,9 +16,9 @@ of the point, and the x value is inferred.
 
 An array of objects with named values. The objects are point
 configuration objects as seen below. If the total number of data
-points exceeds the series&#39; <a href='#series.scatter3d.turboThreshold'>turboThreshold,
+points exceeds the series´ turboThreshold,
 this option is not available.
-<code class='lang-js'>data: [{
+data: [{
     x: 1,
     y: 2,
     z: 24,

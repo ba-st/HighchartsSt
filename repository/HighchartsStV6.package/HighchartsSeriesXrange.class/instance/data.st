@@ -6,7 +6,7 @@ points can be given in the following ways:
 
 An array of objects with named values. The objects are point
 configuration objects as seen below.
-<code class='lang-js'>data: [{
+data: [{
     x: Date.UTC(2017, 0, 1),
     x2: Date.UTC(2017, 0, 3),
     name: &quot;Test&quot;,

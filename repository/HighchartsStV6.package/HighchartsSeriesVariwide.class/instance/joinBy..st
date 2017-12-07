@@ -4,7 +4,7 @@ joinBy: aStringOrArrayOfString
 	"What property to join the mapData to the value data. For example,
 if joinBy is &quot;code&quot;, the mapData items with a specific code is merged
 into the data with the same code. For maps loaded from GeoJSON, the
-keys may be held in each point&#39;s properties object.
+keys may be held in each point´s properties object.
 The joinBy option can also be an array of two values, where the first
 points to a key in the mapData, and the second points to another
 key in the data.

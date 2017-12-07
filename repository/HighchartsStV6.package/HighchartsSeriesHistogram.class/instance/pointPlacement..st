@@ -11,10 +11,9 @@ in time or in a certain sector of a polar chart.
 Since Highcharts 3.0.2, the point placement can also be numeric,
 where 0 is on the axis value, -0.5 is between this value and the
 previous, and 0.5 is between this value and the next. Unlike the
-textual options, numeric point placement options won&#39;t affect axis
+textual options, numeric point placement options won´t affect axis
 padding.
-Note that pointPlacement needs a <a href='#plotOptions.series.
-pointRange'>pointRange to work. For column series this is computed, but for
+Note that pointPlacement needs a pointRange to work. For column series this is computed, but for
 line-type series it needs to be set.
 Defaults to null in cartesian charts, &quot;between&quot; in polar charts.
 Defaults to between."

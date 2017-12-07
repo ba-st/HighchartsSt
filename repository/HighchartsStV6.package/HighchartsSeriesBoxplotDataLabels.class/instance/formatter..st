@@ -12,7 +12,7 @@ is ignored. Available data are:
 
 this.percentage
 
-Stacked series and pies only. The point&#39;s percentage of the
+Stacked series and pies only. The point´s percentage of the
 total.
 
 
@@ -39,7 +39,7 @@ series.name.
 
 this.total
 
-Stacked series only. The total value at this point&#39;s x value.
+Stacked series only. The total value at this point´s x value.
 
 
 

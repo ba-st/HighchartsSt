@@ -9,7 +9,7 @@ methodCommentFrom: anElement
 
 	"<1s>
 <2s>"'
-						expandMacrosWith: (self sanitizedCommentFrom: description) trimBoth
+						expandMacrosWith: (self sanitizedCommentFrom: description)
 						with: (self defaultValueFrom: anElement) trimBoth ] ].
 	^ '
 '

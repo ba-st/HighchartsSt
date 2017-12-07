@@ -2,7 +2,7 @@ accessing
 endOnTick: aBoolean
 
 	"Whether to force the axis to end on a tick. Use this option with
-the <a href='#colorAxis.maxPadding'>maxPadding option to control the axis
+the maxPadding option to control the axis
 end.
 Defaults to true."
 

@@ -1,7 +1,7 @@
 accessing
 borderColor: aColor
 
-	"The border color or stroke of the gauge&#39;s dial. By default, the borderWidth
+	"The border color or stroke of the gauge´s dial. By default, the borderWidth
 is 0, so this must be set in addition to a custom border color.
 Defaults to #cccccc."
 

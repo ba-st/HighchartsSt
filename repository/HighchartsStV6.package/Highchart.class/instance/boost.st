@@ -7,7 +7,7 @@ thousands of data points to be rendered in milliseconds. In addition to the
 WebGL rendering it saves time by skipping processing and inspection of the
 data wherever possible.
 In addition to the global boost option, each series has a
-<a href='#plotOptions.series.boostThreshold'>boostThreshold that defines when the
+boostThreshold that defines when the
 boost should kick in.
 Requires the modules/boost.js module.
 "

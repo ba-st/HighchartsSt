@@ -5,7 +5,7 @@ pointDateFormatter: aFunction
 points on datetime axes when describing them to screen reader users.
 Receives one argument, point, referring to the point to describe.
 Should return a date format string compatible with
-<a href='#Highcharts.dateFormat'>dateFormat.
+dateFormat.
 "
 
 	configurationOptions at: 'pointDateFormatter' put: aFunction
