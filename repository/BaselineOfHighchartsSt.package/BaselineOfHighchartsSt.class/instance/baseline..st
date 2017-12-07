@@ -2,10 +2,11 @@ baseline
 baseline: spec
 
 	<baseline>
+	self setUpDependencies: spec.
 	spec
 		for: #common
 		do: [ spec
-				package: 'HighchartsStCore';
+				package: 'HighchartsStCore' with: [ spec requires: #('Seaside3') ];
 				package: 'HighchartsStLibraries' with: [ spec requires: #('HighchartsStCore') ];
 				package: 'HighstockStLibraries' with: [ spec requires: #('HighchartsStCore') ];
 				package: 'HighchartsStV6' with: [ spec requires: #('HighchartsStCore') ];
