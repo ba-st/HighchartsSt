@@ -3,5 +3,5 @@ selectorsToInclude
 
 	^ OrderedCollection new
 		addAll: super selectorsToInclude;
-		addAll: #(jshighstockssrcJs jshighchartsmoresrcJs modulesexportingsrcJs);
+		addAll: #(jshighstocksrcJs jshighchartsmoresrcJs modulesexportingsrcJs);
 		asArray
