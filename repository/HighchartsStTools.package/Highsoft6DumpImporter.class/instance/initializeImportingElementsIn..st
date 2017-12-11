@@ -2,9 +2,7 @@ initialization
 initializeImportingElementsIn: aJson
 
 	elements := aJson.
-	classChanges := Dictionary new.
-	methodChanges := Dictionary new.
+	self resetChanges.
 	ignoredElementNames := Set new.
-	classCommentChanges := OrderedCollection new.
 	self initializeProduct.
 	self initializeDeprecations
