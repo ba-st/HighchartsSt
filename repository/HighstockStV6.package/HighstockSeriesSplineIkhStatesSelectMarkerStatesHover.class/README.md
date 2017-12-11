@@ -1,0 +1,1 @@
+The hover state for a single point marker.

@@ -1,7 +1,7 @@
 accessing
 formatter: aFunction
 
-	"Callback JavaScript function to format the annotation&#39;s label. Note that
+	"Callback JavaScript function to format the annotation´s label. Note that
 if a format or text are defined, the format or text take precedence
 and the formatter is ignored. This refers to a point object.
 Defaults to function () {

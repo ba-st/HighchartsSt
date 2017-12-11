@@ -1,7 +1,7 @@
 accessing
 sourceHeight: aNumber
 
-	"Analogous to <a href='#exporting.sourceWidth'>sourceWidth.
+	"Analogous to sourceWidth.
 "
 
 	configurationOptions at: 'sourceHeight' put: aNumber

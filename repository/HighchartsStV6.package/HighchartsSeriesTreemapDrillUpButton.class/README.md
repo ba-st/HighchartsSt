@@ -1,0 +1,1 @@
+Options for the button appearing when drilling down in a treemap.

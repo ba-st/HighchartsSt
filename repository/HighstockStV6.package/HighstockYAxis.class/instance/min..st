@@ -6,10 +6,10 @@ automatically calculated.
 If the startOnTick option is true (default), the min value might
 be rounded down.
 The automatically calculated minimum value is also affected by
-<a href='#yAxis.floor'>floor, <a href='#yAxis.softMin'>softMin,
-<a href='#yAxis.minPadding'>minPadding, <a href='#yAxis.minRange'>minRange
-as well as <a href='#plotOptions.series.threshold'>series.threshold
-and <a href='#plotOptions.series.softThreshold'>series.softThreshold.
+floor, softMin,
+minPadding, minRange
+as well as series.threshold
+and series.softThreshold.
 "
 
 	configurationOptions at: 'min' put: aNumber

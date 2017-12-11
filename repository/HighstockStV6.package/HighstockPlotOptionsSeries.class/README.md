@@ -1,0 +1,1 @@
+General options for all series types.

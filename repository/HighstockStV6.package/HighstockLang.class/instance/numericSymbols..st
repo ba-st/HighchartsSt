@@ -1,7 +1,7 @@
 accessing
 numericSymbols: anArrayOfString
 
-	"<a href='http://en.wikipedia.org/wiki/Metric_prefix'>Metric prefixes used
+	"Metric prefixes used
 to shorten high numbers in axis labels. Replacing any of the positions
 with null causes the full number to be written. Setting numericSymbols
 to null disables shortening altogether.

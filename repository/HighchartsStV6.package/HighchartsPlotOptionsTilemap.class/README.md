@@ -1,0 +1,1 @@
+A tilemap series is a type of heatmap where the tile shapes are configurable.

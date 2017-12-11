@@ -1,7 +1,7 @@
 accessing
 checkboxClick: aFunction
 
-	"Fires when the checkbox next to the series&#39; name in the legend is
+	"Fires when the checkbox next to the series´ name in the legend is
 clicked. One parameter, event, is passed to the function. The state
 of the checkbox is found by event.checked. The checked item is
 found by event.item. Return false to prevent the default action

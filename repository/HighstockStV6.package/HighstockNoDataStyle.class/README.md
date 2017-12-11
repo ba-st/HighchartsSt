@@ -1,0 +1,1 @@
+CSS styles for the no-data label.

@@ -1,0 +1,1 @@
+The styles for lines which determine price zones.

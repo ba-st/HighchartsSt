@@ -1,6 +1,6 @@
 accessing
 style
 
-	"Styles for the annotation&#39;s label.
+	"Styles for the annotation´s label.
 "
 	^configurationOptions at: 'style' ifAbsentPut: [HighstockAnnotationsLabelsStyle new]

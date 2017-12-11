@@ -2,7 +2,7 @@ accessing
 lineColor: aString
 
 	"Color of the line.
-If not set, it&#39;s inherited from <a href='#plotOptions.bb.color'>plotOptions.bb.color.
+If not set, it´s inherited from plotOptions.bb.color.
 "
 
 	configurationOptions at: 'lineColor' put: aString
