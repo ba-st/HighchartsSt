@@ -1,0 +1,1 @@
+Options for a selected funnel item.

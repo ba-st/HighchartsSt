@@ -1,0 +1,1 @@
+The styles for Senkou Span A line

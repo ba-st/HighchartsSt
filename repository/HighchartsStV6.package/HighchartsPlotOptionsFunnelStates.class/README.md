@@ -1,0 +1,1 @@
+Options for the series states.

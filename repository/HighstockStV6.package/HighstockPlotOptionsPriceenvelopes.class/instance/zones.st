@@ -5,8 +5,7 @@ zones
 the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
 option.
 In styled mode, the color zones are styled with the .highcharts-
-zone-{n} class, or custom classed from the className option (<a href='http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-
-zones/'>view
+zone-{n} class, or custom classed from the className option (view
 live demo).
 "
 	^configurationOptions at: 'zones' ifAbsentPut: [HighstockPlotOptionsPriceenvelopesZones new]

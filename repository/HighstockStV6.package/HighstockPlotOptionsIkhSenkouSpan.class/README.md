@@ -1,0 +1,1 @@
+The styles for fill between Senkou Span A and B

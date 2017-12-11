@@ -1,8 +1,7 @@
 accessing
 pointDescriptionFormatter: aFunction
 
-	"Same as <a href='#accessibility.
-pointDescriptionFormatter'>accessibility.pointDescriptionFormatter, but for an individual series. Overrides
+	"Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
 the chart wide configuration.
 "
 

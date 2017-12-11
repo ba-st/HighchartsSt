@@ -9,7 +9,7 @@ click: function(e) {
 }
 
 
-Return false to stop default button&#39;s click action.
+Return false to stop default button´s click action.
 Defaults to undefined."
 
 	configurationOptions at: 'click' put: aFunction

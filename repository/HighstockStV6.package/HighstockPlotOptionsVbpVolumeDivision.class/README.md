@@ -1,0 +1,1 @@
+The styles for bars when volume is divided into positive/negative.

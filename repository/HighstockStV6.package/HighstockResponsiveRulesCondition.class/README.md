@@ -1,0 +1,1 @@
+Under which conditions the rule applies.

@@ -1,7 +1,7 @@
 accessing
 valueSuffix: aString
 
-	"A string to append to each series&#39; y value. Overridable in each series&#39;
+	"A string to append to each series´ y value. Overridable in each series´
 tooltip options object.
 "
 
