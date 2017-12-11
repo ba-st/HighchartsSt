@@ -1,15 +1,14 @@
 accessing
 colors: anArrayOfColor
 
-	"An array containing the default colors for the chart&#39;s series. When
+	"An array containing the default colors for the chart´s series. When
 all colors are used, new colors are pulled from the start again.
 Default colors can also be set on a series or series.type basis,
-see <a href='#plotOptions.column.colors'>column.colors, <a href='#plotOptions.
-pie.colors'>pie.colors.
-In styled mode, the colors option doesn&#39;t exist. Instead, colors
+see column.colors, pie.colors.
+In styled mode, the colors option doesn´t exist. Instead, colors
 are defined in CSS and applied either through series or point class
-names, or through the <a href='#chart.colorCount'>chart.colorCount option.
-<h3 id='legacy'>Legacy</h3>
+names, or through the chart.colorCount option.
+Legacy
 In Highcharts 3.x, the default colors were:
 colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', 
     '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'] 

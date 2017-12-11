@@ -1,0 +1,1 @@
+Position configuration for the credits label.

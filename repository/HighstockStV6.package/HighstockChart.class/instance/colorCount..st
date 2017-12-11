@@ -5,7 +5,7 @@ colorCount: aNumber
 should rotate between. With ten colors, series (or points) are
 given class names like highcharts-color-0, highcharts-color-
 0 [...] highcharts-color-9. The equivalent in non-styled mode
-is to set colors using the <a href='#colors'>colors setting.
+is to set colors using the colors setting.
 Defaults to 10."
 
 	configurationOptions at: 'colorCount' put: aNumber

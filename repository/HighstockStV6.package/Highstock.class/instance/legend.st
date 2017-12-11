@@ -5,7 +5,6 @@ legend
 item or point item in the chart. Each series (or points in case
 of pie charts) is represented by a symbol and its name in the legend.
 It is possible to override the symbol creator function and
-create <a href='http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-
-custom-symbol/'>custom legend symbols.
+create custom legend symbols.
 "
 	^configurationOptions at: 'legend' ifAbsentPut: [HighstockLegend new]

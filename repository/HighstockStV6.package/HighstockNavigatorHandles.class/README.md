@@ -1,0 +1,1 @@
+Options for the handles for dragging the zoomed area.

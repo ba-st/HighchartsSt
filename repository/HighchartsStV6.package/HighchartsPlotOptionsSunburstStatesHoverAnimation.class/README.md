@@ -1,0 +1,1 @@
+Animation setting for hovering the graph in line-type series.

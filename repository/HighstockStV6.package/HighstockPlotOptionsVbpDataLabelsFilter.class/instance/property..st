@@ -3,7 +3,7 @@ property: aString
 
 	"The point property to filter by. Point options are passed directly to
 properties, additionally there are y value, percentage and others
-listed under <a href='https://api.highcharts.com/class-reference/Highcharts.Point'>Point
+listed under Point
 members.
 "
 

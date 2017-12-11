@@ -1,0 +1,1 @@
+Can set a colorVariation on all points which lies on the same level.

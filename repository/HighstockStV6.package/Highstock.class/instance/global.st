@@ -1,7 +1,7 @@
 accessing
 global
 
-	"Global options that don&#39;t apply to each chart. These options, like
+	"Global options that don´t apply to each chart. These options, like
 the lang options, must be set using the Highcharts.setOptions
 method.
 Highcharts.setOptions({

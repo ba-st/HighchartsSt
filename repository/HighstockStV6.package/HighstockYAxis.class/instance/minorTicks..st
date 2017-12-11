@@ -2,7 +2,7 @@ accessing
 minorTicks: aBoolean
 
 	"Enable or disable minor ticks. Unless
-<a href='#xAxis.minorTickInterval'>minorTickInterval is set, the tick
+minorTickInterval is set, the tick
 interval is calculated as a fifth of the tickInterval.
 On a logarithmic axis, minor ticks are laid out based on a best
 guess, attempting to enter approximately 5 minor ticks between
