@@ -4,6 +4,7 @@ executeChanges
 	self generateChangesFromDump.
 	self generateCustomChanges.
 	self generateDeprecationChanges.
+	self registerPackage.
 	self executeClassChanges.
 	self executeCommentChanges.
 	self executeMethodChanges.
