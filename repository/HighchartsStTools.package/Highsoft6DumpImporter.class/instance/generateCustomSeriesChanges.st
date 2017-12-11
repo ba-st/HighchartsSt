@@ -1,7 +1,6 @@
 private - custom changes
 generateCustomSeriesChanges
 
-	self generateSeriesTypesChanges.
 	self
 		generateCustomMethodChangeIn: self seriesClassName
 		with:
