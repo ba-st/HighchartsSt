@@ -10,7 +10,9 @@ baseline: spec
 				package: 'HighchartsStLibraries' with: [ spec requires: #('HighchartsStCore') ];
 				package: 'HighstockStLibraries' with: [ spec requires: #('HighchartsStCore') ];
 				package: 'HighchartsStV6' with: [ spec requires: #('HighchartsStCore') ];
+				package: 'HighchartsStV6-Tests' with: [ spec requires: #('HighchartsStV6') ];
 				package: 'HighstockStV6' with: [ spec requires: #('HighchartsStCore') ];
+				package: 'HighstockStV6-Tests' with: [ spec requires: #('HighstockStV6') ];
 				package: 'HighchartsStExtensions' with: [ spec requires: #('HighchartsStCore') ];
 				package: 'HighchartsStExamples' with: [ spec requires: #('HighchartsStExtensions' 'HighchartsStV6' 'HighchartsStLibraries' 'Seaside3+JQuery') ];
 				package: 'HighchartsStTools' with: [ spec requires: #('HighchartsStCore') ];

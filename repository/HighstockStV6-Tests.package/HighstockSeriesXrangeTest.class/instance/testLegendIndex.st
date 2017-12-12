@@ -1,0 +1,13 @@
+tests-accessing
+testLegendIndex
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component legendIndex: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'legendIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript

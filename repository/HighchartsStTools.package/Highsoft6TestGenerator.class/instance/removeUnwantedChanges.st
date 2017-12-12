@@ -4,8 +4,7 @@ removeUnwantedChanges
 	| unwantedChanges |
 
 	unwantedChanges := methodChanges
-		select: [ :change | 
-			(change changeClassName = #HighchartTest or: [ change changeClassName = #HighstockTest ])
-				and: [ change selector = 'testId' ] ].
+		select:
+			[ :change | (self isForTestingChartId: change) or: [ self isForTestingJavascriptContent: change ] ].
 
 	methodChanges removeAll: unwantedChanges

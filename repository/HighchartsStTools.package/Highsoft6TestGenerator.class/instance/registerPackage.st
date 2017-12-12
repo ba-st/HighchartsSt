@@ -1,4 +1,5 @@
 private - processing
 registerPackage
 
-	(RPackage named: self testPackageName) register
+	(RPackageSet named: self testPackageName) packages
+		ifEmpty: [ (RPackage named: self testPackageName) register ]
