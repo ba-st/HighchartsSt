@@ -18,7 +18,7 @@ baseline: spec
 				package: 'HighstockStLibraries-Tests' with: [ spec requires: #('HighstockStLibraries')].
 			spec
 				group: 'Core' with: #('HighchartsStCore');
-				group: 'default' with: #('Core' 'Highcharts' 'HighchartsStExamples');
+				group: 'default' with: #('Core' 'Highcharts' 'Highstock' 'HighchartsStExamples' 'HighstockStExamples' );
 				group: 'Highcharts' with: #('Core' 'HighchartsStV6' 'HighchartsStLibraries');
 				group: 'Highstock' with: #('Core' 'HighstockStV6' 'HighstockStLibraries');
 				group: 'Tools' with: #('HighchartsStTools');
