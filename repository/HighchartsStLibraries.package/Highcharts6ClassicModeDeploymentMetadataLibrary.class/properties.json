@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Highcharts6ClassicModeMetadataLibrary",
+	"category" : "HighchartsStLibraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Highcharts6ClassicModeDeploymentMetadataLibrary",
+	"type" : "normal"
+}
