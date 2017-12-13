@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Highstock6ClassicModeMetadataLibrary",
+	"category" : "HighstockStLibraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Highstock6ClassicModeDevelopmentMetadataLibrary",
+	"type" : "normal"
+}
