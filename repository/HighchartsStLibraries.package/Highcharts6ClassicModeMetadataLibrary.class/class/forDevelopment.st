@@ -1,4 +1,4 @@
 accessing
 forDevelopment
 
-	^ Highcharts6DevelopmentMetadataLibrary
+	^ Highcharts6ClassicModeDevelopmentMetadataLibrary

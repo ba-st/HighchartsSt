@@ -1,0 +1,1 @@
+I'm a WALibary serving the files in source form, suitable for deployment. I belong to a special hierarhy to support the "Classic Style" mode of Highstock. For more details read https://www.highcharts.com/docs/chart-design-and-style/style-by-css

@@ -1,4 +1,4 @@
 accessing
 forDeployment
 
-	^ Highcharts6DeploymentMetadataLibrary
+	^ Highcharts6ClassicModeDeploymentMetadataLibrary

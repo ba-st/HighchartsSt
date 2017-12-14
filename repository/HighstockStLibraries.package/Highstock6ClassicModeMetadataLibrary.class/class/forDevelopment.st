@@ -1,4 +1,4 @@
 accessing
 forDevelopment
 
-	^ Highstock6DevelopmentMetadataLibrary
+	^ Highstock6ClassicModeDevelopmentMetadataLibrary

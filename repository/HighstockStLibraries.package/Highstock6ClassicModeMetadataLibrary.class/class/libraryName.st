@@ -1,4 +1,4 @@
 accessing
 libraryName
 
-	^ 'highstock'
+	^ 'highstock-classicStyleMode'

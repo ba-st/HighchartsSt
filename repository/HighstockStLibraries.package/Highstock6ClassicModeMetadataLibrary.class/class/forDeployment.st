@@ -1,4 +1,4 @@
 accessing
 forDeployment
 
-	^ Highstock6DeploymentMetadataLibrary
+	^ Highstock6ClassicModeDeploymentMetadataLibrary
