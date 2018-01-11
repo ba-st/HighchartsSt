@@ -15,7 +15,7 @@ renderBarGovermentComputersChartOn: aCanvas
 	chart xAxis type: 'category'.
 	chart plotOptions column colorByPoint: true.
 	chart plotOptions column dataLabels enabled: true.
-	chart addSeries column
+	(chart addSeriesOf: HighchartsSeriesColumn)
 		index: 0;
 		name: series name;
 		data: (series dataAsPointsOn: aCanvas).

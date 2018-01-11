@@ -22,7 +22,7 @@ renderPricePerTroyOunce: aCanvas
 
 	allSeries
 		doWithIndex: [ :series :index | 
-			chart addSeries line
+			(chart addSeriesOf: HighchartsSeriesLine)
 				index: index - 1;
 				name: series name;
 				data: (series dataAsPointsOn: aCanvas) ].

@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "MaximilianoTabacman 1/11/2018 12:16",
 	"super" : "Object",
 	"category" : "HighchartsStExtensions",
 	"classinstvars" : [
@@ -11,7 +11,8 @@
 	"instvars" : [
 		"xValue",
 		"name",
-		"yValue"
+		"yValue",
+		"colorsOptional"
 	],
 	"name" : "ChartDatum",
 	"type" : "normal"

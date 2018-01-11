@@ -12,7 +12,6 @@ renderPricePerTroyOunce: aCanvas
 	chart subtitle text: 'www.gold-feed.com'.
 	chart xAxis title text: nil.
 	chart xAxis labels rotation: nil.
-	chart xAxis type: 'datetime'.
 	chart chart width: 922.
 	chart chart backgroundColor: '#fff'.
 	chart chart type: 'line'.
@@ -21,14 +20,14 @@ renderPricePerTroyOunce: aCanvas
 	chart legend x: 10.
 	chart exporting enabled: false.
 	chart scrollbar liveRedraw: false.
-	chart rangeSelector inputEnabled: true. "maybe true?"
-	chart navigator adaptToUpdatedData: false. 
+	chart rangeSelector inputEnabled: true.	"maybe true?"
+	chart navigator adaptToUpdatedData: false.
 
 	allSeries
 		doWithIndex: [ :series :index | 
-			chart addSeries line
+			(chart addSeriesOf: HighchartsSeriesLine)
 				index: index - 1;
 				name: series name;
 				data: (series dataAsPointsOn: aCanvas) ].
 
-	aCanvas div script: chart.
+	aCanvas div script: chart

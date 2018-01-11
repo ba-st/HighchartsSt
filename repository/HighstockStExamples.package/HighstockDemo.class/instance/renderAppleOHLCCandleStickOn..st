@@ -10,7 +10,6 @@ renderAppleOHLCCandleStickOn: html
 	chart title text: 'AAPL Stock Price'.
 	chart xAxis title text: nil.
 	chart xAxis labels rotation: nil.
-	chart xAxis type: 'datetime'.
 	chart chart width: 922.
 	chart chart backgroundColor: '#fff'.
 	chart legend x: 10.
