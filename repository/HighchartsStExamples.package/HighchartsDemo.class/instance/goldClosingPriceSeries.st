@@ -8,4 +8,8 @@ goldClosingPriceSeries
 		add: (ChartDatum belongingTo: (Date fromString: '12/19/2013') withValue: 1187.76);
 		add: (ChartDatum belongingTo: (Date fromString: '12/20/2013') withValue: 1202.09);
 		yourself.
-	^ ChartSeries named: 'Close' composedOf: data
+	^ ChartSeries
+		named: 'Close'
+		composedOf: data
+		creatingChartSeriesWith: #addLineSeries
+		configuredUsing: [ :aHighchartSeries |  ]

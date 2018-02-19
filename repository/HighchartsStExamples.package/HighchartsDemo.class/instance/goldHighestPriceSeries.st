@@ -8,4 +8,8 @@ goldHighestPriceSeries
 		add: (ChartDatum belongingTo: (Date fromString: '12/19/2013') withValue: 1226.38);
 		add: (ChartDatum belongingTo: (Date fromString: '12/20/2013') withValue: 1207.37);
 		yourself.
-	^ ChartSeries named: 'High' composedOf: data
+	^ ChartSeries
+		named: 'High'
+		composedOf: data
+		creatingChartSeriesWith: #addLineSeries
+		configuredUsing: [ :aHighchartSeries |  ]

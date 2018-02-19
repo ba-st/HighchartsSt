@@ -15,12 +15,16 @@ generateCustomHighstockChanges
 		for: 'series'.
 	self
 		generateCustomMethodChangeIn: 'Highstock'
-		with: self highstockAddSeriesSourceCode
-		for: 'addSeries'.
+		with: self highstockAddSeriesOfSourceCode
+		for: 'addSeriesOf:'.
 	self
 		generateCustomMethodChangeIn: 'Highstock'
 		with: self highstockYAxisSourceCode
 		for: 'yAxis'.
+	self
+		generateCustomMethodChangeIn: 'Highstock'
+		with: self highstockYAxisSetterSourceCode
+		for: 'yAxis:'.
 	self
 		generateCustomMethodChangeIn: 'Highstock'
 		with: self highstockAddYAxisSourceCode

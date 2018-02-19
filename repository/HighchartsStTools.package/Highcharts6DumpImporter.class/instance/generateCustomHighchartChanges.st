@@ -15,12 +15,16 @@ generateCustomHighchartChanges
 		for: 'series'.
 	self
 		generateCustomMethodChangeIn: 'Highchart'
-		with: self highchartAddSeriesSourceCode
-		for: 'addSeries'.
+		with: self highchartAddSeriesOfSourceCode
+		for: 'addSeriesOf:'.
 	self
 		generateCustomMethodChangeIn: 'Highchart'
 		with: self highchartYAxisSourceCode
 		for: 'yAxis'.
+	self
+		generateCustomMethodChangeIn: 'Highchart'
+		with: self highchartYAxisSetterSourceCode
+		for: 'yAxis:'.
 	self
 		generateCustomMethodChangeIn: 'Highchart'
 		with: self highchartAddYAxisSourceCode

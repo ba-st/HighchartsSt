@@ -1,6 +1,7 @@
 accessing
 selectorsToInclude
 
-	^ (OrderedCollection new addAll: super selectorsToInclude)
+	^OrderedCollection new
+		addAll: super selectorsToInclude;
 		addAll: #(jshighchartsJs jshighchartsmoreJs modulesexportingJs);
 		asArray

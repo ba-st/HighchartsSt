@@ -8,4 +8,8 @@ goldOpeningPriceSeries
 		add: (ChartDatum belongingTo: (Date fromString: '12/19/2013') withValue: 1224.77);
 		add: (ChartDatum belongingTo: (Date fromString: '12/20/2013') withValue: 1193.18);
 		yourself.
-	^ ChartSeries named: 'Open' composedOf: data
+	^ ChartSeries
+		named: 'Open'
+		composedOf: data
+		creatingChartSeriesWith: #addLineSeries
+		configuredUsing: [ :aHighchartSeries |  ]

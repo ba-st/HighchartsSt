@@ -1,0 +1,7 @@
+accessing
+states: aPlotOptionsseriesstates
+
+	"A wrapper object for all the series options in specific states.
+"
+
+	configurationOptions at: 'states' put: aPlotOptionsseriesstates

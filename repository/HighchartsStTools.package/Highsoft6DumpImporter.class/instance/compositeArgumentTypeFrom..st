@@ -10,4 +10,5 @@ compositeArgumentTypeFrom: aTypeString
 	type := type copyWithoutAll: '()'.
 	type := self format: self collectionTypeRegex asCollectionIn: type.
 	type := self descriptiveArgumentFrom: type.
+	type := type copyWithoutAll: '.'.	
 	^ type
