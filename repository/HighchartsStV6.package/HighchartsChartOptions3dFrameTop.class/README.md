@@ -1,0 +1,1 @@
+The top of the frame around a 3D chart.

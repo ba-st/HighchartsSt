@@ -1,1 +1,0 @@
-A HighstockPlotOptionsCandlestickPointEventsTest is a test class for testing the behavior of HighstockPlotOptionsCandlestickPointEvents

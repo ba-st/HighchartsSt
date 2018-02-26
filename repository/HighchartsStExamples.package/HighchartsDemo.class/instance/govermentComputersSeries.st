@@ -11,4 +11,8 @@ govermentComputersSeries
 		add: (ChartDatum belongingTo: 'Amazon' withValue: 100762);
 		add: (ChartDatum belongingTo: 'Pandora' withValue: 78868);
 		yourself.
-	^ ChartSeries named: 'John' composedOf: data
+	^ ChartSeries
+		named: 'John'
+		composedOf: data
+		creatingChartSeriesWith: #addLineSeries
+		configuredUsing: [ :aHighchartSeries |  ]

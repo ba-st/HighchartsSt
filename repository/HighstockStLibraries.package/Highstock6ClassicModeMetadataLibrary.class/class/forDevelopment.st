@@ -1,0 +1,4 @@
+accessing
+forDevelopment
+
+	^ Highstock6ClassicModeDevelopmentMetadataLibrary

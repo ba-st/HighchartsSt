@@ -1,4 +1,4 @@
 instance creation
-belongingTo: aCategory withValue: aValue 
+belongingTo: aCategory withValue: aValue
 
-	^self named: aCategory locatedAt: aCategory and: aValue 
+	^self named: aCategory locatedAt: aCategory and: aValue

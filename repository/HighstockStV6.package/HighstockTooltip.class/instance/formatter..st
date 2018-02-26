@@ -1,0 +1,54 @@
+accessing
+formatter: aFunction
+
+	"Callback function to format the text of the tooltip from scratch. Return
+false to disable tooltip for a specific point on series.
+A subset of HTML is supported. Unless useHTML is true, the HTML of the
+tooltip is parsed and converted to SVG, therefore this isn´t a complete HTML
+renderer. The following tags are supported: &lt;b&gt;, &lt;strong&gt;, &lt;i&gt;, &lt;em&gt;,
+&lt;br/&gt;, &lt;span&gt;. Spans can be styled with a style attribute,
+but only text-related CSS that is shared with SVG is handled.
+Since version 2.1 the tooltip can be shared between multiple series
+through the shared option. The available data in the formatter
+differ a bit depending on whether the tooltip is shared or not. In
+a shared tooltip, all properties except x, which is common for
+all points, are kept in an array, this.points.
+Available data are:
+
+
+this.percentage (not shared) / this.points[i].percentage (shared)
+
+Stacked series and pies only. The point´s percentage of the total.
+
+
+this.point (not shared) / this.points[i].point (shared)
+
+The point object. The point name, if defined, is available through
+this.point.name.
+
+this.points
+
+In a shared tooltip, this is an array containing all other properties
+for each point.
+
+this.series (not shared) / this.points[i].series (shared)
+
+The series object. The series name is available through
+this.series.name.
+
+this.total (not shared) / this.points[i].total (shared)
+
+Stacked series only. The total value at this point´s x value.
+
+
+this.x
+
+The x value. This property is the same regardless of the tooltip
+being shared or not.
+
+this.y (not shared) / this.points[i].y (shared)
+
+The y value.
+"
+
+	configurationOptions at: 'formatter' put: aFunction

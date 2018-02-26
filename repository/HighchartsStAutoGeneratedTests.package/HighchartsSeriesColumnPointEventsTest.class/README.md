@@ -1,1 +1,0 @@
-A HighchartsSeriesColumnPointEventsTest is a test class for testing the behavior of HighchartsSeriesColumnPointEvents

@@ -1,0 +1,13 @@
+tests-accessing
+testStates
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGauge new.
+	component states: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'gauge';
+		at: 'states' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript

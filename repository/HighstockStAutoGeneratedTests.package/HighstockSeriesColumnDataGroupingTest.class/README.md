@@ -1,1 +1,0 @@
-A HighstockSeriesColumnDataGroupingTest is a test class for testing the behavior of HighstockSeriesColumnDataGrouping

@@ -1,0 +1,1 @@
+A title to be added on top of the legend.

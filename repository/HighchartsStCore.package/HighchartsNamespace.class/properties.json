@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "Object",
+	"super" : "JSObject",
 	"category" : "HighchartsStCore",
 	"classinstvars" : [ ],
 	"pools" : [ ],

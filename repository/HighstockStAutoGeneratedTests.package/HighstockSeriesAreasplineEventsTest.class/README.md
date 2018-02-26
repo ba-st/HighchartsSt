@@ -1,1 +1,0 @@
-A HighstockSeriesAreasplineEventsTest is a test class for testing the behavior of HighstockSeriesAreasplineEvents

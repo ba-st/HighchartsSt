@@ -1,1 +1,0 @@
-A HighchartsSeriesTreemapTooltipTest is a test class for testing the behavior of HighchartsSeriesTreemapTooltip

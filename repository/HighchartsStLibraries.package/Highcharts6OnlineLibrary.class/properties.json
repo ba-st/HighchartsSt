@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaximilianoTabacman 11/27/2017 15:53",
+	"super" : "WAObject",
+	"category" : "HighchartsStLibraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Highcharts6OnlineLibrary",
+	"type" : "normal"
+}

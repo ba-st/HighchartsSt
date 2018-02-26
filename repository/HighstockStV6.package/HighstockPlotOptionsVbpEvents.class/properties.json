@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaximilianoTabacman 12/7/2017 18:58",
+	"super" : "HighchartsComponent",
+	"category" : "HighstockStV6",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HighstockPlotOptionsVbpEvents",
+	"type" : "normal"
+}

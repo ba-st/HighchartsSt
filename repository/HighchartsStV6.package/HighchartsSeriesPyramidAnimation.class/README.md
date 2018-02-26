@@ -1,0 +1,1 @@
+Initial animation is by default disabled for the funnel chart.

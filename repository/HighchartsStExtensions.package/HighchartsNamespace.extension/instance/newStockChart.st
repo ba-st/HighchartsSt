@@ -1,4 +1,0 @@
-*HighchartsStExtensions
-newStockChart
-
-	^ Highstock new

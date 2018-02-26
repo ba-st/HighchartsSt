@@ -1,3 +1,4 @@
 *HighchartsStExtensions
 newPoint
+ 
 	^ HighchartsPoint new

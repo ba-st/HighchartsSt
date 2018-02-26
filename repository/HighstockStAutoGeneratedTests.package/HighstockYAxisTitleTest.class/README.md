@@ -1,1 +1,0 @@
-A HighstockYAxisTitleTest is a test class for testing the behavior of HighstockYAxisTitle

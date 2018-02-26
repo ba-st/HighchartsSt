@@ -1,1 +1,0 @@
-A HighchartsPlotOptionsBarDataLabelsTest is a test class for testing the behavior of HighchartsPlotOptionsBarDataLabels

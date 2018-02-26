@@ -1,4 +1,6 @@
 # HighchartsSt
+[![Build Status](https://travis-ci.org/ba-st/Buoy.svg?branch=master)](https://travis-ci.org/ba-st/HighchartsSt)
+[![Coverage Status](https://coveralls.io/repos/github/ba-st/HighchartsSt/badge.svg?branch=master)](https://coveralls.io/github/ba-st/HighchartsSt?branch=master)
 
 A Highcharts Js API wrapper for Smalltalk
 
@@ -21,7 +23,7 @@ A Highcharts Js API wrapper for Smalltalk
 
 
 ## Installation
-HighchartsSt has been tested and used in Pharo, GemStone and VisualAge, but should likely work in other dialects too. The builder (the tool that auto-generates the code), however, only works on Pharo. 
+HighchartsSt has been tested and used in Pharo, GemStone and VisualAge, but should likely work in other dialects too. The builder (the tool that auto-generates the code), however, only works on Pharo.
 
 ### Prerequisites
 
@@ -50,7 +52,7 @@ Metacello new
 To have Highcharts working, the only thing you must do is to register the wanted HighchartsLibrary into your app root class (notice there are 3 possible subclasses of it). Example:
 
 ```Smalltalk
-yourApp 
+yourApp
 		addLibrary: JQDevelopmentLibrary;
 		addLibrary: HighchartsDevelopmentLibrary.
 ```
@@ -61,7 +63,7 @@ Then you can render a basic chart like this:
 renderBarGovermentComputersChartOn: html
 
 	| chart series data |
-	
+
 	data := OrderedCollection new
 		add: (ChartDatum belongingTo: 'Facebook' withValue: 515333);
 		add: (ChartDatum belongingTo: 'YouTube' withValue: 178001);
@@ -71,7 +73,7 @@ renderBarGovermentComputersChartOn: html
 		add: (ChartDatum belongingTo: 'Pandora' withValue: 78868);
 		yourself.
 	series := ChartSeries named: 'John' composedOf: data.
-	
+
 	html text: 'chart: '.
 	chart := html highcharts newChart.
 	chart yAxis title text: 'Visits'.
@@ -95,7 +97,7 @@ The default installation of Highcharts includes some examples. You can start you
 ```Smalltalk
 (ZnZincServerAdaptor port: 9999)
    	codec: GRPharoUtf8Codec new;
-   start.	
+   start.
 ```
 
 And then watch the live examples with your browser in `http://localhost:9999/HighchartsDemo`
@@ -114,7 +116,7 @@ Besides the [issues](https://github.com/Mercap/HighchartsSt/issues), the followi
 
 * Support Highmaps
 * Improve documentation
-* Add CI support 
+* Add CI support
 
 ## Authors
 
@@ -129,7 +131,7 @@ See also the list of [contributors](https://github.com/ba-st/HighchartsSt/graphs
 
 This wrapper is licensed under the MIT License. Any contribution submitted to this repository is considered to be under the MIT license.
 
-For licensing details about the underlying Javascript library see the About Highcharts section below. 
+For licensing details about the underlying Javascript library see the About Highcharts section below.
 
 
 ## About Highcharts Js

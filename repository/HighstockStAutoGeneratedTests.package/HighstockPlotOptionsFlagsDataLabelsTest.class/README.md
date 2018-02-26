@@ -1,1 +1,0 @@
-A HighstockPlotOptionsFlagsDataLabelsTest is a test class for testing the behavior of HighstockPlotOptionsFlagsDataLabels

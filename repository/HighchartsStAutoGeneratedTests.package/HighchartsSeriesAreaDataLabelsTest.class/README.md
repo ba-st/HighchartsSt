@@ -1,1 +1,0 @@
-A HighchartsSeriesAreaDataLabelsTest is a test class for testing the behavior of HighchartsSeriesAreaDataLabels

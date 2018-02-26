@@ -2,10 +2,8 @@ tools registry
 register
 
 	| app |
-	app := (WAAdmin register: self asApplicationAt: 'HighchartsDemo').
-	 app filter configuration
-        at: #'exceptionHandler'
-        put: WADebugErrorHandler.
-	app 
+
+	app := WAAdmin register: self asApplicationAt: 'HighchartsDemo'.
+	app
 		addLibrary: JQDevelopmentLibrary;
-		addLibrary: HighchartsDevelopmentLibrary.
+		addLibrary: Highcharts6DevelopmentMetadataLibrary

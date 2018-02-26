@@ -1,1 +1,0 @@
-A HighstockSeriesPolygonTest is a test class for testing the behavior of HighstockSeriesPolygon

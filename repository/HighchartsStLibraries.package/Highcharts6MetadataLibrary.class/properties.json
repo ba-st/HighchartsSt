@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaximilianoTabacman 11/27/2017 15:20",
+	"super" : "WAFileMetadataLibrary",
+	"category" : "HighchartsStLibraries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Highcharts6MetadataLibrary",
+	"type" : "normal"
+}

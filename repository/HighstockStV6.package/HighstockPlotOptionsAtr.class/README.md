@@ -1,0 +1,1 @@
+Average true range indicator (ATR). This series requires linkedTo option to be set.

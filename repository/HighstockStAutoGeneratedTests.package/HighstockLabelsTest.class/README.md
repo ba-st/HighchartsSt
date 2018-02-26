@@ -1,1 +1,0 @@
-A HighstockLabelsTest is a test class for testing the behavior of HighstockLabels

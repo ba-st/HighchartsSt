@@ -1,1 +1,0 @@
-A HighchartsYAxisTest is a test class for testing the behavior of HighchartsYAxis

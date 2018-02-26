@@ -1,0 +1,4 @@
+accessing
+forDevelopment
+
+	^ Highcharts6DevelopmentMetadataLibrary

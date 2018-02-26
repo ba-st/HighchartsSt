@@ -1,1 +1,0 @@
-A HighstockSeriesArearangePointEventsTest is a test class for testing the behavior of HighstockSeriesArearangePointEvents

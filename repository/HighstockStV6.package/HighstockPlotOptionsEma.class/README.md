@@ -1,0 +1,1 @@
+Exponential moving average indicator (EMA). This series requires linkedTo option to be set.
