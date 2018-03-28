@@ -13,4 +13,10 @@ setUpDependencies: spec
 		baseline: 'RenoirSt'
 		with: [ spec
 				repository: 'github://ba-st/RenoirSt:v4.0.0/source';
-				loads: #('Deployment-Seaside-Extensions') ]
+				loads: #('Deployment-Seaside-Extensions') ].
+
+	spec
+		baseline: 'Boardwalk'
+		with: [ spec
+				repository: 'github://ba-st/Boardwalk:v1.0.0/source';
+				loads: #('Deployment') ]			

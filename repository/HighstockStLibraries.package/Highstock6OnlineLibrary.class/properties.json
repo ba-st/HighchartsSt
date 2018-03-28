@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "MaximilianoTabacman 12/6/2017 17:10",
-	"super" : "WAObject",
+	"super" : "WAOnlineLibrary",
 	"category" : "HighstockStLibraries",
 	"classinstvars" : [ ],
 	"pools" : [ ],

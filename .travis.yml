@@ -1,11 +1,29 @@
 language: smalltalk
 sudo: false
-
-# Select operating system(s)
+env:
+- SMALLTALK_CI_TIMEOUT=50
 os:
-  - linux
-
-# Select compatible Smalltalk image(s)
+- linux
 smalltalk:
-  - Pharo-6.1
-  - Pharo-5.0
+- Pharo64-7.0
+- Pharo-7.0
+- Pharo-6.1
+- Pharo-5.0
+matrix:
+  allow_failures:
+  - smalltalk: Pharo64-7.0
+  - smalltalk: Pharo-7.0
+  fast_finish: true
+before_deploy:
+  - cp "${SMALLTALK_CI_IMAGE}" "HighchartsSt.image"
+  - cp "${SMALLTALK_CI_CHANGES}" "HighchartsSt.changes"
+  - zip -q "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip" "HighchartsSt.image" "HighchartsSt.changes"
+deploy:
+  provider: releases
+  api_key:
+    secure: HNWc8MbeqFZzAzNtr+ht4auLE5OiWE3dWObWMlu9oH7LaSbHCkD5T4GoNPo6LWbuI4NGoFq5bJ+/KzrxDkPNi4eEJIaAg9d7plqnDd5dIEok/tcPO7EgTmSkMZcHZ2/8JQ58WLIW1Ew4/YACqwEJ92e/WWEiYg76frXBqw7n7qndlEi0Tbk3/2yn+b0JrlBbwuHt2IjfePxQRQ9/5Qh+q3oH2vcOxVpT/mlBkxIprKirXLMmjDhmxumnPbZlHADxAICc3qsLQZwxiafGzrVl1lDoAE1CtMCd7mwwjco9iBO+LIkjBmHvqd2OOk+XF+ySM0gYX+AX0f5CdNoT0kHahxgN2oumRl6SBcfwLLnTC6cP7C8RUoUPT76YhAHBlpe43Mv2bKqEmv/PmOCX6bYtrNOQh/RnSxsZtJK3dQqNiZFBup+ulxdJZSP3IT01GisAigjdFh36VXR7RSfbHOsG0vhXw0hGRtvAWlhj0xxTFdxXoeZuLW1Q8KG+ZmMqZZgZJGzSpV6WAJ8r2TEhhSZBYmezkWnL4KJ1t5sMWk8VeVAivELmCcDGujBDFz6euRohsVg2xONkLiHSdZ4xYkZWUn4kXhvuUMOVujhCmXXTbNVN+B4lQBuoI3ytemgw2ydohlvBTfnmYCMRLbJBy8xUcrYQtpcabvP/Yh5Iqiw18lo=
+  file: "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip"
+  skip_cleanup: true
+  on:
+    repo: ba-st/HighchartsSt
+    tags: true
