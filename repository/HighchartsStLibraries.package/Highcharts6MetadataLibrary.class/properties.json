@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "MaximilianoTabacman 11/27/2017 15:20",
-	"super" : "WAFileMetadataLibrary",
+	"super" : "WADeploymentAwareFileMetadataLibrary",
 	"category" : "HighchartsStLibraries",
 	"classinstvars" : [ ],
 	"pools" : [ ],

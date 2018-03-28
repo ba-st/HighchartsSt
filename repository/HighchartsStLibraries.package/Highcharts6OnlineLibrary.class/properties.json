@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "MaximilianoTabacman 11/27/2017 15:53",
-	"super" : "WAObject",
+	"super" : "WAOnlineLibrary",
 	"category" : "HighchartsStLibraries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
