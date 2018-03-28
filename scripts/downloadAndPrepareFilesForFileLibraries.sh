@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 
 readonly BASEDIR=$(cd "$(dirname "$0")" && pwd) # where the script is located

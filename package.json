@@ -1,0 +1,19 @@
+{
+  "name": "highcharts-st",
+  "version": "6.0.0",
+  "author": "Buenos Aires Smalltalk contributors",
+  "license": "MIT",
+  "dependencies": {
+    "highcharts": "6.0.3"
+  }
+  ,
+  "description": "A Highcharts Js API wrapper for Smalltalk.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ba-st/HighchartsSt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ba-st/HighchartsSt/issues"
+  },
+  "homepage": "https://github.com/ba-st/HighchartsSt"
+}
