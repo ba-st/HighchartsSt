@@ -111,7 +111,7 @@ And then watch the live examples with your browser in `http://localhost:9999/Hig
 Tests are auto-generated for the auto-generated code. These are under the packages `HighchartsStV6-Tests` and `HighstockStV6-Tests`. We warned that there's more than 40K test so it will take a while to run, and later be shown in the Test Runner.
 
 ## Future work
-Besides the [issues](https://github.com/Mercap/HighchartsSt/issues), the following are also desired features:
+Besides the [issues](https://github.com/ba-st/HighchartsSt/issues), the following are also desired features:
 
 * Support Highmaps
 * Improve documentation
