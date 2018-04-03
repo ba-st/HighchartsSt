@@ -1,7 +1,7 @@
 uploaded
 modulesstaticscaleJsContent
 	^ '/*
- Highcharts JS v6.0.3 (2017-11-14)
+ Highcharts JS v6.0.7 (2018-02-16)
  StaticScale
 
  (c) 2016 Torstein Honsi, Lars A. V. Cabrera

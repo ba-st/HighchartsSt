@@ -1,7 +1,7 @@
 uploaded
 modulesexportingsrcJsContent
 	^ '/**
- * @license Highcharts JS v6.0.3 (2017-11-14)
+ * @license Highcharts JS v6.0.7 (2018-02-16)
  * Exporting module
  *
  * (c) 2010-2017 Torstein Honsi
@@ -25,7 +25,7 @@ modulesexportingsrcJsContent
          * License: www.highcharts.com/license
          */
 
-        /* eslint indent:0 */
+        /* eslint indent:0, max-len: 0 */
 
         // create shortcuts
         var defaultOptions = H.defaultOptions,
@@ -219,6 +219,19 @@ modulesexportingsrcJsContent
                  */
 
                 /**
+                 * The vertical offset of the button''s position relative to its
+                 * `verticalAlign`.
+                 * 
+                 * @type {Number}
+                 * @sample {highcharts} highcharts/navigation/buttonoptions-verticalalign/ Buttons at lower right
+                 * @sample {highstock} highcharts/navigation/buttonoptions-verticalalign/ Buttons at lower right
+                 * @sample {highmaps} highcharts/navigation/buttonoptions-verticalalign/ Buttons at lower right
+                 * @default 0
+                 * @since 2.0
+                 * @apioption navigation.buttonOptions.y
+                 */
+
+                /**
                  * The vertical alignment of the buttons. Can be one of "top", "middle"
                  * or "bottom".
                  * 
@@ -245,19 +258,6 @@ modulesexportingsrcJsContent
                  * @apioption navigation.buttonOptions.width
                  */
                 width: 24
-
-                /**
-                 * The vertical offset of the button''s position relative to its
-                 * `verticalAlign`.
-                 * 
-                 * @type {Number}
-                 * @sample {highcharts} highcharts/navigation/buttonoptions-verticalalign/ Buttons at lower right
-                 * @sample {highstock} highcharts/navigation/buttonoptions-verticalalign/ Buttons at lower right
-                 * @sample {highmaps} highcharts/navigation/buttonoptions-verticalalign/ Buttons at lower right
-                 * @default 0
-                 * @since 2.0
-                 * @apioption navigation.buttonOptions.y
-                 */
             }
         };
 
@@ -679,9 +679,10 @@ modulesexportingsrcJsContent
                      * 
                      * @validvalue ["circle", "square", "diamond", "triangle", "triangle-down", "menu"]
                      * @type {String}
-                     * @sample {highcharts} highcharts/exporting/buttons-contextbutton-symbol/ Use a circle for symbol
-                     * @sample {highstock} highcharts/exporting/buttons-contextbutton-symbol/ Use a circle for symbol
-                     * @sample {highmaps} highcharts/exporting/buttons-contextbutton-symbol/ Use a circle for symbol
+                     * @sample highcharts/exporting/buttons-contextbutton-symbol/
+                     *         Use a circle for symbol
+                     * @sample highcharts/exporting/buttons-contextbutton-symbol-custom/
+                     *         Custom shape as symbol
                      * @default menu
                      * @since 2.0
                      */
@@ -689,7 +690,7 @@ modulesexportingsrcJsContent
 
                     /**
                      * The key to a [lang](#lang) option setting that is used for the
-                     * button`s title tooltip. When the key is `contextButtonTitle`, it
+                     * button''s title tooltip. When the key is `contextButtonTitle`, it
                      * refers to [lang.contextButtonTitle](#lang.contextButtonTitle)
                      * that defaults to "Chart context menu".
                      * @type {String}
@@ -926,7 +927,7 @@ modulesexportingsrcJsContent
                     .replace(/url\(("|&quot;)(\S+)("|&quot;)\)/g, ''url($2)'')
                     .replace(/url\([^#]+#/g, ''url(#'')
                     .replace(/<svg /, ''<svg xmlns:xlink="http://www.w3.org/1999/xlink" '')
-                    .replace(/ (NS[0-9]+\:)?href=/g, '' xlink:href='') // #3567
+                    .replace(/ (|NS[0-9]+\:)href=/g, '' xlink:href='') // #3567
                     .replace(/\n/, '' '')
                     // Any HTML added to the container after the SVG (#894)
                     .replace(/<\/svg>.*?$/, ''</svg>'')
@@ -1457,7 +1458,7 @@ modulesexportingsrcJsContent
 
                         ''stroke-linecap'': ''round'',
 
-                        title: chart.options.lang[btnOptions._titleKey],
+                        title: pick(chart.options.lang[btnOptions._titleKey], ''''),
                         zIndex: 3 // #4955
                     });
                 button.menuClassName = options.menuClassName || ''highcharts-menu-'' + chart.btnCount++;
@@ -1647,7 +1648,7 @@ modulesexportingsrcJsContent
             		chart.renderTo.parentNode.appendChild(pre);
             	};
             }
-            // */
+            //*/
         });
 
     }(Highcharts));

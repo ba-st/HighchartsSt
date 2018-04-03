@@ -1,7 +1,7 @@
 uploaded
 modulesvectorsrcJsContent
 	^ '/**
- * @license  Highcharts JS v6.0.3 (2017-11-14)
+ * @license  Highcharts JS v6.0.7 (2018-02-16)
  * Vector plot series module
  *
  * (c) 2010-2017 Torstein Honsi
@@ -50,7 +50,9 @@ modulesvectorsrcJsContent
              */
             lineWidth: 2,
 
-            /** @ignore */
+            /** 
+             * @ignore
+             */
             marker: null,
             /**
              * What part of the vector it should be rotated around. Can be one of
@@ -89,7 +91,7 @@ modulesvectorsrcJsContent
              */
             pointAttribs: function(point, state) {
                 var options = this.options,
-                    stroke = this.color,
+                    stroke = point.color || this.color,
                     strokeWidth = this.options.lineWidth;
 
                 if (state) {
@@ -143,22 +145,32 @@ modulesvectorsrcJsContent
 
 
             drawPoints: function() {
+
+                var chart = this.chart;
+
                 each(this.points, function(point) {
                     var plotX = point.plotX,
                         plotY = point.plotY;
-                    if (!point.graphic) {
-                        point.graphic = this.chart.renderer
-                            .path()
-                            .add(this.markerGroup);
+
+                    if (chart.isInsidePlot(plotX, plotY, chart.inverted)) {
+
+                        if (!point.graphic) {
+                            point.graphic = this.chart.renderer
+                                .path()
+                                .add(this.markerGroup);
+                        }
+                        point.graphic
+                            .attr({
+                                d: this.arrow(point),
+                                translateX: plotX,
+                                translateY: plotY,
+                                rotation: point.direction
+                            })
+                            .attr(this.pointAttribs(point));
+
+                    } else if (point.graphic) {
+                        point.graphic = point.graphic.destroy();
                     }
-                    point.graphic
-                        .attr({
-                            d: this.arrow(point),
-                            translateX: plotX,
-                            translateY: plotY,
-                            rotation: point.direction
-                        })
-                        .attr(this.pointAttribs(point));
 
                 }, this);
             },
@@ -266,11 +278,16 @@ modulesvectorsrcJsContent
          * 
          * @type {Array<Object|Array|Number>}
          * @extends series.line.data
-         * @sample {highcharts} highcharts/chart/reflow-true/ Numerical values
-         * @sample {highcharts} highcharts/series/data-array-of-arrays/ Arrays of numeric x and y
-         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/ Arrays of datetime x and y
-         * @sample {highcharts} highcharts/series/data-array-of-name-value/ Arrays of point.name and y
-         * @sample {highcharts} highcharts/series/data-array-of-objects/ Config objects
+         * @sample {highcharts} highcharts/chart/reflow-true/
+         *         Numerical values
+         * @sample {highcharts} highcharts/series/data-array-of-arrays/
+         *         Arrays of numeric x and y
+         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/
+         *         Arrays of datetime x and y
+         * @sample {highcharts} highcharts/series/data-array-of-name-value/
+         *         Arrays of point.name and y
+         * @sample {highcharts} highcharts/series/data-array-of-objects/
+         *         Config objects    
          * @product highcharts highstock
          * @apioption series.vector.data
          */

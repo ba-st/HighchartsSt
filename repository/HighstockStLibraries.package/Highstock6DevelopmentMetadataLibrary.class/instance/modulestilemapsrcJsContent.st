@@ -1,7 +1,7 @@
 uploaded
 modulestilemapsrcJsContent
 	^ '/**
- * @license  Highcharts JS v6.0.3 (2017-11-14)
+ * @license  Highcharts JS v6.0.7 (2018-02-16)
  * Tilemap module
  *
  * (c) 2010-2017 Highsoft AS
@@ -36,7 +36,12 @@ modulestilemapsrcJsContent
              * a null point
              */
             isValid: function() {
-                return this.value !== null;
+                // undefined is allowed
+                return (
+                    this.value !== null &&
+                    this.value !== Infinity &&
+                    this.value !== -Infinity
+                );
             },
 
             /**
@@ -143,7 +148,7 @@ modulestilemapsrcJsContent
          * @sample highcharts/demo/heatmap-canvas/
          *         Heavy heatmap
          * @extends {plotOptions.scatter}
-         * @excluding marker,pointRange
+         * @excluding marker,pointRange,pointPlacement
          * @product highcharts highmaps
          * @optionparent plotOptions.heatmap
          */
@@ -151,6 +156,8 @@ modulestilemapsrcJsContent
 
             /**
              * Animation is disabled by default on the heatmap series.
+             *
+             * @type {Boolean|Object}
              */
             animation: false,
 
@@ -194,6 +201,18 @@ modulestilemapsrcJsContent
              * @apioption plotOptions.heatmap.colsize
              */
 
+            /**
+             * The row size - how many Y axis units each heatmap row should span.
+             * 
+             * @type {Number}
+             * @sample {highcharts} maps/demo/heatmap/ 1 by default
+             * @sample {highmaps} maps/demo/heatmap/ 1 by default
+             * @default 1
+             * @since 4.0
+             * @product highcharts highmaps
+             * @apioption plotOptions.heatmap.rowsize
+             */
+
 
 
             dataLabels: {
@@ -208,7 +227,9 @@ modulestilemapsrcJsContent
                 padding: 0 // #3837
             },
 
-            /** @ignore */
+            /** 
+             * @ignore
+             */
             marker: null,
 
             /**	@ignore */
@@ -220,26 +241,25 @@ modulestilemapsrcJsContent
 
             states: {
 
-                normal: {
-                    animation: true
-                },
-
                 hover: {
+                    /** 
+                     * @ignore
+                     */
                     halo: false, // #3406, halo is disabled on heatmaps by default
+
+                    /**
+                     * How much to brighten the point on interaction. Requires the main
+                     * color to be defined in hex or rgb(a) format.
+                     *
+                     * In styled mode, the hover brightening is by default replaced
+                     * with a fill-opacity set in the `.highcharts-point:hover` rule.
+                     * 
+                     * @type {Number}
+                     * @product highcharts highmaps
+                     */
                     brightness: 0.2
                 }
             }
-            /**
-             * The row size - how many Y axis units each heatmap row should span.
-             * 
-             * @type {Number}
-             * @sample {highcharts} maps/demo/heatmap/ 1 by default
-             * @sample {highmaps} maps/demo/heatmap/ 1 by default
-             * @default 1
-             * @since 4.0
-             * @product highcharts highmaps
-             * @apioption plotOptions.heatmap.rowsize
-             */
 
         }, merge(colorSeriesMixin, {
             pointArrayMap: [''y'', ''value''],
@@ -360,7 +380,7 @@ modulestilemapsrcJsContent
          * 
          * @type {Object}
          * @extends series,plotOptions.heatmap
-         * @excluding dataParser,dataURL,stack
+         * @excluding dataParser,dataURL,marker,pointRange,stack
          * @product highcharts highmaps
          * @apioption series.heatmap
          */
@@ -409,11 +429,16 @@ modulestilemapsrcJsContent
          * @type {Array<Object|Array>}
          * @extends series.line.data
          * @excluding marker
-         * @sample {highcharts} highcharts/chart/reflow-true/ Numerical values
-         * @sample {highcharts} highcharts/series/data-array-of-arrays/ Arrays of numeric x and y
-         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/ Arrays of datetime x and y
-         * @sample {highcharts} highcharts/series/data-array-of-name-value/ Arrays of point.name and y
-         * @sample {highcharts} highcharts/series/data-array-of-objects/ Config objects
+         * @sample {highcharts} highcharts/chart/reflow-true/
+         *         Numerical values
+         * @sample {highcharts} highcharts/series/data-array-of-arrays/
+         *         Arrays of numeric x and y
+         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/
+         *         Arrays of datetime x and y
+         * @sample {highcharts} highcharts/series/data-array-of-name-value/
+         *         Arrays of point.name and y
+         * @sample {highcharts} highcharts/series/data-array-of-objects/
+         *         Config objects
          * @product highcharts highmaps
          * @apioption series.heatmap.data
          */
@@ -968,15 +993,6 @@ modulestilemapsrcJsContent
             pointPadding: 2,
 
             /**
-             * The shape of the tiles in the tilemap. Possible values are `hexagon`,
-             * `circle`, `diamond`, and `square`.
-             *
-             * @sample maps/demo/circlemap-africa Circular tile shapes
-             * @sample maps/demo/diamondmap Diamond tile shapes
-             */
-            tileShape: ''hexagon''
-
-            /**
              * The column size - how many X axis units each column in the tilemap
              * should span. Works as in [Heatmaps](#plotOptions.heatmap.colsize).
              *
@@ -999,6 +1015,15 @@ modulestilemapsrcJsContent
              * @product highcharts highmaps
              * @apioption plotOptions.tilemap.rowsize
              */
+
+            /**
+             * The shape of the tiles in the tilemap. Possible values are `hexagon`,
+             * `circle`, `diamond`, and `square`.
+             *
+             * @sample maps/demo/circlemap-africa Circular tile shapes
+             * @sample maps/demo/diamondmap Diamond tile shapes
+             */
+            tileShape: ''hexagon''
 
             // Prototype functions
         }, {
@@ -1090,10 +1115,11 @@ modulestilemapsrcJsContent
          * To apply to all series of this specific type, apply it to [plotOptions.
          * tilemap](#plotOptions.tilemap).
          *
-         * @type {Object}
-         * @extends series,plotOptions.tilemap
-         * @excluding joinBy, shadow, allAreas, mapData
-         * @product highcharts highmaps
+         * @type      {Object}
+         * @extends   series,plotOptions.tilemap
+         * @excluding allAreas,dataParser,dataURL,joinBy,mapData,marker,pointRange,
+         *            shadow,stack
+         * @product   highcharts highmaps
          * @apioption series.tilemap
          */
 
@@ -1145,11 +1171,16 @@ modulestilemapsrcJsContent
          * @extends series.heatmap.data
          * @excluding marker
          * @sample maps/series/tilemap-gridoffset Offset grid coordinates
-         * @sample {highcharts} highcharts/chart/reflow-true/ Numerical values
-         * @sample {highcharts} highcharts/series/data-array-of-arrays/ Arrays of numeric x and y
-         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/ Arrays of datetime x and y
-         * @sample {highcharts} highcharts/series/data-array-of-name-value/ Arrays of point.name and y
-         * @sample {highcharts} highcharts/series/data-array-of-objects/ Config objects
+         * @sample {highcharts} highcharts/chart/reflow-true/
+         *         Numerical values
+         * @sample {highcharts} highcharts/series/data-array-of-arrays/
+         *         Arrays of numeric x and y
+         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/
+         *         Arrays of datetime x and y
+         * @sample {highcharts} highcharts/series/data-array-of-name-value/
+         *         Arrays of point.name and y
+         * @sample {highcharts} highcharts/series/data-array-of-objects/
+         *         Config objects
          * @product highcharts highmaps
          * @apioption series.tilemap.data
          */

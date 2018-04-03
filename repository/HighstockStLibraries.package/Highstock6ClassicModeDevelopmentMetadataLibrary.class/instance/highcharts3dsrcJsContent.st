@@ -1,7 +1,7 @@
 uploaded
 highcharts3dsrcJsContent
 	^ '/**
- * @license Highcharts JS v6.0.3 (2017-11-14)
+ * @license Highcharts JS v6.0.7 (2018-02-16)
  *
  * 3D features for Highcharts JS
  *
@@ -21,6 +21,7 @@ highcharts3dsrcJsContent
          *
          * License: www.highcharts.com/license
          */
+        /* eslint max-len: 0 */
         /**
          *	Mathematical Functionility
          */
@@ -166,6 +167,7 @@ highcharts3dsrcJsContent
          *
          * License: www.highcharts.com/license
          */
+        /* eslint max-len: 0 */
         var cos = Math.cos,
             PI = Math.PI,
             sin = Math.sin;
@@ -846,7 +848,9 @@ highcharts3dsrcJsContent
 
                 if (anim.duration) {
                     ca = suckOutCustom(params);
-                    params.dummy = 1; // Params need to have a property in order for the step to run (#5765)
+                    // Params need to have a property in order for the step to run
+                    // (#5765, #7437)
+                    params.dummy = wrapper.dummy++;
 
                     if (ca) {
                         to = ca;
@@ -871,6 +875,7 @@ highcharts3dsrcJsContent
                 }
                 return proceed.call(this, params, animation, complete);
             });
+            wrapper.dummy = 0;
 
             // destroy all children
             wrapper.destroy = function() {
@@ -1083,6 +1088,7 @@ highcharts3dsrcJsContent
          *
          * License: www.highcharts.com/license
          */
+        /* eslint max-len: 0 */
         var Chart = H.Chart,
             each = H.each,
             merge = H.merge,
@@ -1216,18 +1222,10 @@ highcharts3dsrcJsContent
         var defaultOptions = H.getOptions();
 
         /**
-         * Options to render charts in 3 dimensions. 
-         * This feature requires highcharts-3d.js, found in the download package, 
-         * or online at code.highcharts.com/highcharts-3d.js.
          * @optionparent
          */
         var extendedOptions = {
 
-            /**
-             * Options regarding the chart area and plot area as well as general
-             * chart options.
-             *
-             */
             chart: {
 
                 /**
@@ -1341,42 +1339,46 @@ highcharts3dsrcJsContent
                          * @since 4.0
                          * @product highcharts
                          */
-                        bottom: {
-                            /**
-                             * The color of the panel.
-                             * 
-                             * @type {Color}
-                             * @default transparent
-                             * @since 4.0
-                             * @product highcharts
-                             * @apioption chart.options3d.frame.bottom.color
-                             */
 
-                            /**
-                             * The thickness of the panel.
-                             * 
-                             * @type {Number}
-                             * @default 1
-                             * @since 4.0
-                             * @product highcharts
-                             * @apioption chart.options3d.frame.bottom.size
-                             */
+                        /**
+                         * The color of the panel.
+                         * 
+                         * @type {Color}
+                         * @default transparent
+                         * @since 4.0
+                         * @product highcharts
+                         * @apioption chart.options3d.frame.bottom.color
+                         */
 
-                            /**
-                             * Whether to display the frame. Possible values are `true`, `false`,
-                             * `"auto"` to display only the frames behind the data, and `"default"`
-                             * to display faces behind the data based on the axis layout, ignoring
-                             * the point of view.
-                             * 
-                             * @validvalue ["default", "auto", true, false]
-                             * @type {Boolean|String}
-                             * @sample {highcharts} highcharts/3d/scatter-frame/ Auto frames
-                             * @default default
-                             * @since 5.0.12
-                             * @product highcharts
-                             * @apioption chart.options3d.frame.bottom.visible
-                             */
-                        },
+                        /**
+                         * The thickness of the panel.
+                         * 
+                         * @type {Number}
+                         * @default 1
+                         * @since 4.0
+                         * @product highcharts
+                         * @apioption chart.options3d.frame.bottom.size
+                         */
+
+                        /**
+                         * Whether to display the frame. Possible values are `true`, `false`,
+                         * `"auto"` to display only the frames behind the data, and `"default"`
+                         * to display faces behind the data based on the axis layout, ignoring
+                         * the point of view.
+                         * 
+                         * @validvalue ["default", "auto", true, false]
+                         * @type {Boolean|String}
+                         * @sample {highcharts} highcharts/3d/scatter-frame/ Auto frames
+                         * @default default
+                         * @since 5.0.12
+                         * @product highcharts
+                         * @apioption chart.options3d.frame.bottom.visible
+                         */
+
+                        /**
+                         * The bottom of the frame around a 3D chart.
+                         */
+                        bottom: {},
 
                         /**
                          * The top of the frame around a 3D chart.
@@ -3605,6 +3607,8 @@ highcharts3dsrcJsContent
                     rawPoint.isInside = rawPoint.isInside ?
                         (zValue >= zAxis.min && zValue <= zAxis.max) :
                         false;
+                } else {
+                    rawPoint.plotZ = 0;
                 }
 
                 rawPoints.push({
@@ -3638,6 +3642,7 @@ highcharts3dsrcJsContent
          *
          * License: www.highcharts.com/license
          */
+        /* eslint max-len: 0 */
         var each = H.each,
             perspective = H.perspective,
             pick = H.pick,
@@ -3650,8 +3655,7 @@ highcharts3dsrcJsContent
 
 
         /**
-         * Depth of the columns in a 3D column chart. Requires `highcharts-3d.
-         * js`.
+         * Depth of the columns in a 3D column chart. Requires `highcharts-3d.js`.
          * 
          * @type {Number}
          * @default 25
@@ -4024,6 +4028,7 @@ highcharts3dsrcJsContent
          * 
          * License: www.highcharts.com/license
          */
+        /* eslint max-len: 0 */
         var deg2rad = H.deg2rad,
             each = H.each,
             pick = H.pick,
@@ -4312,8 +4317,9 @@ highcharts3dsrcJsContent
          * 
          * 3.  An array of objects with named values. The objects are point
          * configuration objects as seen below. If the total number of data
-         * points exceeds the series'' [turboThreshold](#series.scatter3d.turboThreshold),
-         * this option is not available.
+         * points exceeds the series''
+         * [turboThreshold](#series.scatter3d.turboThreshold), this option is not
+         * available.
          * 
          *  ```js
          *     data: [{
@@ -4333,11 +4339,16 @@ highcharts3dsrcJsContent
          * 
          * @type {Array<Object|Array>}
          * @extends series.scatter.data
-         * @sample {highcharts} highcharts/chart/reflow-true/ Numerical values
-         * @sample {highcharts} highcharts/series/data-array-of-arrays/ Arrays of numeric x and y
-         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/ Arrays of datetime x and y
-         * @sample {highcharts} highcharts/series/data-array-of-name-value/ Arrays of point.name and y
-         * @sample {highcharts} highcharts/series/data-array-of-objects/ Config objects
+         * @sample {highcharts} highcharts/chart/reflow-true/
+         *         Numerical values
+         * @sample {highcharts} highcharts/series/data-array-of-arrays/
+         *         Arrays of numeric x and y
+         * @sample {highcharts} highcharts/series/data-array-of-arrays-datetime/
+         *         Arrays of datetime x and y
+         * @sample {highcharts} highcharts/series/data-array-of-name-value/
+         *         Arrays of point.name and y
+         * @sample {highcharts} highcharts/series/data-array-of-objects/
+         *         Config objects    
          * @product highcharts
          * @apioption series.scatter3d.data
          */

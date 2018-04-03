@@ -21,6 +21,10 @@ csshighchartsCssContent
   font-size: 12px;
 }
 
+.highcharts-root {
+  display: block;
+}
+
 .highcharts-root text {
   stroke-width: 0;
 }
@@ -275,7 +279,7 @@ g.highcharts-series,
   stroke-width: 0;
 }
 
-.highcharts-data-label text {
+.highcharts-data-label text, text.highcharts-data-label {
   fill: #333333;
 }
 
@@ -766,7 +770,9 @@ input.highcharts-range-selector {
   cursor: pointer;
 }
 
-.highcharts-drilldown-data-label text, .highcharts-drilldown-axis-label {
+.highcharts-drilldown-data-label text,
+text.highcharts-drilldown-data-label,
+.highcharts-drilldown-axis-label {
   cursor: pointer;
   fill: #003399;
   font-weight: bold;
@@ -801,5 +807,17 @@ input.highcharts-range-selector {
 .highcharts-lineargauge-target-line {
   stroke-width: 1px;
   stroke: #333333;
+}
+
+/* Annotations module */
+.highcharts-annotation-label-box {
+  stroke-width: 1px;
+  stroke: #000000;
+  fill: #000000;
+  fill-opacity: 0.75;
+}
+
+.highcharts-annotation-label text {
+  fill: #e6e6e6;
 }
 '

@@ -1,7 +1,7 @@
 uploaded
 modulesparallelcoordinatessrcJsContent
 	^ '/**
- * @license  Highcharts JS v6.0.3 (2017-11-14)
+ * @license  Highcharts JS v6.0.7 (2018-02-16)
  *
  * Support for parallel coordinates in Highcharts
  *
@@ -25,7 +25,7 @@ modulesparallelcoordinatessrcJsContent
          *
          * License: www.highcharts.com/license
          */
-        /* eslint max-len: ["warn", 80, 4] */
+
 
         /**
          * Extensions for parallel coordinates plot.
@@ -462,10 +462,11 @@ modulesparallelcoordinatessrcJsContent
                             this, {
                                 value: this.y
                             }
-                        )
+                        ),
+                        chart.time
                     );
                 } else if (yAxis.isDatetimeAxis) {
-                    formattedValue = H.dateFormat(
+                    formattedValue = chart.time.dateFormat(
                         yAxisOptions.dateTimeLabelFormats[
                             yAxis.tickPositions.info.unitName
                         ],

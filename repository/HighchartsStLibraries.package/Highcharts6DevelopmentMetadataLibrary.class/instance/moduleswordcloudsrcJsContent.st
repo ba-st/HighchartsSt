@@ -1,7 +1,7 @@
 uploaded
 moduleswordcloudsrcJsContent
 	^ '/**
- * @license Highcharts JS v6.0.3 (2017-11-14)
+ * @license Highcharts JS v6.0.7 (2018-02-16)
  *
  * (c) 2016 Highsoft AS
  * Authors: Jon Arild Nygard
@@ -464,13 +464,11 @@ moduleswordcloudsrcJsContent
              * CSS styles for the words.
              *
              * @type {CSSObject}
-             * @default {"fontFamily":"Impact, sans-serif"}
+             * @default {"fontFamily":"sans-serif", "fontWeight": "900"}
              */
             style: {
-                /**
-                 * The font family to use for the word cloud.
-                 */
-                fontFamily: ''Impact, sans-serif''
+                fontFamily: ''sans-serif'',
+                fontWeight: ''900''
             },
             tooltip: {
                 followPointer: true,
@@ -519,7 +517,9 @@ moduleswordcloudsrcJsContent
                     renderer = chart.renderer,
                     testElement = renderer.text().add(group),
                     placed = [],
-                    placementStrategy = series.placementStrategy[options.placementStrategy],
+                    placementStrategy = series.placementStrategy[
+                        options.placementStrategy
+                    ],
                     spiral = series.spirals[options.spiral],
                     rotation = options.rotation,
                     scale,
@@ -713,7 +713,7 @@ moduleswordcloudsrcJsContent
          * wordcloud](#plotOptions.wordcloud).
          *
          * @type {Object}
-         * @extends plotOptions.wordcloud
+         * @extends series,plotOptions.wordcloud
          * @product highcharts
          * @apioption series.wordcloud
          */
@@ -734,8 +734,9 @@ moduleswordcloudsrcJsContent
          * 
          * 2.  An array of objects with named values. The objects are point
          * configuration objects as seen below. If the total number of data
-         * points exceeds the series'' [turboThreshold](#series.arearange.turboThreshold),
-         * this option is not available.
+         * points exceeds the series''
+         * [turboThreshold](#series.arearange.turboThreshold), this option is not
+         * available.
          * 
          *  ```js
          *     data: [{
@@ -774,7 +775,13 @@ moduleswordcloudsrcJsContent
          * @product highcharts
          * @apioption series.sunburst.data.weight
          */
-        H.seriesType(''wordcloud'', ''column'', wordCloudOptions, wordCloudSeries, wordCloudPoint);
+        H.seriesType(
+            ''wordcloud'',
+            ''column'',
+            wordCloudOptions,
+            wordCloudSeries,
+            wordCloudPoint
+        );
 
     }(Highcharts, draw));
 }));

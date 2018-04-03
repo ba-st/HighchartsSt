@@ -1,7 +1,7 @@
 uploaded
 modulesitemseriessrcJsContent
 	^ '/**
- * @license  Highcharts JS v6.0.3 (2017-11-14)
+ * @license  Highcharts JS v6.0.7 (2018-02-16)
  *
  * Item series type for Highcharts
  *

@@ -1,7 +1,7 @@
 uploaded
 themesgridJsContent
 	^ '/*
- Highcharts JS v6.0.3 (2017-11-14)
+ Highcharts JS v6.0.7 (2018-02-16)
 
  (c) 2009-2017 Torstein Honsi
 
