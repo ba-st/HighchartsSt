@@ -1,1 +1,0 @@
-Abstraction to represent a single color or gradient to be used in a Highcharts point.

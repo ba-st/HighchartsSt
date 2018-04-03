@@ -1,4 +1,0 @@
-private - accessing
-abstractComponentClass
-
-	^ HighchartsComponent

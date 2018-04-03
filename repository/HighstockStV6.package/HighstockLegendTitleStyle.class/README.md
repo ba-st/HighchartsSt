@@ -1,1 +1,0 @@
-Generic CSS styles for the legend title.

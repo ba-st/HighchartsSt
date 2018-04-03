@@ -1,1 +1,0 @@
-The area series type.

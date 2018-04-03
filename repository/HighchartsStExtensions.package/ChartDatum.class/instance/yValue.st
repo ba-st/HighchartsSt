@@ -1,4 +1,0 @@
-acccessing
-yValue
-
-	^yValue

@@ -1,1 +1,0 @@
-Useful abstraction to represent a series of data, to be used in a chart.

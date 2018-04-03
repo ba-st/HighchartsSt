@@ -1,1 +1,0 @@
-Keyboard navigation for the legend. Requires the Accessibility module.

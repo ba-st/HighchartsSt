@@ -1,1 +1,0 @@
-A wrapper object for all the series options in specific states.

@@ -1,1 +1,0 @@
-https://api.highcharts.com/class-reference/Highcharts.Point

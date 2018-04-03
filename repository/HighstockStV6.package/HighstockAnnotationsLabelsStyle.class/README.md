@@ -1,1 +1,0 @@
-Styles for the annotation´s label.

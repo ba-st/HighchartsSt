@@ -1,1 +1,0 @@
-Simple moving average indicator (SMA). This series requires linkedTo option to be set.

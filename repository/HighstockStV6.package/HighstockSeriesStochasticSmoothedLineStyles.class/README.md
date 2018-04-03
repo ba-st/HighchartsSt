@@ -1,1 +1,0 @@
-Styles for a smoothed line.

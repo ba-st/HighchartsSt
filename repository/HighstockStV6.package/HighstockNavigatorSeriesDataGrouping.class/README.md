@@ -1,1 +1,0 @@
-Data grouping options for the navigator series.

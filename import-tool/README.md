@@ -22,4 +22,5 @@ importer := Highstock6DumpImporter importingElementsIn: jsonToImport.
 importer executeChanges.
 (Highsoft6TestGenerator definedIn: 'HighstockStV6' withSeriesNamed: 'HighstockSeries') generateTests.
 ```
-7.
+7. Import the libraries code using the previously copied terminal output
+8. Commit the changes

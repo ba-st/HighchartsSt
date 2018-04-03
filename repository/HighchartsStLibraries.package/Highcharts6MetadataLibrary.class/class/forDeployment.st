@@ -1,4 +1,0 @@
-accessing
-forDeployment
-
-	^ Highcharts6DeploymentMetadataLibrary

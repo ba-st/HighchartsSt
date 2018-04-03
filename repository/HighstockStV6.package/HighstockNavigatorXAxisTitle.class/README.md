@@ -1,1 +1,0 @@
-The axis title, showing next to the axis line.
