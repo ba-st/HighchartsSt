@@ -1,4 +1,0 @@
-initialization
-initializeProduct
-
-	self subclassResponsibility

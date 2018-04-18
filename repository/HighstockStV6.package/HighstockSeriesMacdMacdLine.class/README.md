@@ -1,1 +1,0 @@
-The styles for macd line

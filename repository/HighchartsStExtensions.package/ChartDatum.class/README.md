@@ -1,1 +1,0 @@
-Useful abstraction to represent a single point of data

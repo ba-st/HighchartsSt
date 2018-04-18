@@ -1,0 +1,103 @@
+Class {
+	#name : #HighstockSeriesVwapIkhLabelTest,
+	#superclass : #TestCase,
+	#category : 'HighstockStV6-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapIkhLabelTest >> testBoxesToAvoid [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapIkhLabel new.
+	component boxesToAvoid: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boxesToAvoid' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapIkhLabelTest >> testConnectorAllowed [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapIkhLabel new.
+	component connectorAllowed: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectorAllowed' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapIkhLabelTest >> testConnectorNeighbourDistance [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapIkhLabel new.
+	component connectorNeighbourDistance: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectorNeighbourDistance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapIkhLabelTest >> testEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapIkhLabel new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapIkhLabelTest >> testMaxFontSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapIkhLabel new.
+	component maxFontSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'maxFontSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapIkhLabelTest >> testMinFontSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapIkhLabel new.
+	component minFontSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'minFontSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapIkhLabelTest >> testOnArea [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapIkhLabel new.
+	component onArea: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'onArea' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

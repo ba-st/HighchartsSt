@@ -1,4 +1,0 @@
-acccessing
-category
-
-	^self xValue

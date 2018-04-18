@@ -1,1 +1,0 @@
-CSS styles for the loading screen that covers the plot area.

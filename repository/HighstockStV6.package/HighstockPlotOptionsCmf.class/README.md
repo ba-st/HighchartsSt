@@ -1,1 +1,0 @@
-Chaikin Money Flow indicator (cmf).

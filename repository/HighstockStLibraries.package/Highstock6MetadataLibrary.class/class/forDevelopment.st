@@ -1,4 +1,0 @@
-accessing
-forDevelopment
-
-	^ Highstock6DevelopmentMetadataLibrary

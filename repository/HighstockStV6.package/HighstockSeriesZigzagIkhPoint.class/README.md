@@ -1,1 +1,0 @@
-Properties for each single point.

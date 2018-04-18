@@ -1,1 +1,0 @@
-Rotation options for the words in the wordcloud.

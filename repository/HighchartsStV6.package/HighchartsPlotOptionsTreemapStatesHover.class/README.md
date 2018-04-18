@@ -1,1 +1,0 @@
-Options for the hovered series

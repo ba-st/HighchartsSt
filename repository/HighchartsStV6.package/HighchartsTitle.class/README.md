@@ -1,1 +1,0 @@
-The chart´s main title.
