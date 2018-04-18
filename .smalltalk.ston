@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'HighchartsSt',
-      #directory : 'repository',
+      #directory : 'source',
       #load : [ 'Development' ],
       #platforms : [  #pharo ]
     }
