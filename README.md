@@ -1,4 +1,5 @@
 # HighchartsSt
+![GitHub release](https://img.shields.io/github/release/ba-st/HighchartsSt.svg)
 [![Build Status](https://travis-ci.org/ba-st/HighchartsSt.svg?branch=master)](https://travis-ci.org/ba-st/HighchartsSt)
 [![Coverage Status](https://coveralls.io/repos/github/ba-st/HighchartsSt/badge.svg?branch=master)](https://coveralls.io/github/ba-st/HighchartsSt?branch=master)
 [![Javascript Dependency Status](https://david-dm.org/ba-st/HighchartsSt.svg)](https://david-dm.org/ba-st/HighchartsSt)
