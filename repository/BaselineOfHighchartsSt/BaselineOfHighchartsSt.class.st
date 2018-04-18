@@ -1,20 +1,5 @@
 "
-First load Seaside, then load Highcharts:
-
-Metacello new
- baseline:'Seaside3';
- repository: 'github://SeasideSt/Seaside:master/repository';
- load.
-
-Metacello new
-	baseline: 'HighchartsSt';
-	repository: 'github://ba-st/HighchartsSt:master/repository';
-	load: 'Development'.
-
-
-(ZnZincServerAdaptor port: 9999)
-   	codec: GRPharoUtf8Codec new;
-   start.	
+Baseline of HighchartsSt
 "
 Class {
 	#name : #BaselineOfHighchartsSt,
@@ -69,13 +54,13 @@ BaselineOfHighchartsSt >> setUpDependencies: spec [
 	spec
 		baseline: 'RenoirSt'
 		with: [ spec
-				repository: 'github://ba-st/RenoirSt:v4.1.0/source';
+				repository: 'github://ba-st/RenoirSt:v5/source';
 				loads: #('Deployment-Seaside-Extensions') ].
 
 	spec
 		baseline: 'Boardwalk'
 		with: [ spec
-				repository: 'github://ba-st/Boardwalk:v1.0.0/source';
-				loads: #('Deployment') ]			
+				repository: 'github://ba-st/Boardwalk:v2/source';
+				loads: #('Deployment') ]
 
 ]
