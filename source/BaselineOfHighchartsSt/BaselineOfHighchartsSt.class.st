@@ -14,53 +14,113 @@ BaselineOfHighchartsSt >> baseline: spec [
 	self setUpDependencies: spec.
 	spec
 		for: #common
-		do: [ spec
-				package: 'HighchartsStCore' with: [ spec requires: #('Seaside3' 'Boardwalk') ];
-				package: 'HighchartsStLibraries' with: [ spec requires: #('HighchartsStCore') ];
-				package: 'HighstockStLibraries' with: [ spec requires: #('HighchartsStCore') ];
-				package: 'HighchartsStV6' with: [ spec requires: #('HighchartsStCore') ];
-				package: 'HighchartsStV6-Tests' with: [ spec requires: #('HighchartsStV6') ];
-				package: 'HighstockStV6' with: [ spec requires: #('HighchartsStCore') ];
-				package: 'HighstockStV6-Tests' with: [ spec requires: #('HighstockStV6') ];
-				package: 'HighchartsStExtensions' with: [ spec requires: #('HighchartsStCore' 'RenoirSt') ];
-				package: 'HighchartsStExamples' with: [ spec requires: #('HighchartsStExtensions' 'HighchartsStV6' 'HighchartsStLibraries' 'Seaside3+JQuery') ];
-				package: 'HighstockStExamples' with: [ spec requires: #('HighchartsStExtensions' 'HighstockStV6' 'HighstockStLibraries' 'Seaside3+JQuery') ];
-				package: 'HighchartsStTools' with: [ spec requires: #('HighchartsStCore') ];
-				package: 'HighstockStLibraries-Tests' with: [ spec requires: #('HighstockStLibraries') ].
+		do: [ self
+				baselineHighchartsCommon: spec;
+				baselineHighcharts: spec;
+				baselineHighchartsExamples: spec;
+				baselineHighstock: spec;
+				baselineHighstockExamples: spec.
 			spec
-				group: 'Core' with: #('HighchartsStCore');
-				group: 'default' with: #('Core' 'Highcharts' 'Highstock' 'HighchartsStExamples' 'HighstockStExamples');
-				group: 'Highcharts' with: #('Core' 'HighchartsStV6' 'HighchartsStLibraries');
-				group: 'Highstock' with: #('Core' 'HighstockStV6' 'HighstockStLibraries');
-				group: 'Tools' with: #('HighchartsStTools');
-				group: 'Development' with: #('ALL' 'Seaside3+JQuery+Development') ].
+				group: 'Deployment' with: #('Highcharts-Deployment' 'Highstock-Deployment');
+				group: 'Dependent-SUnit-Extensions' with: 'Boardwalk-SUnit';
+				group: 'CI' with: 'Tests';
+				package: 'HighchartsStTools' with: [ spec requires: 'HighchartsStCore' ];
+				group: 'Tools' with: #('Boardwalk-Tools' 'HighchartsStTools');
+				group: 'Development' with: #('Tests' 'Tools' 'Seaside3-Development')
+			].
 	spec
 		for: #pharo
-		do: [ spec package: 'HighchartsStPharoExtensions'.
-			spec package: 'HighchartsStExtensions' with: [ spec requires: #('HighchartsStPharoExtensions') ] ]
+		do: [ spec
+				package: 'HighchartsStPharoExtensions';
+				package: 'HighchartsStExtensions' with: [ spec requires: 'HighchartsStPharoExtensions' ]
+			]
+]
+
+{ #category : #baseline }
+BaselineOfHighchartsSt >> baselineHighcharts: spec [
+
+	spec
+		package: 'HighchartsStLibraries' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highcharts-Deployment' with: 'HighchartsStLibraries';
+		package: 'HighchartsStV6' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highcharts-Deployment' with: 'HighchartsStV6';
+		package: 'HighchartsStV6-Tests' with: [ spec requires: 'HighchartsStV6' ];
+		group: 'Tests' with: 'HighchartsStV6-Tests'
+]
+
+{ #category : #baseline }
+BaselineOfHighchartsSt >> baselineHighchartsCommon: spec [
+
+	spec
+		package: 'HighchartsStCore' with: [ spec requires: 'Boardwalk-Deployment' ];
+		group: 'Highcharts-Deployment' with: 'HighchartsStCore';
+		group: 'Highstock-Deployment' with: 'HighchartsStCore'
+]
+
+{ #category : #baseline }
+BaselineOfHighchartsSt >> baselineHighchartsExamples: spec [
+
+	spec
+		package: 'HighchartsStExtensions'
+			with: [ spec requires: #('HighchartsStCore' 'RenoirSt-Deployment') ];
+		group: 'Examples' with: 'HighchartsStExtensions';
+		package: 'HighchartsStExamples'
+			with: [ spec requires: #('Highcharts-Deployment' 'HighchartsStExtensions' 'Seaside3-JQuery') ];
+		group: 'Examples' with: 'HighchartsStExamples'
+]
+
+{ #category : #baseline }
+BaselineOfHighchartsSt >> baselineHighstock: spec [
+
+	spec
+		package: 'HighstockStLibraries' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highstock-Deployment' with: 'HighstockStLibraries';
+		package: 'HighstockStV6' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highstock-Deployment' with: 'HighstockStV6'.
+
+	spec
+		package: 'HighstockStV6-Tests' with: [ spec requires: 'HighstockStV6' ];
+		group: 'Tests' with: 'HighstockStV6-Tests';
+		package: 'HighstockStLibraries-Tests' with: [ spec requires: 'HighstockStLibraries' ];
+		group: 'Tests' with: 'HighstockStV6-Tests'
+]
+
+{ #category : #baseline }
+BaselineOfHighchartsSt >> baselineHighstockExamples: spec [
+
+	spec
+		package: 'HighstockStExamples'
+			with: [ spec requires: #('Highstock-Deployment' 'HighchartsStExtensions' 'Seaside3-JQuery') ];
+		group: 'Examples' with: 'HighstockStExamples'
+]
+
+{ #category : #accessing }
+BaselineOfHighchartsSt >> projectClass [
+
+	^ MetacelloCypressBaselineProject
 ]
 
 { #category : #baseline }
 BaselineOfHighchartsSt >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Seaside3'
-			with: [ spec
-				repository: 'github://SeasideSt/Seaside:v3.2.4/repository';
-				loads: #('Core' 'Javascript' 'JQuery' 'Development') ];
-		project: 'Seaside3+JQuery' copyFrom: 'Seaside3' with: [ spec loads: #('JQuery') ];
-		project: 'Seaside3+JQuery+Development' copyFrom: 'Seaside3+JQuery' with: [ spec loads: #('Development') ].
+		baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside:v3.3.1/repository' ];
+		project: 'Seaside3-JQuery'
+			copyFrom: 'Seaside3'
+			with: [ spec loads: #('Core' 'Javascript' 'JQuery') ];
+		project: 'Seaside3-Development' copyFrom: 'Seaside3' with: [ spec loads: 'Development' ].
 
 	spec
-		baseline: 'RenoirSt'
-		with: [ spec
-				repository: 'github://ba-st/RenoirSt:v5/source';
-				loads: #('Deployment-Seaside-Extensions') ].
+		baseline: 'RenoirSt' with: [ spec repository: 'github://ba-st/RenoirSt:v6/source' ];
+		project: 'RenoirSt-Deployment'
+			copyFrom: 'RenoirSt'
+			with: [ spec loads: 'Deployment-Seaside-Extensions' ].
 
 	spec
-		baseline: 'Boardwalk'
-		with: [ spec
-				repository: 'github://ba-st/Boardwalk:v2/source';
-				loads: #('Deployment') ]
-
+		baseline: 'Boardwalk' with: [ spec repository: 'github://ba-st/Boardwalk:v3/source' ];
+		project: 'Boardwalk-Deployment' copyFrom: 'Boardwalk' with: [ spec loads: 'Deployment' ];
+		project: 'Boardwalk-SUnit'
+			copyFrom: 'Boardwalk'
+			with: [ spec loads: 'Dependent-SUnit-Extensions' ];
+		project: 'Boardwalk-Tools' copyFrom: 'Boardwalk' with: [ spec loads: 'Tools' ]
 ]
