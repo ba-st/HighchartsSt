@@ -82,7 +82,7 @@ BaselineOfHighchartsSt >> baselineHighstock: spec [
 		package: 'HighstockStV6-Tests' with: [ spec requires: 'HighstockStV6' ];
 		group: 'Tests' with: 'HighstockStV6-Tests';
 		package: 'HighstockStLibraries-Tests' with: [ spec requires: 'HighstockStLibraries' ];
-		group: 'Tests' with: 'HighstockStV6-Tests'
+		group: 'Tests' with: 'HighstockStLibraries-Tests'
 ]
 
 { #category : #baseline }
