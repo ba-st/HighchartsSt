@@ -26,7 +26,7 @@ BaselineOfHighchartsSt >> baseline: spec [
 				group: 'CI' with: 'Tests';
 				package: 'HighchartsStTools' with: [ spec requires: 'HighchartsStCore' ];
 				group: 'Tools' with: #('Boardwalk-Tools' 'HighchartsStTools');
-				group: 'Development' with: #('Tests' 'Tools' 'Seaside3-Development')
+				group: 'Development' with: #('Tests' 'Tools' 'Examples' 'Seaside3-Development')
 			].
 	spec
 		for: #pharo
