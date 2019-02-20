@@ -4,7 +4,7 @@ Class {
 	#category : 'HighstockStExamples'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'class initialization' }
 HighstockDemo class >> initialize [
 	self register
 ]
@@ -16,8 +16,8 @@ HighstockDemo class >> register [
 
 	app := WAAdmin register: self asApplicationAt: 'HighstockDemo'.
 	app
-		addLibrary: JQDevelopmentLibrary;
-		addLibrary: Highstock6DevelopmentMetadataLibrary
+		addLibrary: JQDevelopmentLibrary; 
+		addLibrary: Highstock6OnlineLibrary
 ]
 
 { #category : #rendering }
