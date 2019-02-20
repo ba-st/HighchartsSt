@@ -3,16 +3,13 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'HighchartsSt',
       #directory : 'source',
-      #load : [ 'Development' ],
+      #load : [ 'CI' ],
       #platforms : [  #pharo ]
     }
   ],
   #testing : {
     #coverage : {
-       #packages : [ 'HighchartsSt*' ]
-    },
-    #include : {
-       #packages : [ 'HighchartsSt*Tests*' ]
+       #packages : [ 'HighchartsSt*' , 'HighstockSt*' ]
     }
   }
 }
