@@ -50,8 +50,9 @@ baseline: spec
 - `Highcharts-Deployment` will load the runtime support for Highcharts
 - `Highstock-Deployment` will load the runtime support for Highstock
 - `Deployment` will load the runtime support for Highcharts and Highstock
+- `Examples` willo load the runtime support and example applications
 - `Tests` will load the test cases
 - `Dependent-SUnit-Extensions` will load the extensions to the SUnit framework
-- `Tools` will load the extensions to the SUnit framework and development tools (inspector and spotter extensions)
+- `Tools` will load the import tool
 - `CI` is the group loaded in the continuous integration setup
 - `Development` will load all the needed packages to develop and contribute to the project
