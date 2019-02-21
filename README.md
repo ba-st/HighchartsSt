@@ -13,7 +13,7 @@
 </p>
 
 ![GitHub release](https://img.shields.io/github/release/ba-st/HighchartsSt.svg)
-[![Build Status](https://travis-ci.com/ba-st/HighchartsSt.svg?branch=release-candidate)](https://travis-ci.com/ba-st/HighchartsSt)
+[![Build Status](https://travis-ci.org/ba-st/HighchartsSt.svg?branch=release-candidate)](https://travis-ci.org/ba-st/HighchartsSt)
 [![Coverage Status](https://coveralls.io/repos/github/ba-st/HighchartsSt/badge.svg?branch=release-candidate)](https://coveralls.io/github/ba-st/HighchartsSt?branch=release-candidate)
 [![Javascript Dependency Status](https://david-dm.org/ba-st/HighchartsSt.svg)](https://david-dm.org/ba-st/HighchartsSt)
 
