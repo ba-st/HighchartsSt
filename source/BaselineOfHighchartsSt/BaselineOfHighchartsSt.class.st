@@ -104,7 +104,7 @@ BaselineOfHighchartsSt >> projectClass [
 BaselineOfHighchartsSt >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside:v3.3.1/repository' ];
+		baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside:v3.3.3/repository' ];
 		project: 'Seaside3-JQuery'
 			copyFrom: 'Seaside3'
 			with: [ spec loads: #('Core' 'Javascript' 'JQuery') ];
@@ -117,7 +117,7 @@ BaselineOfHighchartsSt >> setUpDependencies: spec [
 			with: [ spec loads: 'Deployment-Seaside-Extensions' ].
 
 	spec
-		baseline: 'Boardwalk' with: [ spec repository: 'github://ba-st/Boardwalk:v3/source' ];
+		baseline: 'Boardwalk' with: [ spec repository: 'github://ba-st/Boardwalk:v4/source' ];
 		project: 'Boardwalk-Deployment' copyFrom: 'Boardwalk' with: [ spec loads: 'Deployment' ];
 		project: 'Boardwalk-SUnit'
 			copyFrom: 'Boardwalk'
