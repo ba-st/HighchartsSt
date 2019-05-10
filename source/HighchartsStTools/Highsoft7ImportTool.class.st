@@ -19,7 +19,7 @@ Highsoft7ImportTool class >> importingFrom: anAPIDescriptionPath [
 { #category : #execution }
 Highsoft7ImportTool >> execute [
 
-	| importer jsonToImport |
+	[ | importer jsonToImport |
 
 	jsonToImport := STONJSON fromStream: pathString asFileReference readStream.
 	importer := Highcharts7DumpImporter importingElementsIn: jsonToImport.
@@ -29,7 +29,11 @@ Highsoft7ImportTool >> execute [
 	importer := Highstock7DumpImporter importingElementsIn: jsonToImport.
 	importer executeChanges.
 	( Highsoft7TestGenerator definedIn: 'HighstockSt-V7' withSeriesNamed: 'HighstockSeries' )
-		generateTests
+		generateTests.
+	'Highcharts and Highstock import finished!' inspect
+	]
+		forkAt: Processor userBackgroundPriority
+		named: 'Highsoft Import Tool: Generating wrapper classes...'
 ]
 
 { #category : #initialization }
