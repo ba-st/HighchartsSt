@@ -19,6 +19,20 @@ HighstockPlotOptionsPolygonMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsPolygonMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPolygonMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsPolygonMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

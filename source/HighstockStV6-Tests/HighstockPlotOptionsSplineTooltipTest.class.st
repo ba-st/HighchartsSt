@@ -75,6 +75,20 @@ HighstockPlotOptionsSplineTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSplineTooltipTest >> testHeaderShape [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSplineTooltip new.
+	component headerShape: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'headerShape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSplineTooltipTest >> testHideDelay [
 
 	| component javascript expectedConfiguration |
@@ -84,6 +98,48 @@ HighstockPlotOptionsSplineTooltipTest >> testHideDelay [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'hideDelay' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSplineTooltipTest >> testNullFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSplineTooltip new.
+	component nullFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSplineTooltipTest >> testNullFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSplineTooltip new.
+	component nullFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSplineTooltipTest >> testOutside [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSplineTooltip new.
+	component outside: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'outside' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

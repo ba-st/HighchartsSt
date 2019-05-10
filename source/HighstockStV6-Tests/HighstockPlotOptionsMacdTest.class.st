@@ -33,6 +33,20 @@ HighstockPlotOptionsMacdTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsMacdTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -89,6 +103,20 @@ HighstockPlotOptionsMacdTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsMacdTest >> testColor [
 
 	| component javascript expectedConfiguration |
@@ -117,6 +145,34 @@ HighstockPlotOptionsMacdTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testCompare [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component compare: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compare' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testCompareBase [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component compareBase: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compareBase' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsMacdTest >> testCompareStart [
 
 	| component javascript expectedConfiguration |
@@ -126,6 +182,20 @@ HighstockPlotOptionsMacdTest >> testCompareStart [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'compareStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testCompareToMain [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component compareToMain: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compareToMain' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -196,6 +266,20 @@ HighstockPlotOptionsMacdTest >> testDashStyle [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -327,6 +411,20 @@ HighstockPlotOptionsMacdTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsMacdTest >> testLineWidth [
 
 	| component javascript expectedConfiguration |
@@ -406,6 +504,20 @@ HighstockPlotOptionsMacdTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

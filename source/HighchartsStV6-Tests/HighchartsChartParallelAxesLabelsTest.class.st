@@ -103,6 +103,20 @@ HighchartsChartParallelAxesLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsChartParallelAxesLabelsTest >> testIndentation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxesLabels new.
+	component indentation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'indentation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartParallelAxesLabelsTest >> testMaxStaggerLines [
 
 	| component javascript expectedConfiguration |
@@ -224,6 +238,20 @@ HighchartsChartParallelAxesLabelsTest >> testStep [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'step' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxesLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

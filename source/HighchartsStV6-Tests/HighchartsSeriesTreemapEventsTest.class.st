@@ -103,6 +103,20 @@ HighchartsSeriesTreemapEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTreemapEventsTest >> testSetRootNode [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapEvents new.
+	component setRootNode: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'setRootNode' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTreemapEventsTest >> testShow [
 
 	| component javascript expectedConfiguration |

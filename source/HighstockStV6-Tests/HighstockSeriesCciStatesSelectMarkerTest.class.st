@@ -19,6 +19,20 @@ HighstockSeriesCciStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCciStatesSelectMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCciStatesSelectMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCciStatesSelectMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

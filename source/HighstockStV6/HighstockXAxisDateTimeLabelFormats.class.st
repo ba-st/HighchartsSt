@@ -24,57 +24,49 @@ Class {
 }
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> day: aString [
+HighstockXAxisDateTimeLabelFormats >> day [
 
-
-	configurationOptions at: 'day' put: aString
+	^configurationOptions at: 'day' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsDay new]
 ]
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> hour: aString [
+HighstockXAxisDateTimeLabelFormats >> hour [
 
-
-	configurationOptions at: 'hour' put: aString
+	^configurationOptions at: 'hour' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsHour new]
 ]
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> millisecond: aString [
+HighstockXAxisDateTimeLabelFormats >> millisecond [
 
-
-	configurationOptions at: 'millisecond' put: aString
+	^configurationOptions at: 'millisecond' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsMillisecond new]
 ]
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> minute: aString [
+HighstockXAxisDateTimeLabelFormats >> minute [
 
-
-	configurationOptions at: 'minute' put: aString
+	^configurationOptions at: 'minute' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsMinute new]
 ]
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> month: aString [
+HighstockXAxisDateTimeLabelFormats >> month [
 
-
-	configurationOptions at: 'month' put: aString
+	^configurationOptions at: 'month' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsMonth new]
 ]
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> second: aString [
+HighstockXAxisDateTimeLabelFormats >> second [
 
-
-	configurationOptions at: 'second' put: aString
+	^configurationOptions at: 'second' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsSecond new]
 ]
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> week: aString [
+HighstockXAxisDateTimeLabelFormats >> week [
 
-
-	configurationOptions at: 'week' put: aString
+	^configurationOptions at: 'week' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsWeek new]
 ]
 
 { #category : #accessing }
-HighstockXAxisDateTimeLabelFormats >> year: aString [
+HighstockXAxisDateTimeLabelFormats >> year [
 
-
-	configurationOptions at: 'year' put: aString
+	^configurationOptions at: 'year' ifAbsentPut: [HighstockXAxisDateTimeLabelFormatsYear new]
 ]

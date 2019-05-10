@@ -19,6 +19,20 @@ HighchartsSeriesStreamgraphStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesStreamgraphStatesHoverMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesStreamgraphStatesHoverMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesStreamgraphStatesHoverMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

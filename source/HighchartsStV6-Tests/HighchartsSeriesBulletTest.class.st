@@ -50,6 +50,21 @@ HighchartsSeriesBulletTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBulletTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBullet new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bullet';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBulletTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -120,6 +135,21 @@ HighchartsSeriesBulletTest >> testClassName [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'bullet';
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBullet new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bullet';
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -350,6 +380,21 @@ HighchartsSeriesBulletTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBulletTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBullet new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bullet';
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBulletTest >> testDepth [
 
 	| component javascript expectedConfiguration |
@@ -575,6 +620,21 @@ HighchartsSeriesBulletTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBulletTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBullet new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bullet';
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBulletTest >> testIndex [
 
 	| component javascript expectedConfiguration |
@@ -765,6 +825,21 @@ HighchartsSeriesBulletTest >> testNegativeColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'bullet';
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBullet new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bullet';
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

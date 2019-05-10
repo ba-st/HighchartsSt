@@ -19,6 +19,20 @@ HighstockPlotOptionsAtrStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsAtrStatesHoverMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAtrStatesHoverMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsAtrStatesHoverMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

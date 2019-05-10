@@ -75,6 +75,20 @@ HighstockSeriesAdTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesAdTooltipTest >> testHeaderShape [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAdTooltip new.
+	component headerShape: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'headerShape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAdTooltipTest >> testHideDelay [
 
 	| component javascript expectedConfiguration |
@@ -84,6 +98,48 @@ HighstockSeriesAdTooltipTest >> testHideDelay [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'hideDelay' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAdTooltipTest >> testNullFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAdTooltip new.
+	component nullFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAdTooltipTest >> testNullFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAdTooltip new.
+	component nullFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAdTooltipTest >> testOutside [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAdTooltip new.
+	component outside: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'outside' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

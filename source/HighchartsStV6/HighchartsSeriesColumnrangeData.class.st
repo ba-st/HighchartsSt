@@ -40,6 +40,12 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesColumnrangeData >> accessibility [
+
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesColumnrangeDataAccessibility new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesColumnrangeData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -50,36 +56,38 @@ representation.
 ]
 
 { #category : #accessing }
-HighchartsSeriesColumnrangeData >> color: aColor [
+HighchartsSeriesColumnrangeData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Individual color for the point. By default the color is pulled from
 the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use 
+In styled mode, the color option doesn´t take effect. Instead, use
 colorIndex.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsSeriesColumnrangeData >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name
-highcharts-color-{n}.
+	"A specific color index to use for the point, so its graphic representations
+are given the class name highcharts-color-{n}. In styled mode this will
+change the color of the graphic. In non-styled mode, the color by is set by
+the fill attribute, so the change in class name won´t have a visual effect
+by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsSeriesColumnrangeData >> dataLabels: anObject [
+HighchartsSeriesColumnrangeData >> dataLabels: aHighchartsDataLabelsOptionsObject [
 
 	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+the ones for plotOptions.series.dataLabels.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -87,16 +95,26 @@ HighchartsSeriesColumnrangeData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
+HighchartsSeriesColumnrangeData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesColumnrangeDataDragDrop new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesColumnrangeData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series
-array to use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to
+use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -133,7 +151,7 @@ HighchartsSeriesColumnrangeData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -161,7 +179,7 @@ HighchartsSeriesColumnrangeData >> low: aNumber [
 { #category : #accessing }
 HighchartsSeriesColumnrangeData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabel
+	"The name of the point as shown in the legend, tooltip, dataLabels
 etc.
 "
 

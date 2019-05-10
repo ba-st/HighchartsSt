@@ -24,57 +24,49 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> day: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> day [
 
-
-	configurationOptions at: 'day' put: aString
+	^configurationOptions at: 'day' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsDay new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> hour: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> hour [
 
-
-	configurationOptions at: 'hour' put: aString
+	^configurationOptions at: 'hour' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsHour new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> millisecond: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> millisecond [
 
-
-	configurationOptions at: 'millisecond' put: aString
+	^configurationOptions at: 'millisecond' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsMillisecond new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> minute: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> minute [
 
-
-	configurationOptions at: 'minute' put: aString
+	^configurationOptions at: 'minute' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsMinute new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> month: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> month [
 
-
-	configurationOptions at: 'month' put: aString
+	^configurationOptions at: 'month' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsMonth new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> second: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> second [
 
-
-	configurationOptions at: 'second' put: aString
+	^configurationOptions at: 'second' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsSecond new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> week: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> week [
 
-
-	configurationOptions at: 'week' put: aString
+	^configurationOptions at: 'week' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsWeek new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisDateTimeLabelFormats >> year: aString [
+HighstockNavigatorYAxisDateTimeLabelFormats >> year [
 
-
-	configurationOptions at: 'year' put: aString
+	^configurationOptions at: 'year' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormatsYear new]
 ]

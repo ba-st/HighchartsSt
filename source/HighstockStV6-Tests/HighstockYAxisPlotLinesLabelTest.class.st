@@ -47,6 +47,20 @@ HighstockYAxisPlotLinesLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighstockYAxisPlotLinesLabelTest >> testText [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxisPlotLinesLabel new.
+	component text: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'text' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockYAxisPlotLinesLabelTest >> testTextAlign [
 
 	| component javascript expectedConfiguration |

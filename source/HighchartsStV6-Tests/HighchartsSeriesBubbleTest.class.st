@@ -50,6 +50,21 @@ HighchartsSeriesBubbleTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBubbleTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBubble new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bubble';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBubbleTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -105,6 +120,21 @@ HighchartsSeriesBubbleTest >> testClassName [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'bubble';
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBubbleTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBubble new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bubble';
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -290,6 +320,21 @@ HighchartsSeriesBubbleTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBubbleTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBubble new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bubble';
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBubbleTest >> testDescription [
 
 	| component javascript expectedConfiguration |
@@ -435,6 +480,21 @@ HighchartsSeriesBubbleTest >> testId [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'bubble';
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBubbleTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBubble new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bubble';
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -630,6 +690,21 @@ HighchartsSeriesBubbleTest >> testNegativeColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'bubble';
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBubbleTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBubble new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bubble';
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

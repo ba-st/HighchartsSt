@@ -19,6 +19,20 @@ HighstockSeriesPsarMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPsarMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPsarMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPsarMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

@@ -19,6 +19,20 @@ HighstockSeriesSplineMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesSplineMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSplineMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesSplineMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

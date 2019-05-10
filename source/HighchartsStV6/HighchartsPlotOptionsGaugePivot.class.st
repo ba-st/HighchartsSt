@@ -10,23 +10,23 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPlotOptionsGaugePivot >> backgroundColor: aColor [
+HighchartsPlotOptionsGaugePivot >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or fill of the pivot.
 Defaults to #000000."
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsGaugePivot >> borderColor: aColor [
+HighchartsPlotOptionsGaugePivot >> borderColor: aHighchartsColorString [
 
 	"The border or stroke color of the pivot. In able to change this,
 the borderWidth must also be set to something other than the default
 0.
 Defaults to #cccccc."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

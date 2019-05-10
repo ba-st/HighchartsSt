@@ -47,6 +47,20 @@ HighstockSeriesPriceenvelopesTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPriceenvelopesTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -98,6 +112,20 @@ HighstockSeriesPriceenvelopesTest >> testClassName [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -187,6 +215,20 @@ HighstockSeriesPriceenvelopesTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testCompareToMain [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component compareToMain: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compareToMain' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPriceenvelopesTest >> testConnectEnds [
 
 	| component javascript expectedConfiguration |
@@ -252,6 +294,20 @@ HighstockSeriesPriceenvelopesTest >> testDashStyle [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -378,6 +434,20 @@ HighstockSeriesPriceenvelopesTest >> testId [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -532,6 +602,20 @@ HighstockSeriesPriceenvelopesTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -47,6 +47,20 @@ HighstockSeriesWmaTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesWmaTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWma new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesWmaTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -98,6 +112,20 @@ HighstockSeriesWmaTest >> testClassName [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWmaTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWma new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -187,6 +215,20 @@ HighstockSeriesWmaTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesWmaTest >> testCompareToMain [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWma new.
+	component compareToMain: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compareToMain' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesWmaTest >> testConnectEnds [
 
 	| component javascript expectedConfiguration |
@@ -252,6 +294,20 @@ HighstockSeriesWmaTest >> testDashStyle [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWmaTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWma new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -378,6 +434,20 @@ HighstockSeriesWmaTest >> testId [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWmaTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWma new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -532,6 +602,20 @@ HighstockSeriesWmaTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWmaTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWma new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

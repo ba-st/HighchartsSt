@@ -8,21 +8,21 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNoDataPosition >> align: aString [
+HighstockNoDataPosition >> align: aHighchartsAlignValue [
 
 	"Horizontal alignment of the label.
 Defaults to center."
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
-HighstockNoDataPosition >> verticalAlign: aString [
+HighstockNoDataPosition >> verticalAlign: aHighchartsVerticalAlignValue [
 
 	"Vertical alignment of the label.
 Defaults to middle."
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }

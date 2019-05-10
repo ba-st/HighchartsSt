@@ -19,6 +19,48 @@ HighchartsSeriesFunnelDataEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnelDataEventsTest >> testDrag [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelDataEvents new.
+	component drag: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drag' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelDataEventsTest >> testDragStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelDataEvents new.
+	component dragStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelDataEventsTest >> testDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelDataEvents new.
+	component drop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnelDataEventsTest >> testMouseOut [
 
 	| component javascript expectedConfiguration |

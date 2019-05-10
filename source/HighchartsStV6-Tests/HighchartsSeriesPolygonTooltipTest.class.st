@@ -61,6 +61,20 @@ HighchartsSeriesPolygonTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPolygonTooltipTest >> testHeaderShape [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonTooltip new.
+	component headerShape: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'headerShape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPolygonTooltipTest >> testHideDelay [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +84,48 @@ HighchartsSeriesPolygonTooltipTest >> testHideDelay [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'hideDelay' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonTooltipTest >> testNullFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonTooltip new.
+	component nullFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonTooltipTest >> testNullFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonTooltip new.
+	component nullFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonTooltipTest >> testOutside [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonTooltip new.
+	component outside: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'outside' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -28,15 +28,15 @@ Highcharts6MetadataLibrary class >> libraryName [
 { #category : #versions }
 Highcharts6MetadataLibrary class >> version [
 
-	^ '6.0.3'
+	^ '7.1.1'
 ]
 
 { #category : #'uploaded metadata' }
 Highcharts6MetadataLibrary >> csshighchartsCss [
 	^ WAFileLibraryResource
 		filepath: 'css/highcharts.css'
-		mimeType: (WAMimeType main: 'text' sub: 'css')
-		cacheDuration: (Duration days: 0 hours: 0 minutes: 30 seconds: 0)
+		mimeType: WAMimeType textCss
+		cacheDuration: self class defaultCacheDuration
 		contents: (GRDelayedSend receiver: self selector: #csshighchartsCssContent)
 ]
 
@@ -58,9 +58,13 @@ Highcharts6MetadataLibrary >> csshighchartsCssContent [
   line-height: normal;
   z-index: 0;
   /* #1072 */
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
   font-size: 12px;
+}
+
+.highcharts-root {
+  display: block;
 }
 
 .highcharts-root text {
@@ -93,6 +97,18 @@ Highcharts6MetadataLibrary >> csshighchartsCssContent [
 
 .highcharts-button-box {
   fill: inherit;
+}
+
+.highcharts-tracker-line {
+  stroke-linejoin: round;
+  stroke: rgba(192, 192, 192, 0.0001);
+  stroke-width: 22;
+  fill: none;
+}
+
+.highcharts-tracker-area {
+  fill: rgba(192, 192, 192, 0.0001);
+  stroke-width: 0;
 }
 
 /* Titles */
@@ -131,7 +147,7 @@ Highcharts6MetadataLibrary >> csshighchartsCssContent [
 }
 
 .highcharts-xaxis-grid .highcharts-grid-line {
-  stroke-width: 0;
+  stroke-width: 0px;
 }
 
 .highcharts-tick {
@@ -317,7 +333,7 @@ g.highcharts-series,
   stroke-width: 0;
 }
 
-.highcharts-data-label text {
+.highcharts-data-label text, text.highcharts-data-label {
   fill: #333333;
 }
 
@@ -330,7 +346,8 @@ g.highcharts-series,
   stroke-width: 0;
 }
 
-.highcharts-series:not(.highcharts-pie-series) .highcharts-point-select {
+.highcharts-series:not(.highcharts-pie-series) .highcharts-point-select,
+.highcharts-markers .highcharts-point-select {
   fill: #cccccc;
   stroke: #000000;
 }
@@ -426,9 +443,10 @@ g.highcharts-series,
   stroke-width: 0;
 }
 
-.highcharts-legend-item text {
+.highcharts-legend-item > text {
   fill: #333333;
   font-weight: bold;
+  font-size: 1em;
   cursor: pointer;
   stroke-width: 0;
 }
@@ -452,9 +470,28 @@ g.highcharts-series,
   fill: #cccccc;
 }
 
+circle.highcharts-legend-nav-active, circle.highcharts-legend-nav-inactive {
+  /* tracker */
+  fill: rgba(192, 192, 192, 0.0001);
+}
+
 .highcharts-legend-title-box {
   fill: none;
   stroke-width: 0;
+}
+
+/* Bubble legend */
+.highcharts-bubble-legend-symbol {
+  stroke-width: 2;
+  fill-opacity: 0.5;
+}
+
+.highcharts-bubble-legend-connectors {
+  stroke-width: 1;
+}
+
+.highcharts-bubble-legend-labels {
+  fill: #333333;
 }
 
 /* Loading */
@@ -541,6 +578,17 @@ g.highcharts-series,
 .highcharts-sankey-series .highcharts-point-hover.highcharts-link {
   transition: fill 50ms, fill-opacity 50ms;
   fill-opacity: 1;
+}
+
+.highcharts-venn-series .highcharts-point {
+  fill-opacity: 0.75;
+  stroke: #cccccc;
+  transition: stroke 250ms, fill-opacity 250ms;
+}
+
+.highcharts-venn-series .highcharts-point-hover {
+  fill-opacity: 1;
+  stroke: #cccccc;
 }
 
 /* Highstock */
@@ -638,21 +686,30 @@ g.highcharts-series,
 .highcharts-button-hover {
   transition: fill 0ms;
   fill: #e6e6e6;
-  stroke: #333333;
+  stroke: #cccccc;
+}
+
+.highcharts-button-hover text {
+  fill: #333333;
 }
 
 .highcharts-button-pressed {
   font-weight: bold;
   fill: #e6ebf5;
-  stroke: #335cad;
+  stroke: #cccccc;
+}
+
+.highcharts-button-pressed text {
+  fill: #333333;
+  font-weight: bold;
 }
 
 .highcharts-button-disabled text {
-  fill: #cccccc;
+  fill: #333333;
 }
 
 .highcharts-range-selector-buttons .highcharts-button {
-  stroke-width: 0;
+  stroke-width: 0px;
 }
 
 .highcharts-range-label rect {
@@ -669,6 +726,11 @@ g.highcharts-series,
 
 .highcharts-range-input text {
   fill: #333333;
+}
+
+.highcharts-range-input {
+  stroke-width: 1px;
+  stroke: #cccccc;
 }
 
 input.highcharts-range-selector {
@@ -808,7 +870,9 @@ input.highcharts-range-selector {
   cursor: pointer;
 }
 
-.highcharts-drilldown-data-label text, .highcharts-drilldown-axis-label {
+.highcharts-drilldown-data-label text,
+text.highcharts-drilldown-data-label,
+.highcharts-drilldown-axis-label {
   cursor: pointer;
   fill: #003399;
   font-weight: bold;
@@ -843,6 +907,35 @@ input.highcharts-range-selector {
 .highcharts-lineargauge-target-line {
   stroke-width: 1px;
   stroke: #333333;
+}
+
+/* Annotations module */
+.highcharts-annotation-label-box {
+  stroke-width: 1px;
+  stroke: #000000;
+  fill: #000000;
+  fill-opacity: 0.75;
+}
+
+.highcharts-annotation-label text {
+  fill: #e6e6e6;
+}
+
+/* Gantt */
+.highcharts-treegrid-node-collapsed, .highcharts-treegrid-node-expanded {
+  cursor: pointer;
+}
+
+.highcharts-point-connecting-path {
+  fill: none;
+}
+
+.highcharts-grid-axis .highcharts-tick {
+  stroke-width: 1px;
+}
+
+.highcharts-grid-axis .highcharts-axis-line {
+  stroke-width: 1px;
 }
 '
 ]

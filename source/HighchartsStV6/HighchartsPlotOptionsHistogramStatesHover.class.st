@@ -12,18 +12,18 @@ Class {
 HighchartsPlotOptionsHistogramStatesHover >> animation [
 
 	"Animation setting for hovering the graph in line-type series.
-Defaults to { 'duration': 50 }."
+"
 	^configurationOptions at: 'animation' ifAbsentPut: [HighchartsPlotOptionsHistogramStatesHoverAnimation new]
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsHistogramStatesHover >> borderColor: aColor [
+HighchartsPlotOptionsHistogramStatesHover >> borderColor: aHighchartsColorString [
 
 	"A specific border color for the hovered point. Defaults to
 inherit the normal state border color.
 "
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -38,29 +38,30 @@ HighchartsPlotOptionsHistogramStatesHover >> borderWidth: aNumber [
 { #category : #accessing }
 HighchartsPlotOptionsHistogramStatesHover >> brightness: aNumber [
 
-	"How much to brighten the point on interaction. Requires the main
-color to be defined in hex or rgb(a) format.
+	"How much to brighten the point on interaction. Requires the
+main color to be defined in hex or rgb(a) format.
 In styled mode, the hover brightening is by default replaced
-with a fill-opacity set in the .highcharts-point:hover rule.
+with a fill-opacity set in the .highcharts-point:hover
+rule.
 Defaults to 0.1."
 
 	configurationOptions at: 'brightness' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsHistogramStatesHover >> color: aColor [
+HighchartsPlotOptionsHistogramStatesHover >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A specific color for the hovered point.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsHistogramStatesHover >> enabled: aBoolean [
 
-	"Enable separate styles for the hovered series to visualize that the
-user hovers either the series itself or the legend. .
+	"Enable separate styles for the hovered series to visualize
+that the user hovers either the series itself or the legend.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean

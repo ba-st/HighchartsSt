@@ -33,6 +33,20 @@ HighchartsPlotOptionsGaugeTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsGaugeTest >> testBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +84,20 @@ HighchartsPlotOptionsGaugeTest >> testClassName [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -173,6 +201,20 @@ HighchartsPlotOptionsGaugeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsGaugeTest >> testDescription [
 
 	| component javascript expectedConfiguration |
@@ -252,6 +294,20 @@ HighchartsPlotOptionsGaugeTest >> testGapUnit [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'gapUnit' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -350,6 +406,20 @@ HighchartsPlotOptionsGaugeTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -546,6 +616,20 @@ HighchartsPlotOptionsGaugeTest >> testStickyTracking [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'stickyTracking' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testUseOhlcData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component useOhlcData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'useOhlcData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

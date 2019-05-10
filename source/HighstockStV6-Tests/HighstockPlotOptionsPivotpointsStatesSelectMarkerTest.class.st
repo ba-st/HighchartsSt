@@ -19,6 +19,20 @@ HighstockPlotOptionsPivotpointsStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsPivotpointsStatesSelectMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPivotpointsStatesSelectMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsPivotpointsStatesSelectMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

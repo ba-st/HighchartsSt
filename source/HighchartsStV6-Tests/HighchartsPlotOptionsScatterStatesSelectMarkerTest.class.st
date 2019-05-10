@@ -19,6 +19,20 @@ HighchartsPlotOptionsScatterStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsScatterStatesSelectMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatterStatesSelectMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsScatterStatesSelectMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

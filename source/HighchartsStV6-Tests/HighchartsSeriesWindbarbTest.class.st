@@ -50,6 +50,21 @@ HighchartsSeriesWindbarbTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWindbarbTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -120,6 +135,21 @@ HighchartsSeriesWindbarbTest >> testClassName [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'windbarb';
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -300,6 +330,21 @@ HighchartsSeriesWindbarbTest >> testData [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'windbarb';
 		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -500,6 +545,21 @@ HighchartsSeriesWindbarbTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWindbarbTest >> testIndex [
 
 	| component javascript expectedConfiguration |
@@ -690,6 +750,21 @@ HighchartsSeriesWindbarbTest >> testOnSeries [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'windbarb';
 		at: 'onSeries' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1065,6 +1140,21 @@ HighchartsSeriesWindbarbTest >> testXAxis [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'windbarb';
 		at: 'xAxis' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testXOffset [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component xOffset: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'xOffset' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

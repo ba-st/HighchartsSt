@@ -101,3 +101,17 @@ HighstockSeriesMfiLabelTest >> testOnArea [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesMfiLabelTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesMfiLabel new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

@@ -50,6 +50,21 @@ HighstockSeriesOhlcTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesOhlcTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -105,6 +120,21 @@ HighstockSeriesOhlcTest >> testClassName [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'ohlc';
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -335,6 +365,21 @@ HighstockSeriesOhlcTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesOhlcTest >> testDepth [
 
 	| component javascript expectedConfiguration |
@@ -560,6 +605,21 @@ HighstockSeriesOhlcTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesOhlcTest >> testIndex [
 
 	| component javascript expectedConfiguration |
@@ -755,6 +815,21 @@ HighstockSeriesOhlcTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'opacity' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesOhlcTest >> testPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
@@ -855,6 +930,21 @@ HighstockSeriesOhlcTest >> testPointStart [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'ohlc';
 		at: 'pointStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testPointValKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component pointValKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'pointValKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

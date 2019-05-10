@@ -13,21 +13,23 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesVectorStatesHoverHalo >> attributes: anObject [
+HighstockSeriesVectorStatesHoverHalo >> attributes: aHighchartsSVGAttributes [
 
-	"A collection of SVG attributes to override the appearance of the
-halo, for example fill, stroke and stroke-width.
+	"A collection of SVG attributes to override the appearance
+of the halo, for example fill, stroke and
+stroke-width.
 "
 
-	configurationOptions at: 'attributes' put: anObject
+	configurationOptions at: 'attributes' put: aHighchartsSVGAttributes
 ]
 
 { #category : #accessing }
 HighstockSeriesVectorStatesHoverHalo >> opacity: aNumber [
 
-	"Opacity for the halo unless a specific fill is overridden using
-the attributes setting. Note that Highcharts is only able to
-apply opacity to colors of hex or rgb(a) formats.
+	"Opacity for the halo unless a specific fill is overridden
+using the attributes setting. Note that Highcharts is
+only able to apply opacity to colors of hex or rgb(a)
+formats.
 Defaults to 0.25."
 
 	configurationOptions at: 'opacity' put: aNumber
@@ -36,10 +38,10 @@ Defaults to 0.25."
 { #category : #accessing }
 HighstockSeriesVectorStatesHoverHalo >> size: aNumber [
 
-	"The pixel size of the halo. For point markers this is the radius
-of the halo. For pie slices it is the width of the halo outside
-the slice. For bubbles it defaults to 5 and is the width of the
-halo outside the bubble.
+	"The pixel size of the halo. For point markers this is the
+radius of the halo. For pie slices it is the width of the
+halo outside the slice. For bubbles it defaults to 5 and
+is the width of the halo outside the bubble.
 Defaults to 10."
 
 	configurationOptions at: 'size' put: aNumber

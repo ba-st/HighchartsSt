@@ -61,6 +61,20 @@ HighchartsSeriesParetoTest >> testBaseSeries [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesParetoTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -112,6 +126,20 @@ HighchartsSeriesParetoTest >> testClassName [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -271,6 +299,20 @@ HighchartsSeriesParetoTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesParetoTest >> testDescription [
 
 	| component javascript expectedConfiguration |
@@ -392,6 +434,20 @@ HighchartsSeriesParetoTest >> testId [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -546,6 +602,20 @@ HighchartsSeriesParetoTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -840,6 +910,20 @@ HighchartsSeriesParetoTest >> testType [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testUseOhlcData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component useOhlcData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'useOhlcData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

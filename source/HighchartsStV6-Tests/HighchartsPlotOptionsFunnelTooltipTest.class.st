@@ -75,6 +75,20 @@ HighchartsPlotOptionsFunnelTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelTooltipTest >> testHeaderShape [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnelTooltip new.
+	component headerShape: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'headerShape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsFunnelTooltipTest >> testHideDelay [
 
 	| component javascript expectedConfiguration |
@@ -84,6 +98,48 @@ HighchartsPlotOptionsFunnelTooltipTest >> testHideDelay [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'hideDelay' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelTooltipTest >> testNullFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnelTooltip new.
+	component nullFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelTooltipTest >> testNullFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnelTooltip new.
+	component nullFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelTooltipTest >> testOutside [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnelTooltip new.
+	component outside: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'outside' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

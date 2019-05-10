@@ -19,6 +19,20 @@ HighstockSeriesCandlestickMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCandlestickMarkerTest >> testEnabledThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestickMarker new.
+	component enabledThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabledThreshold' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCandlestickMarkerTest >> testFillColor [
 
 	| component javascript expectedConfiguration |

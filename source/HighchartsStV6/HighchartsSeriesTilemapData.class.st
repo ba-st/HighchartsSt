@@ -46,6 +46,12 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesTilemapData >> accessibility [
+
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesTilemapDataAccessibility new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesTilemapData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -56,35 +62,37 @@ representation.
 ]
 
 { #category : #accessing }
-HighchartsSeriesTilemapData >> color: aColor [
+HighchartsSeriesTilemapData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the point. In heat maps the point color is rarely set
+	"The color of the point. In tilemaps the point color is rarely set
 explicitly, as we use the color to denote the value. Options for
 this are set in the colorAxis configuration.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsSeriesTilemapData >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name
-highcharts-color-{n}.
+	"A specific color index to use for the point, so its graphic representations
+are given the class name highcharts-color-{n}. In styled mode this will
+change the color of the graphic. In non-styled mode, the color by is set by
+the fill attribute, so the change in class name won´t have a visual effect
+by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsSeriesTilemapData >> dataLabels: anObject [
+HighchartsSeriesTilemapData >> dataLabels: aHighchartsDataLabelsOptionsObject [
 
 	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+the ones for plotOptions.series.dataLabels.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -92,16 +100,26 @@ HighchartsSeriesTilemapData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
+HighchartsSeriesTilemapData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesTilemapDataDragDrop new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesTilemapData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series
-array to use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to
+use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -129,7 +147,7 @@ HighchartsSeriesTilemapData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -148,7 +166,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesTilemapData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabel
+	"The name of the point as shown in the legend, tooltip, dataLabels
 etc.
 "
 
@@ -186,8 +204,9 @@ as set in the colorAxis configuration.
 { #category : #accessing }
 HighchartsSeriesTilemapData >> x: aNumber [
 
-	"The x value of the point. For datetime axes,
-the X value is the timestamp in milliseconds since 1970.
+	"The x coordinate of the point.
+Note that for some tileShapes the grid
+coordinates are offset.
 "
 
 	configurationOptions at: 'x' put: aNumber
@@ -196,8 +215,10 @@ the X value is the timestamp in milliseconds since 1970.
 { #category : #accessing }
 HighchartsSeriesTilemapData >> y: aNumber [
 
-	"The y value of the point.
-Defaults to null."
+	"The y coordinate of the point.
+Note that for some tileShapes the grid
+coordinates are offset.
+"
 
 	configurationOptions at: 'y' put: aNumber
 ]

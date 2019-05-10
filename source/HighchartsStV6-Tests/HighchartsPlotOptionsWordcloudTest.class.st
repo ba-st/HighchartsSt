@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsWordcloudTest >> testAllowExtendPlayingField [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWordcloud new.
+	component allowExtendPlayingField: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'allowExtendPlayingField' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsWordcloudTest >> testAllowPointSelect [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +42,20 @@ HighchartsPlotOptionsWordcloudTest >> testAnimationLimit [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'animationLimit' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWordcloudTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWordcloud new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -257,6 +285,20 @@ HighchartsPlotOptionsWordcloudTest >> testExposeElementToA11y [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsWordcloudTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWordcloud new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsWordcloudTest >> testKeys [
 
 	| component javascript expectedConfiguration |
@@ -280,6 +322,48 @@ HighchartsPlotOptionsWordcloudTest >> testLinkedTo [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'linkedTo' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWordcloudTest >> testMaxFontSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWordcloud new.
+	component maxFontSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'maxFontSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWordcloudTest >> testMinFontSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWordcloud new.
+	component minFontSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'minFontSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWordcloudTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWordcloud new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -392,6 +476,20 @@ HighchartsPlotOptionsWordcloudTest >> testStickyTracking [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'stickyTracking' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWordcloudTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWordcloud new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

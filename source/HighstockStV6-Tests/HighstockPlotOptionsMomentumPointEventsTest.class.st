@@ -19,6 +19,48 @@ HighstockPlotOptionsMomentumPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsMomentumPointEventsTest >> testDrag [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMomentumPointEvents new.
+	component drag: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drag' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMomentumPointEventsTest >> testDragStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMomentumPointEvents new.
+	component dragStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMomentumPointEventsTest >> testDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMomentumPointEvents new.
+	component drop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsMomentumPointEventsTest >> testMouseOut [
 
 	| component javascript expectedConfiguration |

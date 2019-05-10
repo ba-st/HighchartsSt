@@ -25,29 +25,34 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockSeriesScatterDataMarkerStatesHover >> fillColor: aColor [
+HighstockSeriesScatterDataMarkerStatesHover >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The fill color of the marker in hover state.
-Defaults to null."
+	"The fill color of the marker in hover state. When
+undefined, the series´ or point´s fillColor for normal
+state is used.
+"
 
-	configurationOptions at: 'fillColor' put: aColor
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockSeriesScatterDataMarkerStatesHover >> lineColor: aColor [
+HighstockSeriesScatterDataMarkerStatesHover >> lineColor: aHighchartsColorString [
 
-	"The color of the point marker´s outline. When null, the
-series´ or point´s color is used.
-Defaults to #ffffff."
+	"The color of the point marker´s outline. When
+undefined, the series´ or point´s lineColor for normal
+state is used.
+"
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighstockSeriesScatterDataMarkerStatesHover >> lineWidth: aNumber [
 
-	"The width of the point marker´s outline.
-Defaults to 0."
+	"The width of the point marker´s outline. When
+undefined, the series´ or point´s lineWidth for normal
+state is used.
+"
 
 	configurationOptions at: 'lineWidth' put: aNumber
 ]
@@ -64,8 +69,10 @@ Defaults to 1."
 { #category : #accessing }
 HighstockSeriesScatterDataMarkerStatesHover >> radius: aNumber [
 
-	"The radius of the point marker. In hover state, it defaults to the
-normal state´s radius + 2 as per the radiusPlus option.
+	"The radius of the point marker. In hover state, it
+defaults to the normal state´s radius + 2 as per the
+radiusPlus
+option.
 "
 
 	configurationOptions at: 'radius' put: aNumber
@@ -74,7 +81,8 @@ normal state´s radius + 2 as per the radiusPlus option.
 { #category : #accessing }
 HighstockSeriesScatterDataMarkerStatesHover >> radiusPlus: aNumber [
 
-	"The number of pixels to increase the radius of the hovered point.
+	"The number of pixels to increase the radius of the
+hovered point.
 Defaults to 2."
 
 	configurationOptions at: 'radiusPlus' put: aNumber

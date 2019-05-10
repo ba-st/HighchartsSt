@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsXAxisTest >> testAlignTicks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component alignTicks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignTicks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisTest >> testAllowDecimals [
 
 	| component javascript expectedConfiguration |
@@ -238,6 +252,20 @@ HighchartsXAxisTest >> testLinkedTo [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'linkedTo' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testMargin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component margin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'margin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -495,6 +523,20 @@ HighchartsXAxisTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsXAxisTest >> testPane [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component pane: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pane' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisTest >> testReversed [
 
 	| component javascript expectedConfiguration |
@@ -504,6 +546,20 @@ HighchartsXAxisTest >> testReversed [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'reversed' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testReversedStacks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component reversedStacks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'reversedStacks' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

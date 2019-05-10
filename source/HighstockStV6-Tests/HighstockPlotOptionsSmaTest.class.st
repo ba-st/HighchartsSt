@@ -33,6 +33,20 @@ HighstockPlotOptionsSmaTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSmaTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -89,6 +103,20 @@ HighstockPlotOptionsSmaTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSmaTest >> testColor [
 
 	| component javascript expectedConfiguration |
@@ -117,6 +145,34 @@ HighstockPlotOptionsSmaTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testCompare [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component compare: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compare' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testCompareBase [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component compareBase: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compareBase' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSmaTest >> testCompareStart [
 
 	| component javascript expectedConfiguration |
@@ -126,6 +182,20 @@ HighstockPlotOptionsSmaTest >> testCompareStart [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'compareStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testCompareToMain [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component compareToMain: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'compareToMain' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -196,6 +266,20 @@ HighstockPlotOptionsSmaTest >> testDashStyle [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -313,6 +397,20 @@ HighstockPlotOptionsSmaTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSmaTest >> testLineWidth [
 
 	| component javascript expectedConfiguration |
@@ -378,6 +476,20 @@ HighstockPlotOptionsSmaTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSmaTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSma new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

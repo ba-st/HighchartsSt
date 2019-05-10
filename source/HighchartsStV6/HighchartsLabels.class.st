@@ -10,15 +10,16 @@ Class {
 { #category : #accessing }
 HighchartsLabels >> items [
 
-	"A HTML label that can be positioned anywhere in the chart area.
+	"An HTML label that can be positioned anywhere in the chart area.
 "
 	^configurationOptions at: 'items' ifAbsentPut: [HighchartsLabelsItems new]
 ]
 
 { #category : #accessing }
-HighchartsLabels >> style [
+HighchartsLabels >> style: aHighchartsCSSObject [
 
 	"Shared CSS styles for all labels.
-Defaults to { 'color': '#333333' }."
-	^configurationOptions at: 'style' ifAbsentPut: [HighchartsLabelsStyle new]
+Defaults to {'color': '#333333', 'position': 'absolute'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]

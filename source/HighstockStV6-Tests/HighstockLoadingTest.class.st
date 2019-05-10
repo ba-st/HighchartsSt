@@ -19,6 +19,20 @@ HighstockLoadingTest >> testHideDuration [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLoadingTest >> testLabelStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLoading new.
+	component labelStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labelStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLoadingTest >> testShowDuration [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +42,20 @@ HighstockLoadingTest >> testShowDuration [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'showDuration' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLoadingTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLoading new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

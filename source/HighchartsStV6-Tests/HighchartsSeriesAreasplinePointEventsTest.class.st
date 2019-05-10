@@ -19,6 +19,48 @@ HighchartsSeriesAreasplinePointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesAreasplinePointEventsTest >> testDrag [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinePointEvents new.
+	component drag: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drag' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinePointEventsTest >> testDragStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinePointEvents new.
+	component dragStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinePointEventsTest >> testDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinePointEvents new.
+	component drop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesAreasplinePointEventsTest >> testMouseOut [
 
 	| component javascript expectedConfiguration |

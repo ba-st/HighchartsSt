@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesSunburstData >> accessibility [
+
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesSunburstDataAccessibility new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesSunburstData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -15,22 +21,24 @@ representation.
 ]
 
 { #category : #accessing }
-HighchartsSeriesSunburstData >> color: aColor [
+HighchartsSeriesSunburstData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the point. In heat maps the point color is rarely set
 explicitly, as we use the color to denote the value. Options for
 this are set in the colorAxis configuration.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsSeriesSunburstData >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name
-highcharts-color-{n}.
+	"A specific color index to use for the point, so its graphic representations
+are given the class name highcharts-color-{n}. In styled mode this will
+change the color of the graphic. In non-styled mode, the color by is set by
+the fill attribute, so the change in class name won´t have a visual effect
+by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -42,19 +50,19 @@ HighchartsSeriesSunburstData >> colorValue: aNumber [
 	"Serves a purpose only if a colorAxis object is defined in the chart
 options. This value will decide which color the point gets from the
 scale of the colorAxis.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'colorValue' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsSeriesSunburstData >> dataLabels: anObject [
+HighchartsSeriesSunburstData >> dataLabels: aHighchartsDataLabelsOptionsObject [
 
 	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+the ones for plotOptions.series.dataLabels.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -62,16 +70,26 @@ HighchartsSeriesSunburstData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
+HighchartsSeriesSunburstData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesSunburstDataDragDrop new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesSunburstData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series
-array to use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to
+use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -99,7 +117,7 @@ HighchartsSeriesSunburstData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -119,7 +137,7 @@ will be drawn.
 HighchartsSeriesSunburstData >> name: aString [
 
 	"The name decides the text for a word.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'name' put: aString
 ]
@@ -131,7 +149,7 @@ HighchartsSeriesSunburstData >> parent: aString [
 value should be the id of the point which is the parent. If no points
 has a matching id, or this option is undefined, then the parent will
 be set to the root.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'parent' put: aString
 ]
@@ -155,13 +173,23 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsSeriesSunburstData >> value: aNumber [
+HighchartsSeriesSunburstData >> sliced: aBoolean [
+
+	"Whether to display a slice offset from the center. When a sunburst point is
+sliced, its children are also offset.
+Defaults to false."
+
+	configurationOptions at: 'sliced' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsSeriesSunburstData >> value: aNumberOrNil [
 
 	"The value of the point, resulting in a relative area of the point
 in the sunburst.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'value' put: aNumber
+	configurationOptions at: 'value' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -169,7 +197,7 @@ HighchartsSeriesSunburstData >> weight: aNumber [
 
 	"The weighting of a word. The weight decides the relative size of a word
 compared to the rest of the collection.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'weight' put: aNumber
 ]

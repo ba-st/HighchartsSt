@@ -103,6 +103,20 @@ HighchartsYAxisLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsYAxisLabelsTest >> testMaxStaggerLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxisLabels new.
+	component maxStaggerLines: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'maxStaggerLines' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsYAxisLabelsTest >> testOverflow [
 
 	| component javascript expectedConfiguration |
@@ -210,6 +224,20 @@ HighchartsYAxisLabelsTest >> testStep [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'step' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxisLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

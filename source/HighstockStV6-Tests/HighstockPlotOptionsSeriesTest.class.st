@@ -33,6 +33,20 @@ HighstockPlotOptionsSeriesTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSeriesTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSeries new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSeriesTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +84,20 @@ HighstockPlotOptionsSeriesTest >> testClassName [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSeriesTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSeries new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -201,6 +229,20 @@ HighstockPlotOptionsSeriesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSeriesTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSeries new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSeriesTest >> testDescription [
 
 	| component javascript expectedConfiguration |
@@ -313,6 +355,20 @@ HighstockPlotOptionsSeriesTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSeriesTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSeries new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSeriesTest >> testKeys [
 
 	| component javascript expectedConfiguration |
@@ -392,6 +448,20 @@ HighstockPlotOptionsSeriesTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSeriesTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSeries new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

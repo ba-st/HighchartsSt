@@ -1,0 +1,19 @@
+Class {
+	#name : #HighchartsPlotOptionsPackedbubbleStatesSelectAnimationTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsStV6-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPackedbubbleStatesSelectAnimationTest >> testDuration [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPackedbubbleStatesSelectAnimation new.
+	component duration: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'duration' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

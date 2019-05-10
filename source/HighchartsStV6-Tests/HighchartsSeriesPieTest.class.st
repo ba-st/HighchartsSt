@@ -50,6 +50,21 @@ HighchartsSeriesPieTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPieTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPie new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pie';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPieTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -335,6 +350,21 @@ HighchartsSeriesPieTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPieTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPie new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pie';
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPieTest >> testDepth [
 
 	| component javascript expectedConfiguration |
@@ -510,6 +540,21 @@ HighchartsSeriesPieTest >> testIgnoreHiddenPoint [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pie';
 		at: 'ignoreHiddenPoint' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPieTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPie new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pie';
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -705,6 +750,21 @@ HighchartsSeriesPieTest >> testNegativeColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pie';
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPieTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPie new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pie';
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1050,6 +1110,21 @@ HighchartsSeriesPieTest >> testType [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pie';
 		at: 'type' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPieTest >> testUseOhlcData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPie new.
+	component useOhlcData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pie';
+		at: 'useOhlcData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

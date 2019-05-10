@@ -75,6 +75,20 @@ HighchartsPlotOptionsPieTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsPieTooltipTest >> testHeaderShape [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPieTooltip new.
+	component headerShape: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'headerShape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPieTooltipTest >> testHideDelay [
 
 	| component javascript expectedConfiguration |
@@ -84,6 +98,48 @@ HighchartsPlotOptionsPieTooltipTest >> testHideDelay [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'hideDelay' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPieTooltipTest >> testNullFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPieTooltip new.
+	component nullFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPieTooltipTest >> testNullFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPieTooltip new.
+	component nullFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPieTooltipTest >> testOutside [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPieTooltip new.
+	component outside: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'outside' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

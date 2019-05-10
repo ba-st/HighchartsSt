@@ -16,30 +16,10 @@ Class {
 { #category : #accessing }
 HighstockSeriesWindbarbDataGrouping >> approximation: aStringOrFunction [
 
-	"The method of approximation inside a group. When for example 30 days
-are grouped into one month, this determines what value should represent
-the group. Possible values are &quot;average&quot;, &quot;averages&quot;, &quot;open&quot;, &quot;high&quot;,
-&quot;low&quot;, &quot;close&quot; and &quot;sum&quot;. For OHLC and candlestick series the approximation
-is &quot;ohlc&quot; by default, which finds the open, high, low and close values
-within all the grouped data. For ranges, the approximation is &quot;range&quot;,
-which finds the low and high values. For multi-dimensional data,
-like ranges and OHLC, &quot;averages&quot; will compute the average for each
-dimension.
-Custom aggregate methods can be added by assigning a callback function
-as the approximation. This function takes a numeric array as the
-argument and should return a single numeric value or null. Note
-that the numeric array will never contain null values, only true
-numbers. Instead, if null values are present in the raw data, the
-numeric array will have an .hasNulls property set to true. For
-single-value data sets the data is available in the first argument
-of the callback function. For OHLC data sets, all the open values
-are in the first argument, all high values in the second etc.
-Since v4.2.7, grouping meta data is available in the approximation
-callback from this.dataGroupInfo. It can be used to extract information
-from the raw data.
-Defaults to average for line-type series, sum for columns, range
-for range series and ohlc for OHLC and candlestick.
-"
+	"Approximation function for the data grouping. The default
+returns an average of wind speed and a vector average direction
+weighted by wind speed.
+Defaults to windbarb."
 
 	configurationOptions at: 'approximation' put: aStringOrFunction
 ]
@@ -52,7 +32,9 @@ The format can vary within a chart depending on the currently selected
 time range and the current data grouping.
 The default formats are:
 {
-    millisecond: ['A, b e, H:M:S.L', 'A, b e, H:M:S.L', '-H:M:S.L'],
+    millisecond: [
+        'A, b e, H:M:S.L', 'A, b e, H:M:S.L', '-H:M:S.L'
+    ],
     second: ['A, b e, H:M:S', 'A, b e, H:M:S', '-H:M:S'],
     minute: ['A, b e, H:M', 'A, b e, H:M', '-H:M'],
     hour: ['A, b e, H:M', 'A, b e, H:M', '-H:M'],
@@ -77,7 +59,7 @@ to two weeks, the second and third item of the week array are used,
 { #category : #accessing }
 HighstockSeriesWindbarbDataGrouping >> enabled: aBoolean [
 
-	"Enable or disable data grouping.
+	"Whether to enable data grouping.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean
@@ -95,19 +77,24 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighstockSeriesWindbarbDataGrouping >> groupAll: aBoolean [
+
+	"By default only points within the visible range are grouped. Enabling this
+option will force data grouping to calculate all grouped points for a given
+dataset. That option prevents for example a column series from calculating
+a grouped point partially. The effect is similar to
+Series.getExtremesFromAll but does
+not affect yAxis extremes.
+Defaults to false."
+
+	configurationOptions at: 'groupAll' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockSeriesWindbarbDataGrouping >> groupPixelWidth: aNumber [
 
-	"The approximate pixel width of each group. If for example a series
-with 30 points is displayed over a 600 pixel wide plot area, no grouping
-is performed. If however the series contains so many points that
-the spacing is less than the groupPixelWidth, Highcharts will try
-to group it into appropriate groups so that each is more or less
-two pixels wide. If multiple series with different group pixel widths
-are drawn on the same x axis, all series will take the greatest width.
-For example, line series have 2px default group width, while column
-series have 10px. If combined, both the line and the column will
-have 10px by default.
-Defaults to 2."
+	"The approximate data group width.
+Defaults to 30."
 
 	configurationOptions at: 'groupPixelWidth' put: aNumber
 ]
@@ -127,7 +114,7 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockSeriesWindbarbDataGrouping >> units: anArray [
+HighstockSeriesWindbarbDataGrouping >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 
 	"An array determining what time intervals the data is allowed to be
 grouped to. Each array item is an array where the first value is
@@ -160,5 +147,5 @@ units: [[
 ]]
 "
 
-	configurationOptions at: 'units' put: anArray
+	configurationOptions at: 'units' put: anArrayOfArrayOfstringArrayOfnumberOrNil
 ]

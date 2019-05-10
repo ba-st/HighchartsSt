@@ -75,6 +75,20 @@ HighchartsSeriesSunburstLevelsTest >> testDataLabels [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSunburstLevelsTest >> testLevelSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstLevels new.
+	component levelSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'levelSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSunburstLevelsTest >> testRotation [
 
 	| component javascript expectedConfiguration |

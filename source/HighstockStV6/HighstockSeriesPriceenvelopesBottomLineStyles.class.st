@@ -5,13 +5,13 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesPriceenvelopesBottomLineStyles >> lineColor: aString [
+HighstockSeriesPriceenvelopesBottomLineStyles >> lineColor: aHighchartsColorString [
 
-	"Color of the line.
-If not set, it´s inherited from plotOptions.priceenvelopes.color.
+	"Color of the line. If not set, it´s inherited from
+plotOptions.priceenvelopes.color.
 "
 
-	configurationOptions at: 'lineColor' put: aString
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

@@ -61,6 +61,20 @@ HighchartsPlotOptionsSplineTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTooltipTest >> testHeaderShape [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSplineTooltip new.
+	component headerShape: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'headerShape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSplineTooltipTest >> testHideDelay [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +84,48 @@ HighchartsPlotOptionsSplineTooltipTest >> testHideDelay [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'hideDelay' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTooltipTest >> testNullFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSplineTooltip new.
+	component nullFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTooltipTest >> testNullFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSplineTooltip new.
+	component nullFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTooltipTest >> testOutside [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSplineTooltip new.
+	component outside: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'outside' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

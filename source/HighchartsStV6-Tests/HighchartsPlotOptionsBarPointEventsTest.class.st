@@ -19,6 +19,48 @@ HighchartsPlotOptionsBarPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsBarPointEventsTest >> testDrag [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBarPointEvents new.
+	component drag: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drag' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBarPointEventsTest >> testDragStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBarPointEvents new.
+	component dragStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBarPointEventsTest >> testDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBarPointEvents new.
+	component drop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsBarPointEventsTest >> testMouseOut [
 
 	| component javascript expectedConfiguration |

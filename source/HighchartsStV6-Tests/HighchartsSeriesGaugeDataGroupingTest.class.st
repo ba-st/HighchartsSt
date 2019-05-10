@@ -61,6 +61,20 @@ HighchartsSeriesGaugeDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesGaugeDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGaugeDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesGaugeDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

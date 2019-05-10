@@ -10,17 +10,17 @@ Class {
 }
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> afterAnimate: aFunction [
+HighstockPlotOptionsCandlestickEvents >> afterAnimate: aHighchartsSeriesAfterAnimateCallbackFunction [
 
-	"Fires after the series has finished its initial animation, or in
-case animation is disabled, immediately as the series is displayed.
+	"Fires after the series has finished its initial animation, or in case
+animation is disabled, immediately as the series is displayed.
 "
 
-	configurationOptions at: 'afterAnimate' put: aFunction
+	configurationOptions at: 'afterAnimate' put: aHighchartsSeriesAfterAnimateCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> checkboxClick: aFunction [
+HighstockPlotOptionsCandlestickEvents >> checkboxClick: aHighchartsSeriesCheckboxClickCallbackFunction [
 
 	"Fires when the checkbox next to the series´ name in the legend is
 clicked. One parameter, event, is passed to the function. The state
@@ -29,32 +29,32 @@ found by event.item. Return false to prevent the default action
 which is to toggle the select state of the series.
 "
 
-	configurationOptions at: 'checkboxClick' put: aFunction
+	configurationOptions at: 'checkboxClick' put: aHighchartsSeriesCheckboxClickCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> click: aFunction [
+HighstockPlotOptionsCandlestickEvents >> click: aHighchartsSeriesClickCallbackFunction [
 
 	"Fires when the series is clicked. One parameter, event, is passed
 to the function, containing common event information. Additionally,
 event.point holds a pointer to the nearest point on the graph.
 "
 
-	configurationOptions at: 'click' put: aFunction
+	configurationOptions at: 'click' put: aHighchartsSeriesClickCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> hide: aFunction [
+HighstockPlotOptionsCandlestickEvents >> hide: aHighchartsSeriesHideCallbackFunction [
 
 	"Fires when the series is hidden after chart generation time, either
 by clicking the legend item or by calling .hide().
 "
 
-	configurationOptions at: 'hide' put: aFunction
+	configurationOptions at: 'hide' put: aHighchartsSeriesHideCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> legendItemClick: aFunction [
+HighstockPlotOptionsCandlestickEvents >> legendItemClick: aHighchartsSeriesLegendItemClickCallbackFunction [
 
 	"Fires when the legend item belonging to the series is clicked. One
 parameter, event, is passed to the function. The default action
@@ -62,11 +62,11 @@ is to toggle the visibility of the series. This can be prevented
 by returning false or calling event.preventDefault().
 "
 
-	configurationOptions at: 'legendItemClick' put: aFunction
+	configurationOptions at: 'legendItemClick' put: aHighchartsSeriesLegendItemClickCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> mouseOut: aFunction [
+HighstockPlotOptionsCandlestickEvents >> mouseOut: aHighchartsSeriesMouseOutCallbackFunction [
 
 	"Fires when the mouse leaves the graph. One parameter, event, is
 passed to the function, containing common event information. If the
@@ -75,25 +75,25 @@ doesn´t happen before the mouse enters another graph or leaves the
 plot area.
 "
 
-	configurationOptions at: 'mouseOut' put: aFunction
+	configurationOptions at: 'mouseOut' put: aHighchartsSeriesMouseOutCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> mouseOver: aFunction [
+HighstockPlotOptionsCandlestickEvents >> mouseOver: aHighchartsSeriesMouseOverCallbackFunction [
 
 	"Fires when the mouse enters the graph. One parameter, event, is
 passed to the function, containing common event information.
 "
 
-	configurationOptions at: 'mouseOver' put: aFunction
+	configurationOptions at: 'mouseOver' put: aHighchartsSeriesMouseOverCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCandlestickEvents >> show: aFunction [
+HighstockPlotOptionsCandlestickEvents >> show: aHighchartsSeriesShowCallbackFunction [
 
 	"Fires when the series is shown after chart generation time, either
 by clicking the legend item or by calling .show().
 "
 
-	configurationOptions at: 'show' put: aFunction
+	configurationOptions at: 'show' put: aHighchartsSeriesShowCallbackFunction
 ]

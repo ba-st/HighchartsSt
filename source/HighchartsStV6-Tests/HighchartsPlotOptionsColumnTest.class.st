@@ -47,6 +47,20 @@ HighchartsPlotOptionsColumnTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumn new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsColumnTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -112,6 +126,20 @@ HighchartsPlotOptionsColumnTest >> testClassName [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumn new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -224,6 +252,20 @@ HighchartsPlotOptionsColumnTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumn new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -397,6 +439,20 @@ HighchartsPlotOptionsColumnTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumn new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsColumnTest >> testJoinBy [
 
 	| component javascript expectedConfiguration |
@@ -476,6 +532,20 @@ HighchartsPlotOptionsColumnTest >> testNegativeColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumn new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -24,57 +24,49 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> day: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> day [
 
-
-	configurationOptions at: 'day' put: aString
+	^configurationOptions at: 'day' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsDay new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> hour: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> hour [
 
-
-	configurationOptions at: 'hour' put: aString
+	^configurationOptions at: 'hour' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsHour new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> millisecond: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> millisecond [
 
-
-	configurationOptions at: 'millisecond' put: aString
+	^configurationOptions at: 'millisecond' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsMillisecond new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> minute: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> minute [
 
-
-	configurationOptions at: 'minute' put: aString
+	^configurationOptions at: 'minute' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsMinute new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> month: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> month [
 
-
-	configurationOptions at: 'month' put: aString
+	^configurationOptions at: 'month' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsMonth new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> second: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> second [
 
-
-	configurationOptions at: 'second' put: aString
+	^configurationOptions at: 'second' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsSecond new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> week: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> week [
 
-
-	configurationOptions at: 'week' put: aString
+	^configurationOptions at: 'week' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsWeek new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesDateTimeLabelFormats >> year: aString [
+HighchartsChartParallelAxesDateTimeLabelFormats >> year [
 
-
-	configurationOptions at: 'year' put: aString
+	^configurationOptions at: 'year' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormatsYear new]
 ]

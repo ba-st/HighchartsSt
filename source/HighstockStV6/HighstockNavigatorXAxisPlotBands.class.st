@@ -10,20 +10,18 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigatorXAxisPlotBands >> borderColor: aColor [
+HighstockNavigatorXAxisPlotBands >> borderColor: aHighchartsColorString [
 
-	"Border color for the plot band. Also requires borderWidth to be
-set.
-Defaults to null."
+	"Border color for the plot band. Also requires borderWidth to be set.
+"
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighstockNavigatorXAxisPlotBands >> borderWidth: aNumber [
 
-	"Border width for the plot band. Also requires borderColor to be
-set.
+	"Border width for the plot band. Also requires borderColor to be set.
 Defaults to 0."
 
 	configurationOptions at: 'borderWidth' put: aNumber
@@ -32,20 +30,20 @@ Defaults to 0."
 { #category : #accessing }
 HighstockNavigatorXAxisPlotBands >> className: aString [
 
-	"A custom class name, in addition to the default highcharts-plot-
-band, to apply to each individual band.
+	"A custom class name, in addition to the default highcharts-plot-band,
+to apply to each individual band.
 "
 
 	configurationOptions at: 'className' put: aString
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisPlotBands >> color: aColor [
+HighstockNavigatorXAxisPlotBands >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the plot band.
-Defaults to null."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -62,7 +60,7 @@ are click, mouseover, mouseout, mousemove.
 HighstockNavigatorXAxisPlotBands >> from: aNumber [
 
 	"The start position of the plot band in axis units.
-Defaults to null."
+"
 
 	configurationOptions at: 'from' put: aNumber
 ]
@@ -71,7 +69,7 @@ Defaults to null."
 HighstockNavigatorXAxisPlotBands >> id: aString [
 
 	"An id used for identifying the plot band in Axis.removePlotBand.
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -88,7 +86,7 @@ HighstockNavigatorXAxisPlotBands >> label [
 HighstockNavigatorXAxisPlotBands >> to: aNumber [
 
 	"The end position of the plot band in axis units.
-Defaults to null."
+"
 
 	configurationOptions at: 'to' put: aNumber
 ]
@@ -97,10 +95,10 @@ Defaults to null."
 HighstockNavigatorXAxisPlotBands >> zIndex: aNumber [
 
 	"The z index of the plot band within the chart, relative to other
-elements. Using the same z index as another element may give unpredictable
-results, as the last rendered element will be on top. Values from
-0 to 20 make sense.
-Defaults to null."
+elements. Using the same z index as another element may give
+unpredictable results, as the last rendered element will be on top.
+Values from 0 to 20 make sense.
+"
 
 	configurationOptions at: 'zIndex' put: aNumber
 ]

@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testAlignTicks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component alignTicks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignTicks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisTest >> testAllowDecimals [
 
 	| component javascript expectedConfiguration |
@@ -224,6 +238,20 @@ HighstockNavigatorXAxisTest >> testLineWidth [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'lineWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testMargin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component margin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'margin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -467,6 +495,20 @@ HighstockNavigatorXAxisTest >> testOverscroll [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testPane [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component pane: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pane' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisTest >> testReversed [
 
 	| component javascript expectedConfiguration |
@@ -476,6 +518,20 @@ HighstockNavigatorXAxisTest >> testReversed [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'reversed' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testReversedStacks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component reversedStacks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'reversedStacks' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

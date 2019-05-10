@@ -26,6 +26,31 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsChartParallelAxes >> accessibility [
+
+	"Accessibility options for an axis. Requires the accessibility module.
+"
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsChartParallelAxesAccessibility new]
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxes >> alignTicks: aBoolean [
+
+	"When using multiple axis, the ticks of two or more opposite axes
+will automatically be aligned by adding ticks to the axis or axes
+with the least ticks, as if tickAmount were specified.
+This can be prevented by setting alignTicks to false. If the grid
+lines look messy, it´s a good idea to hide them for the secondary
+axis by setting gridLineWidth to 0.
+If startOnTick or endOnTick in an Axis options are set to false,
+then the alignTicks will be disabled for the Axis.
+Disabled for logarithmic axes.
+Defaults to true."
+
+	configurationOptions at: 'alignTicks' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsChartParallelAxes >> allowDecimals: aBoolean [
 
 	"Whether to allow decimals in this axis´ ticks. When counting
@@ -37,7 +62,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> categories: anArrayOfString [
+HighchartsChartParallelAxes >> categories: anArrayOfstring [
 
 	"If categories are present for the xAxis, names are used instead of
 numbers for that axis. Since Highcharts 3.0, categories can also
@@ -46,9 +71,9 @@ axis type to category. However, if you have multiple
 series, best practice remains defining the categories array.
 Example:
 categories: ['Apples', 'Bananas', 'Oranges']
-Defaults to null."
+"
 
-	configurationOptions at: 'categories' put: anArrayOfString
+	configurationOptions at: 'categories' put: anArrayOfstring
 ]
 
 { #category : #accessing }
@@ -108,16 +133,6 @@ dateFormat. Defaults to:
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> description: aString [
-
-	"Requires Accessibility module
-Description of the axis to screen reader users.
-Defaults to undefined."
-
-	configurationOptions at: 'description' put: aString
-]
-
-{ #category : #accessing }
 HighchartsChartParallelAxes >> endOnTick: aBoolean [
 
 	"Whether to force the axis to end on a tick. Use this option with
@@ -148,9 +163,17 @@ HighchartsChartParallelAxes >> events: anObject [
 HighchartsChartParallelAxes >> floor: aNumber [
 
 	"The lowest allowed value for automatically computed axis extremes.
-Defaults to null."
+"
 
 	configurationOptions at: 'floor' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxes >> grid [
+
+	"Set grid options for the axis labels. Requires Highcharts Gantt.
+"
+	^configurationOptions at: 'grid' ifAbsentPut: [HighchartsChartParallelAxesGrid new]
 ]
 
 { #category : #accessing }
@@ -163,15 +186,15 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> height: aNumberOrString [
+HighchartsChartParallelAxes >> height: aNumberOrstring [
 
 	"The height of the Y axis. If it´s a number, it is interpreted as
 pixels.
 Since Highstock 2: If it´s a percentage string, it is interpreted
 as percentages of the total plot height.
-Defaults to null."
+"
 
-	configurationOptions at: 'height' put: aNumberOrString
+	configurationOptions at: 'height' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -183,14 +206,14 @@ HighchartsChartParallelAxes >> labels [
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> lineColor: aColor [
+HighchartsChartParallelAxes >> lineColor: aHighchartsColorString [
 
 	"The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
 .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -212,25 +235,36 @@ linked to a master axis, it will take the same extremes as
 the master, but as assigned by min or max or by setExtremes.
 It can be used to show additional info, or to ease reading the
 chart by duplicating the scales.
-Defaults to null."
+"
 
 	configurationOptions at: 'linkedTo' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> max: aNumber [
+HighchartsChartParallelAxes >> margin: anObject [
+
+	"If there are multiple axes on the same side of the chart, the pixel
+margin between the axes. Defaults to 0 on vertical axes, 15 on
+horizontal axes.
+"
+
+	configurationOptions at: 'margin' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxes >> max: aNumberOrNil [
 
 	"The maximum value of the axis. If null, the max value is
 automatically calculated.
-If the endOnTick option is true, the max value might
-be rounded up.
+If the endOnTick option is true, the max value
+might be rounded up.
 If a tickAmount is set, the axis may be extended
 beyond the set max in order to reach the given number of ticks. The
 same may happen in a chart with multiple axes, determined by chart.
 alignTicks, where a tickAmount is applied internally.
 "
 
-	configurationOptions at: 'max' put: aNumber
+	configurationOptions at: 'max' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -239,7 +273,7 @@ HighchartsChartParallelAxes >> maxLength: aStringOrNumber [
 	"Maximal size of a resizable axis. Could be set as a percent
 of plot area or pixel size.
 This feature requires the drag-panes.js module.
-Defaults to 100%."
+"
 
 	configurationOptions at: 'maxLength' put: aStringOrNumber
 ]
@@ -262,18 +296,18 @@ HighchartsChartParallelAxes >> maxRange: aNumber [
 
 	"Maximum range which can be set using the navigator´s handles.
 Opposite of xAxis.minRange.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'maxRange' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> min: aNumber [
+HighchartsChartParallelAxes >> min: aNumberOrNil [
 
-	"The minimum value of the axis. If null the min value is 
+	"The minimum value of the axis. If null the min value is
 automatically calculated.
-If the startOnTick option is true (default), the min value might
-be rounded down.
+If the startOnTick option is true (default),
+the min value might be rounded down.
 The automatically calculated minimum value is also affected by
 floor, softMin,
 minPadding, minRange
@@ -281,7 +315,7 @@ as well as series.threshold
 and series.softThreshold.
 "
 
-	configurationOptions at: 'min' put: aNumber
+	configurationOptions at: 'min' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -290,7 +324,7 @@ HighchartsChartParallelAxes >> minLength: aNumberOrString [
 	"Minimal size of a resizable axis. Could be set as a percent
 of plot area or pixel size.
 This feature requires the drag-panes.js module.
-Defaults to 10%."
+"
 
 	configurationOptions at: 'minLength' put: aNumberOrString
 ]
@@ -341,30 +375,30 @@ two points on the axis.
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> minorTickColor: aColor [
+HighchartsChartParallelAxes >> minorTickColor: aHighchartsColorString [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aColor
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> minorTickInterval: aNumberOrString [
+HighchartsChartParallelAxes >> minorTickInterval: aNumberOrstringOrNil [
 
-	"Specific tick interval in axis units for the minor ticks.
-On a linear axis, if &quot;auto&quot;, the minor tick interval is
-calculated as a fifth of the tickInterval. If null, minor
-ticks are not shown.
+	"Specific tick interval in axis units for the minor ticks. On a linear
+axis, if &quot;auto&quot;, the minor tick interval is calculated as a fifth
+of the tickInterval. If null or undefined, minor ticks are not
+shown.
 On logarithmic axes, the unit is the power of the value. For example,
-setting the minorTickInterval to 1 puts one tick on each of 0.1,
-1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
-ticks between 1 and 10, 10 and 100 etc.
+setting the minorTickInterval to 1 puts one tick on each of 0.1, 1,
+10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks
+between 1 and 10, 10 and 100 etc.
 If user settings dictate minor ticks to become too dense, they don´t
 make sense, and will be ignored to prevent performance problems.
 "
 
-	configurationOptions at: 'minorTickInterval' put: aNumberOrString
+	configurationOptions at: 'minorTickInterval' put: aNumberOrstringOrNil
 ]
 
 { #category : #accessing }
@@ -438,12 +472,23 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighchartsChartParallelAxes >> pane: aNumber [
+
+	"Refers to the index in the panes array. Used for circular
+gauges and polar charts. When the option is not set then first pane
+will be used.
+"
+
+	configurationOptions at: 'pane' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsChartParallelAxes >> range: aNumber [
 
 	"The zoomed range to display when only defining one or none of min
 or max. For example, to show the latest month, a range of one month
 can be set.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'range' put: aNumber
 ]
@@ -451,8 +496,10 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsChartParallelAxes >> resize [
 
-	"Options for axis resizing for Drag Panes module.
-This feature requires the drag-panes.js module.
+	"Options for axis resizing. This feature requires the
+drag-panes.js
+module. It adds a thick line between panes which the user can drag
+in order to resize the panes.
 "
 	^configurationOptions at: 'resize' ifAbsentPut: [HighchartsChartParallelAxesResize new]
 ]
@@ -461,8 +508,7 @@ This feature requires the drag-panes.js module.
 HighchartsChartParallelAxes >> reversed: aBoolean [
 
 	"Whether to reverse the axis so that the highest number is closest
-to the origin. If the chart is inverted, the x axis is reversed by
-default.
+to the origin.
 Defaults to false."
 
 	configurationOptions at: 'reversed' put: aBoolean
@@ -510,9 +556,11 @@ Defaults to true."
 { #category : #accessing }
 HighchartsChartParallelAxes >> softMax: aNumber [
 
-	"A soft maximum for the axis. If the series data maximum is greater
+	"A soft maximum for the axis. If the series data maximum is less
 than this, the axis will stay at this maximum, but if the series
 data maximum is higher, the axis will flex to show all data.
+Note: The series.softThreshold option takes precedence over this
+option.
 "
 
 	configurationOptions at: 'softMax' put: aNumber
@@ -524,6 +572,8 @@ HighchartsChartParallelAxes >> softMin: aNumber [
 	"A soft minimum for the axis. If the series data minimum is greater
 than this, the axis will stay at this minimum, but if the series
 data minimum is lower, the axis will flex to show all data.
+Note: The series.softThreshold option takes precedence over this
+option.
 "
 
 	configurationOptions at: 'softMin' put: aNumber
@@ -550,6 +600,19 @@ Defaults to true."
 ]
 
 { #category : #accessing }
+HighchartsChartParallelAxes >> staticScale: aNumber [
+
+	"For vertical axes only. Setting the static scale ensures that each tick unit
+is translated into a fixed pixel height. For example, setting the static
+scale to 24 results in each Y axis category taking up 24 pixels, and the
+height of the chart adjusts. Adding or removing items will make the chart
+resize.
+Defaults to 50."
+
+	configurationOptions at: 'staticScale' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsChartParallelAxes >> tickAmount: aNumber [
 
 	"The amount of ticks to draw on the axis. This opens up for aligning
@@ -563,33 +626,36 @@ or category axes are not affected.
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> tickColor: aColor [
+HighchartsChartParallelAxes >> tickColor: aHighchartsColorString [
 
 	"Color for the main tick marks.
 In styled mode, the stroke is given in the .highcharts-tick
 class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aColor
+	configurationOptions at: 'tickColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighchartsChartParallelAxes >> tickInterval: aNumber [
 
-	"The interval of the tick marks in axis units. When null, the tick
-interval is computed to approximately follow the tickPixelInterval on linear and datetime axes. On categorized axes,
-a null tickInterval will default to 1, one category. Note that
-datetime axes are based on milliseconds, so for example an interval
-of one day is expressed as 24 * 3600 * 1000.
-On logarithmic axes, the tickInterval is based on powers, so a tickInterval
-of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval
-of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts
-a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc.
+	"The interval of the tick marks in axis units. When undefined, the
+tick interval is computed to approximately follow the
+tickPixelInterval on linear and datetime
+axes. On categorized axes, a undefined tickInterval will default to
+1, one category. Note that datetime axes are based on milliseconds,
+so for example an interval of one day is expressed as
+24 * 3600 * 1000.
+On logarithmic axes, the tickInterval is based on powers, so a
+tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A
+tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval
+of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20,
+40 etc.
 If the tickInterval is too dense for labels to be drawn, Highcharts
 may remove ticks.
 If the chart has multiple axes, the alignTicks
 option may interfere with the tickInterval setting.
-Defaults to null."
+"
 
 	configurationOptions at: 'tickInterval' put: aNumber
 ]
@@ -608,8 +674,8 @@ HighchartsChartParallelAxes >> tickPixelInterval: aNumber [
 
 	"If tickInterval is null this option sets the approximate pixel
 interval of the tick marks. Not applicable to categorized axis.
-The tick interval is also influenced by the minTickInterval option, that, by default prevents ticks from being
-denser than the data points.
+The tick interval is also influenced by the minTickInterval option, that, by default prevents ticks from
+being denser than the data points.
 Defaults to 72."
 
 	configurationOptions at: 'tickPixelInterval' put: aNumber
@@ -626,26 +692,25 @@ Defaults to outside."
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> tickPositioner: aFunction [
+HighchartsChartParallelAxes >> tickPositioner: aHighchartsAxisTickPositionerCallbackFunction [
 
 	"A callback function returning array defining where the ticks are
-laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
-tick positions are accessible through this.tickPositions and can
-be modified by the callback.
+laid out on the axis. This overrides the default behaviour of
+tickPixelInterval and tickInterval. The automatic tick positions are accessible
+through this.tickPositions and can be modified by the callback.
 "
 
-	configurationOptions at: 'tickPositioner' put: aFunction
+	configurationOptions at: 'tickPositioner' put: aHighchartsAxisTickPositionerCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> tickPositions: anArrayOfNumber [
+HighchartsChartParallelAxes >> tickPositions: anArrayOfnumber [
 
 	"An array defining where the ticks are laid out on the axis. This
-overrides the default behaviour of tickPixelInterval
-and tickInterval.
+overrides the default behaviour of tickPixelInterval and tickInterval.
 "
 
-	configurationOptions at: 'tickPositions' put: anArrayOfNumber
+	configurationOptions at: 'tickPositions' put: anArrayOfnumber
 ]
 
 { #category : #accessing }
@@ -662,24 +727,22 @@ HighchartsChartParallelAxes >> tickmarkPlacement: aString [
 
 	"For categorized axes only. If on the tick mark is placed in the
 center of the category, if between the tick mark is placed between
-categories. The default is between if the tickInterval is 1,
- else on.
+categories. The default is between if the tickInterval is 1, else
+on.
 Defaults to between."
 
 	configurationOptions at: 'tickmarkPlacement' put: aString
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> title: anObject [
+HighchartsChartParallelAxes >> title [
 
-	"Titles for yAxes are taken from 
-xAxis.categories. All options for 
-xAxis.labels applies to parallel coordinates titles.
-For example, to style categories, use 
-xAxis.labels.style.
+	"Titles for yAxes are taken from
+xAxis.categories. All options for xAxis.labels
+applies to parallel coordinates titles. For example, to style
+categories, use xAxis.labels.style.
 "
-
-	configurationOptions at: 'title' put: anObject
+	^configurationOptions at: 'title' ifAbsentPut: [HighchartsChartParallelAxesTitle new]
 ]
 
 { #category : #accessing }
@@ -692,10 +755,13 @@ will use other options, in this order:
 
 yAxis.labels.format will be used if
 set
-if yAxis is a category, then category name will be displayed
-if yAxis is a datetime, then value will use the same format as
+
+If yAxis is a category, then category name will be displayed
+
+If yAxis is a datetime, then value will use the same format as
 yAxis labels
-if yAxis is linear/logarithmic type, then simple value will be
+
+If yAxis is linear/logarithmic type, then simple value will be
 used
 Defaults to undefined."
 
@@ -703,30 +769,31 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> top: aNumberOrString [
+HighchartsChartParallelAxes >> top: aNumberOrstring [
 
 	"The top position of the Y axis. If it´s a number, it is interpreted
 as pixel position relative to the chart.
 Since Highstock 2: If it´s a percentage string, it is interpreted
 as percentages of the plot height, offset from plot area top.
-Defaults to null."
+"
 
-	configurationOptions at: 'top' put: aNumberOrString
+	configurationOptions at: 'top' put: aNumberOrstring
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> type: aString [
+HighchartsChartParallelAxes >> type: aHighchartsAxisTypeValue [
 
-	"The type of axis. Can be one of linear, logarithmic, datetime
-or category. In a datetime axis, the numbers are given in
-milliseconds, and tick marks are placed on appropriate values like
-full hours or days. In a category axis, the 
-point names of the chart´s series are used
-for categories, if not a categories array is
-defined.
+	"The type of axis. Can be one of linear, logarithmic, datetime,
+category or treegrid. Defaults to treegrid for Gantt charts,
+linear for other chart types.
+In a datetime axis, the numbers are given in milliseconds, and tick
+marks are placed on appropriate values, like full hours or days. In a
+category or treegrid axis, the point names
+of the chart´s series are used for categories, if a
+categories array is not defined.
 Defaults to linear."
 
-	configurationOptions at: 'type' put: aString
+	configurationOptions at: 'type' put: aHighchartsAxisTypeValue
 ]
 
 { #category : #accessing }
@@ -745,7 +812,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> units: anArray [
+HighchartsChartParallelAxes >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 
 	"Datetime axis only. An array determining what time intervals the
 ticks are allowed to fall on. Each array item is an array where the
@@ -778,7 +845,7 @@ units: [[
 ]]
 "
 
-	configurationOptions at: 'units' put: anArray
+	configurationOptions at: 'units' put: anArrayOfArrayOfstringArrayOfnumberOrNil
 ]
 
 { #category : #accessing }

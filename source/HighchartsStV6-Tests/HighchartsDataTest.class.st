@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsDataTest >> testBeforeParse [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsData new.
+	component beforeParse: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'beforeParse' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsDataTest >> testColumns [
 
 	| component javascript expectedConfiguration |
@@ -14,6 +28,20 @@ HighchartsDataTest >> testColumns [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'columns' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDataTest >> testColumnsURL [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsData new.
+	component columnsURL: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'columnsURL' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -47,6 +75,34 @@ HighchartsDataTest >> testCsv [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsDataTest >> testCsvURL [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsData new.
+	component csvURL: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'csvURL' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDataTest >> testDataRefreshRate [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsData new.
+	component dataRefreshRate: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataRefreshRate' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsDataTest >> testDateFormat [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +126,20 @@ HighchartsDataTest >> testDecimalPoint [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'decimalPoint' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDataTest >> testEnablePolling [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsData new.
+	component enablePolling: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enablePolling' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -210,6 +280,20 @@ HighchartsDataTest >> testRows [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'rows' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDataTest >> testRowsURL [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsData new.
+	component rowsURL: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'rowsURL' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

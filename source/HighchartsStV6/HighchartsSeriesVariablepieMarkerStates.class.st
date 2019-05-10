@@ -16,11 +16,27 @@ HighchartsSeriesVariablepieMarkerStates >> hover [
 ]
 
 { #category : #accessing }
+HighchartsSeriesVariablepieMarkerStates >> inactive [
+
+	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesVariablepieMarkerStatesInactive new]
+]
+
+{ #category : #accessing }
+HighchartsSeriesVariablepieMarkerStates >> normal [
+
+	"The normal state of a single point marker. Currently only
+used for setting animation when returning to normal state
+from hover.
+"
+	^configurationOptions at: 'normal' ifAbsentPut: [HighchartsSeriesVariablepieMarkerStatesNormal new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesVariablepieMarkerStates >> select [
 
 	"The appearance of the point marker when selected. In order to
-allow a point to be selected, set the series.allowPointSelect
-option to true.
+allow a point to be selected, set the
+series.allowPointSelect option to true.
 "
 	^configurationOptions at: 'select' ifAbsentPut: [HighchartsSeriesVariablepieMarkerStatesSelect new]
 ]

@@ -19,6 +19,48 @@ HighstockSeriesPsarPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPsarPointEventsTest >> testDrag [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPsarPointEvents new.
+	component drag: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drag' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPsarPointEventsTest >> testDragStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPsarPointEvents new.
+	component dragStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPsarPointEventsTest >> testDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPsarPointEvents new.
+	component drop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPsarPointEventsTest >> testMouseOut [
 
 	| component javascript expectedConfiguration |

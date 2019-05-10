@@ -1,0 +1,19 @@
+Class {
+	#name : #HighchartsPlotOptionsVectorStatesSelectMarkerStatesInactiveTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsStV6-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVectorStatesSelectMarkerStatesInactiveTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVectorStatesSelectMarkerStatesInactive new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

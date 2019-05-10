@@ -10,12 +10,12 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPlotOptionsGaugeDial >> backgroundColor: aColor [
+HighchartsPlotOptionsGaugeDial >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background or fill color of the gauge´s dial.
 Defaults to #000000."
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -39,13 +39,14 @@ Defaults to 3."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsGaugeDial >> borderColor: aColor [
+HighchartsPlotOptionsGaugeDial >> borderColor: aHighchartsColorString [
 
-	"The border color or stroke of the gauge´s dial. By default, the borderWidth
-is 0, so this must be set in addition to a custom border color.
+	"The border color or stroke of the gauge´s dial. By default, the
+borderWidth is 0, so this must be set in addition to a custom border
+color.
 Defaults to #cccccc."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

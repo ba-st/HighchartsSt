@@ -103,6 +103,20 @@ HighchartsXAxisLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsXAxisLabelsTest >> testMaxStaggerLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxisLabels new.
+	component maxStaggerLines: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'maxStaggerLines' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisLabelsTest >> testOverflow [
 
 	| component javascript expectedConfiguration |

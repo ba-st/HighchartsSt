@@ -10,22 +10,22 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsSeriesFunnelEvents >> afterAnimate: aFunction [
+HighchartsSeriesFunnelEvents >> afterAnimate: aHighchartsSeriesAfterAnimateCallbackFunction [
 
-	"Fires after the series has finished its initial animation, or in
-case animation is disabled, immediately as the series is displayed.
+	"Fires after the series has finished its initial animation, or in case
+animation is disabled, immediately as the series is displayed.
 "
 
-	configurationOptions at: 'afterAnimate' put: aFunction
+	configurationOptions at: 'afterAnimate' put: aHighchartsSeriesAfterAnimateCallbackFunction
 ]
 
 { #category : #accessing }
 HighchartsSeriesFunnelEvents >> checkboxClick: aFunction [
 
-	"Fires when the checkbox next to the point name in the legend is clicked.
-One parameter, event, is passed to the function. The state of the
-checkbox is found by event.checked. The checked item is found by
-event.item. Return false to prevent the default action which is to
+	"Fires when the checkbox next to the point name in the legend is
+clicked. One parameter, event, is passed to the function. The state
+of the checkbox is found by event.checked. The checked item is found
+by event.item. Return false to prevent the default action which is to
 toggle the select state of the series.
 "
 
@@ -33,38 +33,40 @@ toggle the select state of the series.
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelEvents >> click: aFunction [
+HighchartsSeriesFunnelEvents >> click: aHighchartsSeriesClickCallbackFunction [
 
 	"Fires when the series is clicked. One parameter, event, is passed
 to the function, containing common event information. Additionally,
 event.point holds a pointer to the nearest point on the graph.
 "
 
-	configurationOptions at: 'click' put: aFunction
+	configurationOptions at: 'click' put: aHighchartsSeriesClickCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelEvents >> hide: aFunction [
+HighchartsSeriesFunnelEvents >> hide: aHighchartsSeriesHideCallbackFunction [
 
 	"Fires when the series is hidden after chart generation time, either
 by clicking the legend item or by calling .hide().
 "
 
-	configurationOptions at: 'hide' put: aFunction
+	configurationOptions at: 'hide' put: aHighchartsSeriesHideCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelEvents >> legendItemClick: aFunction [
+HighchartsSeriesFunnelEvents >> legendItemClick: aHighchartsSeriesLegendItemClickCallbackFunction [
 
-	"Not applicable to pies, as the legend item is per point. See point.
-events.
+	"Fires when the legend item belonging to the series is clicked. One
+parameter, event, is passed to the function. The default action
+is to toggle the visibility of the series. This can be prevented
+by returning false or calling event.preventDefault().
 "
 
-	configurationOptions at: 'legendItemClick' put: aFunction
+	configurationOptions at: 'legendItemClick' put: aHighchartsSeriesLegendItemClickCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelEvents >> mouseOut: aFunction [
+HighchartsSeriesFunnelEvents >> mouseOut: aHighchartsSeriesMouseOutCallbackFunction [
 
 	"Fires when the mouse leaves the graph. One parameter, event, is
 passed to the function, containing common event information. If the
@@ -73,25 +75,25 @@ doesn´t happen before the mouse enters another graph or leaves the
 plot area.
 "
 
-	configurationOptions at: 'mouseOut' put: aFunction
+	configurationOptions at: 'mouseOut' put: aHighchartsSeriesMouseOutCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelEvents >> mouseOver: aFunction [
+HighchartsSeriesFunnelEvents >> mouseOver: aHighchartsSeriesMouseOverCallbackFunction [
 
 	"Fires when the mouse enters the graph. One parameter, event, is
 passed to the function, containing common event information.
 "
 
-	configurationOptions at: 'mouseOver' put: aFunction
+	configurationOptions at: 'mouseOver' put: aHighchartsSeriesMouseOverCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelEvents >> show: aFunction [
+HighchartsSeriesFunnelEvents >> show: aHighchartsSeriesShowCallbackFunction [
 
 	"Fires when the series is shown after chart generation time, either
 by clicking the legend item or by calling .show().
 "
 
-	configurationOptions at: 'show' put: aFunction
+	configurationOptions at: 'show' put: aHighchartsSeriesShowCallbackFunction
 ]

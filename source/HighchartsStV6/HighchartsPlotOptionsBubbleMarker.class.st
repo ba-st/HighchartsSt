@@ -13,23 +13,32 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPlotOptionsBubbleMarker >> fillColor: aColor [
+HighchartsPlotOptionsBubbleMarker >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The fill color of the point marker. When null, the series´ or
-point´s color is used.
-Defaults to null."
+	"The fill color of the point marker. When undefined, the series´
+or point´s color is used.
+"
 
-	configurationOptions at: 'fillColor' put: aColor
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsBubbleMarker >> lineColor: aColor [
+HighchartsPlotOptionsBubbleMarker >> fillOpacity: aNumber [
 
-	"The color of the point marker´s outline. When null, the series´
-or point´s color is used.
+	"The fill opacity of the bubble markers.
+Defaults to 0.5."
+
+	configurationOptions at: 'fillOpacity' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsBubbleMarker >> lineColor: anObject [
+
+	"The color of the point marker´s outline. When undefined, the
+series´ or point´s color is used.
 Defaults to nil."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: anObject
 ]
 
 { #category : #accessing }
@@ -59,7 +68,7 @@ HighchartsPlotOptionsBubbleMarker >> states: anObject [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsBubbleMarker >> symbol: aString [
+HighchartsPlotOptionsBubbleMarker >> symbol: aHighchartsSymbolKeyValueOrstring [
 
 	"A predefined shape or symbol for the marker. Possible values are
 &quot;circle&quot;, &quot;square&quot;, &quot;diamond&quot;, &quot;triangle&quot; and &quot;triangle-down&quot;.
@@ -71,5 +80,5 @@ Highcharts.SVGRenderer.prototype.symbols. The callback is then
 used by its method name, as shown in the demo.
 Defaults to circle."
 
-	configurationOptions at: 'symbol' put: aString
+	configurationOptions at: 'symbol' put: aHighchartsSymbolKeyValueOrstring
 ]

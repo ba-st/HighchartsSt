@@ -11,24 +11,25 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsLegendNavigation >> activeColor: aColor [
+HighchartsLegendNavigation >> activeColor: aHighchartsColorString [
 
-	"The color for the active up or down arrow in the legend page navigation.
+	"The color for the active up or down arrow in the legend page
+navigation.
 Defaults to #003399."
 
-	configurationOptions at: 'activeColor' put: aColor
+	configurationOptions at: 'activeColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighchartsLegendNavigation >> animation: aBooleanOrObject [
+HighchartsLegendNavigation >> animation: aBooleanOrHighchartsAnimationOptionsObject [
 
-	"How to animate the pages when navigating up or down. A value of true
-applies the default navigation given in the chart.animation option.
-Additional options can be given as an object containing values for
-easing and duration.
+	"How to animate the pages when navigating up or down. A value of
+true applies the default navigation given in the
+chart.animation option. Additional options can be given as an
+object containing values for easing and duration.
 Defaults to true."
 
-	configurationOptions at: 'animation' put: aBooleanOrObject
+	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
 ]
 
 { #category : #accessing }
@@ -46,29 +47,29 @@ HighchartsLegendNavigation >> enabled: aBoolean [
 
 	"Whether to enable the legend navigation. In most cases, disabling
 the navigation results in an unwanted overflow.
-See also the adapt chart to legend plugin for a solution to
-extend the chart height to make room for the legend, optionally in
-exported charts only.
+See also the adapt chart to legend
+plugin for a solution to extend the chart height to make room for
+the legend, optionally in exported charts only.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsLegendNavigation >> inactiveColor: aColor [
+HighchartsLegendNavigation >> inactiveColor: aHighchartsColorString [
 
 	"The color of the inactive up or down arrow in the legend page
 navigation. .
 Defaults to #cccccc."
 
-	configurationOptions at: 'inactiveColor' put: aColor
+	configurationOptions at: 'inactiveColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighchartsLegendNavigation >> style: aCSSObject [
+HighchartsLegendNavigation >> style: aHighchartsCSSObject [
 
 	"Text styles for the legend page navigation.
 "
 
-	configurationOptions at: 'style' put: aCSSObject
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]

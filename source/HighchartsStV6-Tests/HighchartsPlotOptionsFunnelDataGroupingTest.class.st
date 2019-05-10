@@ -61,6 +61,20 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnelDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsFunnelDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

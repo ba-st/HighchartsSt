@@ -19,6 +19,48 @@ HighchartsPlotOptionsPolygonPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonPointEventsTest >> testDrag [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygonPointEvents new.
+	component drag: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drag' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonPointEventsTest >> testDragStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygonPointEvents new.
+	component dragStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonPointEventsTest >> testDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygonPointEvents new.
+	component drop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPolygonPointEventsTest >> testMouseOut [
 
 	| component javascript expectedConfiguration |

@@ -33,6 +33,34 @@ HighchartsPlotOptionsSunburstTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testAllowTraversingTree [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component allowTraversingTree: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'allowTraversingTree' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSunburstTest >> testBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -61,6 +89,20 @@ HighchartsPlotOptionsSunburstTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testCenter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component center: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'center' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSunburstTest >> testClassName [
 
 	| component javascript expectedConfiguration |
@@ -84,6 +126,20 @@ HighchartsPlotOptionsSunburstTest >> testColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testColorByPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component colorByPoint: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorByPoint' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -145,6 +201,20 @@ HighchartsPlotOptionsSunburstTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSunburstTest >> testDescription [
 
 	| component javascript expectedConfiguration |
@@ -201,6 +271,20 @@ HighchartsPlotOptionsSunburstTest >> testExposeElementToA11y [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSunburstTest >> testKeys [
 
 	| component javascript expectedConfiguration |
@@ -238,6 +322,20 @@ HighchartsPlotOptionsSunburstTest >> testLinkedTo [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'linkedTo' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -369,6 +467,20 @@ HighchartsPlotOptionsSunburstTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testSlicedOffset [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component slicedOffset: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'slicedOffset' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSunburstTest >> testStartAngle [
 
 	| component javascript expectedConfiguration |
@@ -406,6 +518,20 @@ HighchartsPlotOptionsSunburstTest >> testStickyTracking [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'stickyTracking' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testUseOhlcData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component useOhlcData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'useOhlcData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

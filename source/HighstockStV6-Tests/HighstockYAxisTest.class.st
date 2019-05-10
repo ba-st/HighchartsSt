@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockYAxisTest >> testAlignTicks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component alignTicks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignTicks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockYAxisTest >> testAllowDecimals [
 
 	| component javascript expectedConfiguration |
@@ -238,6 +252,20 @@ HighstockYAxisTest >> testLinkedTo [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'linkedTo' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testMargin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component margin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'margin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

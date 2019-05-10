@@ -8,18 +8,19 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsLegendTitle >> style [
+HighchartsLegendTitle >> style: aHighchartsCSSObject [
 
 	"Generic CSS styles for the legend title.
-Defaults to {'fontWeight':'bold'}."
-	^configurationOptions at: 'style' ifAbsentPut: [HighchartsLegendTitleStyle new]
+Defaults to {'fontWeight': 'bold'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
 HighchartsLegendTitle >> text: aString [
 
 	"A text or HTML string for the title.
-Defaults to null."
+"
 
 	configurationOptions at: 'text' put: aString
 ]

@@ -61,6 +61,20 @@ HighstockSeriesVwapDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesVwapDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesVwapDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

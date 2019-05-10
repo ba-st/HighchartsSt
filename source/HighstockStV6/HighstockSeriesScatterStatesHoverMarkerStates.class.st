@@ -16,11 +16,27 @@ HighstockSeriesScatterStatesHoverMarkerStates >> hover [
 ]
 
 { #category : #accessing }
+HighstockSeriesScatterStatesHoverMarkerStates >> inactive [
+
+	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesScatterStatesHoverMarkerStatesInactive new]
+]
+
+{ #category : #accessing }
+HighstockSeriesScatterStatesHoverMarkerStates >> normal [
+
+	"The normal state of a single point marker. Currently only
+used for setting animation when returning to normal state
+from hover.
+"
+	^configurationOptions at: 'normal' ifAbsentPut: [HighstockSeriesScatterStatesHoverMarkerStatesNormal new]
+]
+
+{ #category : #accessing }
 HighstockSeriesScatterStatesHoverMarkerStates >> select [
 
 	"The appearance of the point marker when selected. In order to
-allow a point to be selected, set the series.allowPointSelect
-option to true.
+allow a point to be selected, set the
+series.allowPointSelect option to true.
 "
 	^configurationOptions at: 'select' ifAbsentPut: [HighstockSeriesScatterStatesHoverMarkerStatesSelect new]
 ]

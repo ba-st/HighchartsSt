@@ -10,28 +10,29 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNoData >> attr: anObject [
+HighstockNoData >> attr: aHighchartsSVGAttributes [
 
 	"An object of additional SVG attributes for the no-data label.
 "
 
-	configurationOptions at: 'attr' put: anObject
+	configurationOptions at: 'attr' put: aHighchartsSVGAttributes
 ]
 
 { #category : #accessing }
 HighstockNoData >> position [
 
 	"The position of the no-data label, relative to the plot area.
-Defaults to { 'x': 0, 'y': 0, 'align': 'center', 'verticalAlign': 'middle' }."
+"
 	^configurationOptions at: 'position' ifAbsentPut: [HighstockNoDataPosition new]
 ]
 
 { #category : #accessing }
-HighstockNoData >> style [
+HighstockNoData >> style: aHighchartsCSSObject [
 
 	"CSS styles for the no-data label.
 "
-	^configurationOptions at: 'style' ifAbsentPut: [HighstockNoDataStyle new]
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }

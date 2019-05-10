@@ -12,3 +12,9 @@ HighstockPlotOptionsMacdMacdLine >> styles [
 
 	^configurationOptions at: 'styles' ifAbsentPut: [HighstockPlotOptionsMacdMacdLineStyles new]
 ]
+
+{ #category : #accessing }
+HighstockPlotOptionsMacdMacdLine >> zones [
+
+	^configurationOptions at: 'zones' ifAbsentPut: [HighstockPlotOptionsMacdMacdLineZones new]
+]

@@ -24,7 +24,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockNavigator >> baseSeries: aMixed [
+HighstockNavigator >> baseSeries: anObject [
 
 	"An integer identifying the index to use for the base series, or a
 string representing the id of the series.
@@ -32,7 +32,7 @@ Note: As of Highcharts 5.0, this is now a deprecated option.
 Prefer series.showInNavigator.
 Defaults to 0."
 
-	configurationOptions at: 'baseSeries' put: aMixed
+	configurationOptions at: 'baseSeries' put: anObject
 ]
 
 { #category : #accessing }
@@ -71,14 +71,14 @@ Defaults to 25."
 ]
 
 { #category : #accessing }
-HighstockNavigator >> maskFill: aColor [
+HighstockNavigator >> maskFill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the mask covering the areas of the navigator series
 that are currently not visible in the main series. The default
 color is bluish with an opacity of 0.3 to see the series below.
 Defaults to rgba(102,133,194,0.3)."
 
-	configurationOptions at: 'maskFill' put: aColor
+	configurationOptions at: 'maskFill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -102,13 +102,13 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockNavigator >> outlineColor: aColor [
+HighstockNavigator >> outlineColor: aHighchartsColorString [
 
 	"The color of the line marking the currently zoomed area in the
 navigator.
 Defaults to #cccccc."
 
-	configurationOptions at: 'outlineColor' put: aColor
+	configurationOptions at: 'outlineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -116,7 +116,7 @@ HighstockNavigator >> outlineWidth: aNumber [
 
 	"The width of the line marking the currently zoomed area in the
 navigator.
-Defaults to 2."
+Defaults to 1."
 
 	configurationOptions at: 'outlineWidth' put: aNumber
 ]

@@ -61,6 +61,20 @@ HighstockPlotOptionsLineDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsLineDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLineDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsLineDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

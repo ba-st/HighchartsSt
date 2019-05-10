@@ -61,6 +61,20 @@ HighchartsSeriesHistogramDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesHistogramDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogramDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesHistogramDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

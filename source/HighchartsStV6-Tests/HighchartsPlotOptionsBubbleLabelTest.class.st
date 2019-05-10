@@ -101,3 +101,17 @@ HighchartsPlotOptionsBubbleLabelTest >> testOnArea [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBubbleLabelTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBubbleLabel new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

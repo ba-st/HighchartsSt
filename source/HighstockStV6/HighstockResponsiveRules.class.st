@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : #accessing }
-HighstockResponsiveRules >> chartOptions: anObject [
+HighstockResponsiveRules >> chartOptions: aHighchartsOptions [
 
 	"A full set of chart options to apply as overrides to the general
 chart options. The chart options are applied when the given rule
@@ -23,7 +23,7 @@ with two series items without an id, will cause the existing chart´s
 two series to be updated with respective options.
 "
 
-	configurationOptions at: 'chartOptions' put: anObject
+	configurationOptions at: 'chartOptions' put: aHighchartsOptions
 ]
 
 { #category : #accessing }

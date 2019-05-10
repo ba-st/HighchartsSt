@@ -19,6 +19,48 @@ HighstockNavigatorSeriesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorSeriesTest >> testColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorSeries new.
+	component color: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorSeriesTest >> testData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorSeries new.
+	component data: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorSeriesTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorSeries new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorSeriesTest >> testFillOpacity [
 
 	| component javascript expectedConfiguration |

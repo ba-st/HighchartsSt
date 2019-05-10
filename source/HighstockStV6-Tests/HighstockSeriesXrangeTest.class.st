@@ -50,6 +50,21 @@ HighstockSeriesXrangeTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesXrangeTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesXrangeTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -120,6 +135,21 @@ HighstockSeriesXrangeTest >> testClassName [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'xrange';
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -320,6 +350,21 @@ HighstockSeriesXrangeTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesXrangeTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesXrangeTest >> testDescription [
 
 	| component javascript expectedConfiguration |
@@ -440,6 +485,36 @@ HighstockSeriesXrangeTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesXrangeTest >> testGroupPadding [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component groupPadding: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'groupPadding' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeTest >> testGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component grouping: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'grouping' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesXrangeTest >> testId [
 
 	| component javascript expectedConfiguration |
@@ -450,6 +525,21 @@ HighstockSeriesXrangeTest >> testId [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'xrange';
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -645,6 +735,21 @@ HighstockSeriesXrangeTest >> testNegativeColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'xrange';
 		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrange new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

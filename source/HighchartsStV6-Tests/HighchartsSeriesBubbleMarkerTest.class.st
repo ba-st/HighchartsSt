@@ -33,6 +33,20 @@ HighchartsSeriesBubbleMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBubbleMarkerTest >> testFillOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBubbleMarker new.
+	component fillOpacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'fillOpacity' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBubbleMarkerTest >> testHeight [
 
 	| component javascript expectedConfiguration |

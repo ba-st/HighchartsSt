@@ -131,6 +131,20 @@ HighstockChartTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
+HighstockChartTest >> testDisplayErrors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChart new.
+	component displayErrors: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'displayErrors' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockChartTest >> testEvents [
 
 	| component javascript expectedConfiguration |
@@ -495,6 +509,20 @@ HighstockChartTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighstockChartTest >> testStyledMode [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChart new.
+	component styledMode: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'styledMode' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockChartTest >> testType [
 
 	| component javascript expectedConfiguration |
@@ -532,6 +560,20 @@ HighstockChartTest >> testWidth [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'width' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockChartTest >> testZoomKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChart new.
+	component zoomKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

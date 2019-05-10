@@ -75,6 +75,20 @@ HighstockXAxisTitleTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
+HighstockXAxisTitleTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxisTitle new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockXAxisTitleTest >> testText [
 
 	| component javascript expectedConfiguration |
@@ -84,6 +98,20 @@ HighstockXAxisTitleTest >> testText [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'text' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockXAxisTitleTest >> testTextAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxisTitle new.
+	component textAlign: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textAlign' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -145,6 +145,20 @@ HighstockYAxisLabelsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
+HighstockYAxisLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxisLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockYAxisLabelsTest >> testUseHTML [
 
 	| component javascript expectedConfiguration |

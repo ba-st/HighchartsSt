@@ -19,6 +19,20 @@ HighchartsPlotOptionsBubbleMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsBubbleMarkerTest >> testFillOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBubbleMarker new.
+	component fillOpacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'fillOpacity' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsBubbleMarkerTest >> testLineColor [
 
 	| component javascript expectedConfiguration |

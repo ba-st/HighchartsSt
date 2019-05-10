@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testAlignTicks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component alignTicks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignTicks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartParallelAxesTest >> testAllowDecimals [
 
 	| component javascript expectedConfiguration |
@@ -182,6 +196,20 @@ HighchartsChartParallelAxesTest >> testLinkedTo [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'linkedTo' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testMargin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component margin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'margin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -425,6 +453,20 @@ HighchartsChartParallelAxesTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testPane [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component pane: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pane' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartParallelAxesTest >> testRange [
 
 	| component javascript expectedConfiguration |
@@ -560,6 +602,20 @@ HighchartsChartParallelAxesTest >> testStartOnTick [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'startOnTick' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testStaticScale [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component staticScale: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'staticScale' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

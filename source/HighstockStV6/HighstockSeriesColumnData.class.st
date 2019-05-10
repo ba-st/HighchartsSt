@@ -43,25 +43,53 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesColumnData >> color: aColor [
+HighstockSeriesColumnData >> accessibility [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use 
-colorIndex.
-Defaults to undefined."
-
-	configurationOptions at: 'color' put: aColor
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesColumnDataAccessibility new]
 ]
 
 { #category : #accessing }
-HighstockSeriesColumnData >> dataLabels: anObject [
+HighstockSeriesColumnData >> borderColor: aHighchartsColorString [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+	"The color of the border surrounding the column or bar.
+In styled mode, the border stroke can be set with the .highcharts-point
+rule.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
+]
+
+{ #category : #accessing }
+HighstockSeriesColumnData >> borderWidth: aNumber [
+
+	"The width of the border surrounding the column or bar.
+In styled mode, the stroke width can be set with the .highcharts-point
+rule.
+"
+
+	configurationOptions at: 'borderWidth' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockSeriesColumnData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+
+	"Individual color for the point. By default the color is pulled from
+the global colors array.
+In styled mode, the color option doesn´t take effect. Instead, use
+colorIndex.
+"
+
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighstockSeriesColumnData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+
+	"Individual data label for each point. The options are the same as
+the ones for plotOptions.series.dataLabels.
+"
+
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -69,9 +97,19 @@ HighstockSeriesColumnData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
+]
+
+{ #category : #accessing }
+HighstockSeriesColumnData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesColumnDataDragDrop new]
 ]
 
 { #category : #accessing }
@@ -96,7 +134,7 @@ HighstockSeriesColumnData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -115,11 +153,21 @@ will be drawn.
 { #category : #accessing }
 HighstockSeriesColumnData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabel
+	"The name of the point as shown in the legend, tooltip, dataLabels
 etc.
 "
 
 	configurationOptions at: 'name' put: aString
+]
+
+{ #category : #accessing }
+HighstockSeriesColumnData >> pointWidth: aNumber [
+
+	"A pixel value specifying a fixed width for the column or bar.
+Overrides pointWidth on the series.
+Defaults to undefined."
+
+	configurationOptions at: 'pointWidth' put: aNumber
 ]
 
 { #category : #accessing }
@@ -142,10 +190,10 @@ in milliseconds since 1970.
 ]
 
 { #category : #accessing }
-HighstockSeriesColumnData >> y: aNumber [
+HighstockSeriesColumnData >> y: aNumberOrNil [
 
 	"The y value of the point.
-Defaults to null."
+"
 
-	configurationOptions at: 'y' put: aNumber
+	configurationOptions at: 'y' put: aNumberOrNil
 ]

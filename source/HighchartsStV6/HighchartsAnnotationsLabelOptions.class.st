@@ -10,20 +10,20 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsAnnotationsLabelOptions >> align: aString [
+HighchartsAnnotationsLabelOptions >> align: aHighchartsAlignValue [
 
 	"The alignment of the annotation´s label. If right,
 the right side of the label should be touching the point.
 Defaults to center."
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
 HighchartsAnnotationsLabelOptions >> allowOverlap: aBoolean [
 
 	"Whether to allow the annotation´s labels to overlap.
-To make the labels less sensitive for overlapping, 
+To make the labels less sensitive for overlapping,
 the can be set to 0.
 Defaults to false."
 
@@ -31,28 +31,28 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelOptions >> backgroundColor: aColor [
+HighchartsAnnotationsLabelOptions >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the annotation´s label.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelOptions >> borderColor: aColor [
+HighchartsAnnotationsLabelOptions >> borderColor: aHighchartsColorString [
 
 	"The border color for the annotation´s label.
 Defaults to black."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighchartsAnnotationsLabelOptions >> borderRadius: aNumber [
 
 	"The border radius in pixels for the annotaiton´s label.
-Defaults to 1."
+Defaults to 3."
 
 	configurationOptions at: 'borderRadius' put: aNumber
 ]
@@ -67,9 +67,19 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
+HighchartsAnnotationsLabelOptions >> className: aString [
+
+	"A class name for styling by CSS.
+Defaults to ."
+
+	configurationOptions at: 'className' put: aString
+]
+
+{ #category : #accessing }
 HighchartsAnnotationsLabelOptions >> crop: aBoolean [
 
-	"Whether to hide the annotation´s label that is outside the plot area.
+	"Whether to hide the annotation´s label that is outside the plot
+area.
 Defaults to false."
 
 	configurationOptions at: 'crop' put: aBoolean
@@ -79,7 +89,7 @@ Defaults to false."
 HighchartsAnnotationsLabelOptions >> distance: aNumber [
 
 	"The label´s pixel distance from the point.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'distance' put: aNumber
 ]
@@ -87,23 +97,24 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsAnnotationsLabelOptions >> format: aString [
 
-	"A format string for the data label.
-Defaults to undefined."
+	"A
+format
+string for the data label.
+"
 
 	configurationOptions at: 'format' put: aString
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelOptions >> formatter: aFunction [
+HighchartsAnnotationsLabelOptions >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format the annotation´s label. Note that
-if a format or text are defined, the format or text take precedence
-and the formatter is ignored. This refers to a point object.
-Defaults to function () {
-	return defined(this.y) ? this.y : 'Annotation label';
-}."
+	"Callback JavaScript function to format the annotation´s label.
+Note that if a format or text are defined, the format or text
+take precedence and the formatter is ignored. This refers to a
+point object.
+Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
 ]
 
 { #category : #accessing }
@@ -127,13 +138,13 @@ Defaults to 5."
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelOptions >> shadow: aBooleanOrObject [
+HighchartsAnnotationsLabelOptions >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
 	"The shadow of the box. The shadow can be an object configuration
 containing color, offsetX, offsetY, opacity and width.
 Defaults to false."
 
-	configurationOptions at: 'shadow' put: aBooleanOrObject
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
 ]
 
 { #category : #accessing }
@@ -147,18 +158,19 @@ Defaults to callout."
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelOptions >> style [
+HighchartsAnnotationsLabelOptions >> style: aHighchartsCSSObject [
 
 	"Styles for the annotation´s label.
 "
-	^configurationOptions at: 'style' ifAbsentPut: [HighchartsAnnotationsLabelOptionsStyle new]
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
 HighchartsAnnotationsLabelOptions >> text: aString [
 
 	"Alias for the format option.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'text' put: aString
 ]
@@ -166,19 +178,20 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsAnnotationsLabelOptions >> useHTML: aBoolean [
 
-	"Whether to use HTML to render the annotation´s label.
+	"Whether to use HTML
+to render the annotation´s label.
 Defaults to false."
 
 	configurationOptions at: 'useHTML' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelOptions >> verticalAlign: aString [
+HighchartsAnnotationsLabelOptions >> verticalAlign: aHighchartsVerticalAlignValue [
 
 	"The vertical alignment of the annotation´s label.
 Defaults to bottom."
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }

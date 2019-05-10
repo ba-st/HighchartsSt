@@ -19,6 +19,20 @@ HighstockTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
+HighstockTest >> testDefs [
+
+	| component javascript expectedConfiguration |
+
+	component := Highstock new.
+	component defs: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'defs' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockTest >> testYAxis [
 
 	| component javascript expectedConfiguration |

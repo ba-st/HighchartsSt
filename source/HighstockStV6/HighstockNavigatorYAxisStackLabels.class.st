@@ -12,15 +12,15 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigatorYAxisStackLabels >> align: aString [
+HighstockNavigatorYAxisStackLabels >> align: aHighchartsAlignValue [
 
-	"Defines the horizontal alignment of the stack total label. Can be
-one of &quot;left&quot;, &quot;center&quot; or &quot;right&quot;. The default value is calculated
-at runtime and depends on orientation and whether the stack is positive
-or negative.
+	"Defines the horizontal alignment of the stack total label. Can be one
+of &quot;left&quot;, &quot;center&quot; or &quot;right&quot;. The default value is calculated
+at runtime and depends on orientation and whether the stack is
+positive or negative.
 "
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
@@ -52,13 +52,13 @@ Defaults to {total}."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisStackLabels >> formatter: aFunction [
+HighstockNavigatorYAxisStackLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsStackItemObject [
 
 	"Callback JavaScript function to format the label. The value is
 given by this.total.
-Defaults to function() { return this.total; }."
+"
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsStackItemObject
 ]
 
 { #category : #accessing }
@@ -71,27 +71,28 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisStackLabels >> style [
+HighstockNavigatorYAxisStackLabels >> style: aHighchartsCSSObject [
 
 	"CSS styles for the label.
 In styled mode, the styles are set in the
 .highcharts-stack-label class.
-"
-	^configurationOptions at: 'style' ifAbsentPut: [HighstockNavigatorYAxisStackLabelsStyle new]
+Defaults to {'color': '#666666', 'fontSize': '11px', 'fontWeight': 'bold', 'textOutline': '1px contrast'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisStackLabels >> textAlign: aString [
+HighstockNavigatorYAxisStackLabels >> textAlign: aHighchartsAlignValue [
 
-	"The text alignment for the label. While align determines where
-the texts anchor point is placed with regards to the stack, textAlign
+	"The text alignment for the label. While align determines where the
+texts anchor point is placed with regards to the stack, textAlign
 determines how the text is aligned against its anchor point. Possible
-values are &quot;left&quot;, &quot;center&quot; and &quot;right&quot;. The default value
-is calculated at runtime and depends on orientation and whether the
+values are &quot;left&quot;, &quot;center&quot; and &quot;right&quot;. The default value is
+calculated at runtime and depends on orientation and whether the
 stack is positive or negative.
 "
 
-	configurationOptions at: 'textAlign' put: aString
+	configurationOptions at: 'textAlign' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
@@ -105,23 +106,23 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisStackLabels >> verticalAlign: aString [
+HighstockNavigatorYAxisStackLabels >> verticalAlign: aHighchartsVerticalAlignValue [
 
 	"Defines the vertical alignment of the stack total label. Can be one
 of &quot;top&quot;, &quot;middle&quot; or &quot;bottom&quot;. The default value is calculated
-at runtime and depends on orientation and whether the stack is positive
-or negative.
+at runtime and depends on orientation and whether the stack is
+positive or negative.
 "
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }
 HighstockNavigatorYAxisStackLabels >> x: aNumber [
 
-	"The x position offset of the label relative to the left of the stacked
-bar. The default value is calculated at runtime and depends on orientation
-and whether the stack is positive or negative.
+	"The x position offset of the label relative to the left of the
+stacked bar. The default value is calculated at runtime and depends
+on orientation and whether the stack is positive or negative.
 "
 
 	configurationOptions at: 'x' put: aNumber

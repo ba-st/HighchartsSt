@@ -24,57 +24,49 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> day: aString [
+HighchartsZAxisDateTimeLabelFormats >> day [
 
-
-	configurationOptions at: 'day' put: aString
+	^configurationOptions at: 'day' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsDay new]
 ]
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> hour: aString [
+HighchartsZAxisDateTimeLabelFormats >> hour [
 
-
-	configurationOptions at: 'hour' put: aString
+	^configurationOptions at: 'hour' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsHour new]
 ]
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> millisecond: aString [
+HighchartsZAxisDateTimeLabelFormats >> millisecond [
 
-
-	configurationOptions at: 'millisecond' put: aString
+	^configurationOptions at: 'millisecond' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsMillisecond new]
 ]
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> minute: aString [
+HighchartsZAxisDateTimeLabelFormats >> minute [
 
-
-	configurationOptions at: 'minute' put: aString
+	^configurationOptions at: 'minute' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsMinute new]
 ]
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> month: aString [
+HighchartsZAxisDateTimeLabelFormats >> month [
 
-
-	configurationOptions at: 'month' put: aString
+	^configurationOptions at: 'month' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsMonth new]
 ]
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> second: aString [
+HighchartsZAxisDateTimeLabelFormats >> second [
 
-
-	configurationOptions at: 'second' put: aString
+	^configurationOptions at: 'second' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsSecond new]
 ]
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> week: aString [
+HighchartsZAxisDateTimeLabelFormats >> week [
 
-
-	configurationOptions at: 'week' put: aString
+	^configurationOptions at: 'week' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsWeek new]
 ]
 
 { #category : #accessing }
-HighchartsZAxisDateTimeLabelFormats >> year: aString [
+HighchartsZAxisDateTimeLabelFormats >> year [
 
-
-	configurationOptions at: 'year' put: aString
+	^configurationOptions at: 'year' ifAbsentPut: [HighchartsZAxisDateTimeLabelFormatsYear new]
 ]

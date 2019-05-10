@@ -13,14 +13,14 @@ HighchartsChartParallelAxesLabels >> align: aString [
 	"What part of the string the given position is anchored to. Can
 be one of &quot;left&quot;, &quot;center&quot; or &quot;right&quot;. The exact position
 also depends on the labels.x setting.
-Angular gauges and solid gauges defaults to center.
+Angular gauges and solid gauges defaults to &quot;center&quot;.
 Defaults to center."
 
 	configurationOptions at: 'align' put: aString
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesLabels >> autoRotation: anArrayOfNumber [
+HighchartsChartParallelAxesLabels >> autoRotation: anArrayOfnumberOrfalse [
 
 	"For horizontal axes, the allowed degrees of label rotation
 to prevent overlapping labels. If there is enough space,
@@ -31,7 +31,7 @@ Set it to false to disable rotation, which will
 cause the labels to word-wrap if possible.
 Defaults to [-45]."
 
-	configurationOptions at: 'autoRotation' put: anArrayOfNumber
+	configurationOptions at: 'autoRotation' put: anArrayOfnumberOrfalse
 ]
 
 { #category : #accessing }
@@ -69,14 +69,15 @@ Defaults to true."
 { #category : #accessing }
 HighchartsChartParallelAxesLabels >> format: aString [
 
-	"A format string for the axis label.
+	"A format string
+for the axis label.
 Defaults to {value}."
 
 	configurationOptions at: 'format' put: aString
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesLabels >> formatter: aFunction [
+HighchartsChartParallelAxesLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsAxisLabelsFormatterContextObject [
 
 	"Callback JavaScript function to format the label. The value
 is given by this.value. Additional properties for this are
@@ -89,15 +90,35 @@ function() {
 }
 "
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsAxisLabelsFormatterContextObject
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxesLabels >> indentation: aNumber [
+
+	"The number of pixels to indent the labels per level in a treegrid
+axis.
+Defaults to 10."
+
+	configurationOptions at: 'indentation' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxesLabels >> levels [
+
+	"Set options on specific levels in a tree grid axis. Takes
+precedence over labels options.
+"
+	^configurationOptions at: 'levels' ifAbsentPut: [HighchartsChartParallelAxesLabelsLevels new]
 ]
 
 { #category : #accessing }
 HighchartsChartParallelAxesLabels >> maxStaggerLines: aNumber [
 
-	"Horizontal axis only. When staggerLines is not set, maxStaggerLines
-defines how many lines the axis is allowed to add to automatically
-avoid overlapping X labels. Set to 1 to disable overlap detection.
+	"Horizontal axis only. When staggerLines is not set,
+maxStaggerLines defines how many lines the axis is allowed to
+add to automatically avoid overlapping X labels. Set to 1 to
+disable overlap detection.
 Defaults to 5."
 
 	configurationOptions at: 'maxStaggerLines' put: aNumber
@@ -106,13 +127,11 @@ Defaults to 5."
 { #category : #accessing }
 HighchartsChartParallelAxesLabels >> overflow: aString [
 
-	"How to handle overflowing labels on horizontal axis. Can be
-undefined, false or &quot;justify&quot;. By default it aligns inside
-the chart area. If &quot;justify&quot;, labels will not render outside
-the plot area. If false, it will not be aligned at all.
-If there is room to move it, it will be aligned to the edge,
-else it will be removed.
-"
+	"How to handle overflowing labels on horizontal axis. If set to
+&quot;allow&quot;, it will not be aligned at all. By default it
+&quot;justify&quot; labels inside the chart area. If there is room to
+move it, it will be aligned to the edge, else it will be removed.
+Defaults to justify."
 
 	configurationOptions at: 'overflow' put: aString
 ]
@@ -134,17 +153,21 @@ HighchartsChartParallelAxesLabels >> position3d: aString [
 orientation.
 
 ´offset´: Maintain a fixed horizontal/vertical distance from the
-   tick marks, despite the chart orientation. This is the backwards
-   compatible behavior, and causes skewing of X and Z axes.
+tick marks, despite the chart orientation. This is the backwards
+compatible behavior, and causes skewing of X and Z axes.
+
 ´chart´: Preserve 3D position relative to the chart.
 This looks nice, but hard to read if the text isn´t
 forward-facing.
+
 ´flap´: Rotated text along the axis to compensate for the chart
-   orientation. This tries to maintain text as legible as possible on
-   all orientations.
+orientation. This tries to maintain text as legible as possible
+on all orientations.
+
 ´ortho´: Rotated text along the axis direction so that the labels
-   are orthogonal to the axis. This is very similar to ´flap´, but
-   prevents skewing the labels (X and Y scaling are still present).
+are orthogonal to the axis. This is very similar to ´flap´,
+but prevents skewing the labels (X and Y scaling are still
+present).
 Defaults to offset."
 
 	configurationOptions at: 'position3d' put: aString
@@ -153,9 +176,16 @@ Defaults to offset."
 { #category : #accessing }
 HighchartsChartParallelAxesLabels >> reserveSpace: aBoolean [
 
-	"Whether to reserve space for the labels. This can be turned off
-when for example the labels are rendered inside the plot area
-instead of outside.
+	"Whether to reserve space for the labels. By default, space is
+reserved for the labels in these cases:
+
+On all horizontal axes.
+On vertical axes if label.align is right on a left-side
+axis or left on a right-side axis.
+On vertical axes if label.align is center.
+
+This can be turned off when for example the labels are rendered
+inside the plot area instead of outside.
 Defaults to false."
 
 	configurationOptions at: 'reserveSpace' put: aBoolean
@@ -173,7 +203,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsChartParallelAxesLabels >> skew3d: aBoolean [
 
-	"If enabled, the axis labels will skewed to follow the perspective. 
+	"If enabled, the axis labels will skewed to follow the perspective.
 This will fix overlapping labels and titles, but texts become less
 legible due to the distortion.
 The final appearance depends heavily on labels.position3d.
@@ -187,7 +217,7 @@ HighchartsChartParallelAxesLabels >> staggerLines: aNumber [
 
 	"Horizontal axes only. The number of lines to spread the labels
 over to make room or tighter labels.
-Defaults to null."
+"
 
 	configurationOptions at: 'staggerLines' put: aNumber
 ]
@@ -204,27 +234,38 @@ chosen the wrong axis type.
 Read more at
 Axis docs
 =&gt; What axis should I use?
-Defaults to null."
+"
 
 	configurationOptions at: 'step' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesLabels >> style [
+HighchartsChartParallelAxesLabels >> style: aHighchartsCSSObject [
 
 	"CSS styles for the label. Use whiteSpace: ´nowrap´ to prevent
 wrapping of category labels. Use textOverflow: ´none´ to
 prevent ellipsis (dots).
 In styled mode, the labels are styled with the
 .highcharts-axis-labels class.
+Defaults to {'color': '#666666', 'cursor': 'default', 'fontSize': '11px'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxesLabels >> symbol [
+
+	"The symbol for the collapse and expand icon in a
+treegrid.
 "
-	^configurationOptions at: 'style' ifAbsentPut: [HighchartsChartParallelAxesLabelsStyle new]
+	^configurationOptions at: 'symbol' ifAbsentPut: [HighchartsChartParallelAxesLabelsSymbol new]
 ]
 
 { #category : #accessing }
 HighchartsChartParallelAxesLabels >> useHTML: aBoolean [
 
-	"Whether to use HTML to render the labels.
+	"Whether to use HTML
+to render the labels.
 Defaults to false."
 
 	configurationOptions at: 'useHTML' put: aBoolean

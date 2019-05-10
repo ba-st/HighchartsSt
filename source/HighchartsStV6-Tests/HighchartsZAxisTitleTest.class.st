@@ -117,6 +117,20 @@ HighchartsZAxisTitleTest >> testSkew3d [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsZAxisTitleTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisTitle new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsZAxisTitleTest >> testText [
 
 	| component javascript expectedConfiguration |
@@ -126,6 +140,20 @@ HighchartsZAxisTitleTest >> testText [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'text' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTitleTest >> testTextAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisTitle new.
+	component textAlign: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textAlign' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

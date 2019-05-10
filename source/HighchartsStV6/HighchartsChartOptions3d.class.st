@@ -19,13 +19,13 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsChartOptions3d >> axisLabelPosition: aString [
+HighchartsChartOptions3d >> axisLabelPosition: aStringOrNil [
 
 	"Set it to &quot;auto&quot; to automatically move the labels to the best
 edge.
-Defaults to null."
+Defaults to nil."
 
-	configurationOptions at: 'axisLabelPosition' put: aString
+	configurationOptions at: 'axisLabelPosition' put: aStringOrNil
 ]
 
 { #category : #accessing }
@@ -77,10 +77,11 @@ a bottom, front and back panel.
 { #category : #accessing }
 HighchartsChartOptions3d >> viewDistance: aNumber [
 
-	"Defines the distance the viewer is standing in front of the chart,
-this setting is important to calculate the perspective effect
-in column and scatter charts. It is not used for 3D pie charts.
-Defaults to 100."
+	"Defines the distance the viewer is standing in front of the
+chart, this setting is important to calculate the perspective
+effect in column and scatter charts. It is not used for 3D pie
+charts.
+Defaults to 25."
 
 	configurationOptions at: 'viewDistance' put: aNumber
 ]

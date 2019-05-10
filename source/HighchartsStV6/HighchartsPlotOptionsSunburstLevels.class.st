@@ -9,12 +9,12 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPlotOptionsSunburstLevels >> borderColor: aColor [
+HighchartsPlotOptionsSunburstLevels >> borderColor: aHighchartsColorString [
 
 	"Can set a borderColor on all points which lies on the same level.
 "
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -36,12 +36,12 @@ HighchartsPlotOptionsSunburstLevels >> borderWidth: aNumber [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSunburstLevels >> color: aColor [
+HighchartsPlotOptionsSunburstLevels >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Can set a color on all points which lies on the same level.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -55,10 +55,19 @@ HighchartsPlotOptionsSunburstLevels >> colorVariation [
 { #category : #accessing }
 HighchartsPlotOptionsSunburstLevels >> dataLabels: anObject [
 
-	"Can set a dataLabels on all points which lies on the same level.
+	"Can set dataLabels on all points which lies on the same level.
 "
 
 	configurationOptions at: 'dataLabels' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsSunburstLevels >> levelSize: anObject [
+
+	"Can set a levelSize on all points which lies on the same level.
+"
+
+	configurationOptions at: 'levelSize' put: anObject
 ]
 
 { #category : #accessing }

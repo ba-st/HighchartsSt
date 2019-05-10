@@ -9,10 +9,34 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsWordcloud >> accessibility [
+
+	"Accessibility options for a series. Requires the accessibility module.
+"
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsPlotOptionsWordcloudAccessibility new]
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> allowExtendPlayingField: aBoolean [
+
+	"If there is no space for a word on the playing field, then this option
+will allow the playing field to be extended to fit the word. If false
+then the word will be dropped from the visualization.
+NB! This option is currently not decided to be published in the API, and
+is therefore marked as private.
+Defaults to true."
+
+	configurationOptions at: 'allowExtendPlayingField' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsWordcloud >> allowPointSelect: aBoolean [
 
-	"Allow this series´ points to be selected by clicking on the graphic 
+	"Allow this series´ points to be selected by clicking on the graphic
 (columns, point markers, pie slices, map areas etc).
+The selected points can be handled by point select and unselect
+events, or collectively by the getSelectedPoints function.
+And alternative way of selecting points is through dragging.
 Defaults to false."
 
 	configurationOptions at: 'allowPointSelect' put: aBoolean
@@ -24,19 +48,14 @@ HighchartsPlotOptionsWordcloud >> animation [
 	"Enable or disable the initial animation when a series is displayed.
 The animation can also be set as a configuration object. Please
 note that this option only applies to the initial animation of the
-series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
-following properties are supported:
+series itself. For other animations, see chart.animation and the animation parameter under the API methods.
+The following properties are supported:
 
+duration: The duration of the animation in milliseconds.
 
-duration
-
-The duration of the animation in milliseconds.
-
-easing
-
-A string reference to an easing function set on the Math object.
-See the Custom easing function demo below.
-
+easing: Can be a string reference to an easing function set on
+the Math object or a function. See the Custom easing function
+demo below.
 
 
 Due to poor performance, animation is disabled in old IE browsers
@@ -50,23 +69,32 @@ HighchartsPlotOptionsWordcloud >> animationLimit: aNumber [
 
 	"For some series, there is a limit that shuts down initial animation
 by default when the total number of points in the chart is too high.
-For example, for a column chart and its derivatives, animation doesn´t
-run if there is more than 250 points totally. To disable this cap, set
-animationLimit to Infinity.
+For example, for a column chart and its derivatives, animation does
+not run if there is more than 250 points totally. To disable this
+cap, set animationLimit to Infinity.
 "
 
 	configurationOptions at: 'animationLimit' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> borderColor: aColor [
+HighchartsPlotOptionsWordcloud >> boostBlending: aString [
+
+	"Sets the color blending in the boost module.
+Defaults to undefined."
+
+	configurationOptions at: 'boostBlending' put: aString
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> borderColor: aHighchartsColorString [
 
 	"The color of the border surrounding each column or bar.
-In styled mode, the border stroke can be set with the .highcharts-point
-rule.
+In styled mode, the border stroke can be set with the
+.highcharts-point rule.
 Defaults to #ffffff."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -81,9 +109,11 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> borderWidth: aNumber [
 
-	"The width of the border surrounding each column or bar.
-In styled mode, the stroke width can be set with the .highcharts-point
-rule.
+	"The width of the border surrounding each column or bar. Defaults to
+1 when there is room for a border, but to 0 when the columns are
+so dense that a border would cover the next column.
+In styled mode, the stroke width can be set with the
+.highcharts-point rule.
 Defaults to 0."
 
 	configurationOptions at: 'borderWidth' put: aNumber
@@ -92,14 +122,16 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> className: aString [
 
-	"A class name to apply to the series´ graphical elements.
+	"An additional class name to apply to the series´ graphical elements.
+This option does not replace default class names of the graphical
+element.
 "
 
 	configurationOptions at: 'className' put: aString
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> color: aColor [
+HighchartsPlotOptionsWordcloud >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The main color of the series. In line type series it applies to the
 line and the point markers unless otherwise specified. In bar type
@@ -107,20 +139,26 @@ series it applies to the bars unless a color is specified per point.
 The default value is pulled from the options.colors array.
 In styled mode, the color can be defined by the
 colorIndex option. Also, the series
-color can be set with the .highcharts-series, .highcharts-color-{n},
-.highcharts-{type}-series or .highcharts-series-{n} class, or
-individual classes given by the className option.
+color can be set with the .highcharts-series,
+.highcharts-color-{n}, .highcharts-{type}-series or
+.highcharts-series-{n} class, or individual classes given by the
+className option.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> colorByPoint: aBoolean [
 
-	"When using automatic point colors pulled from the options.colors
-collection, this option determines whether the chart should receive
-one color per series or one color per point.
+	"When using automatic point colors pulled from the global
+colors or series-specific
+plotOptions.column.colors collections, this option
+determines whether the chart should receive one color per series or
+one color per point.
+In styled mode, the colors or series.colors arrays are not
+supported, and instead this option gives the points individual color
+class names on the form highcharts-color-{n}.
 Defaults to true."
 
 	configurationOptions at: 'colorByPoint' put: aBoolean
@@ -129,28 +167,28 @@ Defaults to true."
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the series, so its
-graphic representations are given the class name highcharts-color-
-{n}.
+	"Styled mode only. A specific color index to use for the series, so
+its graphic representations are given the class name
+highcharts-color-{n}.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> colors: anArrayOfColor [
+HighchartsPlotOptionsWordcloud >> colors: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A series specific or series type specific color set to apply instead
 of the global colors when colorByPoint is true.
 "
 
-	configurationOptions at: 'colors' put: anArrayOfColor
+	configurationOptions at: 'colors' put: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> compareStart: aBoolean [
 
-	"Defines if comparisson should start from the first point within the visible
+	"Defines if comparison should start from the first point within the visible
 range or should start from the first point before the range.
 In other words, this flag determines if first point within the visible range
 will have 0 (compareStart=true) or should have been already calculated
@@ -161,30 +199,41 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsWordcloud >> connectors [
+
+	"Override Pathfinder connector options for a series. Requires Highcharts Gantt
+to be loaded.
+"
+	^configurationOptions at: 'connectors' ifAbsentPut: [HighchartsPlotOptionsWordcloudConnectors new]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsWordcloud >> cropThreshold: aNumber [
 
 	"When the series contains less points than the crop threshold, all
 points are drawn, event if the points fall outside the visible plot
-area at the current zoom. The advantage of drawing all points (including
-markers and columns), is that animation is performed on updates.
-On the other hand, when the series contains more points than the
-crop threshold, the series data is cropped to only contain points
-that fall within the plot area. The advantage of cropping away invisible
-points is to increase performance on large series. .
+area at the current zoom. The advantage of drawing all points
+(including markers and columns), is that animation is performed on
+updates. On the other hand, when the series contains more points than
+the crop threshold, the series data is cropped to only contain points
+that fall within the plot area. The advantage of cropping away
+invisible points is to increase performance on large series.
 Defaults to 50."
 
 	configurationOptions at: 'cropThreshold' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> cursor: aString [
+HighchartsPlotOptionsWordcloud >> cursor: aStringOrHighchartsCursorValue [
 
 	"You can set the cursor to &quot;pointer&quot; if you have click events attached
 to the series, to signal to the user that the points and lines can
 be clicked.
+In styled mode, the series cursor can be set with the same classes
+as listed under series.color.
 "
 
-	configurationOptions at: 'cursor' put: aString
+	configurationOptions at: 'cursor' put: aStringOrHighchartsCursorValue
 ]
 
 { #category : #accessing }
@@ -193,9 +242,23 @@ HighchartsPlotOptionsWordcloud >> description: aString [
 	"Requires the Accessibility module.
 A description of the series to add to the screen reader information
 about the series.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> dragDrop [
+
+	"The draggable-points module allows points to be moved around or modified in
+the chart. In addition to the options mentioned under the dragDrop API
+structure, the module fires three events,
+point.dragStart,
+point.drag and
+point.drop.
+It requires the modules/draggable-points.js file to be loaded.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsPlotOptionsWordcloudDragDrop new]
 ]
 
 { #category : #accessing }
@@ -231,9 +294,9 @@ function.
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> events: anObject [
 
-	"General event handlers for the series items. These event hooks can also
-be attached to the series at run time using the Highcharts.addEvent
-function.
+	"General event handlers for the series items. These event hooks can
+also be attached to the series at run time using the
+Highcharts.addEvent function.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -242,26 +305,38 @@ function.
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> exposeElementToA11y: aBoolean [
 
-	"By default, series are exposed to screen readers as regions. By enabling
-this option, the series element itself will be exposed in the same
-way as the data points. This is useful if the series is not used
-as a grouping entity in the chart, but you still want to attach a
-description to the series.
+	"By default, series are exposed to screen readers as regions. By
+enabling this option, the series element itself will be exposed in
+the same way as the data points. This is useful if the series is not
+used as a grouping entity in the chart, but you still want to attach
+a description to the series.
 Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'exposeElementToA11y' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> keys: anArrayOfString [
+HighchartsPlotOptionsWordcloud >> includeInDataExport: aBoolean [
+
+	"Export-data module required. When set to false will prevent the series
+data from being included in any form of data export.
+Since version 6.0.0 until 7.1.0 the option was existing undocumented
+as includeInCSVExport.
+"
+
+	configurationOptions at: 'includeInDataExport' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> keys: anArrayOfstring [
 
 	"An array specifying which option maps to which key in the data point
 array. This makes it convenient to work with unstructured data arrays
 from different sources.
 "
 
-	configurationOptions at: 'keys' put: anArrayOfString
+	configurationOptions at: 'keys' put: anArrayOfstring
 ]
 
 { #category : #accessing }
@@ -279,6 +354,22 @@ Requires the series-label.js module.
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsWordcloud >> lastPrice [
+
+	"The line marks the last price from all points.
+"
+	^configurationOptions at: 'lastPrice' ifAbsentPut: [HighchartsPlotOptionsWordcloudLastPrice new]
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> lastVisiblePrice [
+
+	"The line marks the last price from visible range of points.
+"
+	^configurationOptions at: 'lastVisiblePrice' ifAbsentPut: [HighchartsPlotOptionsWordcloudLastVisiblePrice new]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsWordcloud >> linkedTo: aString [
 
 	"The id of another series to link to. Additionally,
@@ -291,13 +382,43 @@ Toggling the visibility of this also toggles the linked series.
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsWordcloud >> maxFontSize: aNumber [
+
+	"The word with the largest weight will have a font size equal to this
+value. The font size of a word is the ratio between its weight and the
+largest occuring weight, multiplied with the value of maxFontSize.
+Defaults to 25."
+
+	configurationOptions at: 'maxFontSize' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> minFontSize: aNumber [
+
+	"A threshold determining the minimum font size that can be applied to a
+word.
+Defaults to 1."
+
+	configurationOptions at: 'minFontSize' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> opacity: aNumber [
+
+	"Opacity of a series parts: line, fill (e.g. area) and dataLabels.
+Defaults to 1."
+
+	configurationOptions at: 'opacity' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsWordcloud >> placementStrategy: aString [
 
 	"This option decides which algorithm is used for placement, and rotation
 of a word. The choice of algorith is therefore a crucial part of the
-resulting layout of the wordcloud.
-It is possible for users to add their own custom placement strategies
-for use in word cloud. Read more about it in our
+resulting layout of the wordcloud. It is possible for users to add their
+own custom placement strategies for use in word cloud. Read more about it
+in our
 documentation
 Defaults to center."
 
@@ -315,8 +436,9 @@ HighchartsPlotOptionsWordcloud >> point [
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> pointDescriptionFormatter: aFunction [
 
-	"Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
-the chart wide configuration.
+	"Same as
+accessibility.pointDescriptionFormatter,
+but for an individual series. Overrides the chart wide configuration.
 "
 
 	configurationOptions at: 'pointDescriptionFormatter' put: aFunction
@@ -334,8 +456,8 @@ HighchartsPlotOptionsWordcloud >> rotation [
 HighchartsPlotOptionsWordcloud >> selected: aBoolean [
 
 	"Whether to select the series initially. If showCheckbox is true,
-the checkbox next to the series name in the legend will be checked for a
-selected series.
+the checkbox next to the series name in the legend will be checked
+for a selected series.
 Defaults to false."
 
 	configurationOptions at: 'selected' put: aBoolean
@@ -344,9 +466,9 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> showInLegend: aBoolean [
 
-	"Whether to display this particular series or series type in the legend.
-The default value is true for standalone series, false for linked
-series.
+	"Whether to display this particular series or series type in the
+legend. The default value is true for standalone series, false
+for linked series.
 Defaults to false."
 
 	configurationOptions at: 'showInLegend' put: aBoolean
@@ -355,7 +477,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> skipKeyboardNavigation: aBoolean [
 
-	"If set to True, the accessibility module will skip past the points
+	"If set to true, the accessibility module will skip past the points
 in this series for keyboard navigation.
 "
 
@@ -365,7 +487,7 @@ in this series for keyboard navigation.
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> spiral: aString [
 
-	"Spiral used for placing a word after the inital position experienced a
+	"Spiral used for placing a word after the initial position experienced a
 collision with either another word or the borders.
 It is possible for users to add their own custom spiralling algorithms
 for use in word cloud. Read more about it in our
@@ -384,44 +506,43 @@ HighchartsPlotOptionsWordcloud >> states [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> states: aPlotOptionsseriesstates [
+HighchartsPlotOptionsWordcloud >> states: anObject [
 
-	"A wrapper object for all the series options in specific states.
-"
 
-	configurationOptions at: 'states' put: aPlotOptionsseriesstates
+	configurationOptions at: 'states' put: anObject
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> stickyTracking: aBoolean [
 
-	"Sticky tracking of mouse events. When true, the mouseOut event
-on a series isn´t triggered until the mouse moves over another series,
-or out of the plot area. When false, the mouseOut event on a
-series is triggered when the mouse leaves the area around the series´
-graph or markers. This also implies the tooltip when not shared. When
-stickyTracking is false and tooltip.shared is false, the tooltip will
-be hidden when moving the mouse between series. Defaults to true for line
-and area type series, but to false for columns, pies etc.
+	"Sticky tracking of mouse events. When true, the mouseOut event on a
+series isn´t triggered until the mouse moves over another series, or
+out of the plot area. When false, the mouseOut event on a series is
+triggered when the mouse leaves the area around the series´ graph or
+markers. This also implies the tooltip when not shared. When
+stickyTracking is false and tooltip.shared is false, the tooltip
+will be hidden when moving the mouse between series. Defaults to true
+for line and area type series, but to false for columns, pies etc.
 Defaults to false."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> style [
+HighchartsPlotOptionsWordcloud >> style: aHighchartsCSSObject [
 
 	"CSS styles for the words.
-Defaults to {'fontFamily':'Impact, sans-serif'}."
-	^configurationOptions at: 'style' ifAbsentPut: [HighchartsPlotOptionsWordcloudStyle new]
+Defaults to {'fontFamily':'sans-serif', 'fontWeight': '900'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsWordcloud >> tooltip [
 
-	"A configuration object for the tooltip rendering of each single series.
-Properties are inherited from tooltip, but only the
-following properties can be defined on a series level.
+	"A configuration object for the tooltip rendering of each single
+series. Properties are inherited from tooltip, but only
+the following properties can be defined on a series level.
 "
 	^configurationOptions at: 'tooltip' ifAbsentPut: [HighchartsPlotOptionsWordcloudTooltip new]
 ]

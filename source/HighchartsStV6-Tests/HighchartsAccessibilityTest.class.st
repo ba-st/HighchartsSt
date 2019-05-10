@@ -5,6 +5,48 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testAddTableShortcut [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component addTableShortcut: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'addTableShortcut' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testAxisRangeDateFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component axisRangeDateFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'axisRangeDateFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testCustomComponents [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component customComponents: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'customComponents' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsAccessibilityTest >> testDescribeSingleSeries [
 
 	| component javascript expectedConfiguration |
@@ -19,6 +61,20 @@ HighchartsAccessibilityTest >> testDescribeSingleSeries [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testDescription [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component description: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'description' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsAccessibilityTest >> testEnabled [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +84,20 @@ HighchartsAccessibilityTest >> testEnabled [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testLandmarkVerbosity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component landmarkVerbosity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'landmarkVerbosity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -103,6 +173,48 @@ HighchartsAccessibilityTest >> testPointDescriptionThreshold [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testPointValueDecimals [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component pointValueDecimals: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pointValueDecimals' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testPointValuePrefix [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component pointValuePrefix: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pointValuePrefix' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testPointValueSuffix [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component pointValueSuffix: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pointValueSuffix' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsAccessibilityTest >> testScreenReaderSectionFormatter [
 
 	| component javascript expectedConfiguration |
@@ -126,6 +238,20 @@ HighchartsAccessibilityTest >> testSeriesDescriptionFormatter [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'seriesDescriptionFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testTypeDescription [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component typeDescription: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'typeDescription' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

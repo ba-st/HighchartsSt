@@ -61,6 +61,20 @@ HighstockSeriesEmaDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesEmaDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesEmaDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesEmaDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

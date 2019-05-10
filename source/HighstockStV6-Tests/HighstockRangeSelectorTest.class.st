@@ -33,6 +33,20 @@ HighstockRangeSelectorTest >> testButtonSpacing [
 ]
 
 { #category : #'tests-accessing' }
+HighstockRangeSelectorTest >> testButtonTheme [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockRangeSelector new.
+	component buttonTheme: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttonTheme' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockRangeSelectorTest >> testEnabled [
 
 	| component javascript expectedConfiguration |
@@ -196,6 +210,20 @@ HighstockRangeSelectorTest >> testInputStyle [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'inputStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockRangeSelectorTest >> testLabelStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockRangeSelector new.
+	component labelStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labelStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

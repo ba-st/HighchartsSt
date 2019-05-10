@@ -8,21 +8,21 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsCreditsPosition >> align: aString [
+HighchartsCreditsPosition >> align: aHighchartsAlignValue [
 
 	"Horizontal alignment of the credits.
 Defaults to right."
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
-HighchartsCreditsPosition >> verticalAlign: aString [
+HighchartsCreditsPosition >> verticalAlign: aHighchartsVerticalAlignValue [
 
 	"Vertical alignment of the credits.
 Defaults to bottom."
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }

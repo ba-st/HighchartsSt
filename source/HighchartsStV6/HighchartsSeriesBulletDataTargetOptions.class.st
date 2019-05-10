@@ -8,14 +8,14 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsSeriesBulletDataTargetOptions >> borderColor: aColor [
+HighchartsSeriesBulletDataTargetOptions >> borderColor: aHighchartsColorString [
 
 	"The border color of the rectangle representing the target. When
 not set, the  point´s border color is used.
 In styled mode, use class highcharts-bullet-target instead.
 "
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -29,7 +29,7 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsSeriesBulletDataTargetOptions >> color: aColor [
+HighchartsSeriesBulletDataTargetOptions >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the rectangle representing the target. When not set,
 point´s color (if set in point´s options -
@@ -40,7 +40,7 @@ or the same color as the point has is used.
 In styled mode, use class highcharts-bullet-target instead.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -53,11 +53,11 @@ Defaults to 3."
 ]
 
 { #category : #accessing }
-HighchartsSeriesBulletDataTargetOptions >> width: aNumberOrString [
+HighchartsSeriesBulletDataTargetOptions >> width: aNumberOrstring [
 
-	"The width of the rectangle representing the target. Could be set as
-a pixel value or as a percentage of a column width.
+	"The width of the rectangle representing the target. Could be set
+as a pixel value or as a percentage of a column width.
 Defaults to 140%."
 
-	configurationOptions at: 'width' put: aNumberOrString
+	configurationOptions at: 'width' put: aNumberOrstring
 ]

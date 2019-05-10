@@ -19,6 +19,20 @@ HighchartsLoadingTest >> testHideDuration [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsLoadingTest >> testLabelStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLoading new.
+	component labelStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labelStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLoadingTest >> testShowDuration [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +42,20 @@ HighchartsLoadingTest >> testShowDuration [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'showDuration' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLoadingTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLoading new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

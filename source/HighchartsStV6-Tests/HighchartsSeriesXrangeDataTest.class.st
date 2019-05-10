@@ -173,6 +173,20 @@ HighchartsSeriesXrangeDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesXrangeDataTest >> testX2 [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrangeData new.
+	component x2: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'x2' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesXrangeDataTest >> testY [
 
 	| component javascript expectedConfiguration |

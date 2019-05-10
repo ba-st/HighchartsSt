@@ -73,3 +73,31 @@ HighchartsSeriesWordcloudStatesHoverTest >> testEnabled [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudStatesHoverTest >> testLineWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloudStatesHover new.
+	component lineWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lineWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudStatesHoverTest >> testLineWidthPlus [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloudStatesHover new.
+	component lineWidthPlus: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lineWidthPlus' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

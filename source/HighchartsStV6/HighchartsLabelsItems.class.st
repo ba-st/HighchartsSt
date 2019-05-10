@@ -17,7 +17,7 @@ HighchartsLabelsItems >> html: aString [
 ]
 
 { #category : #accessing }
-HighchartsLabelsItems >> style: aCSSObject [
+HighchartsLabelsItems >> style: aHighchartsCSSObject [
 
 	"CSS styles for each label. To position the label, use left and top
 like this:
@@ -27,5 +27,5 @@ style: {
 }
 "
 
-	configurationOptions at: 'style' put: aCSSObject
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]

@@ -11,24 +11,28 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsExportingButtonsContextButtonTheme >> fill: aString [
+HighchartsExportingButtonsContextButtonTheme >> fill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The default fill exists only to capture hover events.
 Defaults to #ffffff."
 
-	configurationOptions at: 'fill' put: aString
+	configurationOptions at: 'fill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsExportingButtonsContextButtonTheme >> padding: aNumber [
 
+	"Padding for the button.
+Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsExportingButtonsContextButtonTheme >> stroke: aString [
+HighchartsExportingButtonsContextButtonTheme >> stroke: aHighchartsColorString [
 
+	"Default stroke for the buttons.
+Defaults to none."
 
-	configurationOptions at: 'stroke' put: aString
+	configurationOptions at: 'stroke' put: aHighchartsColorString
 ]

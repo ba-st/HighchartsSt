@@ -12,21 +12,21 @@ Class {
 }
 
 { #category : #accessing }
-HighstockScrollbar >> barBackgroundColor: aColor [
+HighstockScrollbar >> barBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color of the scrollbar itself.
 Defaults to #cccccc."
 
-	configurationOptions at: 'barBackgroundColor' put: aColor
+	configurationOptions at: 'barBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> barBorderColor: aColor [
+HighstockScrollbar >> barBorderColor: aHighchartsColorString [
 
 	"The color of the scrollbar´s border.
 Defaults to #cccccc."
 
-	configurationOptions at: 'barBorderColor' put: aColor
+	configurationOptions at: 'barBorderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -48,30 +48,30 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> buttonArrowColor: aColor [
+HighstockScrollbar >> buttonArrowColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the small arrow inside the scrollbar buttons.
 Defaults to #333333."
 
-	configurationOptions at: 'buttonArrowColor' put: aColor
+	configurationOptions at: 'buttonArrowColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> buttonBackgroundColor: aColor [
+HighstockScrollbar >> buttonBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of scrollbar buttons.
 Defaults to #e6e6e6."
 
-	configurationOptions at: 'buttonBackgroundColor' put: aColor
+	configurationOptions at: 'buttonBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> buttonBorderColor: aColor [
+HighstockScrollbar >> buttonBorderColor: aHighchartsColorString [
 
 	"The color of the border of the scrollbar buttons.
 Defaults to #cccccc."
 
-	configurationOptions at: 'buttonBorderColor' put: aColor
+	configurationOptions at: 'buttonBorderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -107,7 +107,7 @@ HighstockScrollbar >> height: aNumber [
 	"The height of the scrollbar. The height also applies to the width
 of the scroll arrows so that they are always squares. Defaults to
 20 for touch devices and 14 for mouse devices.
-"
+Defaults to 20/14."
 
 	configurationOptions at: 'height' put: aNumber
 ]
@@ -143,12 +143,12 @@ Defaults to 6."
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> rifleColor: aColor [
+HighstockScrollbar >> rifleColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the small rifles in the middle of the scrollbar.
 Defaults to #333333."
 
-	configurationOptions at: 'rifleColor' put: aColor
+	configurationOptions at: 'rifleColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -169,21 +169,21 @@ HighstockScrollbar >> step: aNumber [
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> trackBackgroundColor: aColor [
+HighstockScrollbar >> trackBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the track background.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'trackBackgroundColor' put: aColor
+	configurationOptions at: 'trackBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> trackBorderColor: aColor [
+HighstockScrollbar >> trackBorderColor: aHighchartsColorString [
 
 	"The color of the border of the scrollbar track.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'trackBorderColor' put: aColor
+	configurationOptions at: 'trackBorderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

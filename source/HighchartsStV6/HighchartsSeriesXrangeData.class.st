@@ -25,6 +25,12 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesXrangeData >> accessibility [
+
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesXrangeDataAccessibility new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesXrangeData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -35,36 +41,38 @@ representation.
 ]
 
 { #category : #accessing }
-HighchartsSeriesXrangeData >> color: aColor [
+HighchartsSeriesXrangeData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Individual color for the point. By default the color is pulled from
 the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use 
+In styled mode, the color option doesn´t take effect. Instead, use
 colorIndex.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsSeriesXrangeData >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name
-highcharts-color-{n}.
+	"A specific color index to use for the point, so its graphic representations
+are given the class name highcharts-color-{n}. In styled mode this will
+change the color of the graphic. In non-styled mode, the color by is set by
+the fill attribute, so the change in class name won´t have a visual effect
+by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsSeriesXrangeData >> dataLabels: anObject [
+HighchartsSeriesXrangeData >> dataLabels: aHighchartsDataLabelsOptionsObject [
 
 	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+the ones for plotOptions.series.dataLabels.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -72,16 +80,26 @@ HighchartsSeriesXrangeData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
+HighchartsSeriesXrangeData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesXrangeDataDragDrop new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesXrangeData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series
-array to use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to
+use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -109,7 +127,7 @@ HighchartsSeriesXrangeData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -134,11 +152,21 @@ HighchartsSeriesXrangeData >> marker [
 { #category : #accessing }
 HighchartsSeriesXrangeData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabel
+	"The name of the point as shown in the legend, tooltip, dataLabels
 etc.
 "
 
 	configurationOptions at: 'name' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesXrangeData >> partialFill [
+
+	"A partial fill for each point, typically used to visualize how much of
+a task is performed. The partial fill object can be set either on series
+or point level.
+"
+	^configurationOptions at: 'partialFill' ifAbsentPut: [HighchartsSeriesXrangeDataPartialFill new]
 ]
 
 { #category : #accessing }
@@ -151,10 +179,18 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighchartsSeriesXrangeData >> x2: aNumber [
+
+	"The ending X value of the range point.
+"
+
+	configurationOptions at: 'x2' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesXrangeData >> x: aNumber [
 
-	"The x value of the point. For datetime axes, the X value is the timestamp
-in milliseconds since 1970.
+	"The starting X value of the range point.
 "
 
 	configurationOptions at: 'x' put: aNumber
@@ -163,8 +199,8 @@ in milliseconds since 1970.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> y: aNumber [
 
-	"The y value of the point.
-Defaults to null."
+	"The Y value of the range point.
+"
 
 	configurationOptions at: 'y' put: aNumber
 ]

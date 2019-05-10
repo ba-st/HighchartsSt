@@ -17,34 +17,36 @@ HighchartsPane >> background [
 ]
 
 { #category : #accessing }
-HighchartsPane >> center: anArrayOfStringOrNumber [
+HighchartsPane >> center: anArrayOfstringOrnumber [
 
 	"The center of a polar chart or angular gauge, given as an array
-of [x, y] positions. Positions can be given as integers that transform
-to pixels, or as percentages of the plot area size.
+of [x, y] positions. Positions can be given as integers that
+transform to pixels, or as percentages of the plot area size.
 Defaults to ['50%', '50%']."
 
-	configurationOptions at: 'center' put: anArrayOfStringOrNumber
+	configurationOptions at: 'center' put: anArrayOfstringOrnumber
 ]
 
 { #category : #accessing }
 HighchartsPane >> endAngle: aNumber [
 
-	"The end angle of the polar X axis or gauge value axis, given in degrees
-where 0 is north. Defaults to startAngle + 360.
+	"The end angle of the polar X axis or gauge value axis, given in
+degrees where 0 is north. Defaults to startAngle
+
+360.
 "
 
 	configurationOptions at: 'endAngle' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsPane >> size: aNumberOrString [
+HighchartsPane >> size: aNumberOrstring [
 
 	"The size of the pane, either as a number defining pixels, or a
 percentage defining a percentage of the plot are.
 Defaults to 85%."
 
-	configurationOptions at: 'size' put: aNumberOrString
+	configurationOptions at: 'size' put: aNumberOrstring
 ]
 
 { #category : #accessing }

@@ -12,3 +12,9 @@ HighstockSeriesMacdMacdLine >> styles [
 
 	^configurationOptions at: 'styles' ifAbsentPut: [HighstockSeriesMacdMacdLineStyles new]
 ]
+
+{ #category : #accessing }
+HighstockSeriesMacdMacdLine >> zones [
+
+	^configurationOptions at: 'zones' ifAbsentPut: [HighstockSeriesMacdMacdLineZones new]
+]

@@ -22,38 +22,38 @@ HighchartsPlotOptionsStreamgraphZones >> className: aString [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsStreamgraphZones >> color: aColor [
+HighchartsPlotOptionsStreamgraphZones >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Defines the color of the series.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsStreamgraphZones >> dashStyle: aString [
+HighchartsPlotOptionsStreamgraphZones >> dashStyle: aHighchartsDashStyleValue [
 
 	"A name for the dash style to use for the graph.
 "
 
-	configurationOptions at: 'dashStyle' put: aString
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsStreamgraphZones >> fillColor: aColor [
+HighchartsPlotOptionsStreamgraphZones >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Defines the fill color for the series (in area type series)
 "
 
-	configurationOptions at: 'fillColor' put: aColor
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsStreamgraphZones >> value: aNumber [
 
-	"The value up to where the zone extends, if undefined the zones stretches
-to the last value in the series.
-Defaults to undefined."
+	"The value up to where the zone extends, if undefined the zones
+stretches to the last value in the series.
+"
 
 	configurationOptions at: 'value' put: aNumber
 ]

@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockXAxisTest >> testAlignTicks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxis new.
+	component alignTicks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignTicks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockXAxisTest >> testAllowDecimals [
 
 	| component javascript expectedConfiguration |
@@ -224,6 +238,20 @@ HighstockXAxisTest >> testLinkedTo [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'linkedTo' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockXAxisTest >> testMargin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxis new.
+	component margin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'margin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -551,6 +579,20 @@ HighstockXAxisTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
+HighstockXAxisTest >> testReversedStacks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxis new.
+	component reversedStacks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'reversedStacks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockXAxisTest >> testShowEmpty [
 
 	| component javascript expectedConfiguration |
@@ -588,6 +630,20 @@ HighstockXAxisTest >> testShowLastLabel [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'showLastLabel' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockXAxisTest >> testSoftMax [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxis new.
+	component softMax: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'softMax' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

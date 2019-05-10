@@ -14,17 +14,3 @@ HighstockLegendItemCheckboxStyle >> height: aString [
 
 	configurationOptions at: 'height' put: aString
 ]
-
-{ #category : #accessing }
-HighstockLegendItemCheckboxStyle >> position: aString [
-
-
-	configurationOptions at: 'position' put: aString
-]
-
-{ #category : #accessing }
-HighstockLegendItemCheckboxStyle >> width: aString [
-
-
-	configurationOptions at: 'width' put: aString
-]

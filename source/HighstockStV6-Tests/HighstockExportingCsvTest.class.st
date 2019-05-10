@@ -33,6 +33,20 @@ HighstockExportingCsvTest >> testDateFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighstockExportingCsvTest >> testDecimalPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingCsv new.
+	component decimalPoint: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'decimalPoint' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockExportingCsvTest >> testItemDelimiter [
 
 	| component javascript expectedConfiguration |

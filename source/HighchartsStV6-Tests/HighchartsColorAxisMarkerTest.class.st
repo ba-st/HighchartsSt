@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsColorAxisMarkerTest >> testAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxisMarker new.
+	component animation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsColorAxisMarkerTest >> testColor [
 
 	| component javascript expectedConfiguration |

@@ -229,6 +229,20 @@ HighstockExportingButtonsContextButtonTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testTitleKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component titleKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'titleKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockExportingButtonsContextButtonTest >> testVerticalAlign [
 
 	| component javascript expectedConfiguration |

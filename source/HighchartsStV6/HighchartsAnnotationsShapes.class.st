@@ -9,12 +9,12 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsAnnotationsShapes >> fill: aColor [
+HighchartsAnnotationsShapes >> fill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the shape´s fill.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'fill' put: aColor
+	configurationOptions at: 'fill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -50,22 +50,21 @@ Custom markers can be defined in defs property.
 HighchartsAnnotationsShapes >> point [
 
 	"This option defines the point to which the shape will be connected.
-It can be either the point which exists in the series - it is referenced
-by the point´s id - or a new point with defined x, y properties
-and optionally axes.
+It can be either the point which exists in the series - it is
+referenced by the point´s id - or a new point with defined x, y
+properties and optionally axes.
 "
 	^configurationOptions at: 'point' ifAbsentPut: [HighchartsAnnotationsShapesPoint new]
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsShapes >> points: anArray [
+HighchartsAnnotationsShapes >> points [
 
 	"An array of points for the shape. This option is available for shapes
-which can use multiple points such as path. A point can be either 
+which can use multiple points such as path. A point can be either
 a point object or a point´s id.
 "
-
-	configurationOptions at: 'points' put: anArray
+	^configurationOptions at: 'points' ifAbsentPut: [HighchartsAnnotationsShapesPoints new]
 ]
 
 { #category : #accessing }
@@ -78,12 +77,12 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsShapes >> stroke: aColor [
+HighchartsAnnotationsShapes >> stroke: aHighchartsColorString [
 
 	"The color of the shape´s stroke.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'stroke' put: aColor
+	configurationOptions at: 'stroke' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

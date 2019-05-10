@@ -5,10 +5,11 @@ Class {
 }
 
 { #category : #accessing }
-HighstockRangeSelectorButtonsEvents >> click: aFunction [
+HighstockRangeSelectorButtonsEvents >> click: aHighchartsRangeSelectorClickCallbackFunction [
 
-	"Fires when clicking on the rangeSelector button. One parameter, event,
-is passed to the function, containing common event information.
+	"Fires when clicking on the rangeSelector button. One parameter,
+event, is passed to the function, containing common event
+information.
 
 click: function(e) {
   console.log(this);
@@ -16,7 +17,7 @@ click: function(e) {
 
 
 Return false to stop default button´s click action.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'click' put: aFunction
+	configurationOptions at: 'click' put: aHighchartsRangeSelectorClickCallbackFunction
 ]

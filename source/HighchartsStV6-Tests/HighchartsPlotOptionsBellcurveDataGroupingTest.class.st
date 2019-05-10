@@ -61,6 +61,20 @@ HighchartsPlotOptionsBellcurveDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurveDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsBellcurveDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

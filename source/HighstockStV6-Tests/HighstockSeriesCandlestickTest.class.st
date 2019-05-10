@@ -50,6 +50,21 @@ HighstockSeriesCandlestickTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCandlestickTest >> testBoostThreshold [
 
 	| component javascript expectedConfiguration |
@@ -105,6 +120,21 @@ HighstockSeriesCandlestickTest >> testClassName [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'candlestick';
 		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -335,6 +365,21 @@ HighstockSeriesCandlestickTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCandlestickTest >> testDepth [
 
 	| component javascript expectedConfiguration |
@@ -560,6 +605,21 @@ HighstockSeriesCandlestickTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCandlestickTest >> testIndex [
 
 	| component javascript expectedConfiguration |
@@ -770,6 +830,21 @@ HighstockSeriesCandlestickTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'opacity' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCandlestickTest >> testPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
@@ -870,6 +945,21 @@ HighstockSeriesCandlestickTest >> testPointStart [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'candlestick';
 		at: 'pointStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testPointValKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component pointValKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'pointValKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

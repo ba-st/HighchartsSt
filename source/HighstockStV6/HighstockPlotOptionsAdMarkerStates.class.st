@@ -16,11 +16,27 @@ HighstockPlotOptionsAdMarkerStates >> hover [
 ]
 
 { #category : #accessing }
+HighstockPlotOptionsAdMarkerStates >> inactive [
+
+	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsAdMarkerStatesInactive new]
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsAdMarkerStates >> normal [
+
+	"The normal state of a single point marker. Currently only
+used for setting animation when returning to normal state
+from hover.
+"
+	^configurationOptions at: 'normal' ifAbsentPut: [HighstockPlotOptionsAdMarkerStatesNormal new]
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsAdMarkerStates >> select [
 
 	"The appearance of the point marker when selected. In order to
-allow a point to be selected, set the series.allowPointSelect
-option to true.
+allow a point to be selected, set the
+series.allowPointSelect option to true.
 "
 	^configurationOptions at: 'select' ifAbsentPut: [HighstockPlotOptionsAdMarkerStatesSelect new]
 ]

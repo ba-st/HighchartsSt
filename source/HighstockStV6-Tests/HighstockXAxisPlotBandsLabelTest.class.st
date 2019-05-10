@@ -47,6 +47,20 @@ HighstockXAxisPlotBandsLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighstockXAxisPlotBandsLabelTest >> testText [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxisPlotBandsLabel new.
+	component text: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'text' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockXAxisPlotBandsLabelTest >> testTextAlign [
 
 	| component javascript expectedConfiguration |

@@ -19,6 +19,20 @@ HighchartsLegendTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsLegendTest >> testAlignColumns [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegend new.
+	component alignColumns: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignColumns' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLegendTest >> testBackgroundColor [
 
 	| component javascript expectedConfiguration |
@@ -112,6 +126,34 @@ HighchartsLegendTest >> testItemDistance [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'itemDistance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendTest >> testItemHiddenStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegend new.
+	component itemHiddenStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'itemHiddenStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendTest >> testItemHoverStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegend new.
+	component itemHoverStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'itemHoverStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -1,0 +1,19 @@
+Class {
+	#name : #HighchartsPlotOptionsParetoStatesInactiveAnimationTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsStV6-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoStatesInactiveAnimationTest >> testDuration [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsParetoStatesInactiveAnimation new.
+	component duration: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'duration' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

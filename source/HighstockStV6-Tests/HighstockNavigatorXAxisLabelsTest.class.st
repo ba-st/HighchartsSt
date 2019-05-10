@@ -229,6 +229,20 @@ HighstockNavigatorXAxisLabelsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxisLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisLabelsTest >> testUseHTML [
 
 	| component javascript expectedConfiguration |

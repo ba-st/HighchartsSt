@@ -16,9 +16,19 @@ HighchartsPlotOptionsTreemapStates >> hover [
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsTreemapStates >> inactive [
+
+	"The opposite state of a hover for series.
+"
+	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsPlotOptionsTreemapStatesInactive new]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsTreemapStates >> normal [
 
-	"Overrides for the normal state.
+	"The normal state of a series, or for point items in column, pie
+and similar series. Currently only used for setting animation
+when returning to normal state from hover.
 "
 	^configurationOptions at: 'normal' ifAbsentPut: [HighchartsPlotOptionsTreemapStatesNormal new]
 ]
@@ -26,9 +36,10 @@ HighchartsPlotOptionsTreemapStates >> normal [
 { #category : #accessing }
 HighchartsPlotOptionsTreemapStates >> select [
 
-	"Specific options for point in selected states, after being selected
-by allowPointSelect or
-programmatically.
+	"Specific options for point in selected states, after being
+selected by
+allowPointSelect
+or programmatically.
 "
 	^configurationOptions at: 'select' ifAbsentPut: [HighchartsPlotOptionsTreemapStatesSelect new]
 ]

@@ -8,13 +8,13 @@ Class {
 }
 
 { #category : #accessing }
-HighstockRangeSelectorButtonPosition >> align: aString [
+HighstockRangeSelectorButtonPosition >> align: aHighchartsAlignValue [
 
 	"The alignment of the input box. Allowed properties are left,
 center, right.
 Defaults to left."
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }

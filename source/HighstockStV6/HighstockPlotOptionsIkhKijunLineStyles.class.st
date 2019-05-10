@@ -5,12 +5,12 @@ Class {
 }
 
 { #category : #accessing }
-HighstockPlotOptionsIkhKijunLineStyles >> lineColor: aNumber [
+HighstockPlotOptionsIkhKijunLineStyles >> lineColor: aHighchartsColorString [
 
 	"Color of the line.
 "
 
-	configurationOptions at: 'lineColor' put: aNumber
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

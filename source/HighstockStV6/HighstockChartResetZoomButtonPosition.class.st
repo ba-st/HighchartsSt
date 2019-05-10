@@ -17,12 +17,12 @@ Defaults to right."
 ]
 
 { #category : #accessing }
-HighstockChartResetZoomButtonPosition >> verticalAlign: aString [
+HighstockChartResetZoomButtonPosition >> verticalAlign: aHighchartsVerticalAlignValue [
 
 	"The vertical alignment of the button.
 Defaults to top."
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }

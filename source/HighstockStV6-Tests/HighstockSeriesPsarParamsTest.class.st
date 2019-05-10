@@ -33,6 +33,20 @@ HighstockSeriesPsarParamsTest >> testIncrement [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPsarParamsTest >> testIndex [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPsarParams new.
+	component index: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'index' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPsarParamsTest >> testInitialAccelerationFactor [
 
 	| component javascript expectedConfiguration |

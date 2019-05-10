@@ -103,6 +103,34 @@ HighchartsColorAxisLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsColorAxisLabelsTest >> testIndentation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxisLabels new.
+	component indentation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'indentation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsColorAxisLabelsTest >> testMaxStaggerLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxisLabels new.
+	component maxStaggerLines: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'maxStaggerLines' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsColorAxisLabelsTest >> testOverflow [
 
 	| component javascript expectedConfiguration |
@@ -210,6 +238,20 @@ HighchartsColorAxisLabelsTest >> testStep [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'step' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsColorAxisLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxisLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

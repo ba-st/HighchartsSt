@@ -12,13 +12,16 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsDrilldown >> activeAxisLabelStyle [
+HighchartsDrilldown >> activeAxisLabelStyle: aHighchartsCSSObject [
 
 	"Additional styles to apply to the X axis label for a point that
 has drilldown data. By default it is underlined and blue to invite
 to interaction.
+In styled mode, active label styles can be set with the
+.highcharts-drilldown-axis-label class.
 Defaults to { 'cursor': 'pointer', 'color': '#003399', 'fontWeight': 'bold', 'textDecoration': 'underline' }."
-	^configurationOptions at: 'activeAxisLabelStyle' ifAbsentPut: [HighchartsDrilldownActiveAxisLabelStyle new]
+
+	configurationOptions at: 'activeAxisLabelStyle' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -27,6 +30,8 @@ HighchartsDrilldown >> activeDataLabelStyle [
 	"Additional styles to apply to the data label of a point that has
 drilldown data. By default it is underlined and blue to invite to
 interaction.
+In styled mode, active data label styles can be applied with the
+.highcharts-drilldown-data-label class.
 Defaults to { 'cursor': 'pointer', 'color': '#003399', 'fontWeight': 'bold', 'textDecoration': 'underline' }."
 	^configurationOptions at: 'activeDataLabelStyle' ifAbsentPut: [HighchartsDrilldownActiveDataLabelStyle new]
 ]
@@ -43,7 +48,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsDrilldown >> animation [
+HighchartsDrilldown >> animation: aBooleanOrHighchartsAnimationOptionsObject [
 
 	"Set the animation for all drilldown animations. Animation of a drilldown
 occurs when drilling between a column point and a column series,
@@ -55,36 +60,34 @@ object. If true, it will use the ´swing´ jQuery easing and a duration
 of 500 ms. If used as a configuration object, the following properties
 are supported:
 
+duration: The duration of the animation in milliseconds.
 
-duration
+easing: A string reference to an easing function set on the Math
+object. See
+the easing demo.
+Defaults to { 'duration': 500 }."
 
-The duration of the animation in milliseconds.
-
-easing
-
-A string reference to an easing function set on the Math object.
-See the easing demo.
-"
-	^configurationOptions at: 'animation' ifAbsentPut: [HighchartsDrilldownAnimation new]
+	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
 ]
 
 { #category : #accessing }
 HighchartsDrilldown >> drillUpButton [
 
-	"Options for the drill up button that appears when drilling down
-on a series. The text for the button is defined in lang.drillUpText.
+	"Options for the drill up button that appears when drilling down on a
+series. The text for the button is defined in
+lang.drillUpText.
 "
 	^configurationOptions at: 'drillUpButton' ifAbsentPut: [HighchartsDrilldownDrillUpButton new]
 ]
 
 { #category : #accessing }
-HighchartsDrilldown >> series: anArrayOfObject [
+HighchartsDrilldown >> series: anArrayOfHighchartsSeriesOptionsType [
 
 	"An array of series configurations for the drill down. Each series
-configuration uses the same syntax as the series option
-set. These drilldown series are hidden by default. The drilldown
-series is linked to the parent series´ point by its id.
+configuration uses the same syntax as the series option set.
+These drilldown series are hidden by default. The drilldown series is
+linked to the parent series´ point by its id.
 "
 
-	configurationOptions at: 'series' put: anArrayOfObject
+	configurationOptions at: 'series' put: anArrayOfHighchartsSeriesOptionsType
 ]

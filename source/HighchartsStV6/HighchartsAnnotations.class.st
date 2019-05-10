@@ -10,6 +10,33 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsAnnotations >> draggable: aString [
+
+	"Allow an annotation to be draggable by a user. Possible
+values are &quot;x&quot;, &quot;xy&quot;, &quot;y&quot; and &quot;&quot; (disabled).
+Defaults to xy."
+
+	configurationOptions at: 'draggable' put: aString
+]
+
+{ #category : #accessing }
+HighchartsAnnotations >> events: anObject [
+
+
+	configurationOptions at: 'events' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsAnnotations >> id: aString [
+
+	"Sets an ID for an annotation. Can be user later when removing an
+annotation in Chart#removeAnnotation(id) method.
+"
+
+	configurationOptions at: 'id' put: aString
+]
+
+{ #category : #accessing }
 HighchartsAnnotations >> labelOptions [
 
 	"Options for annotation´s labels. Each label inherits options
@@ -22,8 +49,9 @@ overwritten by config for a specific label.
 { #category : #accessing }
 HighchartsAnnotations >> labels [
 
-	"An array of labels for the annotation. For options that apply to multiple
-labels, they can be added to the labelOptions.
+	"An array of labels for the annotation. For options that apply to
+multiple labels, they can be added to the
+labelOptions.
 "
 	^configurationOptions at: 'labels' ifAbsentPut: [HighchartsAnnotationsLabels new]
 ]
@@ -41,8 +69,9 @@ overwritten by config for a specific shape.
 { #category : #accessing }
 HighchartsAnnotations >> shapes [
 
-	"An array of shapes for the annotation. For options that apply to multiple
-shapes, then can be added to the shapeOptions.
+	"An array of shapes for the annotation. For options that apply to
+multiple shapes, then can be added to the
+shapeOptions.
 "
 	^configurationOptions at: 'shapes' ifAbsentPut: [HighchartsAnnotationsShapes new]
 ]

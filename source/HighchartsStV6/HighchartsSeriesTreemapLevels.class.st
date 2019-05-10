@@ -9,19 +9,19 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsSeriesTreemapLevels >> borderColor: aColor [
+HighchartsSeriesTreemapLevels >> borderColor: aHighchartsColorString [
 
 	"Can set a borderColor on all points which lies on the same level.
 "
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighchartsSeriesTreemapLevels >> borderDashStyle: aString [
 
 	"Set the dash style of the border of all the point which lies on the
-level. See 
+level. See &lt;a href&quot;#plotoptions.scatter.dashstyle&quot;&gt;
 plotOptions.scatter.dashStyle for possible options.
 "
 
@@ -38,24 +38,25 @@ HighchartsSeriesTreemapLevels >> borderWidth: aNumber [
 ]
 
 { #category : #accessing }
-HighchartsSeriesTreemapLevels >> color: aColor [
+HighchartsSeriesTreemapLevels >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Can set a color on all points which lies on the same level.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsSeriesTreemapLevels >> colorVariation [
 
-	"A configuration object to define how the color of a child varies from the
-parent´s color. The variation is distributed among the children of node.
-For example when setting brightness, the brightness change will range
-from the parent´s original brightness on the first child, to the amount
-set in the to setting on the last node. This allows a gradient-like
-color scheme that sets children out from each other while highlighting
-the grouping on treemaps and sectors on sunburst charts.
+	"A configuration object to define how the color of a child varies from
+the parent´s color. The variation is distributed among the children
+of node. For example when setting brightness, the brightness change
+will range from the parent´s original brightness on the first child,
+to the amount set in the to setting on the last node. This allows a
+gradient-like color scheme that sets children out from each other
+while highlighting the grouping on treemaps and sectors on sunburst
+charts.
 "
 	^configurationOptions at: 'colorVariation' ifAbsentPut: [HighchartsSeriesTreemapLevelsColorVariation new]
 ]
@@ -64,9 +65,10 @@ the grouping on treemaps and sectors on sunburst charts.
 HighchartsSeriesTreemapLevels >> dataLabels: anObject [
 
 	"Can set the options of dataLabels on each point which lies on the
-level. plotOptions.treemap.dataLabels
-for possible values.
-Defaults to undefined."
+level.
+plotOptions.treemap.dataLabels for
+possible values.
+"
 
 	configurationOptions at: 'dataLabels' put: anObject
 ]

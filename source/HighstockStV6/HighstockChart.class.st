@@ -17,13 +17,16 @@ with the least ticks, as if tickAmount were specified.
 This can be prevented by setting alignTicks to false. If the grid
 lines look messy, it´s a good idea to hide them for the secondary
 axis by setting gridLineWidth to 0.
+If startOnTick or endOnTick in an Axis options are set to false,
+then the alignTicks will be disabled for the Axis.
+Disabled for logarithmic axes.
 Defaults to true."
 
 	configurationOptions at: 'alignTicks' put: aBoolean
 ]
 
 { #category : #accessing }
-HighstockChart >> animation: aBooleanOrObject [
+HighstockChart >> animation: aBooleanOrHighchartsAnimationOptionsObject [
 
 	"Set the overall animation for all chart updating. Animation can be
 disabled throughout the chart by setting it to false here. It can
@@ -42,29 +45,30 @@ The duration of the animation in milliseconds.
 
 easing
 
-A string reference to an easing function set on the Math object.
-See the easing demo.
+A string reference to an easing function set on the `Math`
+object. See [the easing
+demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/).
 Defaults to true."
 
-	configurationOptions at: 'animation' put: aBooleanOrObject
+	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
 ]
 
 { #category : #accessing }
-HighstockChart >> backgroundColor: aColor [
+HighstockChart >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the outer chart area.
-Defaults to #FFFFFF."
+Defaults to #ffffff."
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockChart >> borderColor: aColor [
+HighstockChart >> borderColor: aHighchartsColorString [
 
 	"The color of the outer chart border.
 Defaults to #335cad."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -100,8 +104,8 @@ HighstockChart >> colorCount: aNumber [
 
 	"In styled mode, this sets how many colors the class names
 should rotate between. With ten colors, series (or points) are
-given class names like highcharts-color-0, highcharts-color-
-0 [...] highcharts-color-9. The equivalent in non-styled mode
+given class names like highcharts-color-0, highcharts-color-0
+[...] highcharts-color-9. The equivalent in non-styled mode
 is to set colors using the colors setting.
 Defaults to 10."
 
@@ -109,15 +113,14 @@ Defaults to 10."
 ]
 
 { #category : #accessing }
-HighstockChart >> description: aString [
+HighstockChart >> displayErrors: aBoolean [
 
-	"A text description of the chart.
-If the Accessibility module is loaded, this is included by default
-as a long description of the chart and its contents in the hidden
-screen reader information region.
-Defaults to undefined."
+	"Whether to display errors on the chart. When false, the errors will
+be shown only in the console.
+Requires debugger.js module.
+Defaults to true."
 
-	configurationOptions at: 'description' put: aString
+	configurationOptions at: 'displayErrors' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -138,19 +141,19 @@ HighstockChart >> events: anObject [
 ]
 
 { #category : #accessing }
-HighstockChart >> height: aNumberOrString [
+HighstockChart >> height: aNumberOrstringOrNil [
 
 	"An explicit height for the chart. If a number, the height is
-given in pixels. If given a percentage string (for example ´56´),
-the height is given as the percentage of the actual chart width.
-This allows for preserving the aspect ratio across responsive
+given in pixels. If given a percentage string (for example
+´56´), the height is given as the percentage of the actual chart
+width. This allows for preserving the aspect ratio across responsive
 sizes.
 By default (when null) the height is calculated from the offset
 height of the containing element, or 400 pixels if the containing
 element´s height is 0.
-Defaults to null."
+Defaults to nil."
 
-	configurationOptions at: 'height' put: aNumberOrString
+	configurationOptions at: 'height' put: aNumberOrstringOrNil
 ]
 
 { #category : #accessing }
@@ -178,19 +181,19 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockChart >> margin: anArray [
+HighstockChart >> margin: aNumberOrArrayOfnumber [
 
 	"The margin between the outer edge of the chart and the plot area.
 The numbers in the array designate top, right, bottom and left
 respectively. Use the options marginTop, marginRight,
 marginBottom and marginLeft for shorthand setting of one option.
-By default there is no margin. The actual space is dynamically calculated
-from the offset of axis labels, axis title, title, subtitle and legend
-in addition to the spacingTop, spacingRight, spacingBottom
-and spacingLeft options.
+By default there is no margin. The actual space is dynamically
+calculated from the offset of axis labels, axis title, title,
+subtitle and legend in addition to the spacingTop, spacingRight,
+spacingBottom and spacingLeft options.
 "
 
-	configurationOptions at: 'margin' put: anArray
+	configurationOptions at: 'margin' put: aNumberOrArrayOfnumber
 ]
 
 { #category : #accessing }
@@ -210,7 +213,7 @@ HighstockChart >> marginLeft: aNumber [
 	"The margin between the left outer edge of the chart and the plot
 area. Use this to set a fixed pixel value for the margin as opposed
 to the default dynamic margin. See also spacingLeft.
-Defaults to null."
+"
 
 	configurationOptions at: 'marginLeft' put: aNumber
 ]
@@ -221,7 +224,7 @@ HighstockChart >> marginRight: aNumber [
 	"The margin between the right outer edge of the chart and the plot
 area. Use this to set a fixed pixel value for the margin as opposed
 to the default dynamic margin. See also spacingRight.
-Defaults to null."
+"
 
 	configurationOptions at: 'marginRight' put: aNumber
 ]
@@ -232,7 +235,7 @@ HighstockChart >> marginTop: aNumber [
 	"The margin between the top outer edge of the chart and the plot area.
 Use this to set a fixed pixel value for the margin as opposed to
 the default dynamic margin. See also spacingTop.
-Defaults to null."
+"
 
 	configurationOptions at: 'marginTop' put: aNumber
 ]
@@ -242,9 +245,9 @@ HighstockChart >> panning: aBoolean [
 
 	"Allow panning in a chart. Best used with panKey
 to combine zooming and panning.
-On touch devices, when the tooltip.followTouchMove
-option is true (default), panning requires two fingers. To allow
-panning with one finger, set followTouchMove to false.
+On touch devices, when the tooltip.followTouchMove option is true (default), panning
+requires two fingers. To allow panning with one finger, set
+followTouchMove to false.
 "
 
 	configurationOptions at: 'panning' put: aBoolean
@@ -253,24 +256,24 @@ panning with one finger, set followTouchMove to false.
 { #category : #accessing }
 HighstockChart >> pinchType: aString [
 
-	"Equivalent to zoomType, but for multitouch gestures
-only. By default, the pinchType is the same as the zoomType setting.
-However, pinching can be enabled separately in some cases, for example
-in stock charts where a mouse drag pans the chart, while pinching
-is enabled. When tooltip.followTouchMove
-is true, pinchType only applies to two-finger touches.
+	"Equivalent to zoomType, but for multitouch
+gestures only. By default, the pinchType is the same as the
+zoomType setting. However, pinching can be enabled separately in
+some cases, for example in stock charts where a mouse drag pans the
+chart, while pinching is enabled. When tooltip.followTouchMove is true, pinchType only applies to
+two-finger touches.
 "
 
 	configurationOptions at: 'pinchType' put: aString
 ]
 
 { #category : #accessing }
-HighstockChart >> plotBackgroundColor: aColor [
+HighstockChart >> plotBackgroundColor: aHighchartsColorString [
 
 	"The background color or gradient for the plot area.
-Defaults to null."
+"
 
-	configurationOptions at: 'plotBackgroundColor' put: aColor
+	configurationOptions at: 'plotBackgroundColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -280,18 +283,18 @@ HighstockChart >> plotBackgroundImage: aString [
 as the background for the entire chart, set a CSS background image
 to the container element. Note that for the image to be applied to
 exported charts, its URL needs to be accessible by the export server.
-Defaults to null."
+"
 
 	configurationOptions at: 'plotBackgroundImage' put: aString
 ]
 
 { #category : #accessing }
-HighstockChart >> plotBorderColor: aColor [
+HighstockChart >> plotBorderColor: aHighchartsColorString [
 
 	"The color of the inner chart or plot area border.
 Defaults to #cccccc."
 
-	configurationOptions at: 'plotBorderColor' put: aColor
+	configurationOptions at: 'plotBorderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -304,14 +307,14 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockChart >> plotShadow: aBooleanOrObject [
+HighstockChart >> plotShadow: aBooleanOrHighchartsCSSObject [
 
 	"Whether to apply a drop shadow to the plot area. Requires that
 plotBackgroundColor be set. The shadow can be an object configuration
 containing color, offsetX, offsetY, opacity and width.
 Defaults to false."
 
-	configurationOptions at: 'plotShadow' put: aBooleanOrObject
+	configurationOptions at: 'plotShadow' put: aBooleanOrHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -325,15 +328,15 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockChart >> renderTo: aStringOrObject [
+HighstockChart >> renderTo: aStringOrHighchartsHTMLDOMElement [
 
 	"The HTML element where the chart will be rendered. If it is a string,
 the element by that id is used. The HTML element can also be passed
-by direct reference, or as the first argument of the chart constructor,
- in which case the option is not needed.
+by direct reference, or as the first argument of the chart
+constructor, in which case the option is not needed.
 "
 
-	configurationOptions at: 'renderTo' put: aStringOrObject
+	configurationOptions at: 'renderTo' put: aStringOrHighchartsHTMLDOMElement
 ]
 
 { #category : #accessing }
@@ -346,44 +349,46 @@ to reset zoom.
 ]
 
 { #category : #accessing }
-HighstockChart >> selectionMarkerFill: aColor [
+HighstockChart >> selectionMarkerFill: aHighchartsColorString [
 
 	"The background color of the marker square when selecting (zooming
 in on) an area of the chart.
 Defaults to rgba(51,92,173,0.25)."
 
-	configurationOptions at: 'selectionMarkerFill' put: aColor
+	configurationOptions at: 'selectionMarkerFill' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighstockChart >> shadow: aBooleanOrObject [
+HighstockChart >> shadow: aBooleanOrHighchartsCSSObject [
 
 	"Whether to apply a drop shadow to the outer chart area. Requires
-that backgroundColor be set. The shadow can be an object configuration
-containing color, offsetX, offsetY, opacity and width.
+that backgroundColor be set. The shadow can be an object
+configuration containing color, offsetX, offsetY, opacity and
+width.
 Defaults to false."
 
-	configurationOptions at: 'shadow' put: aBooleanOrObject
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsCSSObject
 ]
 
 { #category : #accessing }
-HighstockChart >> spacing: anArrayOfNumber [
+HighstockChart >> spacing: anArrayOfnumber [
 
 	"The distance between the outer edge of the chart and the content,
 like title or legend, or axis title and labels if present. The
-numbers in the array designate top, right, bottom and left respectively.
-Use the options spacingTop, spacingRight, spacingBottom and spacingLeft
-options for shorthand setting of one option.
+numbers in the array designate top, right, bottom and left
+respectively. Use the options spacingTop, spacingRight, spacingBottom
+and spacingLeft options for shorthand setting of one option.
 Defaults to [10, 10, 15, 10]."
 
-	configurationOptions at: 'spacing' put: anArrayOfNumber
+	configurationOptions at: 'spacing' put: anArrayOfnumber
 ]
 
 { #category : #accessing }
 HighstockChart >> spacingBottom: aNumber [
 
 	"The space between the bottom edge of the chart and the content (plot
-area, axis title and labels, title, subtitle or legend in top position).
+area, axis title and labels, title, subtitle or legend in top
+position).
 Defaults to 15."
 
 	configurationOptions at: 'spacingBottom' put: aNumber
@@ -393,7 +398,8 @@ Defaults to 15."
 HighstockChart >> spacingLeft: aNumber [
 
 	"The space between the left edge of the chart and the content (plot
-area, axis title and labels, title, subtitle or legend in top position).
+area, axis title and labels, title, subtitle or legend in top
+position).
 Defaults to 10."
 
 	configurationOptions at: 'spacingLeft' put: aNumber
@@ -422,48 +428,60 @@ Defaults to 10."
 ]
 
 { #category : #accessing }
-HighstockChart >> style: aCSSObject [
+HighstockChart >> style: aHighchartsCSSObject [
 
 	"Additional CSS styles to apply inline to the container div. Note
 that since the default font styles are applied in the renderer, it
 is ignorant of the individual chart options and must be set globally.
-Defaults to {'fontFamily':'\'Lucida Grande\', \'Lucida Sans Unicode\', Verdana, Arial, Helvetica, sans-serif','fontSize':'12px'}."
+Defaults to {'fontFamily': '\'Lucida Grande\', \'Lucida Sans Unicode\', Verdana, Arial, Helvetica, sans-serif','fontSize':'12px'}."
 
-	configurationOptions at: 'style' put: aCSSObject
+	configurationOptions at: 'style' put: aHighchartsCSSObject
+]
+
+{ #category : #accessing }
+HighstockChart >> styledMode: aBoolean [
+
+	"Whether to apply styled mode. When in styled mode, no presentational
+attributes or CSS are applied to the chart SVG. Instead, CSS rules
+are required to style the chart. The default style sheet is
+available from https://code.highcharts.com/css/highcharts.css.
+Defaults to false."
+
+	configurationOptions at: 'styledMode' put: aBoolean
 ]
 
 { #category : #accessing }
 HighstockChart >> type: aString [
 
 	"The default series type for the chart. Can be any of the chart types
-listed under plotOptions.
+listed under plotOptions and series or can
+be a series provided by an additional module.
+In TypeScript this option has no effect in sense of typing and
+instead the type option must always be set in the series.
 "
 
 	configurationOptions at: 'type' put: aString
 ]
 
 { #category : #accessing }
-HighstockChart >> typeDescription: aString [
-
-	"A text description of the chart type.
-If the Accessibility module is loaded, this will be included in the
-description of the chart in the screen reader information region.
-Highcharts will by default attempt to guess the chart type, but for
-more complex charts it is recommended to specify this property for
-clarity.
-Defaults to undefined."
-
-	configurationOptions at: 'typeDescription' put: aString
-]
-
-{ #category : #accessing }
-HighstockChart >> width: aNumber [
+HighstockChart >> width: aNumberOrNil [
 
 	"An explicit width for the chart. By default (when null) the width
 is calculated from the offset width of the containing element.
-Defaults to null."
+Defaults to nil."
 
-	configurationOptions at: 'width' put: aNumber
+	configurationOptions at: 'width' put: aNumberOrNil
+]
+
+{ #category : #accessing }
+HighstockChart >> zoomKey: aString [
+
+	"Set a key to hold when dragging to zoom the chart. Requires the
+draggable-points module. This is useful to avoid zooming while moving points.
+Should be set different than chart.panKey.
+"
+
+	configurationOptions at: 'zoomKey' put: aString
 ]
 
 { #category : #accessing }

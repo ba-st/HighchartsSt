@@ -5,6 +5,36 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testAllAreas [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component allAreas: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'allAreas' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testAllowExtendPlayingField [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component allowExtendPlayingField: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'allowExtendPlayingField' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testAllowPointSelect [
 
 	| component javascript expectedConfiguration |
@@ -30,6 +60,36 @@ HighchartsSeriesWordcloudTest >> testAnimationLimit [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'animationLimit' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'boostBlending' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testBoostThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component boostThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'boostThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -95,6 +155,21 @@ HighchartsSeriesWordcloudTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'clip' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testColor [
 
 	| component javascript expectedConfiguration |
@@ -105,6 +180,21 @@ HighchartsSeriesWordcloudTest >> testColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testColorAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component colorAxis: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'colorAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -155,6 +245,36 @@ HighchartsSeriesWordcloudTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testCompare [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component compare: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'compare' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testCompareBase [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component compareBase: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'compareBase' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testCompareStart [
 
 	| component javascript expectedConfiguration |
@@ -165,6 +285,36 @@ HighchartsSeriesWordcloudTest >> testCompareStart [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'compareStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testConnectEnds [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component connectEnds: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'connectEnds' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testConnectNulls [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component connectNulls: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'connectNulls' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -200,6 +350,21 @@ HighchartsSeriesWordcloudTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testData [
 
 	| component javascript expectedConfiguration |
@@ -210,6 +375,21 @@ HighchartsSeriesWordcloudTest >> testData [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -290,6 +470,66 @@ HighchartsSeriesWordcloudTest >> testExposeElementToA11y [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testFindNearestPointBy [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component findNearestPointBy: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'findNearestPointBy' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGapSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component gapSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'gapSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGapUnit [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component gapUnit: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'gapUnit' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetExtremesFromAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component getExtremesFromAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'getExtremesFromAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testId [
 
 	| component javascript expectedConfiguration |
@@ -305,6 +545,21 @@ HighchartsSeriesWordcloudTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testIndex [
 
 	| component javascript expectedConfiguration |
@@ -315,6 +570,21 @@ HighchartsSeriesWordcloudTest >> testIndex [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'index' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testJoinBy [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component joinBy: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'joinBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -350,6 +620,36 @@ HighchartsSeriesWordcloudTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testLineWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component lineWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'lineWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testLinecap [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component linecap: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'linecap' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testLinkedTo [
 
 	| component javascript expectedConfiguration |
@@ -380,6 +680,36 @@ HighchartsSeriesWordcloudTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testMaxFontSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component maxFontSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'maxFontSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testMinFontSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component minFontSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'minFontSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testName [
 
 	| component javascript expectedConfiguration |
@@ -390,6 +720,51 @@ HighchartsSeriesWordcloudTest >> testName [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'name' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testNavigatorOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component navigatorOptions: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'navigatorOptions' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testNegativeColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component negativeColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'negativeColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -425,6 +800,81 @@ HighchartsSeriesWordcloudTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testPointInterval [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component pointInterval: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'pointInterval' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testPointIntervalUnit [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component pointIntervalUnit: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'pointIntervalUnit' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testPointPlacement [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component pointPlacement: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'pointPlacement' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testPointRange [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component pointRange: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'pointRange' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testPointStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component pointStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'pointStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testSelected [
 
 	| component javascript expectedConfiguration |
@@ -435,6 +885,36 @@ HighchartsSeriesWordcloudTest >> testSelected [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'selected' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testShadow [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component shadow: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'shadow' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testShowCheckbox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component showCheckbox: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'showCheckbox' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -455,6 +935,21 @@ HighchartsSeriesWordcloudTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testShowInNavigator [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component showInNavigator: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'showInNavigator' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
@@ -465,6 +960,21 @@ HighchartsSeriesWordcloudTest >> testSkipKeyboardNavigation [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'skipKeyboardNavigation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testSoftThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component softThreshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'softThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -500,6 +1010,21 @@ HighchartsSeriesWordcloudTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testStacking [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component stacking: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'stacking' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testStates [
 
 	| component javascript expectedConfiguration |
@@ -515,6 +1040,21 @@ HighchartsSeriesWordcloudTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testStep [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component step: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'step' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testStickyTracking [
 
 	| component javascript expectedConfiguration |
@@ -525,6 +1065,36 @@ HighchartsSeriesWordcloudTest >> testStickyTracking [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'stickyTracking' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testThreshold [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component threshold: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'threshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -615,6 +1185,21 @@ HighchartsSeriesWordcloudTest >> testZIndex [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'zIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testZoneAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component zoneAxis: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'zoneAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

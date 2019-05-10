@@ -18,23 +18,25 @@ Available properties are x, y, align and verticalAlign.
 ]
 
 { #category : #accessing }
-HighchartsDrilldownDrillUpButton >> relativeTo: aString [
+HighchartsDrilldownDrillUpButton >> relativeTo: aHighchartsButtonRelativeToValue [
 
 	"What box to align the button to. Can be either plotBox or
-`spacingBox.
+spacingBox.
 Defaults to plotBox."
 
-	configurationOptions at: 'relativeTo' put: aString
+	configurationOptions at: 'relativeTo' put: aHighchartsButtonRelativeToValue
 ]
 
 { #category : #accessing }
 HighchartsDrilldownDrillUpButton >> theme: anObject [
 
-	"A collection of attributes for the button. The object takes SVG attributes
-like fill, stroke, stroke-width or r, the border radius.
-The theme also supports style, a collection of CSS properties for
-the text. Equivalent attributes for the hover state are given in
-theme.states.hover.
+	"A collection of attributes for the button. The object takes SVG
+attributes like fill, stroke, stroke-width or r, the border
+radius. The theme also supports style, a collection of CSS
+properties for the text. Equivalent attributes for the hover state
+are given in theme.states.hover.
+In styled mode, drill-up button styles can be applied with the
+.highcharts-drillup-button class.
 "
 
 	configurationOptions at: 'theme' put: anObject

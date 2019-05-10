@@ -19,6 +19,20 @@ HighchartTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
+HighchartTest >> testDefs [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component defs: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'defs' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartTest >> testYAxis [
 
 	| component javascript expectedConfiguration |

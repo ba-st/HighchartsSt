@@ -23,11 +23,12 @@ Defaults to 100."
 ]
 
 { #category : #accessing }
-HighchartsLoading >> labelStyle [
+HighchartsLoading >> labelStyle: aHighchartsCSSObject [
 
 	"CSS styles for the loading label span.
-Defaults to { 'fontWeight': 'bold', 'position': 'relative', 'top': '45%' }."
-	^configurationOptions at: 'labelStyle' ifAbsentPut: [HighchartsLoadingLabelStyle new]
+Defaults to {'fontWeight': 'bold', 'position': 'relative', 'top': '45%'}."
+
+	configurationOptions at: 'labelStyle' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -40,9 +41,12 @@ Defaults to 100."
 ]
 
 { #category : #accessing }
-HighchartsLoading >> style [
+HighchartsLoading >> style: aHighchartsCSSObject [
 
 	"CSS styles for the loading screen that covers the plot area.
-Defaults to { 'position': 'absolute', 'backgroundColor': '#ffffff', 'opacity': 0.5, 'textAlign': 'center' }."
-	^configurationOptions at: 'style' ifAbsentPut: [HighchartsLoadingStyle new]
+In styled mode, the loading label is styled with the
+.highcharts-loading class.
+Defaults to {'position': 'absolute', 'backgroundColor': '#ffffff', 'opacity': 0.5, 'textAlign': 'center'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]

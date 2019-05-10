@@ -5,10 +5,10 @@ Class {
 }
 
 { #category : #accessing }
-HighstockPlotOptionsStochasticParams >> periods: anArray [
+HighstockPlotOptionsStochasticParams >> periods: anArrayOfnumbernumber [
 
 	"Periods for Stochastic oscillator: [K, D].
 Defaults to [14, 3]."
 
-	configurationOptions at: 'periods' put: anArray
+	configurationOptions at: 'periods' put: anArrayOfnumbernumber
 ]

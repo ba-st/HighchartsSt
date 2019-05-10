@@ -8,21 +8,21 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigatorHandles >> backgroundColor: aColor [
+HighstockNavigatorHandles >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The fill for the handle.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockNavigatorHandles >> borderColor: aColor [
+HighstockNavigatorHandles >> borderColor: aHighchartsColorString [
 
 	"The stroke for the handle border and the stripes inside.
 Defaults to #999999."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -47,13 +47,13 @@ Defaults to 15."
 HighstockNavigatorHandles >> lineWidth: aNumber [
 
 	"The width for the handle border and the stripes inside.
-Defaults to 7."
+Defaults to 1."
 
 	configurationOptions at: 'lineWidth' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockNavigatorHandles >> symbols: anArray [
+HighstockNavigatorHandles >> symbols: anArrayOfstring [
 
 	"Array to define shapes of handles. 0-index for left, 1-index for
 right.
@@ -66,7 +66,7 @@ Highcharts.SVGRenderer.prototype.symbols. The callback is then
 used by its method name, as shown in the demo.
 Defaults to ['navigator-handle', 'navigator-handle']."
 
-	configurationOptions at: 'symbols' put: anArray
+	configurationOptions at: 'symbols' put: anArrayOfstring
 ]
 
 { #category : #accessing }

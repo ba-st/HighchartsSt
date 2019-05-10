@@ -19,6 +19,48 @@ HighstockPlotOptionsMacdPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsMacdPointEventsTest >> testDrag [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacdPointEvents new.
+	component drag: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drag' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdPointEventsTest >> testDragStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacdPointEvents new.
+	component dragStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdPointEventsTest >> testDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacdPointEvents new.
+	component drop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsMacdPointEventsTest >> testMouseOut [
 
 	| component javascript expectedConfiguration |

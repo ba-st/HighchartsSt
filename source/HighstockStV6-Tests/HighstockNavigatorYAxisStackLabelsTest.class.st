@@ -89,6 +89,20 @@ HighstockNavigatorYAxisStackLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorYAxisStackLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorYAxisStackLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorYAxisStackLabelsTest >> testTextAlign [
 
 	| component javascript expectedConfiguration |

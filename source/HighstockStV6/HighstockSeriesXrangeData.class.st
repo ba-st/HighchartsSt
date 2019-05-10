@@ -25,25 +25,31 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesXrangeData >> color: aColor [
+HighstockSeriesXrangeData >> accessibility [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use 
-colorIndex.
-Defaults to undefined."
-
-	configurationOptions at: 'color' put: aColor
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesXrangeDataAccessibility new]
 ]
 
 { #category : #accessing }
-HighstockSeriesXrangeData >> dataLabels: anObject [
+HighstockSeriesXrangeData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+	"Individual color for the point. By default the color is pulled from
+the global colors array.
+In styled mode, the color option doesn´t take effect. Instead, use
+colorIndex.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighstockSeriesXrangeData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+
+	"Individual data label for each point. The options are the same as
+the ones for plotOptions.series.dataLabels.
+"
+
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -51,9 +57,19 @@ HighstockSeriesXrangeData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
+]
+
+{ #category : #accessing }
+HighstockSeriesXrangeData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesXrangeDataDragDrop new]
 ]
 
 { #category : #accessing }
@@ -78,7 +94,7 @@ HighstockSeriesXrangeData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -103,11 +119,21 @@ HighstockSeriesXrangeData >> marker [
 { #category : #accessing }
 HighstockSeriesXrangeData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabel
+	"The name of the point as shown in the legend, tooltip, dataLabels
 etc.
 "
 
 	configurationOptions at: 'name' put: aString
+]
+
+{ #category : #accessing }
+HighstockSeriesXrangeData >> partialFill [
+
+	"A partial fill for each point, typically used to visualize how much of
+a task is performed. The partial fill object can be set either on series
+or point level.
+"
+	^configurationOptions at: 'partialFill' ifAbsentPut: [HighstockSeriesXrangeDataPartialFill new]
 ]
 
 { #category : #accessing }
@@ -120,10 +146,18 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighstockSeriesXrangeData >> x2: aNumber [
+
+	"The ending X value of the range point.
+"
+
+	configurationOptions at: 'x2' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockSeriesXrangeData >> x: aNumber [
 
-	"The x value of the point. For datetime axes, the X value is the timestamp
-in milliseconds since 1970.
+	"The starting X value of the range point.
 "
 
 	configurationOptions at: 'x' put: aNumber
@@ -132,8 +166,8 @@ in milliseconds since 1970.
 { #category : #accessing }
 HighstockSeriesXrangeData >> y: aNumber [
 
-	"The y value of the point.
-Defaults to null."
+	"The Y value of the range point.
+"
 
 	configurationOptions at: 'y' put: aNumber
 ]

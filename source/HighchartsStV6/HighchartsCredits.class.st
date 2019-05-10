@@ -21,7 +21,7 @@ Defaults to true."
 HighchartsCredits >> href: aString [
 
 	"The URL for the credits label.
-Defaults to http://www.highcharts.com."
+Defaults to https://www.highcharts.com?credits."
 
 	configurationOptions at: 'href' put: aString
 ]
@@ -35,11 +35,12 @@ HighchartsCredits >> position [
 ]
 
 { #category : #accessing }
-HighchartsCredits >> style [
+HighchartsCredits >> style: aHighchartsCSSObject [
 
 	"CSS styles for the credits label.
-Defaults to { 'cursor': 'pointer', 'color': '#999999', 'fontSize': '10px' }."
-	^configurationOptions at: 'style' ifAbsentPut: [HighchartsCreditsStyle new]
+Defaults to {'cursor': 'pointer', 'color': '#999999', 'fontSize': '10px'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }

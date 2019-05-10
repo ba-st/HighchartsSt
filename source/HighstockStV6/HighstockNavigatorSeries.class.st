@@ -31,6 +31,25 @@ HighstockNavigatorSeries >> className: aString [
 ]
 
 { #category : #accessing }
+HighstockNavigatorSeries >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+
+	"Sets the fill color of the navigator series.
+"
+
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighstockNavigatorSeries >> data: anArrayOfnumberOrArrayOfnumberOrstringOrNilOrobjectOrNil [
+
+	"Unless data is explicitly defined, the data is borrowed from the
+first series in the chart.
+"
+
+	configurationOptions at: 'data' put: anArrayOfnumberOrArrayOfnumberOrstringOrNilOrobjectOrNil
+]
+
+{ #category : #accessing }
 HighstockNavigatorSeries >> dataGrouping [
 
 	"Data grouping options for the navigator series.
@@ -39,12 +58,13 @@ HighstockNavigatorSeries >> dataGrouping [
 ]
 
 { #category : #accessing }
-HighstockNavigatorSeries >> dataLabels [
+HighstockNavigatorSeries >> dataLabels: anObject [
 
 	"Data label options for the navigator series. Data labels are
 disabled by default on the navigator series.
 "
-	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockNavigatorSeriesDataLabels new]
+
+	configurationOptions at: 'dataLabels' put: anObject
 ]
 
 { #category : #accessing }
@@ -64,13 +84,13 @@ HighstockNavigatorSeries >> id: aString [
 ]
 
 { #category : #accessing }
-HighstockNavigatorSeries >> lineColor: aColor [
+HighstockNavigatorSeries >> lineColor: aHighchartsColorStringOrNil [
 
 	"Line color for the navigator series. Allows setting the color
 while disallowing the default candlestick setting.
 Defaults to nil."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrNil
 ]
 
 { #category : #accessing }
@@ -96,13 +116,13 @@ HighstockNavigatorSeries >> pointRange: aNumber [
 ]
 
 { #category : #accessing }
-HighstockNavigatorSeries >> threshold: aNumber [
+HighstockNavigatorSeries >> threshold: aNumberOrNil [
 
 	"The threshold option. Setting it to 0 will make the default
 navigator area series draw its area from the 0 value and up.
 Defaults to nil."
 
-	configurationOptions at: 'threshold' put: aNumber
+	configurationOptions at: 'threshold' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -110,7 +130,7 @@ HighstockNavigatorSeries >> type: aString [
 
 	"The type of the navigator series. Defaults to areaspline if
 defined, otherwise line.
-"
+Defaults to areaspline."
 
 	configurationOptions at: 'type' put: aString
 ]

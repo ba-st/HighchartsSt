@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsYAxisTest >> testAlignTicks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component alignTicks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignTicks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsYAxisTest >> testAllowDecimals [
 
 	| component javascript expectedConfiguration |
@@ -266,6 +280,20 @@ HighchartsYAxisTest >> testLinkedTo [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'linkedTo' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testMargin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component margin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'margin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -551,6 +579,20 @@ HighchartsYAxisTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsYAxisTest >> testPane [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component pane: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pane' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsYAxisTest >> testReversed [
 
 	| component javascript expectedConfiguration |
@@ -616,6 +658,34 @@ HighchartsYAxisTest >> testShowLastLabel [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'showLastLabel' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testSoftMax [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component softMax: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'softMax' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testSoftMin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component softMin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'softMin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

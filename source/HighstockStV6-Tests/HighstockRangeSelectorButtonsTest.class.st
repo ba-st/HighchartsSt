@@ -75,6 +75,20 @@ HighstockRangeSelectorButtonsTest >> testOffsetMin [
 ]
 
 { #category : #'tests-accessing' }
+HighstockRangeSelectorButtonsTest >> testPreserveDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockRangeSelectorButtons new.
+	component preserveDataGrouping: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'preserveDataGrouping' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockRangeSelectorButtonsTest >> testText [
 
 	| component javascript expectedConfiguration |

@@ -101,3 +101,17 @@ HighstockPlotOptionsAdLabelTest >> testOnArea [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAdLabelTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAdLabel new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

@@ -5,12 +5,12 @@ Class {
 }
 
 { #category : #accessing }
-HighstockPlotOptionsMacdMacdLineStyles >> lineColor: aNumber [
+HighstockPlotOptionsMacdMacdLineStyles >> lineColor: aHighchartsColorString [
 
 	"Color of the line.
 "
 
-	configurationOptions at: 'lineColor' put: aNumber
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

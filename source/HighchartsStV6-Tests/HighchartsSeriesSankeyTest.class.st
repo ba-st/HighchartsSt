@@ -110,6 +110,21 @@ HighchartsSeriesSankeyTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'clip' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSankeyTest >> testColor [
 
 	| component javascript expectedConfiguration |
@@ -335,6 +350,21 @@ HighchartsSeriesSankeyTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'dataLabels' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSankeyTest >> testDescription [
 
 	| component javascript expectedConfiguration |
@@ -465,6 +495,21 @@ HighchartsSeriesSankeyTest >> testId [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'sankey';
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -690,6 +735,21 @@ HighchartsSeriesSankeyTest >> testNodeWidth [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'sankey';
 		at: 'nodeWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testOpacity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component opacity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

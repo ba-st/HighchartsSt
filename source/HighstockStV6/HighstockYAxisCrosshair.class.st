@@ -21,32 +21,33 @@ HighstockYAxisCrosshair >> className: aString [
 ]
 
 { #category : #accessing }
-HighstockYAxisCrosshair >> color: aColor [
+HighstockYAxisCrosshair >> color: aHighchartsColorString [
 
 	"The color of the crosshair. Defaults to #cccccc for numeric and
 datetime axes, and rgba(204,214,235,0.25) for category axes, where
 the crosshair by default highlights the whole category.
 Defaults to #cccccc."
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighstockYAxisCrosshair >> dashStyle: aString [
+HighstockYAxisCrosshair >> dashStyle: aHighchartsDashStyleValue [
 
 	"The dash style for the crosshair. See
 series.dashStyle
 for possible values.
 Defaults to Solid."
 
-	configurationOptions at: 'dashStyle' put: aString
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
 HighstockYAxisCrosshair >> label [
 
 	"A label on the axis next to the crosshair.
-In styled mode, the label is styled with the .highcharts-crosshair-label class.
+In styled mode, the label is styled with the
+.highcharts-crosshair-label class.
 "
 	^configurationOptions at: 'label' ifAbsentPut: [HighstockYAxisCrosshairLabel new]
 ]

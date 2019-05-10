@@ -103,6 +103,20 @@ HighchartsZAxisLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsZAxisLabelsTest >> testIndentation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisLabels new.
+	component indentation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'indentation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsZAxisLabelsTest >> testMaxStaggerLines [
 
 	| component javascript expectedConfiguration |
@@ -224,6 +238,20 @@ HighchartsZAxisLabelsTest >> testStep [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'step' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

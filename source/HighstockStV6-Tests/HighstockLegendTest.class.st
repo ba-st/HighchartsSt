@@ -19,6 +19,20 @@ HighstockLegendTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLegendTest >> testAlignColumns [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component alignColumns: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignColumns' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLegendTest >> testBackgroundColor [
 
 	| component javascript expectedConfiguration |
@@ -117,6 +131,34 @@ HighstockLegendTest >> testItemDistance [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLegendTest >> testItemHiddenStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component itemHiddenStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'itemHiddenStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendTest >> testItemHoverStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component itemHoverStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'itemHoverStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLegendTest >> testItemMarginBottom [
 
 	| component javascript expectedConfiguration |
@@ -140,6 +182,20 @@ HighstockLegendTest >> testItemMarginTop [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'itemMarginTop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendTest >> testItemStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component itemStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'itemStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

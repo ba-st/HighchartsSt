@@ -89,6 +89,20 @@ HighstockAnnotationsLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsLabelsTest >> testClassName [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsLabels new.
+	component className: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsLabelsTest >> testCrop [
 
 	| component javascript expectedConfiguration |
@@ -196,6 +210,20 @@ HighstockAnnotationsLabelsTest >> testShape [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'shape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

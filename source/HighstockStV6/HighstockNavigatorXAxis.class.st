@@ -23,6 +23,31 @@ Class {
 }
 
 { #category : #accessing }
+HighstockNavigatorXAxis >> accessibility [
+
+	"Accessibility options for an axis. Requires the accessibility module.
+"
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockNavigatorXAxisAccessibility new]
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxis >> alignTicks: aBoolean [
+
+	"When using multiple axis, the ticks of two or more opposite axes
+will automatically be aligned by adding ticks to the axis or axes
+with the least ticks, as if tickAmount were specified.
+This can be prevented by setting alignTicks to false. If the grid
+lines look messy, it´s a good idea to hide them for the secondary
+axis by setting gridLineWidth to 0.
+If startOnTick or endOnTick in an Axis options are set to false,
+then the alignTicks will be disabled for the Axis.
+Disabled for logarithmic axes.
+Defaults to true."
+
+	configurationOptions at: 'alignTicks' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockNavigatorXAxis >> allowDecimals: aBoolean [
 
 	"Whether to allow decimals in this axis´ ticks. When counting
@@ -34,13 +59,13 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> alternateGridColor: aColor [
+HighstockNavigatorXAxis >> alternateGridColor: aHighchartsColorString [
 
 	"When using an alternate grid color, a band is painted across the
 plot area between every other grid line.
-Defaults to null."
+"
 
-	configurationOptions at: 'alternateGridColor' put: aColor
+	configurationOptions at: 'alternateGridColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -50,21 +75,6 @@ HighstockNavigatorXAxis >> breaks [
 left out and all the points shifted closer to each other.
 "
 	^configurationOptions at: 'breaks' ifAbsentPut: [HighstockNavigatorXAxisBreaks new]
-]
-
-{ #category : #accessing }
-HighstockNavigatorXAxis >> categories: anArrayOfString [
-
-	"If categories are present for the xAxis, names are used instead of
-numbers for that axis. Since Highcharts 3.0, categories can also
-be extracted by giving each point a name and setting
-axis type to category. However, if you have multiple
-series, best practice remains defining the categories array.
-Example:
-categories: ['Apples', 'Bananas', 'Oranges']
-Defaults to null."
-
-	configurationOptions at: 'categories' put: anArrayOfString
 ]
 
 { #category : #accessing }
@@ -124,16 +134,6 @@ dateFormat. Defaults to:
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> description: aString [
-
-	"Requires Accessibility module
-Description of the axis to screen reader users.
-Defaults to undefined."
-
-	configurationOptions at: 'description' put: aString
-]
-
-{ #category : #accessing }
 HighstockNavigatorXAxis >> endOnTick: aBoolean [
 
 	"Whether to force the axis to end on a tick. Use this option with
@@ -164,30 +164,30 @@ HighstockNavigatorXAxis >> events: anObject [
 HighstockNavigatorXAxis >> floor: aNumber [
 
 	"The lowest allowed value for automatically computed axis extremes.
-Defaults to null."
+"
 
 	configurationOptions at: 'floor' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> gridLineColor: aColor [
+HighstockNavigatorXAxis >> gridLineColor: aString [
 
 	"Color of the grid lines extending the ticks across the plot area.
 In styled mode, the stroke is given in the .highcharts-grid-line
 class.
 Defaults to #e6e6e6."
 
-	configurationOptions at: 'gridLineColor' put: aColor
+	configurationOptions at: 'gridLineColor' put: aString
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> gridLineDashStyle: aString [
+HighstockNavigatorXAxis >> gridLineDashStyle: aHighchartsDashStyleValue [
 
 	"The dash or dot style of the grid lines. For possible values, see
 this demonstration.
 Defaults to Solid."
 
-	configurationOptions at: 'gridLineDashStyle' put: aString
+	configurationOptions at: 'gridLineDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -215,7 +215,7 @@ HighstockNavigatorXAxis >> id: aString [
 
 	"An id for the axis. This can be used after render time to get
 a pointer to the axis object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -229,14 +229,14 @@ HighstockNavigatorXAxis >> labels [
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> lineColor: aColor [
+HighstockNavigatorXAxis >> lineColor: aHighchartsColorString [
 
 	"The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
 .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -251,19 +251,30 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> max: aNumber [
+HighstockNavigatorXAxis >> margin: anObject [
+
+	"If there are multiple axes on the same side of the chart, the pixel
+margin between the axes. Defaults to 0 on vertical axes, 15 on
+horizontal axes.
+"
+
+	configurationOptions at: 'margin' put: anObject
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxis >> max: aNumberOrNil [
 
 	"The maximum value of the axis. If null, the max value is
 automatically calculated.
-If the endOnTick option is true, the max value might
-be rounded up.
+If the endOnTick option is true, the max value
+might be rounded up.
 If a tickAmount is set, the axis may be extended
 beyond the set max in order to reach the given number of ticks. The
 same may happen in a chart with multiple axes, determined by chart.
 alignTicks, where a tickAmount is applied internally.
 "
 
-	configurationOptions at: 'max' put: aNumber
+	configurationOptions at: 'max' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -280,12 +291,12 @@ Defaults to 0.01."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> min: aNumber [
+HighstockNavigatorXAxis >> min: aNumberOrNil [
 
-	"The minimum value of the axis. If null the min value is 
+	"The minimum value of the axis. If null the min value is
 automatically calculated.
-If the startOnTick option is true (default), the min value might
-be rounded down.
+If the startOnTick option is true (default),
+the min value might be rounded down.
 The automatically calculated minimum value is also affected by
 floor, softMin,
 minPadding, minRange
@@ -293,7 +304,7 @@ as well as series.threshold
 and series.softThreshold.
 "
 
-	configurationOptions at: 'min' put: aNumber
+	configurationOptions at: 'min' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -322,24 +333,24 @@ two points on the axis.
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorGridLineColor: aColor [
+HighstockNavigatorXAxis >> minorGridLineColor: aHighchartsColorString [
 
 	"Color of the minor, secondary grid lines.
 In styled mode, the stroke width is given in the
 .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aColor
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorGridLineDashStyle: aString [
+HighstockNavigatorXAxis >> minorGridLineDashStyle: aHighchartsDashStyleValue [
 
 	"The dash or dot style of the minor grid lines. For possible values,
 see this demonstration.
 Defaults to Solid."
 
-	configurationOptions at: 'minorGridLineDashStyle' put: aString
+	configurationOptions at: 'minorGridLineDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -354,30 +365,30 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorTickColor: aColor [
+HighstockNavigatorXAxis >> minorTickColor: aHighchartsColorString [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aColor
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorTickInterval: aNumberOrString [
+HighstockNavigatorXAxis >> minorTickInterval: aNumberOrstringOrNil [
 
-	"Specific tick interval in axis units for the minor ticks.
-On a linear axis, if &quot;auto&quot;, the minor tick interval is
-calculated as a fifth of the tickInterval. If null, minor
-ticks are not shown.
+	"Specific tick interval in axis units for the minor ticks. On a linear
+axis, if &quot;auto&quot;, the minor tick interval is calculated as a fifth
+of the tickInterval. If null or undefined, minor ticks are not
+shown.
 On logarithmic axes, the unit is the power of the value. For example,
-setting the minorTickInterval to 1 puts one tick on each of 0.1,
-1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
-ticks between 1 and 10, 10 and 100 etc.
+setting the minorTickInterval to 1 puts one tick on each of 0.1, 1,
+10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks
+between 1 and 10, 10 and 100 etc.
 If user settings dictate minor ticks to become too dense, they don´t
 make sense, and will be ignored to prevent performance problems.
 "
 
-	configurationOptions at: 'minorTickInterval' put: aNumberOrString
+	configurationOptions at: 'minorTickInterval' put: aNumberOrstringOrNil
 ]
 
 { #category : #accessing }
@@ -441,9 +452,15 @@ Defaults to 0."
 { #category : #accessing }
 HighstockNavigatorXAxis >> ordinal: aBoolean [
 
-	"In an ordinal axis, the points are equally spaced in the chart regardless
-of the actual time or x distance between them. This means that missing
-data for nights or weekends will not take up space in the chart.
+	"In an ordinal axis, the points are equally spaced in the chart
+regardless of the actual time or x distance between them. This means
+that missing data periods (e.g. nights or weekends for a stock chart)
+will not take up space in the chart.
+Having ordinal: false will show any gaps created by the gapSize
+setting proportionate to their duration.
+In stock charts the X axis is ordinal by default, unless
+the boost module is used and at least one of the series´ data length
+exceeds the boostThreshold.
 Defaults to true."
 
 	configurationOptions at: 'ordinal' put: aBoolean
@@ -461,11 +478,23 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
+HighstockNavigatorXAxis >> pane: aNumber [
+
+	"Refers to the index in the panes array. Used for circular
+gauges and polar charts. When the option is not set then first pane
+will be used.
+"
+
+	configurationOptions at: 'pane' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockNavigatorXAxis >> plotBands [
 
-	"An array of colored bands stretching across the plot area marking
-an interval on the axis.
-In styled mode, the plot bands are styled by the .highcharts-plot-band class in addition to the className option.
+	"An array of colored bands stretching across the plot area marking an
+interval on the axis.
+In styled mode, the plot bands are styled by the .highcharts-plot-band
+class in addition to the className option.
 "
 	^configurationOptions at: 'plotBands' ifAbsentPut: [HighstockNavigatorXAxisPlotBands new]
 ]
@@ -475,7 +504,8 @@ HighstockNavigatorXAxis >> plotLines [
 
 	"An array of lines stretching across the plot area, marking a specific
 value on one of the axes.
-In styled mode, the plot lines are styled by the .highcharts-plot-line class in addition to the className option.
+In styled mode, the plot lines are styled by the
+.highcharts-plot-line class in addition to the className option.
 "
 	^configurationOptions at: 'plotLines' ifAbsentPut: [HighstockNavigatorXAxisPlotLines new]
 ]
@@ -489,6 +519,18 @@ default.
 Defaults to false."
 
 	configurationOptions at: 'reversed' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxis >> reversedStacks: aBoolean [
+
+	"This option determines how stacks should be ordered within a group.
+For example reversed xAxis also reverses stacks, so first series
+comes last in a group. To keep order like for non-reversed xAxis
+enable this option.
+Defaults to false."
+
+	configurationOptions at: 'reversedStacks' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -566,33 +608,36 @@ or category axes are not affected.
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> tickColor: aColor [
+HighstockNavigatorXAxis >> tickColor: aHighchartsColorString [
 
 	"Color for the main tick marks.
 In styled mode, the stroke is given in the .highcharts-tick
 class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aColor
+	configurationOptions at: 'tickColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighstockNavigatorXAxis >> tickInterval: aNumber [
 
-	"The interval of the tick marks in axis units. When null, the tick
-interval is computed to approximately follow the tickPixelInterval on linear and datetime axes. On categorized axes,
-a null tickInterval will default to 1, one category. Note that
-datetime axes are based on milliseconds, so for example an interval
-of one day is expressed as 24 * 3600 * 1000.
-On logarithmic axes, the tickInterval is based on powers, so a tickInterval
-of 1 means one tick on each of 0.1, 1, 10, 100 etc. A tickInterval
-of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval of 0.2 puts
-a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20, 40 etc.
+	"The interval of the tick marks in axis units. When undefined, the
+tick interval is computed to approximately follow the
+tickPixelInterval on linear and datetime
+axes. On categorized axes, a undefined tickInterval will default to
+1, one category. Note that datetime axes are based on milliseconds,
+so for example an interval of one day is expressed as
+24 * 3600 * 1000.
+On logarithmic axes, the tickInterval is based on powers, so a
+tickInterval of 1 means one tick on each of 0.1, 1, 10, 100 etc. A
+tickInterval of 2 means a tick of 0.1, 10, 1000 etc. A tickInterval
+of 0.2 puts a tick on 0.1, 0.2, 0.4, 0.6, 0.8, 1, 2, 4, 6, 8, 10, 20,
+40 etc.
 If the tickInterval is too dense for labels to be drawn, Highcharts
 may remove ticks.
 If the chart has multiple axes, the alignTicks
 option may interfere with the tickInterval setting.
-Defaults to null."
+"
 
 	configurationOptions at: 'tickInterval' put: aNumber
 ]
@@ -611,8 +656,8 @@ HighstockNavigatorXAxis >> tickPixelInterval: aNumber [
 
 	"If tickInterval is null this option sets the approximate pixel
 interval of the tick marks. Not applicable to categorized axis.
-The tick interval is also influenced by the minTickInterval option, that, by default prevents ticks from being
-denser than the data points.
+The tick interval is also influenced by the minTickInterval option, that, by default prevents ticks from
+being denser than the data points.
 Defaults to 200."
 
 	configurationOptions at: 'tickPixelInterval' put: aNumber
@@ -629,48 +674,37 @@ Defaults to outside."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> tickPositioner: aFunction [
+HighstockNavigatorXAxis >> tickPositioner: aHighchartsAxisTickPositionerCallbackFunction [
 
 	"A callback function returning array defining where the ticks are
-laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
-tick positions are accessible through this.tickPositions and can
-be modified by the callback.
+laid out on the axis. This overrides the default behaviour of
+tickPixelInterval and tickInterval. The automatic tick positions are accessible
+through this.tickPositions and can be modified by the callback.
 "
 
-	configurationOptions at: 'tickPositioner' put: aFunction
+	configurationOptions at: 'tickPositioner' put: aHighchartsAxisTickPositionerCallbackFunction
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> tickPositions: anArrayOfNumber [
+HighstockNavigatorXAxis >> tickPositions: anArrayOfnumber [
 
 	"An array defining where the ticks are laid out on the axis. This
-overrides the default behaviour of tickPixelInterval
-and tickInterval.
+overrides the default behaviour of tickPixelInterval and tickInterval.
 "
 
-	configurationOptions at: 'tickPositions' put: anArrayOfNumber
+	configurationOptions at: 'tickPositions' put: anArrayOfnumber
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> tickWidth: aNumber [
+HighstockNavigatorXAxis >> tickWidth: anUndefinedOrnumber [
 
-	"The pixel width of the major tick marks.
-In styled mode, the stroke width is given in the .highcharts-tick class.
+	"The pixel width of the major tick marks. Defaults to 0 on category
+axes, otherwise 1.
+In styled mode, the stroke width is given in the .highcharts-tick
+class.
 "
 
-	configurationOptions at: 'tickWidth' put: aNumber
-]
-
-{ #category : #accessing }
-HighstockNavigatorXAxis >> tickmarkPlacement: aString [
-
-	"For categorized axes only. If on the tick mark is placed in the
-center of the category, if between the tick mark is placed between
-categories. The default is between if the tickInterval is 1,
- else on.
-Defaults to between."
-
-	configurationOptions at: 'tickmarkPlacement' put: aString
+	configurationOptions at: 'tickWidth' put: anUndefinedOrnumber
 ]
 
 { #category : #accessing }
@@ -682,37 +716,7 @@ HighstockNavigatorXAxis >> title [
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> type: aString [
-
-	"The type of axis. Can be one of linear, logarithmic, datetime
-or category. In a datetime axis, the numbers are given in
-milliseconds, and tick marks are placed on appropriate values like
-full hours or days. In a category axis, the 
-point names of the chart´s series are used
-for categories, if not a categories array is
-defined.
-Defaults to linear."
-
-	configurationOptions at: 'type' put: aString
-]
-
-{ #category : #accessing }
-HighstockNavigatorXAxis >> uniqueNames: aBoolean [
-
-	"Applies only when the axis type is category. When uniqueNames
-is true, points are placed on the X axis according to their names.
-If the same point name is repeated in the same or another series,
-the point is placed on the same X position as other points of the
-same name. When uniqueNames is false, the points are laid out in
-increasing X positions regardless of their names, and the X axis
-category will take the name of the last point in each position.
-Defaults to true."
-
-	configurationOptions at: 'uniqueNames' put: aBoolean
-]
-
-{ #category : #accessing }
-HighstockNavigatorXAxis >> units: anArray [
+HighstockNavigatorXAxis >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 
 	"Datetime axis only. An array determining what time intervals the
 ticks are allowed to fall on. Each array item is an array where the
@@ -745,7 +749,7 @@ units: [[
 ]]
 "
 
-	configurationOptions at: 'units' put: anArray
+	configurationOptions at: 'units' put: anArrayOfArrayOfstringArrayOfnumberOrNil
 ]
 
 { #category : #accessing }

@@ -23,6 +23,23 @@ Class {
 }
 
 { #category : #accessing }
+HighstockLang >> accessibility [
+
+	"Configure the accessibility strings in the chart. Requires the
+accessibility module
+to be loaded. For a description of the module and information on its
+features, see
+Highcharts Accessibility.
+For more dynamic control over the accessibility functionality, see
+accessibility.pointDescriptionFormatter,
+accessibility.seriesDescriptionFormatter,
+and
+accessibility.screenReaderSectionFormatter.
+"
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockLangAccessibility new]
+]
+
+{ #category : #accessing }
 HighstockLang >> contextButtonTitle: aString [
 
 	"Exporting module menu. The tooltip title for the context menu holding
@@ -117,15 +134,35 @@ Defaults to Loading...."
 ]
 
 { #category : #accessing }
-HighstockLang >> months: anArrayOfString [
+HighstockLang >> months: anArrayOfstring [
 
 	"An array containing the months names. Corresponds to the B format
 in Highcharts.dateFormat().
-Defaults to [ 'January' , 'February' , 'March' , 'April' , 'May' ,
-         'June' , 'July' , 'August' , 'September' , 'October' ,
-         'November' , 'December']."
+Defaults to ['January', 'February', 'March', 'April', 'May', 'June',
+         'July', 'August', 'September', 'October', 'November',
+         'December']."
 
-	configurationOptions at: 'months' put: anArrayOfString
+	configurationOptions at: 'months' put: anArrayOfstring
+]
+
+{ #category : #accessing }
+HighstockLang >> navigation [
+
+	"Configure the Popup strings in the chart. Requires the
+annotations.js or annotations-advanced.src.js module to be
+loaded.
+"
+	^configurationOptions at: 'navigation' ifAbsentPut: [HighstockLangNavigation new]
+]
+
+{ #category : #accessing }
+HighstockLang >> noData: aString [
+
+	"The text to display when the chart contains no data. Requires the
+no-data module, see noData.
+Defaults to No data to display."
+
+	configurationOptions at: 'noData' put: aString
 ]
 
 { #category : #accessing }
@@ -140,15 +177,24 @@ Defaults to 1000."
 ]
 
 { #category : #accessing }
-HighstockLang >> numericSymbols: anArrayOfString [
+HighstockLang >> numericSymbols: anArrayOfstring [
 
 	"Metric prefixes used
-to shorten high numbers in axis labels. Replacing any of the positions
-with null causes the full number to be written. Setting numericSymbols
-to null disables shortening altogether.
-Defaults to [ 'k' , 'M' , 'G' , 'T' , 'P' , 'E']."
+to shorten high numbers in axis labels. Replacing any of the
+positions with null causes the full number to be written. Setting
+numericSymbols to null disables shortening altogether.
+Defaults to ['k', 'M', 'G', 'T', 'P', 'E']."
 
-	configurationOptions at: 'numericSymbols' put: anArrayOfString
+	configurationOptions at: 'numericSymbols' put: anArrayOfstring
+]
+
+{ #category : #accessing }
+HighstockLang >> openInCloud: aString [
+
+	"Export-data module only. The text for the menu item.
+Defaults to Open in Highcharts Cloud."
+
+	configurationOptions at: 'openInCloud' put: aString
 ]
 
 { #category : #accessing }
@@ -207,36 +253,44 @@ Defaults to Reset zoom level 1:1."
 ]
 
 { #category : #accessing }
-HighstockLang >> shortMonths: anArrayOfString [
+HighstockLang >> shortMonths: anArrayOfstring [
 
 	"An array containing the months names in abbreviated form. Corresponds
 to the b format in Highcharts.dateFormat().
-Defaults to [ 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' ,
-         'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec']."
+Defaults to ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']."
 
-	configurationOptions at: 'shortMonths' put: anArrayOfString
+	configurationOptions at: 'shortMonths' put: anArrayOfstring
 ]
 
 { #category : #accessing }
-HighstockLang >> shortWeekdays: anArrayOfString [
+HighstockLang >> shortWeekdays: anArrayOfstring [
 
 	"Short week days, starting Sunday. If not specified, Highcharts uses
 the first three letters of the lang.weekdays option.
 "
 
-	configurationOptions at: 'shortWeekdays' put: anArrayOfString
+	configurationOptions at: 'shortWeekdays' put: anArrayOfstring
+]
+
+{ #category : #accessing }
+HighstockLang >> stockTools [
+
+	"Configure the stockTools GUI titles(hints) in the chart. Requires
+the stock-tools.js module to be loaded.
+"
+	^configurationOptions at: 'stockTools' ifAbsentPut: [HighstockLangStockTools new]
 ]
 
 { #category : #accessing }
 HighstockLang >> thousandsSep: aString [
 
 	"The default thousands separator used in the Highcharts.numberFormat
-method unless otherwise specified in the function arguments. Since
-Highcharts 4.1 it defaults to a single space character, which is
-compatible with ISO and works across Anglo-American and continental
-European languages.
-The default is a single space.
-Defaults to  ."
+method unless otherwise specified in the function arguments. Defaults
+to a single space character, which is recommended in
+ISO 31-0 and works
+across Anglo-American and continental European languages.
+Defaults to \u0020."
 
 	configurationOptions at: 'thousandsSep' put: aString
 ]
@@ -251,11 +305,20 @@ Defaults to View data table."
 ]
 
 { #category : #accessing }
-HighstockLang >> weekdays: anArrayOfString [
+HighstockLang >> viewFullscreen: aString [
+
+	"Exporting module only. View the chart in full screen.
+Defaults to View in full screen."
+
+	configurationOptions at: 'viewFullscreen' put: aString
+]
+
+{ #category : #accessing }
+HighstockLang >> weekdays: anArrayOfstring [
 
 	"An array containing the weekday names.
 Defaults to ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
          'Friday', 'Saturday']."
 
-	configurationOptions at: 'weekdays' put: anArrayOfString
+	configurationOptions at: 'weekdays' put: anArrayOfstring
 ]

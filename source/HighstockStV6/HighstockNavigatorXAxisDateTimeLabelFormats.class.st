@@ -24,57 +24,49 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> day: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> day [
 
-
-	configurationOptions at: 'day' put: aString
+	^configurationOptions at: 'day' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsDay new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> hour: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> hour [
 
-
-	configurationOptions at: 'hour' put: aString
+	^configurationOptions at: 'hour' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsHour new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> millisecond: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> millisecond [
 
-
-	configurationOptions at: 'millisecond' put: aString
+	^configurationOptions at: 'millisecond' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsMillisecond new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> minute: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> minute [
 
-
-	configurationOptions at: 'minute' put: aString
+	^configurationOptions at: 'minute' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsMinute new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> month: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> month [
 
-
-	configurationOptions at: 'month' put: aString
+	^configurationOptions at: 'month' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsMonth new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> second: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> second [
 
-
-	configurationOptions at: 'second' put: aString
+	^configurationOptions at: 'second' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsSecond new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> week: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> week [
 
-
-	configurationOptions at: 'week' put: aString
+	^configurationOptions at: 'week' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsWeek new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisDateTimeLabelFormats >> year: aString [
+HighstockNavigatorXAxisDateTimeLabelFormats >> year [
 
-
-	configurationOptions at: 'year' put: aString
+	^configurationOptions at: 'year' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormatsYear new]
 ]

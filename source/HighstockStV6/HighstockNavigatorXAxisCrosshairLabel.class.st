@@ -9,33 +9,33 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigatorXAxisCrosshairLabel >> align: aString [
+HighstockNavigatorXAxisCrosshairLabel >> align: aHighchartsAlignValue [
 
-	"Alignment of the label compared to the axis. Defaults to left for
-right-side axes, right for left-side axes and center for horizontal
-axes.
+	"Alignment of the label compared to the axis. Defaults to &quot;left&quot; for
+right-side axes, &quot;right&quot; for left-side axes and &quot;center&quot; for
+horizontal axes.
 "
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisCrosshairLabel >> backgroundColor: aColor [
+HighstockNavigatorXAxisCrosshairLabel >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color for the label. Defaults to the related series
 color, or #666666 if that is not available.
 "
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisCrosshairLabel >> borderColor: aColor [
+HighstockNavigatorXAxisCrosshairLabel >> borderColor: aHighchartsColorString [
 
 	"The border color for the crosshair label
 "
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -67,12 +67,12 @@ numeric axes and {value:b d, Y} for datetime axes.
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisCrosshairLabel >> formatter: aFunction [
+HighstockNavigatorXAxisCrosshairLabel >> formatter: aHighchartsXAxisCrosshairLabelFormatterCallbackFunction [
 
 	"Formatter function for the label text.
 "
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsXAxisCrosshairLabelFormatterCallbackFunction
 ]
 
 { #category : #accessing }
@@ -94,10 +94,10 @@ Defaults to callout."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisCrosshairLabel >> style: aCSSObject [
+HighstockNavigatorXAxisCrosshairLabel >> style: aHighchartsCSSObject [
 
 	"Text styles for the crosshair label.
-Defaults to { 'color': 'white', 'fontWeight': 'normal', 'fontSize': '11px', 'textAlign': 'center' }."
+Defaults to {'color': 'white', 'fontWeight': 'normal', 'fontSize': '11px', 'textAlign': 'center'}."
 
-	configurationOptions at: 'style' put: aCSSObject
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]

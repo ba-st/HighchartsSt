@@ -24,6 +24,12 @@ Class {
 }
 
 { #category : #accessing }
+HighstockSeriesFlagsData >> accessibility [
+
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesFlagsDataAccessibility new]
+]
+
+{ #category : #accessing }
 HighstockSeriesFlagsData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -34,23 +40,25 @@ representation.
 ]
 
 { #category : #accessing }
-HighstockSeriesFlagsData >> color: aColor [
+HighstockSeriesFlagsData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Individual color for the point. By default the color is pulled from
 the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use 
+In styled mode, the color option doesn´t take effect. Instead, use
 colorIndex.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighstockSeriesFlagsData >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name
-highcharts-color-{n}.
+	"A specific color index to use for the point, so its graphic representations
+are given the class name highcharts-color-{n}. In styled mode this will
+change the color of the graphic. In non-styled mode, the color by is set by
+the fill attribute, so the change in class name won´t have a visual effect
+by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -61,16 +69,26 @@ HighstockSeriesFlagsData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
+HighstockSeriesFlagsData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesFlagsDataDragDrop new]
+]
+
+{ #category : #accessing }
 HighstockSeriesFlagsData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series
-array to use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to
+use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -94,13 +112,13 @@ HighstockSeriesFlagsData >> events: anObject [
 ]
 
 { #category : #accessing }
-HighstockSeriesFlagsData >> fillColor: aColor [
+HighstockSeriesFlagsData >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The fill color of an individual flag. By default it inherits from
 the series color.
 "
 
-	configurationOptions at: 'fillColor' put: aColor
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -108,7 +126,7 @@ HighstockSeriesFlagsData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]

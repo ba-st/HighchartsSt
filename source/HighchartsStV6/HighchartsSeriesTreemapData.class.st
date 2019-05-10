@@ -28,6 +28,12 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesTreemapData >> accessibility [
+
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesTreemapDataAccessibility new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesTreemapData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -38,22 +44,24 @@ representation.
 ]
 
 { #category : #accessing }
-HighchartsSeriesTreemapData >> color: aColor [
+HighchartsSeriesTreemapData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the point. In heat maps the point color is rarely set
 explicitly, as we use the color to denote the value. Options for
 this are set in the colorAxis configuration.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsSeriesTreemapData >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name
-highcharts-color-{n}.
+	"A specific color index to use for the point, so its graphic representations
+are given the class name highcharts-color-{n}. In styled mode this will
+change the color of the graphic. In non-styled mode, the color by is set by
+the fill attribute, so the change in class name won´t have a visual effect
+by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -65,19 +73,19 @@ HighchartsSeriesTreemapData >> colorValue: aNumber [
 	"Serves a purpose only if a colorAxis object is defined in the chart
 options. This value will decide which color the point gets from the
 scale of the colorAxis.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'colorValue' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsSeriesTreemapData >> dataLabels: anObject [
+HighchartsSeriesTreemapData >> dataLabels: aHighchartsDataLabelsOptionsObject [
 
 	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+the ones for plotOptions.series.dataLabels.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -85,16 +93,26 @@ HighchartsSeriesTreemapData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
+HighchartsSeriesTreemapData >> dragDrop [
+
+	"Point specific options for the draggable-points module. Overrides options on
+series.dragDrop.
+Requires the draggable-points module.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesTreemapDataDragDrop new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesTreemapData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series
-array to use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to
+use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -122,7 +140,7 @@ HighchartsSeriesTreemapData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -141,7 +159,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabel
+	"The name of the point as shown in the legend, tooltip, dataLabels
 etc.
 "
 
@@ -155,7 +173,7 @@ HighchartsSeriesTreemapData >> parent: aString [
 value should be the id of the point which is the parent. If no points
 has a matching id, or this option is undefined, then the parent will
 be set to the root.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'parent' put: aString
 ]
@@ -179,11 +197,11 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsSeriesTreemapData >> value: aNumber [
+HighchartsSeriesTreemapData >> value: aNumberOrNil [
 
 	"The value of the point, resulting in a relative area of the point
 in the treemap.
 "
 
-	configurationOptions at: 'value' put: aNumber
+	configurationOptions at: 'value' put: aNumberOrNil
 ]

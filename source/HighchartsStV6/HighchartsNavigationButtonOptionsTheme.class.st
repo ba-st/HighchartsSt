@@ -11,24 +11,28 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsNavigationButtonOptionsTheme >> fill: aString [
+HighchartsNavigationButtonOptionsTheme >> fill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The default fill exists only to capture hover events.
 Defaults to #ffffff."
 
-	configurationOptions at: 'fill' put: aString
+	configurationOptions at: 'fill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsNavigationButtonOptionsTheme >> padding: aNumber [
 
+	"Padding for the button.
+Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsNavigationButtonOptionsTheme >> stroke: aString [
+HighchartsNavigationButtonOptionsTheme >> stroke: aHighchartsColorString [
 
+	"Default stroke for the buttons.
+Defaults to none."
 
-	configurationOptions at: 'stroke' put: aString
+	configurationOptions at: 'stroke' put: aHighchartsColorString
 ]

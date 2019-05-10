@@ -33,6 +33,20 @@ HighstockCreditsTest >> testHref [
 ]
 
 { #category : #'tests-accessing' }
+HighstockCreditsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockCredits new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockCreditsTest >> testText [
 
 	| component javascript expectedConfiguration |

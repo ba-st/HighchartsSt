@@ -22,38 +22,38 @@ HighstockPlotOptionsCmfZones >> className: aString [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCmfZones >> color: aColor [
+HighstockPlotOptionsCmfZones >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Defines the color of the series.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCmfZones >> dashStyle: aString [
+HighstockPlotOptionsCmfZones >> dashStyle: aHighchartsDashStyleValue [
 
 	"A name for the dash style to use for the graph.
 "
 
-	configurationOptions at: 'dashStyle' put: aString
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCmfZones >> fillColor: aColor [
+HighstockPlotOptionsCmfZones >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Defines the fill color for the series (in area type series)
 "
 
-	configurationOptions at: 'fillColor' put: aColor
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighstockPlotOptionsCmfZones >> value: aNumber [
 
-	"The value up to where the zone extends, if undefined the zones stretches
-to the last value in the series.
-Defaults to undefined."
+	"The value up to where the zone extends, if undefined the zones
+stretches to the last value in the series.
+"
 
 	configurationOptions at: 'value' put: aNumber
 ]

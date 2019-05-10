@@ -9,21 +9,21 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsDrilldownDrillUpButtonPosition >> align: aString [
+HighchartsDrilldownDrillUpButtonPosition >> align: aHighchartsAlignValue [
 
 	"Horizontal alignment.
 Defaults to right."
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
-HighchartsDrilldownDrillUpButtonPosition >> verticalAlign: aString [
+HighchartsDrilldownDrillUpButtonPosition >> verticalAlign: aHighchartsVerticalAlignValue [
 
 	"Vertical alignment of the button.
 Defaults to top."
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }

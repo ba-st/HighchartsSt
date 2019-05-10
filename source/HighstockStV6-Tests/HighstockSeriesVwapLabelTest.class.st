@@ -101,3 +101,17 @@ HighstockSeriesVwapLabelTest >> testOnArea [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapLabelTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapLabel new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

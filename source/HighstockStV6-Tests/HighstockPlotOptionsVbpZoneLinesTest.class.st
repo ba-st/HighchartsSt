@@ -17,3 +17,17 @@ HighstockPlotOptionsVbpZoneLinesTest >> testEnabled [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsVbpZoneLinesTest >> testStyles [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsVbpZoneLines new.
+	component styles: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'styles' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

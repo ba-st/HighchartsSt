@@ -117,6 +117,20 @@ HighstockNavigatorYAxisTitleTest >> testSkew3d [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorYAxisTitleTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorYAxisTitle new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorYAxisTitleTest >> testText [
 
 	| component javascript expectedConfiguration |
@@ -126,6 +140,20 @@ HighstockNavigatorYAxisTitleTest >> testText [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'text' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorYAxisTitleTest >> testTextAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorYAxisTitle new.
+	component textAlign: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textAlign' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

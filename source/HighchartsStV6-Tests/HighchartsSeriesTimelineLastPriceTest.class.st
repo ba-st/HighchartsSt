@@ -1,0 +1,33 @@
+Class {
+	#name : #HighchartsSeriesTimelineLastPriceTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsStV6-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineLastPriceTest >> testColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineLastPrice new.
+	component color: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineLastPriceTest >> testEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineLastPrice new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

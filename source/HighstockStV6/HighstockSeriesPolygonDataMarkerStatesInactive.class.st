@@ -1,0 +1,14 @@
+Class {
+	#name : #HighstockSeriesPolygonDataMarkerStatesInactive,
+	#superclass : #HighchartsComponent,
+	#category : #HighstockStV6
+}
+
+{ #category : #accessing }
+HighstockSeriesPolygonDataMarkerStatesInactive >> opacity: anObject [
+
+	"Opacity of inactive markers.
+"
+
+	configurationOptions at: 'opacity' put: anObject
+]

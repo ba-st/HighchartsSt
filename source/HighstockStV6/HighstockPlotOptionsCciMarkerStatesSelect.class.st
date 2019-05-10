@@ -19,29 +19,29 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCciMarkerStatesSelect >> fillColor: aColor [
+HighstockPlotOptionsCciMarkerStatesSelect >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The fill color of the point marker.
-Defaults to null."
+Defaults to #cccccc."
 
-	configurationOptions at: 'fillColor' put: aColor
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCciMarkerStatesSelect >> lineColor: aColor [
+HighstockPlotOptionsCciMarkerStatesSelect >> lineColor: aHighchartsColorString [
 
-	"The color of the point marker´s outline. When null, the series´
-or point´s color is used.
+	"The color of the point marker´s outline. When
+undefined, the series´ or point´s color is used.
 Defaults to #000000."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighstockPlotOptionsCciMarkerStatesSelect >> lineWidth: aNumber [
 
 	"The width of the point marker´s outline.
-Defaults to 0."
+Defaults to 2."
 
 	configurationOptions at: 'lineWidth' put: aNumber
 ]
@@ -49,8 +49,8 @@ Defaults to 0."
 { #category : #accessing }
 HighstockPlotOptionsCciMarkerStatesSelect >> radius: aNumber [
 
-	"The radius of the point marker. In hover state, it defaults to the
-normal state´s radius + 2.
+	"The radius of the point marker. In hover state, it
+defaults to the normal state´s radius + 2.
 "
 
 	configurationOptions at: 'radius' put: aNumber

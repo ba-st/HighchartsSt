@@ -17,23 +17,24 @@ HighstockChartResetZoomButton >> position [
 ]
 
 { #category : #accessing }
-HighstockChartResetZoomButton >> relativeTo: aString [
+HighstockChartResetZoomButton >> relativeTo: aHighchartsButtonRelativeToValue [
 
-	"What frame the button should be placed related to. Can be either
-plot or chart
+	"What frame the button placement should be related to. Can be
+either plotBox or spacingBox.
 Defaults to plot."
 
-	configurationOptions at: 'relativeTo' put: aString
+	configurationOptions at: 'relativeTo' put: aHighchartsButtonRelativeToValue
 ]
 
 { #category : #accessing }
-HighstockChartResetZoomButton >> theme [
+HighstockChartResetZoomButton >> theme: aHighchartsSVGAttributes [
 
 	"A collection of attributes for the button. The object takes SVG
-attributes like fill, stroke, stroke-width or r, the border
-radius. The theme also supports style, a collection of CSS properties
-for the text. Equivalent attributes for the hover state are given
-in theme.states.hover.
-"
-	^configurationOptions at: 'theme' ifAbsentPut: [HighstockChartResetZoomButtonTheme new]
+attributes like fill, stroke, stroke-width or r, the
+border radius. The theme also supports style, a collection of
+CSS properties for the text. Equivalent attributes for the hover
+state are given in theme.states.hover.
+Defaults to {'zIndex':6}."
+
+	configurationOptions at: 'theme' put: aHighchartsSVGAttributes
 ]

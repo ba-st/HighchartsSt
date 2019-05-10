@@ -59,3 +59,17 @@ HighchartsBoostTest >> testUseGPUTranslations [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighchartsBoostTest >> testUsePreallocated [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsBoost new.
+	component usePreallocated: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'usePreallocated' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

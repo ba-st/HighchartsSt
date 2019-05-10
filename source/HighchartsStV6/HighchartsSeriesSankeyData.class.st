@@ -22,6 +22,12 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesSankeyData >> accessibility [
+
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesSankeyDataAccessibility new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesSankeyData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -32,36 +38,38 @@ representation.
 ]
 
 { #category : #accessing }
-HighchartsSeriesSankeyData >> color: aColor [
+HighchartsSeriesSankeyData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use 
-colorIndex.
-Defaults to undefined."
+	"The color for the individual link. By default, the link color is the same
+as the node it extends from. The series.fillOpacity option also applies to
+the points, so when setting a specific link color, consider setting the
+fillOpacity to 1.
+"
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsSeriesSankeyData >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the point, so its
-graphic representations are given the class name
-highcharts-color-{n}.
+	"A specific color index to use for the point, so its graphic representations
+are given the class name highcharts-color-{n}. In styled mode this will
+change the color of the graphic. In non-styled mode, the color by is set by
+the fill attribute, so the change in class name won´t have a visual effect
+by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsSeriesSankeyData >> dataLabels: anObject [
+HighchartsSeriesSankeyData >> dataLabels: aHighchartsDataLabelsOptionsObject [
 
 	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels
+the ones for plotOptions.series.dataLabels.
 "
 
-	configurationOptions at: 'dataLabels' put: anObject
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
@@ -69,7 +77,7 @@ HighchartsSeriesSankeyData >> description: aString [
 
 	"A description of the point to add to the screen reader information
 about the point. Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
@@ -105,7 +113,7 @@ HighchartsSeriesSankeyData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a
 pointer to the point object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -124,7 +132,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesSankeyData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabel
+	"The name of the point as shown in the legend, tooltip, dataLabels
 etc.
 "
 
@@ -159,10 +167,10 @@ HighchartsSeriesSankeyData >> to: aString [
 ]
 
 { #category : #accessing }
-HighchartsSeriesSankeyData >> weight: aNumber [
+HighchartsSeriesSankeyData >> weight: aNumberOrNil [
 
 	"The weight of the link.
 "
 
-	configurationOptions at: 'weight' put: aNumber
+	configurationOptions at: 'weight' put: aNumberOrNil
 ]

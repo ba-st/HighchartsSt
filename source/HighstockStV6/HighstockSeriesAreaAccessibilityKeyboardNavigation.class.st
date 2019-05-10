@@ -1,0 +1,17 @@
+"
+Keyboard navigation for a series
+"
+Class {
+	#name : #HighstockSeriesAreaAccessibilityKeyboardNavigation,
+	#superclass : #HighchartsComponent,
+	#category : #HighstockStV6
+}
+
+{ #category : #accessing }
+HighstockSeriesAreaAccessibilityKeyboardNavigation >> enabled: aBoolean [
+
+	"Enable/disable keyboard navigation support for a specific series.
+Defaults to undefined."
+
+	configurationOptions at: 'enabled' put: aBoolean
+]

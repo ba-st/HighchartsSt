@@ -50,6 +50,21 @@ HighchartsSeriesTreemapTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testAllowTraversingTree [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component allowTraversingTree: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'allowTraversingTree' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTreemapTest >> testAlternateStartingDirection [
 
 	| component javascript expectedConfiguration |
@@ -75,6 +90,21 @@ HighchartsSeriesTreemapTest >> testAnimationLimit [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'treemap';
 		at: 'animationLimit' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testBoostBlending [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component boostBlending: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -140,6 +170,21 @@ HighchartsSeriesTreemapTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testClip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component clip: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'clip' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTreemapTest >> testColor [
 
 	| component javascript expectedConfiguration |
@@ -170,6 +215,21 @@ HighchartsSeriesTreemapTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testColorByPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component colorByPoint: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'colorByPoint' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTreemapTest >> testColorIndex [
 
 	| component javascript expectedConfiguration |
@@ -180,6 +240,21 @@ HighchartsSeriesTreemapTest >> testColorIndex [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'treemap';
 		at: 'colorIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testColors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component colors: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'colors' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -315,6 +390,21 @@ HighchartsSeriesTreemapTest >> testData [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'treemap';
 		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component dataLabels: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'dataLabels' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -465,6 +555,21 @@ HighchartsSeriesTreemapTest >> testIgnoreHiddenPoint [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'treemap';
 		at: 'ignoreHiddenPoint' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

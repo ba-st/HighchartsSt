@@ -17,7 +17,10 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockSeriesVbpZoneLines >> styles [
+HighstockSeriesVbpZoneLines >> styles: aHighchartsCSSObject [
 
-	^configurationOptions at: 'styles' ifAbsentPut: [HighstockSeriesVbpZoneLinesStyles new]
+	"Specify the style of zone lines.
+Defaults to {'color': '#0A9AC9', 'dashStyle': 'LongDash', 'lineWidth': 1}."
+
+	configurationOptions at: 'styles' put: aHighchartsCSSObject
 ]

@@ -10,12 +10,12 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsChartOptions3dFrameSide >> color: aColor [
+HighchartsChartOptions3dFrameSide >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the panel.
 Defaults to transparent."
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

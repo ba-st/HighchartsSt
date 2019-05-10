@@ -8,21 +8,21 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPlotOptionsTreemapDrillUpButtonPosition >> align: aString [
+HighchartsPlotOptionsTreemapDrillUpButtonPosition >> align: aHighchartsAlignValue [
 
 	"Horizontal alignment of the button.
 Defaults to right."
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsTreemapDrillUpButtonPosition >> verticalAlign: aString [
+HighchartsPlotOptionsTreemapDrillUpButtonPosition >> verticalAlign: aHighchartsVerticalAlignValue [
 
 	"Vertical alignment of the button.
 Defaults to top."
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }

@@ -201,6 +201,20 @@ HighchartsExportingTest >> testSourceWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsExportingTest >> testTableCaption [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExporting new.
+	component tableCaption: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tableCaption' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsExportingTest >> testType [
 
 	| component javascript expectedConfiguration |
@@ -224,6 +238,34 @@ HighchartsExportingTest >> testUrl [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'url' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsExportingTest >> testUseMultiLevelHeaders [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExporting new.
+	component useMultiLevelHeaders: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'useMultiLevelHeaders' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsExportingTest >> testUseRowspanHeaders [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExporting new.
+	component useRowspanHeaders: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'useRowspanHeaders' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

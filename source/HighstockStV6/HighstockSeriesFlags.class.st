@@ -13,6 +13,14 @@ Class {
 }
 
 { #category : #accessing }
+HighstockSeriesFlags >> accessibility [
+
+	"Accessibility options for a series. Requires the accessibility module.
+"
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesFlagsAccessibility new]
+]
+
+{ #category : #accessing }
 HighstockSeriesFlags >> allAreas: aBoolean [
 
 	"Whether all areas of the map defined in mapData should be rendered.
@@ -24,10 +32,24 @@ Defaults to true."
 ]
 
 { #category : #accessing }
+HighstockSeriesFlags >> allowOverlapX: aBoolean [
+
+	"Whether the flags are allowed to overlap sideways. If false, the
+flags are moved sideways using an algorithm that seeks to place every
+flag as close as possible to its original position.
+Defaults to false."
+
+	configurationOptions at: 'allowOverlapX' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockSeriesFlags >> allowPointSelect: aBoolean [
 
-	"Allow this series´ points to be selected by clicking on the graphic 
+	"Allow this series´ points to be selected by clicking on the graphic
 (columns, point markers, pie slices, map areas etc).
+The selected points can be handled by point select and unselect
+events, or collectively by the getSelectedPoints function.
+And alternative way of selecting points is through dragging.
 Defaults to false."
 
 	configurationOptions at: 'allowPointSelect' put: aBoolean
@@ -39,19 +61,14 @@ HighstockSeriesFlags >> animation [
 	"Enable or disable the initial animation when a series is displayed.
 The animation can also be set as a configuration object. Please
 note that this option only applies to the initial animation of the
-series itself. For other animations, see chart.animation and the animation parameter under the API methods. The
-following properties are supported:
+series itself. For other animations, see chart.animation and the animation parameter under the API methods.
+The following properties are supported:
 
+duration: The duration of the animation in milliseconds.
 
-duration
-
-The duration of the animation in milliseconds.
-
-easing
-
-A string reference to an easing function set on the Math object.
-See the Custom easing function demo below.
-
+easing: Can be a string reference to an easing function set on
+the Math object or a function. See the Custom easing function
+demo below.
 
 
 Due to poor performance, animation is disabled in old IE browsers
@@ -65,12 +82,21 @@ HighstockSeriesFlags >> animationLimit: aNumber [
 
 	"For some series, there is a limit that shuts down initial animation
 by default when the total number of points in the chart is too high.
-For example, for a column chart and its derivatives, animation doesn´t
-run if there is more than 250 points totally. To disable this cap, set
-animationLimit to Infinity.
+For example, for a column chart and its derivatives, animation does
+not run if there is more than 250 points totally. To disable this
+cap, set animationLimit to Infinity.
 "
 
 	configurationOptions at: 'animationLimit' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockSeriesFlags >> boostBlending: aString [
+
+	"Sets the color blending in the boost module.
+Defaults to undefined."
+
+	configurationOptions at: 'boostBlending' put: aString
 ]
 
 { #category : #accessing }
@@ -81,6 +107,10 @@ Setting it to e.g. 2000 will cause the series to enter boost mode when there
 are 2000 or more points in the series.
 To disable boosting on the series, set the boostThreshold to 0. Setting it
 to 1 will force boosting.
+Note that the cropThreshold also affects
+this setting. When zooming in on a series that has fewer points than the
+cropThreshold, all points are rendered although outside the visible plot
+area, and the boostThreshold won´t take effect.
 Requires modules/boost.js.
 Defaults to 5000."
 
@@ -88,20 +118,22 @@ Defaults to 5000."
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> borderColor: aColor [
+HighstockSeriesFlags >> borderColor: aHighchartsColorString [
 
 	"The border color of the map areas.
-In styled mode, the border stroke is given in the .highcharts-point class.
-Defaults to #cccccc."
+In styled mode, the border stroke is given in the .highcharts-point
+class.
+Defaults to '#cccccc'."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighstockSeriesFlags >> borderWidth: aNumber [
 
 	"The border width of each map area.
-In styled mode, the border stroke width is given in the .highcharts-point class.
+In styled mode, the border stroke width is given in the
+.highcharts-point class.
 Defaults to 1."
 
 	configurationOptions at: 'borderWidth' put: aNumber
@@ -110,14 +142,28 @@ Defaults to 1."
 { #category : #accessing }
 HighstockSeriesFlags >> className: aString [
 
-	"A class name to apply to the series´ graphical elements.
+	"An additional class name to apply to the series´ graphical elements.
+This option does not replace default class names of the graphical
+element.
 "
 
 	configurationOptions at: 'className' put: aString
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> color: aColor [
+HighstockSeriesFlags >> clip: aBoolean [
+
+	"Disable this option to allow series rendering in the whole plotting
+area.
+Note: Clipping should be always enabled when
+chart.zoomType is set
+Defaults to true."
+
+	configurationOptions at: 'clip' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockSeriesFlags >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The main color of the series. In line type series it applies to the
 line and the point markers unless otherwise specified. In bar type
@@ -125,12 +171,13 @@ series it applies to the bars unless a color is specified per point.
 The default value is pulled from the options.colors array.
 In styled mode, the color can be defined by the
 colorIndex option. Also, the series
-color can be set with the .highcharts-series, .highcharts-color-{n},
-.highcharts-{type}-series or .highcharts-series-{n} class, or
-individual classes given by the className option.
+color can be set with the .highcharts-series,
+.highcharts-color-{n}, .highcharts-{type}-series or
+.highcharts-series-{n} class, or individual classes given by the
+className option.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -139,7 +186,7 @@ HighstockSeriesFlags >> colorAxis: aBoolean [
 	"Set this option to false to prevent a series from connecting to
 the global color axis. This will cause the series to have its own
 legend item.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'colorAxis' put: aBoolean
 ]
@@ -147,22 +194,22 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockSeriesFlags >> colorIndex: aNumber [
 
-	"Styled mode only. A specific color index to use for the series, so its
-graphic representations are given the class name highcharts-color-
-{n}.
+	"Styled mode only. A specific color index to use for the series, so
+its graphic representations are given the class name
+highcharts-color-{n}.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> colors: anArrayOfColor [
+HighstockSeriesFlags >> colors: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A series specific or series type specific color set to apply instead
 of the global colors when colorByPoint is true.
 "
 
-	configurationOptions at: 'colors' put: anArrayOfColor
+	configurationOptions at: 'colors' put: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -172,8 +219,9 @@ HighstockSeriesFlags >> compare: aString [
 zero value in the visible range. The y axis will show percentage
 or absolute change depending on whether compare is set to &quot;percent&quot;
 or &quot;value&quot;. When this is applied to multiple series, it allows
-comparing the development of the series against each other.
-Defaults to undefined."
+comparing the development of the series against each other. Adds
+a change field to every point object.
+"
 
 	configurationOptions at: 'compare' put: aString
 ]
@@ -191,7 +239,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockSeriesFlags >> compareStart: aBoolean [
 
-	"Defines if comparisson should start from the first point within the visible
+	"Defines if comparison should start from the first point within the visible
 range or should start from the first point before the range.
 In other words, this flag determines if first point within the visible range
 will have 0 (compareStart=true) or should have been already calculated
@@ -204,8 +252,8 @@ Defaults to false."
 { #category : #accessing }
 HighstockSeriesFlags >> connectEnds: aBoolean [
 
-	"Polar charts only. Whether to connect the ends of a line series plot
-across the extremes.
+	"Polar charts only. Whether to connect the ends of a line series
+plot across the extremes.
 "
 
 	configurationOptions at: 'connectEnds' put: aBoolean
@@ -216,9 +264,18 @@ HighstockSeriesFlags >> connectNulls: aBoolean [
 
 	"Whether to connect a graph line across null points, or render a gap
 between the two points on either side of the null.
-"
+Defaults to false."
 
 	configurationOptions at: 'connectNulls' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockSeriesFlags >> connectors [
+
+	"Override Pathfinder connector options for a series. Requires Highcharts Gantt
+to be loaded.
+"
+	^configurationOptions at: 'connectors' ifAbsentPut: [HighstockSeriesFlagsConnectors new]
 ]
 
 { #category : #accessing }
@@ -240,48 +297,42 @@ HighstockSeriesFlags >> cropThreshold: aNumber [
 
 	"When the series contains less points than the crop threshold, all
 points are drawn, event if the points fall outside the visible plot
-area at the current zoom. The advantage of drawing all points (including
-markers and columns), is that animation is performed on updates.
-On the other hand, when the series contains more points than the
-crop threshold, the series data is cropped to only contain points
-that fall within the plot area. The advantage of cropping away invisible
-points is to increase performance on large series. .
+area at the current zoom. The advantage of drawing all points
+(including markers and columns), is that animation is performed on
+updates. On the other hand, when the series contains more points than
+the crop threshold, the series data is cropped to only contain points
+that fall within the plot area. The advantage of cropping away
+invisible points is to increase performance on large series.
 Defaults to 50."
 
 	configurationOptions at: 'cropThreshold' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> cursor: aString [
+HighstockSeriesFlags >> cursor: aStringOrHighchartsCursorValue [
 
 	"You can set the cursor to &quot;pointer&quot; if you have click events attached
 to the series, to signal to the user that the points and lines can
 be clicked.
+In styled mode, the series cursor can be set with the same classes
+as listed under series.color.
 "
 
-	configurationOptions at: 'cursor' put: aString
+	configurationOptions at: 'cursor' put: aStringOrHighchartsCursorValue
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> dashStyle: aString [
+HighstockSeriesFlags >> dashStyle: aHighchartsDashStyleValue [
 
-	"A name for the dash style to use for the graph, or for some series types
-the outline of each shape. The value for the dashStyle include:
-
-Solid
-ShortDash
-ShortDot
-ShortDashDot
-ShortDashDotDot
-Dot
-Dash
-LongDash
-DashDot
-LongDashDot
-LongDashDotDot
+	"A name for the dash style to use for the graph, or for some series
+types the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
 Defaults to Solid."
 
-	configurationOptions at: 'dashStyle' put: aString
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -290,19 +341,18 @@ HighstockSeriesFlags >> data [
 	"An array of data points for the series. For the flags series type,
 points can be given in the following ways:
 
-An array of objects with named values. The objects are point
-configuration objects as seen below. If the total number of data
-points exceeds the series´ turboThreshold,
-this option is not available.
-```js
-data: [{
-x: 1,
-title: &quot;A&quot;,
-text: &quot;First event&quot;
+An array of objects with named values. The following snippet shows only a
+few settings, see the complete options set below. If the total number of
+data points exceeds the series´
+turboThreshold, this option is not
+available.data: [{
+    x: 1,
+    title: &quot;A&quot;,
+    text: &quot;First event&quot;
 }, {
-x: 1,
-title: &quot;B&quot;,
-text: &quot;Second event&quot;
+    x: 1,
+    title: &quot;B&quot;,
+    text: &quot;Second event&quot;
 }]
 "
 	^configurationOptions at: 'data' ifAbsentPut: [HighstockSeriesFlagsData new]
@@ -324,26 +374,34 @@ JavaScript charts. Highstock by default applies data grouping when
 the points become closer than a certain pixel value, determined by
 the groupPixelWidth option.
 If data grouping is applied, the grouping information of grouped
-points can be read from the Point.dataGroup.
+points can be read from the Point.dataGroup. If point options other than
+the data itself are set, for example name or color or custom properties,
+the grouping logic doesn´t know how to group it. In this case the options of
+the first point instance are copied over to the group point. This can be
+altered through a custom approximation callback function.
 "
 	^configurationOptions at: 'dataGrouping' ifAbsentPut: [HighstockSeriesFlagsDataGrouping new]
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> dataLabels [
+HighstockSeriesFlags >> dataLabels: aHighchartsDataLabelsOptionsObject [
 
 	"Options for the series data labels, appearing next to each data
 point.
-In styled mode, the data labels can be styled wtih the .highcharts-data-label-box and .highcharts-data-label class names (see example).
+Since v6.2.0, multiple data labels can be applied to each single
+point by defining them as an array of configs.
+In styled mode, the data labels can be styled with the
+.highcharts-data-label-box and .highcharts-data-label class names
+(see example).
 "
-	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockSeriesFlagsDataLabels new]
+
+	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
 ]
 
 { #category : #accessing }
 HighstockSeriesFlags >> depth: aNumber [
 
-	"Depth of the columns in a 3D column chart. Requires highcharts-3d.
-js.
+	"Depth of the columns in a 3D column chart. Requires highcharts-3d.js.
 Defaults to 25."
 
 	configurationOptions at: 'depth' put: aNumber
@@ -355,19 +413,33 @@ HighstockSeriesFlags >> description: aString [
 	"Requires the Accessibility module.
 A description of the series to add to the screen reader information
 about the series.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> edgeColor: aColor [
+HighstockSeriesFlags >> dragDrop [
+
+	"The draggable-points module allows points to be moved around or modified in
+the chart. In addition to the options mentioned under the dragDrop API
+structure, the module fires three events,
+point.dragStart,
+point.drag and
+point.drop.
+It requires the modules/draggable-points.js file to be loaded.
+"
+	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesFlagsDragDrop new]
+]
+
+{ #category : #accessing }
+HighstockSeriesFlags >> edgeColor: aHighchartsColorString [
 
 	"3D columns only. The color of the edges. Similar to borderColor,
  except it defaults to the same color as the column.
 "
 
-	configurationOptions at: 'edgeColor' put: aColor
+	configurationOptions at: 'edgeColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -403,9 +475,9 @@ function.
 { #category : #accessing }
 HighstockSeriesFlags >> events: anObject [
 
-	"General event handlers for the series items. These event hooks can also
-be attached to the series at run time using the Highcharts.addEvent
-function.
+	"General event handlers for the series items. These event hooks can
+also be attached to the series at run time using the
+Highcharts.addEvent function.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -414,24 +486,24 @@ function.
 { #category : #accessing }
 HighstockSeriesFlags >> exposeElementToA11y: aBoolean [
 
-	"By default, series are exposed to screen readers as regions. By enabling
-this option, the series element itself will be exposed in the same
-way as the data points. This is useful if the series is not used
-as a grouping entity in the chart, but you still want to attach a
-description to the series.
+	"By default, series are exposed to screen readers as regions. By
+enabling this option, the series element itself will be exposed in
+the same way as the data points. This is useful if the series is not
+used as a grouping entity in the chart, but you still want to attach
+a description to the series.
 Requires the Accessibility module.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'exposeElementToA11y' put: aBoolean
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> fillColor: aString [
+HighstockSeriesFlags >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The fill color for the flags.
 Defaults to #ffffff."
 
-	configurationOptions at: 'fillColor' put: aString
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -452,13 +524,14 @@ Defaults to x."
 { #category : #accessing }
 HighstockSeriesFlags >> gapSize: aNumber [
 
-	"Defines when to display a gap in the graph, together with the gapUnit
-option.
-When the gapUnit is relative (default), a gap size of 5 means
-that if the distance between two points is greater than five times
-that of the two closest points, the graph will be broken.
-When the gapUnit is value, the gap is based on absolute axis values,
-which on a datetime axis is milliseconds.
+	"Defines when to display a gap in the graph, together with the
+gapUnit option.
+In case when dataGrouping is enabled, points can be grouped into a
+larger time span. This can make the grouped points to have a greater
+distance than the absolute value of gapSize property, which will result
+in disappearing graph completely. To prevent this situation the mentioned
+distance between grouped points is used instead of previously defined
+gapSize.
 In practice, this option is most often used to visualize gaps in
 time series. In a stock chart, intraday data is available for daytime
 hours, while gaps will appear in nights and weekends.
@@ -470,8 +543,14 @@ Defaults to 0."
 { #category : #accessing }
 HighstockSeriesFlags >> gapUnit: aString [
 
-	"Together with gapSize, this option defines where to draw gaps in the 
-graph.
+	"Together with gapSize, this option defines
+where to draw gaps in the graph.
+When the gapUnit is relative (default), a gap size of 5 means
+that if the distance between two points is greater than five times
+that of the two closest points, the graph will be broken.
+When the gapUnit is value, the gap is based on absolute axis values,
+which on a datetime axis is milliseconds. This also applies to the
+navigator series that inherits gap options from the base series.
 Defaults to relative."
 
 	configurationOptions at: 'gapUnit' put: aString
@@ -511,44 +590,53 @@ Defaults to 1."
 { #category : #accessing }
 HighstockSeriesFlags >> grouping: aBoolean [
 
-	"Whether to group non-stacked columns or to let them render independent
-of each other. Non-grouped columns will be laid out individually
-and overlap each other.
+	"Whether to group non-stacked columns or to let them render
+independent of each other. Non-grouped columns will be laid out
+individually and overlap each other.
 Defaults to true."
 
 	configurationOptions at: 'grouping' put: aBoolean
 ]
 
 { #category : #accessing }
+HighstockSeriesFlags >> height: aNumber [
+
+	"Fixed height of the flag´s shape. By default, height is
+autocalculated according to the flag´s title.
+"
+
+	configurationOptions at: 'height' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockSeriesFlags >> id: aString [
 
-	"An id for the series. This can be used after render time to get a
-pointer to the series object through chart.get().
+	"An id for the series. This can be used after render time to get a pointer
+to the series object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> ikh [
+HighstockSeriesFlags >> includeInDataExport: aBoolean [
 
-	"A IKH series. If the type option is not
-specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to plotOptions.
-sma.
+	"Export-data module required. When set to false will prevent the series
+data from being included in any form of data export.
+Since version 6.0.0 until 7.1.0 the option was existing undocumented
+as includeInCSVExport.
 "
-	^configurationOptions at: 'ikh' ifAbsentPut: [HighstockSeriesFlagsIkh new]
+
+	configurationOptions at: 'includeInDataExport' put: aBoolean
 ]
 
 { #category : #accessing }
 HighstockSeriesFlags >> index: aNumber [
 
-	"The index of the series in the chart, affecting the internal index
-in the chart.series array, the visible Z index as well as the order
-in the legend.
-Defaults to undefined."
+	"The index of the series in the chart, affecting the internal index in the
+chart.series array, the visible Z index as well as the order in the
+legend.
+"
 
 	configurationOptions at: 'index' put: aNumber
 ]
@@ -561,7 +649,7 @@ HighstockSeriesFlags >> initialize [
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> joinBy: aStringOrArrayOfString [
+HighstockSeriesFlags >> joinBy: aStringOrArrayOfstring [
 
 	"What property to join the mapData to the value data. For example,
 if joinBy is &quot;code&quot;, the mapData items with a specific code is merged
@@ -570,25 +658,25 @@ keys may be held in each point´s properties object.
 The joinBy option can also be an array of two values, where the first
 points to a key in the mapData, and the second points to another
 key in the data.
-When joinBy is null, the map items are joined by their position
-in the array, which performs much better in maps with many data points.
-This is the recommended option if you are printing more than a thousand
-data points and have a backend that can preprocess the data into
-a parallel array of the mapData.
-"
+When joinBy is null, the map items are joined by their position in
+the array, which performs much better in maps with many data points.
+This is the recommended option if you are printing more than a
+thousand data points and have a backend that can preprocess the data
+into a parallel array of the mapData.
+Defaults to hc-key."
 
-	configurationOptions at: 'joinBy' put: aStringOrArrayOfString
+	configurationOptions at: 'joinBy' put: aStringOrArrayOfstring
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> keys: anArrayOfString [
+HighstockSeriesFlags >> keys: anArrayOfstring [
 
 	"An array specifying which option maps to which key in the data point
 array. This makes it convenient to work with unstructured data arrays
 from different sources.
 "
 
-	configurationOptions at: 'keys' put: anArrayOfString
+	configurationOptions at: 'keys' put: anArrayOfstring
 ]
 
 { #category : #accessing }
@@ -606,6 +694,22 @@ Requires the series-label.js module.
 ]
 
 { #category : #accessing }
+HighstockSeriesFlags >> lastPrice [
+
+	"The line marks the last price from all points.
+"
+	^configurationOptions at: 'lastPrice' ifAbsentPut: [HighstockSeriesFlagsLastPrice new]
+]
+
+{ #category : #accessing }
+HighstockSeriesFlags >> lastVisiblePrice [
+
+	"The line marks the last price from visible range of points.
+"
+	^configurationOptions at: 'lastVisiblePrice' ifAbsentPut: [HighstockSeriesFlagsLastVisiblePrice new]
+]
+
+{ #category : #accessing }
 HighstockSeriesFlags >> legendIndex: aNumber [
 
 	"The sequential index of the series in the legend.
@@ -615,14 +719,14 @@ HighstockSeriesFlags >> legendIndex: aNumber [
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> lineColor: aColor [
+HighstockSeriesFlags >> lineColor: aHighchartsColorString [
 
 	"The color of the line/border of the flag.
-In styled mode, the stroke is set in the .highcharts-flag-series
-.highcharts-point rule.
+In styled mode, the stroke is set in the
+.highcharts-flag-series.highcharts-point rule.
 Defaults to #000000."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -635,12 +739,12 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> linecap: aString [
+HighstockSeriesFlags >> linecap: aHighchartsSeriesLinecapValue [
 
 	"The line cap used for line ends and line joins on the graph.
 Defaults to round."
 
-	configurationOptions at: 'linecap' put: aString
+	configurationOptions at: 'linecap' put: aHighchartsSeriesLinecapValue
 ]
 
 { #category : #accessing }
@@ -656,13 +760,13 @@ Toggling the visibility of this also toggles the linked series.
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> mapData: anArrayOfObject [
+HighstockSeriesFlags >> mapData: aHighchartsMapDataObjectOrArrayOfHighchartsMapDataObject [
 
-	"An array of objects containing a path definition and optionally
-a code or property to join in the data as per the joinBy option.
+	"A map data object containing a path definition and optionally additional
+properties to join in the data as per the joinBy option.
 "
 
-	configurationOptions at: 'mapData' put: anArrayOfObject
+	configurationOptions at: 'mapData' put: aHighchartsMapDataObjectOrArrayOfHighchartsMapDataObject
 ]
 
 { #category : #accessing }
@@ -672,9 +776,9 @@ HighstockSeriesFlags >> marker [
 fillColor, lineColor and lineWidth define the visual appearance
 of the markers. Other series types, like column series, don´t have
 markers, but have visual options on the series level instead.
-In styled mode, the markers can be styled with the .highcharts-point,
-.highcharts-point-hover and .highcharts-point-select
-class names.
+In styled mode, the markers can be styled with the
+.highcharts-point, .highcharts-point-hover and
+.highcharts-point-select class names.
 "
 	^configurationOptions at: 'marker' ifAbsentPut: [HighstockSeriesFlagsMarker new]
 ]
@@ -682,10 +786,11 @@ class names.
 { #category : #accessing }
 HighstockSeriesFlags >> maxPointWidth: aNumber [
 
-	"The maximum allowed pixel width for a column, translated to the height
-of a bar in a bar chart. This prevents the columns from becoming
-too wide when there is a small number of points in the chart.
-Defaults to null."
+	"The maximum allowed pixel width for a column, translated to the
+height of a bar in a bar chart. This prevents the columns from
+becoming too wide when there is a small number of points in the
+chart.
+"
 
 	configurationOptions at: 'maxPointWidth' put: aNumber
 ]
@@ -713,27 +818,27 @@ HighstockSeriesFlags >> name: aString [
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> navigatorOptions: anObject [
+HighstockSeriesFlags >> navigatorOptions: aHighchartsPlotSeriesOptions [
 
 	"Options for the corresponding navigator series if showInNavigator
 is true for this series. Available options are the same as any
 series, documented at plotOptions and
 series.
-These options are merged with options in navigator.series, and will take precedence if the same option is defined both
-places.
-Defaults to undefined."
+These options are merged with options in navigator.series, and will take precedence if the same option is
+defined both places.
+"
 
-	configurationOptions at: 'navigatorOptions' put: anObject
+	configurationOptions at: 'navigatorOptions' put: aHighchartsPlotSeriesOptions
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> negativeColor: aColor [
+HighstockSeriesFlags >> negativeColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color for the parts of the graph or points that are below the
 threshold.
-Defaults to null."
+"
 
-	configurationOptions at: 'negativeColor' put: aColor
+	configurationOptions at: 'negativeColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -753,9 +858,18 @@ HighstockSeriesFlags >> onSeries: aString [
 
 	"The id of the series that the flags should be drawn on. If no id
 is given, the flags are drawn on the x axis.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'onSeries' put: aString
+]
+
+{ #category : #accessing }
+HighstockSeriesFlags >> opacity: aNumber [
+
+	"Opacity of a series parts: line, fill (e.g. area) and dataLabels.
+Defaults to 1."
+
+	configurationOptions at: 'opacity' put: aNumber
 ]
 
 { #category : #accessing }
@@ -769,8 +883,9 @@ HighstockSeriesFlags >> point [
 { #category : #accessing }
 HighstockSeriesFlags >> pointDescriptionFormatter: aFunction [
 
-	"Same as accessibility.pointDescriptionFormatter, but for an individual series. Overrides
-the chart wide configuration.
+	"Same as
+accessibility.pointDescriptionFormatter,
+but for an individual series. Overrides the chart wide configuration.
 "
 
 	configurationOptions at: 'pointDescriptionFormatter' put: aFunction
@@ -780,12 +895,14 @@ the chart wide configuration.
 HighstockSeriesFlags >> pointInterval: aNumber [
 
 	"If no x values are given for the points in a series, pointInterval
-defines the interval of the x values. For example, if a series contains
-one value every decade starting from year 0, set pointInterval to
-10. In true datetime axes, the pointInterval is set in
-milliseconds.
+defines the interval of the x values. For example, if a series
+contains one value every decade starting from year 0, set
+pointInterval to 10. In true datetime axes, the pointInterval
+is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
+Please note that this options applies to the series data, not the
+interval of the axis ticks, which is independent.
 Defaults to 1."
 
 	configurationOptions at: 'pointInterval' put: aNumber
@@ -795,55 +912,66 @@ Defaults to 1."
 HighstockSeriesFlags >> pointIntervalUnit: aString [
 
 	"On datetime series, this allows for setting the
-pointInterval to irregular time 
-units, day, month and year. A day is usually the same as 24 hours,
-but pointIntervalUnit also takes the DST crossover into consideration
-when dealing with local time. Combine this option with pointInterval
-to draw weeks, quarters, 6 months, 10 years etc.
+pointInterval to irregular time
+units, day, month and year. A day is usually the same as 24
+hours, but pointIntervalUnit also takes the DST crossover into
+consideration when dealing with local time. Combine this option with
+pointInterval to draw weeks, quarters, 6 months, 10 years etc.
+Please note that this options applies to the series data, not the
+interval of the axis ticks, which is independent.
 "
 
 	configurationOptions at: 'pointIntervalUnit' put: aString
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> pointPlacement: aStringOrNumber [
+HighstockSeriesFlags >> pointPlacement: aStringOrnumber [
 
-	"Possible values: null, &quot;on&quot;, &quot;between&quot;.
-In a column chart, when pointPlacement is &quot;on&quot;, the point will
-not create any padding of the X axis. In a polar column chart this
-means that the first column points directly north. If the pointPlacement
-is &quot;between&quot;, the columns will be laid out between ticks. This
-is useful for example for visualising an amount between two points
-in time or in a certain sector of a polar chart.
+	"Possible values: &quot;on&quot;, &quot;between&quot;, number.
+In a column chart, when pointPlacement is &quot;on&quot;, the point will not
+create any padding of the X axis. In a polar column chart this means
+that the first column points directly north. If the pointPlacement is
+&quot;between&quot;, the columns will be laid out between ticks. This is
+useful for example for visualising an amount between two points in
+time or in a certain sector of a polar chart.
 Since Highcharts 3.0.2, the point placement can also be numeric,
 where 0 is on the axis value, -0.5 is between this value and the
 previous, and 0.5 is between this value and the next. Unlike the
 textual options, numeric point placement options won´t affect axis
 padding.
-Note that pointPlacement needs a pointRange to work. For column series this is computed, but for
-line-type series it needs to be set.
-Defaults to null in cartesian charts, &quot;between&quot; in polar charts.
-Defaults to null."
+Note that pointPlacement needs a pointRange to work. For column series this is
+computed, but for line-type series it needs to be set.
+For the xrange series type and gantt charts, if the Y axis is a
+category axis, the pointPlacement applies to the Y axis rather than
+the (typically datetime) X axis.
+Defaults to undefined in cartesian charts, &quot;between&quot; in polar
+charts.
+"
 
-	configurationOptions at: 'pointPlacement' put: aStringOrNumber
+	configurationOptions at: 'pointPlacement' put: aStringOrnumber
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> pointRange: aString [
+HighstockSeriesFlags >> pointRange: aNumber [
 
-	"The id of the series that the flags should be drawn on. If no id
-is given, the flags are drawn on the x axis.
-Defaults to undefined."
+	"The X axis range that each point is valid for. This determines the
+width of the column. On a categorized axis, the range will be 1
+by default (one category unit). On linear and datetime axes, the
+range will be computed as the distance between the two closest data
+points.
+The default null means it is computed automatically, but this
+option can be used to override the automatic value.
+Defaults to 0."
 
-	configurationOptions at: 'pointRange' put: aString
+	configurationOptions at: 'pointRange' put: aNumber
 ]
 
 { #category : #accessing }
 HighstockSeriesFlags >> pointStart: aNumber [
 
-	"If no x values are given for the points in a series, pointStart defines
-on what value to start. For example, if a series contains one yearly
-value starting from 1945, set pointStart to 1945.
+	"If no x values are given for the points in a series, pointStart
+defines on what value to start. For example, if a series contains one
+yearly value starting from 1945, set pointStart to 1945.
 Defaults to 0."
 
 	configurationOptions at: 'pointStart' put: aNumber
@@ -853,33 +981,33 @@ Defaults to 0."
 HighstockSeriesFlags >> selected: aBoolean [
 
 	"Whether to select the series initially. If showCheckbox is true,
-the checkbox next to the series name in the legend will be checked for a
-selected series.
+the checkbox next to the series name in the legend will be checked
+for a selected series.
 Defaults to false."
 
 	configurationOptions at: 'selected' put: aBoolean
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> shadow: aBooleanOrObject [
+HighstockSeriesFlags >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-	"Whether to apply a drop shadow to the graph line. Since 2.3 the shadow
-can be an object configuration containing color, offsetX, offsetY,
- opacity and width.
+	"Whether to apply a drop shadow to the graph line. Since 2.3 the
+shadow can be an object configuration containing color, offsetX,
+offsetY, opacity and width.
 Defaults to false."
 
-	configurationOptions at: 'shadow' put: aBooleanOrObject
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> shape: aString [
+HighstockSeriesFlags >> shape: aHighchartsFlagShapeValue [
 
-	"The shape of the marker. Can be one of &quot;flag&quot;, &quot;circlepin&quot;, &quot;squarepin&quot;,
-or an image on the format url(/path-to-image.jpg). Individual
-shapes can also be set for each point.
+	"The shape of the marker. Can be one of &quot;flag&quot;, &quot;circlepin&quot;,
+&quot;squarepin&quot;, or an image of the format url(/path-to-image.jpg).
+Individual shapes can also be set for each point.
 Defaults to flag."
 
-	configurationOptions at: 'shape' put: aString
+	configurationOptions at: 'shape' put: aHighchartsFlagShapeValue
 ]
 
 { #category : #accessing }
@@ -896,9 +1024,9 @@ Defaults to false."
 { #category : #accessing }
 HighstockSeriesFlags >> showInLegend: aBoolean [
 
-	"Whether to display this particular series or series type in the legend.
-The default value is true for standalone series, false for linked
-series.
+	"Whether to display this particular series or series type in the
+legend. The default value is true for standalone series, false
+for linked series.
 Defaults to true."
 
 	configurationOptions at: 'showInLegend' put: aBoolean
@@ -909,7 +1037,7 @@ HighstockSeriesFlags >> showInNavigator: aBoolean [
 
 	"Whether or not to show the series in the navigator. Takes precedence
 over navigator.baseSeries if defined.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'showInNavigator' put: aBoolean
 ]
@@ -917,7 +1045,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockSeriesFlags >> skipKeyboardNavigation: aBoolean [
 
-	"If set to True, the accessibility module will skip past the points
+	"If set to true, the accessibility module will skip past the points
 in this series for keyboard navigation.
 "
 
@@ -931,22 +1059,23 @@ HighstockSeriesFlags >> softThreshold: aBoolean [
 the zero plane (or threshold option)
 unless the data actually crosses the plane.
 For example, if softThreshold is false, a series of 0, 1, 2,
-3 will make the Y axis show negative values according to the minPadding
-option. If softThreshold is true, the Y axis starts at 0.
+3 will make the Y axis show negative values according to the
+minPadding option. If softThreshold is true, the Y axis starts
+at 0.
 Defaults to false."
 
 	configurationOptions at: 'softThreshold' put: aBoolean
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> stack: aString [
+HighstockSeriesFlags >> stack: aStringOrobject [
 
-	"This option allows grouping series in a stacked chart. The stack
-option can be a string or a number or anything else, as long as the
-grouped series´ stack options match each other.
-Defaults to null."
+	"This option allows grouping series in a stacked chart. The stack option
+can be a string or anything else, as long as the grouped series´ stack
+options match each other after conversion into a string.
+"
 
-	configurationOptions at: 'stack' put: aString
+	configurationOptions at: 'stack' put: aStringOrobject
 ]
 
 { #category : #accessing }
@@ -963,11 +1092,13 @@ Defaults to 12."
 HighstockSeriesFlags >> stacking: aString [
 
 	"Whether to stack the values of each series on top of each other.
-Possible values are null to disable, &quot;normal&quot; to stack by value or
-&quot;percent&quot;. When stacking is enabled, data must be sorted in ascending
-X order. A special stacking option is with the streamgraph series type,
-where the stacking option is set to &quot;stream&quot;.
-Defaults to null."
+Possible values are undefined to disable, &quot;normal&quot; to stack by
+value or &quot;percent&quot;. When stacking is enabled, data must be sorted
+in ascending X order. A special stacking option is with the
+streamgraph series type, where the stacking option is set to
+&quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to
+waterfall series.
+"
 
 	configurationOptions at: 'stacking' put: aString
 ]
@@ -981,19 +1112,17 @@ HighstockSeriesFlags >> states [
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> states: aPlotOptionsseriesstates [
+HighstockSeriesFlags >> states: anObject [
 
-	"A wrapper object for all the series options in specific states.
-"
 
-	configurationOptions at: 'states' put: aPlotOptionsseriesstates
+	configurationOptions at: 'states' put: anObject
 ]
 
 { #category : #accessing }
 HighstockSeriesFlags >> step: aString [
 
-	"Whether to apply steps to the line. Possible values are left, center
-and right.
+	"Whether to apply steps to the line. Possible values are left,
+center and right.
 "
 
 	configurationOptions at: 'step' put: aString
@@ -1002,27 +1131,28 @@ and right.
 { #category : #accessing }
 HighstockSeriesFlags >> stickyTracking: aBoolean [
 
-	"Sticky tracking of mouse events. When true, the mouseOut event
-on a series isn´t triggered until the mouse moves over another series,
-or out of the plot area. When false, the mouseOut event on a
-series is triggered when the mouse leaves the area around the series´
-graph or markers. This also implies the tooltip when not shared. When
-stickyTracking is false and tooltip.shared is false, the tooltip will
-be hidden when moving the mouse between series. Defaults to true for line
-and area type series, but to false for columns, pies etc.
+	"Sticky tracking of mouse events. When true, the mouseOut event on a
+series isn´t triggered until the mouse moves over another series, or
+out of the plot area. When false, the mouseOut event on a series is
+triggered when the mouse leaves the area around the series´ graph or
+markers. This also implies the tooltip when not shared. When
+stickyTracking is false and tooltip.shared is false, the tooltip
+will be hidden when moving the mouse between series. Defaults to true
+for line and area type series, but to false for columns, pies etc.
 Defaults to false."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> style [
+HighstockSeriesFlags >> style: aHighchartsCSSObject [
 
 	"The text styles of the flag.
-In styled mode, the styles are set in the .highcharts-flag-
-series .highcharts-point rule.
-Defaults to { 'fontSize': '11px', 'fontWeight': 'bold' }."
-	^configurationOptions at: 'style' ifAbsentPut: [HighstockSeriesFlagsStyle new]
+In styled mode, the styles are set in the
+.highcharts-flag-series .highcharts-point rule.
+Defaults to {'fontSize': '11px', 'fontWeight': 'bold'}."
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -1035,22 +1165,22 @@ Defaults to center."
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> threshold: aNumber [
+HighstockSeriesFlags >> threshold: anObject [
 
-	"The Y axis value to serve as the base for the columns, for distinguishing
-between values above and below a threshold. If null, the columns
-extend from the padding Y axis minimum.
+	"The Y axis value to serve as the base for the columns, for
+distinguishing between values above and below a threshold. If null,
+the columns extend from the padding Y axis minimum.
 Defaults to nil."
 
-	configurationOptions at: 'threshold' put: aNumber
+	configurationOptions at: 'threshold' put: anObject
 ]
 
 { #category : #accessing }
 HighstockSeriesFlags >> title: aString [
 
-	"The text to display on each flag. This can be defined on series level,
- or individually for each point. Defaults to &quot;A&quot;.
-Defaults to 'A'."
+	"The text to display on each flag. This can be defined on series
+level, or individually for each point. Defaults to &quot;A&quot;.
+Defaults to A."
 
 	configurationOptions at: 'title' put: aString
 ]
@@ -1082,7 +1212,11 @@ Defaults to 1000."
 { #category : #accessing }
 HighstockSeriesFlags >> type: aString [
 
-	"The type of series, for example line or column.
+	"The type of series, for example line or column. By default, the
+series type is inherited from chart.type, so unless the
+chart is a combination of series types, there is no need to set it on the
+series level.
+In TypeScript instead the type option must always be set.
 "
 
 	configurationOptions at: 'type' put: aString
@@ -1092,9 +1226,9 @@ HighstockSeriesFlags >> type: aString [
 HighstockSeriesFlags >> useHTML: aBoolean [
 
 	"Whether to use HTML to render the flag texts. Using HTML allows for
-advanced formatting, images and reliable bi-directional text rendering.
-Note that exported images won´t respect the HTML, and that HTML
-won´t respect Z-index settings.
+advanced formatting, images and reliable bi-directional text
+rendering. Note that exported images won´t respect the HTML, and that
+HTML won´t respect Z-index settings.
 Defaults to false."
 
 	configurationOptions at: 'useHTML' put: aBoolean
@@ -1110,15 +1244,25 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> xAxis: aNumberOrString [
+HighstockSeriesFlags >> width: aNumber [
 
-	"When using dual or multiple x axes, this number defines which xAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the xAxis array, with
-0 being the first.
+	"Fixed width of the flag´s shape. By default, width is autocalculated
+according to the flag´s title.
+"
+
+	configurationOptions at: 'width' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockSeriesFlags >> xAxis: aNumberOrstring [
+
+	"When using dual or multiple x axes, this number defines which xAxis the
+particular series is connected to. It refers to either the
+{@link #xAxis.id|axis id}
+or the index of the axis in the xAxis array, with 0 being the first.
 Defaults to 0."
 
-	configurationOptions at: 'xAxis' put: aNumberOrString
+	configurationOptions at: 'xAxis' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -1133,15 +1277,15 @@ Defaults to -30."
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> yAxis: aNumberOrString [
+HighstockSeriesFlags >> yAxis: aNumberOrstring [
 
-	"When using dual or multiple y axes, this number defines which yAxis
-the particular series is connected to. It refers to either the axis
-id or the index of the axis in the yAxis array, with
-0 being the first.
+	"When using dual or multiple y axes, this number defines which yAxis the
+particular series is connected to. It refers to either the
+{@link #yAxis.id|axis id}
+or the index of the axis in the yAxis array, with 0 being the first.
 Defaults to 0."
 
-	configurationOptions at: 'yAxis' put: aNumberOrString
+	configurationOptions at: 'yAxis' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -1165,12 +1309,14 @@ Defaults to y."
 { #category : #accessing }
 HighstockSeriesFlags >> zones [
 
-	"An array defining zones within a series. Zones can be applied to
-the X axis, Y axis or Z axis for bubbles, according to the zoneAxis
-option.
-In styled mode, the color zones are styled with the .highcharts-
-zone-{n} class, or custom classed from the className option (view
-live demo).
+	"An array defining zones within a series. Zones can be applied to the
+X axis, Y axis or Z axis for bubbles, according to the zoneAxis
+option. The zone definitions have to be in ascending order regarding
+to the value.
+In styled mode, the color zones are styled with the
+.highcharts-zone-{n} class, or custom classed from the className
+option
+(view live demo).
 "
 	^configurationOptions at: 'zones' ifAbsentPut: [HighstockSeriesFlagsZones new]
 ]

@@ -42,12 +42,11 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockRangeSelectorButtons >> dataGrouping: anObject [
+HighstockRangeSelectorButtons >> dataGrouping [
 
 	"A custom data grouping object for each button.
 "
-
-	configurationOptions at: 'dataGrouping' put: anObject
+	^configurationOptions at: 'dataGrouping' ifAbsentPut: [HighstockRangeSelectorButtonsDataGrouping new]
 ]
 
 { #category : #accessing }
@@ -66,7 +65,8 @@ HighstockRangeSelectorButtons >> events: anObject [
 { #category : #accessing }
 HighstockRangeSelectorButtons >> offsetMax: aNumber [
 
-	"Additional range (in milliseconds) added to the end of the calculated time span.
+	"Additional range (in milliseconds) added to the end of the calculated
+time span.
 Defaults to 0."
 
 	configurationOptions at: 'offsetMax' put: aNumber
@@ -75,10 +75,22 @@ Defaults to 0."
 { #category : #accessing }
 HighstockRangeSelectorButtons >> offsetMin: aNumber [
 
-	"Additional range (in milliseconds) added to the start of the calculated time span.
+	"Additional range (in milliseconds) added to the start of the
+calculated time span.
 Defaults to 0."
 
 	configurationOptions at: 'offsetMin' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockRangeSelectorButtons >> preserveDataGrouping: aBoolean [
+
+	"When buttons apply dataGrouping on a series, by default zooming
+in/out will deselect buttons and unset dataGrouping. Enable this
+option to keep buttons selected when extremes change.
+Defaults to false."
+
+	configurationOptions at: 'preserveDataGrouping' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -91,11 +103,12 @@ HighstockRangeSelectorButtons >> text: aString [
 ]
 
 { #category : #accessing }
-HighstockRangeSelectorButtons >> type: aString [
+HighstockRangeSelectorButtons >> type: aHighchartsRangeSelectorButtonTypeValue [
 
-	"Defined the time span for the button. Can be one of &quot;millisecond&quot;,
-&quot;second&quot;, &quot;minute&quot;, &quot;hour&quot;, &quot;day&quot;, &quot;week&quot;, &quot;month&quot;, &quot;ytd&quot;, &quot;all&quot;.
+	"Defined the time span for the button. Can be one of millisecond,
+second, minute, hour, day, week, month, year, ytd,
+and all.
 "
 
-	configurationOptions at: 'type' put: aString
+	configurationOptions at: 'type' put: aHighchartsRangeSelectorButtonTypeValue
 ]

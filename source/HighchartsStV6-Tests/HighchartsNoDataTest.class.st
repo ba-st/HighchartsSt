@@ -19,6 +19,20 @@ HighchartsNoDataTest >> testAttr [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsNoDataTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNoData new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsNoDataTest >> testUseHTML [
 
 	| component javascript expectedConfiguration |

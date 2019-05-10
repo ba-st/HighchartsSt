@@ -30,5 +30,5 @@ Highstock6OnlineLibrary >> updateRoot: aRoot [
 { #category : #versions }
 Highstock6OnlineLibrary >> version [
 
-	^ '6.0.3'
+	^ '7.1.1'
 ]

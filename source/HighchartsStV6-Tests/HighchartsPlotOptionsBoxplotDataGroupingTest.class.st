@@ -61,6 +61,20 @@ HighchartsPlotOptionsBoxplotDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsBoxplotDataGroupingTest >> testGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBoxplotDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsBoxplotDataGroupingTest >> testGroupPixelWidth [
 
 	| component javascript expectedConfiguration |

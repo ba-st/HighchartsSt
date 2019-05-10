@@ -89,6 +89,20 @@ HighchartsAnnotationsLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsAnnotationsLabelsTest >> testClassName [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsLabels new.
+	component className: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsAnnotationsLabelsTest >> testCrop [
 
 	| component javascript expectedConfiguration |
@@ -196,6 +210,20 @@ HighchartsAnnotationsLabelsTest >> testShape [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'shape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

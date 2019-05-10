@@ -1,0 +1,103 @@
+Class {
+	#name : #HighchartsPlotOptionsSunburstDragDropDragHandleTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsStV6-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstDragDropDragHandleTest >> testClassName [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstDragDropDragHandle new.
+	component className: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstDragDropDragHandleTest >> testColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstDragDropDragHandle new.
+	component color: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstDragDropDragHandleTest >> testCursor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstDragDropDragHandle new.
+	component cursor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstDragDropDragHandleTest >> testLineColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstDragDropDragHandle new.
+	component lineColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lineColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstDragDropDragHandleTest >> testLineWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstDragDropDragHandle new.
+	component lineWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lineWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstDragDropDragHandleTest >> testPathFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstDragDropDragHandle new.
+	component pathFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pathFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstDragDropDragHandleTest >> testZIndex [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstDragDropDragHandle new.
+	component zIndex: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

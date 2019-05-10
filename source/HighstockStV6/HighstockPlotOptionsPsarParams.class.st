@@ -24,6 +24,15 @@ Defaults to 0.02."
 ]
 
 { #category : #accessing }
+HighstockPlotOptionsPsarParams >> index: aNumber [
+
+	"Index from which PSAR is starting calculation
+Defaults to 2."
+
+	configurationOptions at: 'index' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsPsarParams >> initialAccelerationFactor: aNumber [
 
 	"The initial value for acceleration factor.

@@ -10,22 +10,24 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsColorAxisDataClasses >> color: aColor [
+HighchartsColorAxisDataClasses >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of each data class. If not set, the color is pulled from
-the global or chart-specific colors array. In 
-styled mode, this option is ignored. Instead, use colors defined in
-CSS.
+	"The color of each data class. If not set, the color is pulled
+from the global or chart-specific colors array. In
+styled mode, this option is ignored. Instead, use colors defined
+in CSS.
 "
 
-	configurationOptions at: 'color' put: aColor
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsColorAxisDataClasses >> from: aNumber [
 
-	"The start of the value range that the data class represents, relating
-to the point value.
+	"The start of the value range that the data class represents,
+relating to the point value.
+The range of each dataClass is closed in both ends, but can be
+overridden by the next dataClass.
 "
 
 	configurationOptions at: 'from' put: aNumber
@@ -34,10 +36,11 @@ to the point value.
 { #category : #accessing }
 HighchartsColorAxisDataClasses >> name: aString [
 
-	"The name of the data class as it appears in the legend. If no name
-is given, it is automatically created based on the from and to
-values. For full programmatic control, legend.labelFormatter can be used. In the formatter, this.from and this.
-to can be accessed.
+	"The name of the data class as it appears in the legend.
+If no name is given, it is automatically created based on the
+from and to values. For full programmatic control,
+legend.labelFormatter can be used.
+In the formatter, this.from and this.to can be accessed.
 "
 
 	configurationOptions at: 'name' put: aString
@@ -46,8 +49,10 @@ to can be accessed.
 { #category : #accessing }
 HighchartsColorAxisDataClasses >> to: aNumber [
 
-	"The end of the value range that the data class represents, relating
-to the point value.
+	"The end of the value range that the data class represents,
+relating to the point value.
+The range of each dataClass is closed in both ends, but can be
+overridden by the next dataClass.
 "
 
 	configurationOptions at: 'to' put: aNumber

@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsColorAxisTest >> testAlignTicks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxis new.
+	component alignTicks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'alignTicks' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsColorAxisTest >> testCeiling [
 
 	| component javascript expectedConfiguration |
@@ -182,6 +196,20 @@ HighchartsColorAxisTest >> testLineColor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'lineColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsColorAxisTest >> testMargin [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxis new.
+	component margin: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'margin' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -439,6 +467,20 @@ HighchartsColorAxisTest >> testOverscroll [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsColorAxisTest >> testPane [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxis new.
+	component pane: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pane' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsColorAxisTest >> testRange [
 
 	| component javascript expectedConfiguration |
@@ -462,6 +504,20 @@ HighchartsColorAxisTest >> testReversed [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'reversed' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsColorAxisTest >> testReversedStacks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxis new.
+	component reversedStacks: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'reversedStacks' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -1,0 +1,14 @@
+Class {
+	#name : #HighchartsSeriesVariablepieLastVisiblePriceLabel,
+	#superclass : #HighchartsComponent,
+	#category : #HighchartsStV6
+}
+
+{ #category : #accessing }
+HighchartsSeriesVariablepieLastVisiblePriceLabel >> enabled: aBoolean [
+
+	"Enable or disable the label.
+Defaults to true."
+
+	configurationOptions at: 'enabled' put: aBoolean
+]

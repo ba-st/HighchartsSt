@@ -11,21 +11,21 @@ Class {
 }
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> barBackgroundColor: aColor [
+HighstockYAxisScrollbar >> barBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color of the scrollbar itself.
 Defaults to #cccccc."
 
-	configurationOptions at: 'barBackgroundColor' put: aColor
+	configurationOptions at: 'barBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> barBorderColor: aColor [
+HighstockYAxisScrollbar >> barBorderColor: aHighchartsColorString [
 
 	"The color of the scrollbar´s border.
 Defaults to #cccccc."
 
-	configurationOptions at: 'barBorderColor' put: aColor
+	configurationOptions at: 'barBorderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -47,30 +47,30 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> buttonArrowColor: aColor [
+HighstockYAxisScrollbar >> buttonArrowColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the small arrow inside the scrollbar buttons.
 Defaults to #333333."
 
-	configurationOptions at: 'buttonArrowColor' put: aColor
+	configurationOptions at: 'buttonArrowColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> buttonBackgroundColor: aColor [
+HighstockYAxisScrollbar >> buttonBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of scrollbar buttons.
 Defaults to #e6e6e6."
 
-	configurationOptions at: 'buttonBackgroundColor' put: aColor
+	configurationOptions at: 'buttonBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> buttonBorderColor: aColor [
+HighstockYAxisScrollbar >> buttonBorderColor: aHighchartsColorString [
 
 	"The color of the border of the scrollbar buttons.
 Defaults to #cccccc."
 
-	configurationOptions at: 'buttonBorderColor' put: aColor
+	configurationOptions at: 'buttonBorderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -130,12 +130,12 @@ Defaults to 6."
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> rifleColor: aColor [
+HighstockYAxisScrollbar >> rifleColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the small rifles in the middle of the scrollbar.
 Defaults to #333333."
 
-	configurationOptions at: 'rifleColor' put: aColor
+	configurationOptions at: 'rifleColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -152,8 +152,8 @@ Defaults to true."
 { #category : #accessing }
 HighstockYAxisScrollbar >> size: aNumber [
 
-	"The width of a vertical scrollbar or height of a horizontal scrollbar.
- Defaults to 20 on touch devices.
+	"The width of a vertical scrollbar or height of a horizontal
+scrollbar. Defaults to 20 on touch devices.
 Defaults to 14."
 
 	configurationOptions at: 'size' put: aNumber
@@ -167,21 +167,21 @@ HighstockYAxisScrollbar >> step: aNumber [
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> trackBackgroundColor: aColor [
+HighstockYAxisScrollbar >> trackBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the track background.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'trackBackgroundColor' put: aColor
+	configurationOptions at: 'trackBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> trackBorderColor: aColor [
+HighstockYAxisScrollbar >> trackBorderColor: aHighchartsColorString [
 
 	"The color of the border of the scrollbar track.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'trackBorderColor' put: aColor
+	configurationOptions at: 'trackBorderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

@@ -26,6 +26,31 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsColorAxis >> accessibility [
+
+	"Accessibility options for an axis. Requires the accessibility module.
+"
+	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsColorAxisAccessibility new]
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> alignTicks: aBoolean [
+
+	"When using multiple axis, the ticks of two or more opposite axes
+will automatically be aligned by adding ticks to the axis or axes
+with the least ticks, as if tickAmount were specified.
+This can be prevented by setting alignTicks to false. If the grid
+lines look messy, it´s a good idea to hide them for the secondary
+axis by setting gridLineWidth to 0.
+If startOnTick or endOnTick in an Axis options are set to false,
+then the alignTicks will be disabled for the Axis.
+Disabled for logarithmic axes.
+Defaults to true."
+
+	configurationOptions at: 'alignTicks' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsColorAxis >> ceiling: aNumber [
 
 	"The highest allowed value for automatically computed axis extremes.
@@ -46,13 +71,23 @@ for the grid, axis elements and labels.
 ]
 
 { #category : #accessing }
+HighchartsColorAxis >> currentDateIndicator [
+
+	"Show an indicator on the axis for the current date and time. Can be a
+boolean or a configuration object similar to
+xAxis.plotLines.
+Defaults to true."
+	^configurationOptions at: 'currentDateIndicator' ifAbsentPut: [HighchartsColorAxisCurrentDateIndicator new]
+]
+
+{ #category : #accessing }
 HighchartsColorAxis >> dataClassColor: aString [
 
-	"Determines how to set each data class´ color if no individual color
-is set. The default value, tween, computes intermediate colors
-between minColor and maxColor. The other possible value, category,
-pulls colors from the global or chart specific colors
-array.
+	"Determines how to set each data class´ color if no individual
+color is set. The default value, tween, computes intermediate
+colors between minColor and maxColor. The other possible
+value, category, pulls colors from the global or chart specific
+colors array.
 Defaults to tween."
 
 	configurationOptions at: 'dataClassColor' put: aString
@@ -61,29 +96,19 @@ Defaults to tween."
 { #category : #accessing }
 HighchartsColorAxis >> dataClasses [
 
-	"An array of data classes or ranges for the choropleth map. If none
-given, the color axis is scalar and values are distributed as a gradient
-between the minimum and maximum colors.
+	"An array of data classes or ranges for the choropleth map. If
+none given, the color axis is scalar and values are distributed
+as a gradient between the minimum and maximum colors.
 "
 	^configurationOptions at: 'dataClasses' ifAbsentPut: [HighchartsColorAxisDataClasses new]
-]
-
-{ #category : #accessing }
-HighchartsColorAxis >> description: aString [
-
-	"Requires Accessibility module
-Description of the axis to screen reader users.
-Defaults to undefined."
-
-	configurationOptions at: 'description' put: aString
 ]
 
 { #category : #accessing }
 HighchartsColorAxis >> endOnTick: aBoolean [
 
 	"Whether to force the axis to end on a tick. Use this option with
-the maxPadding option to control the axis
-end.
+the maxPadding option to control the
+axis end.
 Defaults to true."
 
 	configurationOptions at: 'endOnTick' put: aBoolean
@@ -110,28 +135,37 @@ HighchartsColorAxis >> events: anObject [
 HighchartsColorAxis >> floor: aNumber [
 
 	"The lowest allowed value for automatically computed axis extremes.
-Defaults to null."
+"
 
 	configurationOptions at: 'floor' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> gridLineColor: aColor [
+HighchartsColorAxis >> grid [
 
-	"Color of the grid lines extending from the axis across the gradient.
-Defaults to #e6e6e6."
-
-	configurationOptions at: 'gridLineColor' put: aColor
+	"Set grid options for the axis labels. Requires Highcharts Gantt.
+"
+	^configurationOptions at: 'grid' ifAbsentPut: [HighchartsColorAxisGrid new]
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> gridLineDashStyle: aString [
+HighchartsColorAxis >> gridLineColor: aHighchartsColorString [
+
+	"Color of the grid lines extending from the axis across the
+gradient.
+Defaults to #e6e6e6."
+
+	configurationOptions at: 'gridLineColor' put: aHighchartsColorString
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> gridLineDashStyle: aHighchartsDashStyleValue [
 
 	"The dash or dot style of the grid lines. For possible values, see
 this demonstration.
 Defaults to Solid."
 
-	configurationOptions at: 'gridLineDashStyle' put: aString
+	configurationOptions at: 'gridLineDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -158,7 +192,7 @@ HighchartsColorAxis >> id: aString [
 
 	"An id for the axis. This can be used after render time to get
 a pointer to the axis object through chart.get().
-Defaults to null."
+"
 
 	configurationOptions at: 'id' put: aString
 ]
@@ -174,22 +208,33 @@ Highcharts API.
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> lineColor: aColor [
+HighchartsColorAxis >> lineColor: aHighchartsColorString [
 
 	"The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
 .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> margin: anObject [
+
+	"If there are multiple axes on the same side of the chart, the pixel
+margin between the axes. Defaults to 0 on vertical axes, 15 on
+horizontal axes.
+"
+
+	configurationOptions at: 'margin' put: anObject
 ]
 
 { #category : #accessing }
 HighchartsColorAxis >> marker [
 
 	"The triangular marker on a scalar color axis that points to the
-value of the hovered area. To disable the marker, set marker:
-null.
+value of the hovered area. To disable the marker, set
+marker: null.
 "
 	^configurationOptions at: 'marker' ifAbsentPut: [HighchartsColorAxisMarker new]
 ]
@@ -197,24 +242,27 @@ null.
 { #category : #accessing }
 HighchartsColorAxis >> max: aNumber [
 
-	"The maximum value of the axis in terms of map point values. If null,
-the max value is automatically calculated. If the endOnTick option
-is true, the max value might be rounded up.
+	"The maximum value of the axis in terms of map point values. If
+null, the max value is automatically calculated. If the
+endOnTick option is true, the max value might be rounded up.
 "
 
 	configurationOptions at: 'max' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> maxColor: aColor [
+HighchartsColorAxis >> maxColor: aHighchartsColorString [
 
-	"The color to represent the maximum of the color axis. Unless dataClasses or stops are set, the gradient
-ends at this value.
-If dataClasses are set, the color is based on minColor and maxColor
-unless a color is set for each data class, or the dataClassColor is set.
+	"The color to represent the maximum of the color axis. Unless
+dataClasses or
+stops are set, the gradient ends at this
+value.
+If dataClasses are set, the color is based on minColor and
+maxColor unless a color is set for each data class, or the
+dataClassColor is set.
 Defaults to #003399."
 
-	configurationOptions at: 'maxColor' put: aColor
+	configurationOptions at: 'maxColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -232,7 +280,7 @@ HighchartsColorAxis >> maxRange: aNumber [
 
 	"Maximum range which can be set using the navigator´s handles.
 Opposite of xAxis.minRange.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'maxRange' put: aNumber
 ]
@@ -240,24 +288,28 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsColorAxis >> min: aNumber [
 
-	"The minimum value of the axis in terms of map point values. If null,
-the min value is automatically calculated. If the startOnTick
-option is true, the min value might be rounded down.
+	"The minimum value of the axis in terms of map point values. If
+null, the min value is automatically calculated. If the
+startOnTick option is true, the min value might be rounded
+down.
 "
 
 	configurationOptions at: 'min' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minColor: aColor [
+HighchartsColorAxis >> minColor: aHighchartsColorString [
 
-	"The color to represent the minimum of the color axis. Unless dataClasses or stops are set, the gradient
-starts at this value.
-If dataClasses are set, the color is based on minColor and maxColor
-unless a color is set for each data class, or the dataClassColor is set.
+	"The color to represent the minimum of the color axis. Unless
+dataClasses or
+stops are set, the gradient starts at this
+value.
+If dataClasses are set, the color is based on minColor and
+maxColor unless a color is set for each data class, or the
+dataClassColor is set.
 Defaults to #e6ebf5."
 
-	configurationOptions at: 'minColor' put: aColor
+	configurationOptions at: 'minColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -271,24 +323,24 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorGridLineColor: aColor [
+HighchartsColorAxis >> minorGridLineColor: aHighchartsColorString [
 
 	"Color of the minor, secondary grid lines.
 In styled mode, the stroke width is given in the
 .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aColor
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorGridLineDashStyle: aString [
+HighchartsColorAxis >> minorGridLineDashStyle: aHighchartsDashStyleValue [
 
 	"The dash or dot style of the minor grid lines. For possible values,
 see this demonstration.
 Defaults to Solid."
 
-	configurationOptions at: 'minorGridLineDashStyle' put: aString
+	configurationOptions at: 'minorGridLineDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -303,30 +355,30 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorTickColor: aColor [
+HighchartsColorAxis >> minorTickColor: aHighchartsColorString [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aColor
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorTickInterval: aNumberOrString [
+HighchartsColorAxis >> minorTickInterval: aNumberOrstringOrNil [
 
-	"Specific tick interval in axis units for the minor ticks.
-On a linear axis, if &quot;auto&quot;, the minor tick interval is
-calculated as a fifth of the tickInterval. If null, minor
-ticks are not shown.
+	"Specific tick interval in axis units for the minor ticks. On a linear
+axis, if &quot;auto&quot;, the minor tick interval is calculated as a fifth
+of the tickInterval. If null or undefined, minor ticks are not
+shown.
 On logarithmic axes, the unit is the power of the value. For example,
-setting the minorTickInterval to 1 puts one tick on each of 0.1,
-1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9
-ticks between 1 and 10, 10 and 100 etc.
+setting the minorTickInterval to 1 puts one tick on each of 0.1, 1,
+10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks
+between 1 and 10, 10 and 100 etc.
 If user settings dictate minor ticks to become too dense, they don´t
 make sense, and will be ignored to prevent performance problems.
 "
 
-	configurationOptions at: 'minorTickInterval' put: aNumberOrString
+	configurationOptions at: 'minorTickInterval' put: aNumberOrstringOrNil
 ]
 
 { #category : #accessing }
@@ -376,9 +428,15 @@ Defaults to false."
 { #category : #accessing }
 HighchartsColorAxis >> ordinal: aBoolean [
 
-	"In an ordinal axis, the points are equally spaced in the chart regardless
-of the actual time or x distance between them. This means that missing
-data for nights or weekends will not take up space in the chart.
+	"In an ordinal axis, the points are equally spaced in the chart
+regardless of the actual time or x distance between them. This means
+that missing data periods (e.g. nights or weekends for a stock chart)
+will not take up space in the chart.
+Having ordinal: false will show any gaps created by the gapSize
+setting proportionate to their duration.
+In stock charts the X axis is ordinal by default, unless
+the boost module is used and at least one of the series´ data length
+exceeds the boostThreshold.
 Defaults to true."
 
 	configurationOptions at: 'ordinal' put: aBoolean
@@ -388,11 +446,22 @@ Defaults to true."
 HighchartsColorAxis >> overscroll: aNumber [
 
 	"Additional range on the right side of the xAxis. Works similar to
-xAxis.maxPadding, but value is set in milliseconds. Can be set for both
-main xAxis and the navigator´s xAxis.
+xAxis.maxPadding, but value is set in milliseconds. Can be set for
+both main xAxis and the navigator´s xAxis.
 Defaults to 0."
 
 	configurationOptions at: 'overscroll' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> pane: aNumber [
+
+	"Refers to the index in the panes array. Used for circular
+gauges and polar charts. When the option is not set then first pane
+will be used.
+"
+
+	configurationOptions at: 'pane' put: aNumber
 ]
 
 { #category : #accessing }
@@ -401,7 +470,7 @@ HighchartsColorAxis >> range: aNumber [
 	"The zoomed range to display when only defining one or none of min
 or max. For example, to show the latest month, a range of one month
 can be set.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'range' put: aNumber
 ]
@@ -410,11 +479,37 @@ Defaults to undefined."
 HighchartsColorAxis >> reversed: aBoolean [
 
 	"Whether to reverse the axis so that the highest number is closest
-to the origin. Defaults to false in a horizontal legend and true
-in a vertical legend, where the smallest value starts on top.
+to the origin. Defaults to false in a horizontal legend and
+true in a vertical legend, where the smallest value starts on
+top.
 Defaults to false."
 
 	configurationOptions at: 'reversed' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> reversedStacks: aBoolean [
+
+	"This option determines how stacks should be ordered within a group.
+For example reversed xAxis also reverses stacks, so first series
+comes last in a group. To keep order like for non-reversed xAxis
+enable this option.
+Defaults to false."
+
+	configurationOptions at: 'reversedStacks' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> scrollbar [
+
+	"An optional scrollbar to display on the X axis in response to
+limiting the minimum and maximum of the axis values.
+In styled mode, all the presentational options for the scrollbar are
+replaced by the classes .highcharts-scrollbar-thumb,
+.highcharts-scrollbar-arrow, .highcharts-scrollbar-button,
+.highcharts-scrollbar-rifles and .highcharts-scrollbar-track.
+"
+	^configurationOptions at: 'scrollbar' ifAbsentPut: [HighchartsColorAxisScrollbar new]
 ]
 
 { #category : #accessing }
@@ -480,24 +575,24 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsColorAxis >> startOnTick: aBoolean [
 
-	"Whether to force the axis to start on a tick. Use this option with
-the maxPadding option to control the axis start.
+	"Whether to force the axis to start on a tick. Use this option
+with the maxPadding option to control the axis start.
 Defaults to true."
 
 	configurationOptions at: 'startOnTick' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> stops: anArrayOfArray [
+HighchartsColorAxis >> stops: anArrayOfArrayOfnumberHighchartsColorString [
 
 	"Color stops for the gradient of a scalar color axis. Use this in
 cases where a linear gradient between a minColor and maxColor
-is not sufficient. The stops is an array of tuples, where the first
-item is a float between 0 and 1 assigning the relative position in
-the gradient, and the second item is the color.
+is not sufficient. The stops is an array of tuples, where the
+first item is a float between 0 and 1 assigning the relative
+position in the gradient, and the second item is the color.
 "
 
-	configurationOptions at: 'stops' put: anArrayOfArray
+	configurationOptions at: 'stops' put: anArrayOfArrayOfnumberHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -514,22 +609,23 @@ or category axes are not affected.
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> tickColor: aColor [
+HighchartsColorAxis >> tickColor: aHighchartsColorString [
 
 	"Color for the main tick marks.
 In styled mode, the stroke is given in the .highcharts-tick
 class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aColor
+	configurationOptions at: 'tickColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
 HighchartsColorAxis >> tickInterval: aNumber [
 
-	"The interval of the tick marks in axis units. When null, the tick
-interval is computed to approximately follow the tickPixelInterval.
-Defaults to null."
+	"The interval of the tick marks in axis units. When null, the
+tick interval is computed to approximately follow the
+tickPixelInterval.
+"
 
 	configurationOptions at: 'tickInterval' put: aNumber
 ]
@@ -564,36 +660,37 @@ Defaults to outside."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> tickPositioner: aFunction [
+HighchartsColorAxis >> tickPositioner: aHighchartsAxisTickPositionerCallbackFunction [
 
 	"A callback function returning array defining where the ticks are
-laid out on the axis. This overrides the default behaviour of tickPixelInterval and tickInterval. The automatic
-tick positions are accessible through this.tickPositions and can
-be modified by the callback.
+laid out on the axis. This overrides the default behaviour of
+tickPixelInterval and tickInterval. The automatic tick positions are accessible
+through this.tickPositions and can be modified by the callback.
 "
 
-	configurationOptions at: 'tickPositioner' put: aFunction
+	configurationOptions at: 'tickPositioner' put: aHighchartsAxisTickPositionerCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> tickPositions: anArrayOfNumber [
+HighchartsColorAxis >> tickPositions: anArrayOfnumber [
 
 	"An array defining where the ticks are laid out on the axis. This
-overrides the default behaviour of tickPixelInterval
-and tickInterval.
+overrides the default behaviour of tickPixelInterval and tickInterval.
 "
 
-	configurationOptions at: 'tickPositions' put: anArrayOfNumber
+	configurationOptions at: 'tickPositions' put: anArrayOfnumber
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> tickWidth: aNumber [
+HighchartsColorAxis >> tickWidth: anUndefinedOrnumber [
 
-	"The pixel width of the major tick marks.
-In styled mode, the stroke width is given in the .highcharts-tick class.
+	"The pixel width of the major tick marks. Defaults to 0 on category
+axes, otherwise 1.
+In styled mode, the stroke width is given in the .highcharts-tick
+class.
 "
 
-	configurationOptions at: 'tickWidth' put: aNumber
+	configurationOptions at: 'tickWidth' put: anUndefinedOrnumber
 ]
 
 { #category : #accessing }
@@ -601,21 +698,21 @@ HighchartsColorAxis >> tickmarkPlacement: aString [
 
 	"For categorized axes only. If on the tick mark is placed in the
 center of the category, if between the tick mark is placed between
-categories. The default is between if the tickInterval is 1,
- else on.
+categories. The default is between if the tickInterval is 1, else
+on.
 Defaults to between."
 
 	configurationOptions at: 'tickmarkPlacement' put: aString
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> type: aString [
+HighchartsColorAxis >> type: aHighchartsColorAxisTypeValue [
 
-	"The type of interpolation to use for the color axis. Can be linear
-or logarithmic.
+	"The type of interpolation to use for the color axis. Can be
+linear or logarithmic.
 Defaults to linear."
 
-	configurationOptions at: 'type' put: aString
+	configurationOptions at: 'type' put: aHighchartsColorAxisTypeValue
 ]
 
 { #category : #accessing }
@@ -634,7 +731,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> units: anArray [
+HighchartsColorAxis >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 
 	"Datetime axis only. An array determining what time intervals the
 ticks are allowed to fall on. Each array item is an array where the
@@ -667,7 +764,7 @@ units: [[
 ]]
 "
 
-	configurationOptions at: 'units' put: anArray
+	configurationOptions at: 'units' put: anArrayOfArrayOfstringArrayOfnumberOrNil
 ]
 
 { #category : #accessing }

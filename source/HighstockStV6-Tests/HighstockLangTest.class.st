@@ -159,6 +159,20 @@ HighstockLangTest >> testMonths [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLangTest >> testNoData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component noData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'noData' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLangTest >> testNumericSymbolMagnitude [
 
 	| component javascript expectedConfiguration |
@@ -182,6 +196,20 @@ HighstockLangTest >> testNumericSymbols [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'numericSymbols' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangTest >> testOpenInCloud [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component openInCloud: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'openInCloud' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -322,6 +350,20 @@ HighstockLangTest >> testViewData [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'viewData' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangTest >> testViewFullscreen [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component viewFullscreen: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'viewFullscreen' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

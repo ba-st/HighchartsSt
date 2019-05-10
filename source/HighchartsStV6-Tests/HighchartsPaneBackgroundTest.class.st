@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsPaneBackgroundTest >> testBackgroundColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPaneBackground new.
+	component backgroundColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'backgroundColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPaneBackgroundTest >> testBorderColor [
 
 	| component javascript expectedConfiguration |

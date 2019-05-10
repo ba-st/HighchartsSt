@@ -8,20 +8,21 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPaneBackground >> backgroundColor [
+HighchartsPaneBackground >> backgroundColor: aHighchartsGradientColorObject [
 
 	"The background color or gradient for the pane.
-"
-	^configurationOptions at: 'backgroundColor' ifAbsentPut: [HighchartsPaneBackgroundBackgroundColor new]
+Defaults to { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, #ffffff], [1, #e6e6e6]] }."
+
+	configurationOptions at: 'backgroundColor' put: aHighchartsGradientColorObject
 ]
 
 { #category : #accessing }
-HighchartsPaneBackground >> borderColor: aColor [
+HighchartsPaneBackground >> borderColor: aHighchartsColorString [
 
 	"The pane background border color.
 Defaults to #cccccc."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -43,32 +44,32 @@ HighchartsPaneBackground >> className: aString [
 ]
 
 { #category : #accessing }
-HighchartsPaneBackground >> innerRadius: aNumberOrString [
+HighchartsPaneBackground >> innerRadius: aNumberOrstring [
 
 	"The inner radius of the pane background. Can be either numeric
 (pixels) or a percentage string.
 Defaults to 0."
 
-	configurationOptions at: 'innerRadius' put: aNumberOrString
+	configurationOptions at: 'innerRadius' put: aNumberOrstring
 ]
 
 { #category : #accessing }
-HighchartsPaneBackground >> outerRadius: aNumberOrString [
+HighchartsPaneBackground >> outerRadius: aNumberOrstring [
 
 	"The outer radius of the circular pane background. Can be either
 numeric (pixels) or a percentage string.
 Defaults to 105%."
 
-	configurationOptions at: 'outerRadius' put: aNumberOrString
+	configurationOptions at: 'outerRadius' put: aNumberOrstring
 ]
 
 { #category : #accessing }
-HighchartsPaneBackground >> shape: aString [
+HighchartsPaneBackground >> shape: aHighchartsPaneBackgroundShapeValue [
 
-	"Tha shape of the pane background. When solid, the background
+	"The shape of the pane background. When solid, the background
 is circular. When arc, the background extends only from the min
 to the max of the value axis.
-Defaults to solid."
+Defaults to circle."
 
-	configurationOptions at: 'shape' put: aString
+	configurationOptions at: 'shape' put: aHighchartsPaneBackgroundShapeValue
 ]

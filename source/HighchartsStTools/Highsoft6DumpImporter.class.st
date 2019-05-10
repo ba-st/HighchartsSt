@@ -92,13 +92,12 @@ Highsoft6DumpImporter >> addSeriesTypeSelectorOf: definedClass to: selectorsOfIn
 
 { #category : #'private - argument type' }
 Highsoft6DumpImporter >> argumentTypeFrom: anElement [
-
 	^ anElement
 		at: 'returnType'
 		ifPresent: [ :returnType | 
-			returnType
-				ifEmpty: [ 'anObject' ]
-				ifNotEmpty: [ self compositeArgumentTypeFrom: returnType ] ]
+			((returnType includesSubstring: '*') or: [ returnType isEmpty ])
+				ifTrue: [ 'anObject' ]
+				ifFalse: [ self compositeArgumentTypeFrom: returnType ] ]
 		ifAbsent: [ 'anObject' ]
 ]
 
@@ -148,17 +147,24 @@ Highsoft6DumpImporter >> componentClassNameFor: parent [
 
 { #category : #'private - argument type' }
 Highsoft6DumpImporter >> compositeArgumentTypeFrom: aTypeString [
-
 	| type |
-
 	type := aTypeString.
 	type := self format: self collectionTypeRegex asCollectionIn: type.
 	type := type copyReplaceAll: '|' with: 'Or'.
 	type := type copyReplaceAll: 'function' with: 'Function'.
-	type := type copyWithoutAll: '()'.
+	type := type copyReplaceAll: '"auto"' with: 'String'.
+	type := type copyReplaceAll: '"default"' with: 'String'.
+	type := type copyReplaceAll: 'null' with: 'Nil'.
+	type := type copyReplaceAll: '<' with: 'Of'.
+	type := type copyWithoutAll: '()>,"'.
 	type := self format: self collectionTypeRegex asCollectionIn: type.
 	type := self descriptiveArgumentFrom: type.
-	type := type copyWithoutAll: '.'.	
+	type := type copyWithoutAll: '.'.
+	type := type reject: [ :character | character isSeparator ].
+	AssertionChecker
+		enforce: [ type
+				allSatisfy: [ :character | character isAlphaNumeric or: [ character = $_ ] ] ]
+		because: [ 'Argument names must be alpha numeric' ].
 	^ type
 ]
 
@@ -493,9 +499,10 @@ Highsoft6DumpImporter >> isOfInterest: anElement [
 { #category : #'private - processing' }
 Highsoft6DumpImporter >> logToOutput: aText [
 
-	FileStream stdout
+	Stdio stdout 
 		nextPutAll: ('<1s> - <2s>' expandMacrosWith: DateAndTime now greaseString with: aText);
-		cr
+		cr;
+		flush
 ]
 
 { #category : #'private - processing' }

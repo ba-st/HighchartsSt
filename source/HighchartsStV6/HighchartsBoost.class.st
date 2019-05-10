@@ -44,7 +44,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsBoost >> seriesThreshold: aString [
+HighchartsBoost >> seriesThreshold: aNumberOrnull [
 
 	"Set the series threshold for when the boost should kick in globally.
 Setting to e.g. 20 will cause the whole chart to enter boost mode
@@ -54,7 +54,7 @@ a significant speed improvment in charts with a very high
 amount of series.
 Defaults to null."
 
-	configurationOptions at: 'seriesThreshold' put: aString
+	configurationOptions at: 'seriesThreshold' put: aNumberOrnull
 ]
 
 { #category : #accessing }
@@ -69,4 +69,21 @@ precission.
 Defaults to false."
 
 	configurationOptions at: 'useGPUTranslations' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsBoost >> usePreallocated: aBoolean [
+
+	"Enable or disable pre-allocation of vertex buffers.
+Enabling this will make it so that the binary data arrays required for
+storing the series data will be allocated prior to transforming the data
+to a WebGL-compatible format.
+This saves a copy operation on the order of O(n) and so is significantly more
+performant. However, this is currently an experimental option, and may cause
+visual artifacts with some datasets.
+As such, care should be taken when using this setting to make sure that
+it doesn´t cause any rendering glitches with the given use-case.
+Defaults to false."
+
+	configurationOptions at: 'usePreallocated' put: aBoolean
 ]

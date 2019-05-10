@@ -15,14 +15,14 @@ Class {
 }
 
 { #category : #accessing }
-HighstockGlobal >> Date: anObject [
+HighstockGlobal >> Date: aFunction [
 
-	"A custom Date class for advanced date handling. For example,
-JDate can be hooked in to
-handle Jalali dates.
+	"This option is deprecated since v6.0.5. Instead, use
+time.Date that supports individual time settings
+per chart.
 "
 
-	configurationOptions at: 'Date' put: anObject
+	configurationOptions at: 'Date' put: aFunction
 ]
 
 { #category : #accessing }
@@ -38,11 +38,9 @@ draw radial gradients.
 { #category : #accessing }
 HighstockGlobal >> getTimezoneOffset: aFunction [
 
-	"A callback to return the time zone offset for a given datetime. It
-takes the timestamp in terms of milliseconds since January 1 1970,
-and returns the timezone offset in minutes. This provides a hook
-for drawing time based charts in specific time zones using their
-local DST crossover dates, with the help of external libraries.
+	"This option is deprecated since v6.0.5. Instead, use
+time.getTimezoneOffset that supports
+individual time settings per chart.
 "
 
 	configurationOptions at: 'getTimezoneOffset' put: aFunction
@@ -51,13 +49,10 @@ local DST crossover dates, with the help of external libraries.
 { #category : #accessing }
 HighstockGlobal >> timezone: aString [
 
-	"Requires moment.js. If the timezone option
-is specified, it creates a default
-getTimezoneOffset function that looks
-up the specified timezone in moment.js. If moment.js is not included,
-this throws a Highcharts error in the console, but does not crash the
-chart.
-Defaults to undefined."
+	"This option is deprecated since v6.0.5. Instead, use
+time.timezone that supports individual time
+settings per chart.
+"
 
 	configurationOptions at: 'timezone' put: aString
 ]
@@ -65,10 +60,10 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockGlobal >> timezoneOffset: aNumber [
 
-	"The timezone offset in minutes. Positive values are west, negative
-values are east of UTC, as in the ECMAScript getTimezoneOffset
-method. Use this to display UTC based data in a predefined time zone.
-Defaults to 0."
+	"This option is deprecated since v6.0.5. Instead, use
+time.timezoneOffset that supports individual
+time settings per chart.
+"
 
 	configurationOptions at: 'timezoneOffset' put: aNumber
 ]
@@ -76,13 +71,10 @@ Defaults to 0."
 { #category : #accessing }
 HighstockGlobal >> useUTC: aBoolean [
 
-	"Whether to use UTC time for axis scaling, tickmark placement and
-time display in Highcharts.dateFormat. Advantages of using UTC
-is that the time displays equally regardless of the user agent´s
-time zone settings. Local time can be used when the data is loaded
-in real time or when correct Daylight Saving Time transitions are
-required.
-Defaults to true."
+	"This option is deprecated since v6.0.5. Instead, use
+time.useUTC that supports individual time settings
+per chart.
+"
 
 	configurationOptions at: 'useUTC' put: aBoolean
 ]

@@ -172,9 +172,10 @@ Highsoft6TestGenerator >> isForTestingJavascriptContent: aChange [
 { #category : #'private - processing' }
 Highsoft6TestGenerator >> logToOutput: aText [
 
-	FileStream stdout
+	Stdio stdout
 		nextPutAll: ('<1s> - <2s>' expandMacrosWith: DateAndTime now greaseString with: aText);
-		cr
+		cr;
+		flush
 ]
 
 { #category : #'private - processing' }

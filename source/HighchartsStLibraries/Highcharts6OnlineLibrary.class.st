@@ -23,5 +23,5 @@ Highcharts6OnlineLibrary >> updateRoot: aRoot [
 { #category : #versions }
 Highcharts6OnlineLibrary >> version [
 
-	^ '6.0.3'
+	^ '7.1.1'
 ]

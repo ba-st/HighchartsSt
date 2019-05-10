@@ -14,7 +14,17 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsData >> columns: anArrayOfArrayOfMixed [
+HighchartsData >> beforeParse: aHighchartsDataBeforeParseCallbackFunction [
+
+	"A callback function to modify the CSV before parsing it. Return the modified
+string.
+"
+
+	configurationOptions at: 'beforeParse' put: aHighchartsDataBeforeParseCallbackFunction
+]
+
+{ #category : #accessing }
+HighchartsData >> columns: anObject [
 
 	"A two-dimensional array representing the input data on tabular form.
 This input can be used when the data is already parsed, for example
@@ -23,11 +33,21 @@ If not switchRowsAndColumns is set, the columns are interpreted as
 series.
 "
 
-	configurationOptions at: 'columns' put: anArrayOfArrayOfMixed
+	configurationOptions at: 'columns' put: anObject
 ]
 
 { #category : #accessing }
-HighchartsData >> complete: aFunction [
+HighchartsData >> columnsURL: aString [
+
+	"A URL to a remote JSON dataset, structured as a column array.
+Will be fetched when the chart is created using Ajax.
+"
+
+	configurationOptions at: 'columnsURL' put: aString
+]
+
+{ #category : #accessing }
+HighchartsData >> complete: aHighchartsDataCompleteCallbackFunction [
 
 	"The callback that is evaluated when the data is finished loading,
 optionally from an external source, and parsed. The first argument
@@ -36,7 +56,7 @@ These options can be extended with additional options and passed
 directly to the chart constructor.
 "
 
-	configurationOptions at: 'complete' put: aFunction
+	configurationOptions at: 'complete' put: aHighchartsDataCompleteCallbackFunction
 ]
 
 { #category : #accessing }
@@ -56,18 +76,38 @@ library.
 ]
 
 { #category : #accessing }
+HighchartsData >> csvURL: aString [
+
+	"An URL to a remote CSV dataset. Will be fetched when the chart is created
+using Ajax.
+"
+
+	configurationOptions at: 'csvURL' put: aString
+]
+
+{ #category : #accessing }
+HighchartsData >> dataRefreshRate: aNumber [
+
+	"Sets the refresh rate for data polling when importing remote dataset by
+setting data.csvURL, data.rowsURL,
+data.columnsURL, or
+data.googleSpreadsheetKey.
+Note that polling must be enabled by setting
+data.enablePolling to true.
+The value is the number of seconds between pollings.
+It cannot be set to less than 1 second.
+Defaults to 1."
+
+	configurationOptions at: 'dataRefreshRate' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsData >> dateFormat: aString [
 
 	"Which of the predefined date formats in Date.prototype.dateFormats
 to use to parse date values. Defaults to a best guess based on what
-format gives valid and ordered dates.
-Valid options include:
-
-YYYY/mm/dd
-dd/mm/YYYY
-mm/dd/YYYY
-dd/mm/YY
-mm/dd/YY
+format gives valid and ordered dates. Valid options include: YYYY/mm/dd,
+dd/mm/YYYY, mm/dd/YYYY, dd/mm/YY, mm/dd/YY.
 "
 
 	configurationOptions at: 'dateFormat' put: aString
@@ -77,11 +117,24 @@ mm/dd/YY
 HighchartsData >> decimalPoint: aString [
 
 	"The decimal point used for parsing numbers in the CSV.
-If both this and data.delimiter is set to false, the parser will
+If both this and data.delimiter is set to undefined, the parser will
 attempt to deduce the decimal point automatically.
 Defaults to .."
 
 	configurationOptions at: 'decimalPoint' put: aString
+]
+
+{ #category : #accessing }
+HighchartsData >> enablePolling: aBoolean [
+
+	"Enables automatic refetching of remote datasets every n seconds (defined by
+setting data.dataRefreshRate).
+Only works when either data.csvURL,
+data.rowsURL, data.columnsURL, or
+data.googleSpreadsheetKey.
+Defaults to false."
+
+	configurationOptions at: 'enablePolling' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -126,8 +179,9 @@ on GS.
 { #category : #accessing }
 HighchartsData >> googleSpreadsheetWorksheet: aString [
 
-	"The Google Spreadsheet worksheet to use in combination with googleSpreadsheetKey. The available id´s from your sheet can be
-read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic
+	"The Google Spreadsheet worksheet to use in combination with
+googleSpreadsheetKey. The available id´s from
+your sheet can be read from https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic.
 "
 
 	configurationOptions at: 'googleSpreadsheetWorksheet' put: aString
@@ -156,45 +210,55 @@ Defaults to \n."
 ]
 
 { #category : #accessing }
-HighchartsData >> parseDate: aFunction [
+HighchartsData >> parseDate: aHighchartsDataParseDateCallbackFunction [
 
 	"A callback function to parse string representations of dates into
 JavaScript timestamps. Should return an integer timestamp on success.
 "
 
-	configurationOptions at: 'parseDate' put: aFunction
+	configurationOptions at: 'parseDate' put: aHighchartsDataParseDateCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsData >> parsed: aFunction [
+HighchartsData >> parsed: aHighchartsDataParsedCallbackFunction [
 
 	"A callback function to access the parsed columns, the two-dimentional
 input data array directly, before they are interpreted into series
-data and categories. Return false to stop completion, or call this.
-complete() to continue async.
+data and categories. Return false to stop completion, or call
+this.complete() to continue async.
 "
 
-	configurationOptions at: 'parsed' put: aFunction
+	configurationOptions at: 'parsed' put: aHighchartsDataParsedCallbackFunction
 ]
 
 { #category : #accessing }
-HighchartsData >> rows: anArrayOfArrayOfMixed [
+HighchartsData >> rows: anObject [
 
 	"The same as the columns input option, but defining rows intead of
 columns.
 "
 
-	configurationOptions at: 'rows' put: anArrayOfArrayOfMixed
+	configurationOptions at: 'rows' put: anObject
 ]
 
 { #category : #accessing }
-HighchartsData >> seriesMapping: anArrayOfObject [
+HighchartsData >> rowsURL: aString [
 
-	"An array containing object with Point property names along with what
-column id the property should be taken from.
+	"A URL to a remote JSON dataset, structured as a row array.
+Will be fetched when the chart is created using Ajax.
 "
 
-	configurationOptions at: 'seriesMapping' put: anArrayOfObject
+	configurationOptions at: 'rowsURL' put: aString
+]
+
+{ #category : #accessing }
+HighchartsData >> seriesMapping: anArrayOfHighchartsDictionaryOfnumber [
+
+	"An array containing dictionaries for each series. A dictionary exists of
+Point property names as the key and the CSV column index as the value.
+"
+
+	configurationOptions at: 'seriesMapping' put: anArrayOfHighchartsDictionaryOfnumber
 ]
 
 { #category : #accessing }
@@ -227,12 +291,12 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsData >> table: aStringOrHTMLElement [
+HighchartsData >> table: aStringOrglobalHTMLElement [
 
-	"A HTML table or the id of such to be parsed as input data. Related
+	"An HTML table or the id of such to be parsed as input data. Related
 options are startRow, endRow, startColumn and endColumn to
 delimit what part of the table is used.
 "
 
-	configurationOptions at: 'table' put: aStringOrHTMLElement
+	configurationOptions at: 'table' put: aStringOrglobalHTMLElement
 ]

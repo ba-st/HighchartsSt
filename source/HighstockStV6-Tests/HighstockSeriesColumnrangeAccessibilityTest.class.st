@@ -1,0 +1,61 @@
+Class {
+	#name : #HighstockSeriesColumnrangeAccessibilityTest,
+	#superclass : #TestCase,
+	#category : #'HighstockStV6-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnrangeAccessibilityTest >> testDescription [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnrangeAccessibility new.
+	component description: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'description' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnrangeAccessibilityTest >> testEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnrangeAccessibility new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnrangeAccessibilityTest >> testExposeAsGroupOnly [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnrangeAccessibility new.
+	component exposeAsGroupOnly: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exposeAsGroupOnly' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnrangeAccessibilityTest >> testPointDescriptionFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnrangeAccessibility new.
+	component pointDescriptionFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pointDescriptionFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

@@ -1,0 +1,14 @@
+Class {
+	#name : #HighchartsPlotOptionsStreamgraphStatesSelectMarkerStatesInactive,
+	#superclass : #HighchartsComponent,
+	#category : #HighchartsStV6
+}
+
+{ #category : #accessing }
+HighchartsPlotOptionsStreamgraphStatesSelectMarkerStatesInactive >> opacity: anObject [
+
+	"Opacity of inactive markers.
+"
+
+	configurationOptions at: 'opacity' put: anObject
+]

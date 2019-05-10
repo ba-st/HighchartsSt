@@ -11,13 +11,13 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsSubtitle >> align: aString [
+HighchartsSubtitle >> align: aHighchartsAlignValue [
 
 	"The horizontal alignment of the subtitle. Can be one of &quot;left&quot;,
  &quot;center&quot; and &quot;right&quot;.
 Defaults to center."
 
-	configurationOptions at: 'align' put: aString
+	configurationOptions at: 'align' put: aHighchartsAlignValue
 ]
 
 { #category : #accessing }
@@ -31,13 +31,14 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsSubtitle >> style: aCSSObject [
+HighchartsSubtitle >> style: aHighchartsCSSObject [
 
 	"CSS styles for the title.
-In styled mode, the subtitle style is given in the .highcharts-subtitle class.
-Defaults to { 'color': '#666666' }."
+In styled mode, the subtitle style is given in the
+.highcharts-subtitle class.
+Defaults to {'color': '#666666'}."
 
-	configurationOptions at: 'style' put: aCSSObject
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -52,20 +53,23 @@ Defaults to ."
 { #category : #accessing }
 HighchartsSubtitle >> useHTML: aBoolean [
 
-	"Whether to use HTML to render the text.
+	"Whether to
+use HTML
+to render the text.
 Defaults to false."
 
 	configurationOptions at: 'useHTML' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsSubtitle >> verticalAlign: aString [
+HighchartsSubtitle >> verticalAlign: aHighchartsVerticalAlignValue [
 
-	"The vertical alignment of the title. Can be one of &quot;top&quot;, &quot;middle&quot;
-and &quot;bottom&quot;. When a value is given, the title behaves as floating.
+	"The vertical alignment of the title. Can be one of &quot;top&quot;,
+&quot;middle&quot; and &quot;bottom&quot;. When a value is given, the title behaves
+as floating.
 "
 
-	configurationOptions at: 'verticalAlign' put: aString
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
 ]
 
 { #category : #accessing }
@@ -81,8 +85,8 @@ Defaults to -44."
 { #category : #accessing }
 HighchartsSubtitle >> x: aNumber [
 
-	"The x position of the subtitle relative to the alignment within chart.
-spacingLeft and chart.spacingRight.
+	"The x position of the subtitle relative to the alignment within
+chart.spacingLeft and chart.spacingRight.
 Defaults to 0."
 
 	configurationOptions at: 'x' put: aNumber
@@ -91,9 +95,9 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSubtitle >> y: aNumber [
 
-	"The y position of the subtitle relative to the alignment within chart.
-spacingTop and chart.spacingBottom. By default the subtitle is laid
-out below the title unless the title is floating.
+	"The y position of the subtitle relative to the alignment within
+chart.spacingTop and chart.spacingBottom. By default the subtitle
+is laid out below the title unless the title is floating.
 "
 
 	configurationOptions at: 'y' put: aNumber

@@ -8,7 +8,7 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigatorSeriesDataGrouping >> approximation: aStringOrFunction [
+HighstockNavigatorSeriesDataGrouping >> approximation: aString [
 
 	"The method of approximation inside a group. When for example 30 days
 are grouped into one month, this determines what value should represent
@@ -35,7 +35,7 @@ Defaults to average for line-type series, sum for columns, range
 for range series and ohlc for OHLC and candlestick.
 Defaults to average."
 
-	configurationOptions at: 'approximation' put: aStringOrFunction
+	configurationOptions at: 'approximation' put: aString
 ]
 
 { #category : #accessing }
@@ -46,7 +46,9 @@ The format can vary within a chart depending on the currently selected
 time range and the current data grouping.
 The default formats are:
 {
-    millisecond: ['A, b e, H:M:S.L', 'A, b e, H:M:S.L', '-H:M:S.L'],
+    millisecond: [
+        'A, b e, H:M:S.L', 'A, b e, H:M:S.L', '-H:M:S.L'
+    ],
     second: ['A, b e, H:M:S', 'A, b e, H:M:S', '-H:M:S'],
     minute: ['A, b e, H:M', 'A, b e, H:M', '-H:M'],
     hour: ['A, b e, H:M', 'A, b e, H:M', '-H:M'],
@@ -89,6 +91,20 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighstockNavigatorSeriesDataGrouping >> groupAll: aBoolean [
+
+	"By default only points within the visible range are grouped. Enabling this
+option will force data grouping to calculate all grouped points for a given
+dataset. That option prevents for example a column series from calculating
+a grouped point partially. The effect is similar to
+Series.getExtremesFromAll but does
+not affect yAxis extremes.
+Defaults to false."
+
+	configurationOptions at: 'groupAll' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockNavigatorSeriesDataGrouping >> groupPixelWidth: aNumber [
 
 	"The approximate pixel width of each group. If for example a series
@@ -121,7 +137,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockNavigatorSeriesDataGrouping >> units: anArray [
+HighstockNavigatorSeriesDataGrouping >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 
 	"An array determining what time intervals the data is allowed to be
 grouped to. Each array item is an array where the first value is
@@ -154,5 +170,5 @@ units: [[
 ]]
 "
 
-	configurationOptions at: 'units' put: anArray
+	configurationOptions at: 'units' put: anArrayOfArrayOfstringArrayOfnumberOrNil
 ]
