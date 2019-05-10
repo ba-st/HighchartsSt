@@ -70,7 +70,7 @@ if [ -z "$product" ] ; then
 fi
 
 if [ "$force" == "true" ]; then
-    rm -rf $directory/$version/$product
+    rm -rf ${directory:?}/$version/$product
 fi
 
 
@@ -80,57 +80,35 @@ wget -nc --quiet https://code.highcharts.com/zips/$product-$version.zip
 unzip -q -o $product-$version.zip
 
 
-## Styled version version (we need to grab from /code/js and take css too)
-
-styledDirectory=$directory/$version/$product/styled
-mkdir -p $styledDirectory/development/themes
-mkdir -p $styledDirectory/development/modules
-mkdir -p $styledDirectory/development/css
-mkdir -p $styledDirectory/deployment/themes
-mkdir -p $styledDirectory/deployment/modules
-mkdir -p $styledDirectory/deployment/css
-
-mv code/js/*.src.js $styledDirectory/development/
-mv code/js/modules/*.src.js $styledDirectory/development/modules/
-mv code/js/themes/*.src.js $styledDirectory/development/themes/
-cp code/css/*.css $styledDirectory/development/css/
-
-mv code/js/*.js $styledDirectory/deployment/
-mv code/js/*.map $styledDirectory/deployment/
-mv code/js/modules/*.js $styledDirectory/deployment/modules/
-mv code/js/modules/*.map $styledDirectory/deployment/modules/
-mv code/js/themes/*.js $styledDirectory/deployment/themes/
-mv code/js/themes/*.map $styledDirectory/deployment/themes/
-cp code/css/*.css $styledDirectory/deployment/css/
-
-
 ## Old mode (we need to grab from /code and no css)
 
-oldModeDirectory=$directory/$version/$product/oldMode
-mkdir -p $oldModeDirectory/development/themes
-mkdir -p $oldModeDirectory/development/modules
-mkdir -p $oldModeDirectory/deployment/themes
-mkdir -p $oldModeDirectory/deployment/modules
+exportDirectory=$directory/$version/$product
+mkdir -p $exportDirectory/development/themes
+mkdir -p $exportDirectory/development/modules
+mkdir -p $exportDirectory/development/css
+mkdir -p $exportDirectory/deployment/themes
+mkdir -p $exportDirectory/deployment/modules
+mkdir -p $exportDirectory/deployment/css
 
-mv code/*.src.js $oldModeDirectory/development/
-mv code/modules/*.src.js $oldModeDirectory/development/modules/
-mv code/themes/*.src.js $oldModeDirectory/development/themes/
+mv code/*.src.js $exportDirectory/development/
+mv code/modules/*.src.js $exportDirectory/development/modules/
+mv code/themes/*.src.js $exportDirectory/development/themes/
+cp code/css/*.css $exportDirectory/development/css/
 
-mv code/*.js $oldModeDirectory/deployment/
-mv code/*.map $oldModeDirectory/deployment/
-mv code/modules/*.js $oldModeDirectory/deployment/modules/
-mv code/modules/*.map $oldModeDirectory/deployment/modules/
-mv code/themes/*.js $oldModeDirectory/deployment/themes/
-mv code/themes/*.map $oldModeDirectory/deployment/themes/
+mv code/*.js $exportDirectory/deployment/
+mv code/*.map $exportDirectory/deployment/
+mv code/modules/*.js $exportDirectory/deployment/modules/
+mv code/modules/*.map $exportDirectory/deployment/modules/
+mv code/themes/*.js $exportDirectory/deployment/themes/
+mv code/themes/*.map $exportDirectory/deployment/themes/
+mv code/css/*.css $exportDirectory/deployment/css/
 
 rm -rf $directory/$version/$product/tmp
 
 cat << EOF
 You can now update Seaside's file libraries this way:
 
-${product}6DeploymentMetadataLibrary recursivelyAddAllFilesIn: '$styledDirectory/deployment/'.
-${product}6DevelopmentMetadataLibrary recursivelyAddAllFilesIn: '$styledDirectory/development/'.
-${product}6ClassicModeDeploymentMetadataLibrary recursivelyAddAllFilesIn: '$oldModeDirectory/deployment/'.
-${product}6ClassicModeDevelopmentMetadataLibrary recursivelyAddAllFilesIn: '$oldModeDirectory/development/'.
+${product}6DeploymentMetadataLibrary recursivelyAddAllFilesIn: '$exportDirectory/deployment/'.
+${product}6DevelopmentMetadataLibrary recursivelyAddAllFilesIn: '$exportDirectory/development/'.
 
 EOF
