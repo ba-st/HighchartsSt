@@ -10,5 +10,5 @@ Class {
 { #category : #'tests-versions' }
 Highstock6OnlineLibraryTest >> testVersion [
 
-	self assert: Highstock6OnlineLibrary new version equals: '6.0.3'
+	self assert: Highstock6OnlineLibrary new version equals: '7.1.1'
 ]

@@ -3,13 +3,13 @@ Importer for the Highstock version 6 protocol based on a dump.json
 https://api.highcharts.com/highstock/dump.json
 "
 Class {
-	#name : #Highstock6DumpImporter,
-	#superclass : #Highsoft6DumpImporter,
-	#category : 'HighchartsStTools'
+	#name : #Highstock7DumpImporter,
+	#superclass : #Highsoft7DumpImporter,
+	#category : #HighchartsStTools
 }
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString [
+Highstock7DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString [
 
 	^ anElement
 		at: 'parent'
@@ -18,13 +18,13 @@ Highstock6DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> classNameInvolvedInChangeToAccess: anElement [
+Highstock7DumpImporter >> classNameInvolvedInChangeToAccess: anElement [
 
 	^ self classNameInvolvedIn: anElement expandedWith: ''
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> componentClassNameFor: parent [
+Highstock7DumpImporter >> componentClassNameFor: parent [
 
 	| className |
 
@@ -39,7 +39,7 @@ Highstock6DumpImporter >> componentClassNameFor: parent [
 ]
 
 { #category : #'private - custom changes' }
-Highstock6DumpImporter >> generateCustomChanges [
+Highstock7DumpImporter >> generateCustomChanges [
 
 	self logToOutput: 'Custom Changes - Started'.
 	self generateCustomClassChangeOf: 'Highstock' for: 'Highstock'.
@@ -50,7 +50,7 @@ Highstock6DumpImporter >> generateCustomChanges [
 ]
 
 { #category : #'private - custom changes' }
-Highstock6DumpImporter >> generateCustomHighchartsNamespaceChanges [
+Highstock7DumpImporter >> generateCustomHighchartsNamespaceChanges [
 
 	self
 		generateCustomMethodChangeIn: 'HighchartsNamespace'
@@ -63,7 +63,7 @@ Highstock6DumpImporter >> generateCustomHighchartsNamespaceChanges [
 ]
 
 { #category : #'private - custom changes' }
-Highstock6DumpImporter >> generateCustomHighstockChanges [
+Highstock7DumpImporter >> generateCustomHighstockChanges [
 
 	self
 		generateCustomMethodChangeIn: 'Highstock'
@@ -96,7 +96,7 @@ Highstock6DumpImporter >> generateCustomHighstockChanges [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> highstockAddSeriesOfSourceCode [
+Highstock7DumpImporter >> highstockAddSeriesOfSourceCode [
 
 	^ 'addSeriesOf: aSeriesType
 
@@ -109,7 +109,7 @@ Highstock6DumpImporter >> highstockAddSeriesOfSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> highstockAddYAxisSourceCode [
+Highstock7DumpImporter >> highstockAddYAxisSourceCode [
 
 	^ 'addYAxis
 
@@ -122,7 +122,7 @@ Highstock6DumpImporter >> highstockAddYAxisSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> highstockConfigureIdSourceCode [
+Highstock7DumpImporter >> highstockConfigureIdSourceCode [
 
 	^ 'id: anId
 
@@ -133,7 +133,7 @@ Highstock6DumpImporter >> highstockConfigureIdSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> highstockInitializeSourceCode [
+Highstock7DumpImporter >> highstockInitializeSourceCode [
 
 	^ 'initialize
 
@@ -143,7 +143,7 @@ Highstock6DumpImporter >> highstockInitializeSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> highstockSeriesSourceCode [
+Highstock7DumpImporter >> highstockSeriesSourceCode [
 
 	^ 'series
 
@@ -151,7 +151,7 @@ Highstock6DumpImporter >> highstockSeriesSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> highstockYAxisSetterSourceCode [
+Highstock7DumpImporter >> highstockYAxisSetterSourceCode [
 
 	^ 'yAxis: aHighchartsYAxis
 
@@ -164,7 +164,7 @@ Highstock6DumpImporter >> highstockYAxisSetterSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> highstockYAxisSourceCode [
+Highstock7DumpImporter >> highstockYAxisSourceCode [
 
 	^ 'yAxis
 
@@ -177,26 +177,26 @@ Highstock6DumpImporter >> highstockYAxisSourceCode [
 ]
 
 { #category : #initialization }
-Highstock6DumpImporter >> initializeProduct [
+Highstock7DumpImporter >> initializeProduct [
 
-	packageName := 'HighstockStV6'.
+	packageName := 'HighstockSt-V7'.
 	productName := 'highstock'
 ]
 
 { #category : #'private - testing' }
-Highstock6DumpImporter >> isOfInterest: anElement [
+Highstock7DumpImporter >> isOfInterest: anElement [
 
 	^ true
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> seriesClassName [
+Highstock7DumpImporter >> seriesClassName [
 
 	^ 'HighstockSeries'
 ]
 
 { #category : #'private - accessing' }
-Highstock6DumpImporter >> sourceCodeToInstance: aClassName [
+Highstock7DumpImporter >> sourceCodeToInstance: aClassName [
 
 	^ '<1s> new' expandMacrosWith: aClassName
 ]

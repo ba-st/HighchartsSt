@@ -3,13 +3,13 @@ Importer for the Highcharts version 6 protocol based on a dump.json
 https://api.highcharts.com/highcharts/dump.json
 "
 Class {
-	#name : #Highcharts6DumpImporter,
-	#superclass : #Highsoft6DumpImporter,
-	#category : 'HighchartsStTools'
+	#name : #Highcharts7DumpImporter,
+	#superclass : #Highsoft7DumpImporter,
+	#category : #HighchartsStTools
 }
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString [
+Highcharts7DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString [
 
 	^ anElement
 		at: 'parent'
@@ -18,13 +18,13 @@ Highcharts6DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString 
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> classNameInvolvedInChangeToAccess: anElement [
+Highcharts7DumpImporter >> classNameInvolvedInChangeToAccess: anElement [
 
 	^ self classNameInvolvedIn: anElement expandedWith: 's'
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> componentClassNameFor: parent [
+Highcharts7DumpImporter >> componentClassNameFor: parent [
 
 	| className |
 
@@ -39,7 +39,7 @@ Highcharts6DumpImporter >> componentClassNameFor: parent [
 ]
 
 { #category : #'private - custom changes' }
-Highcharts6DumpImporter >> generateCustomChanges [
+Highcharts7DumpImporter >> generateCustomChanges [
 
 	self logToOutput: 'Custom Changes - Started'.
 	self generateCustomClassChangeOf: 'Highchart' for: 'Highchart'.
@@ -52,7 +52,7 @@ Highcharts6DumpImporter >> generateCustomChanges [
 ]
 
 { #category : #'private - custom changes' }
-Highcharts6DumpImporter >> generateCustomHighchartChanges [
+Highcharts7DumpImporter >> generateCustomHighchartChanges [
 
 	self
 		generateCustomMethodChangeIn: 'Highchart'
@@ -85,7 +85,7 @@ Highcharts6DumpImporter >> generateCustomHighchartChanges [
 ]
 
 { #category : #'private - custom changes' }
-Highcharts6DumpImporter >> generateCustomHighchartsNamespaceChanges [
+Highcharts7DumpImporter >> generateCustomHighchartsNamespaceChanges [
 
 	self
 		generateCustomMethodChangeIn: 'HighchartsNamespace'
@@ -98,7 +98,7 @@ Highcharts6DumpImporter >> generateCustomHighchartsNamespaceChanges [
 ]
 
 { #category : #'private - custom changes' }
-Highcharts6DumpImporter >> generateCustomLabelsChanges [
+Highcharts7DumpImporter >> generateCustomLabelsChanges [
 
 	self
 		generateCustomMethodChangeIn: 'HighchartsXAxisLabels'
@@ -107,7 +107,7 @@ Highcharts6DumpImporter >> generateCustomLabelsChanges [
 ]
 
 { #category : #'private - custom changes' }
-Highcharts6DumpImporter >> generateCustomLegendChanges [
+Highcharts7DumpImporter >> generateCustomLegendChanges [
 
 	self
 		generateCustomMethodChangeIn: 'HighchartsLegend'
@@ -116,7 +116,7 @@ Highcharts6DumpImporter >> generateCustomLegendChanges [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartAddSeriesOfSourceCode [
+Highcharts7DumpImporter >> highchartAddSeriesOfSourceCode [
 
 	^ 'addSeriesOf: aSeriesType
 
@@ -129,7 +129,7 @@ Highcharts6DumpImporter >> highchartAddSeriesOfSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartAddYAxisSourceCode [
+Highcharts7DumpImporter >> highchartAddYAxisSourceCode [
 
 	^ 'addYAxis
 
@@ -142,7 +142,7 @@ Highcharts6DumpImporter >> highchartAddYAxisSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartConfigureIdSourceCode [
+Highcharts7DumpImporter >> highchartConfigureIdSourceCode [
 
 	^ 'id: anId
 
@@ -153,7 +153,7 @@ Highcharts6DumpImporter >> highchartConfigureIdSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartInitializeSourceCode [
+Highcharts7DumpImporter >> highchartInitializeSourceCode [
 
 	^ 'initialize
 
@@ -163,7 +163,7 @@ Highcharts6DumpImporter >> highchartInitializeSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartSeriesSourceCode [
+Highcharts7DumpImporter >> highchartSeriesSourceCode [
 
 	^ 'series
 
@@ -171,7 +171,7 @@ Highcharts6DumpImporter >> highchartSeriesSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartYAxisSetterSourceCode [
+Highcharts7DumpImporter >> highchartYAxisSetterSourceCode [
 
 	^ 'yAxis: aHighchartsYAxis
 
@@ -184,7 +184,7 @@ Highcharts6DumpImporter >> highchartYAxisSetterSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartYAxisSourceCode [
+Highcharts7DumpImporter >> highchartYAxisSourceCode [
 
 	^ 'yAxis
 
@@ -197,7 +197,7 @@ Highcharts6DumpImporter >> highchartYAxisSourceCode [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartsLegendItemStyleSetterSourceCode [
+Highcharts7DumpImporter >> highchartsLegendItemStyleSetterSourceCode [
 
 	^ 'itemStyle: aCssDeclarationBlock
 
@@ -208,7 +208,7 @@ Defaults to { ''color'': ''#333333'', ''cursor'': ''pointer'', ''fontSize'': ''1
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> highchartsXAxisLabelsStyleSetterSourceCode [
+Highcharts7DumpImporter >> highchartsXAxisLabelsStyleSetterSourceCode [
 
 	^ 'style: aCssDeclarationBlock
 
@@ -219,14 +219,14 @@ In styled mode, the labels are styled with the .highcharts-axis-labels class."
 ]
 
 { #category : #initialization }
-Highcharts6DumpImporter >> initializeProduct [
+Highcharts7DumpImporter >> initializeProduct [
 
-	packageName := 'HighchartsStV6'.
+	packageName := 'HighchartsSt-V7'.
 	productName := 'highcharts'
 ]
 
 { #category : #'private - testing' }
-Highcharts6DumpImporter >> isOfInterest: anElement [
+Highcharts7DumpImporter >> isOfInterest: anElement [
 
 	"Protocol related to Ichimoku Kinko Hyo (IKH) is only relevant to Highstock, but the dump.json does not indicate this, so we must do it manually."
 
@@ -234,13 +234,13 @@ Highcharts6DumpImporter >> isOfInterest: anElement [
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> seriesClassName [
+Highcharts7DumpImporter >> seriesClassName [
 
 	^ 'HighchartsSeries'
 ]
 
 { #category : #'private - accessing' }
-Highcharts6DumpImporter >> sourceCodeToInstance: aClassName [
+Highcharts7DumpImporter >> sourceCodeToInstance: aClassName [
 
 	| elementName |
 

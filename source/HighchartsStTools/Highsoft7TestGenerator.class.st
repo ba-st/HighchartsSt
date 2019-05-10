@@ -2,7 +2,7 @@
 A test generator for the protocol created by the importers.
 "
 Class {
-	#name : #Highsoft6TestGenerator,
+	#name : #Highsoft7TestGenerator,
 	#superclass : #Object,
 	#instVars : [
 		'packageSet',
@@ -10,17 +10,17 @@ Class {
 		'methodChanges',
 		'seriesClassName'
 	],
-	#category : 'HighchartsStTools'
+	#category : #HighchartsStTools
 }
 
 { #category : #'instance creation' }
-Highsoft6TestGenerator class >> definedIn: aPackageName withSeriesNamed: aSeriesClassName [
+Highsoft7TestGenerator class >> definedIn: aPackageName withSeriesNamed: aSeriesClassName [
 
 	^ self new initializeDefinedIn: aPackageName withSeriesNamed: aSeriesClassName
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> addClassChangeFor: aClassName [
+Highsoft7TestGenerator >> addClassChangeFor: aClassName [
 
 	^ RBAddClassChange
 		definition:
@@ -35,7 +35,7 @@ Highsoft6TestGenerator >> addClassChangeFor: aClassName [
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> addMethodChangeFor: aSelector of: aModelClass in: aTestClassName [
+Highsoft7TestGenerator >> addMethodChangeFor: aSelector of: aModelClass in: aTestClassName [
 
 	^ RBAddMethodChange
 		compile: (self sourceCodeToTest: aSelector of: aModelClass)
@@ -44,21 +44,21 @@ Highsoft6TestGenerator >> addMethodChangeFor: aSelector of: aModelClass in: aTes
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> addSettersIn: aClass to: settersByClass [
+Highsoft7TestGenerator >> addSettersIn: aClass to: settersByClass [
 
 	(self settersIn: aClass)
 		do: [ :setter | (settersByClass at: aClass ifAbsentPut: [ Set new ]) add: setter ]
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> classesOfInterest [
+Highsoft7TestGenerator >> classesOfInterest [
 
 	^ packageSet definedClasses
 		select: [ :definedClass | definedClass inheritsFrom: HighchartsComponent ]
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> executeChanges [
+Highsoft7TestGenerator >> executeChanges [
 
 	self logToOutput: 'Changes execution - Started'.
 	self registerPackage.
@@ -68,7 +68,7 @@ Highsoft6TestGenerator >> executeChanges [
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> extraCodeInSourceToTest: aModelClass [
+Highsoft7TestGenerator >> extraCodeInSourceToTest: aModelClass [
 
 	| extraCode |
 
@@ -84,7 +84,7 @@ Highsoft6TestGenerator >> extraCodeInSourceToTest: aModelClass [
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> generateChanges [
+Highsoft7TestGenerator >> generateChanges [
 
 	| settersByClass |
 
@@ -99,7 +99,7 @@ Highsoft6TestGenerator >> generateChanges [
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> generateChangesToAdd: aClassName [
+Highsoft7TestGenerator >> generateChangesToAdd: aClassName [
 
 	Smalltalk
 		at: aClassName
@@ -107,7 +107,7 @@ Highsoft6TestGenerator >> generateChangesToAdd: aClassName [
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> generateChangesToAddTestFor: aSelector of: aModelClass to: aTestClassName [
+Highsoft7TestGenerator >> generateChangesToAddTestFor: aSelector of: aModelClass to: aTestClassName [
 
 	Smalltalk
 		at: aTestClassName
@@ -124,7 +124,7 @@ Highsoft6TestGenerator >> generateChangesToAddTestFor: aSelector of: aModelClass
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> generateChangesToTestAll: aSetterSelectorCollection of: aClass [
+Highsoft7TestGenerator >> generateChangesToTestAll: aSetterSelectorCollection of: aClass [
 
 	| testClassName |
 
@@ -135,14 +135,14 @@ Highsoft6TestGenerator >> generateChangesToTestAll: aSetterSelectorCollection of
 ]
 
 { #category : #processing }
-Highsoft6TestGenerator >> generateTests [
+Highsoft7TestGenerator >> generateTests [
 
 	self generateChanges.
 	self executeChanges
 ]
 
 { #category : #initialization }
-Highsoft6TestGenerator >> initializeDefinedIn: aPackageName withSeriesNamed: aSeriesClassName [
+Highsoft7TestGenerator >> initializeDefinedIn: aPackageName withSeriesNamed: aSeriesClassName [
 
 	packageSet := RPackageSet named: aPackageName.
 	seriesClassName := aSeriesClassName.
@@ -151,42 +151,41 @@ Highsoft6TestGenerator >> initializeDefinedIn: aPackageName withSeriesNamed: aSe
 ]
 
 { #category : #'private - testing' }
-Highsoft6TestGenerator >> isForTestingAddSeriesOf: aChange [
+Highsoft7TestGenerator >> isForTestingAddSeriesOf: aChange [
 
 	^ aChange selector = 'testAddSeriesOf'
 ]
 
 { #category : #'private - testing' }
-Highsoft6TestGenerator >> isForTestingChartId: aChange [
+Highsoft7TestGenerator >> isForTestingChartId: aChange [
 
 	^ (aChange changeClassName = #HighchartTest
 		or: [ aChange changeClassName = #HighstockTest ]) and: [ aChange selector = 'testId' ]
 ]
 
 { #category : #'private - testing' }
-Highsoft6TestGenerator >> isForTestingJavascriptContent: aChange [
+Highsoft7TestGenerator >> isForTestingJavascriptContent: aChange [
 
 	^ aChange selector = 'testJavascriptContentOn'
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> logToOutput: aText [
+Highsoft7TestGenerator >> logToOutput: aText [
 
 	Stdio stdout
-		nextPutAll: ('<1s> - <2s>' expandMacrosWith: DateAndTime now greaseString with: aText);
-		cr;
-		flush
+		nextPutAll: ( '<1s> - <2s>' expandMacrosWith: DateAndTime now greaseString with: aText );
+		cr
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> registerPackage [
+Highsoft7TestGenerator >> registerPackage [
 
 	(RPackageSet named: self testPackageName) packages
 		ifEmpty: [ (RPackage named: self testPackageName) register ]
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> removeUnwantedChanges [
+Highsoft7TestGenerator >> removeUnwantedChanges [
 
 	| unwantedChanges |
 
@@ -199,7 +198,7 @@ Highsoft6TestGenerator >> removeUnwantedChanges [
 ]
 
 { #category : #'private - processing' }
-Highsoft6TestGenerator >> settersIn: aClass [
+Highsoft7TestGenerator >> settersIn: aClass [
 
 	| selectors |
 
@@ -208,7 +207,7 @@ Highsoft6TestGenerator >> settersIn: aClass [
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> sourceCodeToTest: aSelector of: aModelClass [
+Highsoft7TestGenerator >> sourceCodeToTest: aSelector of: aModelClass [
 
 	^ self
 		sourceCodeToTest: aSelector
@@ -217,7 +216,7 @@ Highsoft6TestGenerator >> sourceCodeToTest: aSelector of: aModelClass [
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> sourceCodeToTest: aSelector of: aModelClass appending: anExtraContent [
+Highsoft7TestGenerator >> sourceCodeToTest: aSelector of: aModelClass appending: anExtraContent [
 
 	^ 'test<1s>
 
@@ -241,13 +240,13 @@ Highsoft6TestGenerator >> sourceCodeToTest: aSelector of: aModelClass appending:
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> testClassNameFor: aClass [
+Highsoft7TestGenerator >> testClassNameFor: aClass [
 
 	^ '<1s>Test' expandMacrosWith: aClass greaseString
 ]
 
 { #category : #'private - accessing' }
-Highsoft6TestGenerator >> testPackageName [
+Highsoft7TestGenerator >> testPackageName [
 
 	^ '<1s>-Tests' expandMacrosWith: packageSet packageName
 ]
