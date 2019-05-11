@@ -1,0 +1,42 @@
+"
+States for a single point marker.
+"
+Class {
+	#name : #HighstockPlotOptionsSupertrendStatesHoverMarkerStates,
+	#superclass : #HighchartsComponent,
+	#category : #'HighstockSt-V7'
+}
+
+{ #category : #accessing }
+HighstockPlotOptionsSupertrendStatesHoverMarkerStates >> hover [
+
+	"The hover state for a single point marker.
+"
+	^configurationOptions at: 'hover' ifAbsentPut: [HighstockPlotOptionsSupertrendStatesHoverMarkerStatesHover new]
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsSupertrendStatesHoverMarkerStates >> inactive [
+
+	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsSupertrendStatesHoverMarkerStatesInactive new]
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsSupertrendStatesHoverMarkerStates >> normal [
+
+	"The normal state of a single point marker. Currently only
+used for setting animation when returning to normal state
+from hover.
+"
+	^configurationOptions at: 'normal' ifAbsentPut: [HighstockPlotOptionsSupertrendStatesHoverMarkerStatesNormal new]
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsSupertrendStatesHoverMarkerStates >> select [
+
+	"The appearance of the point marker when selected. In order to
+allow a point to be selected, set the
+series.allowPointSelect option to true.
+"
+	^configurationOptions at: 'select' ifAbsentPut: [HighstockPlotOptionsSupertrendStatesHoverMarkerStatesSelect new]
+]

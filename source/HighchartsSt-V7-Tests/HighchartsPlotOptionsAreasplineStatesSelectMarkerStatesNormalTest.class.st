@@ -1,0 +1,19 @@
+Class {
+	#name : #HighchartsPlotOptionsAreasplineStatesSelectMarkerStatesNormalTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V7-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsAreasplineStatesSelectMarkerStatesNormalTest >> testAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsAreasplineStatesSelectMarkerStatesNormal new.
+	component animation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
