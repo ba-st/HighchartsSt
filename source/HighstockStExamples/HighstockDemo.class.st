@@ -17,32 +17,29 @@ HighstockDemo class >> register [
 	app := WAAdmin register: self asApplicationAt: 'HighstockDemo'.
 	app
 		addLibrary: JQDevelopmentLibrary; 
-		addLibrary: Highstock6OnlineLibrary
+		addLibrary: Highstock7OnlineLibrary
 ]
 
 { #category : #rendering }
 HighstockDemo >> addAppleOHLCSeriesInto: chart [
 
-	(chart addSeriesOf: HighstockSeriesCandlestick)
+	( chart addSeriesOf: HighstockSeriesCandlestick )
 		index: 1;
-		"series 0 is the navigator i think"
-			name: 'Apple OHLC';
-		data: (self getHighchartsAdaptedOHLCFor: 'AAPL')
+		name: 'Apple OHLC';
+		data: self getAPPLIntradayData
 ]
 
 { #category : #rendering }
-HighstockDemo >> getHighchartsAdaptedOHLCFor: aTicker [
-	| client originalString result string stream |
-	client := ZnClient new
-		url: 'https://www.highcharts.com/samples/data/jsonp.php?a=e&filename=', aTicker, '-ohlc.json';
-		yourself.
-	client get.
-	originalString := client contents.
-	string :=  (originalString copyAfter: Character lf ) copyUpTo: $).
-	stream := String new writeStream.
-	string linesDo: [ :aLine | (aLine trimmed beginsWith: '/*') ifFalse: [ stream nextPutAll: aLine  ]  ].
-	result := STON fromString: stream contents.
-	^ result
+HighstockDemo >> getAPPLIntradayData [
+
+	| data |
+
+	data := ZnClient new
+		beOneShot;
+		url: 'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/new-intraday.json';
+		get;
+		contents.
+	^ STONJSON fromString: data
 ]
 
 { #category : #accessing }
@@ -129,7 +126,6 @@ HighstockDemo >> renderAppleOHLCCandleStickOn: html [
 
 	| chart |
 
-	html text: 'chart: '.
 	chart := html highcharts newStockChart.
 	chart id: 'container'.
 	chart addYAxis title text: 'Price'.
@@ -140,15 +136,11 @@ HighstockDemo >> renderAppleOHLCCandleStickOn: html [
 	chart chart backgroundColor: '#fff'.
 	chart legend x: 10.
 	chart exporting enabled: false.
-	
-"	chart scrollbar liveRedraw: false.
-	chart rangeSelector inputEnabled: true. 
-	chart navigator adaptToUpdatedData: false."
-	
+
 	self addAppleOHLCSeriesInto: chart.
 
 
-	html div script: chart.
+	html div script: chart
 ]
 
 { #category : #rendering }
@@ -167,7 +159,6 @@ HighstockDemo >> renderPricePerTroyOunce: aCanvas [
 	| chart allSeries |
 
 	allSeries := self goldPricesSeries.
-	aCanvas text: 'chart: '.
 	chart := aCanvas highcharts newStockChart.
 	chart id: 'container'.
 	chart addYAxis title text: 'Price Per Troy Ounce'.

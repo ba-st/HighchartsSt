@@ -1,10 +1,10 @@
 {
   "name": "highcharts-st",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "author": "Buenos Aires Smalltalk contributors",
   "license": "MIT",
   "dependencies": {
-    "highcharts": "6.0.3"
+    "highcharts": "7.1.1"
   }
   ,
   "description": "A Highcharts Js API wrapper for Smalltalk.",

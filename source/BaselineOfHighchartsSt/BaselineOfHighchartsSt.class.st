@@ -42,10 +42,10 @@ BaselineOfHighchartsSt >> baselineHighcharts: spec [
 	spec
 		package: 'HighchartsStLibraries' with: [ spec requires: 'HighchartsStCore' ];
 		group: 'Highcharts-Deployment' with: 'HighchartsStLibraries';
-		package: 'HighchartsStV6' with: [ spec requires: 'HighchartsStCore' ];
-		group: 'Highcharts-Deployment' with: 'HighchartsStV6';
-		package: 'HighchartsStV6-Tests' with: [ spec requires: 'HighchartsStV6' ];
-		group: 'Tests' with: 'HighchartsStV6-Tests'
+		package: 'HighchartsSt-V7' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highcharts-Deployment' with: 'HighchartsSt-V7';
+		package: 'HighchartsSt-V7-Tests' with: [ spec requires: 'HighchartsSt-V7' ];
+		group: 'Tests' with: 'HighchartsSt-V7-Tests'
 ]
 
 { #category : #baseline }
@@ -75,12 +75,12 @@ BaselineOfHighchartsSt >> baselineHighstock: spec [
 	spec
 		package: 'HighstockStLibraries' with: [ spec requires: 'HighchartsStCore' ];
 		group: 'Highstock-Deployment' with: 'HighstockStLibraries';
-		package: 'HighstockStV6' with: [ spec requires: 'HighchartsStCore' ];
-		group: 'Highstock-Deployment' with: 'HighstockStV6'.
+		package: 'HighstockSt-V7' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highstock-Deployment' with: 'HighstockSt-V7'.
 
 	spec
-		package: 'HighstockStV6-Tests' with: [ spec requires: 'HighstockStV6' ];
-		group: 'Tests' with: 'HighstockStV6-Tests';
+		package: 'HighstockSt-V7-Tests' with: [ spec requires: 'HighstockSt-V7' ];
+		group: 'Tests' with: 'HighstockSt-V7-Tests';
 		package: 'HighstockStLibraries-Tests' with: [ spec requires: 'HighstockStLibraries' ];
 		group: 'Tests' with: 'HighstockStLibraries-Tests'
 ]
@@ -104,7 +104,7 @@ BaselineOfHighchartsSt >> projectClass [
 BaselineOfHighchartsSt >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside:v3.3.1/repository' ];
+		baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside:v3.3.3/repository' ];
 		project: 'Seaside3-JQuery'
 			copyFrom: 'Seaside3'
 			with: [ spec loads: #('Core' 'Javascript' 'JQuery') ];
@@ -117,7 +117,7 @@ BaselineOfHighchartsSt >> setUpDependencies: spec [
 			with: [ spec loads: 'Deployment-Seaside-Extensions' ].
 
 	spec
-		baseline: 'Boardwalk' with: [ spec repository: 'github://ba-st/Boardwalk:v3/source' ];
+		baseline: 'Boardwalk' with: [ spec repository: 'github://ba-st/Boardwalk:v4/source' ];
 		project: 'Boardwalk-Deployment' copyFrom: 'Boardwalk' with: [ spec loads: 'Deployment' ];
 		project: 'Boardwalk-SUnit'
 			copyFrom: 'Boardwalk'

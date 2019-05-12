@@ -13,14 +13,7 @@
 5. Download the latest released image and open it in Pharo
 6. Open a Playground and evaluate (updating the path)
 ```smalltalk
-|importer jsonToImport|
-jsonToImport := STONJSON fromStream: '/path/to/api/API.json' asFileReference readStream.
-importer := Highcharts6DumpImporter importingElementsIn: jsonToImport.
-importer executeChanges.
-(Highsoft6TestGenerator definedIn: 'HighchartsStV6'  withSeriesNamed: 'HighchartsSeries') generateTests.
-importer := Highstock6DumpImporter importingElementsIn: jsonToImport.
-importer executeChanges.
-(Highsoft6TestGenerator definedIn: 'HighstockStV6' withSeriesNamed: 'HighstockSeries') generateTests.
+(Highsoft7ImportTool importingFrom: '/path/to/api/API.json
 ```
 7. Import the libraries code using the previously copied terminal output
 8. Commit the changes
