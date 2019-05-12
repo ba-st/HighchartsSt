@@ -18,7 +18,7 @@ HighchartsDemo class >> register [
 	app := WAAdmin register: self asApplicationAt: 'HighchartsDemo'.
 	app
 		addLibrary: JQDevelopmentLibrary;
-		addLibrary: Highcharts6OnlineLibrary
+		addLibrary: Highcharts7OnlineLibrary
 ]
 
 { #category : #accessing }
@@ -126,7 +126,6 @@ HighchartsDemo >> renderBarGovermentComputersChartOn: aCanvas [
 
 	series := self govermentComputersSeries.
 
-	aCanvas text: 'chart: '.
 	chart := aCanvas highcharts newChart.
 	chart addYAxis title text: 'Visits'.
 	chart legend enabled: false.
@@ -135,11 +134,11 @@ HighchartsDemo >> renderBarGovermentComputersChartOn: aCanvas [
 	chart xAxis title text: 'Site'.
 	chart xAxis type: 'category'.
 	chart plotOptions column colorByPoint: true.
-	chart plotOptions column dataLabels: (HighchartsDataLabelsOptions new enabled: true).
-	(chart addSeriesOf: HighchartsSeriesColumn)
+	chart plotOptions column dataLabels: ( HighchartsDataLabelsOptions new enabled: true ).
+	( chart addSeriesOf: HighchartsSeriesColumn )
 		index: 0;
 		name: series name;
-		data: (series dataAsPointsOn: aCanvas).
+		data: ( series dataAsPointsOn: aCanvas ).
 	aCanvas div script: chart
 ]
 
@@ -156,7 +155,6 @@ HighchartsDemo >> renderPricePerTroyOunce: aCanvas [
 	| chart allSeries |
 
 	allSeries := self goldPricesSeries.
-	aCanvas text: 'chart: '.
 	chart := aCanvas highcharts newChart.
 	chart addYAxis title text: 'Price Per Troy Ounce'.
 	chart title text: '30 DAY GOLD PRICE CHART'.
@@ -174,10 +172,11 @@ HighchartsDemo >> renderPricePerTroyOunce: aCanvas [
 
 	allSeries
 		doWithIndex: [ :series :index | 
-			(chart addSeriesOf: HighchartsSeriesLine)
+			( chart addSeriesOf: HighchartsSeriesLine )
 				index: index - 1;
 				name: series name;
-				data: (series dataAsPointsOn: aCanvas) ].
+				data: ( series dataAsPointsOn: aCanvas )
+			].
 
 	aCanvas div script: chart
 ]
