@@ -135,7 +135,7 @@ HighchartsDemo >> renderBarGovermentComputersChartOn: aCanvas [
 	chart xAxis title text: 'Site'.
 	chart xAxis type: 'category'.
 	chart plotOptions column colorByPoint: true.
-	chart plotOptions column dataLabels enabled: true.
+	chart plotOptions column dataLabels: (HighchartsDataLabelsOptions new enabled: true).
 	(chart addSeriesOf: HighchartsSeriesColumn)
 		index: 0;
 		name: series name;
