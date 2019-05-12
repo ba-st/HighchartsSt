@@ -35,7 +35,7 @@ To load the project in a Pharo image, or declare it as a dependency of your own 
 
 | Pharo 6.1 | Pharo 7.0 | Pharo 8.0 | GemStone 64 |
 |---|---|---|---|
-|v8|v8|v8|v6|
+|v9|v9|v9|v6|
 
 > Until GemStone 64 supports the Tonel format (is in the works), GemStone users must stick with version 6
 

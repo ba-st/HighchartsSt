@@ -42,7 +42,7 @@ BaselineOfHighchartsSt >> baselineHighcharts: spec [
 	spec
 		package: 'HighchartsStLibraries' with: [ spec requires: 'HighchartsStCore' ];
 		group: 'Highcharts-Deployment' with: 'HighchartsStLibraries';
-		package: 'HighchartsStV6' with: [ spec requires: 'HighchartsStCore' ];
+		package: 'HighchartsSt-V7' with: [ spec requires: 'HighchartsStCore' ];
 		group: 'Highcharts-Deployment' with: 'HighchartsSt-V7';
 		package: 'HighchartsSt-V7-Tests' with: [ spec requires: 'HighchartsSt-V7' ];
 		group: 'Tests' with: 'HighchartsSt-V7-Tests'

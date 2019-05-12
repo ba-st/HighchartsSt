@@ -5,7 +5,7 @@ To have Highcharts working, the only thing you must do is to register the wanted
 ```smalltalk
 yourApp
 		addLibrary: JQDevelopmentLibrary;
-		addLibrary: Highcharts6OnlineLibrary.
+		addLibrary: Highcharts7OnlineLibrary.
 ```
 
 Then you can render a basic chart like this:
@@ -51,4 +51,4 @@ The default installation of Highcharts includes some examples. You can start you
    start.
 ```
 
-And then watch the live examples with your browser in `http://localhost:9999/HighchartsDemo`
+And then watch the live examples with your browser in `http://localhost:9999/HighchartsDemo` and `http://localhost:9999/HighstockDemo` 
