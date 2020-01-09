@@ -173,6 +173,20 @@ HighstockPlotOptionsLineTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsLineTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLine new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsLineTest >> testCompare [
 
 	| component javascript expectedConfiguration |

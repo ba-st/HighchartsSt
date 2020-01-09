@@ -425,6 +425,20 @@ HighchartsPlotOptionsOrganizationTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsOrganizationTest >> testMinLinkWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsOrganization new.
+	component minLinkWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'minLinkWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsOrganizationTest >> testMinPointLength [
 
 	| component javascript expectedConfiguration |

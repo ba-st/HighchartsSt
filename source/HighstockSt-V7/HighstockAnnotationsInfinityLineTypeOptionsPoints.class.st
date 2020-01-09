@@ -12,12 +12,6 @@ HighstockAnnotationsInfinityLineTypeOptionsPoints >> controlPoint: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsInfinityLineTypeOptionsPoints >> label [
-
-	^configurationOptions at: 'label' ifAbsentPut: [HighstockAnnotationsInfinityLineTypeOptionsPointsLabel new]
-]
-
-{ #category : #accessing }
 HighstockAnnotationsInfinityLineTypeOptionsPoints >> x: aNumber [
 
 	"The x position of the point.

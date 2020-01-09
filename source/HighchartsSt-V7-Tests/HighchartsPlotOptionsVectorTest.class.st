@@ -159,6 +159,20 @@ HighchartsPlotOptionsVectorTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsVectorTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVector new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsVectorTest >> testCursor [
 
 	| component javascript expectedConfiguration |

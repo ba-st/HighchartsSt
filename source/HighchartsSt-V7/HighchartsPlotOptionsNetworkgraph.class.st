@@ -35,7 +35,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsNetworkgraph >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsPlotOptionsNetworkgraphAccessibility new]
 ]
@@ -74,14 +74,14 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsNetworkgraph >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsNetworkgraph >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the map areas.
 In styled mode, the border stroke is given in the .highcharts-point
 class.
 Defaults to '#cccccc'."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -134,17 +134,6 @@ className option.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsNetworkgraph >> colorAxis: aBoolean [
-
-	"Set this option to false to prevent a series from connecting to
-the global color axis. This will cause the series to have its own
-legend item.
-"
-
-	configurationOptions at: 'colorAxis' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -266,7 +255,7 @@ altered through a custom approximation callback function.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsNetworkgraph >> dataLabels: aHighchartsPlotNetworkDataLabelsOptionsObject [
+HighchartsPlotOptionsNetworkgraph >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
 point.
@@ -276,15 +265,21 @@ In styled mode, the data labels can be styled with the
 .highcharts-data-label-box and .highcharts-data-label class names
 (see example).
 "
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsPlotOptionsNetworkgraphDataLabels new]
+]
 
-	configurationOptions at: 'dataLabels' put: aHighchartsPlotNetworkDataLabelsOptionsObject
+{ #category : #accessing }
+HighchartsPlotOptionsNetworkgraph >> dataSorting [
+
+	"Options for the series data sorting.
+"
+	^configurationOptions at: 'dataSorting' ifAbsentPut: [HighchartsPlotOptionsNetworkgraphDataSorting new]
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsNetworkgraph >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
@@ -320,20 +315,6 @@ Highcharts.addEvent function.
 "
 
 	configurationOptions at: 'events' put: anObject
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsNetworkgraph >> exposeElementToA11y: aBoolean [
-
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
-
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -389,8 +370,8 @@ Defaults to relative."
 { #category : #accessing }
 HighchartsPlotOptionsNetworkgraph >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
@@ -475,6 +456,9 @@ HighchartsPlotOptionsNetworkgraph >> linkedTo: aString [
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.
+If master series uses data sorting and linked series does not have
+its own sorting definition, the linked series will be sorted in the
+same order as the master one.
 "
 
 	configurationOptions at: 'linkedTo' put: aString
@@ -586,8 +570,9 @@ Defaults to false."
 HighchartsPlotOptionsNetworkgraph >> showInLegend: aBoolean [
 
 	"Whether to display this particular series or series type in the
-legend. The default value is true for standalone series, false
-for linked series.
+legend. Standalone series are shown in legend by default, and linked
+series are not. Since v7.2.0 it is possible to show series that use
+colorAxis by setting this option to true.
 Defaults to false."
 
 	configurationOptions at: 'showInLegend' put: aBoolean
@@ -631,6 +616,8 @@ markers. This also implies the tooltip when not shared. When
 stickyTracking is false and tooltip.shared is false, the tooltip
 will be hidden when moving the mouse between series. Defaults to true
 for line and area type series, but to false for columns, pies etc.
+Note: The boost module will force this option because of
+technical limitations.
 Defaults to false."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
@@ -654,6 +641,9 @@ one dimensional arrays of numbers, or two dimensional arrays with
 x and y values are allowed. Also, only the first point is tested,
 and the rest are assumed to be the same format. This saves expensive
 data checking and indexing in long series. Set it to 0 disable.
+Note:
+In boost mode turbo threshold is forced. Only array of numbers or
+two dimensional arrays are allowed.
 Defaults to 1000."
 
 	configurationOptions at: 'turboThreshold' put: aNumber

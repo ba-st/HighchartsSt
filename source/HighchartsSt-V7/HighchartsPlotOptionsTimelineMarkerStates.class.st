@@ -16,12 +16,6 @@ HighchartsPlotOptionsTimelineMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsTimelineMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsPlotOptionsTimelineMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsTimelineMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

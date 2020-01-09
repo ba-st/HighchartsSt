@@ -185,6 +185,21 @@ HighstockSeriesAreasplinerangeTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerange new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areasplinerange';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAreasplinerangeTest >> testCompare [
 
 	| component javascript expectedConfiguration |

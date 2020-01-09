@@ -159,6 +159,20 @@ HighchartsPlotOptionsBellcurveTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsBellcurveTest >> testCompare [
 
 	| component javascript expectedConfiguration |

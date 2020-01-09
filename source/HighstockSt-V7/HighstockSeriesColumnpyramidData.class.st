@@ -43,6 +43,8 @@ Class {
 { #category : #accessing }
 HighstockSeriesColumnpyramidData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesColumnpyramidDataAccessibility new]
 ]
 
@@ -59,20 +61,19 @@ colorIndex.
 ]
 
 { #category : #accessing }
-HighstockSeriesColumnpyramidData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighstockSeriesColumnpyramidData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockSeriesColumnpyramidDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighstockSeriesColumnpyramidData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -83,7 +84,6 @@ HighstockSeriesColumnpyramidData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesColumnpyramidDataDragDrop new]
 ]
@@ -91,7 +91,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighstockSeriesColumnpyramidData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -121,8 +121,7 @@ will be drawn.
 { #category : #accessing }
 HighstockSeriesColumnpyramidData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

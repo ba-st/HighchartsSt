@@ -173,6 +173,20 @@ HighchartsPlotOptionsPolygonTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPolygonTest >> testConnectEnds [
 
 	| component javascript expectedConfiguration |

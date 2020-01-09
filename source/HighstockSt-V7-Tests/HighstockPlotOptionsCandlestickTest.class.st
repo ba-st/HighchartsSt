@@ -159,6 +159,20 @@ HighstockPlotOptionsCandlestickTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsCandlestickTest >> testColors [
 
 	| component javascript expectedConfiguration |

@@ -170,6 +170,21 @@ HighchartsSeriesTimelineTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTimelineTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimeline new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'timeline';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTimelineTest >> testCompare [
 
 	| component javascript expectedConfiguration |

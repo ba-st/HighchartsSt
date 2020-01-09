@@ -19,6 +19,34 @@ HighchartsPlotOptionsPieTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsPieTooltipTest >> testClusterFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPieTooltip new.
+	component clusterFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clusterFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPieTooltipTest >> testDistance [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPieTooltip new.
+	component distance: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'distance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPieTooltipTest >> testFollowPointer [
 
 	| component javascript expectedConfiguration |

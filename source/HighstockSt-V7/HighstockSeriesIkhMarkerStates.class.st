@@ -16,12 +16,6 @@ HighstockSeriesIkhMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesIkhMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesIkhMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesIkhMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

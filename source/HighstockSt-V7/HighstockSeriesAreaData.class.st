@@ -44,6 +44,8 @@ Class {
 { #category : #accessing }
 HighstockSeriesAreaData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesAreaDataAccessibility new]
 ]
 
@@ -60,20 +62,19 @@ colorIndex.
 ]
 
 { #category : #accessing }
-HighstockSeriesAreaData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighstockSeriesAreaData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockSeriesAreaDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighstockSeriesAreaData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -84,7 +85,6 @@ HighstockSeriesAreaData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesAreaDataDragDrop new]
 ]
@@ -92,7 +92,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighstockSeriesAreaData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -122,14 +122,15 @@ will be drawn.
 { #category : #accessing }
 HighstockSeriesAreaData >> marker [
 
+	"Options for the point markers of line-like series.
+"
 	^configurationOptions at: 'marker' ifAbsentPut: [HighstockSeriesAreaDataMarker new]
 ]
 
 { #category : #accessing }
 HighstockSeriesAreaData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

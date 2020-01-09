@@ -30,3 +30,14 @@ when returning to normal state from hover.
 "
 	^configurationOptions at: 'normal' ifAbsentPut: [HighchartsSeriesTilemapStatesNormal new]
 ]
+
+{ #category : #accessing }
+HighchartsSeriesTilemapStates >> select [
+
+	"Specific options for point in selected states, after being
+selected by
+allowPointSelect
+or programmatically.
+"
+	^configurationOptions at: 'select' ifAbsentPut: [HighchartsSeriesTilemapStatesSelect new]
+]

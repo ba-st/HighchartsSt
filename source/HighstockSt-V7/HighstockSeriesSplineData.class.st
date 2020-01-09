@@ -44,6 +44,8 @@ Class {
 { #category : #accessing }
 HighstockSeriesSplineData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesSplineDataAccessibility new]
 ]
 
@@ -60,20 +62,19 @@ colorIndex.
 ]
 
 { #category : #accessing }
-HighstockSeriesSplineData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighstockSeriesSplineData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockSeriesSplineDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighstockSeriesSplineData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -84,7 +85,6 @@ HighstockSeriesSplineData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesSplineDataDragDrop new]
 ]
@@ -92,7 +92,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighstockSeriesSplineData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -122,14 +122,15 @@ will be drawn.
 { #category : #accessing }
 HighstockSeriesSplineData >> marker [
 
+	"Options for the point markers of line-like series.
+"
 	^configurationOptions at: 'marker' ifAbsentPut: [HighstockSeriesSplineDataMarker new]
 ]
 
 { #category : #accessing }
 HighstockSeriesSplineData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsZAxisPlotBandsTest >> testAcrossPanes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisPlotBands new.
+	component acrossPanes: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'acrossPanes' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsZAxisPlotBandsTest >> testBorderColor [
 
 	| component javascript expectedConfiguration |

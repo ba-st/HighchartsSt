@@ -11,7 +11,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsSankeyLevels >> borderColor: aHighchartsColorString [
 
-	"Can set borderColor on all points which lies on the same level.
+	"Can set borderColor on all nodes which lay on the same level.
 "
 
 	configurationOptions at: 'borderColor' put: aHighchartsColorString
@@ -20,7 +20,7 @@ HighchartsPlotOptionsSankeyLevels >> borderColor: aHighchartsColorString [
 { #category : #accessing }
 HighchartsPlotOptionsSankeyLevels >> borderWidth: aNumber [
 
-	"Can set borderWidth on all points which lies on the same level.
+	"Can set borderWidth on all nodes which lay on the same level.
 "
 
 	configurationOptions at: 'borderWidth' put: aNumber
@@ -29,7 +29,7 @@ HighchartsPlotOptionsSankeyLevels >> borderWidth: aNumber [
 { #category : #accessing }
 HighchartsPlotOptionsSankeyLevels >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Can set color on all points which lies on the same level.
+	"Can set color on all nodes which lay on the same level.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -38,19 +38,18 @@ HighchartsPlotOptionsSankeyLevels >> color: aHighchartsColorStringOrHighchartsGr
 { #category : #accessing }
 HighchartsPlotOptionsSankeyLevels >> colorByPoint: aBoolean [
 
-	"Can set colorByPoint on all points which lies on the same level.
-"
+	"Can set colorByPoint on all nodes which lay on the same level.
+Defaults to true."
 
 	configurationOptions at: 'colorByPoint' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSankeyLevels >> dataLabels: anObject [
+HighchartsPlotOptionsSankeyLevels >> dataLabels [
 
-	"Can set dataLabels on all points which lies on the same level.
+	"Can set dataLabels on all points which lay on the same level.
 "
-
-	configurationOptions at: 'dataLabels' put: anObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsPlotOptionsSankeyLevelsDataLabels new]
 ]
 
 { #category : #accessing }
@@ -66,8 +65,8 @@ object.
 { #category : #accessing }
 HighchartsPlotOptionsSankeyLevels >> linkOpacity: aNumber [
 
-	"Can set linkOpacity on all points which lies on the same level.
-"
+	"Can set linkOpacity on all points which lay on the same level.
+Defaults to 0.5."
 
 	configurationOptions at: 'linkOpacity' put: aNumber
 ]
@@ -75,7 +74,7 @@ HighchartsPlotOptionsSankeyLevels >> linkOpacity: aNumber [
 { #category : #accessing }
 HighchartsPlotOptionsSankeyLevels >> states: anObject [
 
-	"Can set states on all points which lies on the same level.
+	"Can set states on all nodes and points which lay on the same level.
 "
 
 	configurationOptions at: 'states' put: anObject

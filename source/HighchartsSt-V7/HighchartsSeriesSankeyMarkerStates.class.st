@@ -16,12 +16,6 @@ HighchartsSeriesSankeyMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesSankeyMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesSankeyMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesSankeyMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

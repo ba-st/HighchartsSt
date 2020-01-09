@@ -65,12 +65,12 @@ Defaults to true."
 HighchartsChartParallelAxes >> categories: anArrayOfstring [
 
 	"If categories are present for the xAxis, names are used instead of
-numbers for that axis. Since Highcharts 3.0, categories can also
+numbers for that axis.
+Since Highcharts 3.0, categories can also
 be extracted by giving each point a name and setting
 axis type to category. However, if you have multiple
 series, best practice remains defining the categories array.
-Example:
-categories: ['Apples', 'Bananas', 'Oranges']
+Example: categories: [´Apples´, ´Bananas´, ´Oranges´]
 "
 
 	configurationOptions at: 'categories' put: anArrayOfstring
@@ -117,16 +117,17 @@ representations used for each unit. For intermediate values,
 different units may be used, for example the day unit can be used
 on midnight and hour unit be used for intermediate values on the
 same axis. For an overview of the replacement codes, see
-dateFormat. Defaults to:
+dateFormat.
+Defaults to:
 {
-    millisecond: 'H:M:S.L',
-    second: 'H:M:S',
-    minute: 'H:M',
-    hour: 'H:M',
-    day: 'e. b',
-    week: 'e. b',
-    month: 'b \'y',
-    year: 'Y'
+    millisecond: ´H:M:S.L´,
+    second: ´H:M:S´,
+    minute: ´H:M´,
+    hour: ´H:M´,
+    day: ´e. b´,
+    week: ´e. b´,
+    month: ´b \´y´,
+    year: ´Y´
 }
 "
 	^configurationOptions at: 'dateTimeLabelFormats' ifAbsentPut: [HighchartsChartParallelAxesDateTimeLabelFormats new]
@@ -182,8 +183,8 @@ HighchartsChartParallelAxes >> height: aNumberOrstring [
 
 	"The height of the Y axis. If it´s a number, it is interpreted as
 pixels.
-Since Highstock 2: If it´s a percentage string, it is interpreted
-as percentages of the total plot height.
+Since Highcharts 2: If it´s a percentage string, it is interpreted as
+percentages of the total plot height.
 "
 
 	configurationOptions at: 'height' put: aNumberOrstring
@@ -193,19 +194,34 @@ as percentages of the total plot height.
 HighchartsChartParallelAxes >> labels [
 
 	"The axis labels show the number or category for each tick.
+Since v8.0.0: Labels are animated in categorized x-axis with
+updating data if tickInterval and step is set to 1.
 "
 	^configurationOptions at: 'labels' ifAbsentPut: [HighchartsChartParallelAxesLabels new]
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> lineColor: aHighchartsColorString [
+HighchartsChartParallelAxes >> left: aNumberOrstring [
+
+	"The left position as the horizontal axis. If it´s a number, it is
+interpreted as pixel position relative to the chart.
+Since Highcharts v5.0.13: If it´s a percentage string, it is
+interpreted as percentages of the plot width, offset from plot area
+left.
+"
+
+	configurationOptions at: 'left' put: aNumberOrstring
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxes >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
 .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -233,14 +249,14 @@ chart by duplicating the scales.
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> margin: anObject [
+HighchartsChartParallelAxes >> margin: aNumber [
 
 	"If there are multiple axes on the same side of the chart, the pixel
 margin between the axes. Defaults to 0 on vertical axes, 15 on
 horizontal axes.
 "
 
-	configurationOptions at: 'margin' put: anObject
+	configurationOptions at: 'margin' put: aNumber
 ]
 
 { #category : #accessing }
@@ -260,14 +276,13 @@ alignTicks, where a tickAmount is applied internally.
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> maxLength: aStringOrNumber [
+HighchartsChartParallelAxes >> maxLength: aNumberOrstring [
 
 	"Maximal size of a resizable axis. Could be set as a percent
 of plot area or pixel size.
-This feature requires the drag-panes.js module.
 "
 
-	configurationOptions at: 'maxLength' put: aStringOrNumber
+	configurationOptions at: 'maxLength' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -278,6 +293,9 @@ padding of 0.05 will make a 100px axis 5px longer. This is useful
 when you don´t want the highest data value to appear on the edge
 of the plot area. When the axis´ max option is set or a max extreme
 is set using axis.setExtremes(), the maxPadding will be ignored.
+Also the softThreshold option takes precedence over maxPadding,
+so if the data is tangent to the threshold, maxPadding may not
+apply unless softThreshold is set to false.
 Defaults to 0.05."
 
 	configurationOptions at: 'maxPadding' put: aNumber
@@ -311,14 +329,13 @@ and series.softThreshold.
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> minLength: aNumberOrString [
+HighchartsChartParallelAxes >> minLength: aNumberOrstring [
 
 	"Minimal size of a resizable axis. Could be set as a percent
 of plot area or pixel size.
-This feature requires the drag-panes.js module.
 "
 
-	configurationOptions at: 'minLength' put: aNumberOrString
+	configurationOptions at: 'minLength' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -329,6 +346,9 @@ padding of 0.05 will make a 100px axis 5px longer. This is useful
 when you don´t want the lowest data value to appear on the edge
 of the plot area. When the axis´ min option is set or a max extreme
 is set using axis.setExtremes(), the maxPadding will be ignored.
+Also the softThreshold option takes precedence over minPadding,
+so if the data is tangent to the threshold, minPadding may not
+apply unless softThreshold is set to false.
 Defaults to 0.05."
 
 	configurationOptions at: 'minPadding' put: aNumber
@@ -367,12 +387,12 @@ two points on the axis.
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> minorTickColor: aHighchartsColorString [
+HighchartsChartParallelAxes >> minorTickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aHighchartsColorString
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -488,10 +508,8 @@ can be set.
 { #category : #accessing }
 HighchartsChartParallelAxes >> resize [
 
-	"Options for axis resizing. This feature requires the
-drag-panes.js
-module. It adds a thick line between panes which the user can drag
-in order to resize the panes.
+	"Options for axis resizing. It adds a thick line between panes which
+the user can drag in order to resize the panes.
 "
 	^configurationOptions at: 'resize' ifAbsentPut: [HighchartsChartParallelAxesResize new]
 ]
@@ -618,14 +636,14 @@ or category axes are not affected.
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxes >> tickColor: aHighchartsColorString [
+HighchartsChartParallelAxes >> tickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the main tick marks.
 In styled mode, the stroke is given in the .highcharts-tick
 class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aHighchartsColorString
+	configurationOptions at: 'tickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -765,8 +783,8 @@ HighchartsChartParallelAxes >> top: aNumberOrstring [
 
 	"The top position of the Y axis. If it´s a number, it is interpreted
 as pixel position relative to the chart.
-Since Highstock 2: If it´s a percentage string, it is interpreted
-as percentages of the plot height, offset from plot area top.
+Since Highcharts 2: If it´s a percentage string, it is interpreted as
+percentages of the plot height, offset from plot area top.
 "
 
 	configurationOptions at: 'top' put: aNumberOrstring
@@ -809,30 +827,31 @@ HighchartsChartParallelAxes >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 	"Datetime axis only. An array determining what time intervals the
 ticks are allowed to fall on. Each array item is an array where the
 first value is the time unit and the second value another array of
-allowed multiples. Defaults to:
+allowed multiples.
+Defaults to:
 units: [[
-    'millisecond', // unit name
+    ´millisecond´, // unit name
     [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
 ], [
-    'second',
+    ´second´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'minute',
+    ´minute´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'hour',
+    ´hour´,
     [1, 2, 3, 4, 6, 8, 12]
 ], [
-    'day',
+    ´day´,
     [1]
 ], [
-    'week',
+    ´week´,
     [1]
 ], [
-    'month',
+    ´month´,
     [1, 3, 6]
 ], [
-    'year',
+    ´year´,
     null
 ]]
 "
@@ -848,4 +867,26 @@ be visible.
 Defaults to true."
 
 	configurationOptions at: 'visible' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxes >> width: aNumberOrstring [
+
+	"The width as the horizontal axis. If it´s a number, it is interpreted
+as pixels.
+Since Highcharts v5.0.13: If it´s a percentage string, it is
+interpreted as percentages of the total plot width.
+"
+
+	configurationOptions at: 'width' put: aNumberOrstring
+]
+
+{ #category : #accessing }
+HighchartsChartParallelAxes >> zoomEnabled: aBoolean [
+
+	"Whether to zoom axis. If chart.zoomType is set, the option allows
+to disable zooming on an individual axis.
+Defaults to enabled."
+
+	configurationOptions at: 'zoomEnabled' put: aBoolean
 ]

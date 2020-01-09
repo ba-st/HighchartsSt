@@ -200,6 +200,21 @@ HighstockSeriesFlagsTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesFlagsTest >> testColors [
 
 	| component javascript expectedConfiguration |

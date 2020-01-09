@@ -5,6 +5,34 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPolygonTooltipTest >> testClusterFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonTooltip new.
+	component clusterFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clusterFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonTooltipTest >> testDistance [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonTooltip new.
+	component distance: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'distance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPolygonTooltipTest >> testFollowPointer [
 
 	| component javascript expectedConfiguration |

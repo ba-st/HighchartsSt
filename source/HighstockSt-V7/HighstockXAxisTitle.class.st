@@ -59,7 +59,7 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockXAxisTitle >> style: aHighchartsCSSObject [
+HighstockXAxisTitle >> style [
 
 	"CSS styles for the title. If the title text is longer than the
 axis length, it will wrap to multiple lines by default. This can
@@ -67,16 +67,15 @@ be customized by setting textOverflow: ´ellipsis´, by
 setting a specific width or by setting whiteSpace: ´nowrap´.
 In styled mode, the stroke width is given in the
 .highcharts-axis-title class.
-Defaults to {'color': '#666666'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighstockXAxisTitleStyle new]
 ]
 
 { #category : #accessing }
 HighstockXAxisTitle >> text: aStringOrNil [
 
-	"The actual text of the axis title. It can contain basic HTML text
-markup like ,  and spans with style.
+	"The actual text of the axis title. It can contain basic HTML tags
+like b, i and span with style.
 "
 
 	configurationOptions at: 'text' put: aStringOrNil

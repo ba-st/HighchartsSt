@@ -12,14 +12,13 @@ HighstockAnnotationsFibonacciTypeOptions >> backgroundColors: anObject [
 
 	"An array of background colors:
 Default to:
-
 [
-  'rgba(130, 170, 255, 0.4)',
-  'rgba(139, 191, 216, 0.4)',
-  'rgba(150, 216, 192, 0.4)',
-  'rgba(156, 229, 161, 0.4)',
-  'rgba(162, 241, 130, 0.4)',
-  'rgba(169, 255, 101, 0.4)'
+´rgba(130, 170, 255, 0.4)´,
+´rgba(139, 191, 216, 0.4)´,
+´rgba(150, 216, 192, 0.4)´,
+´rgba(156, 229, 161, 0.4)´,
+´rgba(162, 241, 130, 0.4)´,
+´rgba(169, 255, 101, 0.4)´
 ]
 "
 

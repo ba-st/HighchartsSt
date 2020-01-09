@@ -16,12 +16,6 @@ HighchartsPlotOptionsParetoMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsParetoMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsPlotOptionsParetoMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsParetoMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

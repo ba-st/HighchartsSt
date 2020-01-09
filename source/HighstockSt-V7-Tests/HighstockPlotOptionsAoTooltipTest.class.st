@@ -19,6 +19,34 @@ HighstockPlotOptionsAoTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsAoTooltipTest >> testClusterFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAoTooltip new.
+	component clusterFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clusterFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAoTooltipTest >> testDistance [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAoTooltip new.
+	component distance: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'distance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsAoTooltipTest >> testFollowPointer [
 
 	| component javascript expectedConfiguration |

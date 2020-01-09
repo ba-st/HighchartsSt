@@ -13,6 +13,7 @@ HighchartsSeriesPyramid3dTest >> testAllowPointSelect [
 	component allowPointSelect: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'allowPointSelect' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -27,6 +28,7 @@ HighchartsSeriesPyramid3dTest >> testAnimationLimit [
 	component animationLimit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'animationLimit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -41,6 +43,7 @@ HighchartsSeriesPyramid3dTest >> testBoostBlending [
 	component boostBlending: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -55,6 +58,7 @@ HighchartsSeriesPyramid3dTest >> testBorderColor [
 	component borderColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'borderColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -69,6 +73,7 @@ HighchartsSeriesPyramid3dTest >> testBorderRadius [
 	component borderRadius: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'borderRadius' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -83,6 +88,7 @@ HighchartsSeriesPyramid3dTest >> testBorderWidth [
 	component borderWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'borderWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -97,6 +103,7 @@ HighchartsSeriesPyramid3dTest >> testClassName [
 	component className: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'className' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -111,6 +118,7 @@ HighchartsSeriesPyramid3dTest >> testClip [
 	component clip: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -125,6 +133,7 @@ HighchartsSeriesPyramid3dTest >> testColor [
 	component color: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'color' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -139,6 +148,7 @@ HighchartsSeriesPyramid3dTest >> testColorByPoint [
 	component colorByPoint: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'colorByPoint' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -153,7 +163,23 @@ HighchartsSeriesPyramid3dTest >> testColorIndex [
 	component colorIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'colorIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -167,6 +193,7 @@ HighchartsSeriesPyramid3dTest >> testColors [
 	component colors: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'colors' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -181,6 +208,7 @@ HighchartsSeriesPyramid3dTest >> testCompareStart [
 	component compareStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'compareStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -195,6 +223,7 @@ HighchartsSeriesPyramid3dTest >> testConnectEnds [
 	component connectEnds: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'connectEnds' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -209,6 +238,7 @@ HighchartsSeriesPyramid3dTest >> testConnectNulls [
 	component connectNulls: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'connectNulls' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -223,6 +253,7 @@ HighchartsSeriesPyramid3dTest >> testCrisp [
 	component crisp: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'crisp' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -237,6 +268,7 @@ HighchartsSeriesPyramid3dTest >> testCropThreshold [
 	component cropThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -251,6 +283,7 @@ HighchartsSeriesPyramid3dTest >> testCursor [
 	component cursor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'cursor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -265,6 +298,7 @@ HighchartsSeriesPyramid3dTest >> testDashStyle [
 	component dashStyle: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'dashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -279,6 +313,7 @@ HighchartsSeriesPyramid3dTest >> testData [
 	component data: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'data' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -293,6 +328,7 @@ HighchartsSeriesPyramid3dTest >> testDepth [
 	component depth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'depth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -307,6 +343,7 @@ HighchartsSeriesPyramid3dTest >> testDescription [
 	component description: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'description' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -321,6 +358,7 @@ HighchartsSeriesPyramid3dTest >> testEdgeColor [
 	component edgeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'edgeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -335,6 +373,7 @@ HighchartsSeriesPyramid3dTest >> testEdgeWidth [
 	component edgeWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'edgeWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -349,6 +388,7 @@ HighchartsSeriesPyramid3dTest >> testEnableMouseTracking [
 	component enableMouseTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'enableMouseTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -363,6 +403,7 @@ HighchartsSeriesPyramid3dTest >> testEvents [
 	component events: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'events' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -391,6 +432,7 @@ HighchartsSeriesPyramid3dTest >> testFindNearestPointBy [
 	component findNearestPointBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'findNearestPointBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -405,6 +447,7 @@ HighchartsSeriesPyramid3dTest >> testGapSize [
 	component gapSize: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'gapSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -419,6 +462,7 @@ HighchartsSeriesPyramid3dTest >> testGapUnit [
 	component gapUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'gapUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -433,6 +477,7 @@ HighchartsSeriesPyramid3dTest >> testGetExtremesFromAll [
 	component getExtremesFromAll: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'getExtremesFromAll' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -447,6 +492,7 @@ HighchartsSeriesPyramid3dTest >> testGradientForSides [
 	component gradientForSides: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'gradientForSides' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -461,6 +507,7 @@ HighchartsSeriesPyramid3dTest >> testGroupPadding [
 	component groupPadding: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'groupPadding' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -475,6 +522,7 @@ HighchartsSeriesPyramid3dTest >> testGroupZPadding [
 	component groupZPadding: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'groupZPadding' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -489,6 +537,7 @@ HighchartsSeriesPyramid3dTest >> testGrouping [
 	component grouping: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'grouping' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -503,6 +552,7 @@ HighchartsSeriesPyramid3dTest >> testHeight [
 	component height: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'height' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -517,6 +567,7 @@ HighchartsSeriesPyramid3dTest >> testId [
 	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -531,6 +582,7 @@ HighchartsSeriesPyramid3dTest >> testIncludeInDataExport [
 	component includeInDataExport: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -545,6 +597,7 @@ HighchartsSeriesPyramid3dTest >> testIndex [
 	component index: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'index' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -559,6 +612,7 @@ HighchartsSeriesPyramid3dTest >> testJoinBy [
 	component joinBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'joinBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -573,6 +627,7 @@ HighchartsSeriesPyramid3dTest >> testKeys [
 	component keys: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'keys' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -587,6 +642,7 @@ HighchartsSeriesPyramid3dTest >> testLegendIndex [
 	component legendIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'legendIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -601,6 +657,7 @@ HighchartsSeriesPyramid3dTest >> testLineWidth [
 	component lineWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'lineWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -615,6 +672,7 @@ HighchartsSeriesPyramid3dTest >> testLinecap [
 	component linecap: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'linecap' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -629,6 +687,7 @@ HighchartsSeriesPyramid3dTest >> testLinkedTo [
 	component linkedTo: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'linkedTo' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -643,6 +702,7 @@ HighchartsSeriesPyramid3dTest >> testMapData [
 	component mapData: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'mapData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -657,6 +717,7 @@ HighchartsSeriesPyramid3dTest >> testMaxPointWidth [
 	component maxPointWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'maxPointWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -671,6 +732,7 @@ HighchartsSeriesPyramid3dTest >> testMinPointLength [
 	component minPointLength: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'minPointLength' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -685,6 +747,7 @@ HighchartsSeriesPyramid3dTest >> testName [
 	component name: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'name' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -699,6 +762,7 @@ HighchartsSeriesPyramid3dTest >> testNavigatorOptions [
 	component navigatorOptions: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'navigatorOptions' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -713,6 +777,7 @@ HighchartsSeriesPyramid3dTest >> testNegativeColor [
 	component negativeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'negativeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -727,6 +792,7 @@ HighchartsSeriesPyramid3dTest >> testOpacity [
 	component opacity: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -741,6 +807,7 @@ HighchartsSeriesPyramid3dTest >> testPointDescriptionFormatter [
 	component pointDescriptionFormatter: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointDescriptionFormatter' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -755,6 +822,7 @@ HighchartsSeriesPyramid3dTest >> testPointInterval [
 	component pointInterval: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointInterval' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -769,6 +837,7 @@ HighchartsSeriesPyramid3dTest >> testPointIntervalUnit [
 	component pointIntervalUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointIntervalUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -783,6 +852,7 @@ HighchartsSeriesPyramid3dTest >> testPointPadding [
 	component pointPadding: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointPadding' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -797,6 +867,7 @@ HighchartsSeriesPyramid3dTest >> testPointPlacement [
 	component pointPlacement: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointPlacement' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -811,6 +882,7 @@ HighchartsSeriesPyramid3dTest >> testPointRange [
 	component pointRange: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointRange' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -825,6 +897,7 @@ HighchartsSeriesPyramid3dTest >> testPointStart [
 	component pointStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -839,6 +912,7 @@ HighchartsSeriesPyramid3dTest >> testPointWidth [
 	component pointWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'pointWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -853,6 +927,7 @@ HighchartsSeriesPyramid3dTest >> testReversed [
 	component reversed: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'reversed' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -867,6 +942,7 @@ HighchartsSeriesPyramid3dTest >> testSelected [
 	component selected: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'selected' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -881,6 +957,7 @@ HighchartsSeriesPyramid3dTest >> testShadow [
 	component shadow: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'shadow' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -895,6 +972,7 @@ HighchartsSeriesPyramid3dTest >> testShowCheckbox [
 	component showCheckbox: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'showCheckbox' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -909,6 +987,7 @@ HighchartsSeriesPyramid3dTest >> testShowInLegend [
 	component showInLegend: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'showInLegend' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -923,6 +1002,7 @@ HighchartsSeriesPyramid3dTest >> testShowInNavigator [
 	component showInNavigator: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'showInNavigator' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -937,6 +1017,7 @@ HighchartsSeriesPyramid3dTest >> testSkipKeyboardNavigation [
 	component skipKeyboardNavigation: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'skipKeyboardNavigation' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -951,6 +1032,7 @@ HighchartsSeriesPyramid3dTest >> testSoftThreshold [
 	component softThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'softThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -965,6 +1047,7 @@ HighchartsSeriesPyramid3dTest >> testStack [
 	component stack: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'stack' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -979,6 +1062,7 @@ HighchartsSeriesPyramid3dTest >> testStacking [
 	component stacking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'stacking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -993,6 +1077,7 @@ HighchartsSeriesPyramid3dTest >> testStates [
 	component states: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'states' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1007,6 +1092,7 @@ HighchartsSeriesPyramid3dTest >> testStep [
 	component step: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1021,6 +1107,7 @@ HighchartsSeriesPyramid3dTest >> testStickyTracking [
 	component stickyTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'stickyTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1035,6 +1122,7 @@ HighchartsSeriesPyramid3dTest >> testThreshold [
 	component threshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'threshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1049,6 +1137,7 @@ HighchartsSeriesPyramid3dTest >> testTurboThreshold [
 	component turboThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'turboThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1063,6 +1152,7 @@ HighchartsSeriesPyramid3dTest >> testType [
 	component type: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'type' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1077,6 +1167,7 @@ HighchartsSeriesPyramid3dTest >> testVisible [
 	component visible: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'visible' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1091,6 +1182,7 @@ HighchartsSeriesPyramid3dTest >> testWidth [
 	component width: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'width' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1105,6 +1197,7 @@ HighchartsSeriesPyramid3dTest >> testXAxis [
 	component xAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'xAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1119,6 +1212,7 @@ HighchartsSeriesPyramid3dTest >> testYAxis [
 	component yAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'yAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1133,6 +1227,7 @@ HighchartsSeriesPyramid3dTest >> testZIndex [
 	component zIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'zIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1147,6 +1242,7 @@ HighchartsSeriesPyramid3dTest >> testZoneAxis [
 	component zoneAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
 		at: 'zoneAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript

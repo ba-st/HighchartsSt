@@ -29,21 +29,21 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsFibonacciTypeOptionsLabels >> backgroundColor: aColor [
+HighstockAnnotationsFibonacciTypeOptionsLabels >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the annotation´s label.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockAnnotationsFibonacciTypeOptionsLabels >> borderColor: aColor [
+HighstockAnnotationsFibonacciTypeOptionsLabels >> borderColor: aHighchartsColorString [
 
 	"The border color for the annotation´s label.
 Defaults to black."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -87,7 +87,7 @@ Defaults to false."
 HighstockAnnotationsFibonacciTypeOptionsLabels >> distance: aNumber [
 
 	"The label´s pixel distance from the point.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'distance' put: aNumber
 ]
@@ -95,32 +95,32 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> format: aString [
 
-	"A format string for the data label.
-Defaults to undefined."
+	"A
+format
+string for the data label.
+"
 
 	configurationOptions at: 'format' put: aString
 ]
 
 { #category : #accessing }
-HighstockAnnotationsFibonacciTypeOptionsLabels >> formatter: aFunction [
+HighstockAnnotationsFibonacciTypeOptionsLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format
-the annotation´s label. Note that if a format or text
-are defined, the format or text take precedence and
-the formatter is ignored. This refers to a * point object.
-Defaults to function () {
- return defined(this.y) ? this.y : 'Annotation label';
-}."
+	"Callback JavaScript function to format the annotation´s
+label. Note that if a format or text are defined, the
+format or text take precedence and the formatter is ignored.
+This refers to a point object.
+Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
 ]
 
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> overflow: aString [
 
-	"How to handle the annotation´s label that flow
-outside the plot area. The justify option aligns the label
-inside the plot area.
+	"How to handle the annotation´s label that flow outside the
+plot area. The justify option aligns the label inside the
+plot area.
 Defaults to justify."
 
 	configurationOptions at: 'overflow' put: aString
@@ -130,21 +130,21 @@ Defaults to justify."
 HighstockAnnotationsFibonacciTypeOptionsLabels >> padding: aNumber [
 
 	"When either the borderWidth or the backgroundColor is set,
-this is the padding within the box.
+this    is the padding within the box.
 Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockAnnotationsFibonacciTypeOptionsLabels >> shadow: aBooleanOrObject [
+HighstockAnnotationsFibonacciTypeOptionsLabels >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-	"The shadow of the box. The shadow can be
-an object configuration containing
-color, offsetX, offsetY, opacity and width.
+	"The shadow of the box. The shadow can be an object
+configuration containing color, offsetX, offsetY,
+opacity and width.
 Defaults to false."
 
-	configurationOptions at: 'shadow' put: aBooleanOrObject
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
 ]
 
 { #category : #accessing }
@@ -158,18 +158,19 @@ Defaults to callout."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsFibonacciTypeOptionsLabels >> style [
+HighstockAnnotationsFibonacciTypeOptionsLabels >> style: aHighchartsCSSObject [
 
 	"Styles for the annotation´s label.
 "
-	^configurationOptions at: 'style' ifAbsentPut: [HighstockAnnotationsFibonacciTypeOptionsLabelsStyle new]
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> text: aString [
 
 	"Alias for the format option.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'text' put: aString
 ]

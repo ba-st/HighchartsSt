@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockNavigationEventsTest >> testClosePopup [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationEvents new.
+	component closePopup: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'closePopup' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigationEventsTest >> testDeselectButton [
 
 	| component javascript expectedConfiguration |

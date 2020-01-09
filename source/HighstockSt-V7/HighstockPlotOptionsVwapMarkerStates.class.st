@@ -16,12 +16,6 @@ HighstockPlotOptionsVwapMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsVwapMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsVwapMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsVwapMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

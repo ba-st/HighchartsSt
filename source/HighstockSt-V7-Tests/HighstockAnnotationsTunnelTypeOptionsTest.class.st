@@ -19,6 +19,20 @@ HighstockAnnotationsTunnelTypeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsTunnelTypeOptionsTest >> testHeightControlPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsTunnelTypeOptions new.
+	component heightControlPoint: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'heightControlPoint' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsTunnelTypeOptionsTest >> testXAxis [
 
 	| component javascript expectedConfiguration |

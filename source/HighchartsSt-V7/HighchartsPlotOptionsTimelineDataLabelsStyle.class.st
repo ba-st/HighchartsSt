@@ -5,6 +5,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsTimelineDataLabelsStyle >> color: aString [
+
+
+	configurationOptions at: 'color' put: aString
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsTimelineDataLabelsStyle >> fontSize: aString [
 
 

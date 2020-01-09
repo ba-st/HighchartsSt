@@ -11,6 +11,15 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsZAxisPlotLines >> acrossPanes: aBoolean [
+
+	"Flag to decide if plotLine should be rendered across all panes.
+Defaults to true."
+
+	configurationOptions at: 'acrossPanes' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsZAxisPlotLines >> className: aString [
 
 	"A custom class name, in addition to the default highcharts-plot-line,
@@ -24,7 +33,7 @@ to apply to each individual line.
 HighchartsZAxisPlotLines >> color: aHighchartsColorString [
 
 	"The color of the line.
-"
+Defaults to #999999."
 
 	configurationOptions at: 'color' put: aHighchartsColorString
 ]
@@ -79,7 +88,7 @@ HighchartsZAxisPlotLines >> value: aNumber [
 HighchartsZAxisPlotLines >> width: aNumber [
 
 	"The width or thickness of the plot line.
-"
+Defaults to 2."
 
 	configurationOptions at: 'width' put: aNumber
 ]

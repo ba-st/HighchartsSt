@@ -16,12 +16,6 @@ HighstockPlotOptionsCciMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsCciMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsCciMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsCciMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

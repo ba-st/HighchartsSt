@@ -16,12 +16,6 @@ HighstockPlotOptionsAreasplinerangeMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsAreasplinerangeMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsAreasplinerangeMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsAreasplinerangeMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

@@ -11,6 +11,24 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsNavigationButtonOptions >> align: aHighchartsAlignValue [
+
+	"Alignment for the buttons.
+Defaults to right."
+
+	configurationOptions at: 'align' put: aHighchartsAlignValue
+]
+
+{ #category : #accessing }
+HighchartsNavigationButtonOptions >> buttonSpacing: aNumber [
+
+	"The pixel spacing between buttons.
+Defaults to 3."
+
+	configurationOptions at: 'buttonSpacing' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsNavigationButtonOptions >> enabled: aBoolean [
 
 	"Whether to enable buttons.
@@ -20,12 +38,30 @@ Defaults to true."
 ]
 
 { #category : #accessing }
+HighchartsNavigationButtonOptions >> height: aNumber [
+
+	"Pixel height of the buttons.
+Defaults to 22."
+
+	configurationOptions at: 'height' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsNavigationButtonOptions >> symbolFill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Fill color for the symbol within the button.
 Defaults to #666666."
 
 	configurationOptions at: 'symbolFill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighchartsNavigationButtonOptions >> symbolSize: aNumber [
+
+	"The pixel size of the symbol on the button.
+Defaults to 14."
+
+	configurationOptions at: 'symbolSize' put: aNumber
 ]
 
 { #category : #accessing }
@@ -47,6 +83,24 @@ Defaults to 3."
 ]
 
 { #category : #accessing }
+HighchartsNavigationButtonOptions >> symbolX: aNumber [
+
+	"The x position of the center of the symbol inside the button.
+Defaults to 12.5."
+
+	configurationOptions at: 'symbolX' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsNavigationButtonOptions >> symbolY: aNumber [
+
+	"The y position of the center of the symbol inside the button.
+Defaults to 10.5."
+
+	configurationOptions at: 'symbolY' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsNavigationButtonOptions >> text: aString [
 
 	"A text string to add to the individual button.
@@ -64,6 +118,25 @@ Tri-state button styles are supported by the states.hover and
 states.select objects.
 "
 	^configurationOptions at: 'theme' ifAbsentPut: [HighchartsNavigationButtonOptionsTheme new]
+]
+
+{ #category : #accessing }
+HighchartsNavigationButtonOptions >> verticalAlign: aHighchartsVerticalAlignValue [
+
+	"The vertical alignment of the buttons. Can be one of &quot;top&quot;,
+&quot;middle&quot; or &quot;bottom&quot;.
+Defaults to top."
+
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
+]
+
+{ #category : #accessing }
+HighchartsNavigationButtonOptions >> width: aNumber [
+
+	"The pixel width of the button.
+Defaults to 24."
+
+	configurationOptions at: 'width' put: aNumber
 ]
 
 { #category : #accessing }

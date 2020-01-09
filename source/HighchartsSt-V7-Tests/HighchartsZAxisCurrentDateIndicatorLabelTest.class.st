@@ -19,6 +19,34 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisCurrentDateIndicatorLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisCurrentDateIndicatorLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsZAxisCurrentDateIndicatorLabelTest >> testRotation [
 
 	| component javascript expectedConfiguration |

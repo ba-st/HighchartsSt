@@ -16,12 +16,6 @@ HighstockPlotOptionsPcMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsPcMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsPcMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsPcMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

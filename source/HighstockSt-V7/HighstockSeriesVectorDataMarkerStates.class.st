@@ -16,12 +16,6 @@ HighstockSeriesVectorDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesVectorDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesVectorDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesVectorDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

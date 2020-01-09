@@ -22,6 +22,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesNetworkgraphData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesNetworkgraphDataAccessibility new]
 ]
 
@@ -61,20 +63,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesNetworkgraphData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesNetworkgraphData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesNetworkgraphDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesNetworkgraphData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -85,7 +86,6 @@ HighchartsSeriesNetworkgraphData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesNetworkgraphDataDragDrop new]
 ]
@@ -93,7 +93,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighchartsSeriesNetworkgraphData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -132,8 +132,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesNetworkgraphData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString
@@ -155,13 +154,4 @@ HighchartsSeriesNetworkgraphData >> to: aString [
 "
 
 	configurationOptions at: 'to' put: aString
-]
-
-{ #category : #accessing }
-HighchartsSeriesNetworkgraphData >> weight: aNumber [
-
-	"The weight of the link.
-"
-
-	configurationOptions at: 'weight' put: aNumber
 ]

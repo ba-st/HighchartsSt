@@ -19,6 +19,34 @@ HighchartsPlotOptionsTimelineTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTooltipTest >> testClusterFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimelineTooltip new.
+	component clusterFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clusterFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTooltipTest >> testDistance [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimelineTooltip new.
+	component distance: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'distance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsTimelineTooltipTest >> testFollowPointer [
 
 	| component javascript expectedConfiguration |

@@ -19,6 +19,34 @@ HighstockSeriesAreasplineTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesAreasplineTooltipTest >> testClusterFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplineTooltip new.
+	component clusterFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clusterFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplineTooltipTest >> testDistance [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplineTooltip new.
+	component distance: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'distance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAreasplineTooltipTest >> testFollowPointer [
 
 	| component javascript expectedConfiguration |

@@ -46,13 +46,6 @@ HighchartsLangAccessibility >> chartContainerLabel: aString [
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> chartHeading: aString [
-
-
-	configurationOptions at: 'chartHeading' put: aString
-]
-
-{ #category : #accessing }
 HighchartsLangAccessibility >> chartTypes [
 
 	"Chart type description strings. This is added to the chart
@@ -64,6 +57,13 @@ series in the chart, and one for multiple series of the same
 type.
 "
 	^configurationOptions at: 'chartTypes' ifAbsentPut: [HighchartsLangAccessibilityChartTypes new]
+]
+
+{ #category : #accessing }
+HighchartsLangAccessibility >> credits: aString [
+
+
+	configurationOptions at: 'credits' put: aString
 ]
 
 { #category : #accessing }
@@ -89,66 +89,37 @@ HighchartsLangAccessibility >> exporting [
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> legendItem: aString [
+HighchartsLangAccessibility >> graphicContainerLabel: aString [
 
+	"Set a label on the container wrapping the SVG.
+Defaults to ."
 
-	configurationOptions at: 'legendItem' put: aString
+	configurationOptions at: 'graphicContainerLabel' put: aString
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> legendLabel: aString [
+HighchartsLangAccessibility >> legend [
 
-
-	configurationOptions at: 'legendLabel' put: aString
+	"Language options for accessibility of the legend.
+"
+	^configurationOptions at: 'legend' ifAbsentPut: [HighchartsLangAccessibilityLegend new]
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> mapZoomIn: aString [
+HighchartsLangAccessibility >> rangeSelector [
 
-
-	configurationOptions at: 'mapZoomIn' put: aString
+	"Range selector language options for accessibility.
+"
+	^configurationOptions at: 'rangeSelector' ifAbsentPut: [HighchartsLangAccessibilityRangeSelector new]
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> mapZoomOut: aString [
+HighchartsLangAccessibility >> screenReaderSection [
 
-
-	configurationOptions at: 'mapZoomOut' put: aString
-]
-
-{ #category : #accessing }
-HighchartsLangAccessibility >> rangeSelectorButton: aString [
-
-
-	configurationOptions at: 'rangeSelectorButton' put: aString
-]
-
-{ #category : #accessing }
-HighchartsLangAccessibility >> rangeSelectorMaxInput: aString [
-
-
-	configurationOptions at: 'rangeSelectorMaxInput' put: aString
-]
-
-{ #category : #accessing }
-HighchartsLangAccessibility >> rangeSelectorMinInput: aString [
-
-
-	configurationOptions at: 'rangeSelectorMinInput' put: aString
-]
-
-{ #category : #accessing }
-HighchartsLangAccessibility >> resetZoomButton: aString [
-
-
-	configurationOptions at: 'resetZoomButton' put: aString
-]
-
-{ #category : #accessing }
-HighchartsLangAccessibility >> screenReaderRegionLabel: aString [
-
-
-	configurationOptions at: 'screenReaderRegionLabel' put: aString
+	"Language options for the screen reader information sections added
+before and after the charts.
+"
+	^configurationOptions at: 'screenReaderSection' ifAbsentPut: [HighchartsLangAccessibilityScreenReaderSection new]
 ]
 
 { #category : #accessing }
@@ -172,15 +143,6 @@ when these series types are used.
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> svgContainerEnd: aString [
-
-	"Label for the end of the chart. Announced by screen readers.
-Defaults to End of interactive chart."
-
-	configurationOptions at: 'svgContainerEnd' put: aString
-]
-
-{ #category : #accessing }
 HighchartsLangAccessibility >> svgContainerLabel: aString [
 
 
@@ -200,10 +162,11 @@ Defaults to ."
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> tableSummary: aString [
+HighchartsLangAccessibility >> table [
 
-
-	configurationOptions at: 'tableSummary' put: aString
+	"Accessibility language options for the data table.
+"
+	^configurationOptions at: 'table' ifAbsentPut: [HighchartsLangAccessibilityTable new]
 ]
 
 { #category : #accessing }
@@ -220,8 +183,9 @@ Defaults to ,."
 ]
 
 { #category : #accessing }
-HighchartsLangAccessibility >> viewAsDataTable: aString [
+HighchartsLangAccessibility >> zoom [
 
-
-	configurationOptions at: 'viewAsDataTable' put: aString
+	"Chart and map zoom accessibility language options.
+"
+	^configurationOptions at: 'zoom' ifAbsentPut: [HighchartsLangAccessibilityZoom new]
 ]

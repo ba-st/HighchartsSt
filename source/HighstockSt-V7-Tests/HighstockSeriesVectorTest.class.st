@@ -185,6 +185,21 @@ HighstockSeriesVectorTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesVectorTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVector new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'vector';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesVectorTest >> testCompare [
 
 	| component javascript expectedConfiguration |

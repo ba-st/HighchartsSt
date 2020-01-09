@@ -12,12 +12,6 @@ HighstockAnnotationsCrookedLineTypeOptionsPoints >> controlPoint: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsCrookedLineTypeOptionsPoints >> label [
-
-	^configurationOptions at: 'label' ifAbsentPut: [HighstockAnnotationsCrookedLineTypeOptionsPointsLabel new]
-]
-
-{ #category : #accessing }
 HighstockAnnotationsCrookedLineTypeOptionsPoints >> x: aNumber [
 
 	"The x position of the point.

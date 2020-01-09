@@ -37,16 +37,11 @@ object. If true, it will use the ´swing´ jQuery easing and a
 duration of 500 ms. If used as a configuration object, the following
 properties are supported:
 
+duration: The duration of the animation in milliseconds.
 
-duration
-
-The duration of the animation in milliseconds.
-
-easing
-
-A string reference to an easing function set on the `Math`
-object. See [the easing
-demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/).
+easing: A string reference to an easing function set on the
+Math object. See
+the easing demo.
 Defaults to true."
 
 	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
@@ -62,12 +57,12 @@ Defaults to #ffffff."
 ]
 
 { #category : #accessing }
-HighchartsChart >> borderColor: aHighchartsColorString [
+HighchartsChart >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the outer chart border.
 Defaults to #335cad."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -125,7 +120,6 @@ HighchartsChart >> displayErrors: aBoolean [
 
 	"Whether to display errors on the chart. When false, the errors will
 be shown only in the console.
-Requires debugger.js module.
 Defaults to true."
 
 	configurationOptions at: 'displayErrors' put: aBoolean
@@ -141,7 +135,7 @@ HighchartsChart >> events: anObject [
 ]
 
 { #category : #accessing }
-HighchartsChart >> height: aNumberOrstringOrNil [
+HighchartsChart >> height: aNilOrnumberOrstring [
 
 	"An explicit height for the chart. If a number, the height is
 given in pixels. If given a percentage string (for example
@@ -153,7 +147,7 @@ height of the containing element, or 400 pixels if the containing
 element´s height is 0.
 Defaults to nil."
 
-	configurationOptions at: 'height' put: aNumberOrstringOrNil
+	configurationOptions at: 'height' put: aNilOrnumberOrstring
 ]
 
 { #category : #accessing }
@@ -241,6 +235,16 @@ the default dynamic margin. See also spacingTop.
 ]
 
 { #category : #accessing }
+HighchartsChart >> numberFormatter: aHighchartsNumberFormatterCallbackFunction [
+
+	"Callback function to override the default function that formats all
+the numbers in the chart. Returns a string with the formatted number.
+"
+
+	configurationOptions at: 'numberFormatter' put: aHighchartsNumberFormatterCallbackFunction
+]
+
+{ #category : #accessing }
 HighchartsChart >> options3d [
 
 	"Options to render charts in 3 dimensions. This feature requires
@@ -264,7 +268,7 @@ event.ctrlKey, event.metaKey and event.shiftKey).
 ]
 
 { #category : #accessing }
-HighchartsChart >> panning: aBoolean [
+HighchartsChart >> panning [
 
 	"Allow panning in a chart. Best used with panKey
 to combine zooming and panning.
@@ -272,8 +276,7 @@ On touch devices, when the tooltip.followTouchMove option is true (default), pan
 requires two fingers. To allow panning with one finger, set
 followTouchMove to false.
 "
-
-	configurationOptions at: 'panning' put: aBoolean
+	^configurationOptions at: 'panning' ifAbsentPut: [HighchartsChartPanning new]
 ]
 
 { #category : #accessing }
@@ -282,18 +285,17 @@ HighchartsChart >> parallelAxes [
 	"Common options for all yAxes rendered in a parallel coordinates plot.
 This feature requires modules/parallel-coordinates.js.
 The default options are:
-
 parallelAxes: {
    lineWidth: 1,       // classic mode only
    gridlinesWidth: 0,  // classic mode only
    title: {
-       text: '',
+       text: ´´,
        reserveSpace: false
    },
    labels: {
        x: 0,
        y: 0,
-       align: 'center',
+       align: ´center´,
        reserveSpace: false
    },
    offset: 0
@@ -329,12 +331,12 @@ two-finger touches.
 ]
 
 { #category : #accessing }
-HighchartsChart >> plotBackgroundColor: aHighchartsColorString [
+HighchartsChart >> plotBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the plot area.
 "
 
-	configurationOptions at: 'plotBackgroundColor' put: aHighchartsColorString
+	configurationOptions at: 'plotBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -350,12 +352,12 @@ exported charts, its URL needs to be accessible by the export server.
 ]
 
 { #category : #accessing }
-HighchartsChart >> plotBorderColor: aHighchartsColorString [
+HighchartsChart >> plotBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the inner chart or plot area border.
 Defaults to #cccccc."
 
-	configurationOptions at: 'plotBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'plotBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -383,8 +385,7 @@ HighchartsChart >> polar: aBoolean [
 
 	"When true, cartesian charts like line, spline, area and column are
 transformed into the polar coordinate system. This produces polar
-charts, also known as radar charts. Requires
-highcharts-more.js.
+charts, also known as radar charts.
 Defaults to false."
 
 	configurationOptions at: 'polar' put: aBoolean
@@ -424,23 +425,26 @@ to reset zoom.
 { #category : #accessing }
 HighchartsChart >> scrollablePlotArea [
 
-	"Options for a scrollable plot area. This feature provides a minimum width for
-the plot area of the chart. If the width gets smaller than this, typically
-on mobile devices, a native browser scrollbar is presented below the chart.
-This scrollbar provides smooth scrolling for the contents of the plot area,
-whereas the title, legend and axes are fixed.
+	"Options for a scrollable plot area. This feature provides a minimum size for
+the plot area of the chart. If the size gets smaller than this, typically
+on mobile devices, a native browser scrollbar is presented. This scrollbar
+provides smooth scrolling for the contents of the plot area, whereas the
+title, legend and unaffected axes are fixed.
+Since v7.1.2, a scrollable plot area can be defined for either horizontal or
+vertical scrolling, depending on whether the minWidth or minHeight
+option is set.
 "
 	^configurationOptions at: 'scrollablePlotArea' ifAbsentPut: [HighchartsChartScrollablePlotArea new]
 ]
 
 { #category : #accessing }
-HighchartsChart >> selectionMarkerFill: aHighchartsColorString [
+HighchartsChart >> selectionMarkerFill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color of the marker square when selecting (zooming
 in on) an area of the chart.
 Defaults to rgba(51,92,173,0.25)."
 
-	configurationOptions at: 'selectionMarkerFill' put: aHighchartsColorString
+	configurationOptions at: 'selectionMarkerFill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -560,21 +564,21 @@ instead the type option must always be set in the series.
 ]
 
 { #category : #accessing }
-HighchartsChart >> width: aNumberOrNil [
+HighchartsChart >> width: aNilOrnumberOrstring [
 
 	"An explicit width for the chart. By default (when null) the width
 is calculated from the offset width of the containing element.
 Defaults to nil."
 
-	configurationOptions at: 'width' put: aNumberOrNil
+	configurationOptions at: 'width' put: aNilOrnumberOrstring
 ]
 
 { #category : #accessing }
 HighchartsChart >> zoomKey: aString [
 
-	"Set a key to hold when dragging to zoom the chart. Requires the
-draggable-points module. This is useful to avoid zooming while moving points.
-Should be set different than chart.panKey.
+	"Set a key to hold when dragging to zoom the chart. This is useful to avoid
+zooming while moving points. Should be set different than
+chart.panKey.
 "
 
 	configurationOptions at: 'zoomKey' put: aString

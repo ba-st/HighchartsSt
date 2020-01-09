@@ -103,6 +103,20 @@ HighchartsPlotOptionsSeriesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSeriesTest >> testColorAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSeries new.
+	component colorAxis: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorAxis' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSeriesTest >> testColorIndex [
 
 	| component javascript expectedConfiguration |
@@ -112,6 +126,20 @@ HighchartsPlotOptionsSeriesTest >> testColorIndex [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'colorIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSeriesTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSeries new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

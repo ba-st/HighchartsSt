@@ -155,6 +155,21 @@ HighchartsSeriesGaugeTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesGaugeTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGauge new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'gauge';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesGaugeTest >> testCompare [
 
 	| component javascript expectedConfiguration |

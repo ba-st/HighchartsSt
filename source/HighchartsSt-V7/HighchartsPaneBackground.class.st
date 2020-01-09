@@ -8,21 +8,21 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPaneBackground >> backgroundColor: aHighchartsGradientColorObject [
+HighchartsPaneBackground >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the pane.
 Defaults to { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, #ffffff], [1, #e6e6e6]] }."
 
-	configurationOptions at: 'backgroundColor' put: aHighchartsGradientColorObject
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsPaneBackground >> borderColor: aHighchartsColorString [
+HighchartsPaneBackground >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The pane background border color.
 Defaults to #cccccc."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

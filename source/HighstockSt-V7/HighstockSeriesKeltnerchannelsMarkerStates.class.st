@@ -16,12 +16,6 @@ HighstockSeriesKeltnerchannelsMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesKeltnerchannelsMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesKeltnerchannelsMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesKeltnerchannelsMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

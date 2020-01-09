@@ -147,10 +147,13 @@ Highsoft8DumpImporter >> componentClassNameFor: parent [
 
 { #category : #'private - argument type' }
 Highsoft8DumpImporter >> compositeArgumentTypeFrom: aTypeString [
+
 	| type |
+
 	type := aTypeString.
 	type := self format: self collectionTypeRegex asCollectionIn: type.
 	type := type copyReplaceAll: '|' with: 'Or'.
+	type := type copyReplaceAll: '-' with: ''.
 	type := type copyReplaceAll: 'function' with: 'Function'.
 	type := type copyReplaceAll: '"auto"' with: 'String'.
 	type := type copyReplaceAll: '"default"' with: 'String'.
@@ -162,8 +165,7 @@ Highsoft8DumpImporter >> compositeArgumentTypeFrom: aTypeString [
 	type := type copyWithoutAll: '.'.
 	type := type reject: [ :character | character isSeparator ].
 	AssertionChecker
-		enforce: [ type
-				allSatisfy: [ :character | character isAlphaNumeric or: [ character = $_ ] ] ]
+		enforce: [ type allSatisfy: [ :character | character isAlphaNumeric or: [ character = $_ ] ] ]
 		because: [ 'Argument names must be alpha numeric' ].
 	^ type
 ]

@@ -37,20 +37,16 @@ HighchartsColorAxis >> accessibility [
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> alignTicks: aBoolean [
+HighchartsColorAxis >> angle: aNumber [
 
-	"When using multiple axis, the ticks of two or more opposite axes
-will automatically be aligned by adding ticks to the axis or axes
-with the least ticks, as if tickAmount were specified.
-This can be prevented by setting alignTicks to false. If the grid
-lines look messy, it´s a good idea to hide them for the secondary
-axis by setting gridLineWidth to 0.
-If startOnTick or endOnTick in an Axis options are set to false,
-then the alignTicks will be disabled for the Axis.
-Disabled for logarithmic axes.
-Defaults to true."
+	"In a polar chart, this is the angle of the Y axis in degrees, where
+0 is up and 90 is right. The angle determines the position of the
+axis line and the labels, though the coordinate system is unaffected.
+Since v8.0.0 this option is also applicable for X axis (inverted
+polar).
+Defaults to 0."
 
-	configurationOptions at: 'alignTicks' put: aBoolean
+	configurationOptions at: 'angle' put: aNumber
 ]
 
 { #category : #accessing }
@@ -144,13 +140,13 @@ HighchartsColorAxis >> grid [
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> gridLineColor: aHighchartsColorString [
+HighchartsColorAxis >> gridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color of the grid lines extending from the axis across the
 gradient.
 Defaults to #e6e6e6."
 
-	configurationOptions at: 'gridLineColor' put: aHighchartsColorString
+	configurationOptions at: 'gridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -161,6 +157,18 @@ this demonstration.
 Defaults to Solid."
 
 	configurationOptions at: 'gridLineDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> gridLineInterpolation: aString [
+
+	"Polar charts only. Whether the grid lines should draw as a polygon
+with straight lines between categories, or as circles. Can be either
+circle or polygon. Since v8.0.0 this option is also applicable
+for X axis (inverted polar).
+"
+
+	configurationOptions at: 'gridLineInterpolation' put: aString
 ]
 
 { #category : #accessing }
@@ -203,25 +211,35 @@ Highcharts API.
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> lineColor: aHighchartsColorString [
+HighchartsColorAxis >> layout: aStringOrundefined [
+
+	"The layout of the color axis. Can be ´horizontal´ or ´vertical´.
+If none given, the color axis has the same layout as the legend.
+"
+
+	configurationOptions at: 'layout' put: aStringOrundefined
+]
+
+{ #category : #accessing }
+HighchartsColorAxis >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
 .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> margin: anObject [
+HighchartsColorAxis >> margin: aNumber [
 
 	"If there are multiple axes on the same side of the chart, the pixel
 margin between the axes. Defaults to 0 on vertical axes, 15 on
 horizontal axes.
 "
 
-	configurationOptions at: 'margin' put: anObject
+	configurationOptions at: 'margin' put: aNumber
 ]
 
 { #category : #accessing }
@@ -246,7 +264,7 @@ endOnTick option is true, the max value might be rounded up.
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> maxColor: aHighchartsColorString [
+HighchartsColorAxis >> maxColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color to represent the maximum of the color axis. Unless
 dataClasses or
@@ -257,7 +275,7 @@ maxColor unless a color is set for each data class, or the
 dataClassColor is set.
 Defaults to #003399."
 
-	configurationOptions at: 'maxColor' put: aHighchartsColorString
+	configurationOptions at: 'maxColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -268,16 +286,6 @@ padding of 0.05 will make a 100px axis 5px longer.
 Defaults to 0."
 
 	configurationOptions at: 'maxPadding' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsColorAxis >> maxRange: aNumber [
-
-	"Maximum range which can be set using the navigator´s handles.
-Opposite of xAxis.minRange.
-"
-
-	configurationOptions at: 'maxRange' put: aNumber
 ]
 
 { #category : #accessing }
@@ -293,7 +301,7 @@ down.
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minColor: aHighchartsColorString [
+HighchartsColorAxis >> minColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color to represent the minimum of the color axis. Unless
 dataClasses or
@@ -304,7 +312,7 @@ maxColor unless a color is set for each data class, or the
 dataClassColor is set.
 Defaults to #e6ebf5."
 
-	configurationOptions at: 'minColor' put: aHighchartsColorString
+	configurationOptions at: 'minColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -318,14 +326,14 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorGridLineColor: aHighchartsColorString [
+HighchartsColorAxis >> minorGridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color of the minor, secondary grid lines.
 In styled mode, the stroke width is given in the
 .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorString
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -350,12 +358,12 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorTickColor: aHighchartsColorString [
+HighchartsColorAxis >> minorTickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aHighchartsColorString
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -421,56 +429,6 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> ordinal: aBoolean [
-
-	"In an ordinal axis, the points are equally spaced in the chart
-regardless of the actual time or x distance between them. This means
-that missing data periods (e.g. nights or weekends for a stock chart)
-will not take up space in the chart.
-Having ordinal: false will show any gaps created by the gapSize
-setting proportionate to their duration.
-In stock charts the X axis is ordinal by default, unless
-the boost module is used and at least one of the series´ data length
-exceeds the boostThreshold.
-Defaults to true."
-
-	configurationOptions at: 'ordinal' put: aBoolean
-]
-
-{ #category : #accessing }
-HighchartsColorAxis >> overscroll: aNumber [
-
-	"Additional range on the right side of the xAxis. Works similar to
-xAxis.maxPadding, but value is set in milliseconds. Can be set for
-both main xAxis and the navigator´s xAxis.
-Defaults to 0."
-
-	configurationOptions at: 'overscroll' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsColorAxis >> pane: aNumber [
-
-	"Refers to the index in the panes array. Used for circular
-gauges and polar charts. When the option is not set then first pane
-will be used.
-"
-
-	configurationOptions at: 'pane' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsColorAxis >> range: aNumber [
-
-	"The zoomed range to display when only defining one or none of min
-or max. For example, to show the latest month, a range of one month
-can be set.
-"
-
-	configurationOptions at: 'range' put: aNumber
-]
-
-{ #category : #accessing }
 HighchartsColorAxis >> reversed: aBoolean [
 
 	"Whether to reverse the axis so that the highest number is closest
@@ -480,31 +438,6 @@ top.
 Defaults to false."
 
 	configurationOptions at: 'reversed' put: aBoolean
-]
-
-{ #category : #accessing }
-HighchartsColorAxis >> reversedStacks: aBoolean [
-
-	"This option determines how stacks should be ordered within a group.
-For example reversed xAxis also reverses stacks, so first series
-comes last in a group. To keep order like for non-reversed xAxis
-enable this option.
-Defaults to false."
-
-	configurationOptions at: 'reversedStacks' put: aBoolean
-]
-
-{ #category : #accessing }
-HighchartsColorAxis >> scrollbar [
-
-	"An optional scrollbar to display on the X axis in response to
-limiting the minimum and maximum of the axis values.
-In styled mode, all the presentational options for the scrollbar are
-replaced by the classes .highcharts-scrollbar-thumb,
-.highcharts-scrollbar-arrow, .highcharts-scrollbar-button,
-.highcharts-scrollbar-rifles and .highcharts-scrollbar-track.
-"
-	^configurationOptions at: 'scrollbar' ifAbsentPut: [HighchartsColorAxisScrollbar new]
 ]
 
 { #category : #accessing }
@@ -604,14 +537,14 @@ or category axes are not affected.
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> tickColor: aHighchartsColorString [
+HighchartsColorAxis >> tickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the main tick marks.
 In styled mode, the stroke is given in the .highcharts-tick
 class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aHighchartsColorString
+	configurationOptions at: 'tickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -682,7 +615,8 @@ HighchartsColorAxis >> tickWidth: anUndefinedOrnumber [
 	"The pixel width of the major tick marks. Defaults to 0 on category
 axes, otherwise 1.
 In styled mode, the stroke width is given in the .highcharts-tick
-class.
+class, but in order for the element to be generated on category axes,
+the option must be explicitly set to 1.
 "
 
 	configurationOptions at: 'tickWidth' put: anUndefinedOrnumber
@@ -731,30 +665,31 @@ HighchartsColorAxis >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 	"Datetime axis only. An array determining what time intervals the
 ticks are allowed to fall on. Each array item is an array where the
 first value is the time unit and the second value another array of
-allowed multiples. Defaults to:
+allowed multiples.
+Defaults to:
 units: [[
-    'millisecond', // unit name
+    ´millisecond´, // unit name
     [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
 ], [
-    'second',
+    ´second´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'minute',
+    ´minute´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'hour',
+    ´hour´,
     [1, 2, 3, 4, 6, 8, 12]
 ], [
-    'day',
+    ´day´,
     [1]
 ], [
-    'week',
+    ´week´,
     [1]
 ], [
-    'month',
+    ´month´,
     [1, 3, 6]
 ], [
-    'year',
+    ´year´,
     null
 ]]
 "

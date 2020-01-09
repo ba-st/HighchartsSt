@@ -215,6 +215,21 @@ HighchartsSeriesBulletTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBulletTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBullet new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bullet';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBulletTest >> testColors [
 
 	| component javascript expectedConfiguration |

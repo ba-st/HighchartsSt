@@ -19,6 +19,34 @@ HighchartsSeriesFunnelTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnelTooltipTest >> testClusterFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelTooltip new.
+	component clusterFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clusterFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTooltipTest >> testDistance [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelTooltip new.
+	component distance: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'distance' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnelTooltipTest >> testFollowPointer [
 
 	| component javascript expectedConfiguration |

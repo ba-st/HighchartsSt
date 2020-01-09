@@ -44,6 +44,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesAreaData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesAreaDataAccessibility new]
 ]
 
@@ -83,20 +85,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesAreaData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesAreaData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesAreaDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesAreaData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -107,7 +108,6 @@ HighchartsSeriesAreaData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesAreaDataDragDrop new]
 ]
@@ -125,7 +125,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesAreaData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -155,14 +155,15 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesAreaData >> marker [
 
+	"Options for the point markers of line-like series.
+"
 	^configurationOptions at: 'marker' ifAbsentPut: [HighchartsSeriesAreaDataMarker new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesAreaData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

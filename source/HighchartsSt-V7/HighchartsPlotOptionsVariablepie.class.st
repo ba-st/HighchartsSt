@@ -37,7 +37,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsVariablepie >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsPlotOptionsVariablepieAccessibility new]
 ]
@@ -98,7 +98,7 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsVariablepie >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsVariablepie >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border surrounding each slice. When null, the
 border takes the same color as the slice fill. This can be used
@@ -108,7 +108,7 @@ In styled mode, the border stroke is given in the .highcharts-point
 class.
 Defaults to #ffffff."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -127,7 +127,7 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsVariablepie >> center: anArrayOfnumberOrstringOrNil [
+HighchartsPlotOptionsVariablepie >> center: anArrayOfnumberOrstringOrNilnumberOrstringOrNil [
 
 	"The center of the pie chart relative to the plot area. Can be
 percentages or pixel values. The default behaviour (as of 3.0) is to
@@ -137,7 +137,7 @@ with dynamic values, as the data labels move. In that case, the
 center should be explicitly set, for example to [&quot;50&quot;, &quot;50&quot;].
 Defaults to [null, null]."
 
-	configurationOptions at: 'center' put: anArrayOfnumberOrstringOrNil
+	configurationOptions at: 'center' put: anArrayOfnumberOrstringOrNilnumberOrstringOrNil
 ]
 
 { #category : #accessing }
@@ -166,30 +166,35 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsVariablepie >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The main color of the series. In line type series it applies to the
-line and the point markers unless otherwise specified. In bar type
-series it applies to the bars unless a color is specified per point.
-The default value is pulled from the options.colors array.
+	"The color of the pie series. A pie series is represented as an empty
+circle if the total sum of its values is 0. Use this property to
+define the color of its border.
 In styled mode, the color can be defined by the
 colorIndex option. Also, the series
 color can be set with the .highcharts-series,
 .highcharts-color-{n}, .highcharts-{type}-series or
 .highcharts-series-{n} class, or individual classes given by the
 className option.
-"
+Defaults to #cccccc."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsVariablepie >> colorAxis: aBoolean [
+HighchartsPlotOptionsVariablepie >> colorAxis: aNumberOrstringOrboolean [
 
-	"Set this option to false to prevent a series from connecting to
-the global color axis. This will cause the series to have its own
-legend item.
-"
+	"When using dual or multiple color axes, this number defines which
+colorAxis the particular series is connected to. It refers to
+either the
+{@link #colorAxis.id|axis id}
+or the index of the axis in the colorAxis array, with 0 being the
+first. Set this option to false to prevent a series from connecting
+to the default color axis.
+Since v7.2.0 the option can also be an axis id or an axis index
+instead of a boolean flag.
+Defaults to 0."
 
-	configurationOptions at: 'colorAxis' put: aBoolean
+	configurationOptions at: 'colorAxis' put: aNumberOrstringOrboolean
 ]
 
 { #category : #accessing }
@@ -201,6 +206,18 @@ highcharts-color-{n}.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsVariablepie >> colorKey: aString [
+
+	"Determines what data value should be used to calculate point color
+if colorAxis is used. Requires to set min and max if some
+custom point property is used or if approximation for data grouping
+is set to ´sum´.
+Defaults to y."
+
+	configurationOptions at: 'colorKey' put: aString
 ]
 
 { #category : #accessing }
@@ -291,7 +308,7 @@ altered through a custom approximation callback function.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsVariablepie >> dataLabels: aHighchartsDataLabelsOptionsObjectOrHighchartsPlotPieDataLabelsOptionsObject [
+HighchartsPlotOptionsVariablepie >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
 point.
@@ -301,14 +318,13 @@ In styled mode, the data labels can be styled with the
 .highcharts-data-label-box and .highcharts-data-label class names
 (see example).
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObjectOrHighchartsPlotPieDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsPlotOptionsVariablepieDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsVariablepie >> depth: aNumber [
 
-	"The thickness of a 3D pie. Requires highcharts-3d.js
+	"The thickness of a 3D pie.
 Defaults to 0."
 
 	configurationOptions at: 'depth' put: aNumber
@@ -317,26 +333,11 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsPlotOptionsVariablepie >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
 	configurationOptions at: 'description' put: aString
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsVariablepie >> dragDrop [
-
-	"The draggable-points module allows points to be moved around or modified in
-the chart. In addition to the options mentioned under the dragDrop API
-structure, the module fires three events,
-point.dragStart,
-point.drag and
-point.drop.
-It requires the modules/draggable-points.js file to be loaded.
-"
-	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsPlotOptionsVariablepieDragDrop new]
 ]
 
 { #category : #accessing }
@@ -372,17 +373,15 @@ Highcharts.addEvent function.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsVariablepie >> exposeElementToA11y: aBoolean [
+HighchartsPlotOptionsVariablepie >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
+	"If the total sum of the pie´s values is 0, the series is represented
+as an empty circle . The fillColor option defines the color of that
+circle. Use pie.borderWidth to set
+the border thickness.
+Defaults to undefined."
 
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -436,8 +435,8 @@ Defaults to true."
 { #category : #accessing }
 HighchartsPlotOptionsVariablepie >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
@@ -524,6 +523,9 @@ HighchartsPlotOptionsVariablepie >> linkedTo: aString [
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.
+If master series uses data sorting and linked series does not have
+its own sorting definition, the linked series will be sorted in the
+same order as the master one.
 "
 
 	configurationOptions at: 'linkedTo' put: aString
@@ -550,14 +552,14 @@ Defaults to 10%."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsVariablepie >> minSize: aNumber [
+HighchartsPlotOptionsVariablepie >> minSize: aNumberOrstring [
 
 	"The minimum size for a pie in response to auto margins. The pie will
 try to shrink to make room for data labels in side the plot area,
  but only to this size.
 Defaults to 80."
 
-	configurationOptions at: 'minSize' put: aNumber
+	configurationOptions at: 'minSize' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -792,7 +794,7 @@ HighchartsPlotOptionsVariablepie >> zMax: aNumber [
 	"The maximum possible z value for the point´s radius calculation. If
 the point´s Z value is bigger than zMax, the slice will be drawn
 according to the zMax value
-"
+Defaults to undefined."
 
 	configurationOptions at: 'zMax' put: aNumber
 ]
@@ -803,7 +805,7 @@ HighchartsPlotOptionsVariablepie >> zMin: aNumber [
 	"The minimum possible z value for the point´s radius calculation. If
 the point´s Z value is smaller than zMin, the slice will be drawn
 according to the zMin value.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'zMin' put: aNumber
 ]

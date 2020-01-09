@@ -18,24 +18,24 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockTooltip >> backgroundColor: aHighchartsColorString [
+HighstockTooltip >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the tooltip.
 In styled mode, the stroke width is set in the
 .highcharts-tooltip-box class.
 "
 
-	configurationOptions at: 'backgroundColor' put: aHighchartsColorString
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockTooltip >> borderColor: aHighchartsColorString [
+HighstockTooltip >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the tooltip border. When undefined, the border takes
 the color of the corresponding series or point.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -70,6 +70,29 @@ tooltip options object. The default is to preserve all decimals.
 ]
 
 { #category : #accessing }
+HighstockTooltip >> className: aString [
+
+	"A CSS class name to apply to the tooltip´s container div,
+allowing unique CSS styling for each chart.
+"
+
+	configurationOptions at: 'className' put: aString
+]
+
+{ #category : #accessing }
+HighstockTooltip >> clusterFormat: anObject [
+
+	"The HTML of the cluster point´s in the tooltip. Works only with
+marker-clusters module and analogously to
+pointFormat.
+The cluster tooltip can be also formatted using
+tooltip.formatter callback function and point.isCluster flag.
+"
+
+	configurationOptions at: 'clusterFormat' put: anObject
+]
+
+{ #category : #accessing }
 HighstockTooltip >> crosshairs: anObject [
 
 	"Since 4.1, the crosshair definitions are moved to the Axis object
@@ -90,6 +113,15 @@ each unit. For an overview of the replacement codes, see
 dateFormat.
 "
 	^configurationOptions at: 'dateTimeLabelFormats' ifAbsentPut: [HighstockTooltipDateTimeLabelFormats new]
+]
+
+{ #category : #accessing }
+HighstockTooltip >> distance: aNumber [
+
+	"Distance from point to tooltip in pixels.
+Defaults to 16."
+
+	configurationOptions at: 'distance' put: aNumber
 ]
 
 { #category : #accessing }
@@ -152,51 +184,40 @@ items are mapped to the points. Return false to disable tooltip for
 a specific point on series.
 A subset of HTML is supported. Unless useHTML is true, the HTML of
 the tooltip is parsed and converted to SVG, therefore this isn´t a
-complete HTML renderer. The following tags are supported: &lt;b&gt;,
-&lt;strong&gt;, &lt;i&gt;, &lt;em&gt;, &lt;br/&gt;, &lt;span&gt;. Spans can be styled
-with a style attribute, but only text-related CSS that is shared
-with SVG is handled.
+complete HTML renderer. The following HTML tags are supported: b,
+br, em, i, span, strong. Spans can be styled with a style
+attribute, but only text-related CSS, that is shared with SVG, is
+handled.
 The available data in the formatter differ a bit depending on whether
 the tooltip is shared or split, or belongs to a single point. In a
 shared/split tooltip, all properties except x, which is common for
 all points, are kept in an array, this.points.
 Available data are:
 
+this.percentage (not shared) /
+this.points[i].percentage (shared):
+Stacked series and pies only. The point´s percentage of the total.
 
-this.percentage (not shared) / this.points[i].percentage (shared)
+this.point (not shared) / this.points[i].point (shared):
+The point object. The point name, if defined, is available through
+this.point.name.
 
-
-Stacked series and pies only. The point's percentage of the
-total.
-
-
-this.point (not shared) / this.points[i].point (shared)
-
-The point object. The point name, if defined, is available
-through `this.point.name`.
-
-this.points
-
+this.points:
 In a shared tooltip, this is an array containing all other
 properties for each point.
 
-this.series (not shared) / this.points[i].series (shared)
-
+this.series (not shared) / this.points[i].series (shared):
 The series object. The series name is available through
-`this.series.name`.
+this.series.name.
 
-this.total (not shared) / this.points[i].total (shared)
+this.total (not shared) / this.points[i].total (shared):
+Stacked series only. The total value at this point´s x value.
 
-Stacked series only. The total value at this point's x value.
-
-
-this.x
-
+this.x:
 The x value. This property is the same regardless of the tooltip
 being shared or not.
 
-this.y (not shared) / this.points[i].y (shared)
-
+this.y (not shared) / this.points[i].y (shared):
 The y value.
 "
 
@@ -219,7 +240,7 @@ Defaults to <span style='font-size: 10px'>{point.key}</span><br/>."
 ]
 
 { #category : #accessing }
-HighstockTooltip >> headerShape: aString [
+HighstockTooltip >> headerShape: aHighchartsTooltipShapeValue [
 
 	"The name of a symbol to use for the border around the tooltip
 header. Applies only when tooltip.split is
@@ -229,7 +250,7 @@ Highcharts.SVGRenderer.prototype.symbols the same way as for
 series.marker.symbol.
 Defaults to callout."
 
-	configurationOptions at: 'headerShape' put: aString
+	configurationOptions at: 'headerShape' put: aHighchartsTooltipShapeValue
 ]
 
 { #category : #accessing }
@@ -264,7 +285,7 @@ Works analogously to formatter.
 ]
 
 { #category : #accessing }
-HighstockTooltip >> outside: aBoolean [
+HighstockTooltip >> outside: aBooleanOrundefined [
 
 	"Whether to allow the tooltip to render outside the chart´s SVG
 element box. By default (false), the tooltip is rendered within the
@@ -273,9 +294,11 @@ inside the chart area. For small charts, this may result in clipping
 or overlapping. When true, a separate SVG element is created and
 overlaid on the page, allowing the tooltip to be aligned inside the
 page itself.
-Defaults to false."
+Defaults to true if chart.scrollablePlotArea is activated,
+otherwise false.
+Defaults to undefined."
 
-	configurationOptions at: 'outside' put: aBoolean
+	configurationOptions at: 'outside' put: aBooleanOrundefined
 ]
 
 { #category : #accessing }
@@ -298,7 +321,7 @@ and tooltip.valueSuffix variables. This can also be overridden for
 each series, which makes it a good hook for displaying units.
 In styled mode, the dot is colored by a class name rather
 than the point color.
-Defaults to <span style='color:{point.color}'>\u25CF</span> {series.name}: <b>{point.y}</b><br/>."
+Defaults to <span style='color:{point.color}'>●</span> {series.name}: <b>{point.y}</b><br/>."
 
 	configurationOptions at: 'pointFormat' put: aString
 ]
@@ -335,12 +358,12 @@ The return should be an object containing x and y values, for example
 ]
 
 { #category : #accessing }
-HighstockTooltip >> shadow: aBoolean [
+HighstockTooltip >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
 	"Whether to apply a drop shadow to the tooltip.
 Defaults to true."
 
-	configurationOptions at: 'shadow' put: aBoolean
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
 ]
 
 { #category : #accessing }
@@ -404,16 +427,15 @@ easier to read. This option takes precedence over tooltip.shared.
 ]
 
 { #category : #accessing }
-HighstockTooltip >> style: aHighchartsCSSObject [
+HighstockTooltip >> style [
 
 	"CSS styles for the tooltip. The tooltip can also be styled through
 the CSS class .highcharts-tooltip.
 Note that the default pointerEvents style makes the tooltip ignore
 mouse events, so in order to use clickable tooltips, this value must
 be set to auto.
-Defaults to {'color': '#333333', 'cursor': 'default', 'fontSize': '12px', 'pointerEvents': 'none', 'whiteSpace': 'nowrap'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighstockTooltipStyle new]
 ]
 
 { #category : #accessing }

@@ -257,6 +257,20 @@ HighstockChartTest >> testMarginTop [
 ]
 
 { #category : #'tests-accessing' }
+HighstockChartTest >> testNumberFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChart new.
+	component numberFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'numberFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockChartTest >> testPanning [
 
 	| component javascript expectedConfiguration |

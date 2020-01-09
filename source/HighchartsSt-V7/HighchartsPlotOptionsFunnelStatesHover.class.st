@@ -17,12 +17,12 @@ HighchartsPlotOptionsFunnelStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsFunnelStatesHover >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsFunnelStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

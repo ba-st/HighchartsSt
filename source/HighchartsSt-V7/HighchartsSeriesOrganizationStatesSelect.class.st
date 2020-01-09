@@ -17,12 +17,12 @@ HighchartsSeriesOrganizationStatesSelect >> animation [
 ]
 
 { #category : #accessing }
-HighchartsSeriesOrganizationStatesSelect >> borderColor: aHighchartsColorString [
+HighchartsSeriesOrganizationStatesSelect >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A specific border color for the selected point.
 Defaults to #000000."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

@@ -18,6 +18,27 @@ Defaults to left."
 ]
 
 { #category : #accessing }
+HighchartsColorAxisCurrentDateIndicatorLabel >> format: aString [
+
+	"Format of the label. This options is passed as the fist argument to
+dateFormat function.
+Defaults to '%a, %b %d %Y, %H:%M'."
+
+	configurationOptions at: 'format' put: aString
+]
+
+{ #category : #accessing }
+HighchartsColorAxisCurrentDateIndicatorLabel >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPlotLineOrBand [
+
+	"Callback JavaScript function to format the label. Useful properties like
+the value of plot line or the range of plot band (from &amp; to
+properties) can be found in this.options object.
+"
+
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPlotLineOrBand
+]
+
+{ #category : #accessing }
 HighchartsColorAxisCurrentDateIndicatorLabel >> rotation: aNumber [
 
 	"Rotation of the text label in degrees. Defaults to 0 for horizontal plot

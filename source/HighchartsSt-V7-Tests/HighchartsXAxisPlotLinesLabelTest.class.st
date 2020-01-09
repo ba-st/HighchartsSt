@@ -19,6 +19,20 @@ HighchartsXAxisPlotLinesLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsXAxisPlotLinesLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxisPlotLinesLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisPlotLinesLabelTest >> testRotation [
 
 	| component javascript expectedConfiguration |

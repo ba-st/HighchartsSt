@@ -10,12 +10,11 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNoData >> attr: aHighchartsSVGAttributes [
+HighstockNoData >> attr [
 
 	"An object of additional SVG attributes for the no-data label.
 "
-
-	configurationOptions at: 'attr' put: aHighchartsSVGAttributes
+	^configurationOptions at: 'attr' ifAbsentPut: [HighstockNoDataAttr new]
 ]
 
 { #category : #accessing }

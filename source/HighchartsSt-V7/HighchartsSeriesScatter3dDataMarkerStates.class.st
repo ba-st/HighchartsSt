@@ -16,12 +16,6 @@ HighchartsSeriesScatter3dDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesScatter3dDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesScatter3dDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesScatter3dDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

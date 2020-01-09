@@ -16,12 +16,6 @@ HighchartsSeriesVectorMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesVectorMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesVectorMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesVectorMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

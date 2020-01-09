@@ -91,8 +91,7 @@ Defaults to 2."
 { #category : #accessing }
 HighstockPlotOptionsCandlestickDragDrop >> draggableClose: aBoolean [
 
-	"Allow close value to be dragged individually. Requires
-draggable-points module.
+	"Allow close value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableClose' put: aBoolean
@@ -101,8 +100,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockPlotOptionsCandlestickDragDrop >> draggableHigh: aBoolean [
 
-	"Allow high value to be dragged individually. Requires
-draggable-points module.
+	"Allow high value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableHigh' put: aBoolean
@@ -111,8 +109,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockPlotOptionsCandlestickDragDrop >> draggableLow: aBoolean [
 
-	"Allow low value to be dragged individually. Requires
-draggable-points module.
+	"Allow low value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableLow' put: aBoolean
@@ -121,8 +118,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockPlotOptionsCandlestickDragDrop >> draggableOpen: aBoolean [
 
-	"Allow open value to be dragged individually. Requires
-draggable-points module.
+	"Allow open value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableOpen' put: aBoolean

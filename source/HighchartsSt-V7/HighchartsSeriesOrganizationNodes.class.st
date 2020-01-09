@@ -41,6 +41,15 @@ rendered top down. In this case the &quot;columns&quot; are horizontal.
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganizationNodes >> dataLabels [
+
+	"Individual data label for each node. The options are the same as
+the ones for series.organization.dataLabels.
+"
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesOrganizationNodesDataLabels new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganizationNodes >> description: aString [
 
 	"The job description for the node card, will be inserted by the default

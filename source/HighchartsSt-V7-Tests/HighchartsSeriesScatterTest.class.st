@@ -185,6 +185,21 @@ HighchartsSeriesScatterTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesScatterTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesScatter new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'scatter';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesScatterTest >> testConnectEnds [
 
 	| component javascript expectedConfiguration |

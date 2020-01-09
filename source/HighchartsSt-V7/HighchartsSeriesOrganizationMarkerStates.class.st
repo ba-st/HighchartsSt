@@ -16,12 +16,6 @@ HighchartsSeriesOrganizationMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesOrganizationMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesOrganizationMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesOrganizationMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

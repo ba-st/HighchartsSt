@@ -117,6 +117,20 @@ HighstockSeriesPackedbubbleLayoutAlgorithmTest >> testIntegration [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPackedbubbleLayoutAlgorithmTest >> testLinkLength [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPackedbubbleLayoutAlgorithm new.
+	component linkLength: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'linkLength' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPackedbubbleLayoutAlgorithmTest >> testMaxIterations [
 
 	| component javascript expectedConfiguration |

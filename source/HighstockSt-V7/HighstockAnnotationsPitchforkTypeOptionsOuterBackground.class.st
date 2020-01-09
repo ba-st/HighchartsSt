@@ -27,12 +27,12 @@ Defaults to 2."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsPitchforkTypeOptionsOuterBackground >> stroke: aColor [
+HighstockAnnotationsPitchforkTypeOptionsOuterBackground >> stroke: aHighchartsColorString [
 
 	"The color of the shape´s stroke.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'stroke' put: aColor
+	configurationOptions at: 'stroke' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

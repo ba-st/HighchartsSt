@@ -38,12 +38,12 @@ Defaults to none."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsLabel >> borderColor: aColor [
+HighstockAnnotationsVerticalLineTypeOptionsLabel >> borderColor: aHighchartsColorString [
 
 	"The border color for the annotation´s label.
 Defaults to black."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -87,7 +87,7 @@ Defaults to true."
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> distance: aNumber [
 
 	"The label´s pixel distance from the point.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'distance' put: aNumber
 ]
@@ -95,24 +95,24 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> format: aString [
 
-	"A format string for the data label.
-Defaults to undefined."
+	"A
+format
+string for the data label.
+"
 
 	configurationOptions at: 'format' put: aString
 ]
 
 { #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsLabel >> formatter: aFunction [
+HighstockAnnotationsVerticalLineTypeOptionsLabel >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format
-the annotation´s label. Note that if a format or text
-are defined, the format or text take precedence and
-the formatter is ignored. This refers to a * point object.
-Defaults to function () {
- return defined(this.y) ? this.y : 'Annotation label';
-}."
+	"Callback JavaScript function to format the annotation´s
+label. Note that if a format or text are defined, the
+format or text take precedence and the formatter is ignored.
+This refers to a point object.
+Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
 ]
 
 { #category : #accessing }
@@ -125,9 +125,9 @@ HighstockAnnotationsVerticalLineTypeOptionsLabel >> offset: aNumber [
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> overflow: aString [
 
-	"How to handle the annotation´s label that flow
-outside the plot area. The justify option aligns the label
-inside the plot area.
+	"How to handle the annotation´s label that flow outside the
+plot area. The justify option aligns the label inside the
+plot area.
 Defaults to none."
 
 	configurationOptions at: 'overflow' put: aString
@@ -137,28 +137,21 @@ Defaults to none."
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> padding: aNumber [
 
 	"When either the borderWidth or the backgroundColor is set,
-this is the padding within the box.
+this    is the padding within the box.
 Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsLabel >> point: anObject [
+HighstockAnnotationsVerticalLineTypeOptionsLabel >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-
-	configurationOptions at: 'point' put: anObject
-]
-
-{ #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsLabel >> shadow: aBooleanOrObject [
-
-	"The shadow of the box. The shadow can be
-an object configuration containing
-color, offsetX, offsetY, opacity and width.
+	"The shadow of the box. The shadow can be an object
+configuration containing color, offsetX, offsetY,
+opacity and width.
 Defaults to false."
 
-	configurationOptions at: 'shadow' put: aBooleanOrObject
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
 ]
 
 { #category : #accessing }
@@ -172,11 +165,12 @@ Defaults to rect."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsLabel >> style [
+HighstockAnnotationsVerticalLineTypeOptionsLabel >> style: aHighchartsCSSObject [
 
 	"Styles for the annotation´s label.
 "
-	^configurationOptions at: 'style' ifAbsentPut: [HighstockAnnotationsVerticalLineTypeOptionsLabelStyle new]
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }

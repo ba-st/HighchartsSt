@@ -30,6 +30,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesItemData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesItemDataAccessibility new]
 ]
 
@@ -69,20 +71,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesItemData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesItemData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesItemDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesItemData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -93,7 +94,6 @@ HighchartsSeriesItemData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesItemDataDragDrop new]
 ]
@@ -111,7 +111,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesItemData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -150,8 +150,7 @@ HighchartsSeriesItemData >> legendIndex: aNumber [
 { #category : #accessing }
 HighchartsSeriesItemData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

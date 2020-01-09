@@ -173,6 +173,20 @@ HighstockPlotOptionsPolygonTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsPolygonTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPolygon new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsPolygonTest >> testCompare [
 
 	| component javascript expectedConfiguration |

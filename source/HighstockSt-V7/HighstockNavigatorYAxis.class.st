@@ -59,13 +59,13 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> alternateGridColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> alternateGridColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"When using an alternate grid color, a band is painted across the
 plot area between every other grid line.
 "
 
-	configurationOptions at: 'alternateGridColor' put: aHighchartsColorString
+	configurationOptions at: 'alternateGridColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -74,6 +74,8 @@ HighstockNavigatorYAxis >> angle: aNumber [
 	"In a polar chart, this is the angle of the Y axis in degrees, where
 0 is up and 90 is right. The angle determines the position of the
 axis line and the labels, though the coordinate system is unaffected.
+Since v8.0.0 this option is also applicable for X axis (inverted
+polar).
 Defaults to 0."
 
 	configurationOptions at: 'angle' put: aNumber
@@ -129,16 +131,17 @@ representations used for each unit. For intermediate values,
 different units may be used, for example the day unit can be used
 on midnight and hour unit be used for intermediate values on the
 same axis. For an overview of the replacement codes, see
-dateFormat. Defaults to:
+dateFormat.
+Defaults to:
 {
-    millisecond: 'H:M:S.L',
-    second: 'H:M:S',
-    minute: 'H:M',
-    hour: 'H:M',
-    day: 'e. b',
-    week: 'e. b',
-    month: 'b \'y',
-    year: 'Y'
+    millisecond: ´H:M:S.L´,
+    second: ´H:M:S´,
+    minute: ´H:M´,
+    hour: ´H:M´,
+    day: ´e. b´,
+    week: ´e. b´,
+    month: ´b \´y´,
+    year: ´Y´
 }
 "
 	^configurationOptions at: 'dateTimeLabelFormats' ifAbsentPut: [HighstockNavigatorYAxisDateTimeLabelFormats new]
@@ -173,14 +176,14 @@ HighstockNavigatorYAxis >> floor: aNumber [
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> gridLineColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> gridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color of the grid lines extending the ticks across the plot area.
 In styled mode, the stroke is given in the .highcharts-grid-line
 class.
 Defaults to #e6e6e6."
 
-	configurationOptions at: 'gridLineColor' put: aHighchartsColorString
+	configurationOptions at: 'gridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -198,7 +201,8 @@ HighstockNavigatorYAxis >> gridLineInterpolation: aString [
 
 	"Polar charts only. Whether the grid lines should draw as a polygon
 with straight lines between categories, or as circles. Can be either
-circle or polygon.
+circle or polygon. Since v8.0.0 this option is also applicable
+for X axis (inverted polar).
 "
 
 	configurationOptions at: 'gridLineInterpolation' put: aString
@@ -238,19 +242,34 @@ a pointer to the axis object through chart.get().
 HighstockNavigatorYAxis >> labels [
 
 	"The axis labels show the number or category for each tick.
+Since v8.0.0: Labels are animated in categorized x-axis with
+updating data if tickInterval and step is set to 1.
 "
 	^configurationOptions at: 'labels' ifAbsentPut: [HighstockNavigatorYAxisLabels new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> lineColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> left: aNumberOrstring [
+
+	"The left position as the horizontal axis. If it´s a number, it is
+interpreted as pixel position relative to the chart.
+Since Highcharts v5.0.13: If it´s a percentage string, it is
+interpreted as percentages of the plot width, offset from plot area
+left.
+"
+
+	configurationOptions at: 'left' put: aNumberOrstring
+]
+
+{ #category : #accessing }
+HighstockNavigatorYAxis >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
 .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -265,14 +284,14 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> margin: anObject [
+HighstockNavigatorYAxis >> margin: aNumber [
 
 	"If there are multiple axes on the same side of the chart, the pixel
 margin between the axes. Defaults to 0 on vertical axes, 15 on
 horizontal axes.
 "
 
-	configurationOptions at: 'margin' put: anObject
+	configurationOptions at: 'margin' put: aNumber
 ]
 
 { #category : #accessing }
@@ -292,13 +311,13 @@ alignTicks, where a tickAmount is applied internally.
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> maxColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> maxColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Solid gauge only. Unless stops are set, the color
 to represent the maximum value of the Y axis.
 Defaults to #003399."
 
-	configurationOptions at: 'maxColor' put: aHighchartsColorString
+	configurationOptions at: 'maxColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -309,6 +328,9 @@ padding of 0.05 will make a 100px axis 5px longer. This is useful
 when you don´t want the highest data value to appear on the edge
 of the plot area. When the axis´ max option is set or a max extreme
 is set using axis.setExtremes(), the maxPadding will be ignored.
+Also the softThreshold option takes precedence over maxPadding,
+so if the data is tangent to the threshold, maxPadding may not
+apply unless softThreshold is set to false.
 Defaults to 0.1."
 
 	configurationOptions at: 'maxPadding' put: aNumber
@@ -332,13 +354,13 @@ and series.softThreshold.
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> minColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> minColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Solid gauge only. Unless stops are set, the color
 to represent the minimum value of the Y axis.
 Defaults to #e6ebf5."
 
-	configurationOptions at: 'minColor' put: aHighchartsColorString
+	configurationOptions at: 'minColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -349,6 +371,9 @@ padding of 0.05 will make a 100px axis 5px longer. This is useful
 when you don´t want the lowest data value to appear on the edge
 of the plot area. When the axis´ min option is set or a max extreme
 is set using axis.setExtremes(), the maxPadding will be ignored.
+Also the softThreshold option takes precedence over minPadding,
+so if the data is tangent to the threshold, minPadding may not
+apply unless softThreshold is set to false.
 Defaults to 0.1."
 
 	configurationOptions at: 'minPadding' put: aNumber
@@ -367,14 +392,14 @@ two points on the axis.
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> minorGridLineColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> minorGridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color of the minor, secondary grid lines.
 In styled mode, the stroke width is given in the
 .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorString
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -399,12 +424,12 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> minorTickColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> minorTickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aHighchartsColorString
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -621,7 +646,7 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> stops: anArrayOfArrayOfnumberHighchartsColorString [
+HighstockNavigatorYAxis >> stops: anArrayOfHighchartsGradientColorStopObject [
 
 	"Solid gauge series only. Color stops for the solid gauge. Use this
 in cases where a linear gradient between a minColor and maxColor
@@ -633,7 +658,7 @@ data classes
 from the Highmaps color axis.
 "
 
-	configurationOptions at: 'stops' put: anArrayOfArrayOfnumberHighchartsColorString
+	configurationOptions at: 'stops' put: anArrayOfHighchartsGradientColorStopObject
 ]
 
 { #category : #accessing }
@@ -650,14 +675,14 @@ or category axes are not affected.
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxis >> tickColor: aHighchartsColorString [
+HighstockNavigatorYAxis >> tickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the main tick marks.
 In styled mode, the stroke is given in the .highcharts-tick
 class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aHighchartsColorString
+	configurationOptions at: 'tickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -785,4 +810,26 @@ be visible.
 Defaults to true."
 
 	configurationOptions at: 'visible' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockNavigatorYAxis >> width: aNumberOrstring [
+
+	"The width as the horizontal axis. If it´s a number, it is interpreted
+as pixels.
+Since Highcharts v5.0.13: If it´s a percentage string, it is
+interpreted as percentages of the total plot width.
+"
+
+	configurationOptions at: 'width' put: aNumberOrstring
+]
+
+{ #category : #accessing }
+HighstockNavigatorYAxis >> zoomEnabled: aBoolean [
+
+	"Whether to zoom axis. If chart.zoomType is set, the option allows
+to disable zooming on an individual axis.
+Defaults to enabled."
+
+	configurationOptions at: 'zoomEnabled' put: aBoolean
 ]

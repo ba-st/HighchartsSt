@@ -7,6 +7,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesSunburstData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesSunburstDataAccessibility new]
 ]
 
@@ -56,20 +58,19 @@ scale of the colorAxis.
 ]
 
 { #category : #accessing }
-HighchartsSeriesSunburstData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesSunburstData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesSunburstDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesSunburstData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -80,7 +81,6 @@ HighchartsSeriesSunburstData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesSunburstDataDragDrop new]
 ]
@@ -98,7 +98,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesSunburstData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -137,10 +137,9 @@ HighchartsSeriesSunburstData >> name: aString [
 { #category : #accessing }
 HighchartsSeriesSunburstData >> parent: aString [
 
-	"Only for treemap. Use this option to build a tree structure. The
-value should be the id of the point which is the parent. If no points
-has a matching id, or this option is undefined, then the parent will
-be set to the root.
+	"Use this option to build a tree structure. The value should be the id of the
+point which is the parent. If no points has a matching id, or this option is
+undefined, then the parent will be set to the root.
 "
 
 	configurationOptions at: 'parent' put: aString

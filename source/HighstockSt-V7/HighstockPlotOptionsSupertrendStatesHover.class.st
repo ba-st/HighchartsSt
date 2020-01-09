@@ -17,12 +17,12 @@ HighstockPlotOptionsSupertrendStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsSupertrendStatesHover >> borderColor: aHighchartsColorString [
+HighstockPlotOptionsSupertrendStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

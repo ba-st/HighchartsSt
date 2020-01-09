@@ -91,8 +91,7 @@ Defaults to 2."
 { #category : #accessing }
 HighchartsSeriesErrorbarDragDrop >> draggableHigh: aBoolean [
 
-	"Allow high value to be dragged individually. Requires
-draggable-points module.
+	"Allow high value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableHigh' put: aBoolean
@@ -101,8 +100,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesErrorbarDragDrop >> draggableLow: aBoolean [
 
-	"Allow low value to be dragged individually. Requires
-draggable-points module.
+	"Allow low value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableLow' put: aBoolean
@@ -111,8 +109,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesErrorbarDragDrop >> draggableQ1: aBoolean [
 
-	"Allow Q1 value to be dragged individually. Requires
-draggable-points module.
+	"Allow Q1 value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableQ1' put: aBoolean
@@ -121,8 +118,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesErrorbarDragDrop >> draggableQ3: aBoolean [
 
-	"Allow Q3 value to be dragged individually. Requires
-draggable-points module.
+	"Allow Q3 value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableQ3' put: aBoolean

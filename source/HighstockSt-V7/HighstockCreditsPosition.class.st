@@ -8,28 +8,22 @@ Class {
 }
 
 { #category : #accessing }
-HighstockCreditsPosition >> align: aHighchartsAlignValue [
+HighstockCreditsPosition >> align: aString [
 
-	"Horizontal alignment of the credits.
-Defaults to right."
 
-	configurationOptions at: 'align' put: aHighchartsAlignValue
+	configurationOptions at: 'align' put: aString
 ]
 
 { #category : #accessing }
-HighstockCreditsPosition >> verticalAlign: aHighchartsVerticalAlignValue [
+HighstockCreditsPosition >> verticalAlign: aString [
 
-	"Vertical alignment of the credits.
-Defaults to bottom."
 
-	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
+	configurationOptions at: 'verticalAlign' put: aString
 ]
 
 { #category : #accessing }
 HighstockCreditsPosition >> x: aNumber [
 
-	"Horizontal pixel offset of the credits.
-Defaults to -10."
 
 	configurationOptions at: 'x' put: aNumber
 ]
@@ -37,8 +31,6 @@ Defaults to -10."
 { #category : #accessing }
 HighstockCreditsPosition >> y: aNumber [
 
-	"Vertical pixel offset of the credits.
-Defaults to -5."
 
 	configurationOptions at: 'y' put: aNumber
 ]

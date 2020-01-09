@@ -63,10 +63,10 @@ scheme to exported PDFs.
 HighstockExporting >> csv [
 
 	"Options for exporting data to CSV or ExCel, or displaying the data
-in a HTML table or a JavaScript structure. Requires the
-export-data.js module. This module adds data export options to the
-export menu and provides functions like Chart.getCSV,
-Chart.getTable, Chart.getDataRows and Chart.viewData.
+in a HTML table or a JavaScript structure.
+This module adds data export options to the export menu and provides
+functions like Chart.getCSV, Chart.getTable, Chart.getDataRows
+and Chart.viewData.
 The XLS converter is limited and only creates a HTML string that is
 passed for download, which works but creates a warning before
 opening. The workaround for this is to use a third party XLSX
@@ -124,7 +124,7 @@ Defaults to chart."
 ]
 
 { #category : #accessing }
-HighstockExporting >> formAttributes: anObject [
+HighstockExporting >> formAttributes: aHighchartsHTMLAttributes [
 
 	"An object containing additional key value data for the POST form that
 sends the SVG to the export server. For example, a target can be set to
@@ -132,7 +132,7 @@ make sure the generated image is received in another frame, or a custom
 enctype or encoding can be set.
 "
 
-	configurationOptions at: 'formAttributes' put: anObject
+	configurationOptions at: 'formAttributes' put: aHighchartsHTMLAttributes
 ]
 
 { #category : #accessing }
@@ -197,8 +197,7 @@ Defaults to 2."
 { #category : #accessing }
 HighstockExporting >> showTable: aBoolean [
 
-	"Export-data module required. Show a HTML table below the chart with
-the chart´s current data.
+	"Show a HTML table below the chart with the chart´s current data.
 Defaults to false."
 
 	configurationOptions at: 'showTable' put: aBoolean
@@ -228,8 +227,8 @@ scale.
 { #category : #accessing }
 HighstockExporting >> tableCaption: aBooleanOrstring [
 
-	"Export-data module required. Caption for the data table. Same as
-chart title by default. Set to false to disable.
+	"Caption for the data table. Same as chart title by default. Set to
+false to disable.
 "
 
 	configurationOptions at: 'tableCaption' put: aBooleanOrstring
@@ -259,10 +258,8 @@ Defaults to https://export.highcharts.com/."
 { #category : #accessing }
 HighstockExporting >> useMultiLevelHeaders: aBoolean [
 
-	"Export-data module required. Use multi level headers in data table.
-If csv.columnHeaderFormatter
-is defined, it has to return objects in order for multi level headers
-to work.
+	"Use multi level headers in data table. If csv.columnHeaderFormatter is defined, it has to return
+objects in order for multi level headers to work.
 Defaults to true."
 
 	configurationOptions at: 'useMultiLevelHeaders' put: aBoolean
@@ -271,8 +268,8 @@ Defaults to true."
 { #category : #accessing }
 HighstockExporting >> useRowspanHeaders: aBoolean [
 
-	"Export-data module required. If using multi level table headers, use
-rowspans for headers that have only one level.
+	"If using multi level table headers, use rowspans for headers that
+have only one level.
 Defaults to true."
 
 	configurationOptions at: 'useRowspanHeaders' put: aBoolean

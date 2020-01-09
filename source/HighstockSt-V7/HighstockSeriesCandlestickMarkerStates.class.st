@@ -16,12 +16,6 @@ HighstockSeriesCandlestickMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesCandlestickMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesCandlestickMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesCandlestickMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

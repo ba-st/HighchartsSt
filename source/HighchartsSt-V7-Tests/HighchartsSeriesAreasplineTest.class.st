@@ -185,6 +185,21 @@ HighchartsSeriesAreasplineTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesAreasplineTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreaspline new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areaspline';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesAreasplineTest >> testConnectEnds [
 
 	| component javascript expectedConfiguration |

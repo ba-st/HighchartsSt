@@ -43,22 +43,22 @@ HighchartsTime >> Date: anObject [
 	"A custom Date class for advanced date handling. For example,
 JDate can be hooked in to
 handle Jalali dates.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'Date' put: anObject
 ]
 
 { #category : #accessing }
-HighchartsTime >> getTimezoneOffset: aFunction [
+HighchartsTime >> getTimezoneOffset: aString [
 
 	"A callback to return the time zone offset for a given datetime. It
 takes the timestamp in terms of milliseconds since January 1 1970,
 and returns the timezone offset in minutes. This provides a hook
 for drawing time based charts in specific time zones using their
 local DST crossover dates, with the help of external libraries.
-"
+Defaults to undefined."
 
-	configurationOptions at: 'getTimezoneOffset' put: aFunction
+	configurationOptions at: 'getTimezoneOffset' put: aString
 ]
 
 { #category : #accessing }
@@ -70,7 +70,7 @@ getTimezoneOffset function that looks
 up the specified timezone in moment.js. If moment.js is not included,
 this throws a Highcharts error in the console, but does not crash the
 chart.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'timezone' put: aString
 ]

@@ -14,6 +14,8 @@ HighstockNavigatorYAxisLabels >> align: aHighchartsAlignValue [
 be one of &quot;left&quot;, &quot;center&quot; or &quot;right&quot;. The exact position
 also depends on the labels.x setting.
 Angular gauges and solid gauges defaults to &quot;center&quot;.
+Solid gauges with two labels have additional option &quot;auto&quot;
+for automatic horizontal and vertical alignment.
 "
 
 	configurationOptions at: 'align' put: aHighchartsAlignValue
@@ -35,13 +37,16 @@ Defaults to [-45]."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisLabels >> distance: aNumber [
+HighstockNavigatorYAxisLabels >> distance: aNumberOrstring [
 
-	"Angular gauges and solid gauges only. The label´s pixel distance
-from the perimeter of the plot area.
+	"Angular gauges and solid gauges only.
+The label´s pixel distance from the perimeter of the plot area.
+Since v7.1.2: If it´s a percentage string, it is interpreted the
+same as series.radius, so label can be
+aligned under the gauge´s shape.
 Defaults to -25."
 
-	configurationOptions at: 'distance' put: aNumber
+	configurationOptions at: 'distance' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -180,16 +185,15 @@ Axis docs
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisLabels >> style: aHighchartsCSSObject [
+HighstockNavigatorYAxisLabels >> style [
 
 	"CSS styles for the label. Use whiteSpace: ´nowrap´ to prevent
 wrapping of category labels. Use textOverflow: ´none´ to
 prevent ellipsis (dots).
 In styled mode, the labels are styled with the
 .highcharts-axis-labels class.
-Defaults to {'color': '#666666', 'cursor': 'default', 'fontSize': '11px'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighstockNavigatorYAxisLabelsStyle new]
 ]
 
 { #category : #accessing }

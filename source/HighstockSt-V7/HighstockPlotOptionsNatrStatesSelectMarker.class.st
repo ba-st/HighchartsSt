@@ -56,13 +56,13 @@ this option, a width must also be set.
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsNatrStatesSelectMarker >> lineColor: aHighchartsColorString [
+HighstockPlotOptionsNatrStatesSelectMarker >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the point marker´s outline. When undefined, the
 series´ or point´s color is used.
 Defaults to #ffffff."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -84,22 +84,14 @@ Defaults to 4."
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsNatrStatesSelectMarker >> states: anObject [
-
-	"States for a single point marker.
-"
-
-	configurationOptions at: 'states' put: anObject
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsNatrStatesSelectMarker >> symbol: aString [
 
 	"A predefined shape or symbol for the marker. When undefined, the
 symbol is pulled from options.symbols. Other possible values are
-&quot;circle&quot;, &quot;square&quot;, &quot;diamond&quot;, &quot;triangle&quot; and &quot;triangle-down&quot;.
+´circle´, ´square´,´diamond´, ´triangle´ and
+´triangle-down´.
 Additionally, the URL to a graphic can be given on this form:
-&quot;url(graphic.png)&quot;. Note that for the image to be applied to
+´url(graphic.png)´. Note that for the image to be applied to
 exported charts, its URL needs to be accessible by the export
 server.
 Custom callbacks for symbol path generation can also be added to

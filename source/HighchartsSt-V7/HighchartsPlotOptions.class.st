@@ -51,7 +51,6 @@ HighchartsPlotOptions >> arearange [
 
 	"The area range series is a carteseian series with higher and lower values for
 each point along an X axis, where the area between the values is shaded.
-Requires highcharts-more.js.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -118,8 +117,7 @@ HighchartsPlotOptions >> areasplinerange [
 
 	"The area spline range is a cartesian series type with higher and
 lower Y values along an X axis. The area inside the range is colored, and
-the graph outlining the area is a smoothed spline. Requires
-highcharts-more.js.
+the graph outlining the area is a smoothed spline.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -184,10 +182,10 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> bellcurve [
 
-	"A bell curve is an areaspline series which represents the probability density
-function of the normal distribution. It calculates mean and standard
-deviation of the base series data and plots the curve according to the
-calculated parameters.
+	"A bell curve is an areaspline series which represents the probability
+density function of the normal distribution. It calculates mean and
+standard deviation of the base series data and plots the curve according
+to the calculated parameters.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -257,7 +255,7 @@ HighchartsPlotOptions >> bubble [
 	"A bubble series is a three dimensional series type where each point renders
 an X, Y and Z value. Each points is drawn as a bubble where the position
 along the X and Y axes mark the X and Y values, and the size of the bubble
-relates to the Z value. Requires highcharts-more.js.
+relates to the Z value.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -289,9 +287,9 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> bullet [
 
-	"A bullet graph is a variation of a bar graph. The bullet graph features a
-single measure, compares it to a target, and displays it in the context of
-qualitative ranges of performance that could be set using
+	"A bullet graph is a variation of a bar graph. The bullet graph features
+a single measure, compares it to a target, and displays it in the context
+of qualitative ranges of performance that could be set using
 plotBands on yAxis.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
@@ -357,8 +355,8 @@ Highcharts.chart(´container´, {
 HighchartsPlotOptions >> columnpyramid [
 
 	"Column pyramid series display one pyramid per value along an X axis.
-Requires highcharts-more.js. To display horizontal pyramids,
-set chart.inverted to true.
+To display horizontal pyramids, set chart.inverted to
+true.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -391,8 +389,8 @@ Highcharts.chart(´container´, {
 HighchartsPlotOptions >> columnrange [
 
 	"The column range is a cartesian series type with higher and lower
-Y values along an X axis. Requires highcharts-more.js. To display
-horizontal bars, set chart.inverted to true.
+Y values along an X axis. To display horizontal bars, set
+chart.inverted to true.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -488,6 +486,40 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
+HighchartsPlotOptions >> dumbbell [
+
+	"The dumbbell series is a cartesian series with higher and lower values for
+each point along an X axis, connected with a line between the values.
+Requires highcharts-more.js and modules/dumbbell.js.
+In TypeScript the type option must always be set.
+Configuration options for the series are given in three levels:
+
+Options for all series in a chart are defined in the
+plotOptions.series object.
+Options for all dumbbell series are defined in
+plotOptions.dumbbell.
+Options for one single series are given in
+the series instance array.
+
+Highcharts.chart(´container´, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        dumbbell: {
+            // shared options for all dumbbell series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: ´dumbbell´
+    }]
+});
+"
+	^configurationOptions at: 'dumbbell' ifAbsentPut: [HighchartsPlotOptionsDumbbell new]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptions >> errorbar [
 
 	"Error bars are a graphical representation of the variability of data and are
@@ -524,9 +556,9 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> funnel [
 
-	"Funnel charts are a type of chart often used to visualize stages in a sales
-project, where the top are the initial stages with the most clients.
-It requires that the modules/funnel.js file is loaded.
+	"Funnel charts are a type of chart often used to visualize stages in a
+sales project, where the top are the initial stages with the most
+clients. It requires that the modules/funnel.js file is loaded.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -660,9 +692,9 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> histogram [
 
-	"A histogram is a column series which represents the distribution of the data
-set in the base series. Histogram splits data into bins and shows their
-frequencies.
+	"A histogram is a column series which represents the distribution of the
+data set in the base series. Histogram splits data into bins and shows
+their frequencies.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -763,6 +795,41 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
+HighchartsPlotOptions >> lollipop [
+
+	"The lollipop series is a carteseian series with a line anchored from
+the x axis and a dot at the end to mark the value.
+Requires highcharts-more.js, modules/dumbbell.js and
+modules/lollipop.js.
+In TypeScript the type option must always be set.
+Configuration options for the series are given in three levels:
+
+Options for all series in a chart are defined in the
+plotOptions.series object.
+Options for all lollipop series are defined in
+plotOptions.lollipop.
+Options for one single series are given in
+the series instance array.
+
+Highcharts.chart(´container´, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        lollipop: {
+            // shared options for all lollipop series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: ´lollipop´
+    }]
+});
+"
+	^configurationOptions at: 'lollipop' ifAbsentPut: [HighchartsPlotOptionsLollipop new]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptions >> networkgraph [
 
 	"A networkgraph is a type of relationship chart, where connnections
@@ -830,13 +897,18 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
+HighchartsPlotOptions >> packedBubble [
+
+	^configurationOptions at: 'packedBubble' ifAbsentPut: [HighchartsPlotOptionsPackedBubble new]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptions >> packedbubble [
 
 	"A packed bubble series is a two dimensional series type, where each point
 renders a value in X, Y position. Each point is drawn as a bubble
 where the bubbles don´t overlap with each other and the radius
 of the bubble relates to the value.
-Requires highcharts-more.js.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -868,9 +940,9 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> pareto [
 
-	"A pareto diagram is a type of chart that contains both bars and a line graph,
-where individual values are represented in descending order by bars, and the
-cumulative total is represented by the line.
+	"A pareto diagram is a type of chart that contains both bars and a line
+graph, where individual values are represented in descending order by
+bars, and the cumulative total is represented by the line.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -937,8 +1009,7 @@ HighchartsPlotOptions >> polygon [
 
 	"A polygon series can be used to draw any freeform shape in the cartesian
 coordinate system. A fill is applied with the color option, and
-stroke is applied through lineWidth and lineColor options. Requires
-the highcharts-more.js file.
+stroke is applied through lineWidth and lineColor options.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -970,8 +1041,8 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> pyramid [
 
-	"A pyramid series is a special type of funnel, without neck and reversed by
-default. Requires the funnel module.
+	"A pyramid series is a special type of funnel, without neck and reversed
+by default.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1006,8 +1077,6 @@ HighchartsPlotOptions >> pyramid3d [
 	"A pyramid3d is a 3d version of pyramid series type. Pyramid charts are
 a type of chart often used to visualize stages in a sales project,
 where the top are the initial stages with the most clients.
-It requires that the highcharts-3d.js, cylinder.js,
-funnel3d.js and pyramid3d modules are loaded.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1303,7 +1372,8 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> tilemap [
 
-	"A tilemap series is a type of heatmap where the tile shapes are configurable.
+	"A tilemap series is a type of heatmap where the tile shapes are
+configurable.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1403,7 +1473,7 @@ HighchartsPlotOptions >> variablepie [
 	"A variable pie series is a two dimensional series type, where each point
 renders an Y and Z value.  Each point is drawn as a pie slice where the
 size (arc) of the slice relates to the Y value and the radius of pie
-slice relates to the Z value. Requires highcharts-more.js.
+slice relates to the Z value.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1468,8 +1538,8 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> vector [
 
-	"A vector plot is a type of cartesian chart where each point has an X and Y
-position, a length and a direction. Vectors are drawn as arrows.
+	"A vector plot is a type of cartesian chart where each point has an X and
+Y position, a length and a direction. Vectors are drawn as arrows.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1570,9 +1640,9 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsPlotOptions >> windbarb [
 
-	"Wind barbs are a convenient way to represent wind speed and direction in one
-graphical form. Wind direction is given by the stem direction, and wind speed
-by the number and shape of barbs.
+	"Wind barbs are a convenient way to represent wind speed and direction in
+one graphical form. Wind direction is given by the stem direction, and
+wind speed by the number and shape of barbs.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

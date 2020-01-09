@@ -12,12 +12,6 @@ HighstockAnnotationsTunnelTypeOptionsPoints >> controlPoint: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsTunnelTypeOptionsPoints >> label [
-
-	^configurationOptions at: 'label' ifAbsentPut: [HighstockAnnotationsTunnelTypeOptionsPointsLabel new]
-]
-
-{ #category : #accessing }
 HighstockAnnotationsTunnelTypeOptionsPoints >> x: aNumber [
 
 	"The x position of the point.

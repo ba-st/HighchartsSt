@@ -36,7 +36,7 @@ Class {
 { #category : #accessing }
 HighstockPlotOptionsSupertrend >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockPlotOptionsSupertrendAccessibility new]
 ]
@@ -110,21 +110,20 @@ Note that the cropThreshold also affects
 this setting. When zooming in on a series that has fewer points than the
 cropThreshold, all points are rendered although outside the visible plot
 area, and the boostThreshold won´t take effect.
-Requires modules/boost.js.
 Defaults to 5000."
 
 	configurationOptions at: 'boostThreshold' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsSupertrend >> borderColor: aHighchartsColorString [
+HighstockPlotOptionsSupertrend >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the map areas.
 In styled mode, the border stroke is given in the .highcharts-point
 class.
 Defaults to '#cccccc'."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -170,6 +169,24 @@ Defaults to true."
 ]
 
 { #category : #accessing }
+HighstockPlotOptionsSupertrend >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+
+	"The main color of the series. In line type series it applies to the
+line and the point markers unless otherwise specified. In bar type
+series it applies to the bars unless a color is specified per point.
+The default value is pulled from the options.colors array.
+In styled mode, the color can be defined by the
+colorIndex option. Also, the series
+color can be set with the .highcharts-series,
+.highcharts-color-{n}, .highcharts-{type}-series or
+.highcharts-series-{n} class, or individual classes given by the
+className option.
+"
+
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsSupertrend >> colorIndex: aNumber [
 
 	"Styled mode only. A specific color index to use for the series, so
@@ -178,6 +195,18 @@ highcharts-color-{n}.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsSupertrend >> colorKey: aString [
+
+	"Determines what data value should be used to calculate point color
+if colorAxis is used. Requires to set min and max if some
+custom point property is used or if approximation for data grouping
+is set to ´sum´.
+Defaults to y."
+
+	configurationOptions at: 'colorKey' put: aString
 ]
 
 { #category : #accessing }
@@ -302,7 +331,7 @@ altered through a custom approximation callback function.
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsSupertrend >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighstockPlotOptionsSupertrend >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
 point.
@@ -312,33 +341,25 @@ In styled mode, the data labels can be styled with the
 .highcharts-data-label-box and .highcharts-data-label class names
 (see example).
 "
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockPlotOptionsSupertrendDataLabels new]
+]
 
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+{ #category : #accessing }
+HighstockPlotOptionsSupertrend >> dataSorting [
+
+	"Options for the series data sorting.
+"
+	^configurationOptions at: 'dataSorting' ifAbsentPut: [HighstockPlotOptionsSupertrendDataSorting new]
 ]
 
 { #category : #accessing }
 HighstockPlotOptionsSupertrend >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
 	configurationOptions at: 'description' put: aString
-]
-
-{ #category : #accessing }
-HighstockPlotOptionsSupertrend >> dragDrop [
-
-	"The draggable-points module allows points to be moved around or modified in
-the chart. In addition to the options mentioned under the dragDrop API
-structure, the module fires three events,
-point.dragStart,
-point.drag and
-point.drop.
-It requires the modules/draggable-points.js file to be loaded.
-"
-	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockPlotOptionsSupertrendDragDrop new]
 ]
 
 { #category : #accessing }
@@ -364,26 +385,12 @@ Highcharts.addEvent function.
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsSupertrend >> exposeElementToA11y: aBoolean [
-
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
-
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
-]
-
-{ #category : #accessing }
-HighstockPlotOptionsSupertrend >> fallingTrendColor: aHighchartsColorString [
+HighstockPlotOptionsSupertrend >> fallingTrendColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color of the Supertrend series line that is above the main series.
 Defaults to #F21313."
 
-	configurationOptions at: 'fallingTrendColor' put: aHighchartsColorString
+	configurationOptions at: 'fallingTrendColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -451,8 +458,8 @@ Defaults to false."
 { #category : #accessing }
 HighstockPlotOptionsSupertrend >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
@@ -469,7 +476,6 @@ feature is to make the chart more easily readable, like if a
 human designer placed the labels in the optimal position.
 The series labels currently work with series types having a
 graph or an area.
-Requires the series-label.js module.
 "
 	^configurationOptions at: 'label' ifAbsentPut: [HighstockPlotOptionsSupertrendLabel new]
 ]
@@ -515,7 +521,7 @@ HighstockPlotOptionsSupertrend >> linkedTo: aString [
 
 	"The main series ID that indicator will be based on. Required for this
 indicator.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'linkedTo' put: aString
 ]
@@ -540,7 +546,7 @@ HighstockPlotOptionsSupertrend >> name: aString [
 	"The name of the series as shown in the legend, tooltip etc. If not
 set, it will be based on a technical indicator type and default
 params.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'name' put: aString
 ]
@@ -582,12 +588,12 @@ but for an individual series. Overrides the chart wide configuration.
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsSupertrend >> risingTrendColor: aHighchartsColorString [
+HighstockPlotOptionsSupertrend >> risingTrendColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color of the Supertrend series line that is beneath the main series.
 Defaults to #06B535."
 
-	configurationOptions at: 'risingTrendColor' put: aHighchartsColorString
+	configurationOptions at: 'risingTrendColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -627,9 +633,10 @@ Defaults to false."
 HighstockPlotOptionsSupertrend >> showInLegend: aBoolean [
 
 	"Whether to display this particular series or series type in the
-legend. The default value is true for standalone series, false
-for linked series.
-Defaults to true."
+legend. Standalone series are shown in legend by default, and linked
+series are not. Since v7.2.0 it is possible to show series that use
+colorAxis by setting this option to true.
+"
 
 	configurationOptions at: 'showInLegend' put: aBoolean
 ]
@@ -687,6 +694,8 @@ markers. This also implies the tooltip when not shared. When
 stickyTracking is false and tooltip.shared is false, the tooltip
 will be hidden when moving the mouse between series. Defaults to true
 for line and area type series, but to false for columns, pies etc.
+Note: The boost module will force this option because of
+technical limitations.
 Defaults to true."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
@@ -710,6 +719,9 @@ one dimensional arrays of numbers, or two dimensional arrays with
 x and y values are allowed. Also, only the first point is tested,
 and the rest are assumed to be the same format. This saves expensive
 data checking and indexing in long series. Set it to 0 disable.
+Note:
+In boost mode turbo threshold is forced. Only array of numbers or
+two dimensional arrays are allowed.
 Defaults to 1000."
 
 	configurationOptions at: 'turboThreshold' put: aNumber

@@ -91,8 +91,7 @@ Defaults to 2."
 { #category : #accessing }
 HighchartsPlotOptionsBulletDragDrop >> draggableTarget: aBoolean [
 
-	"Allow target value to be dragged individually. Requires
-draggable-points module.
+	"Allow target value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableTarget' put: aBoolean

@@ -200,6 +200,21 @@ HighchartsSeriesVariablepieTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesVariablepieTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariablepie new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'variablepie';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesVariablepieTest >> testColors [
 
 	| component javascript expectedConfiguration |
@@ -450,6 +465,21 @@ HighchartsSeriesVariablepieTest >> testExposeElementToA11y [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'variablepie';
 		at: 'exposeElementToA11y' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVariablepieTest >> testFillColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariablepie new.
+	component fillColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'variablepie';
+		at: 'fillColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

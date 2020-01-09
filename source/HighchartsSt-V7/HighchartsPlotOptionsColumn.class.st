@@ -34,7 +34,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsColumn >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsPlotOptionsColumnAccessibility new]
 ]
@@ -119,21 +119,20 @@ Note that the cropThreshold also affects
 this setting. When zooming in on a series that has fewer points than the
 cropThreshold, all points are rendered although outside the visible plot
 area, and the boostThreshold won´t take effect.
-Requires modules/boost.js.
 Defaults to 5000."
 
 	configurationOptions at: 'boostThreshold' put: aNumber
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsColumn >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsColumn >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border surrounding each column or bar.
 In styled mode, the border stroke can be set with the
 .highcharts-point rule.
 Defaults to #ffffff."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -200,14 +199,20 @@ className option.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsColumn >> colorAxis: aBoolean [
+HighchartsPlotOptionsColumn >> colorAxis: aNumberOrstringOrboolean [
 
-	"Set this option to false to prevent a series from connecting to
-the global color axis. This will cause the series to have its own
-legend item.
-"
+	"When using dual or multiple color axes, this number defines which
+colorAxis the particular series is connected to. It refers to
+either the
+{@link #colorAxis.id|axis id}
+or the index of the axis in the colorAxis array, with 0 being the
+first. Set this option to false to prevent a series from connecting
+to the default color axis.
+Since v7.2.0 the option can also be an axis id or an axis index
+instead of a boolean flag.
+Defaults to 0."
 
-	configurationOptions at: 'colorAxis' put: aBoolean
+	configurationOptions at: 'colorAxis' put: aNumberOrstringOrboolean
 ]
 
 { #category : #accessing }
@@ -235,6 +240,18 @@ highcharts-color-{n}.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsColumn >> colorKey: aString [
+
+	"Determines what data value should be used to calculate point color
+if colorAxis is used. Requires to set min and max if some
+custom point property is used or if approximation for data grouping
+is set to ´sum´.
+Defaults to y."
+
+	configurationOptions at: 'colorKey' put: aString
 ]
 
 { #category : #accessing }
@@ -300,7 +317,7 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsColumn >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsPlotOptionsColumn >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
 point.
@@ -310,14 +327,21 @@ In styled mode, the data labels can be styled with the
 .highcharts-data-label-box and .highcharts-data-label class names
 (see example).
 "
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsPlotOptionsColumnDataLabels new]
+]
 
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+{ #category : #accessing }
+HighchartsPlotOptionsColumn >> dataSorting [
+
+	"Options for the series data sorting.
+"
+	^configurationOptions at: 'dataSorting' ifAbsentPut: [HighchartsPlotOptionsColumnDataSorting new]
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsColumn >> depth: aNumber [
 
-	"Depth of the columns in a 3D column chart. Requires highcharts-3d.js.
+	"Depth of the columns in a 3D column chart.
 Defaults to 25."
 
 	configurationOptions at: 'depth' put: aNumber
@@ -326,8 +350,7 @@ Defaults to 25."
 { #category : #accessing }
 HighchartsPlotOptionsColumn >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
@@ -343,7 +366,6 @@ structure, the module fires three events,
 point.dragStart,
 point.drag and
 point.drop.
-It requires the modules/draggable-points.js file to be loaded.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsPlotOptionsColumnDragDrop new]
 ]
@@ -351,8 +373,8 @@ It requires the modules/draggable-points.js file to be loaded.
 { #category : #accessing }
 HighchartsPlotOptionsColumn >> edgeColor: aHighchartsColorString [
 
-	"3D columns only. The color of the edges. Similar to borderColor,
- except it defaults to the same color as the column.
+	"3D columns only. The color of the edges. Similar to borderColor, except it
+defaults to the same color as the column.
 "
 
 	configurationOptions at: 'edgeColor' put: aHighchartsColorString
@@ -387,20 +409,6 @@ Highcharts.addEvent function.
 "
 
 	configurationOptions at: 'events' put: anObject
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsColumn >> exposeElementToA11y: aBoolean [
-
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
-
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -442,8 +450,7 @@ Defaults to 0.2."
 { #category : #accessing }
 HighchartsPlotOptionsColumn >> groupZPadding: aNumber [
 
-	"The spacing between columns on the Z Axis in a 3D chart. Requires
-highcharts-3d.js.
+	"The spacing between columns on the Z Axis in a 3D chart.
 Defaults to 1."
 
 	configurationOptions at: 'groupZPadding' put: aNumber
@@ -463,8 +470,8 @@ Defaults to true."
 { #category : #accessing }
 HighchartsPlotOptionsColumn >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
@@ -512,7 +519,6 @@ feature is to make the chart more easily readable, like if a
 human designer placed the labels in the optimal position.
 The series labels currently work with series types having a
 graph or an area.
-Requires the series-label.js module.
 "
 	^configurationOptions at: 'label' ifAbsentPut: [HighchartsPlotOptionsColumnLabel new]
 ]
@@ -524,6 +530,9 @@ HighchartsPlotOptionsColumn >> linkedTo: aString [
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.
+If master series uses data sorting and linked series does not have
+its own sorting definition, the linked series will be sorted in the
+same order as the master one.
 "
 
 	configurationOptions at: 'linkedTo' put: aString
@@ -558,7 +567,9 @@ Defaults to 0."
 HighchartsPlotOptionsColumn >> negativeColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color for the parts of the graph or points that are below the
-threshold.
+threshold. Note that zones takes
+precedence over the negative color. Using negativeColor is
+equivalent to applying a zone with value of 0.
 "
 
 	configurationOptions at: 'negativeColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -671,6 +682,7 @@ range will be computed as the distance between the two closest data
 points.
 The default null means it is computed automatically, but this
 option can be used to override the automatic value.
+This option is set by default to 1 if data sorting is enabled.
 Defaults to nil."
 
 	configurationOptions at: 'pointRange' put: aNumberOrNil
@@ -735,9 +747,10 @@ Defaults to false."
 HighchartsPlotOptionsColumn >> showInLegend: aBoolean [
 
 	"Whether to display this particular series or series type in the
-legend. The default value is true for standalone series, false
-for linked series.
-Defaults to true."
+legend. Standalone series are shown in legend by default, and linked
+series are not. Since v7.2.0 it is possible to show series that use
+colorAxis by setting this option to true.
+"
 
 	configurationOptions at: 'showInLegend' put: aBoolean
 ]
@@ -800,6 +813,8 @@ markers. This also implies the tooltip when not shared. When
 stickyTracking is false and tooltip.shared is false, the tooltip
 will be hidden when moving the mouse between series. Defaults to true
 for line and area type series, but to false for columns, pies etc.
+Note: The boost module will force this option because of
+technical limitations.
 Defaults to false."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
@@ -834,6 +849,9 @@ one dimensional arrays of numbers, or two dimensional arrays with
 x and y values are allowed. Also, only the first point is tested,
 and the rest are assumed to be the same format. This saves expensive
 data checking and indexing in long series. Set it to 0 disable.
+Note:
+In boost mode turbo threshold is forced. Only array of numbers or
+two dimensional arrays are allowed.
 Defaults to 1000."
 
 	configurationOptions at: 'turboThreshold' put: aNumber

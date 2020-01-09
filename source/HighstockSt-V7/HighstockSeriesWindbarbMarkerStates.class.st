@@ -16,12 +16,6 @@ HighstockSeriesWindbarbMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesWindbarbMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesWindbarbMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesWindbarbMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

@@ -90,11 +90,10 @@ Defaults to nil."
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsWindbarbLabel >> style: aHighchartsCSSObject [
+HighstockPlotOptionsWindbarbLabel >> style [
 
 	"Styles for the series label. The color defaults to the series
 color, or a contrast color if onArea.
-Defaults to {'font-weight': 'bold'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighstockPlotOptionsWindbarbLabelStyle new]
 ]

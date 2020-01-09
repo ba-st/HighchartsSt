@@ -16,12 +16,6 @@ HighstockPlotOptionsBbMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsBbMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsBbMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsBbMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

@@ -35,7 +35,7 @@ Class {
 { #category : #accessing }
 HighchartsSeriesGauge >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesGaugeAccessibility new]
 ]
@@ -96,14 +96,14 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
-HighchartsSeriesGauge >> borderColor: aHighchartsColorString [
+HighchartsSeriesGauge >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the map areas.
 In styled mode, the border stroke is given in the .highcharts-point
 class.
 Defaults to '#cccccc'."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -159,14 +159,20 @@ className option.
 ]
 
 { #category : #accessing }
-HighchartsSeriesGauge >> colorAxis: aBoolean [
+HighchartsSeriesGauge >> colorAxis: aNumberOrstringOrboolean [
 
-	"Set this option to false to prevent a series from connecting to
-the global color axis. This will cause the series to have its own
-legend item.
-"
+	"When using dual or multiple color axes, this number defines which
+colorAxis the particular series is connected to. It refers to
+either the
+{@link #colorAxis.id|axis id}
+or the index of the axis in the colorAxis array, with 0 being the
+first. Set this option to false to prevent a series from connecting
+to the default color axis.
+Since v7.2.0 the option can also be an axis id or an axis index
+instead of a boolean flag.
+Defaults to 0."
 
-	configurationOptions at: 'colorAxis' put: aBoolean
+	configurationOptions at: 'colorAxis' put: aNumberOrstringOrboolean
 ]
 
 { #category : #accessing }
@@ -178,6 +184,18 @@ highcharts-color-{n}.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesGauge >> colorKey: aString [
+
+	"Determines what data value should be used to calculate point color
+if colorAxis is used. Requires to set min and max if some
+custom point property is used or if approximation for data grouping
+is set to ´sum´.
+Defaults to y."
+
+	configurationOptions at: 'colorKey' put: aString
 ]
 
 { #category : #accessing }
@@ -296,20 +314,26 @@ altered through a custom approximation callback function.
 ]
 
 { #category : #accessing }
-HighchartsSeriesGauge >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesGauge >> dataLabels [
 
 	"Data labels for the gauge. For gauges, the data labels are enabled
 by default and shown in a bordered box below the point.
 "
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesGaugeDataLabels new]
+]
 
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+{ #category : #accessing }
+HighchartsSeriesGauge >> dataSorting [
+
+	"Options for the series data sorting.
+"
+	^configurationOptions at: 'dataSorting' ifAbsentPut: [HighchartsSeriesGaugeDataSorting new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesGauge >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
@@ -335,7 +359,6 @@ structure, the module fires three events,
 point.dragStart,
 point.drag and
 point.drop.
-It requires the modules/draggable-points.js file to be loaded.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesGaugeDragDrop new]
 ]
@@ -360,20 +383,6 @@ Highcharts.addEvent function.
 "
 
 	configurationOptions at: 'events' put: anObject
-]
-
-{ #category : #accessing }
-HighchartsSeriesGauge >> exposeElementToA11y: aBoolean [
-
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
-
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -424,8 +433,8 @@ to the series object through chart.get().
 { #category : #accessing }
 HighchartsSeriesGauge >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
@@ -491,7 +500,6 @@ feature is to make the chart more easily readable, like if a
 human designer placed the labels in the optimal position.
 The series labels currently work with series types having a
 graph or an area.
-Requires the series-label.js module.
 "
 	^configurationOptions at: 'label' ifAbsentPut: [HighchartsSeriesGaugeLabel new]
 ]
@@ -548,19 +556,22 @@ HighchartsSeriesGauge >> linkedTo: aString [
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.
+If master series uses data sorting and linked series does not have
+its own sorting definition, the linked series will be sorted in the
+same order as the master one.
 "
 
 	configurationOptions at: 'linkedTo' put: aString
 ]
 
 { #category : #accessing }
-HighchartsSeriesGauge >> mapData: aHighchartsMapDataObjectOrArrayOfHighchartsMapDataObject [
+HighchartsSeriesGauge >> mapData: anObject [
 
 	"A map data object containing a path definition and optionally additional
 properties to join in the data as per the joinBy option.
 "
 
-	configurationOptions at: 'mapData' put: aHighchartsMapDataObjectOrArrayOfHighchartsMapDataObject
+	configurationOptions at: 'mapData' put: anObject
 ]
 
 { #category : #accessing }
@@ -602,7 +613,7 @@ HighchartsSeriesGauge >> overshoot: aNumber [
 many degrees. Say if the gauge axis goes from 0 to 60, a value of
 100, or 1000, will show 5 degrees beyond the end of the axis when this
 option is set to 5.
-Defaults to 0."
+"
 
 	configurationOptions at: 'overshoot' put: aNumber
 ]
@@ -756,6 +767,8 @@ markers. This also implies the tooltip when not shared. When
 stickyTracking is false and tooltip.shared is false, the tooltip
 will be hidden when moving the mouse between series. Defaults to true
 for line and area type series, but to false for columns, pies etc.
+Note: The boost module will force this option because of
+technical limitations.
 Defaults to true."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
@@ -778,7 +791,6 @@ HighchartsSeriesGauge >> type: aString [
 series type is inherited from chart.type, so unless the
 chart is a combination of series types, there is no need to set it on the
 series level.
-In TypeScript instead the type option must always be set.
 "
 
 	configurationOptions at: 'type' put: aString

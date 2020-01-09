@@ -16,12 +16,6 @@ HighchartsPlotOptionsSplineMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSplineMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsPlotOptionsSplineMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsSplineMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

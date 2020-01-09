@@ -16,12 +16,6 @@ HighchartsPlotOptionsBellcurveMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsBellcurveMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsPlotOptionsBellcurveMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsBellcurveMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

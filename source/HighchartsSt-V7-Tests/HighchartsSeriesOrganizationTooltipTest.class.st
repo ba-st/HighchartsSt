@@ -5,6 +5,34 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTooltipTest >> testChangeDecimals [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganizationTooltip new.
+	component changeDecimals: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'changeDecimals' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTooltipTest >> testClusterFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganizationTooltip new.
+	component clusterFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'clusterFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesOrganizationTooltipTest >> testDistance [
 
 	| component javascript expectedConfiguration |

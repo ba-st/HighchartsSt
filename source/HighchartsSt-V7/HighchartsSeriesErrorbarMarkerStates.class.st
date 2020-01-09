@@ -16,12 +16,6 @@ HighchartsSeriesErrorbarMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesErrorbarMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesErrorbarMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesErrorbarMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

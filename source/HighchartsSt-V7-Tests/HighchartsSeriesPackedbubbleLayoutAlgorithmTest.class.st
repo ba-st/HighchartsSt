@@ -117,6 +117,20 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testIntegration [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testLinkLength [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleLayoutAlgorithm new.
+	component linkLength: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'linkLength' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testMaxIterations [
 
 	| component javascript expectedConfiguration |

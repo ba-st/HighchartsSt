@@ -5,29 +5,29 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsNavigationAnnotationsOptionsEvents >> add: anObject [
+HighchartsNavigationAnnotationsOptionsEvents >> add: aHighchartsEventCallbackFunctionOfHighchartsAnnotation [
 
 	"Event callback when annotation is added to the chart.
 "
 
-	configurationOptions at: 'add' put: anObject
+	configurationOptions at: 'add' put: aHighchartsEventCallbackFunctionOfHighchartsAnnotation
 ]
 
 { #category : #accessing }
-HighchartsNavigationAnnotationsOptionsEvents >> afterUpdate: anObject [
+HighchartsNavigationAnnotationsOptionsEvents >> afterUpdate: aHighchartsEventCallbackFunctionOfHighchartsAnnotation [
 
 	"Event callback when annotation is updated (e.g. drag and
 droppped or resized by control points).
 "
 
-	configurationOptions at: 'afterUpdate' put: anObject
+	configurationOptions at: 'afterUpdate' put: aHighchartsEventCallbackFunctionOfHighchartsAnnotation
 ]
 
 { #category : #accessing }
-HighchartsNavigationAnnotationsOptionsEvents >> remove: anObject [
+HighchartsNavigationAnnotationsOptionsEvents >> remove: aHighchartsEventCallbackFunctionOfHighchartsAnnotation [
 
 	"Event callback when annotation is removed from the chart.
 "
 
-	configurationOptions at: 'remove' put: anObject
+	configurationOptions at: 'remove' put: aHighchartsEventCallbackFunctionOfHighchartsAnnotation
 ]

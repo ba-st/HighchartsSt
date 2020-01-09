@@ -16,12 +16,6 @@ HighstockSeriesSplineMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesSplineMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesSplineMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesSplineMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

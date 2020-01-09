@@ -121,10 +121,10 @@ Defaults to 5."
 { #category : #accessing }
 HighchartsColorAxisLabels >> overflow: aString [
 
-	"How to handle overflowing labels on horizontal color axis.
-Can be undefined or &quot;justify&quot;. If &quot;justify&quot;, labels will not
-render outside the legend area. If there is room to move it,
-it will be aligned to the edge, else it will be removed.
+	"How to handle overflowing labels on horizontal color axis. If set
+to &quot;allow&quot;, it will not be aligned at all. By default it
+&quot;justify&quot; labels inside the chart area. If there is room to
+move it, it will be aligned to the edge, else it will be removed.
 Defaults to justify."
 
 	configurationOptions at: 'overflow' put: aString
@@ -234,16 +234,15 @@ Axis docs
 ]
 
 { #category : #accessing }
-HighchartsColorAxisLabels >> style: aHighchartsCSSObject [
+HighchartsColorAxisLabels >> style [
 
 	"CSS styles for the label. Use whiteSpace: ´nowrap´ to prevent
 wrapping of category labels. Use textOverflow: ´none´ to
 prevent ellipsis (dots).
 In styled mode, the labels are styled with the
 .highcharts-axis-labels class.
-Defaults to {'color': '#666666', 'cursor': 'default', 'fontSize': '11px'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighchartsColorAxisLabelsStyle new]
 ]
 
 { #category : #accessing }

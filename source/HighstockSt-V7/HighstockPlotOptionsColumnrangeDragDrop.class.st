@@ -91,8 +91,7 @@ Defaults to 2."
 { #category : #accessing }
 HighstockPlotOptionsColumnrangeDragDrop >> draggableHigh: aBoolean [
 
-	"Allow high value to be dragged individually. Requires
-draggable-points module.
+	"Allow high value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableHigh' put: aBoolean
@@ -101,8 +100,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockPlotOptionsColumnrangeDragDrop >> draggableLow: aBoolean [
 
-	"Allow low value to be dragged individually. Requires
-draggable-points module.
+	"Allow low value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableLow' put: aBoolean

@@ -41,6 +41,15 @@ rendered top down. In this case the &quot;columns&quot; are horizontal.
 ]
 
 { #category : #accessing }
+HighchartsSeriesSankeyNodes >> dataLabels [
+
+	"Individual data label for each node. The options are the same as
+the ones for series.sankey.dataLabels.
+"
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesSankeyNodesDataLabels new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesSankeyNodes >> id: aString [
 
 	"The id of the auto-generated node, refering to the from or to setting of

@@ -43,18 +43,20 @@ Class {
 { #category : #accessing }
 HighchartsSeriesBulletData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesBulletDataAccessibility new]
 ]
 
 { #category : #accessing }
-HighchartsSeriesBulletData >> borderColor: aHighchartsColorString [
+HighchartsSeriesBulletData >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border surrounding the column or bar.
 In styled mode, the border stroke can be set with the .highcharts-point
 rule.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -104,20 +106,31 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesBulletData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesBulletData >> dashStyle: aHighchartsDashStyleValue [
+
+	"A name for the dash style to use for the column or bar. Overrides
+dashStyle on the series.
+In styled mode, the stroke dash-array can be set with the same classes as
+listed under data.color.
+"
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
+HighchartsSeriesBulletData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesBulletDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesBulletData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -128,7 +141,6 @@ HighchartsSeriesBulletData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesBulletDataDragDrop new]
 ]
@@ -146,7 +158,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesBulletData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -176,8 +188,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesBulletData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString
@@ -186,8 +197,8 @@ etc.
 { #category : #accessing }
 HighchartsSeriesBulletData >> pointWidth: aNumber [
 
-	"A pixel value specifying a fixed width for the column or bar.
-Overrides pointWidth on the series.
+	"A pixel value specifying a fixed width for the column or bar. Overrides
+pointWidth on the series.
 Defaults to undefined."
 
 	configurationOptions at: 'pointWidth' put: aNumber

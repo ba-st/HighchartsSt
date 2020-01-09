@@ -12,12 +12,6 @@ HighstockAnnotationsPitchforkTypeOptionsPoints >> controlPoint: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsPitchforkTypeOptionsPoints >> label [
-
-	^configurationOptions at: 'label' ifAbsentPut: [HighstockAnnotationsPitchforkTypeOptionsPointsLabel new]
-]
-
-{ #category : #accessing }
 HighstockAnnotationsPitchforkTypeOptionsPoints >> x: aNumber [
 
 	"The x position of the point.

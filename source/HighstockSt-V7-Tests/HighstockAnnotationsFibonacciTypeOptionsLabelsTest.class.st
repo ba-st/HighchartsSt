@@ -215,6 +215,20 @@ HighstockAnnotationsFibonacciTypeOptionsLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciTypeOptionsLabelsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciTypeOptionsLabels new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsFibonacciTypeOptionsLabelsTest >> testText [
 
 	| component javascript expectedConfiguration |

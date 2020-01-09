@@ -16,12 +16,6 @@ HighstockSeriesAreasplineDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesAreasplineDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesAreasplineDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesAreasplineDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

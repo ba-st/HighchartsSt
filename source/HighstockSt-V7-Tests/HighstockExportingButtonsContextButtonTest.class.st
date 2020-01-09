@@ -5,6 +5,34 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component align: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'align' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testButtonSpacing [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component buttonSpacing: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttonSpacing' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockExportingButtonsContextButtonTest >> testClassName [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +56,20 @@ HighstockExportingButtonsContextButtonTest >> testEnabled [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component height: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'height' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -103,6 +145,20 @@ HighstockExportingButtonsContextButtonTest >> testSymbolFill [
 ]
 
 { #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testSymbolSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component symbolSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockExportingButtonsContextButtonTest >> testSymbolStroke [
 
 	| component javascript expectedConfiguration |
@@ -131,6 +187,34 @@ HighstockExportingButtonsContextButtonTest >> testSymbolStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testSymbolX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component symbolX: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testSymbolY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component symbolY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolY' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockExportingButtonsContextButtonTest >> testText [
 
 	| component javascript expectedConfiguration |
@@ -154,6 +238,34 @@ HighstockExportingButtonsContextButtonTest >> testTitleKey [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'titleKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testVerticalAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component verticalAlign: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'verticalAlign' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -185,6 +185,21 @@ HighchartsSeriesSplineTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSplineTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSpline new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'spline';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSplineTest >> testConnectEnds [
 
 	| component javascript expectedConfiguration |

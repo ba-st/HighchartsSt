@@ -12,12 +12,6 @@ HighstockAnnotationsVerticalLineTypeOptionsPoints >> controlPoint: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsPoints >> label [
-
-	^configurationOptions at: 'label' ifAbsentPut: [HighstockAnnotationsVerticalLineTypeOptionsPointsLabel new]
-]
-
-{ #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsPoints >> x: aNumber [
 
 	"The x position of the point.

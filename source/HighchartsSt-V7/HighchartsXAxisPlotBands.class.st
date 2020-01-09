@@ -42,7 +42,7 @@ to apply to each individual band.
 HighchartsXAxisPlotBands >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the plot band.
-"
+Defaults to #e6ebf5."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]

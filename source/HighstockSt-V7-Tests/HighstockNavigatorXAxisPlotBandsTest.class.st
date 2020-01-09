@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisPlotBandsTest >> testAcrossPanes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxisPlotBands new.
+	component acrossPanes: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'acrossPanes' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisPlotBandsTest >> testBorderColor [
 
 	| component javascript expectedConfiguration |

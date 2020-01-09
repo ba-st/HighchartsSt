@@ -16,12 +16,6 @@ HighstockSeriesStreamgraphDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesStreamgraphDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesStreamgraphDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesStreamgraphDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

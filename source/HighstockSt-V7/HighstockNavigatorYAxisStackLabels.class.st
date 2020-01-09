@@ -33,6 +33,19 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighstockNavigatorYAxisStackLabels >> crop: aBoolean [
+
+	"Whether to hide stack labels that are outside the plot area.
+By default, the stack label is moved
+inside the plot area according to the
+overflow
+option.
+Defaults to true."
+
+	configurationOptions at: 'crop' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockNavigatorYAxisStackLabels >> enabled: aBoolean [
 
 	"Enable or disable the stack total labels.
@@ -62,6 +75,20 @@ given by this.total.
 ]
 
 { #category : #accessing }
+HighstockNavigatorYAxisStackLabels >> overflow: aHighchartsDataLabelsOverflowValue [
+
+	"How to handle stack total labels that flow outside the plot area.
+The default is set to &quot;justify&quot;,
+which aligns them inside the plot area.
+For columns and bars, this means it will be moved inside the bar.
+To display stack labels outside the plot area,
+set crop to false and overflow to &quot;allow&quot;.
+Defaults to justify."
+
+	configurationOptions at: 'overflow' put: aHighchartsDataLabelsOverflowValue
+]
+
+{ #category : #accessing }
 HighstockNavigatorYAxisStackLabels >> rotation: aNumber [
 
 	"Rotation of the labels in degrees.
@@ -71,14 +98,13 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisStackLabels >> style: aHighchartsCSSObject [
+HighstockNavigatorYAxisStackLabels >> style [
 
 	"CSS styles for the label.
 In styled mode, the styles are set in the
 .highcharts-stack-label class.
-Defaults to {'color': '#666666', 'fontSize': '11px', 'fontWeight': 'bold', 'textOutline': '1px contrast'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighstockNavigatorYAxisStackLabelsStyle new]
 ]
 
 { #category : #accessing }

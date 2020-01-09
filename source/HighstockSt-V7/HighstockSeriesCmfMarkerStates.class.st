@@ -16,12 +16,6 @@ HighstockSeriesCmfMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesCmfMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesCmfMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesCmfMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

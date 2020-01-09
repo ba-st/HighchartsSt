@@ -43,6 +43,8 @@ Class {
 { #category : #accessing }
 HighstockSeriesAreasplinerangeData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesAreasplinerangeDataAccessibility new]
 ]
 
@@ -59,20 +61,19 @@ colorIndex.
 ]
 
 { #category : #accessing }
-HighstockSeriesAreasplinerangeData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighstockSeriesAreasplinerangeData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockSeriesAreasplinerangeDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighstockSeriesAreasplinerangeData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -83,7 +84,6 @@ HighstockSeriesAreasplinerangeData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesAreasplinerangeDataDragDrop new]
 ]
@@ -91,7 +91,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighstockSeriesAreasplinerangeData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -139,8 +139,7 @@ HighstockSeriesAreasplinerangeData >> low: aNumber [
 { #category : #accessing }
 HighstockSeriesAreasplinerangeData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

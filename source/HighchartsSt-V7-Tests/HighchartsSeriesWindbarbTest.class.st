@@ -215,6 +215,21 @@ HighchartsSeriesWindbarbTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWindbarbTest >> testColors [
 
 	| component javascript expectedConfiguration |

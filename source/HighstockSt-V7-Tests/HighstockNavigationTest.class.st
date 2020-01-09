@@ -33,6 +33,20 @@ HighstockNavigationTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigationTest >> testIconsURL [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigation new.
+	component iconsURL: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'iconsURL' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigationTest >> testMenuItemHoverStyle [
 
 	| component javascript expectedConfiguration |

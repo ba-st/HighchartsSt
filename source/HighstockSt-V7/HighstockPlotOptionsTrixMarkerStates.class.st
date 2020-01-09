@@ -16,12 +16,6 @@ HighstockPlotOptionsTrixMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsTrixMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsTrixMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsTrixMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

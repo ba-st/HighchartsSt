@@ -173,6 +173,20 @@ HighstockSeriesZigzagTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesZigzagTest >> testCompare [
 
 	| component javascript expectedConfiguration |

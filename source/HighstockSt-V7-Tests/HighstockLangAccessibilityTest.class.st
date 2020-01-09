@@ -33,6 +33,20 @@ HighstockLangAccessibilityTest >> testChartHeading [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLangAccessibilityTest >> testCredits [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLangAccessibility new.
+	component credits: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'credits' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLangAccessibilityTest >> testDefaultChartTitle [
 
 	| component javascript expectedConfiguration |
@@ -56,6 +70,20 @@ HighstockLangAccessibilityTest >> testDrillUpButton [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'drillUpButton' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangAccessibilityTest >> testGraphicContainerLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLangAccessibility new.
+	component graphicContainerLabel: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'graphicContainerLabel' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

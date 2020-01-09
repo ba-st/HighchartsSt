@@ -26,24 +26,7 @@ navigating through them.
 ]
 
 { #category : #accessing }
-HighstockAccessibilityKeyboardNavigation >> mode: aString [
-
-	"Set the keyboard navigation mode for the chart. Can be &quot;normal&quot;
-or &quot;serialize&quot;. In normal mode, left/right arrow keys move
-between points in a series, while up/down arrow keys move between
-series. Up/down navigation acts intelligently to figure out which
-series makes sense to move to from any given point.
-In &quot;serialize&quot; mode, points are instead navigated as a single
-list. Left/right behaves as in &quot;normal&quot; mode. Up/down arrow keys
-will behave like left/right. This can be useful for unifying
-navigation behavior with/without screen readers enabled.
-Defaults to normal."
-
-	configurationOptions at: 'mode' put: aString
-]
-
-{ #category : #accessing }
-HighstockAccessibilityKeyboardNavigation >> order: anObject [
+HighstockAccessibilityKeyboardNavigation >> order: anArrayOfstring [
 
 	"Order of tab navigation in the chart. Determines which elements
 are tabbed to first. Available elements are: series, zoom,
@@ -51,17 +34,15 @@ rangeSelector, chartMenu, legend. In addition, any custom
 components can be added here.
 "
 
-	configurationOptions at: 'order' put: anObject
+	configurationOptions at: 'order' put: anArrayOfstring
 ]
 
 { #category : #accessing }
-HighstockAccessibilityKeyboardNavigation >> skipNullPoints: aBoolean [
+HighstockAccessibilityKeyboardNavigation >> seriesNavigation [
 
-	"Skip null points when navigating through points with the
-keyboard.
-Defaults to true."
-
-	configurationOptions at: 'skipNullPoints' put: aBoolean
+	"Options for the keyboard navigation of data points and series.
+"
+	^configurationOptions at: 'seriesNavigation' ifAbsentPut: [HighstockAccessibilityKeyboardNavigationSeriesNavigation new]
 ]
 
 { #category : #accessing }

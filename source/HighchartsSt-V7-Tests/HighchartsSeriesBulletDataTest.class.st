@@ -75,6 +75,20 @@ HighchartsSeriesBulletDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBulletDataTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBulletData new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBulletDataTest >> testDataLabels [
 
 	| component javascript expectedConfiguration |

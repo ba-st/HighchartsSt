@@ -16,12 +16,6 @@ HighstockPlotOptionsMacdMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsMacdMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsMacdMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsMacdMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

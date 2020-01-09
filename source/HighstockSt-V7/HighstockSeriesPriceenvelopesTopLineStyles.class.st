@@ -9,7 +9,7 @@ HighstockSeriesPriceenvelopesTopLineStyles >> lineColor: aHighchartsColorString 
 
 	"Color of the line. If not set, it´s inherited from
 plotOptions.priceenvelopes.color.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]

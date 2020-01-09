@@ -29,6 +29,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesFunnelData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesFunnelDataAccessibility new]
 ]
 
@@ -68,20 +70,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesFunnelData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesFunnelDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesFunnelData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -92,7 +93,6 @@ HighchartsSeriesFunnelData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesFunnelDataDragDrop new]
 ]
@@ -110,7 +110,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesFunnelData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -149,8 +149,7 @@ HighchartsSeriesFunnelData >> legendIndex: aNumber [
 { #category : #accessing }
 HighchartsSeriesFunnelData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

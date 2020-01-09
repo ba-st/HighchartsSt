@@ -91,8 +91,7 @@ Defaults to 2."
 { #category : #accessing }
 HighchartsPlotOptionsXrangeDragDrop >> draggableX1: aBoolean [
 
-	"Allow x value to be dragged individually. Requires
-draggable-points module.
+	"Allow x value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableX1' put: aBoolean
@@ -101,8 +100,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsPlotOptionsXrangeDragDrop >> draggableX2: aBoolean [
 
-	"Allow x2 value to be dragged individually. Requires
-draggable-points module.
+	"Allow x2 value to be dragged individually.
 Defaults to true."
 
 	configurationOptions at: 'draggableX2' put: aBoolean

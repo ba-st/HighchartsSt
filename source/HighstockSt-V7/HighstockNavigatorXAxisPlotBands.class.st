@@ -11,6 +11,15 @@ Class {
 }
 
 { #category : #accessing }
+HighstockNavigatorXAxisPlotBands >> acrossPanes: aBoolean [
+
+	"Flag to decide if plotBand should be rendered across all panes.
+Defaults to true."
+
+	configurationOptions at: 'acrossPanes' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockNavigatorXAxisPlotBands >> borderColor: aHighchartsColorString [
 
 	"Border color for the plot band. Also requires borderWidth to be set.
@@ -42,7 +51,7 @@ to apply to each individual band.
 HighstockNavigatorXAxisPlotBands >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the plot band.
-"
+Defaults to #e6ebf5."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]

@@ -36,7 +36,7 @@ Defaults to 2."
 ]
 
 { #category : #accessing }
-HighstockAccessibilityKeyboardNavigationFocusBorder >> style: aHighchartsCSSObject [
+HighstockAccessibilityKeyboardNavigationFocusBorder >> style [
 
 	"Style options for the focus border drawn around elements
 while navigating through them. Note that some browsers in
@@ -44,7 +44,6 @@ addition draw their own borders for focused elements. These
 automatic borders can not be styled by Highcharts.
 In styled mode, the border is given the
 .highcharts-focus-border class.
-Defaults to {'color': '#335cad', 'lineWidth': 2, 'borderRadius': 3}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighstockAccessibilityKeyboardNavigationFocusBorderStyle new]
 ]

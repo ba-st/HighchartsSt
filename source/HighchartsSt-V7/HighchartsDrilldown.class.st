@@ -48,7 +48,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsDrilldown >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighchartsDrilldown >> animation [
 
 	"Set the animation for all drilldown animations. Animation of a drilldown
 occurs when drilling between a column point and a column series,
@@ -65,9 +65,8 @@ duration: The duration of the animation in milliseconds.
 easing: A string reference to an easing function set on the Math
 object. See
 the easing demo.
-Defaults to { 'duration': 500 }."
-
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+"
+	^configurationOptions at: 'animation' ifAbsentPut: [HighchartsDrilldownAnimation new]
 ]
 
 { #category : #accessing }

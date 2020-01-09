@@ -41,6 +41,15 @@ rendered top down. In this case the &quot;columns&quot; are horizontal.
 ]
 
 { #category : #accessing }
+HighchartsSeriesDependencywheelNodes >> dataLabels [
+
+	"Individual data label for each node. The options are the same as
+the ones for series.dependencywheel.dataLabels.
+"
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesDependencywheelNodesDataLabels new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesDependencywheelNodes >> id: aString [
 
 	"The id of the auto-generated node, refering to the from or to setting of

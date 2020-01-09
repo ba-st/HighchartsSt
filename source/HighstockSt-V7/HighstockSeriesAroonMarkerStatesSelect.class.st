@@ -28,13 +28,13 @@ Defaults to #cccccc."
 ]
 
 { #category : #accessing }
-HighstockSeriesAroonMarkerStatesSelect >> lineColor: aHighchartsColorString [
+HighstockSeriesAroonMarkerStatesSelect >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the point marker´s outline. When
 undefined, the series´ or point´s color is used.
 Defaults to #000000."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

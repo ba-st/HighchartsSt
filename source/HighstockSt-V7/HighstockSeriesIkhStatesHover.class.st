@@ -17,12 +17,12 @@ HighstockSeriesIkhStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighstockSeriesIkhStatesHover >> borderColor: aHighchartsColorString [
+HighstockSeriesIkhStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

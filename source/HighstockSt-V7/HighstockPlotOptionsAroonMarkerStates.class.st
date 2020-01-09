@@ -16,12 +16,6 @@ HighstockPlotOptionsAroonMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsAroonMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsAroonMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsAroonMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

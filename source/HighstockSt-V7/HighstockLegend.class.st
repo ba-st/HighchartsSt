@@ -46,21 +46,21 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockLegend >> backgroundColor: aHighchartsColorString [
+HighstockLegend >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color of the legend.
 "
 
-	configurationOptions at: 'backgroundColor' put: aHighchartsColorString
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockLegend >> borderColor: aHighchartsColorString [
+HighstockLegend >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the drawn border around the legend.
 Defaults to #999999."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -89,7 +89,6 @@ presents the scale of the bubble series. Individual bubble ranges
 can be defined by user or calculated from series. In the case of
 automatically calculated ranges, a 1px margin of error is
 permitted.
-Requires highcharts-more.js.
 "
 	^configurationOptions at: 'bubbleLegend' ifAbsentPut: [HighstockLegendBubbleLegend new]
 ]
@@ -118,12 +117,13 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockLegend >> itemCheckboxStyle [
+HighstockLegend >> itemCheckboxStyle: aHighchartsCSSObject [
 
 	"Default styling for the checkbox next to a legend item when
 showCheckbox is true.
 Defaults to {'width': '13px', 'height': '13px', 'position':'absolute'}."
-	^configurationOptions at: 'itemCheckboxStyle' ifAbsentPut: [HighstockLegendItemCheckboxStyle new]
+
+	configurationOptions at: 'itemCheckboxStyle' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -214,14 +214,14 @@ Defaults to {name}."
 ]
 
 { #category : #accessing }
-HighstockLegend >> labelFormatter: anObject [
+HighstockLegend >> labelFormatter: aHighchartsFormatterCallbackFunctionOfPointOrSeries [
 
 	"Callback function to format each of the series´ labels. The this
 keyword refers to the series object, or the point object in case of
 pie charts. By default the series or point name is printed.
 "
 
-	configurationOptions at: 'labelFormatter' put: anObject
+	configurationOptions at: 'labelFormatter' put: aHighchartsFormatterCallbackFunctionOfPointOrSeries
 ]
 
 { #category : #accessing }

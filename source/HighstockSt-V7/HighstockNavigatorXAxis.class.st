@@ -59,13 +59,26 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> alternateGridColor: aHighchartsColorString [
+HighstockNavigatorXAxis >> alternateGridColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"When using an alternate grid color, a band is painted across the
 plot area between every other grid line.
 "
 
-	configurationOptions at: 'alternateGridColor' put: aHighchartsColorString
+	configurationOptions at: 'alternateGridColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxis >> angle: aNumber [
+
+	"In a polar chart, this is the angle of the Y axis in degrees, where
+0 is up and 90 is right. The angle determines the position of the
+axis line and the labels, though the coordinate system is unaffected.
+Since v8.0.0 this option is also applicable for X axis (inverted
+polar).
+Defaults to 0."
+
+	configurationOptions at: 'angle' put: aNumber
 ]
 
 { #category : #accessing }
@@ -118,16 +131,17 @@ representations used for each unit. For intermediate values,
 different units may be used, for example the day unit can be used
 on midnight and hour unit be used for intermediate values on the
 same axis. For an overview of the replacement codes, see
-dateFormat. Defaults to:
+dateFormat.
+Defaults to:
 {
-    millisecond: 'H:M:S.L',
-    second: 'H:M:S',
-    minute: 'H:M',
-    hour: 'H:M',
-    day: 'e. b',
-    week: 'e. b',
-    month: 'b \'y',
-    year: 'Y'
+    millisecond: ´H:M:S.L´,
+    second: ´H:M:S´,
+    minute: ´H:M´,
+    hour: ´H:M´,
+    day: ´e. b´,
+    week: ´e. b´,
+    month: ´b \´y´,
+    year: ´Y´
 }
 "
 	^configurationOptions at: 'dateTimeLabelFormats' ifAbsentPut: [HighstockNavigatorXAxisDateTimeLabelFormats new]
@@ -183,6 +197,18 @@ Defaults to Solid."
 ]
 
 { #category : #accessing }
+HighstockNavigatorXAxis >> gridLineInterpolation: aString [
+
+	"Polar charts only. Whether the grid lines should draw as a polygon
+with straight lines between categories, or as circles. Can be either
+circle or polygon. Since v8.0.0 this option is also applicable
+for X axis (inverted polar).
+"
+
+	configurationOptions at: 'gridLineInterpolation' put: aString
+]
+
+{ #category : #accessing }
 HighstockNavigatorXAxis >> gridLineWidth: aNumber [
 
 	"The width of the grid lines extending the ticks across the plot area.
@@ -203,6 +229,18 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
+HighstockNavigatorXAxis >> height: aNumberOrstring [
+
+	"The height as the vertical axis. If it´s a number, it is
+interpreted as pixels.
+Since Highcharts 2: If it´s a percentage string, it is interpreted
+as percentages of the total plot height.
+"
+
+	configurationOptions at: 'height' put: aNumberOrstring
+]
+
+{ #category : #accessing }
 HighstockNavigatorXAxis >> id: aString [
 
 	"An id for the axis. This can be used after render time to get
@@ -216,19 +254,34 @@ a pointer to the axis object through chart.get().
 HighstockNavigatorXAxis >> labels [
 
 	"The axis labels show the number or category for each tick.
+Since v8.0.0: Labels are animated in categorized x-axis with
+updating data if tickInterval and step is set to 1.
 "
 	^configurationOptions at: 'labels' ifAbsentPut: [HighstockNavigatorXAxisLabels new]
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> lineColor: aHighchartsColorString [
+HighstockNavigatorXAxis >> left: aNumberOrstring [
+
+	"The left position as the horizontal axis. If it´s a number, it is
+interpreted as pixel position relative to the chart.
+Since Highcharts v5.0.13: If it´s a percentage string, it is
+interpreted as percentages of the plot width, offset from plot area
+left.
+"
+
+	configurationOptions at: 'left' put: aNumberOrstring
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxis >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the line marking the axis itself.
 In styled mode, the line stroke is given in the
 .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -243,14 +296,14 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> margin: anObject [
+HighstockNavigatorXAxis >> margin: aNumber [
 
 	"If there are multiple axes on the same side of the chart, the pixel
 margin between the axes. Defaults to 0 on vertical axes, 15 on
 horizontal axes.
 "
 
-	configurationOptions at: 'margin' put: anObject
+	configurationOptions at: 'margin' put: aNumber
 ]
 
 { #category : #accessing }
@@ -325,14 +378,14 @@ two points on the axis.
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorGridLineColor: aHighchartsColorString [
+HighstockNavigatorXAxis >> minorGridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color of the minor, secondary grid lines.
 In styled mode, the stroke width is given in the
 .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorString
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -357,12 +410,12 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorTickColor: aHighchartsColorString [
+HighstockNavigatorXAxis >> minorTickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aHighchartsColorString
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -600,14 +653,14 @@ or category axes are not affected.
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> tickColor: aHighchartsColorString [
+HighstockNavigatorXAxis >> tickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"Color for the main tick marks.
 In styled mode, the stroke is given in the .highcharts-tick
 class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aHighchartsColorString
+	configurationOptions at: 'tickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -693,7 +746,8 @@ HighstockNavigatorXAxis >> tickWidth: anUndefinedOrnumber [
 	"The pixel width of the major tick marks. Defaults to 0 on category
 axes, otherwise 1.
 In styled mode, the stroke width is given in the .highcharts-tick
-class.
+class, but in order for the element to be generated on category axes,
+the option must be explicitly set to 1.
 "
 
 	configurationOptions at: 'tickWidth' put: anUndefinedOrnumber
@@ -708,35 +762,48 @@ HighstockNavigatorXAxis >> title [
 ]
 
 { #category : #accessing }
+HighstockNavigatorXAxis >> top: aNumberOrstring [
+
+	"The top position as the vertical axis. If it´s a number, it is
+interpreted as pixel position relative to the chart.
+Since Highcharts 2: If it´s a percentage string, it is interpreted
+as percentages of the plot height, offset from plot area top.
+"
+
+	configurationOptions at: 'top' put: aNumberOrstring
+]
+
+{ #category : #accessing }
 HighstockNavigatorXAxis >> units: anArrayOfArrayOfstringArrayOfnumberOrNil [
 
 	"Datetime axis only. An array determining what time intervals the
 ticks are allowed to fall on. Each array item is an array where the
 first value is the time unit and the second value another array of
-allowed multiples. Defaults to:
+allowed multiples.
+Defaults to:
 units: [[
-    'millisecond', // unit name
+    ´millisecond´, // unit name
     [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
 ], [
-    'second',
+    ´second´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'minute',
+    ´minute´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'hour',
+    ´hour´,
     [1, 2, 3, 4, 6, 8, 12]
 ], [
-    'day',
+    ´day´,
     [1]
 ], [
-    'week',
+    ´week´,
     [1]
 ], [
-    'month',
+    ´month´,
     [1, 3, 6]
 ], [
-    'year',
+    ´year´,
     null
 ]]
 "
@@ -752,4 +819,26 @@ be visible.
 Defaults to true."
 
 	configurationOptions at: 'visible' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxis >> width: aNumberOrstring [
+
+	"The width as the horizontal axis. If it´s a number, it is interpreted
+as pixels.
+Since Highcharts v5.0.13: If it´s a percentage string, it is
+interpreted as percentages of the total plot width.
+"
+
+	configurationOptions at: 'width' put: aNumberOrstring
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxis >> zoomEnabled: aBoolean [
+
+	"Whether to zoom axis. If chart.zoomType is set, the option allows
+to disable zooming on an individual axis.
+Defaults to enabled."
+
+	configurationOptions at: 'zoomEnabled' put: aBoolean
 ]

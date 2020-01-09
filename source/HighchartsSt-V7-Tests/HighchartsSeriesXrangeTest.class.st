@@ -200,6 +200,21 @@ HighchartsSeriesXrangeTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesXrangeTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrange new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'xrange';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesXrangeTest >> testColors [
 
 	| component javascript expectedConfiguration |

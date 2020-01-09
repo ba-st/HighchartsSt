@@ -145,6 +145,20 @@ HighstockSeriesPpoTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPpoTest >> testCompare [
 
 	| component javascript expectedConfiguration |

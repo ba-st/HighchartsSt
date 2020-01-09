@@ -35,7 +35,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsSolidgauge >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsPlotOptionsSolidgaugeAccessibility new]
 ]
@@ -96,14 +96,14 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSolidgauge >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsSolidgauge >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the map areas.
 In styled mode, the border stroke is given in the .highcharts-point
 class.
 Defaults to '#cccccc'."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -156,17 +156,6 @@ className option.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsSolidgauge >> colorAxis: aBoolean [
-
-	"Set this option to false to prevent a series from connecting to
-the global color axis. This will cause the series to have its own
-legend item.
-"
-
-	configurationOptions at: 'colorAxis' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -267,38 +256,30 @@ altered through a custom approximation callback function.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSolidgauge >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsPlotOptionsSolidgauge >> dataLabels [
 
 	"Data labels for the gauge. For gauges, the data labels are enabled
 by default and shown in a bordered box below the point.
 "
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsPlotOptionsSolidgaugeDataLabels new]
+]
 
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+{ #category : #accessing }
+HighchartsPlotOptionsSolidgauge >> dataSorting [
+
+	"Options for the series data sorting.
+"
+	^configurationOptions at: 'dataSorting' ifAbsentPut: [HighchartsPlotOptionsSolidgaugeDataSorting new]
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsSolidgauge >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
 	configurationOptions at: 'description' put: aString
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsSolidgauge >> dragDrop [
-
-	"The draggable-points module allows points to be moved around or modified in
-the chart. In addition to the options mentioned under the dragDrop API
-structure, the module fires three events,
-point.dragStart,
-point.drag and
-point.drop.
-It requires the modules/draggable-points.js file to be loaded.
-"
-	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsPlotOptionsSolidgaugeDragDrop new]
 ]
 
 { #category : #accessing }
@@ -321,20 +302,6 @@ Highcharts.addEvent function.
 "
 
 	configurationOptions at: 'events' put: anObject
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsSolidgauge >> exposeElementToA11y: aBoolean [
-
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
-
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -375,13 +342,23 @@ Defaults to relative."
 { #category : #accessing }
 HighchartsPlotOptionsSolidgauge >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
 
 	configurationOptions at: 'includeInDataExport' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsSolidgauge >> innerRadius: aNumberOrstring [
+
+	"The inner radius for points in a solid gauge. Can be given as a number
+(pixels) or percentage string.
+Defaults to 60."
+
+	configurationOptions at: 'innerRadius' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -424,7 +401,6 @@ feature is to make the chart more easily readable, like if a
 human designer placed the labels in the optimal position.
 The series labels currently work with series types having a
 graph or an area.
-Requires the series-label.js module.
 "
 	^configurationOptions at: 'label' ifAbsentPut: [HighchartsPlotOptionsSolidgaugeLabel new]
 ]
@@ -470,6 +446,9 @@ HighchartsPlotOptionsSolidgauge >> linkedTo: aString [
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.
+If master series uses data sorting and linked series does not have
+its own sorting definition, the linked series will be sorted in the
+same order as the master one.
 "
 
 	configurationOptions at: 'linkedTo' put: aString
@@ -587,6 +566,16 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsSolidgauge >> radius: aNumberOrstring [
+
+	"The outer radius for points in a solid gauge. Can be given as a number
+(pixels) or percentage string.
+Defaults to 100."
+
+	configurationOptions at: 'radius' put: aNumberOrstring
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsSolidgauge >> rounded: aBoolean [
 
 	"Wether to draw rounded edges on the gauge.
@@ -658,6 +647,8 @@ markers. This also implies the tooltip when not shared. When
 stickyTracking is false and tooltip.shared is false, the tooltip
 will be hidden when moving the mouse between series. Defaults to true
 for line and area type series, but to false for columns, pies etc.
+Note: The boost module will force this option because of
+technical limitations.
 Defaults to true."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean

@@ -21,7 +21,7 @@ to apply to each individual line.
 HighchartsYAxisPlotLines >> color: aHighchartsColorString [
 
 	"The color of the line.
-"
+Defaults to #999999."
 
 	configurationOptions at: 'color' put: aHighchartsColorString
 ]
@@ -76,7 +76,7 @@ HighchartsYAxisPlotLines >> value: aNumber [
 HighchartsYAxisPlotLines >> width: aNumber [
 
 	"The width or thickness of the plot line.
-"
+Defaults to 2."
 
 	configurationOptions at: 'width' put: aNumber
 ]

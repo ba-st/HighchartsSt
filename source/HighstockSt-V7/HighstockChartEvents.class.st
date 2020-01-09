@@ -25,7 +25,7 @@ being added.
 HighstockChartEvents >> afterPrint: aHighchartsExportingAfterPrintCallbackFunction [
 
 	"Fires after a chart is printed through the context menu item or the
-Chart.print method. Requires the exporting module.
+Chart.print method.
 "
 
 	configurationOptions at: 'afterPrint' put: aHighchartsExportingAfterPrintCallbackFunction
@@ -35,7 +35,7 @@ Chart.print method. Requires the exporting module.
 HighstockChartEvents >> beforePrint: aHighchartsExportingBeforePrintCallbackFunction [
 
 	"Fires before a chart is printed through the context menu item or
-the Chart.print method. Requires the exporting module.
+the Chart.print method.
 "
 
 	configurationOptions at: 'beforePrint' put: aHighchartsExportingBeforePrintCallbackFunction
@@ -53,13 +53,23 @@ are event.xAxis[0] and event.yAxis[0]. Remember the unit of a
 datetime axis is milliseconds since 1970-01-01 00:00:00.
 click: function(e) {
     console.log(
-        Highcharts.dateFormat('Y-m-d H:M:S', e.xAxis[0].value),
+        Highcharts.dateFormat(´Y-m-d H:M:S´, e.xAxis[0].value),
         e.yAxis[0].value
     )
 }
 "
 
 	configurationOptions at: 'click' put: aHighchartsChartClickCallbackFunction
+]
+
+{ #category : #accessing }
+HighstockChartEvents >> exportData: aHighchartsExportDataCallbackFunction [
+
+	"Callback that fires while exporting data. This allows the modification of
+data rows before processed into the final format.
+"
+
+	configurationOptions at: 'exportData' put: aHighchartsExportDataCallbackFunction
 ]
 
 { #category : #accessing }
@@ -116,11 +126,11 @@ selection: function(event) {
     // log the min and max of the primary, datetime x-axis
     console.log(
         Highcharts.dateFormat(
-            'Y-m-d H:M:S',
+            ´Y-m-d H:M:S´,
             event.xAxis[0].min
         ),
         Highcharts.dateFormat(
-            'Y-m-d H:M:S',
+            ´Y-m-d H:M:S´,
             event.xAxis[0].max
         )
     );

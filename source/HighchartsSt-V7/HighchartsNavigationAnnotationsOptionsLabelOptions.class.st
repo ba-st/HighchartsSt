@@ -78,8 +78,8 @@ Defaults to ."
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsLabelOptions >> crop: aBoolean [
 
-	"Whether to hide the annotation´s label that is outside the plot
-area.
+	"Whether to hide the annotation´s label
+that is outside the plot area.
 Defaults to false."
 
 	configurationOptions at: 'crop' put: aBoolean
@@ -108,10 +108,10 @@ string for the data label.
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsLabelOptions >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format the annotation´s label.
-Note that if a format or text are defined, the format or text
-take precedence and the formatter is ignored. This refers to a
-point object.
+	"Callback JavaScript function to format the annotation´s
+label. Note that if a format or text are defined, the
+format or text take precedence and the formatter is ignored.
+This refers to a point object.
 Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
 	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
@@ -120,8 +120,9 @@ Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; 
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsLabelOptions >> overflow: aString [
 
-	"How to handle the annotation´s label that flow outside the plot
-area. The justify option aligns the label inside the plot area.
+	"How to handle the annotation´s label that flow outside the
+plot area. The justify option aligns the label inside the
+plot area.
 Defaults to justify."
 
 	configurationOptions at: 'overflow' put: aString
@@ -140,8 +141,9 @@ Defaults to 5."
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsLabelOptions >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-	"The shadow of the box. The shadow can be an object configuration
-containing color, offsetX, offsetY, opacity and width.
+	"The shadow of the box. The shadow can be an object
+configuration containing color, offsetX, offsetY,
+opacity and width.
 Defaults to false."
 
 	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject

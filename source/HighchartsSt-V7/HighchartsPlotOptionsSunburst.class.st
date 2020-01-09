@@ -36,7 +36,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsSunburst >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsPlotOptionsSunburstAccessibility new]
 ]
@@ -107,7 +107,7 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSunburst >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsSunburst >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border surrounding each slice. When null, the
 border takes the same color as the slice fill. This can be used
@@ -117,7 +117,7 @@ In styled mode, the border stroke is given in the .highcharts-point
 class.
 Defaults to #ffffff."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -159,17 +159,16 @@ element.
 { #category : #accessing }
 HighchartsPlotOptionsSunburst >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The main color of the series. In line type series it applies to the
-line and the point markers unless otherwise specified. In bar type
-series it applies to the bars unless a color is specified per point.
-The default value is pulled from the options.colors array.
+	"The color of the pie series. A pie series is represented as an empty
+circle if the total sum of its values is 0. Use this property to
+define the color of its border.
 In styled mode, the color can be defined by the
 colorIndex option. Also, the series
 color can be set with the .highcharts-series,
 .highcharts-color-{n}, .highcharts-{type}-series or
 .highcharts-series-{n} class, or individual classes given by the
 className option.
-"
+Defaults to #cccccc."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
@@ -238,7 +237,7 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSunburst >> dataLabels: aHighchartsSeriesSunburstDataLabelsOptionsObjectOrHighchartsDataLabelsOptionsObject [
+HighchartsPlotOptionsSunburst >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
 point.
@@ -248,33 +247,17 @@ In styled mode, the data labels can be styled with the
 .highcharts-data-label-box and .highcharts-data-label class names
 (see example).
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsSeriesSunburstDataLabelsOptionsObjectOrHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsPlotOptionsSunburstDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsSunburst >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
 	configurationOptions at: 'description' put: aString
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsSunburst >> dragDrop [
-
-	"The draggable-points module allows points to be moved around or modified in
-the chart. In addition to the options mentioned under the dragDrop API
-structure, the module fires three events,
-point.dragStart,
-point.drag and
-point.drop.
-It requires the modules/draggable-points.js file to be loaded.
-"
-	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsPlotOptionsSunburstDragDrop new]
 ]
 
 { #category : #accessing }
@@ -300,24 +283,22 @@ Highcharts.addEvent function.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSunburst >> exposeElementToA11y: aBoolean [
+HighchartsPlotOptionsSunburst >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
+	"If the total sum of the pie´s values is 0, the series is represented
+as an empty circle . The fillColor option defines the color of that
+circle. Use pie.borderWidth to set
+the border thickness.
+Defaults to undefined."
 
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsSunburst >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
@@ -388,6 +369,9 @@ HighchartsPlotOptionsSunburst >> linkedTo: aString [
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.
+If master series uses data sorting and linked series does not have
+its own sorting definition, the linked series will be sorted in the
+same order as the master one.
 "
 
 	configurationOptions at: 'linkedTo' put: aString
@@ -425,7 +409,7 @@ but for an individual series. Overrides the chart wide configuration.
 HighchartsPlotOptionsSunburst >> rootId: aString [
 
 	"Which point to use as a root in the visualization.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'rootId' put: aString
 ]

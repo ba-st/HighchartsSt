@@ -49,6 +49,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesBoxplotDataAccessibility new]
 ]
 
@@ -88,20 +90,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesBoxplotData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesBoxplotData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesBoxplotDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -112,7 +113,6 @@ HighchartsSeriesBoxplotData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesBoxplotDataDragDrop new]
 ]
@@ -130,7 +130,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -190,8 +190,7 @@ middle area of the box.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

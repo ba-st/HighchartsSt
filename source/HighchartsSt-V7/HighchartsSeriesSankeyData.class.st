@@ -24,6 +24,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesSankeyData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesSankeyDataAccessibility new]
 ]
 
@@ -63,20 +65,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesSankeyData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesSankeyData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesSankeyDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesSankeyData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -85,7 +86,7 @@ about the point. Requires the Accessibility module.
 { #category : #accessing }
 HighchartsSeriesSankeyData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -124,8 +125,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesSankeyData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

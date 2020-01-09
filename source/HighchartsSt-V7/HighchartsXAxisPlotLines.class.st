@@ -24,7 +24,7 @@ to apply to each individual line.
 HighchartsXAxisPlotLines >> color: aHighchartsColorString [
 
 	"The color of the line.
-"
+Defaults to #999999."
 
 	configurationOptions at: 'color' put: aHighchartsColorString
 ]
@@ -79,7 +79,7 @@ HighchartsXAxisPlotLines >> value: aNumber [
 HighchartsXAxisPlotLines >> width: aNumber [
 
 	"The width or thickness of the plot line.
-"
+Defaults to 2."
 
 	configurationOptions at: 'width' put: aNumber
 ]

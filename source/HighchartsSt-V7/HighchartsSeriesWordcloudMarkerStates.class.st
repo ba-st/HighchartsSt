@@ -16,12 +16,6 @@ HighchartsSeriesWordcloudMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesWordcloudMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesWordcloudMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesWordcloudMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

@@ -16,12 +16,6 @@ HighchartsPlotOptionsBubbleMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsBubbleMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsPlotOptionsBubbleMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsBubbleMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

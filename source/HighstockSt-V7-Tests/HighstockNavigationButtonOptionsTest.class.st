@@ -5,6 +5,34 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component align: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'align' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testButtonSpacing [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component buttonSpacing: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttonSpacing' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigationButtonOptionsTest >> testEnabled [
 
 	| component javascript expectedConfiguration |
@@ -19,6 +47,20 @@ HighstockNavigationButtonOptionsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component height: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'height' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigationButtonOptionsTest >> testSymbolFill [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +70,20 @@ HighstockNavigationButtonOptionsTest >> testSymbolFill [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'symbolFill' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testSymbolSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component symbolSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -61,6 +117,34 @@ HighstockNavigationButtonOptionsTest >> testSymbolStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testSymbolX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component symbolX: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testSymbolY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component symbolY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolY' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigationButtonOptionsTest >> testText [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +154,34 @@ HighstockNavigationButtonOptionsTest >> testText [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'text' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testVerticalAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component verticalAlign: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'verticalAlign' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -47,6 +47,20 @@ HighchartsXAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsXAxisTest >> testAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component angle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'angle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisTest >> testCategories [
 
 	| component javascript expectedConfiguration |
@@ -159,6 +173,20 @@ HighchartsXAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGridLineInterpolation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component gridLineInterpolation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'gridLineInterpolation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisTest >> testGridLineWidth [
 
 	| component javascript expectedConfiguration |
@@ -187,6 +215,20 @@ HighchartsXAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsXAxisTest >> testHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component height: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'height' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisTest >> testId [
 
 	| component javascript expectedConfiguration |
@@ -196,6 +238,20 @@ HighchartsXAxisTest >> testId [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testLeft [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component left: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'left' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -789,6 +845,20 @@ HighchartsXAxisTest >> testTickmarkPlacement [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsXAxisTest >> testTop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component top: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'top' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsXAxisTest >> testType [
 
 	| component javascript expectedConfiguration |
@@ -840,6 +910,34 @@ HighchartsXAxisTest >> testVisible [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'visible' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testZoomEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component zoomEnabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomEnabled' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

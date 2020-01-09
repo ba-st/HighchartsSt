@@ -24,7 +24,7 @@ string.
 ]
 
 { #category : #accessing }
-HighstockData >> columns: anObject [
+HighstockData >> columns: anArrayOfArrayOfHighchartsDataValueType [
 
 	"A two-dimensional array representing the input data on tabular form.
 This input can be used when the data is already parsed, for example
@@ -33,7 +33,7 @@ If not switchRowsAndColumns is set, the columns are interpreted as
 series.
 "
 
-	configurationOptions at: 'columns' put: anObject
+	configurationOptions at: 'columns' put: anArrayOfArrayOfHighchartsDataValueType
 ]
 
 { #category : #accessing }
@@ -232,13 +232,13 @@ this.complete() to continue async.
 ]
 
 { #category : #accessing }
-HighstockData >> rows: anObject [
+HighstockData >> rows: anArrayOfArrayOfHighchartsDataValueType [
 
 	"The same as the columns input option, but defining rows intead of
 columns.
 "
 
-	configurationOptions at: 'rows' put: anObject
+	configurationOptions at: 'rows' put: anArrayOfArrayOfHighchartsDataValueType
 ]
 
 { #category : #accessing }

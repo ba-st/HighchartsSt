@@ -33,6 +33,20 @@ HighchartsNavigationTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsNavigationTest >> testIconsURL [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigation new.
+	component iconsURL: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'iconsURL' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsNavigationTest >> testMenuItemHoverStyle [
 
 	| component javascript expectedConfiguration |

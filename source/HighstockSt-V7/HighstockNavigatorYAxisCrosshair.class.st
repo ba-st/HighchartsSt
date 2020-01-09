@@ -21,21 +21,21 @@ HighstockNavigatorYAxisCrosshair >> className: aString [
 ]
 
 { #category : #accessing }
-HighstockNavigatorYAxisCrosshair >> color: aHighchartsColorString [
+HighstockNavigatorYAxisCrosshair >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the crosshair. Defaults to #cccccc for numeric and
 datetime axes, and rgba(204,214,235,0.25) for category axes, where
 the crosshair by default highlights the whole category.
 Defaults to #cccccc."
 
-	configurationOptions at: 'color' put: aHighchartsColorString
+	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighstockNavigatorYAxisCrosshair >> dashStyle: aHighchartsDashStyleValue [
 
 	"The dash style for the crosshair. See
-series.dashStyle
+plotOptions.series.dashStyle
 for possible values.
 Defaults to Solid."
 

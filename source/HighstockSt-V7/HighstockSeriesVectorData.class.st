@@ -38,6 +38,8 @@ Class {
 { #category : #accessing }
 HighstockSeriesVectorData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesVectorDataAccessibility new]
 ]
 
@@ -54,20 +56,19 @@ colorIndex.
 ]
 
 { #category : #accessing }
-HighstockSeriesVectorData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighstockSeriesVectorData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockSeriesVectorDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighstockSeriesVectorData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -87,7 +88,6 @@ HighstockSeriesVectorData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesVectorDataDragDrop new]
 ]
@@ -95,7 +95,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighstockSeriesVectorData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -135,14 +135,15 @@ vectorLength setting.
 { #category : #accessing }
 HighstockSeriesVectorData >> marker [
 
+	"Options for the point markers of line-like series.
+"
 	^configurationOptions at: 'marker' ifAbsentPut: [HighstockSeriesVectorDataMarker new]
 ]
 
 { #category : #accessing }
 HighstockSeriesVectorData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

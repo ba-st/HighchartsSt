@@ -187,6 +187,20 @@ HighchartsSeriesBellcurveTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBellcurveTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBellcurve new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBellcurveTest >> testCompare [
 
 	| component javascript expectedConfiguration |

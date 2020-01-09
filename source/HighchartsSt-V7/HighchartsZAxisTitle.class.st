@@ -18,12 +18,12 @@ Defaults to middle."
 ]
 
 { #category : #accessing }
-HighchartsZAxisTitle >> enabled: aString [
+HighchartsZAxisTitle >> enabled: aBoolean [
 
 	"Deprecated. Set the text to null to disable the title.
-Defaults to middle."
+"
 
-	configurationOptions at: 'enabled' put: aString
+	configurationOptions at: 'enabled' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -109,7 +109,7 @@ Defaults to nil."
 ]
 
 { #category : #accessing }
-HighchartsZAxisTitle >> style: aHighchartsCSSObject [
+HighchartsZAxisTitle >> style [
 
 	"CSS styles for the title. If the title text is longer than the
 axis length, it will wrap to multiple lines by default. This can
@@ -117,16 +117,15 @@ be customized by setting textOverflow: ´ellipsis´, by
 setting a specific width or by setting whiteSpace: ´nowrap´.
 In styled mode, the stroke width is given in the
 .highcharts-axis-title class.
-Defaults to {'color': '#666666'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighchartsZAxisTitleStyle new]
 ]
 
 { #category : #accessing }
 HighchartsZAxisTitle >> text: aStringOrNil [
 
-	"The actual text of the axis title. It can contain basic HTML text
-markup like ,  and spans with style.
+	"The actual text of the axis title. It can contain basic HTML tags
+like b, i and span with style.
 "
 
 	configurationOptions at: 'text' put: aStringOrNil

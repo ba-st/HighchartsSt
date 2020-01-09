@@ -16,12 +16,6 @@ HighchartsSeriesXrangeDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesXrangeDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesXrangeDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesXrangeDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

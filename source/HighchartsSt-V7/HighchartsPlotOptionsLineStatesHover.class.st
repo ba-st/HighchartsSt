@@ -17,12 +17,12 @@ HighchartsPlotOptionsLineStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsLineStatesHover >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsLineStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

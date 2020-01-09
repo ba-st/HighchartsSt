@@ -230,6 +230,21 @@ HighchartsSeriesVennTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesVennTest >> testCompare [
 
 	| component javascript expectedConfiguration |

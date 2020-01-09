@@ -16,12 +16,6 @@ HighstockSeriesDemaMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesDemaMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesDemaMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesDemaMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

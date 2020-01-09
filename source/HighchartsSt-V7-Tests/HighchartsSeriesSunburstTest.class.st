@@ -245,6 +245,21 @@ HighchartsSeriesSunburstTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSunburstTest >> testColors [
 
 	| component javascript expectedConfiguration |
@@ -465,6 +480,21 @@ HighchartsSeriesSunburstTest >> testExposeElementToA11y [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'sunburst';
 		at: 'exposeElementToA11y' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testFillColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component fillColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'fillColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

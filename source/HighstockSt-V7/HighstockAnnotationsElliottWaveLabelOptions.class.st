@@ -40,12 +40,12 @@ Defaults to none."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsElliottWaveLabelOptions >> borderColor: aColor [
+HighstockAnnotationsElliottWaveLabelOptions >> borderColor: aHighchartsColorString [
 
 	"The border color for the annotation´s label.
 Defaults to black."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -89,7 +89,7 @@ Defaults to true."
 HighstockAnnotationsElliottWaveLabelOptions >> distance: aNumber [
 
 	"The label´s pixel distance from the point.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'distance' put: aNumber
 ]
@@ -97,32 +97,32 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> format: aString [
 
-	"A format string for the data label.
-Defaults to undefined."
+	"A
+format
+string for the data label.
+"
 
 	configurationOptions at: 'format' put: aString
 ]
 
 { #category : #accessing }
-HighstockAnnotationsElliottWaveLabelOptions >> formatter: aFunction [
+HighstockAnnotationsElliottWaveLabelOptions >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format
-the annotation´s label. Note that if a format or text
-are defined, the format or text take precedence and
-the formatter is ignored. This refers to a * point object.
-Defaults to function () {
- return defined(this.y) ? this.y : 'Annotation label';
-}."
+	"Callback JavaScript function to format the annotation´s
+label. Note that if a format or text are defined, the
+format or text take precedence and the formatter is ignored.
+This refers to a point object.
+Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
 ]
 
 { #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> overflow: aString [
 
-	"How to handle the annotation´s label that flow
-outside the plot area. The justify option aligns the label
-inside the plot area.
+	"How to handle the annotation´s label that flow outside the
+plot area. The justify option aligns the label inside the
+plot area.
 Defaults to none."
 
 	configurationOptions at: 'overflow' put: aString
@@ -132,21 +132,21 @@ Defaults to none."
 HighstockAnnotationsElliottWaveLabelOptions >> padding: aNumber [
 
 	"When either the borderWidth or the backgroundColor is set,
-this is the padding within the box.
+this    is the padding within the box.
 Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockAnnotationsElliottWaveLabelOptions >> shadow: aBooleanOrObject [
+HighstockAnnotationsElliottWaveLabelOptions >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-	"The shadow of the box. The shadow can be
-an object configuration containing
-color, offsetX, offsetY, opacity and width.
+	"The shadow of the box. The shadow can be an object
+configuration containing color, offsetX, offsetY,
+opacity and width.
 Defaults to false."
 
-	configurationOptions at: 'shadow' put: aBooleanOrObject
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
 ]
 
 { #category : #accessing }
@@ -160,18 +160,19 @@ Defaults to callout."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsElliottWaveLabelOptions >> style [
+HighstockAnnotationsElliottWaveLabelOptions >> style: aHighchartsCSSObject [
 
 	"Styles for the annotation´s label.
 "
-	^configurationOptions at: 'style' ifAbsentPut: [HighstockAnnotationsElliottWaveLabelOptionsStyle new]
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> text: aString [
 
 	"Alias for the format option.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'text' put: aString
 ]

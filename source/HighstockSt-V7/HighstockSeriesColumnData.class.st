@@ -44,18 +44,20 @@ Class {
 { #category : #accessing }
 HighstockSeriesColumnData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesColumnDataAccessibility new]
 ]
 
 { #category : #accessing }
-HighstockSeriesColumnData >> borderColor: aHighchartsColorString [
+HighstockSeriesColumnData >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border surrounding the column or bar.
 In styled mode, the border stroke can be set with the .highcharts-point
 rule.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -82,20 +84,31 @@ colorIndex.
 ]
 
 { #category : #accessing }
-HighstockSeriesColumnData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighstockSeriesColumnData >> dashStyle: aHighchartsDashStyleValue [
+
+	"A name for the dash style to use for the column or bar. Overrides
+dashStyle on the series.
+In styled mode, the stroke dash-array can be set with the same classes as
+listed under data.color.
+"
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
+HighstockSeriesColumnData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockSeriesColumnDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighstockSeriesColumnData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -106,7 +119,6 @@ HighstockSeriesColumnData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesColumnDataDragDrop new]
 ]
@@ -114,7 +126,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighstockSeriesColumnData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -144,8 +156,7 @@ will be drawn.
 { #category : #accessing }
 HighstockSeriesColumnData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString
@@ -154,8 +165,8 @@ etc.
 { #category : #accessing }
 HighstockSeriesColumnData >> pointWidth: aNumber [
 
-	"A pixel value specifying a fixed width for the column or bar.
-Overrides pointWidth on the series.
+	"A pixel value specifying a fixed width for the column or bar. Overrides
+pointWidth on the series.
 Defaults to undefined."
 
 	configurationOptions at: 'pointWidth' put: aNumber

@@ -19,6 +19,20 @@ HighchartsColorAxisTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsColorAxisTest >> testAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxis new.
+	component angle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'angle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsColorAxisTest >> testCeiling [
 
 	| component javascript expectedConfiguration |
@@ -131,6 +145,20 @@ HighchartsColorAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsColorAxisTest >> testGridLineInterpolation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxis new.
+	component gridLineInterpolation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'gridLineInterpolation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsColorAxisTest >> testGridLineWidth [
 
 	| component javascript expectedConfiguration |
@@ -168,6 +196,20 @@ HighchartsColorAxisTest >> testId [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsColorAxisTest >> testLayout [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxis new.
+	component layout: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'layout' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

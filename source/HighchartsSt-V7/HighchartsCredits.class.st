@@ -35,12 +35,11 @@ HighchartsCredits >> position [
 ]
 
 { #category : #accessing }
-HighchartsCredits >> style: aHighchartsCSSObject [
+HighchartsCredits >> style [
 
 	"CSS styles for the credits label.
-Defaults to {'cursor': 'pointer', 'color': '#999999', 'fontSize': '10px'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighchartsCreditsStyle new]
 ]
 
 { #category : #accessing }

@@ -47,7 +47,7 @@ forces the algorithm to treat 86400000 as 1 while computing
 the slope and the intercept. This may enchance the legiblitity of
 the indicator´s values.
 Default value is the closest distance between two data points.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'xAxisUnit' put: aNumber
 ]

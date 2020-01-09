@@ -8,13 +8,13 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesKeltnerchannelsBottomLineStyles >> lineColor: anObject [
+HighstockSeriesKeltnerchannelsBottomLineStyles >> lineColor: aString [
 
 	"Color of the line. If not set, it´s inherited from
 plotOptions.keltnerchannels.color
-"
+Defaults to undefined."
 
-	configurationOptions at: 'lineColor' put: anObject
+	configurationOptions at: 'lineColor' put: aString
 ]
 
 { #category : #accessing }

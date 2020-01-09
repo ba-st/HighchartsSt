@@ -155,6 +155,21 @@ HighchartsSeriesNetworkgraphTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesNetworkgraphTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesNetworkgraph new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'networkgraph';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesNetworkgraphTest >> testCompare [
 
 	| component javascript expectedConfiguration |

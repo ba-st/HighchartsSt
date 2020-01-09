@@ -17,13 +17,13 @@ HighchartsSeriesWaterfallStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighchartsSeriesWaterfallStatesHover >> borderColor: aHighchartsColorString [
+HighchartsSeriesWaterfallStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A specific border color for the hovered point. Defaults to
 inherit the normal state border color.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

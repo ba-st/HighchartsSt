@@ -17,12 +17,12 @@ HighstockPlotOptionsLinearregressionangleStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsLinearregressionangleStatesHover >> borderColor: aHighchartsColorString [
+HighstockPlotOptionsLinearregressionangleStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

@@ -16,12 +16,6 @@ HighstockSeriesPolygonDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesPolygonDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesPolygonDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesPolygonDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

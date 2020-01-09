@@ -25,6 +25,8 @@ Class {
 { #category : #accessing }
 HighstockSeriesFlagsData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighstockSeriesFlagsDataAccessibility new]
 ]
 
@@ -67,7 +69,7 @@ by default.
 HighstockSeriesFlagsData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -78,7 +80,6 @@ HighstockSeriesFlagsData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighstockSeriesFlagsDataDragDrop new]
 ]
@@ -96,7 +97,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighstockSeriesFlagsData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject

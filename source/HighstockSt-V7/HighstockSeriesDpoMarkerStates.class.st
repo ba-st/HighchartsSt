@@ -16,12 +16,6 @@ HighstockSeriesDpoMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesDpoMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesDpoMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesDpoMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

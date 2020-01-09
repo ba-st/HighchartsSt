@@ -22,12 +22,12 @@ Defaults to #cccccc."
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> barBorderColor: aHighchartsColorString [
+HighstockYAxisScrollbar >> barBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the scrollbar´s border.
 Defaults to #cccccc."
 
-	configurationOptions at: 'barBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'barBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -67,12 +67,12 @@ Defaults to #e6e6e6."
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> buttonBorderColor: aHighchartsColorString [
+HighstockYAxisScrollbar >> buttonBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border of the scrollbar buttons.
 Defaults to #cccccc."
 
-	configurationOptions at: 'buttonBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'buttonBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -108,7 +108,7 @@ HighstockYAxisScrollbar >> liveRedraw: aBoolean [
 	"Whether to redraw the main chart as the scrollbar or the navigator
 zoomed window is moved. Defaults to true for modern browsers and
 false for legacy IE browsers as well as mobile devices.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'liveRedraw' put: aBoolean
 ]
@@ -178,12 +178,12 @@ Defaults to #f2f2f2."
 ]
 
 { #category : #accessing }
-HighstockYAxisScrollbar >> trackBorderColor: aHighchartsColorString [
+HighstockYAxisScrollbar >> trackBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border of the scrollbar track.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'trackBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'trackBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

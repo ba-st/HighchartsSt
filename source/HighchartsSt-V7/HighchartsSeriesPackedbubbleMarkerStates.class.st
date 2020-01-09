@@ -16,12 +16,6 @@ HighchartsSeriesPackedbubbleMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesPackedbubbleMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesPackedbubbleMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesPackedbubbleMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

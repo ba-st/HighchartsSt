@@ -18,6 +18,17 @@ Defaults to left."
 ]
 
 { #category : #accessing }
+HighstockNavigatorXAxisPlotLinesLabel >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPlotLineOrBand [
+
+	"Callback JavaScript function to format the label. Useful properties like
+the value of plot line or the range of plot band (from &amp; to
+properties) can be found in this.options object.
+"
+
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPlotLineOrBand
+]
+
+{ #category : #accessing }
 HighstockNavigatorXAxisPlotLinesLabel >> rotation: aNumber [
 
 	"Rotation of the text label in degrees. Defaults to 0 for horizontal plot

@@ -200,6 +200,21 @@ HighchartsSeriesErrorbarTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesErrorbarTest >> testColors [
 
 	| component javascript expectedConfiguration |

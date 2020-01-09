@@ -10,24 +10,22 @@ Class {
 }
 
 { #category : #accessing }
-HighstockYAxisResizeControlledAxis >> next: anArrayOfStringOrNumber [
+HighstockYAxisResizeControlledAxis >> next: anArrayOfnumberOrstring [
 
 	"Array of axes that should move out of the way of resizing
 being done for the current axis. If not set, the next axis
 will be used.
-This feature requires the drag-panes.js module.
 Defaults to []."
 
-	configurationOptions at: 'next' put: anArrayOfStringOrNumber
+	configurationOptions at: 'next' put: anArrayOfnumberOrstring
 ]
 
 { #category : #accessing }
-HighstockYAxisResizeControlledAxis >> prev: anArrayOfStringOrNumber [
+HighstockYAxisResizeControlledAxis >> prev: anArrayOfnumberOrstring [
 
 	"Array of axes that should move with the current axis
 while resizing.
-This feature requires the drag-panes.js module.
-"
+Defaults to []."
 
-	configurationOptions at: 'prev' put: anArrayOfStringOrNumber
+	configurationOptions at: 'prev' put: anArrayOfnumberOrstring
 ]

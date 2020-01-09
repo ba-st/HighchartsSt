@@ -17,12 +17,12 @@ HighchartsSeriesFunnel3dStatesSelect >> animation [
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnel3dStatesSelect >> borderColor: aHighchartsColorString [
+HighchartsSeriesFunnel3dStatesSelect >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A specific border color for the selected point.
 Defaults to #000000."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

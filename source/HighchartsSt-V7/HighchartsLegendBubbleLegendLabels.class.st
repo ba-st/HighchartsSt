@@ -32,7 +32,7 @@ HighchartsLegendBubbleLegendLabels >> className: aString [
 	"An additional class name to apply to the bubble legend
 label graphical elements. This option does not replace
 default class names of the graphical element.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'className' put: aString
 ]
@@ -58,7 +58,7 @@ this.value: The bubble value.
 this.radius: The radius of the bubble range.
 
 this.center: The center y position of the range.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsBubbleLegendFormatterContextObject
 ]

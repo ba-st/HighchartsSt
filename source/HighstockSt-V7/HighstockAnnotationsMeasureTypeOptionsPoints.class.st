@@ -12,12 +12,6 @@ HighstockAnnotationsMeasureTypeOptionsPoints >> controlPoint: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsMeasureTypeOptionsPoints >> label [
-
-	^configurationOptions at: 'label' ifAbsentPut: [HighstockAnnotationsMeasureTypeOptionsPointsLabel new]
-]
-
-{ #category : #accessing }
 HighstockAnnotationsMeasureTypeOptionsPoints >> x: aNumber [
 
 	"The x position of the point.

@@ -16,12 +16,6 @@ HighchartsSeriesPolygonDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesPolygonDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesPolygonDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesPolygonDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

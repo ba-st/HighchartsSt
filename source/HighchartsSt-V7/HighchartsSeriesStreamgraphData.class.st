@@ -44,6 +44,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesStreamgraphData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesStreamgraphDataAccessibility new]
 ]
 
@@ -83,20 +85,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesStreamgraphData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesStreamgraphData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesStreamgraphDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesStreamgraphData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -107,7 +108,6 @@ HighchartsSeriesStreamgraphData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesStreamgraphDataDragDrop new]
 ]
@@ -125,7 +125,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesStreamgraphData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -155,14 +155,15 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesStreamgraphData >> marker [
 
+	"Options for the point markers of line-like series.
+"
 	^configurationOptions at: 'marker' ifAbsentPut: [HighchartsSeriesStreamgraphDataMarker new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesStreamgraphData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

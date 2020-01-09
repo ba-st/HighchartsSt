@@ -200,6 +200,21 @@ HighchartsSeriesFunnelTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnelTest >> testColors [
 
 	| component javascript expectedConfiguration |
@@ -450,6 +465,21 @@ HighchartsSeriesFunnelTest >> testExposeElementToA11y [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'funnel';
 		at: 'exposeElementToA11y' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testFillColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component fillColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'fillColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -29,7 +29,7 @@ Defaults to 1."
 HighchartsColorAxisGrid >> cellHeight: aNumber [
 
 	"Set cell height for grid axis labels. By default this is calculated from font
-size.
+size. This option only applies to horizontal axes.
 "
 
 	configurationOptions at: 'cellHeight' put: aNumber

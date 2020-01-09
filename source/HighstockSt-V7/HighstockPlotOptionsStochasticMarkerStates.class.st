@@ -16,12 +16,6 @@ HighstockPlotOptionsStochasticMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsStochasticMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsStochasticMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsStochasticMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

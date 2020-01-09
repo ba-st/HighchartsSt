@@ -718,7 +718,6 @@ HighchartsSeries >> line [
 
 	"A line series. If the type option is not
 specified, it is inherited from chart.type.
-In TypeScript instead the type option must always be set.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

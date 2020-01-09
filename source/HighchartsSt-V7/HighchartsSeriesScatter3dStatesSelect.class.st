@@ -19,12 +19,12 @@ HighchartsSeriesScatter3dStatesSelect >> animation [
 ]
 
 { #category : #accessing }
-HighchartsSeriesScatter3dStatesSelect >> borderColor: aHighchartsColorString [
+HighchartsSeriesScatter3dStatesSelect >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

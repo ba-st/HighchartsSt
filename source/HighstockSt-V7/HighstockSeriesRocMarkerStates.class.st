@@ -16,12 +16,6 @@ HighstockSeriesRocMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesRocMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesRocMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesRocMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

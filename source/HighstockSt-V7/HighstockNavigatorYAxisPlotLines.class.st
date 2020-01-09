@@ -8,6 +8,15 @@ Class {
 }
 
 { #category : #accessing }
+HighstockNavigatorYAxisPlotLines >> acrossPanes: aBoolean [
+
+	"Flag to decide if plotLine should be rendered across all panes.
+Defaults to true."
+
+	configurationOptions at: 'acrossPanes' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockNavigatorYAxisPlotLines >> className: aString [
 
 	"A custom class name, in addition to the default highcharts-plot-line,
@@ -21,7 +30,7 @@ to apply to each individual line.
 HighstockNavigatorYAxisPlotLines >> color: aHighchartsColorString [
 
 	"The color of the line.
-"
+Defaults to #999999."
 
 	configurationOptions at: 'color' put: aHighchartsColorString
 ]
@@ -76,7 +85,7 @@ HighstockNavigatorYAxisPlotLines >> value: aNumber [
 HighstockNavigatorYAxisPlotLines >> width: aNumber [
 
 	"The width or thickness of the plot line.
-"
+Defaults to 2."
 
 	configurationOptions at: 'width' put: aNumber
 ]

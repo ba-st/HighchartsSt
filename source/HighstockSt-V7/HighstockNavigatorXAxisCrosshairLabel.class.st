@@ -31,12 +31,12 @@ color, or #666666 if that is not available.
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisCrosshairLabel >> borderColor: aHighchartsColorString [
+HighstockNavigatorXAxisCrosshairLabel >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color for the crosshair label
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -55,6 +55,15 @@ HighstockNavigatorXAxisCrosshairLabel >> borderWidth: aNumber [
 Defaults to 0."
 
 	configurationOptions at: 'borderWidth' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockNavigatorXAxisCrosshairLabel >> enabled: aBoolean [
+
+	"Flag to enable crosshair´s label.
+Defaults to false."
+
+	configurationOptions at: 'enabled' put: aBoolean
 ]
 
 { #category : #accessing }

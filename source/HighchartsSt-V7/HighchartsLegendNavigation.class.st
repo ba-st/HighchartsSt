@@ -12,13 +12,13 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsLegendNavigation >> activeColor: aHighchartsColorString [
+HighchartsLegendNavigation >> activeColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color for the active up or down arrow in the legend page
 navigation.
 Defaults to #003399."
 
-	configurationOptions at: 'activeColor' put: aHighchartsColorString
+	configurationOptions at: 'activeColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -57,13 +57,13 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsLegendNavigation >> inactiveColor: aHighchartsColorString [
+HighchartsLegendNavigation >> inactiveColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the inactive up or down arrow in the legend page
 navigation. .
 Defaults to #cccccc."
 
-	configurationOptions at: 'inactiveColor' put: aHighchartsColorString
+	configurationOptions at: 'inactiveColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

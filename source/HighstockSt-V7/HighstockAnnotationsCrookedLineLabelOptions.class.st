@@ -31,21 +31,21 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsCrookedLineLabelOptions >> backgroundColor: aColor [
+HighstockAnnotationsCrookedLineLabelOptions >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the annotation´s label.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'backgroundColor' put: aColor
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighstockAnnotationsCrookedLineLabelOptions >> borderColor: aColor [
+HighstockAnnotationsCrookedLineLabelOptions >> borderColor: aHighchartsColorString [
 
 	"The border color for the annotation´s label.
 Defaults to black."
 
-	configurationOptions at: 'borderColor' put: aColor
+	configurationOptions at: 'borderColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -89,7 +89,7 @@ Defaults to false."
 HighstockAnnotationsCrookedLineLabelOptions >> distance: aNumber [
 
 	"The label´s pixel distance from the point.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'distance' put: aNumber
 ]
@@ -97,32 +97,32 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockAnnotationsCrookedLineLabelOptions >> format: aString [
 
-	"A format string for the data label.
-Defaults to undefined."
+	"A
+format
+string for the data label.
+"
 
 	configurationOptions at: 'format' put: aString
 ]
 
 { #category : #accessing }
-HighstockAnnotationsCrookedLineLabelOptions >> formatter: aFunction [
+HighstockAnnotationsCrookedLineLabelOptions >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format
-the annotation´s label. Note that if a format or text
-are defined, the format or text take precedence and
-the formatter is ignored. This refers to a * point object.
-Defaults to function () {
- return defined(this.y) ? this.y : 'Annotation label';
-}."
+	"Callback JavaScript function to format the annotation´s
+label. Note that if a format or text are defined, the
+format or text take precedence and the formatter is ignored.
+This refers to a point object.
+Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
-	configurationOptions at: 'formatter' put: aFunction
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
 ]
 
 { #category : #accessing }
 HighstockAnnotationsCrookedLineLabelOptions >> overflow: aString [
 
-	"How to handle the annotation´s label that flow
-outside the plot area. The justify option aligns the label
-inside the plot area.
+	"How to handle the annotation´s label that flow outside the
+plot area. The justify option aligns the label inside the
+plot area.
 Defaults to justify."
 
 	configurationOptions at: 'overflow' put: aString
@@ -132,21 +132,21 @@ Defaults to justify."
 HighstockAnnotationsCrookedLineLabelOptions >> padding: aNumber [
 
 	"When either the borderWidth or the backgroundColor is set,
-this is the padding within the box.
+this    is the padding within the box.
 Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
 ]
 
 { #category : #accessing }
-HighstockAnnotationsCrookedLineLabelOptions >> shadow: aBooleanOrObject [
+HighstockAnnotationsCrookedLineLabelOptions >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-	"The shadow of the box. The shadow can be
-an object configuration containing
-color, offsetX, offsetY, opacity and width.
+	"The shadow of the box. The shadow can be an object
+configuration containing color, offsetX, offsetY,
+opacity and width.
 Defaults to false."
 
-	configurationOptions at: 'shadow' put: aBooleanOrObject
+	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
 ]
 
 { #category : #accessing }
@@ -160,18 +160,19 @@ Defaults to callout."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsCrookedLineLabelOptions >> style [
+HighstockAnnotationsCrookedLineLabelOptions >> style: aHighchartsCSSObject [
 
 	"Styles for the annotation´s label.
 "
-	^configurationOptions at: 'style' ifAbsentPut: [HighstockAnnotationsCrookedLineLabelOptionsStyle new]
+
+	configurationOptions at: 'style' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
 HighstockAnnotationsCrookedLineLabelOptions >> text: aString [
 
 	"Alias for the format option.
-Defaults to undefined."
+"
 
 	configurationOptions at: 'text' put: aString
 ]

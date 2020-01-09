@@ -215,6 +215,21 @@ HighchartsSeriesVariwideTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesVariwideTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariwide new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'variwide';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesVariwideTest >> testColors [
 
 	| component javascript expectedConfiguration |

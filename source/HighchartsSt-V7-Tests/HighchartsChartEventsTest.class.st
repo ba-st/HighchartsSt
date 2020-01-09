@@ -103,6 +103,20 @@ HighchartsChartEventsTest >> testDrillupall [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsChartEventsTest >> testExportData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartEvents new.
+	component exportData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exportData' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartEventsTest >> testLoad [
 
 	| component javascript expectedConfiguration |

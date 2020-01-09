@@ -19,12 +19,12 @@ HighchartsPlotOptionsStreamgraphStatesSelect >> animation [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsStreamgraphStatesSelect >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsStreamgraphStatesSelect >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

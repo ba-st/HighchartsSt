@@ -170,6 +170,21 @@ HighchartsSeriesCylinderTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesCylinderTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinder new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'cylinder';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesCylinderTest >> testColors [
 
 	| component javascript expectedConfiguration |

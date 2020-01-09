@@ -89,6 +89,20 @@ HighstockAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAccessibilityTest >> testHighContrastTheme [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibility new.
+	component highContrastTheme: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'highContrastTheme' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAccessibilityTest >> testLandmarkVerbosity [
 
 	| component javascript expectedConfiguration |
@@ -98,6 +112,20 @@ HighstockAccessibilityTest >> testLandmarkVerbosity [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'landmarkVerbosity' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityTest >> testLinkedDescription [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibility new.
+	component linkedDescription: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'linkedDescription' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

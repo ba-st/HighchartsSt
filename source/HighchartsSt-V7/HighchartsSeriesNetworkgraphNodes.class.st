@@ -29,6 +29,16 @@ mode.
 ]
 
 { #category : #accessing }
+HighchartsSeriesNetworkgraphNodes >> dataLabels: aHighchartsSeriesNetworkgraphDataLabelsOptionsObjectOrArrayOfHighchartsSeriesNetworkgraphDataLabelsOptionsObject [
+
+	"Individual data label for each node. The options are the same as
+the ones for series.networkgraph.dataLabels.
+"
+
+	configurationOptions at: 'dataLabels' put: aHighchartsSeriesNetworkgraphDataLabelsOptionsObjectOrArrayOfHighchartsSeriesNetworkgraphDataLabelsOptionsObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesNetworkgraphNodes >> id: aString [
 
 	"The id of the auto-generated node, refering to the from or to setting of

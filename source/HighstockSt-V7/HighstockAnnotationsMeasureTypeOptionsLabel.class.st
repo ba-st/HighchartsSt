@@ -56,7 +56,7 @@ range.
 `this.bins`
 
 The amount of the points in the selected range.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'formatter' put: aFunction
 ]

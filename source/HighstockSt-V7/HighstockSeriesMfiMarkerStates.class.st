@@ -16,12 +16,6 @@ HighstockSeriesMfiMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesMfiMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesMfiMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesMfiMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

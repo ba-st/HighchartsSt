@@ -16,12 +16,6 @@ HighchartsPlotOptionsAreasplineMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsAreasplineMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsPlotOptionsAreasplineMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsAreasplineMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

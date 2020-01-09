@@ -5,6 +5,34 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component align: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'align' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testButtonSpacing [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component buttonSpacing: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttonSpacing' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsNavigationButtonOptionsTest >> testEnabled [
 
 	| component javascript expectedConfiguration |
@@ -19,6 +47,20 @@ HighchartsNavigationButtonOptionsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component height: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'height' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsNavigationButtonOptionsTest >> testSymbolFill [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +70,20 @@ HighchartsNavigationButtonOptionsTest >> testSymbolFill [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'symbolFill' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testSymbolSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component symbolSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -61,6 +117,34 @@ HighchartsNavigationButtonOptionsTest >> testSymbolStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testSymbolX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component symbolX: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testSymbolY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component symbolY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbolY' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsNavigationButtonOptionsTest >> testText [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +154,34 @@ HighchartsNavigationButtonOptionsTest >> testText [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'text' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testVerticalAlign [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component verticalAlign: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'verticalAlign' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

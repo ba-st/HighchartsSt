@@ -117,6 +117,20 @@ HighstockLegendTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLegendTest >> testItemCheckboxStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component itemCheckboxStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'itemCheckboxStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLegendTest >> testItemDistance [
 
 	| component javascript expectedConfiguration |

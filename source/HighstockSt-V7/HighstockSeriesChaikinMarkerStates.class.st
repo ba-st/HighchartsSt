@@ -16,12 +16,6 @@ HighstockSeriesChaikinMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesChaikinMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesChaikinMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesChaikinMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

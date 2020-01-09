@@ -411,6 +411,20 @@ HighchartsPlotOptionsDependencywheelTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testMinLinkWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component minLinkWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'minLinkWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsDependencywheelTest >> testMinPointLength [
 
 	| component javascript expectedConfiguration |

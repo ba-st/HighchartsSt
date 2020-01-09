@@ -16,12 +16,6 @@ HighchartsSeriesDependencywheelMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesDependencywheelMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesDependencywheelMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesDependencywheelMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

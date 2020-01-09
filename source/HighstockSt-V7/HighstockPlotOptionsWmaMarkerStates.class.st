@@ -16,12 +16,6 @@ HighstockPlotOptionsWmaMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsWmaMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsWmaMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsWmaMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

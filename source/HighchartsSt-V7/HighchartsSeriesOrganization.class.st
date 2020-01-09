@@ -35,9 +35,20 @@ Class {
 { #category : #accessing }
 HighchartsSeriesOrganization >> accessibility [
 
-	"Accessibility options for a series. Requires the accessibility module.
+	"Accessibility options for a series.
 "
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesOrganizationAccessibility new]
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> allAreas: aBoolean [
+
+	"Whether all areas of the map defined in mapData should be rendered.
+If true, areas which don´t correspond to a data point, are rendered
+as null points. If false, those areas are skipped.
+Defaults to true."
+
+	configurationOptions at: 'allAreas' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -109,7 +120,6 @@ Note that the cropThreshold also affects
 this setting. When zooming in on a series that has fewer points than the
 cropThreshold, all points are rendered although outside the visible plot
 area, and the boostThreshold won´t take effect.
-Requires modules/boost.js.
 Defaults to 5000."
 
 	configurationOptions at: 'boostThreshold' put: aNumber
@@ -188,6 +198,23 @@ className option.
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganization >> colorAxis: aNumberOrstringOrboolean [
+
+	"When using dual or multiple color axes, this number defines which
+colorAxis the particular series is connected to. It refers to
+either the
+{@link #colorAxis.id|axis id}
+or the index of the axis in the colorAxis array, with 0 being the
+first. Set this option to false to prevent a series from connecting
+to the default color axis.
+Since v7.2.0 the option can also be an axis id or an axis index
+instead of a boolean flag.
+Defaults to 0."
+
+	configurationOptions at: 'colorAxis' put: aNumberOrstringOrboolean
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganization >> colorByPoint: aBoolean [
 
 	"When using automatic point colors pulled from the global
@@ -215,6 +242,18 @@ highcharts-color-{n}.
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganization >> colorKey: aString [
+
+	"Determines what data value should be used to calculate point color
+if colorAxis is used. Requires to set min and max if some
+custom point property is used or if approximation for data grouping
+is set to ´sum´.
+Defaults to y."
+
+	configurationOptions at: 'colorKey' put: aString
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganization >> colors: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A series specific or series type specific color set to apply instead
@@ -222,6 +261,43 @@ of the global colors when colorByPoint is true.
 "
 
 	configurationOptions at: 'colors' put: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> compare: aString [
+
+	"Compare the values of the series against the first non-null, non-
+zero value in the visible range. The y axis will show percentage
+or absolute change depending on whether compare is set to &quot;percent&quot;
+or &quot;value&quot;. When this is applied to multiple series, it allows
+comparing the development of the series against each other. Adds
+a change field to every point object.
+"
+
+	configurationOptions at: 'compare' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> compareBase: aNumber [
+
+	"When compare is percent, this option
+dictates whether to use 0 or 100 as the base of comparison.
+Defaults to 0."
+
+	configurationOptions at: 'compareBase' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> compareStart: aBoolean [
+
+	"Defines if comparison should start from the first point within the visible
+range or should start from the first point before the range.
+In other words, this flag determines if first point within the visible range
+will have 0 (compareStart=true) or should have been already calculated
+according to the previous point (compareStart=false).
+Defaults to false."
+
+	configurationOptions at: 'compareStart' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -242,6 +318,15 @@ between the two points on either side of the null.
 Defaults to false."
 
 	configurationOptions at: 'connectNulls' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> connectors [
+
+	"Override Pathfinder connector options for a series. Requires Highcharts Gantt
+to be loaded.
+"
+	^configurationOptions at: 'connectors' ifAbsentPut: [HighchartsSeriesOrganizationConnectors new]
 ]
 
 { #category : #accessing }
@@ -317,6 +402,24 @@ HighchartsSeriesOrganization >> data: anObject [
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganization >> dataGrouping [
+
+	"Data grouping is the concept of sampling the data values into larger
+blocks in order to ease readability and increase performance of the
+JavaScript charts. Highstock by default applies data grouping when
+the points become closer than a certain pixel value, determined by
+the groupPixelWidth option.
+If data grouping is applied, the grouping information of grouped
+points can be read from the Point.dataGroup. If point options other than
+the data itself are set, for example name or color or custom properties,
+the grouping logic doesn´t know how to group it. In this case the options of
+the first point instance are copied over to the group point. This can be
+altered through a custom approximation callback function.
+"
+	^configurationOptions at: 'dataGrouping' ifAbsentPut: [HighchartsSeriesOrganizationDataGrouping new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganization >> dataLabels [
 
 	"Options for the data labels appearing on top of the nodes and links.
@@ -329,10 +432,17 @@ string by default.
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganization >> dataSorting [
+
+	"Options for the series data sorting.
+"
+	^configurationOptions at: 'dataSorting' ifAbsentPut: [HighchartsSeriesOrganizationDataSorting new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganization >> description: aString [
 
-	"Requires the Accessibility module.
-A description of the series to add to the screen reader information
+	"A description of the series to add to the screen reader information
 about the series.
 "
 
@@ -348,7 +458,6 @@ structure, the module fires three events,
 point.dragStart,
 point.drag and
 point.drop.
-It requires the modules/draggable-points.js file to be loaded.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesOrganizationDragDrop new]
 ]
@@ -376,20 +485,6 @@ Highcharts.addEvent function.
 ]
 
 { #category : #accessing }
-HighchartsSeriesOrganization >> exposeElementToA11y: aBoolean [
-
-	"By default, series are exposed to screen readers as regions. By
-enabling this option, the series element itself will be exposed in
-the same way as the data points. This is useful if the series is not
-used as a grouping entity in the chart, but you still want to attach
-a description to the series.
-Requires the Accessibility module.
-"
-
-	configurationOptions at: 'exposeElementToA11y' put: aBoolean
-]
-
-{ #category : #accessing }
 HighchartsSeriesOrganization >> findNearestPointBy: aString [
 
 	"Determines whether the series should look for the nearest point
@@ -402,6 +497,41 @@ direct hover) for tooltip.
 Defaults to x."
 
 	configurationOptions at: 'findNearestPointBy' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> gapSize: aNumber [
+
+	"Defines when to display a gap in the graph, together with the
+gapUnit option.
+In case when dataGrouping is enabled, points can be grouped into a
+larger time span. This can make the grouped points to have a greater
+distance than the absolute value of gapSize property, which will result
+in disappearing graph completely. To prevent this situation the mentioned
+distance between grouped points is used instead of previously defined
+gapSize.
+In practice, this option is most often used to visualize gaps in
+time series. In a stock chart, intraday data is available for daytime
+hours, while gaps will appear in nights and weekends.
+Defaults to 0."
+
+	configurationOptions at: 'gapSize' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> gapUnit: aString [
+
+	"Together with gapSize, this option defines
+where to draw gaps in the graph.
+When the gapUnit is relative (default), a gap size of 5 means
+that if the distance between two points is greater than five times
+that of the two closest points, the graph will be broken.
+When the gapUnit is value, the gap is based on absolute axis values,
+which on a datetime axis is milliseconds. This also applies to the
+navigator series that inherits gap options from the base series.
+Defaults to relative."
+
+	configurationOptions at: 'gapUnit' put: aString
 ]
 
 { #category : #accessing }
@@ -439,8 +569,8 @@ to the series object through chart.get().
 { #category : #accessing }
 HighchartsSeriesOrganization >> includeInDataExport: aBoolean [
 
-	"Export-data module required. When set to false will prevent the series
-data from being included in any form of data export.
+	"When set to false will prevent the series data from being included in
+any form of data export.
 Since version 6.0.0 until 7.1.0 the option was existing undocumented
 as includeInCSVExport.
 "
@@ -467,6 +597,26 @@ HighchartsSeriesOrganization >> initialize [
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganization >> joinBy: aStringOrArrayOfstring [
+
+	"What property to join the mapData to the value data. For example,
+if joinBy is &quot;code&quot;, the mapData items with a specific code is merged
+into the data with the same code. For maps loaded from GeoJSON, the
+keys may be held in each point´s properties object.
+The joinBy option can also be an array of two values, where the first
+points to a key in the mapData, and the second points to another
+key in the data.
+When joinBy is null, the map items are joined by their position in
+the array, which performs much better in maps with many data points.
+This is the recommended option if you are printing more than a
+thousand data points and have a backend that can preprocess the data
+into a parallel array of the mapData.
+Defaults to hc-key."
+
+	configurationOptions at: 'joinBy' put: aStringOrArrayOfstring
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganization >> keys: anArrayOfstring [
 
 	"An array specifying which option maps to which key in the data point
@@ -486,9 +636,24 @@ feature is to make the chart more easily readable, like if a
 human designer placed the labels in the optimal position.
 The series labels currently work with series types having a
 graph or an area.
-Requires the series-label.js module.
 "
 	^configurationOptions at: 'label' ifAbsentPut: [HighchartsSeriesOrganizationLabel new]
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> lastPrice [
+
+	"The line marks the last price from all points.
+"
+	^configurationOptions at: 'lastPrice' ifAbsentPut: [HighchartsSeriesOrganizationLastPrice new]
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> lastVisiblePrice [
+
+	"The line marks the last price from visible range of points.
+"
+	^configurationOptions at: 'lastVisiblePrice' ifAbsentPut: [HighchartsSeriesOrganizationLastVisiblePrice new]
 ]
 
 { #category : #accessing }
@@ -504,7 +669,7 @@ HighchartsSeriesOrganization >> legendIndex: aNumber [
 HighchartsSeriesOrganization >> levels [
 
 	"Set options on specific levels. Takes precedence over series options,
-but not point options.
+but not node and link options.
 "
 	^configurationOptions at: 'levels' ifAbsentPut: [HighchartsSeriesOrganizationLevels new]
 ]
@@ -570,9 +735,22 @@ HighchartsSeriesOrganization >> linkedTo: aString [
 the value can be &quot;:previous&quot; to link to the previous series. When
 two series are linked, only the first one appears in the legend.
 Toggling the visibility of this also toggles the linked series.
+If master series uses data sorting and linked series does not have
+its own sorting definition, the linked series will be sorted in the
+same order as the master one.
 "
 
 	configurationOptions at: 'linkedTo' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> mapData: anObject [
+
+	"A map data object containing a path definition and optionally additional
+properties to join in the data as per the joinBy option.
+"
+
+	configurationOptions at: 'mapData' put: anObject
 ]
 
 { #category : #accessing }
@@ -590,16 +768,13 @@ In styled mode, the markers can be styled with the
 ]
 
 { #category : #accessing }
-HighchartsSeriesOrganization >> minPointLength: aNumber [
+HighchartsSeriesOrganization >> minLinkWidth: aNumber [
 
-	"The minimal height for a column or width for a bar. By default,
-0 values are not shown. To visualize a 0 (or close to zero) point,
-set the minimal point length to a pixel value like 3. In stacked
-column charts, minPointLength might not be respected for tightly
-packed values.
+	"The minimal width for a line of a sankey. By default,
+0 values are not shown.
 Defaults to 0."
 
-	configurationOptions at: 'minPointLength' put: aNumber
+	configurationOptions at: 'minLinkWidth' put: aNumber
 ]
 
 { #category : #accessing }
@@ -612,10 +787,26 @@ HighchartsSeriesOrganization >> name: aString [
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganization >> navigatorOptions: aHighchartsPlotSeriesOptions [
+
+	"Options for the corresponding navigator series if showInNavigator
+is true for this series. Available options are the same as any
+series, documented at plotOptions and
+series.
+These options are merged with options in navigator.series, and will take precedence if the same option is
+defined both places.
+"
+
+	configurationOptions at: 'navigatorOptions' put: aHighchartsPlotSeriesOptions
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganization >> negativeColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color for the parts of the graph or points that are below the
-threshold.
+threshold. Note that zones takes
+precedence over the negative color. Using negativeColor is
+equivalent to applying a zone with value of 0.
 "
 
 	configurationOptions at: 'negativeColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -741,6 +932,19 @@ charts.
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganization >> pointRange: aNumber [
+
+	"The width of each point on the x axis. For example in a column chart
+with one value each day, the pointRange would be 1 day (= 24 * 3600
+
+1000 milliseconds). This is normally computed automatically, but
+this option can be used to override the automatic value.
+Defaults to 0."
+
+	configurationOptions at: 'pointRange' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganization >> pointStart: aNumber [
 
 	"If no x values are given for the points in a series, pointStart
@@ -788,11 +992,22 @@ Defaults to false."
 HighchartsSeriesOrganization >> showInLegend: aBoolean [
 
 	"Whether to display this particular series or series type in the
-legend. The default value is true for standalone series, false
-for linked series.
+legend. Standalone series are shown in legend by default, and linked
+series are not. Since v7.2.0 it is possible to show series that use
+colorAxis by setting this option to true.
 Defaults to false."
 
 	configurationOptions at: 'showInLegend' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> showInNavigator: aBoolean [
+
+	"Whether or not to show the series in the navigator. Takes precedence
+over navigator.baseSeries if defined.
+"
+
+	configurationOptions at: 'showInNavigator' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -821,14 +1036,14 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsSeriesOrganization >> stack: aStringOrobject [
+HighchartsSeriesOrganization >> stack: aNumberOrstring [
 
 	"This option allows grouping series in a stacked chart. The stack option
 can be a string or anything else, as long as the grouped series´ stack
 options match each other after conversion into a string.
 "
 
-	configurationOptions at: 'stack' put: aStringOrobject
+	configurationOptions at: 'stack' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -874,6 +1089,8 @@ markers. This also implies the tooltip when not shared. When
 stickyTracking is false and tooltip.shared is false, the tooltip
 will be hidden when moving the mouse between series. Defaults to true
 for line and area type series, but to false for columns, pies etc.
+Note: The boost module will force this option because of
+technical limitations.
 Defaults to false."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
@@ -908,6 +1125,9 @@ one dimensional arrays of numbers, or two dimensional arrays with
 x and y values are allowed. Also, only the first point is tested,
 and the rest are assumed to be the same format. This saves expensive
 data checking and indexing in long series. Set it to 0 disable.
+Note:
+In boost mode turbo threshold is forced. Only array of numbers or
+two dimensional arrays are allowed.
 Defaults to 1000."
 
 	configurationOptions at: 'turboThreshold' put: aNumber
@@ -920,7 +1140,6 @@ HighchartsSeriesOrganization >> type: aString [
 series type is inherited from chart.type, so unless the
 chart is a combination of series types, there is no need to set it on the
 series level.
-In TypeScript instead the type option must always be set.
 "
 
 	configurationOptions at: 'type' put: aString

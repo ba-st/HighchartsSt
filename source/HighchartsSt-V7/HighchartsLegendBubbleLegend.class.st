@@ -13,13 +13,13 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsLegendBubbleLegend >> borderColor: aHighchartsColorString [
+HighchartsLegendBubbleLegend >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the ranges borders, can be also defined for an
 individual range.
-"
+Defaults to undefined."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -38,7 +38,7 @@ HighchartsLegendBubbleLegend >> className: aString [
 	"An additional class name to apply to the bubble legend´
 circle graphical elements. This option does not replace
 default class names of the graphical element.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'className' put: aString
 ]
@@ -48,7 +48,7 @@ HighchartsLegendBubbleLegend >> color: aHighchartsColorStringOrHighchartsGradien
 
 	"The main color of the bubble legend. Applies to ranges, if
 individual color is not defined.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
@@ -59,19 +59,19 @@ HighchartsLegendBubbleLegend >> connectorClassName: aString [
 	"An additional class name to apply to the bubble legend´s
 connector graphical elements. This option does not replace
 default class names of the graphical element.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'connectorClassName' put: aString
 ]
 
 { #category : #accessing }
-HighchartsLegendBubbleLegend >> connectorColor: aHighchartsColorString [
+HighchartsLegendBubbleLegend >> connectorColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the connector, can be also defined
 for an individual range.
-"
+Defaults to undefined."
 
-	configurationOptions at: 'connectorColor' put: aHighchartsColorString
+	configurationOptions at: 'connectorColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

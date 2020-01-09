@@ -37,16 +37,11 @@ object. If true, it will use the ´swing´ jQuery easing and a
 duration of 500 ms. If used as a configuration object, the following
 properties are supported:
 
+duration: The duration of the animation in milliseconds.
 
-duration
-
-The duration of the animation in milliseconds.
-
-easing
-
-A string reference to an easing function set on the `Math`
-object. See [the easing
-demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/).
+easing: A string reference to an easing function set on the
+Math object. See
+the easing demo.
 Defaults to true."
 
 	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
@@ -62,12 +57,12 @@ Defaults to #ffffff."
 ]
 
 { #category : #accessing }
-HighstockChart >> borderColor: aHighchartsColorString [
+HighstockChart >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the outer chart border.
 Defaults to #335cad."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -116,7 +111,6 @@ HighstockChart >> displayErrors: aBoolean [
 
 	"Whether to display errors on the chart. When false, the errors will
 be shown only in the console.
-Requires debugger.js module.
 Defaults to true."
 
 	configurationOptions at: 'displayErrors' put: aBoolean
@@ -132,7 +126,7 @@ HighstockChart >> events: anObject [
 ]
 
 { #category : #accessing }
-HighstockChart >> height: aNumberOrstringOrNil [
+HighstockChart >> height: aNilOrnumberOrstring [
 
 	"An explicit height for the chart. If a number, the height is
 given in pixels. If given a percentage string (for example
@@ -144,7 +138,7 @@ height of the containing element, or 400 pixels if the containing
 element´s height is 0.
 Defaults to nil."
 
-	configurationOptions at: 'height' put: aNumberOrstringOrNil
+	configurationOptions at: 'height' put: aNilOrnumberOrstring
 ]
 
 { #category : #accessing }
@@ -232,7 +226,17 @@ the default dynamic margin. See also spacingTop.
 ]
 
 { #category : #accessing }
-HighstockChart >> panning: aBoolean [
+HighstockChart >> numberFormatter: aHighchartsNumberFormatterCallbackFunction [
+
+	"Callback function to override the default function that formats all
+the numbers in the chart. Returns a string with the formatted number.
+"
+
+	configurationOptions at: 'numberFormatter' put: aHighchartsNumberFormatterCallbackFunction
+]
+
+{ #category : #accessing }
+HighstockChart >> panning [
 
 	"Allow panning in a chart. Best used with panKey
 to combine zooming and panning.
@@ -240,8 +244,7 @@ On touch devices, when the tooltip.followTouchMove option is true (default), pan
 requires two fingers. To allow panning with one finger, set
 followTouchMove to false.
 "
-
-	configurationOptions at: 'panning' put: aBoolean
+	^configurationOptions at: 'panning' ifAbsentPut: [HighstockChartPanning new]
 ]
 
 { #category : #accessing }
@@ -259,12 +262,12 @@ two-finger touches.
 ]
 
 { #category : #accessing }
-HighstockChart >> plotBackgroundColor: aHighchartsColorString [
+HighstockChart >> plotBackgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the plot area.
 "
 
-	configurationOptions at: 'plotBackgroundColor' put: aHighchartsColorString
+	configurationOptions at: 'plotBackgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -280,12 +283,12 @@ exported charts, its URL needs to be accessible by the export server.
 ]
 
 { #category : #accessing }
-HighstockChart >> plotBorderColor: aHighchartsColorString [
+HighstockChart >> plotBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the inner chart or plot area border.
 Defaults to #cccccc."
 
-	configurationOptions at: 'plotBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'plotBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -340,13 +343,13 @@ to reset zoom.
 ]
 
 { #category : #accessing }
-HighstockChart >> selectionMarkerFill: aHighchartsColorString [
+HighstockChart >> selectionMarkerFill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color of the marker square when selecting (zooming
 in on) an area of the chart.
 Defaults to rgba(51,92,173,0.25)."
 
-	configurationOptions at: 'selectionMarkerFill' put: aHighchartsColorString
+	configurationOptions at: 'selectionMarkerFill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -455,21 +458,21 @@ instead the type option must always be set in the series.
 ]
 
 { #category : #accessing }
-HighstockChart >> width: aNumberOrNil [
+HighstockChart >> width: aNilOrnumberOrstring [
 
 	"An explicit width for the chart. By default (when null) the width
 is calculated from the offset width of the containing element.
 Defaults to nil."
 
-	configurationOptions at: 'width' put: aNumberOrNil
+	configurationOptions at: 'width' put: aNilOrnumberOrstring
 ]
 
 { #category : #accessing }
 HighstockChart >> zoomKey: aString [
 
-	"Set a key to hold when dragging to zoom the chart. Requires the
-draggable-points module. This is useful to avoid zooming while moving points.
-Should be set different than chart.panKey.
+	"Set a key to hold when dragging to zoom the chart. This is useful to avoid
+zooming while moving points. Should be set different than
+chart.panKey.
 "
 
 	configurationOptions at: 'zoomKey' put: aString

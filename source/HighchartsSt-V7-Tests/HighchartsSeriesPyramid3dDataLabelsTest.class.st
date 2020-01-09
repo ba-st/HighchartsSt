@@ -19,6 +19,104 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testAllowOverlap [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component allowOverlap: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'allowOverlap' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testBackgroundColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component backgroundColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'backgroundColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testBorderColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component borderColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'borderColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testBorderRadius [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component borderRadius: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'borderRadius' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testBorderWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component borderWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'borderWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testClassName [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component className: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component color: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dDataLabelsTest >> testCrop [
 
 	| component javascript expectedConfiguration |
@@ -28,6 +126,62 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testCrop [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'crop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testDefer [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component defer: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'defer' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -47,6 +201,34 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testNullFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component nullFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testNullFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component nullFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dDataLabelsTest >> testOverflow [
 
 	| component javascript expectedConfiguration |
@@ -61,6 +243,90 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testPadding [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component padding: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'padding' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component position: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'position' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testRotation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component rotation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'rotation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testShadow [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component shadow: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'shadow' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testShape [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component shape: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'shape' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testUseHTML [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component useHTML: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'useHTML' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dDataLabelsTest >> testVerticalAlign [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +336,48 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testVerticalAlign [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'verticalAlign' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component x: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'x' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component y: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'y' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testZ [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component z: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'z' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

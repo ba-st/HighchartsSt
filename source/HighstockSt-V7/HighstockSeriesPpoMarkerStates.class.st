@@ -16,12 +16,6 @@ HighstockSeriesPpoMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesPpoMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesPpoMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesPpoMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

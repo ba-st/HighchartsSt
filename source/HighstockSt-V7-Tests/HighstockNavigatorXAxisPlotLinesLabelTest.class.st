@@ -19,6 +19,20 @@ HighstockNavigatorXAxisPlotLinesLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisPlotLinesLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxisPlotLinesLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisPlotLinesLabelTest >> testRotation [
 
 	| component javascript expectedConfiguration |

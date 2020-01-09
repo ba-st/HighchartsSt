@@ -16,12 +16,6 @@ HighchartsSeriesPyramidMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesPyramidMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesPyramidMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesPyramidMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

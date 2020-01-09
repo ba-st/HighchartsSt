@@ -35,6 +35,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesWindbarbData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesWindbarbDataAccessibility new]
 ]
 
@@ -74,20 +76,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesWindbarbData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesWindbarbData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesWindbarbDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesWindbarbData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -107,7 +108,6 @@ HighchartsSeriesWindbarbData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesWindbarbDataDragDrop new]
 ]
@@ -125,7 +125,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesWindbarbData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -155,14 +155,15 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesWindbarbData >> marker [
 
+	"Options for the point markers of line-like series.
+"
 	^configurationOptions at: 'marker' ifAbsentPut: [HighchartsSeriesWindbarbDataMarker new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesWindbarbData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

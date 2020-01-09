@@ -47,6 +47,20 @@ HighstockSeriesColumnDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesColumnDataTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnData new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesColumnDataTest >> testDataLabels [
 
 	| component javascript expectedConfiguration |

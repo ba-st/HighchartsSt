@@ -28,6 +28,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesPackedbubbleDataAccessibility new]
 ]
 
@@ -67,20 +69,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesPackedbubbleData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesPackedbubbleData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesPackedbubbleDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -91,7 +92,6 @@ HighchartsSeriesPackedbubbleData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesPackedbubbleDataDragDrop new]
 ]
@@ -109,7 +109,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -139,8 +139,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString
@@ -153,23 +152,4 @@ HighchartsSeriesPackedbubbleData >> selected: aBoolean [
 Defaults to false."
 
 	configurationOptions at: 'selected' put: aBoolean
-]
-
-{ #category : #accessing }
-HighchartsSeriesPackedbubbleData >> x: aNumber [
-
-	"The x value of the point. For datetime axes, the X value is the timestamp
-in milliseconds since 1970.
-"
-
-	configurationOptions at: 'x' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsSeriesPackedbubbleData >> y: aNumberOrNil [
-
-	"The y value of the point.
-"
-
-	configurationOptions at: 'y' put: aNumberOrNil
 ]

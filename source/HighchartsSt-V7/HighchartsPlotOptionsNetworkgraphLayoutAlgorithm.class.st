@@ -110,6 +110,19 @@ Defaults to euler."
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithm >> linkLength: aNumber [
+
+	"Ideal length (px) of the link between two nodes. When not
+defined, length is calculated as:
+Math.pow(availableWidth * availableHeight / nodesLength, 0.4);
+Note: Because of the algorithm specification, length of each link
+might be not exactly as specified.
+"
+
+	configurationOptions at: 'linkLength' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsNetworkgraphLayoutAlgorithm >> maxIterations: aNumber [
 
 	"Max number of iterations before algorithm will stop. In general,

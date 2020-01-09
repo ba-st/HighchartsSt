@@ -200,6 +200,21 @@ HighchartsSeriesPyramidTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramidTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramidTest >> testColors [
 
 	| component javascript expectedConfiguration |
@@ -450,6 +465,21 @@ HighchartsSeriesPyramidTest >> testExposeElementToA11y [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pyramid';
 		at: 'exposeElementToA11y' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramidTest >> testFillColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid new.
+	component fillColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid';
+		at: 'fillColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -17,12 +17,12 @@ Defaults to #f2f2f2."
 ]
 
 { #category : #accessing }
-HighstockNavigatorHandles >> borderColor: aHighchartsColorString [
+HighstockNavigatorHandles >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The stroke for the handle border and the stripes inside.
 Defaults to #999999."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

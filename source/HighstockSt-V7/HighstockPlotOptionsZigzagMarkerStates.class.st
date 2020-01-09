@@ -16,12 +16,6 @@ HighstockPlotOptionsZigzagMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsZigzagMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsZigzagMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsZigzagMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

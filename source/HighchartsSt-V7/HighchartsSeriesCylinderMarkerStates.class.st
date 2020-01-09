@@ -16,12 +16,6 @@ HighchartsSeriesCylinderMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesCylinderMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesCylinderMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesCylinderMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

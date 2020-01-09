@@ -33,6 +33,20 @@ HighchartsYAxisStackLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsYAxisStackLabelsTest >> testCrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxisStackLabels new.
+	component crop: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crop' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsYAxisStackLabelsTest >> testEnabled [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +84,20 @@ HighchartsYAxisStackLabelsTest >> testFormatter [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisStackLabelsTest >> testOverflow [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxisStackLabels new.
+	component overflow: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'overflow' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

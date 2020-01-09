@@ -215,6 +215,20 @@ HighchartsYAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsYAxisTest >> testHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component height: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'height' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsYAxisTest >> testId [
 
 	| component javascript expectedConfiguration |
@@ -224,6 +238,20 @@ HighchartsYAxisTest >> testId [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testLeft [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component left: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'left' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -873,6 +901,20 @@ HighchartsYAxisTest >> testTooltipValueFormat [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsYAxisTest >> testTop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component top: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'top' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsYAxisTest >> testType [
 
 	| component javascript expectedConfiguration |
@@ -924,6 +966,34 @@ HighchartsYAxisTest >> testVisible [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'visible' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testZoomEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component zoomEnabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomEnabled' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

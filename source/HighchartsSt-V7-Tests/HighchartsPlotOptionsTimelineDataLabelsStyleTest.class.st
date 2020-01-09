@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineDataLabelsStyleTest >> testColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimelineDataLabelsStyle new.
+	component color: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsTimelineDataLabelsStyleTest >> testFontSize [
 
 	| component javascript expectedConfiguration |

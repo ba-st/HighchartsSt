@@ -58,13 +58,12 @@ HighstockNavigatorSeries >> dataGrouping [
 ]
 
 { #category : #accessing }
-HighstockNavigatorSeries >> dataLabels: anObject [
+HighstockNavigatorSeries >> dataLabels [
 
 	"Data label options for the navigator series. Data labels are
 disabled by default on the navigator series.
 "
-
-	configurationOptions at: 'dataLabels' put: anObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighstockNavigatorSeriesDataLabels new]
 ]
 
 { #category : #accessing }
@@ -109,10 +108,15 @@ HighstockNavigatorSeries >> marker [
 ]
 
 { #category : #accessing }
-HighstockNavigatorSeries >> pointRange: aNumber [
+HighstockNavigatorSeries >> pointRange: aNumberOrNil [
 
+	"Since Highstock v8, default value is the same as default
+pointRange defined for a specific type (e.g. null for
+column type).
+In Highstock version &lt; 8, defaults to 0.
+"
 
-	configurationOptions at: 'pointRange' put: aNumber
+	configurationOptions at: 'pointRange' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -130,6 +134,9 @@ HighstockNavigatorSeries >> type: aString [
 
 	"The type of the navigator series. Defaults to areaspline if
 defined, otherwise line.
+Heads up:
+In column-type navigator, zooming is limited to at least one
+point with its pointRange.
 Defaults to areaspline."
 
 	configurationOptions at: 'type' put: aString

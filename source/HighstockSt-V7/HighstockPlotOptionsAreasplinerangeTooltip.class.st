@@ -21,6 +21,19 @@ tooltip options object. The default is to preserve all decimals.
 ]
 
 { #category : #accessing }
+HighstockPlotOptionsAreasplinerangeTooltip >> clusterFormat: anObject [
+
+	"The HTML of the cluster point´s in the tooltip. Works only with
+marker-clusters module and analogously to
+pointFormat.
+The cluster tooltip can be also formatted using
+tooltip.formatter callback function and point.isCluster flag.
+"
+
+	configurationOptions at: 'clusterFormat' put: anObject
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsAreasplinerangeTooltip >> dateTimeLabelFormats [
 
 	"For series on a datetime axes, the date format in the tooltip´s
@@ -30,6 +43,15 @@ each unit. For an overview of the replacement codes, see
 dateFormat.
 "
 	^configurationOptions at: 'dateTimeLabelFormats' ifAbsentPut: [HighstockPlotOptionsAreasplinerangeTooltipDateTimeLabelFormats new]
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsAreasplinerangeTooltip >> distance: aNumber [
+
+	"Distance from point to tooltip in pixels.
+Defaults to 16."
+
+	configurationOptions at: 'distance' put: aNumber
 ]
 
 { #category : #accessing }
@@ -88,30 +110,6 @@ Defaults to <span style='font-size: 10px'>{point.key}</span><br/>."
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsAreasplinerangeTooltip >> headerShape: aString [
-
-	"The name of a symbol to use for the border around the tooltip
-header. Applies only when tooltip.split is
-enabled.
-Custom callbacks for symbol path generation can also be added to
-Highcharts.SVGRenderer.prototype.symbols the same way as for
-series.marker.symbol.
-Defaults to callout."
-
-	configurationOptions at: 'headerShape' put: aString
-]
-
-{ #category : #accessing }
-HighstockPlotOptionsAreasplinerangeTooltip >> hideDelay: aNumber [
-
-	"The number of milliseconds to wait until the tooltip is hidden when
-mouse out from a point or chart.
-Defaults to 500."
-
-	configurationOptions at: 'hideDelay' put: aNumber
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsAreasplinerangeTooltip >> nullFormat: aString [
 
 	"The HTML of the null point´s line in the tooltip. Works analogously
@@ -130,30 +128,6 @@ Works analogously to formatter.
 "
 
 	configurationOptions at: 'nullFormatter' put: aHighchartsTooltipFormatterCallbackFunction
-]
-
-{ #category : #accessing }
-HighstockPlotOptionsAreasplinerangeTooltip >> outside: aBoolean [
-
-	"Whether to allow the tooltip to render outside the chart´s SVG
-element box. By default (false), the tooltip is rendered within the
-chart´s SVG element, which results in the tooltip being aligned
-inside the chart area. For small charts, this may result in clipping
-or overlapping. When true, a separate SVG element is created and
-overlaid on the page, allowing the tooltip to be aligned inside the
-page itself.
-Defaults to false."
-
-	configurationOptions at: 'outside' put: aBoolean
-]
-
-{ #category : #accessing }
-HighstockPlotOptionsAreasplinerangeTooltip >> padding: aNumber [
-
-	"Padding inside the tooltip, in pixels.
-Defaults to 8."
-
-	configurationOptions at: 'padding' put: aNumber
 ]
 
 { #category : #accessing }
@@ -181,18 +155,6 @@ flexibility.
 "
 
 	configurationOptions at: 'pointFormatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
-]
-
-{ #category : #accessing }
-HighstockPlotOptionsAreasplinerangeTooltip >> split: aBoolean [
-
-	"Split the tooltip into one label per series, with the header close
-to the axis. This is recommended over shared
-tooltips for charts with multiple line series, generally making them
-easier to read. This option takes precedence over tooltip.shared.
-"
-
-	configurationOptions at: 'split' put: aBoolean
 ]
 
 { #category : #accessing }

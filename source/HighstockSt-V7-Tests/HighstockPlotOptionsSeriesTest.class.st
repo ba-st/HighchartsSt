@@ -103,6 +103,20 @@ HighstockPlotOptionsSeriesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsSeriesTest >> testColorAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSeries new.
+	component colorAxis: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorAxis' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsSeriesTest >> testColorIndex [
 
 	| component javascript expectedConfiguration |
@@ -112,6 +126,20 @@ HighstockPlotOptionsSeriesTest >> testColorIndex [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'colorIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSeriesTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSeries new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -215,6 +215,20 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineLabelOptions new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsCrookedLineLabelOptionsTest >> testText [
 
 	| component javascript expectedConfiguration |

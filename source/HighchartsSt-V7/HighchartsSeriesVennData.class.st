@@ -7,6 +7,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesVennData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesVennDataAccessibility new]
 ]
 
@@ -46,20 +48,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesVennData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesVennData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesVennDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesVennData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -70,7 +71,6 @@ HighchartsSeriesVennData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesVennDataDragDrop new]
 ]
@@ -88,7 +88,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesVennData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject

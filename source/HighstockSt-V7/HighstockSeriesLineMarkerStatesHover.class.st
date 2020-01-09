@@ -36,14 +36,14 @@ state is used.
 ]
 
 { #category : #accessing }
-HighstockSeriesLineMarkerStatesHover >> lineColor: aHighchartsColorString [
+HighstockSeriesLineMarkerStatesHover >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the point marker´s outline. When
 undefined, the series´ or point´s lineColor for normal
 state is used.
 "
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

@@ -201,6 +201,20 @@ HighstockYAxisTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
+HighstockYAxisTest >> testLeft [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component left: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'left' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockYAxisTest >> testLineColor [
 
 	| component javascript expectedConfiguration |
@@ -854,6 +868,34 @@ HighstockYAxisTest >> testVisible [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'visible' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testZoomEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component zoomEnabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomEnabled' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

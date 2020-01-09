@@ -69,6 +69,19 @@ Defaults to euler."
 ]
 
 { #category : #accessing }
+HighstockSeriesPackedbubbleLayoutAlgorithmParentNodeOptions >> linkLength: aNumber [
+
+	"Ideal length (px) of the link between two nodes. When not
+defined, length is calculated as:
+Math.pow(availableWidth * availableHeight / nodesLength, 0.4);
+Note: Because of the algorithm specification, length of each link
+might be not exactly as specified.
+"
+
+	configurationOptions at: 'linkLength' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockSeriesPackedbubbleLayoutAlgorithmParentNodeOptions >> marker [
 
 	"Styling options for parentNodes markers. Similar to

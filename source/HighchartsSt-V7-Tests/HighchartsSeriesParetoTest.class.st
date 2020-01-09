@@ -187,6 +187,20 @@ HighchartsSeriesParetoTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesParetoTest >> testCompare [
 
 	| component javascript expectedConfiguration |

@@ -16,12 +16,6 @@ HighstockSeriesWilliamsrMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesWilliamsrMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesWilliamsrMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesWilliamsrMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

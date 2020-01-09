@@ -16,12 +16,6 @@ HighstockSeriesLinearregressioninterceptMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesLinearregressioninterceptMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesLinearregressioninterceptMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesLinearregressioninterceptMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

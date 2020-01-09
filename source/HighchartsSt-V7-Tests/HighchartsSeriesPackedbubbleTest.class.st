@@ -185,6 +185,21 @@ HighchartsSeriesPackedbubbleTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPackedbubbleTest >> testConnectEnds [
 
 	| component javascript expectedConfiguration |

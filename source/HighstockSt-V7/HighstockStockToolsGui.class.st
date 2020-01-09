@@ -8,13 +8,13 @@ Class {
 }
 
 { #category : #accessing }
-HighstockStockToolsGui >> buttons: anArray [
+HighstockStockToolsGui >> buttons: aString [
 
 	"A collection of strings pointing to config options for the
 toolbar items. Each name refers to unique key from definitions
 object.
 Defaults to [
- 'indicators',
+  'indicators',
   'separator',
   'simpleShapes',
   'lines',
@@ -32,9 +32,9 @@ Defaults to [
   'separator',
   'currentPriceIndicator',
   'saveChart'
- ]."
+]."
 
-	configurationOptions at: 'buttons' put: anArray
+	configurationOptions at: 'buttons' put: aString
 ]
 
 { #category : #accessing }
@@ -66,13 +66,15 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockStockToolsGui >> iconsURL: aString [
+HighstockStockToolsGui >> iconsURL: anObject [
 
 	"Path where Highcharts will look for icons. Change this to use
 icons from a different server.
-Defaults to https://code.highcharts.com/@product.version@/gfx/stock-icons/."
+Since 7.1.3 use iconsURL for popup and
+stock tools.
+"
 
-	configurationOptions at: 'iconsURL' put: aString
+	configurationOptions at: 'iconsURL' put: anObject
 ]
 
 { #category : #accessing }
@@ -80,7 +82,7 @@ HighstockStockToolsGui >> toolbarClassName: aString [
 
 	"A CSS class name to apply to the container of buttons,
 allowing unique CSS styling for each chart.
-Defaults to 'stocktools-toolbar'."
+Defaults to stocktools-toolbar."
 
 	configurationOptions at: 'toolbarClassName' put: aString
 ]

@@ -75,6 +75,20 @@ HighchartsNavigationAnnotationsOptionsShapesTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsShapesTest >> testSnap [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptionsShapes new.
+	component snap: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'snap' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsNavigationAnnotationsOptionsShapesTest >> testStroke [
 
 	| component javascript expectedConfiguration |

@@ -15,7 +15,6 @@ HighstockYAxisResize >> controlledAxis [
 
 	"Contains two arrays of axes that are controlled by control line
 of the axis.
-This feature requires the drag-panes.js module.
 "
 	^configurationOptions at: 'controlledAxis' ifAbsentPut: [HighstockYAxisResizeControlledAxis new]
 ]
@@ -25,7 +24,6 @@ HighstockYAxisResize >> cursor: aString [
 
 	"Cursor style for the control line.
 In styled mode use class highcharts-axis-resizer instead.
-This feature requires the drag-panes.js module.
 Defaults to ns-resize."
 
 	configurationOptions at: 'cursor' put: aString
@@ -35,21 +33,19 @@ Defaults to ns-resize."
 HighstockYAxisResize >> enabled: aBoolean [
 
 	"Enable or disable resize by drag for the axis.
-This feature requires the drag-panes.js module.
 Defaults to false."
 
 	configurationOptions at: 'enabled' put: aBoolean
 ]
 
 { #category : #accessing }
-HighstockYAxisResize >> lineColor: aColor [
+HighstockYAxisResize >> lineColor: aHighchartsColorString [
 
 	"Color of the control line.
 In styled mode use class highcharts-axis-resizer instead.
-This feature requires the drag-panes.js module.
 Defaults to #cccccc."
 
-	configurationOptions at: 'lineColor' put: aColor
+	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]
 
 { #category : #accessing }
@@ -57,7 +53,6 @@ HighstockYAxisResize >> lineDashStyle: aString [
 
 	"Dash style of the control line.
 In styled mode use class highcharts-axis-resizer instead.
-This feature requires the drag-panes.js module.
 Defaults to Solid."
 
 	configurationOptions at: 'lineDashStyle' put: aString
@@ -68,7 +63,6 @@ HighstockYAxisResize >> lineWidth: aNumber [
 
 	"Width of the control line.
 In styled mode use class highcharts-axis-resizer instead.
-This feature requires the drag-panes.js module.
 Defaults to 4."
 
 	configurationOptions at: 'lineWidth' put: aNumber
@@ -78,7 +72,6 @@ Defaults to 4."
 HighstockYAxisResize >> x: aNumber [
 
 	"Horizontal offset of the control line.
-This feature requires the drag-panes.js module.
 Defaults to 0."
 
 	configurationOptions at: 'x' put: aNumber
@@ -88,7 +81,6 @@ Defaults to 0."
 HighstockYAxisResize >> y: aNumber [
 
 	"Vertical offset of the control line.
-This feature requires the drag-panes.js module.
 Defaults to 0."
 
 	configurationOptions at: 'y' put: aNumber

@@ -25,12 +25,13 @@ Defaults to -2."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsTunnelTypeOptions >> heightControlPoint [
+HighstockAnnotationsTunnelTypeOptions >> heightControlPoint: anObject [
 
 	"Options for the control point which controls
 the annotation´s height.
 "
-	^configurationOptions at: 'heightControlPoint' ifAbsentPut: [HighstockAnnotationsTunnelTypeOptionsHeightControlPoint new]
+
+	configurationOptions at: 'heightControlPoint' put: anObject
 ]
 
 { #category : #accessing }

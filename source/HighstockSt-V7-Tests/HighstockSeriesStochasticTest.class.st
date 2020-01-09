@@ -145,6 +145,20 @@ HighstockSeriesStochasticTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesStochasticTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesStochastic new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesStochasticTest >> testCompare [
 
 	| component javascript expectedConfiguration |

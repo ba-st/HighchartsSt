@@ -230,6 +230,21 @@ HighchartsSeriesWordcloudTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testColors [
 
 	| component javascript expectedConfiguration |

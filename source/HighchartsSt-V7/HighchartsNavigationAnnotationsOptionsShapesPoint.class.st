@@ -23,10 +23,10 @@ or chart pixel coordinates.
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapesPoint >> xAxis: aNumberOrstring [
 
-	"This number defines which xAxis the point is connected to. It refers
-to either the axis id or the index of the axis in the xAxis array.
-If the option is not configured or the axis is not found the point´s
-x coordinate refers to the chart pixels.
+	"This number defines which xAxis the point is connected to. It
+refers to either the axis id or the index of the axis in the
+xAxis array. If the option is not configured or the axis is not
+found the point´s x coordinate refers to the chart pixels.
 "
 
 	configurationOptions at: 'xAxis' put: aNumberOrstring
@@ -45,10 +45,10 @@ or chart pixel coordinates.
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapesPoint >> yAxis: aNumberOrstring [
 
-	"This number defines which yAxis the point is connected to. It refers
-to either the axis id or the index of the axis in the yAxis array.
-If the option is not configured or the axis is not found the point´s
-y coordinate refers to the chart pixels.
+	"This number defines which yAxis the point is connected to. It
+refers to either the axis id or the index of the axis in the
+yAxis array. If the option is not configured or the axis is not
+found the point´s y coordinate refers to the chart pixels.
 "
 
 	configurationOptions at: 'yAxis' put: aNumberOrstring

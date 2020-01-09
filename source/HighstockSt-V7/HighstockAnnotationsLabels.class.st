@@ -78,8 +78,8 @@ Defaults to ."
 { #category : #accessing }
 HighstockAnnotationsLabels >> crop: aBoolean [
 
-	"Whether to hide the annotation´s label that is outside the plot
-area.
+	"Whether to hide the annotation´s label
+that is outside the plot area.
 Defaults to false."
 
 	configurationOptions at: 'crop' put: aBoolean
@@ -108,10 +108,10 @@ string for the data label.
 { #category : #accessing }
 HighstockAnnotationsLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format the annotation´s label.
-Note that if a format or text are defined, the format or text
-take precedence and the formatter is ignored. This refers to a
-point object.
+	"Callback JavaScript function to format the annotation´s
+label. Note that if a format or text are defined, the
+format or text take precedence and the formatter is ignored.
+This refers to a point object.
 Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
 	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
@@ -120,8 +120,9 @@ Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; 
 { #category : #accessing }
 HighstockAnnotationsLabels >> overflow: aString [
 
-	"How to handle the annotation´s label that flow outside the plot
-area. The justify option aligns the label inside the plot area.
+	"How to handle the annotation´s label that flow outside the
+plot area. The justify option aligns the label inside the
+plot area.
 Defaults to justify."
 
 	configurationOptions at: 'overflow' put: aString
@@ -140,10 +141,10 @@ Defaults to 5."
 { #category : #accessing }
 HighstockAnnotationsLabels >> point [
 
-	"This option defines the point to which the label will be connected.
-It can be either the point which exists in the series - it is
-referenced by the point´s id - or a new point with defined x, y
-properies and optionally axes.
+	"This option defines the point to which the label will be
+connected. It can be either the point which exists in the
+series - it is referenced by the point´s id - or a new point with
+defined x, y properties and optionally axes.
 "
 	^configurationOptions at: 'point' ifAbsentPut: [HighstockAnnotationsLabelsPoint new]
 ]
@@ -151,8 +152,9 @@ properies and optionally axes.
 { #category : #accessing }
 HighstockAnnotationsLabels >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-	"The shadow of the box. The shadow can be an object configuration
-containing color, offsetX, offsetY, opacity and width.
+	"The shadow of the box. The shadow can be an object
+configuration containing color, offsetX, offsetY,
+opacity and width.
 Defaults to false."
 
 	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject

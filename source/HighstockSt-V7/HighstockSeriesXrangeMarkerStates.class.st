@@ -16,12 +16,6 @@ HighstockSeriesXrangeMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesXrangeMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesXrangeMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesXrangeMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

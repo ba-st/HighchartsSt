@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsTunnelTest >> testControlPointOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsTunnel new.
+	component controlPointOptions: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'controlPointOptions' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsTunnelTest >> testDraggable [
 
 	| component javascript expectedConfiguration |

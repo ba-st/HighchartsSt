@@ -17,12 +17,12 @@ HighstockSeriesCciStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighstockSeriesCciStatesHover >> borderColor: aHighchartsColorString [
+HighstockSeriesCciStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

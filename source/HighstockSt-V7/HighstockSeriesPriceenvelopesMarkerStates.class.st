@@ -16,12 +16,6 @@ HighstockSeriesPriceenvelopesMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesPriceenvelopesMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesPriceenvelopesMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesPriceenvelopesMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

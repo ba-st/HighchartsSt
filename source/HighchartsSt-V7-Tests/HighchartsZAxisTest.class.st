@@ -47,6 +47,20 @@ HighchartsZAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsZAxisTest >> testAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component angle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'angle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsZAxisTest >> testCategories [
 
 	| component javascript expectedConfiguration |
@@ -154,6 +168,20 @@ HighchartsZAxisTest >> testGridLineDashStyle [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'gridLineDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGridLineInterpolation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component gridLineInterpolation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'gridLineInterpolation' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -854,6 +882,20 @@ HighchartsZAxisTest >> testVisible [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'visible' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testZoomEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component zoomEnabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomEnabled' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

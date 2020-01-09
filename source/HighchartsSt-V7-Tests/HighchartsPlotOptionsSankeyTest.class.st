@@ -397,6 +397,20 @@ HighchartsPlotOptionsSankeyTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSankeyTest >> testMinLinkWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSankey new.
+	component minLinkWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'minLinkWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSankeyTest >> testMinPointLength [
 
 	| component javascript expectedConfiguration |

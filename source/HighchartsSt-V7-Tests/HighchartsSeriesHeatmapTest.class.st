@@ -110,6 +110,21 @@ HighchartsSeriesHeatmapTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testColorAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component colorAxis: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'colorAxis' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesHeatmapTest >> testColorIndex [
 
 	| component javascript expectedConfiguration |
@@ -120,6 +135,21 @@ HighchartsSeriesHeatmapTest >> testColorIndex [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'heatmap';
 		at: 'colorIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

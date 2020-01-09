@@ -215,6 +215,21 @@ HighchartsSeriesWaterfallTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWaterfallTest >> testColors [
 
 	| component javascript expectedConfiguration |

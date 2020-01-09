@@ -19,12 +19,12 @@ HighstockPlotOptionsSmaStatesSelect >> animation [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsSmaStatesSelect >> borderColor: aHighchartsColorString [
+HighstockPlotOptionsSmaStatesSelect >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

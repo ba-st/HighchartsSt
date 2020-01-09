@@ -185,6 +185,21 @@ HighstockSeriesAreaTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesAreaTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesArea new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'area';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAreaTest >> testCompare [
 
 	| component javascript expectedConfiguration |

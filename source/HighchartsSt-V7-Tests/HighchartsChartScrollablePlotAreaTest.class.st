@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsChartScrollablePlotAreaTest >> testMinHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartScrollablePlotArea new.
+	component minHeight: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'minHeight' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartScrollablePlotAreaTest >> testMinWidth [
 
 	| component javascript expectedConfiguration |
@@ -42,6 +56,20 @@ HighchartsChartScrollablePlotAreaTest >> testScrollPositionX [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'scrollPositionX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartScrollablePlotAreaTest >> testScrollPositionY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartScrollablePlotArea new.
+	component scrollPositionY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'scrollPositionY' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -28,13 +28,13 @@ Defaults to #cccccc."
 ]
 
 { #category : #accessing }
-HighstockSeriesCandlestickMarkerStatesSelect >> lineColor: aHighchartsColorString [
+HighstockSeriesCandlestickMarkerStatesSelect >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the point marker´s outline. When
 undefined, the series´ or point´s color is used.
 Defaults to #000000."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

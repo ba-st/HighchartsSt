@@ -43,6 +43,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesBubbleData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesBubbleDataAccessibility new]
 ]
 
@@ -82,20 +84,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesBubbleData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesBubbleData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesBubbleDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesBubbleData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -106,7 +107,6 @@ HighchartsSeriesBubbleData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesBubbleDataDragDrop new]
 ]
@@ -124,7 +124,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesBubbleData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -152,10 +152,17 @@ will be drawn.
 ]
 
 { #category : #accessing }
+HighchartsSeriesBubbleData >> marker [
+
+	"Options for the point markers of line-like series.
+"
+	^configurationOptions at: 'marker' ifAbsentPut: [HighchartsSeriesBubbleDataMarker new]
+]
+
+{ #category : #accessing }
 HighchartsSeriesBubbleData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString
@@ -190,12 +197,12 @@ HighchartsSeriesBubbleData >> y: aNumberOrNil [
 ]
 
 { #category : #accessing }
-HighchartsSeriesBubbleData >> z: aNumber [
+HighchartsSeriesBubbleData >> z: aNumberOrNil [
 
 	"The size value for each bubble. The bubbles´ diameters are computed
 based on the z, and controlled by series options like minSize,
 maxSize, sizeBy, zMin and zMax.
 "
 
-	configurationOptions at: 'z' put: aNumber
+	configurationOptions at: 'z' put: aNumberOrNil
 ]

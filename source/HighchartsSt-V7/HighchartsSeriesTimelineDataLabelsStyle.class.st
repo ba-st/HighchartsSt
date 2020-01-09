@@ -5,6 +5,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesTimelineDataLabelsStyle >> color: aString [
+
+
+	configurationOptions at: 'color' put: aString
+]
+
+{ #category : #accessing }
 HighchartsSeriesTimelineDataLabelsStyle >> fontSize: aString [
 
 

@@ -89,6 +89,20 @@ HighchartsPlotOptionsTilemapTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsTilemapTest >> testColorAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTilemap new.
+	component colorAxis: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorAxis' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsTilemapTest >> testColorIndex [
 
 	| component javascript expectedConfiguration |
@@ -98,6 +112,20 @@ HighchartsPlotOptionsTilemapTest >> testColorIndex [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'colorIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTilemapTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTilemap new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -185,7 +185,6 @@ HighstockPlotOptions >> arearange [
 
 	"The area range series is a carteseian series with higher and lower values for
 each point along an X axis, where the area between the values is shaded.
-Requires highcharts-more.js.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -252,8 +251,7 @@ HighstockPlotOptions >> areasplinerange [
 
 	"The area spline range is a cartesian series type with higher and
 lower Y values along an X axis. The area inside the range is colored, and
-the graph outlining the area is a smoothed spline. Requires
-highcharts-more.js.
+the graph outlining the area is a smoothed spline.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -421,7 +419,7 @@ HighstockPlotOptions >> bubble [
 	"A bubble series is a three dimensional series type where each point renders
 an X, Y and Z value. Each points is drawn as a bubble where the position
 along the X and Y axes mark the X and Y values, and the size of the bubble
-relates to the Z value. Requires highcharts-more.js.
+relates to the Z value.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -618,8 +616,8 @@ Highcharts.chart(´container´, {
 HighstockPlotOptions >> columnpyramid [
 
 	"Column pyramid series display one pyramid per value along an X axis.
-Requires highcharts-more.js. To display horizontal pyramids,
-set chart.inverted to true.
+To display horizontal pyramids, set chart.inverted to
+true.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -652,8 +650,8 @@ Highcharts.chart(´container´, {
 HighstockPlotOptions >> columnrange [
 
 	"The column range is a cartesian series type with higher and lower
-Y values along an X axis. Requires highcharts-more.js. To display
-horizontal bars, set chart.inverted to true.
+Y values along an X axis. To display horizontal bars, set
+chart.inverted to true.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -685,7 +683,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighstockPlotOptions >> dema [
 
-	"Normalized average true range indicator (NATR). This series requires
+	"Double exponential moving average (DEMA) indicator. This series requires
 linkedTo option to be set and should be loaded after the
 stock/indicators/indicators.js and stock/indicators/ema.js.
 In TypeScript the type option must always be set.
@@ -747,6 +745,40 @@ Highcharts.chart(´container´, {
 });
 "
 	^configurationOptions at: 'dpo' ifAbsentPut: [HighstockPlotOptionsDpo new]
+]
+
+{ #category : #accessing }
+HighstockPlotOptions >> dumbbell [
+
+	"The dumbbell series is a cartesian series with higher and lower values for
+each point along an X axis, connected with a line between the values.
+Requires highcharts-more.js and modules/dumbbell.js.
+In TypeScript the type option must always be set.
+Configuration options for the series are given in three levels:
+
+Options for all series in a chart are defined in the
+plotOptions.series object.
+Options for all dumbbell series are defined in
+plotOptions.dumbbell.
+Options for one single series are given in
+the series instance array.
+
+Highcharts.chart(´container´, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        dumbbell: {
+            // shared options for all dumbbell series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: ´dumbbell´
+    }]
+});
+"
+	^configurationOptions at: 'dumbbell' ifAbsentPut: [HighstockPlotOptionsDumbbell new]
 ]
 
 { #category : #accessing }
@@ -1082,6 +1114,41 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
+HighstockPlotOptions >> lollipop [
+
+	"The lollipop series is a carteseian series with a line anchored from
+the x axis and a dot at the end to mark the value.
+Requires highcharts-more.js, modules/dumbbell.js and
+modules/lollipop.js.
+In TypeScript the type option must always be set.
+Configuration options for the series are given in three levels:
+
+Options for all series in a chart are defined in the
+plotOptions.series object.
+Options for all lollipop series are defined in
+plotOptions.lollipop.
+Options for one single series are given in
+the series instance array.
+
+Highcharts.chart(´container´, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        lollipop: {
+            // shared options for all lollipop series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: ´lollipop´
+    }]
+});
+"
+	^configurationOptions at: 'lollipop' ifAbsentPut: [HighstockPlotOptionsLollipop new]
+]
+
+{ #category : #accessing }
 HighstockPlotOptions >> macd [
 
 	"Moving Average Convergence Divergence (MACD). This series requires
@@ -1249,6 +1316,12 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
+HighstockPlotOptions >> packedBubble [
+
+	^configurationOptions at: 'packedBubble' ifAbsentPut: [HighstockPlotOptionsPackedBubble new]
+]
+
+{ #category : #accessing }
 HighstockPlotOptions >> pc [
 
 	"Price channel (PC). This series requires the linkedTo option to be
@@ -1319,8 +1392,7 @@ HighstockPlotOptions >> polygon [
 
 	"A polygon series can be used to draw any freeform shape in the cartesian
 coordinate system. A fill is applied with the color option, and
-stroke is applied through lineWidth and lineColor options. Requires
-the highcharts-more.js file.
+stroke is applied through lineWidth and lineColor options.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1589,6 +1661,40 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
+HighstockPlotOptions >> slowstochastic [
+
+	"Slow Stochastic oscillator. This series requires the linkedTo option
+to be set and should be loaded after stock/indicators/indicators.js
+and stock/indicators/stochastic.js files.
+In TypeScript the type option must always be set.
+Configuration options for the series are given in three levels:
+
+Options for all series in a chart are defined in the
+plotOptions.series object.
+Options for all slowstochastic series are defined in
+plotOptions.slowstochastic.
+Options for one single series are given in
+the series instance array.
+
+Highcharts.chart(´container´, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        slowstochastic: {
+            // shared options for all slowstochastic series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: ´slowstochastic´
+    }]
+});
+"
+	^configurationOptions at: 'slowstochastic' ifAbsentPut: [HighstockPlotOptionsSlowstochastic new]
+]
+
+{ #category : #accessing }
 HighstockPlotOptions >> sma [
 
 	"Simple moving average indicator (SMA). This series requires linkedTo
@@ -1757,10 +1863,9 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighstockPlotOptions >> tema [
 
-	"Normalized average true range indicator (NATR). This series requires
+	"Triple exponential moving average (TEMA) indicator. This series requires
 linkedTo option to be set and should be loaded after the
 stock/indicators/indicators.js and stock/indicators/ema.js.
-Requires https://code.highcharts.com/stock/indicators/ema.js.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1790,9 +1895,43 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
+HighstockPlotOptions >> trendline [
+
+	"Trendline (linear regression) fits a straight line to the selected data
+using a method called the Sum Of Least Squares. This series requires the
+linkedTo option to be set.
+In TypeScript the type option must always be set.
+Configuration options for the series are given in three levels:
+
+Options for all series in a chart are defined in the
+plotOptions.series object.
+Options for all trendline series are defined in
+plotOptions.trendline.
+Options for one single series are given in
+the series instance array.
+
+Highcharts.chart(´container´, {
+    plotOptions: {
+        series: {
+            // general options for all series
+        },
+        trendline: {
+            // shared options for all trendline series
+        }
+    },
+    series: [{
+        // specific options for this series instance
+        type: ´trendline´
+    }]
+});
+"
+	^configurationOptions at: 'trendline' ifAbsentPut: [HighstockPlotOptionsTrendline new]
+]
+
+{ #category : #accessing }
 HighstockPlotOptions >> trix [
 
-	"Normalized average true range indicator (NATR). This series requires
+	"Triple exponential average (TRIX) oscillator. This series requires
 linkedTo option to be set.
 Requires https://code.highcharts.com/stock/indicators/ema.js
 and https://code.highcharts.com/stock/indicators/tema.js.
@@ -1860,8 +1999,8 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighstockPlotOptions >> vector [
 
-	"A vector plot is a type of cartesian chart where each point has an X and Y
-position, a length and a direction. Vectors are drawn as arrows.
+	"A vector plot is a type of cartesian chart where each point has an X and
+Y position, a length and a direction. Vectors are drawn as arrows.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 
@@ -1959,9 +2098,9 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighstockPlotOptions >> windbarb [
 
-	"Wind barbs are a convenient way to represent wind speed and direction in one
-graphical form. Wind direction is given by the stem direction, and wind speed
-by the number and shape of barbs.
+	"Wind barbs are a convenient way to represent wind speed and direction in
+one graphical form. Wind direction is given by the stem direction, and
+wind speed by the number and shape of barbs.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

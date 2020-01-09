@@ -20,6 +20,24 @@ titleKey instead.
 ]
 
 { #category : #accessing }
+HighstockExportingButtonsContextButton >> align: aHighchartsAlignValue [
+
+	"Alignment for the buttons.
+Defaults to right."
+
+	configurationOptions at: 'align' put: aHighchartsAlignValue
+]
+
+{ #category : #accessing }
+HighstockExportingButtonsContextButton >> buttonSpacing: aNumber [
+
+	"The pixel spacing between buttons.
+Defaults to 3."
+
+	configurationOptions at: 'buttonSpacing' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockExportingButtonsContextButton >> className: aString [
 
 	"The class name of the context button.
@@ -35,6 +53,15 @@ HighstockExportingButtonsContextButton >> enabled: aBoolean [
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockExportingButtonsContextButton >> height: aNumber [
+
+	"Pixel height of the buttons.
+Defaults to 22."
+
+	configurationOptions at: 'height' put: aNumber
 ]
 
 { #category : #accessing }
@@ -92,6 +119,15 @@ Defaults to #666666."
 ]
 
 { #category : #accessing }
+HighstockExportingButtonsContextButton >> symbolSize: aNumber [
+
+	"The pixel size of the symbol on the button.
+Defaults to 14."
+
+	configurationOptions at: 'symbolSize' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockExportingButtonsContextButton >> symbolStroke: aHighchartsColorString [
 
 	"The color of the symbol´s stroke or line.
@@ -107,6 +143,24 @@ HighstockExportingButtonsContextButton >> symbolStrokeWidth: aNumber [
 Defaults to 3."
 
 	configurationOptions at: 'symbolStrokeWidth' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockExportingButtonsContextButton >> symbolX: aNumber [
+
+	"The x position of the center of the symbol inside the button.
+Defaults to 12.5."
+
+	configurationOptions at: 'symbolX' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockExportingButtonsContextButton >> symbolY: aNumber [
+
+	"The y position of the center of the symbol inside the button.
+Defaults to 10.5."
+
+	configurationOptions at: 'symbolY' put: aNumber
 ]
 
 { #category : #accessing }
@@ -139,6 +193,25 @@ that defaults to &quot;Chart context menu&quot;.
 Defaults to contextButtonTitle."
 
 	configurationOptions at: 'titleKey' put: aString
+]
+
+{ #category : #accessing }
+HighstockExportingButtonsContextButton >> verticalAlign: aHighchartsVerticalAlignValue [
+
+	"The vertical alignment of the buttons. Can be one of &quot;top&quot;,
+&quot;middle&quot; or &quot;bottom&quot;.
+Defaults to top."
+
+	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
+]
+
+{ #category : #accessing }
+HighstockExportingButtonsContextButton >> width: aNumber [
+
+	"The pixel width of the button.
+Defaults to 24."
+
+	configurationOptions at: 'width' put: aNumber
 ]
 
 { #category : #accessing }

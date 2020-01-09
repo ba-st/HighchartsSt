@@ -8,7 +8,7 @@ Class {
 HighstockPlotOptionsMacdSignalLineStyles >> lineColor: aHighchartsColorString [
 
 	"Color of the line.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorString
 ]

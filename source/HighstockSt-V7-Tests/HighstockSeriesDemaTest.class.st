@@ -145,6 +145,20 @@ HighstockSeriesDemaTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesDemaTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDema new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesDemaTest >> testCompareStart [
 
 	| component javascript expectedConfiguration |

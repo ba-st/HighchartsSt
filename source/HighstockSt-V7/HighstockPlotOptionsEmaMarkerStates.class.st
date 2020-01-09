@@ -16,12 +16,6 @@ HighstockPlotOptionsEmaMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsEmaMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsEmaMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsEmaMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

@@ -16,12 +16,6 @@ HighstockPlotOptionsPsarMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsPsarMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsPsarMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsPsarMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

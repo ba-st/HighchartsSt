@@ -10,6 +10,17 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsAnnotations >> controlPointOptions [
+
+	"Options for annotation´s control points. Each control point
+inherits options from controlPointOptions object.
+Options from the controlPointOptions can be overwritten
+by options in a specific control point.
+"
+	^configurationOptions at: 'controlPointOptions' ifAbsentPut: [HighchartsAnnotationsControlPointOptions new]
+]
+
+{ #category : #accessing }
 HighchartsAnnotations >> draggable: aString [
 
 	"Allow an annotation to be draggable by a user. Possible
@@ -22,26 +33,28 @@ Defaults to xy."
 { #category : #accessing }
 HighchartsAnnotations >> events: anObject [
 
+	"Events available in annotations.
+"
 
 	configurationOptions at: 'events' put: anObject
 ]
 
 { #category : #accessing }
-HighchartsAnnotations >> id: aString [
+HighchartsAnnotations >> id: aStringOrnumber [
 
 	"Sets an ID for an annotation. Can be user later when removing an
 annotation in Chart#removeAnnotation(id) method.
 "
 
-	configurationOptions at: 'id' put: aString
+	configurationOptions at: 'id' put: aStringOrnumber
 ]
 
 { #category : #accessing }
 HighchartsAnnotations >> labelOptions [
 
 	"Options for annotation´s labels. Each label inherits options
-from the labelOptions object. An option from the labelOptions can be
-overwritten by config for a specific label.
+from the labelOptions object. An option from the labelOptions
+can be overwritten by config for a specific label.
 "
 	^configurationOptions at: 'labelOptions' ifAbsentPut: [HighchartsAnnotationsLabelOptions new]
 ]
@@ -59,8 +72,8 @@ labelOptions.
 { #category : #accessing }
 HighchartsAnnotations >> shapeOptions [
 
-	"Options for annotation´s shapes. Each shape inherits options
-from the shapeOptions object. An option from the shapeOptions can be
+	"Options for annotation´s shapes. Each shape inherits options from
+the shapeOptions object. An option from the shapeOptions can be
 overwritten by config for a specific shape.
 "
 	^configurationOptions at: 'shapeOptions' ifAbsentPut: [HighchartsAnnotationsShapeOptions new]

@@ -18,14 +18,15 @@ HighchartsPlotOptionsTreemapLevels >> borderColor: aHighchartsColorString [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsTreemapLevels >> borderDashStyle: aString [
+HighchartsPlotOptionsTreemapLevels >> borderDashStyle: aHighchartsDashStyleValue [
 
 	"Set the dash style of the border of all the point which lies on the
-level. See &lt;a href&quot;#plotoptions.scatter.dashstyle&quot;&gt;
-plotOptions.scatter.dashStyle for possible options.
+level. See
+plotOptions.scatter.dashStyle
+for possible options.
 "
 
-	configurationOptions at: 'borderDashStyle' put: aString
+	configurationOptions at: 'borderDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -62,15 +63,14 @@ charts.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsTreemapLevels >> dataLabels: anObject [
+HighchartsPlotOptionsTreemapLevels >> dataLabels [
 
 	"Can set the options of dataLabels on each point which lies on the
 level.
 plotOptions.treemap.dataLabels for
 possible values.
 "
-
-	configurationOptions at: 'dataLabels' put: anObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsPlotOptionsTreemapLevelsDataLabels new]
 ]
 
 { #category : #accessing }

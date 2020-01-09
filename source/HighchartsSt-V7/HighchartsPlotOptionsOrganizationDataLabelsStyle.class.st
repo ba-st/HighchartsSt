@@ -5,6 +5,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsOrganizationDataLabelsStyle >> color: aString [
+
+
+	configurationOptions at: 'color' put: aString
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsOrganizationDataLabelsStyle >> fontSize: aString [
 
 
@@ -16,4 +23,11 @@ HighchartsPlotOptionsOrganizationDataLabelsStyle >> fontWeight: aString [
 
 
 	configurationOptions at: 'fontWeight' put: aString
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsOrganizationDataLabelsStyle >> textOutline: aString [
+
+
+	configurationOptions at: 'textOutline' put: aString
 ]

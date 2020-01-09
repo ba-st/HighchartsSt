@@ -173,6 +173,20 @@ HighstockSeriesNatrTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesNatrTest >> testCompare [
 
 	| component javascript expectedConfiguration |

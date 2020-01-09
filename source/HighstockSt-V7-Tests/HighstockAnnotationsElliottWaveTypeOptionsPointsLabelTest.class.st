@@ -215,6 +215,20 @@ HighstockAnnotationsElliottWaveTypeOptionsPointsLabelTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsElliottWaveTypeOptionsPointsLabelTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsElliottWaveTypeOptionsPointsLabel new.
+	component style: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsElliottWaveTypeOptionsPointsLabelTest >> testText [
 
 	| component javascript expectedConfiguration |

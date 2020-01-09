@@ -69,6 +69,16 @@ HighchartsNavigation >> events: anObject [
 ]
 
 { #category : #accessing }
+HighchartsNavigation >> iconsURL: aString [
+
+	"Path where Highcharts will look for icons. Change this to use icons
+from a different server.
+"
+
+	configurationOptions at: 'iconsURL' put: aString
+]
+
+{ #category : #accessing }
 HighchartsNavigation >> menuItemHoverStyle: aHighchartsCSSObject [
 
 	"CSS styles for the hover state of the individual items within the

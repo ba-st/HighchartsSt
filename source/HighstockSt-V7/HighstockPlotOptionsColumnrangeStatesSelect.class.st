@@ -17,12 +17,12 @@ HighstockPlotOptionsColumnrangeStatesSelect >> animation [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsColumnrangeStatesSelect >> borderColor: aHighchartsColorString [
+HighstockPlotOptionsColumnrangeStatesSelect >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A specific border color for the selected point.
 Defaults to #000000."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

@@ -18,12 +18,12 @@ HighchartsSeriesSunburstLevels >> borderColor: aHighchartsColorString [
 ]
 
 { #category : #accessing }
-HighchartsSeriesSunburstLevels >> borderDashStyle: aString [
+HighchartsSeriesSunburstLevels >> borderDashStyle: aHighchartsDashStyleValue [
 
 	"Can set a borderDashStyle on all points which lies on the same level.
 "
 
-	configurationOptions at: 'borderDashStyle' put: aString
+	configurationOptions at: 'borderDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -53,12 +53,11 @@ HighchartsSeriesSunburstLevels >> colorVariation [
 ]
 
 { #category : #accessing }
-HighchartsSeriesSunburstLevels >> dataLabels: anObject [
+HighchartsSeriesSunburstLevels >> dataLabels [
 
 	"Can set dataLabels on all points which lies on the same level.
 "
-
-	configurationOptions at: 'dataLabels' put: anObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesSunburstLevelsDataLabels new]
 ]
 
 { #category : #accessing }

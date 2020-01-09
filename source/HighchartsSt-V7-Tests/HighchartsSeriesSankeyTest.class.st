@@ -125,6 +125,21 @@ HighchartsSeriesSankeyTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSankeyTest >> testColors [
 
 	| component javascript expectedConfiguration |
@@ -540,6 +555,21 @@ HighchartsSeriesSankeyTest >> testMapData [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'sankey';
 		at: 'mapData' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testMinLinkWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component minLinkWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'minLinkWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

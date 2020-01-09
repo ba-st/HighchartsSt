@@ -8,13 +8,6 @@ Class {
 }
 
 { #category : #accessing }
-HighstockAnnotationsElliottWaveTypeOptions >> labels: anObject [
-
-
-	configurationOptions at: 'labels' put: anObject
-]
-
-{ #category : #accessing }
 HighstockAnnotationsElliottWaveTypeOptions >> line [
 
 	"Line options.

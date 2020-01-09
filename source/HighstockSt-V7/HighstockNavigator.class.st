@@ -24,7 +24,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockNavigator >> baseSeries: anObject [
+HighstockNavigator >> baseSeries: aNumberOrstring [
 
 	"An integer identifying the index to use for the base series, or a
 string representing the id of the series.
@@ -32,7 +32,7 @@ Note: As of Highcharts 5.0, this is now a deprecated option.
 Prefer series.showInNavigator.
 Defaults to 0."
 
-	configurationOptions at: 'baseSeries' put: anObject
+	configurationOptions at: 'baseSeries' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -102,13 +102,13 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockNavigator >> outlineColor: aHighchartsColorString [
+HighstockNavigator >> outlineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the line marking the currently zoomed area in the
 navigator.
 Defaults to #cccccc."
 
-	configurationOptions at: 'outlineColor' put: aHighchartsColorString
+	configurationOptions at: 'outlineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -131,7 +131,7 @@ Unless data is explicitly defined on navigator.series, the data
 is borrowed from the first series in the chart.
 Default series options for the navigator series are:
 series: {
-    type: 'areaspline',
+    type: ´areaspline´,
     fillOpacity: 0.05,
     dataGrouping: {
         smoothed: true
@@ -148,17 +148,17 @@ series: {
 { #category : #accessing }
 HighstockNavigator >> xAxis [
 
-	"Options for the navigator X axis. Default series options
-for the navigator xAxis are:
+	"Options for the navigator X axis. Default series options for the
+navigator xAxis are:
 xAxis: {
     tickWidth: 0,
     lineWidth: 0,
     gridLineWidth: 1,
     tickPixelInterval: 200,
     labels: {
-           align: 'left',
+           align: ´left´,
         style: {
-            color: '#888'
+            color: ´#888´
         },
         x: 3,
         y: -4
@@ -171,8 +171,8 @@ xAxis: {
 { #category : #accessing }
 HighstockNavigator >> yAxis [
 
-	"Options for the navigator Y axis. Default series options
-for the navigator yAxis are:
+	"Options for the navigator Y axis. Default series options for the
+navigator yAxis are:
 yAxis: {
     gridLineWidth: 0,
     startOnTick: false,

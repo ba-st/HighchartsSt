@@ -16,12 +16,6 @@ HighchartsSeriesFunnelMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesFunnelMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesFunnelMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

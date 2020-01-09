@@ -90,11 +90,10 @@ Defaults to nil."
 ]
 
 { #category : #accessing }
-HighchartsSeriesScatter3dLabel >> style: aHighchartsCSSObject [
+HighchartsSeriesScatter3dLabel >> style [
 
 	"Styles for the series label. The color defaults to the series
 color, or a contrast color if onArea.
-Defaults to {'font-weight': 'bold'}."
-
-	configurationOptions at: 'style' put: aHighchartsCSSObject
+"
+	^configurationOptions at: 'style' ifAbsentPut: [HighchartsSeriesScatter3dLabelStyle new]
 ]

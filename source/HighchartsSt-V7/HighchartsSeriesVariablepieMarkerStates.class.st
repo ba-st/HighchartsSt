@@ -16,12 +16,6 @@ HighchartsSeriesVariablepieMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesVariablepieMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesVariablepieMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesVariablepieMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

@@ -17,13 +17,13 @@ HighstockSeriesFlagsStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighstockSeriesFlagsStatesHover >> borderColor: aHighchartsColorString [
+HighstockSeriesFlagsStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A specific border color for the hovered point. Defaults to
 inherit the normal state border color.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -92,12 +92,12 @@ In styled mode, the halo is styled with the
 ]
 
 { #category : #accessing }
-HighstockSeriesFlagsStatesHover >> lineColor: aHighchartsColorString [
+HighstockSeriesFlagsStatesHover >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the line/border of the flag.
 Defaults to #000000."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

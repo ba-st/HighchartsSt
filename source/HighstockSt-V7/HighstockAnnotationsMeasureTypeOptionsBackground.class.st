@@ -14,12 +14,12 @@ Defaults to rgba(130, 170, 255, 0.4)."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsMeasureTypeOptionsBackground >> stroke: anObject [
+HighstockAnnotationsMeasureTypeOptionsBackground >> stroke: aString [
 
 	"The color of border.
-"
+Defaults to undefined."
 
-	configurationOptions at: 'stroke' put: anObject
+	configurationOptions at: 'stroke' put: aString
 ]
 
 { #category : #accessing }

@@ -47,6 +47,20 @@ HighstockNavigatorXAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component angle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'angle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisTest >> testCeiling [
 
 	| component javascript expectedConfiguration |
@@ -145,6 +159,20 @@ HighstockNavigatorXAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGridLineInterpolation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component gridLineInterpolation: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'gridLineInterpolation' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisTest >> testGridLineWidth [
 
 	| component javascript expectedConfiguration |
@@ -173,6 +201,20 @@ HighstockNavigatorXAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component height: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'height' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisTest >> testId [
 
 	| component javascript expectedConfiguration |
@@ -182,6 +224,20 @@ HighstockNavigatorXAxisTest >> testId [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testLeft [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component left: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'left' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -719,6 +775,20 @@ HighstockNavigatorXAxisTest >> testTickWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testTop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component top: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'top' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockNavigatorXAxisTest >> testUnits [
 
 	| component javascript expectedConfiguration |
@@ -742,6 +812,34 @@ HighstockNavigatorXAxisTest >> testVisible [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'visible' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testZoomEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component zoomEnabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomEnabled' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

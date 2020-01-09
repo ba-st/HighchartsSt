@@ -16,12 +16,6 @@ HighstockSeriesNatrMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesNatrMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesNatrMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesNatrMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

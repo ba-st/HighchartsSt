@@ -20,6 +20,15 @@ Defaults to {description}."
 ]
 
 { #category : #accessing }
+HighchartsLangAccessibilitySeries >> nullPointValue: aString [
+
+	"Description for the value of null points.
+Defaults to No value."
+
+	configurationOptions at: 'nullPointValue' put: aString
+]
+
+{ #category : #accessing }
 HighchartsLangAccessibilitySeries >> summary [
 
 	"Lang configuration for the series main summary. Each series

@@ -173,6 +173,20 @@ HighstockSeriesPackedbubbleTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPackedbubbleTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPackedbubble new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPackedbubbleTest >> testCompare [
 
 	| component javascript expectedConfiguration |

@@ -16,12 +16,6 @@ HighchartsSeriesStreamgraphMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesStreamgraphMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesStreamgraphMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesStreamgraphMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

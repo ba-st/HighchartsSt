@@ -30,8 +30,8 @@ HighstockAnnotationsShapes >> height: aNumber [
 { #category : #accessing }
 HighstockAnnotationsShapes >> markerEnd: aString [
 
-	"Id of the marker which will be drawn at the final vertex of the path.
-Custom markers can be defined in defs property.
+	"Id of the marker which will be drawn at the final vertex of the
+path. Custom markers can be defined in defs property.
 "
 
 	configurationOptions at: 'markerEnd' put: aString
@@ -40,8 +40,8 @@ Custom markers can be defined in defs property.
 { #category : #accessing }
 HighstockAnnotationsShapes >> markerStart: aString [
 
-	"Id of the marker which will be drawn at the first vertex of the path.
-Custom markers can be defined in defs property.
+	"Id of the marker which will be drawn at the first vertex of the
+path. Custom markers can be defined in defs property.
 "
 
 	configurationOptions at: 'markerStart' put: aString
@@ -50,10 +50,10 @@ Custom markers can be defined in defs property.
 { #category : #accessing }
 HighstockAnnotationsShapes >> point [
 
-	"This option defines the point to which the shape will be connected.
-It can be either the point which exists in the series - it is
-referenced by the point´s id - or a new point with defined x, y
-properties and optionally axes.
+	"This option defines the point to which the shape will be
+connected. It can be either the point which exists in the
+series - it is referenced by the point´s id - or a new point with
+defined x, y properties and optionally axes.
 "
 	^configurationOptions at: 'point' ifAbsentPut: [HighstockAnnotationsShapesPoint new]
 ]
@@ -61,9 +61,9 @@ properties and optionally axes.
 { #category : #accessing }
 HighstockAnnotationsShapes >> points [
 
-	"An array of points for the shape. This option is available for shapes
-which can use multiple points such as path. A point can be either
-a point object or a point´s id.
+	"An array of points for the shape. This option is available for
+shapes which can use multiple points such as path. A point can be
+either a point object or a point´s id.
 "
 	^configurationOptions at: 'points' ifAbsentPut: [HighstockAnnotationsShapesPoints new]
 ]
@@ -75,6 +75,16 @@ HighstockAnnotationsShapes >> r: aNumber [
 Defaults to 0."
 
 	configurationOptions at: 'r' put: aNumber
+]
+
+{ #category : #accessing }
+HighstockAnnotationsShapes >> snap: aNumber [
+
+	"Defines additional snapping area around an annotation
+making this annotation to focus. Defined in pixels.
+Defaults to 2."
+
+	configurationOptions at: 'snap' put: aNumber
 ]
 
 { #category : #accessing }

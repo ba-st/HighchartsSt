@@ -145,6 +145,20 @@ HighchartsChartParallelAxesTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testLeft [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component left: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'left' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartParallelAxesTest >> testLineColor [
 
 	| component javascript expectedConfiguration |
@@ -826,6 +840,34 @@ HighchartsChartParallelAxesTest >> testVisible [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'visible' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component width: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'width' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testZoomEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component zoomEnabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomEnabled' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

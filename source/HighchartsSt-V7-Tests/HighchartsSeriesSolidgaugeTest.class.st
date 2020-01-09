@@ -170,6 +170,21 @@ HighchartsSeriesSolidgaugeTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgauge new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'solidgauge';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSolidgaugeTest >> testCompare [
 
 	| component javascript expectedConfiguration |
@@ -390,6 +405,21 @@ HighchartsSeriesSolidgaugeTest >> testIndex [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'solidgauge';
 		at: 'index' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeTest >> testInnerRadius [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgauge new.
+	component innerRadius: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'solidgauge';
+		at: 'innerRadius' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -630,6 +660,21 @@ HighchartsSeriesSolidgaugeTest >> testPointStart [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'solidgauge';
 		at: 'pointStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeTest >> testRadius [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgauge new.
+	component radius: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'solidgauge';
+		at: 'radius' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

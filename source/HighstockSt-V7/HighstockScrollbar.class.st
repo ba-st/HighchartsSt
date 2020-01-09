@@ -24,12 +24,12 @@ Defaults to #cccccc."
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> barBorderColor: aHighchartsColorString [
+HighstockScrollbar >> barBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the scrollbar´s border.
 Defaults to #cccccc."
 
-	configurationOptions at: 'barBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'barBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -69,12 +69,12 @@ Defaults to #e6e6e6."
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> buttonBorderColor: aHighchartsColorString [
+HighstockScrollbar >> buttonBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border of the scrollbar buttons.
 Defaults to #cccccc."
 
-	configurationOptions at: 'buttonBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'buttonBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -121,7 +121,7 @@ HighstockScrollbar >> liveRedraw: aBoolean [
 	"Whether to redraw the main chart as the scrollbar or the navigator
 zoomed window is moved. Defaults to true for modern browsers and
 false for legacy IE browsers as well as mobile devices.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'liveRedraw' put: aBoolean
 ]
@@ -181,12 +181,12 @@ Defaults to #f2f2f2."
 ]
 
 { #category : #accessing }
-HighstockScrollbar >> trackBorderColor: aHighchartsColorString [
+HighstockScrollbar >> trackBorderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border of the scrollbar track.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'trackBorderColor' put: aHighchartsColorString
+	configurationOptions at: 'trackBorderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

@@ -10,13 +10,12 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsColorAxisMarker >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighchartsColorAxisMarker >> animation [
 
 	"Animation for the marker as it moves between values. Set to
 false to disable animation. Defaults to { duration: 50 }.
-Defaults to {'duration': 50}."
-
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+"
+	^configurationOptions at: 'animation' ifAbsentPut: [HighchartsColorAxisMarkerAnimation new]
 ]
 
 { #category : #accessing }
@@ -26,4 +25,11 @@ HighchartsColorAxisMarker >> color: aHighchartsColorStringOrHighchartsGradientCo
 Defaults to #999999."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighchartsColorAxisMarker >> width: aNumber [
+
+
+	configurationOptions at: 'width' put: aNumber
 ]

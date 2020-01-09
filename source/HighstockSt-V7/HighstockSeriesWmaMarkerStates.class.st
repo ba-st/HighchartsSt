@@ -16,12 +16,6 @@ HighstockSeriesWmaMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesWmaMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesWmaMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesWmaMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

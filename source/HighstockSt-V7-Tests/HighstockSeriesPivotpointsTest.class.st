@@ -173,6 +173,20 @@ HighstockSeriesPivotpointsTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPivotpointsTest >> testCompare [
 
 	| component javascript expectedConfiguration |

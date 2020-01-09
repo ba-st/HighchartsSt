@@ -12,16 +12,6 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsAccessibility >> addTableShortcut: aBoolean [
-
-	"Whether or not to add a shortcut button in the screen reader
-information region to show the data table.
-Defaults to true."
-
-	configurationOptions at: 'addTableShortcut' put: aBoolean
-]
-
-{ #category : #accessing }
 HighchartsAccessibility >> announceNewData [
 
 	"Options for announcing new data to screen reader users. Useful
@@ -32,17 +22,6 @@ applications, consider making snapshots of the data accessible, and
 do the announcements in batches.
 "
 	^configurationOptions at: 'announceNewData' ifAbsentPut: [HighchartsAccessibilityAnnounceNewData new]
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> axisRangeDateFormat: aString [
-
-	"Date format to use to describe range of datetime axes.
-For an overview of the replacement codes, see
-dateFormat.
-Defaults to %Y-%m-%d %H:%M:%S."
-
-	configurationOptions at: 'axisRangeDateFormat' put: aString
 ]
 
 { #category : #accessing }
@@ -60,25 +39,19 @@ for the keyboard navigation to be usable.
 ]
 
 { #category : #accessing }
-HighchartsAccessibility >> describeSingleSeries: aBoolean [
-
-	"Whether or not to add series descriptions to charts with a single
-series.
-Defaults to false."
-
-	configurationOptions at: 'describeSingleSeries' put: aBoolean
-]
-
-{ #category : #accessing }
 HighchartsAccessibility >> description: aString [
 
 	"A text description of the chart.
-If the Accessibility module is loaded, this is included by default
-as a long description of the chart in the hidden screen reader
-information region.
-Note: It is considered a best practice to make the description of the
-chart visible to all users, so consider if this can be placed in text
-around the chart instead.
+Note: Prefer using linkedDescription
+or caption instead.
+If the Accessibility module is loaded, this option is included by
+default as a long description of the chart in the hidden screen
+reader information region.
+Note: Since Highcharts now supports captions and linked descriptions,
+it is preferred to define the description using those methods, as a
+visible caption/description benefits all users. If the
+accessibility.description option is defined, the linked description
+is ignored, and the caption is hidden from screen reader users.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -91,6 +64,17 @@ HighchartsAccessibility >> enabled: aBoolean [
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsAccessibility >> highContrastTheme: anObject [
+
+	"Theme to apply to the chart when Windows High Contrast Mode is
+detected. By default, a high contrast theme matching the high
+contrast system system colors is used.
+"
+
+	configurationOptions at: 'highContrastTheme' put: anObject
 ]
 
 { #category : #accessing }
@@ -119,124 +103,60 @@ Defaults to all."
 ]
 
 { #category : #accessing }
-HighchartsAccessibility >> onTableAnchorClick: aHighchartsScreenReaderClickCallbackFunction [
+HighchartsAccessibility >> linkedDescription: aStringOrHighchartsHTMLDOMElement [
 
-	"Function to run upon clicking the &quot;View as Data Table&quot; link in the
-screen reader region.
-By default Highcharts will insert and set focus to a data table
-representation of the chart.
+	"Link the chart to an HTML element describing the contents of the
+chart.
+It is always recommended to describe charts using visible text, to
+improve SEO as well as accessibility for users with disabilities.
+This option lets an HTML element with a description be linked to the
+chart, so that screen reader users can connect the two.
+By setting this option to a string, Highcharts runs the string as an
+HTML selector query on the entire document. If there is only a single
+match, this element is linked to the chart. The content of the linked
+element will be included in the chart description for screen reader
+users.
+By default, the chart looks for an adjacent sibling element with the
+highcharts-description class.
+The feature can be disabled by setting the option to an empty string,
+or overridden by providing the
+accessibility.description option.
+Alternatively, the HTML element to link can be passed in directly as
+an HTML node.
+If you need the description to be part of the exported image,
+consider using the caption feature.
+If you need the description to be hidden visually, use the
+accessibility.description option.
+Defaults to *[data-highcharts-chart='{index}'] + .highcharts-description."
+
+	configurationOptions at: 'linkedDescription' put: aStringOrHighchartsHTMLDOMElement
+]
+
+{ #category : #accessing }
+HighchartsAccessibility >> point [
+
+	"Options for descriptions of individual data points.
 "
-
-	configurationOptions at: 'onTableAnchorClick' put: aHighchartsScreenReaderClickCallbackFunction
+	^configurationOptions at: 'point' ifAbsentPut: [HighchartsAccessibilityPoint new]
 ]
 
 { #category : #accessing }
-HighchartsAccessibility >> pointDateFormat: aString [
+HighchartsAccessibility >> screenReaderSection [
 
-	"Date format to use for points on datetime axes when describing them
-to screen reader users.
-Defaults to the same format as in tooltip.
-For an overview of the replacement codes, see
-dateFormat.
+	"Accessibility options for the screen reader information sections
+added before and after the chart.
 "
-
-	configurationOptions at: 'pointDateFormat' put: aString
+	^configurationOptions at: 'screenReaderSection' ifAbsentPut: [HighchartsAccessibilityScreenReaderSection new]
 ]
 
 { #category : #accessing }
-HighchartsAccessibility >> pointDateFormatter: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint [
+HighchartsAccessibility >> series [
 
-	"Formatter function to determine the date/time format used with
-points on datetime axes when describing them to screen reader users.
-Receives one argument, point, referring to the point to describe.
-Should return a date format string compatible with
-dateFormat.
+	"Accessibility options global to all data series. Individual series
+can also have specific accessibility options
+set.
 "
-
-	configurationOptions at: 'pointDateFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> pointDescriptionFormatter: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint [
-
-	"Formatter function to use instead of the default for point
-descriptions.
-Receives one argument, point, referring to the point to describe.
-Should return a string with the description of the point for a screen
-reader user. If false is returned, the default formatter will be
-used for that point.
-"
-
-	configurationOptions at: 'pointDescriptionFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> pointDescriptionThreshold: aBooleanOrnumber [
-
-	"When a series contains more points than this, we no longer expose
-information about individual points to screen readers.
-Set to false to disable.
-Defaults to 500."
-
-	configurationOptions at: 'pointDescriptionThreshold' put: aBooleanOrnumber
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> pointValueDecimals: aString [
-
-	"Decimals to use for the values in the point descriptions. Uses
-tooltip.valueDecimals if not defined.
-"
-
-	configurationOptions at: 'pointValueDecimals' put: aString
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> pointValuePrefix: aString [
-
-	"Prefix to add to the values in the point descriptions. Uses
-tooltip.valuePrefix if not defined.
-"
-
-	configurationOptions at: 'pointValuePrefix' put: aString
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> pointValueSuffix: aString [
-
-	"Suffix to add to the values in the point descriptions. Uses
-tooltip.valueSuffix if not defined.
-"
-
-	configurationOptions at: 'pointValueSuffix' put: aString
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> screenReaderSectionFormatter: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsChart [
-
-	"A formatter function to create the HTML contents of the hidden screen
-reader information region. Receives one argument, chart, referring
-to the chart object. Should return a string with the HTML content
-of the region. By default this returns an automatic description of
-the chart.
-The button to view the chart as a data table will be added
-automatically after the custom HTML content if enabled.
-Defaults to undefined."
-
-	configurationOptions at: 'screenReaderSectionFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsChart
-]
-
-{ #category : #accessing }
-HighchartsAccessibility >> seriesDescriptionFormatter: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsSeries [
-
-	"Formatter function to use instead of the default for series
-descriptions. Receives one argument, series, referring to the
-series to describe. Should return a string with the description of
-the series for a screen reader user. If false is returned, the
-default formatter will be used for that series.
-"
-
-	configurationOptions at: 'seriesDescriptionFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsSeries
+	^configurationOptions at: 'series' ifAbsentPut: [HighchartsAccessibilitySeries new]
 ]
 
 { #category : #accessing }

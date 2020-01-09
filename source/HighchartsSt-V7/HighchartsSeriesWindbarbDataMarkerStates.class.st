@@ -16,12 +16,6 @@ HighchartsSeriesWindbarbDataMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesWindbarbDataMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesWindbarbDataMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesWindbarbDataMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

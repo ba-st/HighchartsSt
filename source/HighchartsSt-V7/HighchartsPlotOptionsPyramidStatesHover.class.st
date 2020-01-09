@@ -17,12 +17,12 @@ HighchartsPlotOptionsPyramidStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsPyramidStatesHover >> borderColor: aHighchartsColorString [
+HighchartsPlotOptionsPyramidStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }

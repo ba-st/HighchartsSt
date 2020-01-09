@@ -16,12 +16,6 @@ HighstockSeriesAbandsMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockSeriesAbandsMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockSeriesAbandsMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockSeriesAbandsMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

@@ -62,7 +62,7 @@ Defaults to .."
 { #category : #accessing }
 HighstockLang >> downloadCSV: aString [
 
-	"Export-data module only. The text for the menu item.
+	"The text for the menu item.
 Defaults to Download CSV."
 
 	configurationOptions at: 'downloadCSV' put: aString
@@ -107,7 +107,7 @@ Defaults to Download SVG vector image."
 { #category : #accessing }
 HighstockLang >> downloadXLS: aString [
 
-	"Export-data module only. The text for the menu item.
+	"The text for the menu item.
 Defaults to Download XLS."
 
 	configurationOptions at: 'downloadXLS' put: aString
@@ -158,8 +158,7 @@ loaded.
 { #category : #accessing }
 HighstockLang >> noData: aString [
 
-	"The text to display when the chart contains no data. Requires the
-no-data module, see noData.
+	"The text to display when the chart contains no data.
 Defaults to No data to display."
 
 	configurationOptions at: 'noData' put: aString
@@ -191,7 +190,7 @@ Defaults to ['k', 'M', 'G', 'T', 'P', 'E']."
 { #category : #accessing }
 HighstockLang >> openInCloud: aString [
 
-	"Export-data module only. The text for the menu item.
+	"The text for the menu item.
 Defaults to Open in Highcharts Cloud."
 
 	configurationOptions at: 'openInCloud' put: aString
@@ -298,7 +297,7 @@ Defaults to \u0020."
 { #category : #accessing }
 HighstockLang >> viewData: aString [
 
-	"Export-data module only. The text for the menu item.
+	"The text for the menu item.
 Defaults to View data table."
 
 	configurationOptions at: 'viewData' put: aString

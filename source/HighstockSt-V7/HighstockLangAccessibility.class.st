@@ -46,13 +46,6 @@ HighstockLangAccessibility >> chartContainerLabel: aString [
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> chartHeading: aString [
-
-
-	configurationOptions at: 'chartHeading' put: aString
-]
-
-{ #category : #accessing }
 HighstockLangAccessibility >> chartTypes [
 
 	"Chart type description strings. This is added to the chart
@@ -64,6 +57,13 @@ series in the chart, and one for multiple series of the same
 type.
 "
 	^configurationOptions at: 'chartTypes' ifAbsentPut: [HighstockLangAccessibilityChartTypes new]
+]
+
+{ #category : #accessing }
+HighstockLangAccessibility >> credits: aString [
+
+
+	configurationOptions at: 'credits' put: aString
 ]
 
 { #category : #accessing }
@@ -89,66 +89,37 @@ HighstockLangAccessibility >> exporting [
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> legendItem: aString [
+HighstockLangAccessibility >> graphicContainerLabel: aString [
 
+	"Set a label on the container wrapping the SVG.
+Defaults to ."
 
-	configurationOptions at: 'legendItem' put: aString
+	configurationOptions at: 'graphicContainerLabel' put: aString
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> legendLabel: aString [
+HighstockLangAccessibility >> legend [
 
-
-	configurationOptions at: 'legendLabel' put: aString
+	"Language options for accessibility of the legend.
+"
+	^configurationOptions at: 'legend' ifAbsentPut: [HighstockLangAccessibilityLegend new]
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> mapZoomIn: aString [
+HighstockLangAccessibility >> rangeSelector [
 
-
-	configurationOptions at: 'mapZoomIn' put: aString
+	"Range selector language options for accessibility.
+"
+	^configurationOptions at: 'rangeSelector' ifAbsentPut: [HighstockLangAccessibilityRangeSelector new]
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> mapZoomOut: aString [
+HighstockLangAccessibility >> screenReaderSection [
 
-
-	configurationOptions at: 'mapZoomOut' put: aString
-]
-
-{ #category : #accessing }
-HighstockLangAccessibility >> rangeSelectorButton: aString [
-
-
-	configurationOptions at: 'rangeSelectorButton' put: aString
-]
-
-{ #category : #accessing }
-HighstockLangAccessibility >> rangeSelectorMaxInput: aString [
-
-
-	configurationOptions at: 'rangeSelectorMaxInput' put: aString
-]
-
-{ #category : #accessing }
-HighstockLangAccessibility >> rangeSelectorMinInput: aString [
-
-
-	configurationOptions at: 'rangeSelectorMinInput' put: aString
-]
-
-{ #category : #accessing }
-HighstockLangAccessibility >> resetZoomButton: aString [
-
-
-	configurationOptions at: 'resetZoomButton' put: aString
-]
-
-{ #category : #accessing }
-HighstockLangAccessibility >> screenReaderRegionLabel: aString [
-
-
-	configurationOptions at: 'screenReaderRegionLabel' put: aString
+	"Language options for the screen reader information sections added
+before and after the charts.
+"
+	^configurationOptions at: 'screenReaderSection' ifAbsentPut: [HighstockLangAccessibilityScreenReaderSection new]
 ]
 
 { #category : #accessing }
@@ -172,15 +143,6 @@ when these series types are used.
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> svgContainerEnd: aString [
-
-	"Label for the end of the chart. Announced by screen readers.
-Defaults to End of interactive chart."
-
-	configurationOptions at: 'svgContainerEnd' put: aString
-]
-
-{ #category : #accessing }
 HighstockLangAccessibility >> svgContainerLabel: aString [
 
 
@@ -200,10 +162,11 @@ Defaults to ."
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> tableSummary: aString [
+HighstockLangAccessibility >> table [
 
-
-	configurationOptions at: 'tableSummary' put: aString
+	"Accessibility language options for the data table.
+"
+	^configurationOptions at: 'table' ifAbsentPut: [HighstockLangAccessibilityTable new]
 ]
 
 { #category : #accessing }
@@ -220,8 +183,9 @@ Defaults to ,."
 ]
 
 { #category : #accessing }
-HighstockLangAccessibility >> viewAsDataTable: aString [
+HighstockLangAccessibility >> zoom [
 
-
-	configurationOptions at: 'viewAsDataTable' put: aString
+	"Chart and map zoom accessibility language options.
+"
+	^configurationOptions at: 'zoom' ifAbsentPut: [HighstockLangAccessibilityZoom new]
 ]

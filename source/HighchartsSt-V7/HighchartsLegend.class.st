@@ -46,21 +46,21 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsLegend >> backgroundColor: aHighchartsColorString [
+HighchartsLegend >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color of the legend.
 "
 
-	configurationOptions at: 'backgroundColor' put: aHighchartsColorString
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsLegend >> borderColor: aHighchartsColorString [
+HighchartsLegend >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the drawn border around the legend.
 Defaults to #999999."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -89,7 +89,6 @@ presents the scale of the bubble series. Individual bubble ranges
 can be defined by user or calculated from series. In the case of
 automatically calculated ranges, a 1px margin of error is
 permitted.
-Requires highcharts-more.js.
 "
 	^configurationOptions at: 'bubbleLegend' ifAbsentPut: [HighchartsLegendBubbleLegend new]
 ]
@@ -118,12 +117,13 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsLegend >> itemCheckboxStyle [
+HighchartsLegend >> itemCheckboxStyle: aHighchartsCSSObject [
 
 	"Default styling for the checkbox next to a legend item when
 showCheckbox is true.
 Defaults to {'width': '13px', 'height': '13px', 'position':'absolute'}."
-	^configurationOptions at: 'itemCheckboxStyle' ifAbsentPut: [HighchartsLegendItemCheckboxStyle new]
+
+	configurationOptions at: 'itemCheckboxStyle' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -178,12 +178,16 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsLegend >> itemStyle: aCssDeclarationBlock [
+HighchartsLegend >> itemStyle: aHighchartsCSSObject [
 
-	"CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default textOverflow property makes long texts truncate. Set it to null to wrap text instead. A width property can be added to control the text width. 
-Defaults to { 'color': '#333333', 'cursor': 'pointer', 'fontSize': '12px', 'fontWeight': 'bold', 'textOverflow': 'ellipsis' }."
+	"CSS styles for each legend item. Only a subset of CSS is supported,
+notably those options related to text. The default textOverflow
+property makes long texts truncate. Set it to undefined to wrap
+text instead. A width property can be added to control the text
+width.
+Defaults to {'color': '#333333', 'cursor': 'pointer', 'fontSize': '12px', 'fontWeight': 'bold', 'textOverflow': 'ellipsis'}."
 
-	configurationOptions at: 'itemStyle' put: aCssDeclarationBlock
+	configurationOptions at: 'itemStyle' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }
@@ -210,14 +214,14 @@ Defaults to {name}."
 ]
 
 { #category : #accessing }
-HighchartsLegend >> labelFormatter: anObject [
+HighchartsLegend >> labelFormatter: aHighchartsFormatterCallbackFunctionOfPointOrSeries [
 
 	"Callback function to format each of the series´ labels. The this
 keyword refers to the series object, or the point object in case of
 pie charts. By default the series or point name is printed.
 "
 
-	configurationOptions at: 'labelFormatter' put: anObject
+	configurationOptions at: 'labelFormatter' put: aHighchartsFormatterCallbackFunctionOfPointOrSeries
 ]
 
 { #category : #accessing }
@@ -237,9 +241,9 @@ Defaults to horizontal."
 HighchartsLegend >> lineHeight: aNumber [
 
 	"Line height for the legend items. Deprecated as of 2.1. Instead,
-the line height for each item can be set using itemStyle.lineHeight,
-and the padding between items using itemMarginTop and
-itemMarginBottom.
+the line height for each item can be set using
+itemStyle.lineHeight, and the padding between items using
+itemMarginTop and itemMarginBottom.
 Defaults to 16."
 
 	configurationOptions at: 'lineHeight' put: aNumber

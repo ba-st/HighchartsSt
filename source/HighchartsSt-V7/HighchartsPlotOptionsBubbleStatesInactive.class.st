@@ -10,13 +10,16 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsBubbleStatesInactive >> animation [
 
+	"The animation for entering the inactive state.
+"
 	^configurationOptions at: 'animation' ifAbsentPut: [HighchartsPlotOptionsBubbleStatesInactiveAnimation new]
 ]
 
 { #category : #accessing }
 HighchartsPlotOptionsBubbleStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area).
+	"Opacity of series elements (dataLabels, line, area). Set to 1
+to disable inactive state.
 Defaults to 0.2."
 
 	configurationOptions at: 'opacity' put: aNumber

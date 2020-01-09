@@ -200,6 +200,21 @@ HighstockSeriesColumnpyramidTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramid new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'columnpyramid';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesColumnpyramidTest >> testColors [
 
 	| component javascript expectedConfiguration |

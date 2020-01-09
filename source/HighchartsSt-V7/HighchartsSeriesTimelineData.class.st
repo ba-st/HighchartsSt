@@ -24,6 +24,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesTimelineData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesTimelineDataAccessibility new]
 ]
 
@@ -63,13 +65,12 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesTimelineData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesTimelineData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesTimelineDataDataLabels new]
 ]
 
 { #category : #accessing }
@@ -86,7 +87,6 @@ HighchartsSeriesTimelineData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesTimelineDataDragDrop new]
 ]
@@ -104,7 +104,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesTimelineData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject

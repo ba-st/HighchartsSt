@@ -16,12 +16,6 @@ HighstockPlotOptionsPivotpointsMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsPivotpointsMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsPivotpointsMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsPivotpointsMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

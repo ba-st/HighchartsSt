@@ -9,37 +9,37 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsLegendBubbleLegendRanges >> borderColor: aHighchartsColorString [
+HighchartsLegendBubbleLegendRanges >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border for individual range.
-"
+Defaults to undefined."
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
 HighchartsLegendBubbleLegendRanges >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the bubble for individual range.
-"
+Defaults to undefined."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsLegendBubbleLegendRanges >> connectorColor: aHighchartsColorString [
+HighchartsLegendBubbleLegendRanges >> connectorColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the connector for individual range.
-"
+Defaults to undefined."
 
-	configurationOptions at: 'connectorColor' put: aHighchartsColorString
+	configurationOptions at: 'connectorColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
-HighchartsLegendBubbleLegendRanges >> value: anObject [
+HighchartsLegendBubbleLegendRanges >> value: aNumber [
 
 	"Range size value, similar to bubble Z data.
-"
+Defaults to undefined."
 
-	configurationOptions at: 'value' put: anObject
+	configurationOptions at: 'value' put: aNumber
 ]

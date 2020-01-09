@@ -33,6 +33,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesSolidgaugeData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesSolidgaugeDataAccessibility new]
 ]
 
@@ -72,20 +74,19 @@ by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesSolidgaugeData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesSolidgaugeData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesSolidgaugeDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesSolidgaugeData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -96,7 +97,6 @@ HighchartsSeriesSolidgaugeData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesSolidgaugeDataDragDrop new]
 ]
@@ -104,7 +104,7 @@ Requires the draggable-points module.
 { #category : #accessing }
 HighchartsSeriesSolidgaugeData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -144,8 +144,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesSolidgaugeData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

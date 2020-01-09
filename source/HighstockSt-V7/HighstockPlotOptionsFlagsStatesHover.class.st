@@ -17,13 +17,13 @@ HighstockPlotOptionsFlagsStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsFlagsStatesHover >> borderColor: aHighchartsColorString [
+HighstockPlotOptionsFlagsStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"A specific border color for the hovered point. Defaults to
 inherit the normal state border color.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -77,10 +77,10 @@ Defaults to #ccd6eb."
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsFlagsStatesHover >> lineColor: aHighchartsColorString [
+HighstockPlotOptionsFlagsStatesHover >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the line/border of the flag.
 Defaults to #000000."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorString
+	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]

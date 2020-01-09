@@ -8,12 +8,12 @@ Class {
 }
 
 { #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsConnector >> fill: aColor [
+HighstockAnnotationsVerticalLineTypeOptionsConnector >> fill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the shape´s fill.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'fill' put: aColor
+	configurationOptions at: 'fill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -34,12 +34,12 @@ Defaults to 2."
 ]
 
 { #category : #accessing }
-HighstockAnnotationsVerticalLineTypeOptionsConnector >> stroke: aColor [
+HighstockAnnotationsVerticalLineTypeOptionsConnector >> stroke: aHighchartsColorString [
 
 	"The color of the shape´s stroke.
 Defaults to rgba(0, 0, 0, 0.75)."
 
-	configurationOptions at: 'stroke' put: aColor
+	configurationOptions at: 'stroke' put: aHighchartsColorString
 ]
 
 { #category : #accessing }

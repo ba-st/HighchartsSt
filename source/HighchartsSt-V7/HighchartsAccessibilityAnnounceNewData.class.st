@@ -13,7 +13,7 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsAccessibilityAnnounceNewData >> announcementFormatter: aFunction [
+HighchartsAccessibilityAnnounceNewData >> announcementFormatter: aHighchartsAccessibilityAnnouncementFormatter [
 
 	"Optional formatter callback for the announcement. Receives
 up to three arguments. The first argument is always an array
@@ -29,9 +29,9 @@ new point.
 The function should return a string with the text to announce
 to the user. Return empty string to not announce anything.
 Return false to use the default announcement format.
-Defaults to undefined."
+"
 
-	configurationOptions at: 'announcementFormatter' put: aFunction
+	configurationOptions at: 'announcementFormatter' put: aHighchartsAccessibilityAnnouncementFormatter
 ]
 
 { #category : #accessing }

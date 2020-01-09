@@ -30,6 +30,8 @@ Class {
 { #category : #accessing }
 HighchartsSeriesTreemapData >> accessibility [
 
+	"Accessibility options for a data point.
+"
 	^configurationOptions at: 'accessibility' ifAbsentPut: [HighchartsSeriesTreemapDataAccessibility new]
 ]
 
@@ -79,20 +81,19 @@ scale of the colorAxis.
 ]
 
 { #category : #accessing }
-HighchartsSeriesTreemapData >> dataLabels: aHighchartsDataLabelsOptionsObject [
+HighchartsSeriesTreemapData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
 the ones for plotOptions.series.dataLabels.
 "
-
-	configurationOptions at: 'dataLabels' put: aHighchartsDataLabelsOptionsObject
+	^configurationOptions at: 'dataLabels' ifAbsentPut: [HighchartsSeriesTreemapDataDataLabels new]
 ]
 
 { #category : #accessing }
 HighchartsSeriesTreemapData >> description: aString [
 
 	"A description of the point to add to the screen reader information
-about the point. Requires the Accessibility module.
+about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -103,7 +104,6 @@ HighchartsSeriesTreemapData >> dragDrop [
 
 	"Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 	^configurationOptions at: 'dragDrop' ifAbsentPut: [HighchartsSeriesTreemapDataDragDrop new]
 ]
@@ -121,7 +121,7 @@ use for a drilldown for this point.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> events: anObject [
 
-	"Individual point events
+	"The individual point events.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -151,8 +151,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> name: aString [
 
-	"The name of the point as shown in the legend, tooltip, dataLabels
-etc.
+	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
 "
 
 	configurationOptions at: 'name' put: aString

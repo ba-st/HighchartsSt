@@ -271,6 +271,20 @@ HighchartsChartTest >> testMarginTop [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsChartTest >> testNumberFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChart new.
+	component numberFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'numberFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartTest >> testPanKey [
 
 	| component javascript expectedConfiguration |

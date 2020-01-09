@@ -17,12 +17,12 @@ HighstockPlotOptionsVectorStatesHover >> animation [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsVectorStatesHover >> borderColor: aHighchartsColorString [
+HighstockPlotOptionsVectorStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the point in this state.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorString
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -92,7 +92,8 @@ to increase the linewidth from normal state.
 { #category : #accessing }
 HighstockPlotOptionsVectorStatesHover >> lineWidthPlus: aNumber [
 
-	"Additonal line width for the vector errors when they are hovered.
+	"Additonal line width for the vector errors when they are
+hovered.
 Defaults to 1."
 
 	configurationOptions at: 'lineWidthPlus' put: aNumber

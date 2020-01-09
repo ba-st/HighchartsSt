@@ -16,12 +16,6 @@ HighstockPlotOptionsLineMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsLineMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsLineMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsLineMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

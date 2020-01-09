@@ -12,12 +12,6 @@ HighstockAnnotationsFibonacciTypeOptionsPoints >> controlPoint: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsFibonacciTypeOptionsPoints >> label [
-
-	^configurationOptions at: 'label' ifAbsentPut: [HighstockAnnotationsFibonacciTypeOptionsPointsLabel new]
-]
-
-{ #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsPoints >> x: aNumber [
 
 	"The x position of the point.

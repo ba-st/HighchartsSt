@@ -16,12 +16,6 @@ HighchartsSeriesWaterfallMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighchartsSeriesWaterfallMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighchartsSeriesWaterfallMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighchartsSeriesWaterfallMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

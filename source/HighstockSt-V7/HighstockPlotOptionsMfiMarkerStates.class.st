@@ -16,12 +16,6 @@ HighstockPlotOptionsMfiMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsMfiMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsMfiMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsMfiMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

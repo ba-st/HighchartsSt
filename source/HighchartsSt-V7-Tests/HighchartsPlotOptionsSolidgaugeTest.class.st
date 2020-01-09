@@ -327,6 +327,20 @@ HighchartsPlotOptionsSolidgaugeTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testInnerRadius [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component innerRadius: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'innerRadius' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSolidgaugeTest >> testJoinBy [
 
 	| component javascript expectedConfiguration |
@@ -504,6 +518,20 @@ HighchartsPlotOptionsSolidgaugeTest >> testPointStart [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'pointStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testRadius [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component radius: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'radius' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

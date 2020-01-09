@@ -75,6 +75,20 @@ HighstockYAxisCrosshairLabelTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockYAxisCrosshairLabelTest >> testEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxisCrosshairLabel new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockYAxisCrosshairLabelTest >> testFormat [
 
 	| component javascript expectedConfiguration |

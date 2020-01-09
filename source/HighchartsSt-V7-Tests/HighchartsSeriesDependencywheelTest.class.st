@@ -215,6 +215,21 @@ HighchartsSeriesDependencywheelTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelTest >> testColorKey [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheel new.
+	component colorKey: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'dependencywheel';
+		at: 'colorKey' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesDependencywheelTest >> testColors [
 
 	| component javascript expectedConfiguration |
@@ -675,6 +690,21 @@ HighchartsSeriesDependencywheelTest >> testMapData [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'dependencywheel';
 		at: 'mapData' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelTest >> testMinLinkWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheel new.
+	component minLinkWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'dependencywheel';
+		at: 'minLinkWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

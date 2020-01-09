@@ -37,6 +37,16 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
+HighchartsNavigationAnnotationsOptionsShapeOptions >> snap: aNumber [
+
+	"Defines additional snapping area around an annotation
+making this annotation to focus. Defined in pixels.
+Defaults to 2."
+
+	configurationOptions at: 'snap' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapeOptions >> stroke: aHighchartsColorString [
 
 	"The color of the shape´s stroke.

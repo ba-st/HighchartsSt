@@ -29,17 +29,16 @@ time range and the current data grouping.
 The default formats are:
 {
     millisecond: [
-        'A, b e, H:M:S.L', 'A, b e, H:M:S.L', '-H:M:S.L'
+        ´A, b e, H:M:S.L´, ´A, b e, H:M:S.L´, ´-H:M:S.L´
     ],
-    second: ['A, b e, H:M:S', 'A, b e, H:M:S', '-H:M:S'],
-    minute: ['A, b e, H:M', 'A, b e, H:M', '-H:M'],
-    hour: ['A, b e, H:M', 'A, b e, H:M', '-H:M'],
-    day: ['A, b e, Y', 'A, b e', '-A, b e, Y'],
-    week: ['Week from A, b e, Y', 'A, b e', '-A, b e, Y'],
-    month: ['B Y', 'B', '-B Y'],
-    year: ['Y', 'Y', '-Y']
+    second: [´A, b e, H:M:S´, ´A, b e, H:M:S´, ´-H:M:S´],
+    minute: [´A, b e, H:M´, ´A, b e, H:M´, ´-H:M´],
+    hour: [´A, b e, H:M´, ´A, b e, H:M´, ´-H:M´],
+    day: [´A, b e, Y´, ´A, b e´, ´-A, b e, Y´],
+    week: [´Week from A, b e, Y´, ´A, b e´, ´-A, b e, Y´],
+    month: [´B Y´, ´B´, ´-B Y´],
+    year: [´Y´, ´Y´, ´-Y´]
 }
-
 For each of these array definitions, the first item is the format
 used when the active time span is one unit. For instance, if the
 current data applies to one week, the first item of the week array
@@ -117,28 +116,28 @@ grouped to. Each array item is an array where the first value is
 the time unit and the second value another array of allowed multiples.
 Defaults to:
 units: [[
-    'millisecond', // unit name
+    ´millisecond´, // unit name
     [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
 ], [
-    'second',
+    ´second´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'minute',
+    ´minute´,
     [1, 2, 5, 10, 15, 30]
 ], [
-    'hour',
+    ´hour´,
     [1, 2, 3, 4, 6, 8, 12]
 ], [
-    'day',
+    ´day´,
     [1]
 ], [
-    'week',
+    ´week´,
     [1]
 ], [
-    'month',
+    ´month´,
     [1, 3, 6]
 ], [
-    'year',
+    ´year´,
     null
 ]]
 "

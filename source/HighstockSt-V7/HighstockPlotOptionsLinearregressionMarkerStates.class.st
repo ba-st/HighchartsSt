@@ -16,12 +16,6 @@ HighstockPlotOptionsLinearregressionMarkerStates >> hover [
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsLinearregressionMarkerStates >> inactive [
-
-	^configurationOptions at: 'inactive' ifAbsentPut: [HighstockPlotOptionsLinearregressionMarkerStatesInactive new]
-]
-
-{ #category : #accessing }
 HighstockPlotOptionsLinearregressionMarkerStates >> normal [
 
 	"The normal state of a single point marker. Currently only

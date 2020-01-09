@@ -19,6 +19,20 @@ HighchartsLangAccessibilitySeriesTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsLangAccessibilitySeriesTest >> testNullPointValue [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLangAccessibilitySeries new.
+	component nullPointValue: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'nullPointValue' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLangAccessibilitySeriesTest >> testXAxisDescription [
 
 	| component javascript expectedConfiguration |
