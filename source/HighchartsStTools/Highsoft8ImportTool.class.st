@@ -2,7 +2,7 @@
 I will take the API descrition in JSON and generate all the wrapper classes
 "
 Class {
-	#name : #Highsoft7ImportTool,
+	#name : #Highsoft8ImportTool,
 	#superclass : #Object,
 	#instVars : [
 		'pathString'
@@ -11,24 +11,24 @@ Class {
 }
 
 { #category : #'instance creation' }
-Highsoft7ImportTool class >> importingFrom: anAPIDescriptionPath [
+Highsoft8ImportTool class >> importingFrom: anAPIDescriptionPath [
 
 	^ self new initializeImportingFrom: anAPIDescriptionPath
 ]
 
 { #category : #execution }
-Highsoft7ImportTool >> execute [
+Highsoft8ImportTool >> execute [
 
 	[ | importer jsonToImport |
 
 	jsonToImport := STONJSON fromStream: pathString asFileReference readStream.
-	importer := Highcharts7DumpImporter importingElementsIn: jsonToImport.
+	importer := Highcharts8DumpImporter importingElementsIn: jsonToImport.
 	importer executeChanges.
-	( Highsoft7TestGenerator definedIn: 'HighchartsSt-V7' withSeriesNamed: 'HighchartsSeries' )
+	( Highsoft8TestGenerator definedIn: 'HighchartsSt-V7' withSeriesNamed: 'HighchartsSeries' )
 		generateTests.
-	importer := Highstock7DumpImporter importingElementsIn: jsonToImport.
+	importer := Highstock8DumpImporter importingElementsIn: jsonToImport.
 	importer executeChanges.
-	( Highsoft7TestGenerator definedIn: 'HighstockSt-V7' withSeriesNamed: 'HighstockSeries' )
+	( Highsoft8TestGenerator definedIn: 'HighstockSt-V7' withSeriesNamed: 'HighstockSeries' )
 		generateTests.
 	'Highcharts and Highstock import finished!' inspect
 	]
@@ -37,7 +37,7 @@ Highsoft7ImportTool >> execute [
 ]
 
 { #category : #initialization }
-Highsoft7ImportTool >> initializeImportingFrom: anAPIDescriptionPath [
+Highsoft8ImportTool >> initializeImportingFrom: anAPIDescriptionPath [
 
 	pathString := anAPIDescriptionPath
 ]

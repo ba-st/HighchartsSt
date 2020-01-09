@@ -4,7 +4,7 @@ https://api.highcharts.com/highcharts/dump.json
 Each subclass should work with a specific product.
 "
 Class {
-	#name : #Highsoft7DumpImporter,
+	#name : #Highsoft8DumpImporter,
 	#superclass : #Object,
 	#instVars : [
 		'packageName',
@@ -21,25 +21,25 @@ Class {
 }
 
 { #category : #'instance creation' }
-Highsoft7DumpImporter class >> importingElementsIn: aJson [
+Highsoft8DumpImporter class >> importingElementsIn: aJson [
 
 	^ self new initializeImportingElementsIn: aJson
 ]
 
 { #category : #'instance creation' }
-Highsoft7DumpImporter class >> importingFrom: aStream [
+Highsoft8DumpImporter class >> importingFrom: aStream [
 
 	^ self importingElementsIn: (STONJSON fromStream: aStream)
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> abstractComponentClass [
+Highsoft8DumpImporter >> abstractComponentClass [
 
 	^ HighchartsComponent
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> addClassChangeToCreate: aClassName [
+Highsoft8DumpImporter >> addClassChangeToCreate: aClassName [
 
 	^ RBAddClassChange
 		definition:
@@ -54,7 +54,7 @@ Highsoft7DumpImporter >> addClassChangeToCreate: aClassName [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> addMethodChangeToAccess: anElement representedBy: aClassName [
+Highsoft8DumpImporter >> addMethodChangeToAccess: anElement representedBy: aClassName [
 
 	^ RBAddMethodChange
 		compile: (self sourceCodeToAccess: anElement representedBy: aClassName)
@@ -63,7 +63,7 @@ Highsoft7DumpImporter >> addMethodChangeToAccess: anElement representedBy: aClas
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> addMethodChangeToConfigure: anElement [
+Highsoft8DumpImporter >> addMethodChangeToConfigure: anElement [
 
 	^ RBAddMethodChange
 		compile: (self sourceCodeToConfigure: anElement)
@@ -72,7 +72,7 @@ Highsoft7DumpImporter >> addMethodChangeToConfigure: anElement [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> addMethodChangeToInitializeTypeOf: anElement for: aSelector [
+Highsoft8DumpImporter >> addMethodChangeToInitializeTypeOf: anElement for: aSelector [
 
 	^ RBAddMethodChange
 		compile: (self sourceCodeToInitializeTypeFor: aSelector)
@@ -81,7 +81,7 @@ Highsoft7DumpImporter >> addMethodChangeToInitializeTypeOf: anElement for: aSele
 ]
 
 { #category : #'private - custom changes' }
-Highsoft7DumpImporter >> addSeriesTypeSelectorOf: definedClass to: selectorsOfInterest [
+Highsoft8DumpImporter >> addSeriesTypeSelectorOf: definedClass to: selectorsOfInterest [
 
 	(definedClass name beginsWith: self seriesClassName)
 		and: [ (definedClass includesSelector: #data)
@@ -91,7 +91,7 @@ Highsoft7DumpImporter >> addSeriesTypeSelectorOf: definedClass to: selectorsOfIn
 ]
 
 { #category : #'private - argument type' }
-Highsoft7DumpImporter >> argumentTypeFrom: anElement [
+Highsoft8DumpImporter >> argumentTypeFrom: anElement [
 	^ anElement
 		at: 'returnType'
 		ifPresent: [ :returnType | 
@@ -102,31 +102,31 @@ Highsoft7DumpImporter >> argumentTypeFrom: anElement [
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> classNameFor: anElement accessedFrom: aClassName [
+Highsoft8DumpImporter >> classNameFor: anElement accessedFrom: aClassName [
 
 	^ '<1s><2s>' expandMacrosWith: aClassName with: (self selectorFrom: anElement) capitalized
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString [
+Highsoft8DumpImporter >> classNameInvolvedIn: anElement expandedWith: aString [
 
 	self subclassResponsibility 
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> classNameInvolvedInChangeToAccess: anElement [
+Highsoft8DumpImporter >> classNameInvolvedInChangeToAccess: anElement [
 
 	self subclassResponsibility
 ]
 
 { #category : #'private - argument type' }
-Highsoft7DumpImporter >> collectionTypeRegex [
+Highsoft8DumpImporter >> collectionTypeRegex [
 
 	^ '\.<[A-Za-z]+>' asRegex
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> commentAboutDefaultFor: aValue [
+Highsoft8DumpImporter >> commentAboutDefaultFor: aValue [
 
 	^ '
 	
@@ -134,19 +134,19 @@ Highsoft7DumpImporter >> commentAboutDefaultFor: aValue [
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> commentChangeFor: aString withClassDefinedBy: aChange [
+Highsoft8DumpImporter >> commentChangeFor: aString withClassDefinedBy: aChange [
 
 	^ RBCommentChange comment: aString in: (RBClass named: aChange changeClassName)
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> componentClassNameFor: parent [
+Highsoft8DumpImporter >> componentClassNameFor: parent [
 
 	self subclassResponsibility
 ]
 
 { #category : #'private - argument type' }
-Highsoft7DumpImporter >> compositeArgumentTypeFrom: aTypeString [
+Highsoft8DumpImporter >> compositeArgumentTypeFrom: aTypeString [
 	| type |
 	type := aTypeString.
 	type := self format: self collectionTypeRegex asCollectionIn: type.
@@ -169,7 +169,7 @@ Highsoft7DumpImporter >> compositeArgumentTypeFrom: aTypeString [
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> defaultValueFrom: anElement [
+Highsoft8DumpImporter >> defaultValueFrom: anElement [
 
 	^ anElement
 		at: 'defaults'
@@ -178,7 +178,7 @@ Highsoft7DumpImporter >> defaultValueFrom: anElement [
 ]
 
 { #category : #'private - argument type' }
-Highsoft7DumpImporter >> descriptiveArgumentFrom: type [
+Highsoft8DumpImporter >> descriptiveArgumentFrom: type [
 
 	^ '<1s><2s>'
 		expandMacrosWith:
@@ -189,13 +189,13 @@ Highsoft7DumpImporter >> descriptiveArgumentFrom: type [
 ]
 
 { #category : #'private - testing' }
-Highsoft7DumpImporter >> doesAddInexistentClass: aChange [
+Highsoft8DumpImporter >> doesAddInexistentClass: aChange [
 
 	^ aChange changeClass isNil
 ]
 
 { #category : #'private - testing' }
-Highsoft7DumpImporter >> doesModifyCurrentSource: aChange [
+Highsoft8DumpImporter >> doesModifyCurrentSource: aChange [
 
 	| changeClass |
 
@@ -205,7 +205,7 @@ Highsoft7DumpImporter >> doesModifyCurrentSource: aChange [
 ]
 
 { #category : #processing }
-Highsoft7DumpImporter >> executeChanges [
+Highsoft8DumpImporter >> executeChanges [
 
 	self generateChangesFromDump.
 	self generateCustomChanges.
@@ -222,7 +222,7 @@ Highsoft7DumpImporter >> executeChanges [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> executeClassChanges [
+Highsoft8DumpImporter >> executeClassChanges [
 
 	self logToOutput: 'Class changes execution - Started'.
 	classChanges keysAndValuesDo: [ :fullName :change | change execute ].
@@ -230,7 +230,7 @@ Highsoft7DumpImporter >> executeClassChanges [
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> executeCommentChanges [
+Highsoft8DumpImporter >> executeCommentChanges [
 
 	self logToOutput: 'Comment changes execution - Started'.
 	classCommentChanges
@@ -242,7 +242,7 @@ Highsoft7DumpImporter >> executeCommentChanges [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> executeMethodChanges [
+Highsoft8DumpImporter >> executeMethodChanges [
 
 	self logToOutput: 'Method changes execution - Started'.
 	methodChanges keysAndValuesDo: [ :fullName :change | change execute ].
@@ -250,7 +250,7 @@ Highsoft7DumpImporter >> executeMethodChanges [
 ]
 
 { #category : #'private - argument type' }
-Highsoft7DumpImporter >> format: aRegularExpression asCollectionIn: aTypeString [
+Highsoft8DumpImporter >> format: aRegularExpression asCollectionIn: aTypeString [
 
 	| type |
 
@@ -263,13 +263,13 @@ Highsoft7DumpImporter >> format: aRegularExpression asCollectionIn: aTypeString 
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> fullNameFrom: anElement [
+Highsoft8DumpImporter >> fullNameFrom: anElement [
 
 	^ anElement at: 'fullname'
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateChangesFor: anElement [
+Highsoft8DumpImporter >> generateChangesFor: anElement [
 
 	(anElement at: 'isParent')
 		ifTrue: [ self generateChangesToAccess: anElement ]
@@ -277,7 +277,7 @@ Highsoft7DumpImporter >> generateChangesFor: anElement [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateChangesFromDump [
+Highsoft8DumpImporter >> generateChangesFromDump [
 
 	self logToOutput: 'Change generation - Started'.
 	elements
@@ -292,7 +292,7 @@ Highsoft7DumpImporter >> generateChangesFromDump [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateChangesToAccess: anElement [
+Highsoft8DumpImporter >> generateChangesToAccess: anElement [
 
 	| className |
 
@@ -309,7 +309,7 @@ Highsoft7DumpImporter >> generateChangesToAccess: anElement [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateChangesToConfigure: anElement [
+Highsoft8DumpImporter >> generateChangesToConfigure: anElement [
 
 	self
 		register: (self addMethodChangeToConfigure: anElement)
@@ -318,7 +318,7 @@ Highsoft7DumpImporter >> generateChangesToConfigure: anElement [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateChangesToConfigureDataFor: aSelector [
+Highsoft8DumpImporter >> generateChangesToConfigureDataFor: aSelector [
 
 	| element |
 
@@ -330,7 +330,7 @@ Highsoft7DumpImporter >> generateChangesToConfigureDataFor: aSelector [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateChangesToInitializeTypeFor: aSelector [
+Highsoft8DumpImporter >> generateChangesToInitializeTypeFor: aSelector [
 
 	| element |
 
@@ -344,13 +344,13 @@ Highsoft7DumpImporter >> generateChangesToInitializeTypeFor: aSelector [
 ]
 
 { #category : #'private - custom changes' }
-Highsoft7DumpImporter >> generateCustomChanges [
+Highsoft8DumpImporter >> generateCustomChanges [
 
 	self subclassResponsibility
 ]
 
 { #category : #'private - custom changes' }
-Highsoft7DumpImporter >> generateCustomClassChangeOf: aClassName for: aFullName [
+Highsoft8DumpImporter >> generateCustomClassChangeOf: aClassName for: aFullName [
 
 	self
 		register:
@@ -371,7 +371,7 @@ Highsoft7DumpImporter >> generateCustomClassChangeOf: aClassName for: aFullName 
 ]
 
 { #category : #'private - custom changes' }
-Highsoft7DumpImporter >> generateCustomMethodChangeIn: aClassName with: aSourceCode classifiedAs: aCategory for: aFullName [
+Highsoft8DumpImporter >> generateCustomMethodChangeIn: aClassName with: aSourceCode classifiedAs: aCategory for: aFullName [
 
 	self
 		register:
@@ -386,7 +386,7 @@ Highsoft7DumpImporter >> generateCustomMethodChangeIn: aClassName with: aSourceC
 ]
 
 { #category : #'private - custom changes' }
-Highsoft7DumpImporter >> generateCustomMethodChangeIn: aClassName with: aSourceCode for: aFullName [
+Highsoft8DumpImporter >> generateCustomMethodChangeIn: aClassName with: aSourceCode for: aFullName [
 
 	self
 		generateCustomMethodChangeIn: aClassName
@@ -396,7 +396,7 @@ Highsoft7DumpImporter >> generateCustomMethodChangeIn: aClassName with: aSourceC
 ]
 
 { #category : #'private - custom changes' }
-Highsoft7DumpImporter >> generateCustomSeriesChanges [
+Highsoft8DumpImporter >> generateCustomSeriesChanges [
 
 	self
 		generateCustomMethodChangeIn: self seriesClassName
@@ -408,7 +408,7 @@ Highsoft7DumpImporter >> generateCustomSeriesChanges [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateDeprecationChanges [
+Highsoft8DumpImporter >> generateDeprecationChanges [
 
 	self logToOutput: 'Deprecations generation - Started'.
 	self generateRemoveMethodChanges.
@@ -417,7 +417,7 @@ Highsoft7DumpImporter >> generateDeprecationChanges [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateRemoveClassChanges [
+Highsoft8DumpImporter >> generateRemoveClassChanges [
 
 	deprecatedClasses
 		do:
@@ -425,7 +425,7 @@ Highsoft7DumpImporter >> generateRemoveClassChanges [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateRemoveMethodChanges [
+Highsoft8DumpImporter >> generateRemoveMethodChanges [
 
 	deprecatedSelectorsByClass
 		keysAndValuesDo: [ :theClass :theSelectors | 
@@ -435,7 +435,7 @@ Highsoft7DumpImporter >> generateRemoveMethodChanges [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateRemoveMethodChangesForAll: aSelectorCollection in: aClass [
+Highsoft8DumpImporter >> generateRemoveMethodChangesForAll: aSelectorCollection in: aClass [
 
 	^ aSelectorCollection
 		do: [ :eachSelector | 
@@ -445,7 +445,7 @@ Highsoft7DumpImporter >> generateRemoveMethodChangesForAll: aSelectorCollection 
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> generateSeriesTypesChanges [
+Highsoft8DumpImporter >> generateSeriesTypesChanges [
 
 	| packageSet selectorsOfInterest |
 
@@ -460,7 +460,7 @@ Highsoft7DumpImporter >> generateSeriesTypesChanges [
 ]
 
 { #category : #initialization }
-Highsoft7DumpImporter >> initializeDeprecations [
+Highsoft8DumpImporter >> initializeDeprecations [
 
 	| packageSet |
 
@@ -475,7 +475,7 @@ Highsoft7DumpImporter >> initializeDeprecations [
 ]
 
 { #category : #initialization }
-Highsoft7DumpImporter >> initializeImportingElementsIn: aJson [
+Highsoft8DumpImporter >> initializeImportingElementsIn: aJson [
 
 	elements := aJson.
 	self resetChanges.
@@ -485,19 +485,19 @@ Highsoft7DumpImporter >> initializeImportingElementsIn: aJson [
 ]
 
 { #category : #initialization }
-Highsoft7DumpImporter >> initializeProduct [
+Highsoft8DumpImporter >> initializeProduct [
 
 	self subclassResponsibility
 ]
 
 { #category : #'private - testing' }
-Highsoft7DumpImporter >> isOfInterest: anElement [
+Highsoft8DumpImporter >> isOfInterest: anElement [
 
 	self subclassResponsibility
 ]
 
 { #category : #'private - processing' }
-Highsoft7DumpImporter >> logToOutput: aText [
+Highsoft8DumpImporter >> logToOutput: aText [
 
 	Stdio stdout
 		nextPutAll: ( '<1s> - <2s>' expandMacrosWith: DateAndTime now greaseString with: aText );
@@ -505,19 +505,19 @@ Highsoft7DumpImporter >> logToOutput: aText [
 ]
 
 { #category : #'private - processing' }
-Highsoft7DumpImporter >> markAsIgnored: anElement [
+Highsoft8DumpImporter >> markAsIgnored: anElement [
 
 	^ ignoredElementNames add: (self fullNameFrom: anElement)
 ]
 
 { #category : #'private - processing' }
-Highsoft7DumpImporter >> markAsUsedClassOf: aChange [
+Highsoft8DumpImporter >> markAsUsedClassOf: aChange [
 
 	deprecatedClasses remove: aChange changeClass ifAbsent: [  ]
 ]
 
 { #category : #'private - processing' }
-Highsoft7DumpImporter >> markAsUsedSelectorOf: aChange [
+Highsoft8DumpImporter >> markAsUsedSelectorOf: aChange [
 
 	deprecatedSelectorsByClass
 		at: aChange changeClass
@@ -525,7 +525,7 @@ Highsoft7DumpImporter >> markAsUsedSelectorOf: aChange [
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> methodCommentFrom: anElement [
+Highsoft8DumpImporter >> methodCommentFrom: anElement [
 
 	anElement
 		at: 'description'
@@ -542,7 +542,7 @@ Highsoft7DumpImporter >> methodCommentFrom: anElement [
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> parentClassReferenceIn: anElement [
+Highsoft8DumpImporter >> parentClassReferenceIn: anElement [
 
 	| parentClassName |
 
@@ -551,7 +551,7 @@ Highsoft7DumpImporter >> parentClassReferenceIn: anElement [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> register: aChange asClassChangeFor: anElement [
+Highsoft8DumpImporter >> register: aChange asClassChangeFor: anElement [
 
 	| fullName |
 
@@ -564,7 +564,7 @@ Highsoft7DumpImporter >> register: aChange asClassChangeFor: anElement [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> register: aChange asMethodChangeFor: anElement [
+Highsoft8DumpImporter >> register: aChange asMethodChangeFor: anElement [
 
 	| fullName |
 
@@ -576,7 +576,7 @@ Highsoft7DumpImporter >> register: aChange asMethodChangeFor: anElement [
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> registerCommentChangeFor: anElement withClassDefinedBy: aChange [
+Highsoft8DumpImporter >> registerCommentChangeFor: anElement withClassDefinedBy: aChange [
 
 	anElement
 		at: 'description'
@@ -586,7 +586,7 @@ Highsoft7DumpImporter >> registerCommentChangeFor: anElement withClassDefinedBy:
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> registerCommentChangeUsing: aString withClassDefinedBy: aChange [
+Highsoft8DumpImporter >> registerCommentChangeUsing: aString withClassDefinedBy: aChange [
 
 	| comment |
 
@@ -596,7 +596,7 @@ Highsoft7DumpImporter >> registerCommentChangeUsing: aString withClassDefinedBy:
 ]
 
 { #category : #'private - processing' }
-Highsoft7DumpImporter >> registerPackage [
+Highsoft8DumpImporter >> registerPackage [
 
 	[ (RPackage named: packageName) register ]
 		on: RPackageConflictError
@@ -604,7 +604,7 @@ Highsoft7DumpImporter >> registerPackage [
 ]
 
 { #category : #'private - changes' }
-Highsoft7DumpImporter >> removeChangesToIgnoreFrom: aDictionary [
+Highsoft8DumpImporter >> removeChangesToIgnoreFrom: aDictionary [
 
 	"We must copy the collection that will be iterated"
 
@@ -616,7 +616,7 @@ Highsoft7DumpImporter >> removeChangesToIgnoreFrom: aDictionary [
 ]
 
 { #category : #initialization }
-Highsoft7DumpImporter >> resetChanges [
+Highsoft8DumpImporter >> resetChanges [
 
 	classChanges := Dictionary new.
 	methodChanges := Dictionary new.
@@ -624,7 +624,7 @@ Highsoft7DumpImporter >> resetChanges [
 ]
 
 { #category : #'private - comment' }
-Highsoft7DumpImporter >> sanitizedCommentFrom: aDescription [
+Highsoft8DumpImporter >> sanitizedCommentFrom: aDescription [
 
 	| comment |
 
@@ -639,7 +639,7 @@ Highsoft7DumpImporter >> sanitizedCommentFrom: aDescription [
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> selectorFrom: anElement [
+Highsoft8DumpImporter >> selectorFrom: anElement [
 
 	| selector charactersToIgnore |
 
@@ -657,7 +657,7 @@ Highsoft7DumpImporter >> selectorFrom: anElement [
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> selectorsOf: componentClass definedIn: packageSet [
+Highsoft8DumpImporter >> selectorsOf: componentClass definedIn: packageSet [
 
 	^ OrderedCollection
 		withAll:
@@ -665,13 +665,13 @@ Highsoft7DumpImporter >> selectorsOf: componentClass definedIn: packageSet [
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> seriesClassName [
+Highsoft8DumpImporter >> seriesClassName [
 
 	self subclassResponsibility
 ]
 
 { #category : #'private - testing' }
-Highsoft7DumpImporter >> shouldAlsoGenerateChangesToConfigure: anElement [
+Highsoft8DumpImporter >> shouldAlsoGenerateChangesToConfigure: anElement [
 
 	"We want support to configure events and states on all series that provide access to them"
 
@@ -679,7 +679,7 @@ Highsoft7DumpImporter >> shouldAlsoGenerateChangesToConfigure: anElement [
 ]
 
 { #category : #'private - testing' }
-Highsoft7DumpImporter >> shouldGenerateChangesFor: anElement [
+Highsoft8DumpImporter >> shouldGenerateChangesFor: anElement [
 
 	^ (self isOfInterest: anElement)
 		and: [ (anElement at: 'products')
@@ -688,20 +688,20 @@ Highsoft7DumpImporter >> shouldGenerateChangesFor: anElement [
 ]
 
 { #category : #'private - testing' }
-Highsoft7DumpImporter >> shouldIgnore: elementName basedOn: ignoredName [
+Highsoft8DumpImporter >> shouldIgnore: elementName basedOn: ignoredName [
 
 	^ elementName = ignoredName
 		or: [ elementName beginsWith: ('<1s>.' expandMacrosWith: ignoredName) ]
 ]
 
 { #category : #'private - testing' }
-Highsoft7DumpImporter >> shouldUse: comment toCommentClassDefinedBy: aChange [
+Highsoft8DumpImporter >> shouldUse: comment toCommentClassDefinedBy: aChange [
 
 	^ aChange changeClass isNil or: [ aChange changeClass comment ~= comment ]
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> sourceCodeToAccess: anElement representedBy: aClassName [
+Highsoft8DumpImporter >> sourceCodeToAccess: anElement representedBy: aClassName [
 
 	^ '<1s><2s>
 	^configurationOptions at: ''<1s>'' ifAbsentPut: [<3s>]'
@@ -711,7 +711,7 @@ Highsoft7DumpImporter >> sourceCodeToAccess: anElement representedBy: aClassName
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> sourceCodeToConfigure: anElement [
+Highsoft8DumpImporter >> sourceCodeToConfigure: anElement [
 
 	| argumentType |
 
@@ -725,7 +725,7 @@ Highsoft7DumpImporter >> sourceCodeToConfigure: anElement [
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> sourceCodeToInitializeTypeFor: aSelector [
+Highsoft8DumpImporter >> sourceCodeToInitializeTypeFor: aSelector [
 
 	^ 'initialize
 	
@@ -734,7 +734,7 @@ Highsoft7DumpImporter >> sourceCodeToInitializeTypeFor: aSelector [
 ]
 
 { #category : #'private - accessing' }
-Highsoft7DumpImporter >> sourceCodeToInstance: aClassName [
+Highsoft8DumpImporter >> sourceCodeToInstance: aClassName [
 
 	self subclassResponsibility
 ]
