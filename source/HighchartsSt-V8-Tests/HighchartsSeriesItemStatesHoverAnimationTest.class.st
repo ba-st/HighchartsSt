@@ -1,0 +1,19 @@
+Class {
+	#name : #HighchartsSeriesItemStatesHoverAnimationTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V8-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesItemStatesHoverAnimationTest >> testDuration [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesItemStatesHoverAnimation new.
+	component duration: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'duration' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
