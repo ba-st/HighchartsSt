@@ -221,7 +221,7 @@ In styled mode, the labels are styled with the .highcharts-axis-labels class."
 { #category : #initialization }
 Highcharts8DumpImporter >> initializeProduct [
 
-	packageName := 'HighchartsSt-V7'.
+	packageName := 'HighchartsSt-V8'.
 	productName := 'highcharts'
 ]
 

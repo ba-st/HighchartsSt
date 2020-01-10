@@ -24,11 +24,11 @@ Highsoft8ImportTool >> execute [
 	jsonToImport := STONJSON fromStream: pathString asFileReference readStream.
 	importer := Highcharts8DumpImporter importingElementsIn: jsonToImport.
 	importer executeChanges.
-	( Highsoft8TestGenerator definedIn: 'HighchartsSt-V7' withSeriesNamed: 'HighchartsSeries' )
+	( Highsoft8TestGenerator definedIn: 'HighchartsSt-V8' withSeriesNamed: 'HighchartsSeries' )
 		generateTests.
 	importer := Highstock8DumpImporter importingElementsIn: jsonToImport.
 	importer executeChanges.
-	( Highsoft8TestGenerator definedIn: 'HighstockSt-V7' withSeriesNamed: 'HighstockSeries' )
+	( Highsoft8TestGenerator definedIn: 'HighstockSt-V8' withSeriesNamed: 'HighstockSeries' )
 		generateTests.
 	'Highcharts and Highstock import finished!' inspect
 	]

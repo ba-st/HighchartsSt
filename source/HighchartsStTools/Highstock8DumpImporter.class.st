@@ -179,7 +179,7 @@ Highstock8DumpImporter >> highstockYAxisSourceCode [
 { #category : #initialization }
 Highstock8DumpImporter >> initializeProduct [
 
-	packageName := 'HighstockSt-V7'.
+	packageName := 'HighstockSt-V8'.
 	productName := 'highstock'
 ]
 

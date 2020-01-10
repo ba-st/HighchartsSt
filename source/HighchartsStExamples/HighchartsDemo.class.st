@@ -18,7 +18,7 @@ HighchartsDemo class >> register [
 	app := WAAdmin register: self asApplicationAt: 'HighchartsDemo'.
 	app
 		addLibrary: JQDevelopmentLibrary;
-		addLibrary: Highcharts7OnlineLibrary
+		addLibrary: Highcharts8OnlineLibrary
 ]
 
 { #category : #accessing }
