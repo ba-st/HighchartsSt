@@ -108,7 +108,7 @@ rm -rf $directory/$version/$product/tmp
 cat << EOF
 You can now update Seaside's file libraries this way:
 
-${product}6DeploymentMetadataLibrary recursivelyAddAllFilesIn: '$exportDirectory/deployment/'.
-${product}6DevelopmentMetadataLibrary recursivelyAddAllFilesIn: '$exportDirectory/development/'.
+${product}8DeploymentMetadataLibrary recursivelyAddAllFilesIn: '$exportDirectory/deployment/'.
+${product}8DevelopmentMetadataLibrary recursivelyAddAllFilesIn: '$exportDirectory/development/'.
 
 EOF

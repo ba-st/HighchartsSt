@@ -29,13 +29,13 @@
 
 ## Installation
 
-To load the project in a Pharo image, or declare it as a dependency of your own project follow this [instructions](docs/Installation.md).
+To load the project in a Pharo image, or declare it as a dependency of your own project follow these [instructions](docs/Installation.md).
 
 ### Supported versions per platform
 
 | Pharo 6.1 | Pharo 7.0 | Pharo 8.0 | GemStone 64 |
 |---|---|---|---|
-|v9|v9|v9|v6|
+|v10|v10|v10|v6|
 
 > Until GemStone 64 supports the Tonel format (is in the works), GemStone users must stick with version 6
 
