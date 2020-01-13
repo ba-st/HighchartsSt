@@ -42,10 +42,10 @@ BaselineOfHighchartsSt >> baselineHighcharts: spec [
 	spec
 		package: 'HighchartsStLibraries' with: [ spec requires: 'HighchartsStCore' ];
 		group: 'Highcharts-Deployment' with: 'HighchartsStLibraries';
-		package: 'HighchartsSt-V7' with: [ spec requires: 'HighchartsStCore' ];
-		group: 'Highcharts-Deployment' with: 'HighchartsSt-V7';
-		package: 'HighchartsSt-V7-Tests' with: [ spec requires: 'HighchartsSt-V7' ];
-		group: 'Tests' with: 'HighchartsSt-V7-Tests'
+		package: 'HighchartsSt-V8' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highcharts-Deployment' with: 'HighchartsSt-V8';
+		package: 'HighchartsSt-V8-Tests' with: [ spec requires: 'HighchartsSt-V8' ];
+		group: 'Tests' with: 'HighchartsSt-V8-Tests'
 ]
 
 { #category : #baseline }
@@ -75,12 +75,12 @@ BaselineOfHighchartsSt >> baselineHighstock: spec [
 	spec
 		package: 'HighstockStLibraries' with: [ spec requires: 'HighchartsStCore' ];
 		group: 'Highstock-Deployment' with: 'HighstockStLibraries';
-		package: 'HighstockSt-V7' with: [ spec requires: 'HighchartsStCore' ];
-		group: 'Highstock-Deployment' with: 'HighstockSt-V7'.
+		package: 'HighstockSt-V8' with: [ spec requires: 'HighchartsStCore' ];
+		group: 'Highstock-Deployment' with: 'HighstockSt-V8'.
 
 	spec
-		package: 'HighstockSt-V7-Tests' with: [ spec requires: 'HighstockSt-V7' ];
-		group: 'Tests' with: 'HighstockSt-V7-Tests';
+		package: 'HighstockSt-V8-Tests' with: [ spec requires: 'HighstockSt-V8' ];
+		group: 'Tests' with: 'HighstockSt-V8-Tests';
 		package: 'HighstockStLibraries-Tests' with: [ spec requires: 'HighstockStLibraries' ];
 		group: 'Tests' with: 'HighstockStLibraries-Tests'
 ]

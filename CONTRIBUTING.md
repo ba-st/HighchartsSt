@@ -29,7 +29,7 @@ You can report issues [here](https://github.com/ba-st/HighchartsSt/issues/new)
 
 ## Running the tests
 
-Tests are auto-generated for the auto-generated code. These are under the packages `HighchartsSt-V7-Tests` and `HighstockSt-V7-Tests`. We warned that there's more than 40K tests so it will take a while to run, and later be shown in the Test Runner.
+Tests are auto-generated for the auto-generated code. These are under the packages `HighchartsSt-V8-Tests` and `HighstockSt-V8-Tests`. We warned that there's more than 40K tests so it will take a while to run, and later be shown in the Test Runner.
 
 ## Contributing documentation
 

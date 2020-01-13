@@ -17,7 +17,7 @@ HighstockDemo class >> register [
 	app := WAAdmin register: self asApplicationAt: 'HighstockDemo'.
 	app
 		addLibrary: JQDevelopmentLibrary; 
-		addLibrary: Highstock7OnlineLibrary
+		addLibrary: Highstock8OnlineLibrary
 ]
 
 { #category : #rendering }

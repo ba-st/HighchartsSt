@@ -18,7 +18,7 @@ HighchartsDemo class >> register [
 	app := WAAdmin register: self asApplicationAt: 'HighchartsDemo'.
 	app
 		addLibrary: JQDevelopmentLibrary;
-		addLibrary: Highcharts7OnlineLibrary
+		addLibrary: Highcharts8OnlineLibrary
 ]
 
 { #category : #accessing }
@@ -134,7 +134,7 @@ HighchartsDemo >> renderBarGovermentComputersChartOn: aCanvas [
 	chart xAxis title text: 'Site'.
 	chart xAxis type: 'category'.
 	chart plotOptions column colorByPoint: true.
-	chart plotOptions column dataLabels: ( HighchartsDataLabelsOptions new enabled: true ).
+	chart plotOptions column dataLabels enabled: true.
 	( chart addSeriesOf: HighchartsSeriesColumn )
 		index: 0;
 		name: series name;

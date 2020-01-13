@@ -1,0 +1,61 @@
+Class {
+	#name : #HighchartsSeriesAreasplineConnectorsTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V8-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplineConnectorsTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplineConnectors new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplineConnectorsTest >> testLineColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplineConnectors new.
+	component lineColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lineColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplineConnectorsTest >> testLineWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplineConnectors new.
+	component lineWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lineWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplineConnectorsTest >> testType [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplineConnectors new.
+	component type: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
