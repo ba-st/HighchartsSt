@@ -4,7 +4,7 @@ Baseline of HighchartsSt
 Class {
 	#name : #BaselineOfHighchartsSt,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfHighchartsSt'
+	#category : #BaselineOfHighchartsSt
 }
 
 { #category : #baseline }
@@ -104,20 +104,20 @@ BaselineOfHighchartsSt >> projectClass [
 BaselineOfHighchartsSt >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside:v3.3.x/repository' ];
+		baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside:v3.4.x/repository' ];
 		project: 'Seaside3-JQuery'
 			copyFrom: 'Seaside3'
 			with: [ spec loads: #('Core' 'Javascript' 'JQuery') ];
 		project: 'Seaside3-Development' copyFrom: 'Seaside3' with: [ spec loads: 'Development' ].
 
 	spec
-		baseline: 'RenoirSt' with: [ spec repository: 'github://ba-st/RenoirSt:v6/source' ];
+		baseline: 'RenoirSt' with: [ spec repository: 'github://ba-st/RenoirSt:v7/source' ];
 		project: 'RenoirSt-Deployment'
 			copyFrom: 'RenoirSt'
 			with: [ spec loads: 'Deployment-Seaside-Extensions' ].
 
 	spec
-		baseline: 'Boardwalk' with: [ spec repository: 'github://ba-st/Boardwalk:v4/source' ];
+		baseline: 'Boardwalk' with: [ spec repository: 'github://ba-st/Boardwalk:v5/source' ];
 		project: 'Boardwalk-Deployment' copyFrom: 'Boardwalk' with: [ spec loads: 'Deployment' ];
 		project: 'Boardwalk-SUnit'
 			copyFrom: 'Boardwalk'
