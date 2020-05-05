@@ -13,9 +13,12 @@
 </p>
 
 ![GitHub release](https://img.shields.io/github/release/ba-st/HighchartsSt.svg)
-[![Build Status](https://travis-ci.org/ba-st/HighchartsSt.svg?branch=release-candidate)](https://travis-ci.org/ba-st/HighchartsSt)
-[![Coverage Status](https://coveralls.io/repos/github/ba-st/HighchartsSt/badge.svg?branch=release-candidate)](https://coveralls.io/github/ba-st/HighchartsSt?branch=release-candidate)
+[![Build Status](https://github.com/ba-st/HighchartsSt/workflows/Build/badge.svg?branch=release-candidate)](https://github.com/ba-st/HighchartsSt/actions?query=workflow%3ABuild)
+[![Coverage Status](https://codecov.io/github/ba-st/HighchartsSt/coverage.svg?branch=release-candidate)](https://codecov.io/gh/ba-st/HighchartsSt/branch/release-candidate)
 [![Javascript Dependency Status](https://david-dm.org/ba-st/HighchartsSt.svg)](https://david-dm.org/ba-st/HighchartsSt)
+[![Pharo 6.1](https://img.shields.io/badge/Pharo-6.1-informational)](https://pharo.org)
+[![Pharo 7.0](https://img.shields.io/badge/Pharo-7.0-informational)](https://pharo.org)
+[![Pharo 8.0](https://img.shields.io/badge/Pharo-8.0-informational)](https://pharo.org)
 
 ## License
 - The code is licensed under [MIT](LICENSE).
