@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-
-readonly BASEDIR=$(cd "$(dirname "$0")" && pwd) # where the script is located
-readonly CALLDIR=$(pwd)                         # where it was called from
-readonly STATUS_SUCCESS=0                       # exit status for commands
-
-# Script configuration
-readonly CONSTANT="value"
-
 set -e
 
 usage() {
@@ -20,11 +12,11 @@ Usage: $PROGNAME [OPTION ...] [foo] [bar]
 <Program description>.
 
 Options:
--h, --help          display this usage message and exit
--d, --directory [DIRECTORY]       Working directory to download and prepare the files
+-h, --help                  Display this usage message and exit
+-d, --directory [DIRECTORY] Working directory to download and prepare the files
 -f, --force
--p, --product [PRODUCT]    The product (Highcharts or Highstock) of Highcharts library
--v, --version [VERSION]   the highcharts product version
+-p, --product [PRODUCT]     The product (Highcharts or Highstock) of Highcharts library
+-v, --version [VERSION]     The product version
 
 Description of the script.
 Example:
