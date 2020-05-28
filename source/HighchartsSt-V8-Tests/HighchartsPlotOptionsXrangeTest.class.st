@@ -229,6 +229,34 @@ HighchartsPlotOptionsXrangeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsXrangeTest >> testDescription [
 
 	| component javascript expectedConfiguration |

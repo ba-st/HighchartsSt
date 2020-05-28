@@ -148,6 +148,15 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
+HighchartsSeriesBoxplot >> boxDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the box.
+Defaults to Solid."
+
+	configurationOptions at: 'boxDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighchartsSeriesBoxplot >> className: aString [
 
 	"An additional class name to apply to the series´ graphical elements.
@@ -323,12 +332,12 @@ to be loaded.
 { #category : #accessing }
 HighchartsSeriesBoxplot >> crisp: aBoolean [
 
-	"When true, each column edge is rounded to its nearest pixel in order
-to render sharp on screen. In some cases, when there are a lot of
-densely packed columns, this leads to visible difference in column
-widths or distance between columns. In these cases, setting crisp
-to false may look better, even though each column is rendered
-blurry.
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
 Defaults to true."
 
 	configurationOptions at: 'crisp' put: aBoolean
@@ -364,10 +373,21 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighchartsSeriesBoxplot >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesBoxplot >> dashStyle: aHighchartsDashStyleValue [
 
-	"A name for the dash style to use for the graph, or for some series
-types the outline of each shape.
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
 In styled mode, the
 stroke dash-array
 can be set with the same classes as listed under
@@ -575,15 +595,15 @@ HighchartsSeriesBoxplot >> gapSize: aNumber [
 
 	"Defines when to display a gap in the graph, together with the
 gapUnit option.
-In case when dataGrouping is enabled, points can be grouped into a
-larger time span. This can make the grouped points to have a greater
-distance than the absolute value of gapSize property, which will result
-in disappearing graph completely. To prevent this situation the mentioned
-distance between grouped points is used instead of previously defined
-gapSize.
+In case when dataGrouping is enabled, points can be grouped
+into a larger time span. This can make the grouped points to have
+a greater distance than the absolute value of gapSize property,
+which will result in disappearing graph completely. To prevent
+this situation the mentioned distance between grouped points is
+used instead of previously defined gapSize.
 In practice, this option is most often used to visualize gaps in
-time series. In a stock chart, intraday data is available for daytime
-hours, while gaps will appear in nights and weekends.
+time series. In a stock chart, intraday data is available for
+daytime hours, while gaps will appear in nights and weekends.
 Defaults to 0."
 
 	configurationOptions at: 'gapSize' put: aNumber
@@ -592,14 +612,15 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesBoxplot >> gapUnit: aString [
 
-	"Together with gapSize, this option defines
-where to draw gaps in the graph.
-When the gapUnit is relative (default), a gap size of 5 means
-that if the distance between two points is greater than five times
-that of the two closest points, the graph will be broken.
-When the gapUnit is value, the gap is based on absolute axis values,
-which on a datetime axis is milliseconds. This also applies to the
-navigator series that inherits gap options from the base series.
+	"Together with gapSize, this option
+defines where to draw gaps in the graph.
+When the gapUnit is &quot;relative&quot; (default), a gap size of 5
+means that if the distance between two points is greater than
+5 times that of the two closest points, the graph will be broken.
+When the gapUnit is &quot;value&quot;, the gap is based on absolute
+axis values, which on a datetime axis is milliseconds. This also
+applies to the navigator series that inherits gap options from
+the base series.
 Defaults to relative."
 
 	configurationOptions at: 'gapUnit' put: aString
@@ -818,7 +839,16 @@ In styled mode, the median stroke width can be set with the
 ]
 
 { #category : #accessing }
-HighchartsSeriesBoxplot >> medianWidth: aNumber [
+HighchartsSeriesBoxplot >> medianDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the median.
+Defaults to Solid."
+
+	configurationOptions at: 'medianDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
+HighchartsSeriesBoxplot >> medianWidth: aNumberOrNil [
 
 	"The pixel width of the median line. If null, the
 lineWidth is used.
@@ -826,7 +856,7 @@ In styled mode, the median stroke width can be set with the
 .highcharts-boxplot-median class.
 Defaults to 2."
 
-	configurationOptions at: 'medianWidth' put: aNumber
+	configurationOptions at: 'medianWidth' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -915,7 +945,7 @@ pointInterval to 10. In true datetime axes, the pointInterval
 is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 Defaults to 1."
 
@@ -931,7 +961,7 @@ units, day, month and year. A day is usually the same as 24
 hours, but pointIntervalUnit also takes the DST crossover into
 consideration when dealing with local time. Combine this option with
 pointInterval to draw weeks, quarters, 6 months, 10 years etc.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 "
 
@@ -1211,6 +1241,15 @@ In styled mode, the whisker stroke can be set with the
 "
 
 	configurationOptions at: 'whiskerColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighchartsSeriesBoxplot >> whiskerDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the whiskers.
+Defaults to Solid."
+
+	configurationOptions at: 'whiskerDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }

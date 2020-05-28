@@ -33,6 +33,42 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighchartsYAxisStackLabels >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+
+	"The background color or gradient for the stack label.
+"
+
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighchartsYAxisStackLabels >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+
+	"The border color for the stack label. Defaults to undefined.
+"
+
+	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighchartsYAxisStackLabels >> borderRadius: aNumber [
+
+	"The border radius in pixels for the stack label.
+Defaults to 0."
+
+	configurationOptions at: 'borderRadius' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsYAxisStackLabels >> borderWidth: aNumber [
+
+	"The border width in pixels for the stack label.
+Defaults to 0."
+
+	configurationOptions at: 'borderWidth' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsYAxisStackLabels >> crop: aBoolean [
 
 	"Whether to hide stack labels that are outside the plot area.
@@ -57,8 +93,8 @@ Defaults to false."
 { #category : #accessing }
 HighchartsYAxisStackLabels >> format: aString [
 
-	"A format string for the
-data label. Available variables are the same as for formatter.
+	"A format string for the data label. Available variables are the same
+as for formatter.
 Defaults to {total}."
 
 	configurationOptions at: 'format' put: aString

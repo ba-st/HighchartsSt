@@ -61,6 +61,34 @@ HighchartsPlotOptionsColumnrangeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnrangeLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnrangeLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnrangeLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnrangeLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsColumnrangeLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

@@ -290,6 +290,21 @@ HighchartsSeriesVennTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesVennTest >> testCursor [
 
 	| component javascript expectedConfiguration |
@@ -300,6 +315,21 @@ HighchartsSeriesVennTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'venn';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -320,6 +320,21 @@ HighchartsSeriesDependencywheelTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheel new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'dependencywheel';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesDependencywheelTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -360,6 +375,21 @@ HighchartsSeriesDependencywheelTest >> testCurveFactor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'dependencywheel';
 		at: 'curveFactor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheel new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'dependencywheel';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

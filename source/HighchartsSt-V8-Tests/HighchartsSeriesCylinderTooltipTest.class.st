@@ -159,6 +159,20 @@ HighchartsSeriesCylinderTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesCylinderTooltipTest >> testStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinderTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesCylinderTooltipTest >> testValueDecimals [
 
 	| component javascript expectedConfiguration |

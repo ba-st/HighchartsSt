@@ -58,6 +58,17 @@ scale of the colorAxis.
 ]
 
 { #category : #accessing }
+HighchartsSeriesSunburstData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality.
+Here you can add additional data for your own event callbacks and formatter
+callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesSunburstData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
@@ -123,6 +134,14 @@ will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesSunburstData >> marker [
+
+	"Options for the point markers of line-like series.
+"
+	^ configurationOptions at: 'marker' ifAbsentPut: [ HighchartsSeriesSunburstDataMarker new ]
 ]
 
 { #category : #accessing }

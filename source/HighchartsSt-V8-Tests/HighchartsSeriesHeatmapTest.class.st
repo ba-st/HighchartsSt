@@ -245,6 +245,21 @@ HighchartsSeriesHeatmapTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesHeatmapTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -270,6 +285,21 @@ HighchartsSeriesHeatmapTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'heatmap';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

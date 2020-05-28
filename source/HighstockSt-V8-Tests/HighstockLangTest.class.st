@@ -117,6 +117,20 @@ HighstockLangTest >> testDownloadXLS [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLangTest >> testExitFullscreen [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component exitFullscreen: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exitFullscreen' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLangTest >> testInvalidDate [
 
 	| component javascript expectedConfiguration |
@@ -196,20 +210,6 @@ HighstockLangTest >> testNumericSymbols [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'numericSymbols' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockLangTest >> testOpenInCloud [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockLang new.
-	component openInCloud: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'openInCloud' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

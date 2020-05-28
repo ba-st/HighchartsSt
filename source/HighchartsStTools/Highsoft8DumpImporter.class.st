@@ -662,8 +662,7 @@ Highsoft8DumpImporter >> selectorFrom: anElement [
 Highsoft8DumpImporter >> selectorsOf: componentClass definedIn: packageSet [
 
 	^ OrderedCollection
-		withAll:
-			(packageSet collectFromAllPackages: #definedSelectorsForClass: with: componentClass)
+		withAll: ( packageSet packages flatCollect: [ :package | package definedSelectorsForClass: componentClass ] )
 ]
 
 { #category : #'private - accessing' }

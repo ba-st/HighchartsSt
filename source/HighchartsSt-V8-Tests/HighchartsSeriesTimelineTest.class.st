@@ -230,6 +230,21 @@ HighchartsSeriesTimelineTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTimelineTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimeline new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'timeline';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTimelineTest >> testCursor [
 
 	| component javascript expectedConfiguration |
@@ -240,6 +255,21 @@ HighchartsSeriesTimelineTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'timeline';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimeline new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'timeline';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

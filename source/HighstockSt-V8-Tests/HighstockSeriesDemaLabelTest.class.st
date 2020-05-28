@@ -61,6 +61,34 @@ HighstockSeriesDemaLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesDemaLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDemaLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDemaLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDemaLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesDemaLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

@@ -243,6 +243,20 @@ HighstockPlotOptionsNatrTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsNatrTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsNatr new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsNatrTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -266,6 +280,20 @@ HighstockPlotOptionsNatrTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsNatrTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsNatr new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

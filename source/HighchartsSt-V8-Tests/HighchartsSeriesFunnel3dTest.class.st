@@ -290,6 +290,21 @@ HighchartsSeriesFunnel3dTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnel3dTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

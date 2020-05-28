@@ -61,6 +61,34 @@ HighchartsPlotOptionsParetoLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsParetoLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsParetoLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsParetoLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

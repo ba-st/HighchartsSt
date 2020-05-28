@@ -145,6 +145,20 @@ HighchartsPlotOptionsPolygonTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTooltipTest >> testStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygonTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPolygonTooltipTest >> testValueDecimals [
 
 	| component javascript expectedConfiguration |

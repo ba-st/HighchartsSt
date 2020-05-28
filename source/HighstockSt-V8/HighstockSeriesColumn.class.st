@@ -314,12 +314,12 @@ to be loaded.
 { #category : #accessing }
 HighstockSeriesColumn >> crisp: aBoolean [
 
-	"When true, each column edge is rounded to its nearest pixel in order
-to render sharp on screen. In some cases, when there are a lot of
-densely packed columns, this leads to visible difference in column
-widths or distance between columns. In these cases, setting crisp
-to false may look better, even though each column is rendered
-blurry.
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
 Defaults to true."
 
 	configurationOptions at: 'crisp' put: aBoolean
@@ -355,10 +355,21 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighstockSeriesColumn >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighstockSeriesColumn >> dashStyle: aHighchartsDashStyleValue [
 
-	"A name for the dash style to use for the graph, or for some series
-types the outline of each shape.
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
 In styled mode, the
 stroke dash-array
 can be set with the same classes as listed under
@@ -781,7 +792,7 @@ pointInterval to 10. In true datetime axes, the pointInterval
 is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 Defaults to 1."
 
@@ -797,7 +808,7 @@ units, day, month and year. A day is usually the same as 24
 hours, but pointIntervalUnit also takes the DST crossover into
 consideration when dealing with local time. Combine this option with
 pointInterval to draw weeks, quarters, 6 months, 10 years etc.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 "
 

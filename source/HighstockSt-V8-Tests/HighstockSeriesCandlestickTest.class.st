@@ -305,6 +305,21 @@ HighstockSeriesCandlestickTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCandlestickTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -330,6 +345,21 @@ HighstockSeriesCandlestickTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'candlestick';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCandlestickTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestick new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'candlestick';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

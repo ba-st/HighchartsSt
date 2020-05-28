@@ -44,12 +44,13 @@ Defaults to %Y-%m-%d %H:%M:%S."
 HighstockAccessibilityScreenReaderSection >> beforeChartFormat: aString [
 
 	"Format for the screen reader information region before the chart.
-Supported HTML tags are &lt;h1-7&gt;, &lt;p&gt;, &lt;div&gt;, &lt;a&gt;, and
-&lt;button&gt;. Attributes are not supported, except for id on
-&lt;div&gt;, &lt;a&gt;, and &lt;button&gt;. Id is required on &lt;a&gt; and
-&lt;button&gt; in the format &lt;tag id=&quot;abcd&quot;&gt;. Numbers, lower- and
-uppercase letters, &quot;-&quot; and &quot;#&quot; are valid characters in IDs.
-Defaults to <h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{xAxisDescription}</div><div>{yAxisDescription}</div><div>{viewTableButton}</div>."
+Supported HTML tags are &lt;h1-7&gt;, &lt;p&gt;, &lt;div&gt;, &lt;a&gt;, &lt;ul&gt;,
+&lt;ol&gt;, &lt;li&gt;, and &lt;button&gt;. Attributes are not supported,
+except for id on &lt;div&gt;, &lt;a&gt;, and &lt;button&gt;. Id is required
+on &lt;a&gt; and &lt;button&gt; in the format &lt;tag id=&quot;abcd&quot;&gt;. Numbers,
+lower- and uppercase letters, &quot;-&quot; and &quot;#&quot; are valid characters in
+IDs.
+Defaults to <h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{playAsSoundButton}</div><div>{viewTableButton}</div><div>{xAxisDescription}</div><div>{yAxisDescription}</div><div>{annotationsTitle}{annotationsList}</div>."
 
 	configurationOptions at: 'beforeChartFormat' put: aString
 ]
@@ -66,6 +67,17 @@ beforeChartFormat.
 "
 
 	configurationOptions at: 'beforeChartFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsChart
+]
+
+{ #category : #accessing }
+HighstockAccessibilityScreenReaderSection >> onPlayAsSoundClick: aHighchartsScreenReaderClickCallbackFunction [
+
+	"Function to run upon clicking the &quot;Play as sound&quot; button in
+the screen reader region.
+By default Highcharts will call the chart.sonify function.
+"
+
+	configurationOptions at: 'onPlayAsSoundClick' put: aHighchartsScreenReaderClickCallbackFunction
 ]
 
 { #category : #accessing }

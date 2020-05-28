@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockSeriesAreasplineStatesInactiveTest >> testEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplineStatesInactive new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAreasplineStatesInactiveTest >> testOpacity [
 
 	| component javascript expectedConfiguration |

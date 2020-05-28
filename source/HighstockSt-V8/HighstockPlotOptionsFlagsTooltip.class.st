@@ -148,6 +148,16 @@ flexibility.
 ]
 
 { #category : #accessing }
+HighstockPlotOptionsFlagsTooltip >> stickOnContact: aBoolean [
+
+	"Prevents the tooltip from switching or closing, when touched or
+pointed.
+"
+
+	configurationOptions at: 'stickOnContact' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsFlagsTooltip >> xDateFormat: aString [
 
 	"The format for the date in the tooltip header if the X axis is a

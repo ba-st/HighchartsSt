@@ -335,6 +335,21 @@ HighchartsSeriesBarTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBarTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBar new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bar';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBarTest >> testData [
 
 	| component javascript expectedConfiguration |

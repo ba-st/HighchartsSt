@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsSeriesNetworkgraphStatesInactiveTest >> testEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesNetworkgraphStatesInactive new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesNetworkgraphStatesInactiveTest >> testLinkOpacity [
 
 	| component javascript expectedConfiguration |

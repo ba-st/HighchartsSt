@@ -221,7 +221,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsSeriesFunnelDataLabels >> distance: aNumber [
+HighchartsSeriesFunnelDataLabels >> distance: aNumberOrstring [
 
 	"The distance of the data label from the pie´s edge. Negative
 numbers put the data label on top of the pie slices. Can also be
@@ -229,7 +229,7 @@ defined as a percentage of pie´s radius. Connectors are only
 shown for data labels outside the pie.
 Defaults to 30."
 
-	configurationOptions at: 'distance' put: aNumber
+	configurationOptions at: 'distance' put: aNumberOrstring
 ]
 
 { #category : #accessing }

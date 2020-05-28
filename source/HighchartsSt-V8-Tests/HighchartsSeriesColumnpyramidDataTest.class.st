@@ -47,6 +47,20 @@ HighchartsSeriesColumnpyramidDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesColumnpyramidDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnpyramidData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesColumnpyramidDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

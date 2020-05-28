@@ -19,6 +19,20 @@ HighstockSeriesPolygonDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPolygonDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygonData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPolygonDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

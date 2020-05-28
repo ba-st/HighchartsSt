@@ -158,6 +158,16 @@ flexibility.
 ]
 
 { #category : #accessing }
+HighstockSeriesTrendlineTooltip >> stickOnContact: aBoolean [
+
+	"Prevents the tooltip from switching or closing, when touched or
+pointed.
+"
+
+	configurationOptions at: 'stickOnContact' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockSeriesTrendlineTooltip >> valueDecimals: aNumber [
 
 	"Number of decimals in indicator series.

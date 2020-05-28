@@ -159,6 +159,20 @@ HighchartsPlotOptionsSolidgaugeTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTooltipTest >> testStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgaugeTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSolidgaugeTooltipTest >> testValueDecimals [
 
 	| component javascript expectedConfiguration |

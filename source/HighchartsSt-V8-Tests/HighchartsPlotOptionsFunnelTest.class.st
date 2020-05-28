@@ -229,6 +229,20 @@ HighchartsPlotOptionsFunnelTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnel new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsFunnelTest >> testCursor [
 
 	| component javascript expectedConfiguration |
@@ -238,6 +252,20 @@ HighchartsPlotOptionsFunnelTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnel new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -61,6 +61,34 @@ HighstockSeriesOhlcLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesOhlcLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlcLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlcLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesOhlcLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

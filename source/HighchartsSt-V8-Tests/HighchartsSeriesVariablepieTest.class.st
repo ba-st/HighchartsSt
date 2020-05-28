@@ -305,6 +305,21 @@ HighchartsSeriesVariablepieTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesVariablepieTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariablepie new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'variablepie';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesVariablepieTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -330,6 +345,21 @@ HighchartsSeriesVariablepieTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'variablepie';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVariablepieTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariablepie new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'variablepie';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

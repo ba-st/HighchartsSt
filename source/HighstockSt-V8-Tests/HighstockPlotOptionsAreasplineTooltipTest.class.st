@@ -159,6 +159,20 @@ HighstockPlotOptionsAreasplineTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsAreasplineTooltipTest >> testStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAreasplineTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsAreasplineTooltipTest >> testValueDecimals [
 
 	| component javascript expectedConfiguration |

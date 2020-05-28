@@ -350,6 +350,21 @@ HighchartsSeriesSunburstTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSunburstTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -375,6 +390,21 @@ HighchartsSeriesSunburstTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'sunburst';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

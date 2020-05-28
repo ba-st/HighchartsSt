@@ -313,6 +313,20 @@ HighstockSeriesVbpTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesVbpTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVbp new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesVbpTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

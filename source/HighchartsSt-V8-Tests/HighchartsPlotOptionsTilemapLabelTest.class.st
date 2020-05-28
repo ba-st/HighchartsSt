@@ -61,6 +61,34 @@ HighchartsPlotOptionsTilemapLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsTilemapLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTilemapLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTilemapLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTilemapLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsTilemapLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

@@ -271,6 +271,34 @@ HighstockPlotOptionsFlagsTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsFlagsTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsFlags new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsFlagsTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsFlags new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsFlagsTest >> testDepth [
 
 	| component javascript expectedConfiguration |

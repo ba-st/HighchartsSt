@@ -284,10 +284,21 @@ Defaults to 0.33."
 ]
 
 { #category : #accessing }
+HighchartsSeriesSankey >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesSankey >> dashStyle: aHighchartsDashStyleValue [
 
-	"A name for the dash style to use for the graph, or for some series
-types the outline of each shape.
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
 In styled mode, the
 stroke dash-array
 can be set with the same classes as listed under
@@ -357,14 +368,6 @@ string by default.
 ]
 
 { #category : #accessing }
-HighchartsSeriesSankey >> dataSorting [
-
-	"Options for the series data sorting.
-"
-	^ configurationOptions at: 'dataSorting' ifAbsentPut: [ HighchartsSeriesSankeyDataSorting new ]
-]
-
-{ #category : #accessing }
 HighchartsSeriesSankey >> description: aString [
 
 	"A description of the series to add to the screen reader information
@@ -401,15 +404,15 @@ HighchartsSeriesSankey >> gapSize: aNumber [
 
 	"Defines when to display a gap in the graph, together with the
 gapUnit option.
-In case when dataGrouping is enabled, points can be grouped into a
-larger time span. This can make the grouped points to have a greater
-distance than the absolute value of gapSize property, which will result
-in disappearing graph completely. To prevent this situation the mentioned
-distance between grouped points is used instead of previously defined
-gapSize.
+In case when dataGrouping is enabled, points can be grouped
+into a larger time span. This can make the grouped points to have
+a greater distance than the absolute value of gapSize property,
+which will result in disappearing graph completely. To prevent
+this situation the mentioned distance between grouped points is
+used instead of previously defined gapSize.
 In practice, this option is most often used to visualize gaps in
-time series. In a stock chart, intraday data is available for daytime
-hours, while gaps will appear in nights and weekends.
+time series. In a stock chart, intraday data is available for
+daytime hours, while gaps will appear in nights and weekends.
 Defaults to 0."
 
 	configurationOptions at: 'gapSize' put: aNumber
@@ -418,14 +421,15 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesSankey >> gapUnit: aString [
 
-	"Together with gapSize, this option defines
-where to draw gaps in the graph.
-When the gapUnit is relative (default), a gap size of 5 means
-that if the distance between two points is greater than five times
-that of the two closest points, the graph will be broken.
-When the gapUnit is value, the gap is based on absolute axis values,
-which on a datetime axis is milliseconds. This also applies to the
-navigator series that inherits gap options from the base series.
+	"Together with gapSize, this option
+defines where to draw gaps in the graph.
+When the gapUnit is &quot;relative&quot; (default), a gap size of 5
+means that if the distance between two points is greater than
+5 times that of the two closest points, the graph will be broken.
+When the gapUnit is &quot;value&quot;, the gap is based on absolute
+axis values, which on a datetime axis is milliseconds. This also
+applies to the navigator series that inherits gap options from
+the base series.
 Defaults to relative."
 
 	configurationOptions at: 'gapUnit' put: aString
@@ -640,6 +644,9 @@ HighchartsSeriesSankey >> nodePadding: aNumber [
 
 	"The padding between nodes in a sankey diagram or dependency wheel, in
 pixels.
+If the number of nodes is so great that it is possible to lay them
+out within the plot area with the given nodePadding, they will be
+rendered with a smaller padding as a strategy to avoid overflow.
 Defaults to 10."
 
 	configurationOptions at: 'nodePadding' put: aNumber

@@ -215,6 +215,20 @@ HighstockPlotOptionsVectorTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsVectorTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsVector new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsVectorTest >> testCursor [
 
 	| component javascript expectedConfiguration |
@@ -224,6 +238,20 @@ HighstockPlotOptionsVectorTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsVectorTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsVector new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

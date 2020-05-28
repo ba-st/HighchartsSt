@@ -61,6 +61,34 @@ HighstockSeriesLinearregressionslopeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesLinearregressionslopeLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

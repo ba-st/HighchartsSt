@@ -61,6 +61,34 @@ HighstockPlotOptionsRsiLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsRsiLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsRsiLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsRsiLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsRsiLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsRsiLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

@@ -61,6 +61,34 @@ HighstockSeriesVwapLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesVwapLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVwapLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVwapLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesVwapLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

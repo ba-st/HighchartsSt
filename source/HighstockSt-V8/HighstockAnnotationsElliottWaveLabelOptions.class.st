@@ -10,6 +10,14 @@ Class {
 }
 
 { #category : #accessing }
+HighstockAnnotationsElliottWaveLabelOptions >> accessibility [
+
+	"Accessibility options for an annotation label.
+"
+	^ configurationOptions at: 'accessibility' ifAbsentPut: [ HighstockAnnotationsElliottWaveLabelOptionsAccessibility new ]
+]
+
+{ #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> align: aString [
 
 	"The alignment of the annotation´s label. If right,
@@ -33,7 +41,8 @@ Defaults to true."
 { #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> backgroundColor: aString [
 
-	"The background color or gradient for the annotation´s label.
+	"The background color or gradient for the annotation´s
+label.
 Defaults to none."
 
 	configurationOptions at: 'backgroundColor' put: aString
@@ -109,9 +118,9 @@ string for the data label.
 HighstockAnnotationsElliottWaveLabelOptions >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
 	"Callback JavaScript function to format the annotation´s
-label. Note that if a format or text are defined, the
-format or text take precedence and the formatter is ignored.
-This refers to a point object.
+label. Note that if a format or text are defined,
+the format or text take precedence and the formatter is
+ignored. This refers to a point object.
 Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
 	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
@@ -120,9 +129,9 @@ Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; 
 { #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> overflow: aString [
 
-	"How to handle the annotation´s label that flow outside the
-plot area. The justify option aligns the label inside the
-plot area.
+	"How to handle the annotation´s label that flow outside
+the plot area. The justify option aligns the label inside
+the plot area.
 Defaults to none."
 
 	configurationOptions at: 'overflow' put: aString
@@ -131,8 +140,8 @@ Defaults to none."
 { #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> padding: aNumber [
 
-	"When either the borderWidth or the backgroundColor is set,
-this    is the padding within the box.
+	"When either the borderWidth or the backgroundColor is
+set, this is the padding within the box.
 Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
@@ -152,8 +161,9 @@ Defaults to false."
 { #category : #accessing }
 HighstockAnnotationsElliottWaveLabelOptions >> shape: aString [
 
-	"The name of a symbol to use for the border around the label.
-Symbols are predefined functions on the Renderer object.
+	"The name of a symbol to use for the border around the
+label. Symbols are predefined functions on the Renderer
+object.
 Defaults to callout."
 
 	configurationOptions at: 'shape' put: aString

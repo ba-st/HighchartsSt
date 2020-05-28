@@ -260,6 +260,21 @@ HighstockSeriesAreasplineTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesAreasplineTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreaspline new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areaspline';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAreasplineTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -285,6 +300,21 @@ HighstockSeriesAreasplineTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'areaspline';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplineTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreaspline new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areaspline';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -915,21 +945,6 @@ HighstockSeriesAreasplineTest >> testStates [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'areaspline';
 		at: 'states' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesAreasplineTest >> testStep [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesAreaspline new.
-	component step: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'areaspline';
-		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

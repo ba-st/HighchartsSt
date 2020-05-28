@@ -57,6 +57,30 @@ Defaults to true."
 ]
 
 { #category : #accessing }
+HighstockSeriesStochasticLabel >> format: aString [
+
+	"A format string for the label, with support for a subset of
+HTML. Variables are enclosed by curly brackets. Available
+variables are name, options.xxx, color and other
+members from the series object. Use this option also to set
+a static text for the label.
+Defaults to undefined."
+
+	configurationOptions at: 'format' put: aString
+]
+
+{ #category : #accessing }
+HighstockSeriesStochasticLabel >> formatter: aHighchartsFormatterCallbackFunctionOfSeries [
+
+	"Callback function to format each of the series´ labels. The
+this keyword refers to the series object. By default the
+formatter is undefined and the series.name is rendered.
+Defaults to undefined."
+
+	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfSeries
+]
+
+{ #category : #accessing }
 HighstockSeriesStochasticLabel >> maxFontSize: aNumberOrNil [
 
 	"For area-like series, allow the font size to vary so that

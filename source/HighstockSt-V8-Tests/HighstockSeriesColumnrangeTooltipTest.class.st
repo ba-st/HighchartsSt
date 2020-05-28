@@ -159,6 +159,20 @@ HighstockSeriesColumnrangeTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesColumnrangeTooltipTest >> testStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnrangeTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesColumnrangeTooltipTest >> testValueDecimals [
 
 	| component javascript expectedConfiguration |

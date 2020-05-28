@@ -243,6 +243,20 @@ HighchartsPlotOptionsWindbarbTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsWindbarbTest >> testDepth [
 
 	| component javascript expectedConfiguration |

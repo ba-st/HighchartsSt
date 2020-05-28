@@ -158,6 +158,16 @@ flexibility.
 ]
 
 { #category : #accessing }
+HighstockPlotOptionsPivotpointsTooltip >> stickOnContact: aBoolean [
+
+	"Prevents the tooltip from switching or closing, when touched or
+pointed.
+"
+
+	configurationOptions at: 'stickOnContact' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsPivotpointsTooltip >> valueDecimals: aNumber [
 
 	"Number of decimals in indicator series.

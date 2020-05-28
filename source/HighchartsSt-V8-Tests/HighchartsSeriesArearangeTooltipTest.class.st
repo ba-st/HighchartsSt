@@ -145,6 +145,20 @@ HighchartsSeriesArearangeTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesArearangeTooltipTest >> testStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesArearangeTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesArearangeTooltipTest >> testValueDecimals [
 
 	| component javascript expectedConfiguration |

@@ -61,6 +61,34 @@ HighchartsPlotOptionsXrangeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrangeLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrangeLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsXrangeLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

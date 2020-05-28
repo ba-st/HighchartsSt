@@ -323,12 +323,12 @@ to be loaded.
 { #category : #accessing }
 HighchartsPlotOptionsHistogram >> crisp: aBoolean [
 
-	"When true, each column edge is rounded to its nearest pixel in order
-to render sharp on screen. In some cases, when there are a lot of
-densely packed columns, this leads to visible difference in column
-widths or distance between columns. In these cases, setting crisp
-to false may look better, even though each column is rendered
-blurry.
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
 Defaults to true."
 
 	configurationOptions at: 'crisp' put: aBoolean
@@ -361,6 +361,31 @@ as listed under series.color.
 "
 
 	configurationOptions at: 'cursor' put: aStringOrHighchartsCursorValue
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsHistogram >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsHistogram >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
+Defaults to Solid."
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -865,14 +890,14 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsHistogram >> threshold: aNumber [
+HighchartsPlotOptionsHistogram >> threshold: aNumberOrNil [
 
 	"The Y axis value to serve as the base for the columns, for
 distinguishing between values above and below a threshold. If null,
 the columns extend from the padding Y axis minimum.
 Defaults to 0."
 
-	configurationOptions at: 'threshold' put: aNumber
+	configurationOptions at: 'threshold' put: aNumberOrNil
 ]
 
 { #category : #accessing }

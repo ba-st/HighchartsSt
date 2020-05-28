@@ -61,6 +61,34 @@ HighchartsPlotOptionsSeriesLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsSeriesLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSeriesLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSeriesLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSeriesLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSeriesLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

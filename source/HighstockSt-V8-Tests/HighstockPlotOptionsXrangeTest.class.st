@@ -271,6 +271,34 @@ HighstockPlotOptionsXrangeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsXrangeTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsXrange new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsXrangeTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsXrange new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsXrangeTest >> testDescription [
 
 	| component javascript expectedConfiguration |

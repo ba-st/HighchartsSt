@@ -33,6 +33,20 @@ HighchartsPaneTest >> testEndAngle [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPaneTest >> testInnerSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPane new.
+	component innerSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'innerSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPaneTest >> testSize [
 
 	| component javascript expectedConfiguration |

@@ -61,6 +61,34 @@ HighchartsSeriesTreemapLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTreemapLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTreemapLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

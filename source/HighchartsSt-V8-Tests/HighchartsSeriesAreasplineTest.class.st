@@ -230,6 +230,21 @@ HighchartsSeriesAreasplineTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesAreasplineTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreaspline new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areaspline';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesAreasplineTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -255,6 +270,21 @@ HighchartsSeriesAreasplineTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'areaspline';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplineTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreaspline new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areaspline';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -825,21 +855,6 @@ HighchartsSeriesAreasplineTest >> testStates [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'areaspline';
 		at: 'states' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTest >> testStep [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesAreaspline new.
-	component step: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'areaspline';
-		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

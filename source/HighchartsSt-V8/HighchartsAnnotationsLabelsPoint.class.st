@@ -21,15 +21,16 @@ or chart pixel coordinates.
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelsPoint >> xAxis: aNumberOrstring [
+HighchartsAnnotationsLabelsPoint >> xAxis: aNumberOrstringOrNil [
 
-	"This number defines which xAxis the point is connected to. It
-refers to either the axis id or the index of the axis in the
-xAxis array. If the option is not configured or the axis is not
-found the point´s x coordinate refers to the chart pixels.
+	"This number defines which xAxis the point is connected to.
+It refers to either the axis id or the index of the axis in
+the xAxis array. If the option is not configured or the axis
+is not found the point´s x coordinate refers to the chart
+pixels.
 "
 
-	configurationOptions at: 'xAxis' put: aNumberOrstring
+	configurationOptions at: 'xAxis' put: aNumberOrstringOrNil
 ]
 
 { #category : #accessing }
@@ -43,13 +44,14 @@ or chart pixel coordinates.
 ]
 
 { #category : #accessing }
-HighchartsAnnotationsLabelsPoint >> yAxis: aNumberOrstring [
+HighchartsAnnotationsLabelsPoint >> yAxis: aNumberOrstringOrNil [
 
-	"This number defines which yAxis the point is connected to. It
-refers to either the axis id or the index of the axis in the
-yAxis array. If the option is not configured or the axis is not
-found the point´s y coordinate refers to the chart pixels.
+	"This number defines which yAxis the point is connected to.
+It refers to either the axis id or the index of the axis in
+the yAxis array. If the option is not configured or the axis
+is not found the point´s y coordinate refers to the chart
+pixels.
 "
 
-	configurationOptions at: 'yAxis' put: aNumberOrstring
+	configurationOptions at: 'yAxis' put: aNumberOrstringOrNil
 ]

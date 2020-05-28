@@ -143,6 +143,14 @@ when these series types are used.
 ]
 
 { #category : #accessing }
+HighstockLangAccessibility >> sonification [
+
+	"Language options for sonification.
+"
+	^ configurationOptions at: 'sonification' ifAbsentPut: [ HighstockLangAccessibilitySonification new ]
+]
+
+{ #category : #accessing }
 HighstockLangAccessibility >> svgContainerLabel: aString [
 
 

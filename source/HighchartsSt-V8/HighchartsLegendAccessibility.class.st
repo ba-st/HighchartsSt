@@ -9,12 +9,12 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsLegendAccessibility >> enabled: anObject [
+HighchartsLegendAccessibility >> enabled: aBoolean [
 
 	"Enable accessibility support for the legend.
-"
+Defaults to true."
 
-	configurationOptions at: 'enabled' put: anObject
+	configurationOptions at: 'enabled' put: aBoolean
 ]
 
 { #category : #accessing }

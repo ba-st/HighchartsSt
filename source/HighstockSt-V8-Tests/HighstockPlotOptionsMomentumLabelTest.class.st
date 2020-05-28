@@ -61,6 +61,34 @@ HighstockPlotOptionsMomentumLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsMomentumLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMomentumLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMomentumLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMomentumLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsMomentumLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

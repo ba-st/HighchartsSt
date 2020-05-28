@@ -47,20 +47,6 @@ HighchartsTooltipStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipStyleTest >> testPointerEvents [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsTooltipStyle new.
-	component pointerEvents: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'pointerEvents' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsTooltipStyleTest >> testWhiteSpace [
 
 	| component javascript expectedConfiguration |

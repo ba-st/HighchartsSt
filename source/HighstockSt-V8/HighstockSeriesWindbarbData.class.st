@@ -53,6 +53,17 @@ colorIndex.
 ]
 
 { #category : #accessing }
+HighstockSeriesWindbarbData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality.
+Here you can add additional data for your own event callbacks and formatter
+callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighstockSeriesWindbarbData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as
@@ -146,12 +157,12 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockSeriesWindbarbData >> value: aNumber [
+HighstockSeriesWindbarbData >> value: aNumberOrNil [
 
 	"The wind speed in meters per second.
 "
 
-	configurationOptions at: 'value' put: aNumber
+	configurationOptions at: 'value' put: aNumberOrNil
 ]
 
 { #category : #accessing }

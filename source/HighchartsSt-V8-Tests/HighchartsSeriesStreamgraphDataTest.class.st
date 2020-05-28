@@ -47,6 +47,20 @@ HighchartsSeriesStreamgraphDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesStreamgraphDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesStreamgraphData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesStreamgraphDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

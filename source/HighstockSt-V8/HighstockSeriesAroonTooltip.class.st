@@ -158,6 +158,16 @@ flexibility.
 ]
 
 { #category : #accessing }
+HighstockSeriesAroonTooltip >> stickOnContact: aBoolean [
+
+	"Prevents the tooltip from switching or closing, when touched or
+pointed.
+"
+
+	configurationOptions at: 'stickOnContact' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockSeriesAroonTooltip >> valueDecimals: aNumber [
 
 	"Number of decimals in indicator series.

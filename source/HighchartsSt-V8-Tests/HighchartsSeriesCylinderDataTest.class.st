@@ -75,6 +75,20 @@ HighchartsSeriesCylinderDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesCylinderDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinderData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesCylinderDataTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

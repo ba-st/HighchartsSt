@@ -95,36 +95,6 @@ HighstockSeriesFlagsTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testBorderColor [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component borderColor: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'borderColor' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testBorderWidth [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component borderWidth: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'borderWidth' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesFlagsTest >> testClassName [
 
 	| component javascript expectedConfiguration |
@@ -290,21 +260,6 @@ HighstockSeriesFlagsTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testConnectNulls [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component connectNulls: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'connectNulls' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesFlagsTest >> testCrisp [
 
 	| component javascript expectedConfiguration |
@@ -350,16 +305,16 @@ HighstockSeriesFlagsTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testDashStyle [
+HighstockSeriesFlagsTest >> testCustom [
 
 	| component javascript expectedConfiguration |
 
 	component := HighstockSeriesFlags new.
-	component dashStyle: 'test'.
+	component custom: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'flags';
-		at: 'dashStyle' put: 'test';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -495,36 +450,6 @@ HighstockSeriesFlagsTest >> testFindNearestPointBy [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'flags';
 		at: 'findNearestPointBy' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testGapSize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component gapSize: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'gapSize' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testGapUnit [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component gapUnit: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'gapUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -705,36 +630,6 @@ HighstockSeriesFlagsTest >> testLineColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'flags';
 		at: 'lineColor' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testLineWidth [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component lineWidth: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'lineWidth' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testLinecap [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component linecap: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'linecap' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1160,21 +1055,6 @@ HighstockSeriesFlagsTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testStep [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component step: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'step' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesFlagsTest >> testStickyTracking [
 
 	| component javascript expectedConfiguration |
@@ -1245,21 +1125,6 @@ HighstockSeriesFlagsTest >> testTitle [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'flags';
 		at: 'title' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testTurboThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesFlags new.
-	component turboThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'flags';
-		at: 'turboThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

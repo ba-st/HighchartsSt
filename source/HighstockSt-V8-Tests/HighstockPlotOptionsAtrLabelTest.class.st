@@ -61,6 +61,34 @@ HighstockPlotOptionsAtrLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsAtrLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAtrLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAtrLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAtrLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsAtrLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

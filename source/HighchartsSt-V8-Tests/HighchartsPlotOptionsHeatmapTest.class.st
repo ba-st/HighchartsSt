@@ -187,6 +187,20 @@ HighchartsPlotOptionsHeatmapTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsHeatmapTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsHeatmap new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsHeatmapTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -210,6 +224,20 @@ HighchartsPlotOptionsHeatmapTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsHeatmapTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsHeatmap new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

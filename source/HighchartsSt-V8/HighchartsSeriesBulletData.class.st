@@ -106,6 +106,17 @@ by default.
 ]
 
 { #category : #accessing }
+HighchartsSeriesBulletData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality.
+Here you can add additional data for your own event callbacks and formatter
+callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesBulletData >> dashStyle: aHighchartsDashStyleValue [
 
 	"A name for the dash style to use for the column or bar. Overrides

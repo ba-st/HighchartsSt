@@ -61,6 +61,20 @@ HighstockAccessibilityPointTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAccessibilityPointTest >> testValueDescriptionFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibilityPoint new.
+	component valueDescriptionFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'valueDescriptionFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAccessibilityPointTest >> testValuePrefix [
 
 	| component javascript expectedConfiguration |

@@ -21,13 +21,13 @@ by options in a specific control point.
 ]
 
 { #category : #accessing }
-HighchartsAnnotations >> draggable: aString [
+HighchartsAnnotations >> draggable: aHighchartsAnnotationDraggableValue [
 
 	"Allow an annotation to be draggable by a user. Possible
-values are &quot;x&quot;, &quot;xy&quot;, &quot;y&quot; and &quot;&quot; (disabled).
+values are ´x´, ´xy´, ´y´ and ´´ (disabled).
 Defaults to xy."
 
-	configurationOptions at: 'draggable' put: aString
+	configurationOptions at: 'draggable' put: aHighchartsAnnotationDraggableValue
 ]
 
 { #category : #accessing }
@@ -40,13 +40,13 @@ HighchartsAnnotations >> events: anObject [
 ]
 
 { #category : #accessing }
-HighchartsAnnotations >> id: aStringOrnumber [
+HighchartsAnnotations >> id: aNumberOrstring [
 
-	"Sets an ID for an annotation. Can be user later when removing an
-annotation in Chart#removeAnnotation(id) method.
+	"Sets an ID for an annotation. Can be user later when
+removing an annotation in Chart#removeAnnotation(id) method.
 "
 
-	configurationOptions at: 'id' put: aStringOrnumber
+	configurationOptions at: 'id' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -62,8 +62,8 @@ can be overwritten by config for a specific label.
 { #category : #accessing }
 HighchartsAnnotations >> labels [
 
-	"An array of labels for the annotation. For options that apply to
-multiple labels, they can be added to the
+	"An array of labels for the annotation. For options that apply
+to multiple labels, they can be added to the
 labelOptions.
 "
 	^ configurationOptions at: 'labels' ifAbsentPut: [ HighchartsAnnotationsLabels new ]
@@ -72,9 +72,9 @@ labelOptions.
 { #category : #accessing }
 HighchartsAnnotations >> shapeOptions [
 
-	"Options for annotation´s shapes. Each shape inherits options from
-the shapeOptions object. An option from the shapeOptions can be
-overwritten by config for a specific shape.
+	"Options for annotation´s shapes. Each shape inherits options
+from the shapeOptions object. An option from the shapeOptions
+can be overwritten by config for a specific shape.
 "
 	^ configurationOptions at: 'shapeOptions' ifAbsentPut: [ HighchartsAnnotationsShapeOptions new ]
 ]
@@ -82,8 +82,8 @@ overwritten by config for a specific shape.
 { #category : #accessing }
 HighchartsAnnotations >> shapes [
 
-	"An array of shapes for the annotation. For options that apply to
-multiple shapes, then can be added to the
+	"An array of shapes for the annotation. For options that apply
+to multiple shapes, then can be added to the
 shapeOptions.
 "
 	^ configurationOptions at: 'shapes' ifAbsentPut: [ HighchartsAnnotationsShapes new ]

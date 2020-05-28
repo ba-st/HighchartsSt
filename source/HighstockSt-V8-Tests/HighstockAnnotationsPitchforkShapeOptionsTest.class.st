@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsPitchforkShapeOptionsTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsPitchforkShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsPitchforkShapeOptionsTest >> testFill [
 
 	| component javascript expectedConfiguration |
@@ -56,6 +70,20 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testSnap [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'snap' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsPitchforkShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

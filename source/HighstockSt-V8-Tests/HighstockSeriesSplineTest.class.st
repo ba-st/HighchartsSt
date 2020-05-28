@@ -260,6 +260,21 @@ HighstockSeriesSplineTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesSplineTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSpline new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'spline';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesSplineTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -285,6 +300,21 @@ HighstockSeriesSplineTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'spline';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSplineTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSpline new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'spline';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -202,7 +202,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsSunburstDataLabels >> distance: aNumber [
+HighchartsPlotOptionsSunburstDataLabels >> distance: aNumberOrstring [
 
 	"The distance of the data label from the pie´s edge. Negative
 numbers put the data label on top of the pie slices. Can also be
@@ -210,7 +210,7 @@ defined as a percentage of pie´s radius. Connectors are only
 shown for data labels outside the pie.
 Defaults to 30."
 
-	configurationOptions at: 'distance' put: aNumber
+	configurationOptions at: 'distance' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -256,17 +256,6 @@ formatter is ignored.
 "
 
 	configurationOptions at: 'formatter' put: aHighchartsDataLabelsFormatterCallbackFunction
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsSunburstDataLabels >> inside: aBoolean [
-
-	"For points with an extent, like columns or map areas, whether to
-align the data label inside the box or to the actual value point.
-Defaults to false in most cases, true in stacked columns.
-"
-
-	configurationOptions at: 'inside' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -341,9 +330,12 @@ Defaults to 0."
 HighchartsPlotOptionsSunburstDataLabels >> rotationMode: aString [
 
 	"Decides how the data label will be rotated relative to the perimeter
-of the sunburst. Valid values are auto, parallel and
-perpendicular. When auto, the best fit will be computed for the
-point.
+of the sunburst. Valid values are auto, circular, parallel and
+perpendicular. When auto, the best fit will be
+computed for the point. The circular option works similiar
+to auto, but uses the textPath feature - labels are curved,
+resulting in a better layout, however multiple lines and
+textOutline are not supported.
 The series.rotation option takes precedence over rotationMode.
 Defaults to auto."
 

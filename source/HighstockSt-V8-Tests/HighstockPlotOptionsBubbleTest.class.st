@@ -243,6 +243,20 @@ HighstockPlotOptionsBubbleTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsBubbleTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsBubble new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsBubbleTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -266,6 +280,20 @@ HighstockPlotOptionsBubbleTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsBubbleTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsBubble new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

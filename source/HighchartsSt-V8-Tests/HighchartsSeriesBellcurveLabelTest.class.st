@@ -61,6 +61,34 @@ HighchartsSeriesBellcurveLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBellcurveLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBellcurveLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBellcurveLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBellcurveLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBellcurveLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

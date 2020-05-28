@@ -61,6 +61,34 @@ HighstockSeriesCciLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCciLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCciLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCciLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCciLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCciLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

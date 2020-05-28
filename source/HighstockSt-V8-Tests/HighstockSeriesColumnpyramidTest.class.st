@@ -275,6 +275,21 @@ HighstockSeriesColumnpyramidTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramid new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'columnpyramid';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesColumnpyramidTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -300,6 +315,21 @@ HighstockSeriesColumnpyramidTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'columnpyramid';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramid new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'columnpyramid';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

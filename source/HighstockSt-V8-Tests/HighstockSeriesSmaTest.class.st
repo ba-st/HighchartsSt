@@ -271,6 +271,20 @@ HighstockSeriesSmaTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesSmaTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSma new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesSmaTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -294,6 +308,20 @@ HighstockSeriesSmaTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSmaTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSma new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

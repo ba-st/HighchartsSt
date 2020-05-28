@@ -383,6 +383,20 @@ HighchartsSeriesHistogramTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesHistogramTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

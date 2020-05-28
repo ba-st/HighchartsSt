@@ -257,20 +257,6 @@ HighchartsPlotOptionsPieDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPieDataLabelsTest >> testInside [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsPieDataLabels new.
-	component inside: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'inside' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPieDataLabelsTest >> testNullFormat [
 
 	| component javascript expectedConfiguration |

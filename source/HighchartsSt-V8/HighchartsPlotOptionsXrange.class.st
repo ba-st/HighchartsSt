@@ -256,6 +256,31 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsXrange >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsXrange >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
+Defaults to Solid."
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsXrange >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
@@ -267,14 +292,6 @@ In styled mode, the data labels can be styled with the
 (see example).
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsPlotOptionsXrangeDataLabels new ]
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsXrange >> dataSorting [
-
-	"Options for the series data sorting.
-"
-	^ configurationOptions at: 'dataSorting' ifAbsentPut: [ HighchartsPlotOptionsXrangeDataSorting new ]
 ]
 
 { #category : #accessing }

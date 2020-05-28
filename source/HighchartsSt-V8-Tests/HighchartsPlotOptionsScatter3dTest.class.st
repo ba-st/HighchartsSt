@@ -257,6 +257,20 @@ HighchartsPlotOptionsScatter3dTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsScatter3dTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -280,6 +294,20 @@ HighchartsPlotOptionsScatter3dTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

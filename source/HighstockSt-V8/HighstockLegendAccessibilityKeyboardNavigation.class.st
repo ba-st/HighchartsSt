@@ -8,10 +8,10 @@ Class {
 }
 
 { #category : #accessing }
-HighstockLegendAccessibilityKeyboardNavigation >> enabled: anObject [
+HighstockLegendAccessibilityKeyboardNavigation >> enabled: aBoolean [
 
 	"Enable keyboard navigation for the legend.
-"
+Defaults to true."
 
-	configurationOptions at: 'enabled' put: anObject
+	configurationOptions at: 'enabled' put: aBoolean
 ]

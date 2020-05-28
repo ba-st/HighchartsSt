@@ -52,3 +52,10 @@ HighchartsPlotOptionsPackedbubbleDataLabelsStyle >> textOutline: aString [
 
 	configurationOptions at: 'textOutline' put: aString
 ]
+
+{ #category : #accessing }
+HighchartsPlotOptionsPackedbubbleDataLabelsStyle >> transition: aString [
+
+
+	configurationOptions at: 'transition' put: aString
+]

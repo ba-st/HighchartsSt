@@ -42,7 +42,12 @@ duration: The duration of the animation in milliseconds.
 easing: A string reference to an easing function set on the
 Math object. See
 the easing demo.
-Defaults to true."
+
+
+When zooming on a series with less than 100 points, the chart redraw
+will be done with animation, but in case of more data points, it is
+necessary to set this option to ensure animation on zoom.
+Defaults to undefined."
 
 	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
 ]
@@ -128,8 +133,8 @@ HighstockChart >> events: anObject [
 { #category : #accessing }
 HighstockChart >> height: aNilOrnumberOrstring [
 
-	"An explicit height for the chart. If a number, the height is
-given in pixels. If given a percentage string (for example
+	"An explicit height for the chart. If a number_, the height is
+given in pixels. If given a _percentage string (for example
 ´56´), the height is given as the percentage of the actual chart
 width. This allows for preserving the aspect ratio across responsive
 sizes.

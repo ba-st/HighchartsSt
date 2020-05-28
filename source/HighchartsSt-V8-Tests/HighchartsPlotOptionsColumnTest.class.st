@@ -271,6 +271,34 @@ HighchartsPlotOptionsColumnTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumn new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumn new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsColumnTest >> testDepth [
 
 	| component javascript expectedConfiguration |

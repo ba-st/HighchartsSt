@@ -61,6 +61,20 @@ HighchartsSeriesSunburstDataTest >> testColorValue [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSunburstDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSunburstDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

@@ -897,12 +897,6 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
-HighchartsPlotOptions >> packedBubble [
-
-	^ configurationOptions at: 'packedBubble' ifAbsentPut: [ HighchartsPlotOptionsPackedBubble new ]
-]
-
-{ #category : #accessing }
 HighchartsPlotOptions >> packedbubble [
 
 	"A packed bubble series is a two dimensional series type, where each point

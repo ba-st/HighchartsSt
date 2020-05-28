@@ -273,11 +273,28 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsWordcloud >> dataSorting [
+HighchartsPlotOptionsWordcloud >> custom: anObject [
 
-	"Options for the series data sorting.
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
 "
-	^ configurationOptions at: 'dataSorting' ifAbsentPut: [ HighchartsPlotOptionsWordcloudDataSorting new ]
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloud >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
+Defaults to Solid."
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }

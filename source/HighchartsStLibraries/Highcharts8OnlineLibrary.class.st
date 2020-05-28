@@ -23,5 +23,5 @@ Highcharts8OnlineLibrary >> updateRoot: aRoot [
 { #category : #versions }
 Highcharts8OnlineLibrary >> version [
 
-	^ '8.0.0'
+	^ '8.1.0'
 ]

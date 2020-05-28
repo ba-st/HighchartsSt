@@ -75,6 +75,20 @@ HighchartsAccessibilityScreenReaderSectionTest >> testBeforeChartFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsAccessibilityScreenReaderSectionTest >> testOnPlayAsSoundClick [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibilityScreenReaderSection new.
+	component onPlayAsSoundClick: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'onPlayAsSoundClick' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsAccessibilityScreenReaderSectionTest >> testOnViewDataTableClick [
 
 	| component javascript expectedConfiguration |

@@ -47,6 +47,20 @@ HighchartsSeriesScatter3dDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesScatter3dDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesScatter3dData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesScatter3dDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

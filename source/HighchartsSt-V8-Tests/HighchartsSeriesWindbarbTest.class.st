@@ -320,6 +320,21 @@ HighchartsSeriesWindbarbTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWindbarbTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarb new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWindbarbTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

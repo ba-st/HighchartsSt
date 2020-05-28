@@ -8,6 +8,14 @@ Class {
 }
 
 { #category : #accessing }
+HighstockAnnotationsFibonacciTypeOptionsLabels >> accessibility [
+
+	"Accessibility options for an annotation label.
+"
+	^ configurationOptions at: 'accessibility' ifAbsentPut: [ HighstockAnnotationsFibonacciTypeOptionsLabelsAccessibility new ]
+]
+
+{ #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> align: aHighchartsAlignValue [
 
 	"The alignment of the annotation´s label. If right,
@@ -31,7 +39,8 @@ Defaults to false."
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The background color or gradient for the annotation´s label.
+	"The background color or gradient for the annotation´s
+label.
 Defaults to rgba(0, 0, 0, 0.75)."
 
 	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -107,9 +116,9 @@ string for the data label.
 HighstockAnnotationsFibonacciTypeOptionsLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
 	"Callback JavaScript function to format the annotation´s
-label. Note that if a format or text are defined, the
-format or text take precedence and the formatter is ignored.
-This refers to a point object.
+label. Note that if a format or text are defined,
+the format or text take precedence and the formatter is
+ignored. This refers to a point object.
 Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
 	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
@@ -118,9 +127,9 @@ Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; 
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> overflow: aString [
 
-	"How to handle the annotation´s label that flow outside the
-plot area. The justify option aligns the label inside the
-plot area.
+	"How to handle the annotation´s label that flow outside
+the plot area. The justify option aligns the label inside
+the plot area.
 Defaults to justify."
 
 	configurationOptions at: 'overflow' put: aString
@@ -129,8 +138,8 @@ Defaults to justify."
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> padding: aNumber [
 
-	"When either the borderWidth or the backgroundColor is set,
-this    is the padding within the box.
+	"When either the borderWidth or the backgroundColor is
+set, this is the padding within the box.
 Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
@@ -150,8 +159,9 @@ Defaults to false."
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> shape: aString [
 
-	"The name of a symbol to use for the border around the label.
-Symbols are predefined functions on the Renderer object.
+	"The name of a symbol to use for the border around the
+label. Symbols are predefined functions on the Renderer
+object.
 Defaults to callout."
 
 	configurationOptions at: 'shape' put: aString

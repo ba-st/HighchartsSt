@@ -243,6 +243,34 @@ HighchartsPlotOptionsDependencywheelTest >> testCurveFactor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsDependencywheelTest >> testDescription [
 
 	| component javascript expectedConfiguration |

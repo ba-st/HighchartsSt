@@ -61,6 +61,34 @@ HighchartsSeriesPackedbubbleLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleLabelTest >> testFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleLabelTest >> testFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPackedbubbleLabelTest >> testMaxFontSize [
 
 	| component javascript expectedConfiguration |

@@ -153,15 +153,14 @@ option.
 ]
 
 { #category : #accessing }
-Highchart >> defs: anObject [
+Highchart >> defs [
 
 	"Styled mode only. Configuration object for adding SVG definitions for
 reusable elements. See gradients, shadows and
 patterns
 for more information and code examples.
 "
-
-	configurationOptions at: 'defs' put: anObject
+	^ configurationOptions at: 'defs' ifAbsentPut: [ HighchartsDefs new ]
 ]
 
 { #category : #accessing }

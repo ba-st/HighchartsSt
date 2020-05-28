@@ -243,6 +243,20 @@ HighstockPlotOptionsChaikinTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsChaikinTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsChaikin new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsChaikinTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -266,6 +280,20 @@ HighstockPlotOptionsChaikinTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsChaikinTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsChaikin new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

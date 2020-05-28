@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsCrookedLineShapeOptionsTest >> testFill [
 
 	| component javascript expectedConfiguration |
@@ -56,6 +70,20 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testSnap [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'snap' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -131,6 +131,20 @@ HighchartsLangTest >> testDrillUpText [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsLangTest >> testExitFullscreen [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLang new.
+	component exitFullscreen: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exitFullscreen' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLangTest >> testInvalidDate [
 
 	| component javascript expectedConfiguration |
@@ -210,20 +224,6 @@ HighchartsLangTest >> testNumericSymbols [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'numericSymbols' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsLangTest >> testOpenInCloud [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsLang new.
-	component openInCloud: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'openInCloud' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -229,6 +229,20 @@ HighchartsPlotOptionsVariablepieTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsVariablepieTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVariablepie new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsVariablepieTest >> testCursor [
 
 	| component javascript expectedConfiguration |
@@ -238,6 +252,20 @@ HighchartsPlotOptionsVariablepieTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVariablepieTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVariablepie new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

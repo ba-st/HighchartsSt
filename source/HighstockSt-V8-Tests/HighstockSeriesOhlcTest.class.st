@@ -305,6 +305,21 @@ HighstockSeriesOhlcTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesOhlcTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -330,6 +345,21 @@ HighstockSeriesOhlcTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'ohlc';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

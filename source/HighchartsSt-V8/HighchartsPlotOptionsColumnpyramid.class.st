@@ -279,6 +279,31 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsColumnpyramid >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsColumnpyramid >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
+Defaults to Solid."
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsColumnpyramid >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
@@ -526,7 +551,7 @@ pointInterval to 10. In true datetime axes, the pointInterval
 is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 Defaults to 1."
 
@@ -542,7 +567,7 @@ units, day, month and year. A day is usually the same as 24
 hours, but pointIntervalUnit also takes the DST crossover into
 consideration when dealing with local time. Combine this option with
 pointInterval to draw weeks, quarters, 6 months, 10 years etc.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 "
 

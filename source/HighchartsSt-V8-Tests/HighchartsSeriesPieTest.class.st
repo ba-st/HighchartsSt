@@ -305,6 +305,21 @@ HighchartsSeriesPieTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPieTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPie new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pie';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPieTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -330,6 +345,21 @@ HighchartsSeriesPieTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pie';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPieTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPie new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pie';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1035,21 +1065,6 @@ HighchartsSeriesPieTest >> testStates [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pie';
 		at: 'states' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsSeriesPieTest >> testStep [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesPie new.
-	component step: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'pie';
-		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

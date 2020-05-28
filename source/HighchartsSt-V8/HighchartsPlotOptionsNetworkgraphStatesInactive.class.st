@@ -17,6 +17,15 @@ HighchartsPlotOptionsNetworkgraphStatesInactive >> animation [
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsNetworkgraphStatesInactive >> enabled: aBoolean [
+
+	"Enable or disable the inactive state for a series
+Defaults to true."
+
+	configurationOptions at: 'enabled' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsNetworkgraphStatesInactive >> linkOpacity: aNumber [
 
 	"Opacity of inactive links.
@@ -28,8 +37,7 @@ Defaults to 0.3."
 { #category : #accessing }
 HighchartsPlotOptionsNetworkgraphStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area). Set to 1
-to disable inactive state.
+	"Opacity of series elements (dataLabels, line, area).
 Defaults to 0.2."
 
 	configurationOptions at: 'opacity' put: aNumber

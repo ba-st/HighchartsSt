@@ -215,6 +215,21 @@ HighchartsSeriesNetworkgraphTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesNetworkgraphTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesNetworkgraph new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'networkgraph';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesNetworkgraphTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -240,6 +255,21 @@ HighchartsSeriesNetworkgraphTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'networkgraph';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesNetworkgraphTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesNetworkgraph new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'networkgraph';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

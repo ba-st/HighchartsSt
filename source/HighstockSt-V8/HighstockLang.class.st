@@ -114,6 +114,24 @@ Defaults to Download XLS."
 ]
 
 { #category : #accessing }
+HighstockLang >> exitFullscreen: aString [
+
+	"Exporting module only. The text for the menu item to exit the chart
+from full screen.
+Defaults to Exit from full screen."
+
+	configurationOptions at: 'exitFullscreen' put: aString
+]
+
+{ #category : #accessing }
+HighstockLang >> exportData [
+
+	"The text for exported table.
+"
+	^ configurationOptions at: 'exportData' ifAbsentPut: [ HighstockLangExportData new ]
+]
+
+{ #category : #accessing }
 HighstockLang >> invalidDate: aString [
 
 	"What to show in a date field for invalid dates. Defaults to an empty
@@ -185,15 +203,6 @@ numericSymbols to null disables shortening altogether.
 Defaults to ['k', 'M', 'G', 'T', 'P', 'E']."
 
 	configurationOptions at: 'numericSymbols' put: anArrayOfstring
-]
-
-{ #category : #accessing }
-HighstockLang >> openInCloud: aString [
-
-	"The text for the menu item.
-Defaults to Open in Highcharts Cloud."
-
-	configurationOptions at: 'openInCloud' put: aString
 ]
 
 { #category : #accessing }
@@ -306,7 +315,8 @@ Defaults to View data table."
 { #category : #accessing }
 HighstockLang >> viewFullscreen: aString [
 
-	"Exporting module only. View the chart in full screen.
+	"Exporting module only. The text for the menu item to view the chart
+in full screen.
 Defaults to View in full screen."
 
 	configurationOptions at: 'viewFullscreen' put: aString

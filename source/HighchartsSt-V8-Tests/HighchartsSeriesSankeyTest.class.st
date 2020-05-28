@@ -260,6 +260,21 @@ HighchartsSeriesSankeyTest >> testCurveFactor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesSankeyTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

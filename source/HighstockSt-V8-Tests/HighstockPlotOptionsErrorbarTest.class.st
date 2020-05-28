@@ -257,6 +257,34 @@ HighstockPlotOptionsErrorbarTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsErrorbarTest >> testDescription [
 
 	| component javascript expectedConfiguration |

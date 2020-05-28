@@ -365,6 +365,21 @@ HighchartsSeriesBulletTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBulletTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBullet new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bullet';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBulletTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

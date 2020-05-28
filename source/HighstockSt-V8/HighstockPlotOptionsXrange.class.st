@@ -293,6 +293,31 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighstockPlotOptionsXrange >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsXrange >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
+Defaults to Solid."
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsXrange >> dataGrouping [
 
 	"Data grouping is the concept of sampling the data values into larger
@@ -322,14 +347,6 @@ In styled mode, the data labels can be styled with the
 (see example).
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighstockPlotOptionsXrangeDataLabels new ]
-]
-
-{ #category : #accessing }
-HighstockPlotOptionsXrange >> dataSorting [
-
-	"Options for the series data sorting.
-"
-	^ configurationOptions at: 'dataSorting' ifAbsentPut: [ HighstockPlotOptionsXrangeDataSorting new ]
 ]
 
 { #category : #accessing }

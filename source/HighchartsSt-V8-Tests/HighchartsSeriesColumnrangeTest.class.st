@@ -320,6 +320,21 @@ HighchartsSeriesColumnrangeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesColumnrangeTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnrange new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'columnrange';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesColumnrangeTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

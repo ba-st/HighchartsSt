@@ -61,6 +61,20 @@ HighstockSeriesCandlestickDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesCandlestickDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestickData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesCandlestickDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

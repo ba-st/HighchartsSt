@@ -84,6 +84,17 @@ by default.
 ]
 
 { #category : #accessing }
+HighchartsSeriesErrorbarData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality.
+Here you can add additional data for your own event callbacks and formatter
+callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesErrorbarData >> description: aString [
 
 	"A description of the point to add to the screen reader information

@@ -427,6 +427,16 @@ easier to read. This option takes precedence over tooltip.shared.
 ]
 
 { #category : #accessing }
+HighstockTooltip >> stickOnContact: aBoolean [
+
+	"Prevents the tooltip from switching or closing, when touched or
+pointed.
+"
+
+	configurationOptions at: 'stickOnContact' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockTooltip >> style [
 
 	"CSS styles for the tooltip. The tooltip can also be styled through

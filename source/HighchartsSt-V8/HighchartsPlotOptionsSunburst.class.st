@@ -224,6 +224,20 @@ to be loaded.
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsSunburst >> crisp: aBoolean [
+
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
+Defaults to true."
+
+	configurationOptions at: 'crisp' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsSunburst >> cursor: aStringOrHighchartsCursorValue [
 
 	"You can set the cursor to &quot;pointer&quot; if you have click events attached
@@ -234,6 +248,17 @@ as listed under series.color.
 "
 
 	configurationOptions at: 'cursor' put: aStringOrHighchartsCursorValue
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsSunburst >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
 ]
 
 { #category : #accessing }

@@ -252,6 +252,31 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsOrganization >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsOrganization >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
+Defaults to Solid."
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsOrganization >> dataGrouping [
 
 	"Data grouping is the concept of sampling the data values into larger
@@ -279,14 +304,6 @@ nodeFormat, and the format that applies to links and is an empty
 string by default.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsPlotOptionsOrganizationDataLabels new ]
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsOrganization >> dataSorting [
-
-	"Options for the series data sorting.
-"
-	^ configurationOptions at: 'dataSorting' ifAbsentPut: [ HighchartsPlotOptionsOrganizationDataSorting new ]
 ]
 
 { #category : #accessing }
@@ -504,6 +521,9 @@ HighchartsPlotOptionsOrganization >> nodePadding: aNumber [
 
 	"The padding between nodes in a sankey diagram or dependency wheel, in
 pixels.
+If the number of nodes is so great that it is possible to lay them
+out within the plot area with the given nodePadding, they will be
+rendered with a smaller padding as a strategy to avoid overflow.
 Defaults to 10."
 
 	configurationOptions at: 'nodePadding' put: aNumber

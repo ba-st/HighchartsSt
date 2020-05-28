@@ -202,8 +202,9 @@ Highsoft8TestGenerator >> settersIn: aClass [
 
 	| selectors |
 
-	selectors := packageSet collectFromAllPackages: #definedSelectorsForClass: with: aClass.
-	^ selectors select: [ :selector | (selector indexOf: $:) = selector size ]
+	selectors := packageSet packages
+		flatCollect: [ :package | package definedSelectorsForClass: aClass ].
+	^ selectors select: [ :selector | ( selector indexOf: $: ) = selector size ]
 ]
 
 { #category : #'private - accessing' }

@@ -143,6 +143,14 @@ when these series types are used.
 ]
 
 { #category : #accessing }
+HighchartsLangAccessibility >> sonification [
+
+	"Language options for sonification.
+"
+	^ configurationOptions at: 'sonification' ifAbsentPut: [ HighchartsLangAccessibilitySonification new ]
+]
+
+{ #category : #accessing }
 HighchartsLangAccessibility >> svgContainerLabel: aString [
 
 

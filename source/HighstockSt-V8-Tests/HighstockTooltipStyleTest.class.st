@@ -47,20 +47,6 @@ HighstockTooltipStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipStyleTest >> testPointerEvents [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockTooltipStyle new.
-	component pointerEvents: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'pointerEvents' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockTooltipStyleTest >> testWhiteSpace [
 
 	| component javascript expectedConfiguration |

@@ -75,6 +75,20 @@ HighchartsSeriesFunnel3dDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnel3dDataTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

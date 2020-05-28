@@ -61,6 +61,20 @@ HighstockSeriesOhlcDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesOhlcDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlcData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesOhlcDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

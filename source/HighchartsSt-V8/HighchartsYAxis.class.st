@@ -157,6 +157,8 @@ HighchartsYAxis >> endOnTick: aBoolean [
 
 	"Whether to force the axis to end on a tick. Use this option with
 the maxPadding option to control the axis end.
+This option is always disabled, when panning type is
+either y or xy.
 Defaults to true."
 
 	configurationOptions at: 'endOnTick' put: aBoolean
@@ -593,7 +595,10 @@ will be used.
 { #category : #accessing }
 HighchartsYAxis >> plotBands [
 
-	"An array of objects defining plot bands on the Y axis.
+	"An array of colored bands stretching across the plot area marking an
+interval on the axis.
+In styled mode, the plot bands are styled by the .highcharts-plot-band
+class in addition to the className option.
 "
 	^ configurationOptions at: 'plotBands' ifAbsentPut: [ HighchartsYAxisPlotBands new ]
 ]
@@ -601,7 +606,10 @@ HighchartsYAxis >> plotBands [
 { #category : #accessing }
 HighchartsYAxis >> plotLines [
 
-	"An array of objects representing plot lines on the X axis
+	"An array of lines stretching across the plot area, marking a specific
+value on one of the axes.
+In styled mode, the plot lines are styled by the
+.highcharts-plot-line class in addition to the className option.
 "
 	^ configurationOptions at: 'plotLines' ifAbsentPut: [ HighchartsYAxisPlotLines new ]
 ]
@@ -708,6 +716,8 @@ HighchartsYAxis >> startOnTick: aBoolean [
 
 	"Whether to force the axis to start on a tick. Use this option with
 the maxPadding option to control the axis start.
+This option is always disabled, when panning type is
+either y or xy.
 Defaults to true."
 
 	configurationOptions at: 'startOnTick' put: aBoolean

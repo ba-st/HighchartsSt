@@ -33,6 +33,20 @@ HighchartsSeriesPackedbubbleDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataLabelsTest >> testAttributes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleDataLabels new.
+	component attributes: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'attributes' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPackedbubbleDataLabelsTest >> testBackgroundColor [
 
 	| component javascript expectedConfiguration |
@@ -252,6 +266,20 @@ HighchartsSeriesPackedbubbleDataLabelsTest >> testPadding [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'padding' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataLabelsTest >> testParentNodeFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleDataLabels new.
+	component parentNodeFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'parentNodeFormat' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -138,6 +138,8 @@ HighchartsChartParallelAxes >> endOnTick: aBoolean [
 
 	"Whether to force the axis to end on a tick. Use this option with
 the maxPadding option to control the axis end.
+This option is always disabled, when panning type is
+either y or xy.
 Defaults to true."
 
 	configurationOptions at: 'endOnTick' put: aBoolean
@@ -604,6 +606,8 @@ HighchartsChartParallelAxes >> startOnTick: aBoolean [
 
 	"Whether to force the axis to start on a tick. Use this option with
 the maxPadding option to control the axis start.
+This option is always disabled, when panning type is
+either y or xy.
 Defaults to true."
 
 	configurationOptions at: 'startOnTick' put: aBoolean

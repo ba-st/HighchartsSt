@@ -40,9 +40,8 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockLegendBubbleLegendLabels >> format: aString [
 
-	"A format string
-for the bubble legend labels. Available variables are the
-same as for formatter.
+	"A format string for the bubble legend labels. Available
+variables are the same as for formatter.
 Defaults to ."
 
 	configurationOptions at: 'format' put: aString

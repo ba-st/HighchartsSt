@@ -40,10 +40,21 @@ degrees where 0 is north. Defaults to startAngle
 ]
 
 { #category : #accessing }
+HighchartsPane >> innerSize: aNumberOrstring [
+
+	"The inner size of the pane, either as a number defining pixels, or a
+percentage defining a percentage of the pane´s size.
+Defaults to 0%."
+
+	configurationOptions at: 'innerSize' put: aNumberOrstring
+]
+
+{ #category : #accessing }
 HighchartsPane >> size: aNumberOrstring [
 
 	"The size of the pane, either as a number defining pixels, or a
-percentage defining a percentage of the plot are.
+percentage defining a percentage of the available plot area (the
+smallest of the plot height or plot width).
 Defaults to 85%."
 
 	configurationOptions at: 'size' put: aNumberOrstring

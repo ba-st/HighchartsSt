@@ -19,6 +19,20 @@ HighstockSeriesStreamgraphDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesStreamgraphDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesStreamgraphData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesStreamgraphDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

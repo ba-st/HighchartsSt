@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataTest >> testBoxDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotData new.
+	component boxDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'boxDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBoxplotDataTest >> testClassName [
 
 	| component javascript expectedConfiguration |
@@ -42,6 +56,20 @@ HighchartsSeriesBoxplotDataTest >> testColorIndex [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'colorIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -159,6 +187,20 @@ HighchartsSeriesBoxplotDataTest >> testMedian [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataTest >> testMedianDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotData new.
+	component medianDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'medianDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBoxplotDataTest >> testName [
 
 	| component javascript expectedConfiguration |
@@ -210,6 +252,34 @@ HighchartsSeriesBoxplotDataTest >> testSelected [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'selected' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataTest >> testStemDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotData new.
+	component stemDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stemDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataTest >> testWhiskerDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotData new.
+	component whiskerDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'whiskerDashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

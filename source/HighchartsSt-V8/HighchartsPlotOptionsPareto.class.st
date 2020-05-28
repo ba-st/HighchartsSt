@@ -258,10 +258,21 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsPareto >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsPareto >> dashStyle: aHighchartsDashStyleValue [
 
-	"A name for the dash style to use for the graph, or for some series
-types the outline of each shape.
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
 In styled mode, the
 stroke dash-array
 can be set with the same classes as listed under

@@ -110,6 +110,21 @@ HighchartsSeriesErrorbarTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testBoxDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component boxDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'boxDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesErrorbarTest >> testClassName [
 
 	| component javascript expectedConfiguration |
@@ -345,6 +360,21 @@ HighchartsSeriesErrorbarTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'errorbar';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -750,6 +780,21 @@ HighchartsSeriesErrorbarTest >> testMedianColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'errorbar';
 		at: 'medianColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testMedianDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component medianDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'medianDashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1215,6 +1260,21 @@ HighchartsSeriesErrorbarTest >> testWhiskerColor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'errorbar';
 		at: 'whiskerColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testWhiskerDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component whiskerDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'whiskerDashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

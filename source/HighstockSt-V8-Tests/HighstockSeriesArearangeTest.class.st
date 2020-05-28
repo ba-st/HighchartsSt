@@ -260,6 +260,21 @@ HighstockSeriesArearangeTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesArearangeTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesArearange new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'arearange';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesArearangeTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -285,6 +300,21 @@ HighstockSeriesArearangeTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'arearange';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesArearangeTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesArearange new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'arearange';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

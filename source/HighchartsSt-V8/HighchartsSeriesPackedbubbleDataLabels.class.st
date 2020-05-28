@@ -40,6 +40,15 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighchartsSeriesPackedbubbleDataLabels >> attributes: aHighchartsSVGAttributes [
+
+	"Presentation attributes for the text path.
+"
+
+	configurationOptions at: 'attributes' put: aHighchartsSVGAttributes
+]
+
+{ #category : #accessing }
 HighchartsSeriesPackedbubbleDataLabels >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the data label.
@@ -151,10 +160,11 @@ undefined to disable a single data label.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleDataLabels >> format: aString [
 
-	"A
+	"The
 format string
-for the data label. Available variables are the same as for
-formatter.
+specifying what to show for node in the networkgraph. In v7.0
+defaults to {key}, since v7.1 defaults to undefined and
+formatter is used instead.
 Defaults to point.value."
 
 	configurationOptions at: 'format' put: aString
@@ -227,6 +237,13 @@ this is the padding within the box.
 Defaults to 0."
 
 	configurationOptions at: 'padding' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubbleDataLabels >> parentNodeFormat: aString [
+
+
+	configurationOptions at: 'parentNodeFormat' put: aString
 ]
 
 { #category : #accessing }
@@ -321,11 +338,9 @@ one line plus it will break inside long words.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleDataLabels >> textPath [
 
-	"Options for a label text which should follow marker´s shape.
-Border and background are disabled for a label that follows a
-path.
-Note: Only SVG-based renderer supports this option. Setting
-useHTML to true will disable this option.
+	"Options for a node label text which should follow marker´s
+shape.
+Note: Only SVG-based renderer supports this option.
 "
 	^ configurationOptions at: 'textPath' ifAbsentPut: [ HighchartsSeriesPackedbubbleDataLabelsTextPath new ]
 ]

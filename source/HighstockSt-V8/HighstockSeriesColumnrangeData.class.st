@@ -61,6 +61,17 @@ colorIndex.
 ]
 
 { #category : #accessing }
+HighstockSeriesColumnrangeData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality.
+Here you can add additional data for your own event callbacks and formatter
+callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighstockSeriesColumnrangeData >> dataLabels [
 
 	"Individual data label for each point. The options are the same as

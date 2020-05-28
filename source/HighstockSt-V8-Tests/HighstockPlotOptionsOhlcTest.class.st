@@ -257,6 +257,34 @@ HighstockPlotOptionsOhlcTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlc new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcTest >> testDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlc new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsOhlcTest >> testDepth [
 
 	| component javascript expectedConfiguration |

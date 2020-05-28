@@ -335,6 +335,21 @@ HighstockSeriesColumnTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesColumnTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumn new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'column';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesColumnTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

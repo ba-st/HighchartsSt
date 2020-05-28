@@ -260,6 +260,21 @@ HighstockSeriesPolygonTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesPolygonTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -285,6 +300,21 @@ HighstockSeriesPolygonTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'polygon';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

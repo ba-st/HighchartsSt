@@ -12,8 +12,8 @@ Class {
 { #category : #accessing }
 HighchartsLangAccessibilitySeries >> description: aString [
 
-	"User supplied description text. This is added after the main
-summary if present.
+	"User supplied description text. This is added in the point
+comment description by default if present.
 Defaults to {description}."
 
 	configurationOptions at: 'description' put: aString
@@ -26,6 +26,16 @@ HighchartsLangAccessibilitySeries >> nullPointValue: aString [
 Defaults to No value."
 
 	configurationOptions at: 'nullPointValue' put: aString
+]
+
+{ #category : #accessing }
+HighchartsLangAccessibilitySeries >> pointAnnotationsDescription: aString [
+
+	"Description for annotations on a point, as it is made available
+to assistive technology.
+Defaults to {Annotation: #each(annotations). }."
+
+	configurationOptions at: 'pointAnnotationsDescription' put: aString
 ]
 
 { #category : #accessing }

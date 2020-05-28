@@ -76,28 +76,6 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> animation [
-
-	"Enable or disable the initial animation when a series is displayed.
-The animation can also be set as a configuration object. Please
-note that this option only applies to the initial animation of the
-series itself. For other animations, see chart.animation and the animation parameter under the API methods.
-The following properties are supported:
-
-duration: The duration of the animation in milliseconds.
-
-easing: Can be a string reference to an easing function set on
-the Math object or a function. See the Custom easing function
-demo below.
-
-
-Due to poor performance, animation is disabled in old IE browsers
-for several chart types.
-"
-	^ configurationOptions at: 'animation' ifAbsentPut: [ HighstockSeriesFlagsAnimation new ]
-]
-
-{ #category : #accessing }
 HighstockSeriesFlags >> animationLimit: aNumber [
 
 	"For some series, there is a limit that shuts down initial animation
@@ -134,28 +112,6 @@ area, and the boostThreshold won´t take effect.
 Defaults to 5000."
 
 	configurationOptions at: 'boostThreshold' put: aNumber
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
-
-	"The border color of the map areas.
-In styled mode, the border stroke is given in the .highcharts-point
-class.
-Defaults to '#cccccc'."
-
-	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> borderWidth: aNumber [
-
-	"The border width of each map area.
-In styled mode, the border stroke width is given in the
-.highcharts-point class.
-Defaults to 1."
-
-	configurationOptions at: 'borderWidth' put: aNumber
 ]
 
 { #category : #accessing }
@@ -297,16 +253,6 @@ plot across the extremes.
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> connectNulls: aBoolean [
-
-	"Whether to connect a graph line across null points, or render a gap
-between the two points on either side of the null.
-Defaults to false."
-
-	configurationOptions at: 'connectNulls' put: aBoolean
-]
-
-{ #category : #accessing }
 HighstockSeriesFlags >> connectors [
 
 	"Override Pathfinder connector options for a series. Requires Highcharts Gantt
@@ -318,12 +264,12 @@ to be loaded.
 { #category : #accessing }
 HighstockSeriesFlags >> crisp: aBoolean [
 
-	"When true, each column edge is rounded to its nearest pixel in order
-to render sharp on screen. In some cases, when there are a lot of
-densely packed columns, this leads to visible difference in column
-widths or distance between columns. In these cases, setting crisp
-to false may look better, even though each column is rendered
-blurry.
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
 Defaults to true."
 
 	configurationOptions at: 'crisp' put: aBoolean
@@ -359,17 +305,14 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> dashStyle: aHighchartsDashStyleValue [
+HighstockSeriesFlags >> custom: anObject [
 
-	"A name for the dash style to use for the graph, or for some series
-types the outline of each shape.
-In styled mode, the
-stroke dash-array
-can be set with the same classes as listed under
-series.color.
-Defaults to Solid."
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
 
-	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+	configurationOptions at: 'custom' put: anObject
 ]
 
 { #category : #accessing }
@@ -400,24 +343,6 @@ HighstockSeriesFlags >> data: anObject [
 
 
 	configurationOptions at: 'data' put: anObject
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> dataGrouping [
-
-	"Data grouping is the concept of sampling the data values into larger
-blocks in order to ease readability and increase performance of the
-JavaScript charts. Highstock by default applies data grouping when
-the points become closer than a certain pixel value, determined by
-the groupPixelWidth option.
-If data grouping is applied, the grouping information of grouped
-points can be read from the Point.dataGroup. If point options other than
-the data itself are set, for example name or color or custom properties,
-the grouping logic doesn´t know how to group it. In this case the options of
-the first point instance are copied over to the group point. This can be
-altered through a custom approximation callback function.
-"
-	^ configurationOptions at: 'dataGrouping' ifAbsentPut: [ HighstockSeriesFlagsDataGrouping new ]
 ]
 
 { #category : #accessing }
@@ -537,41 +462,6 @@ direct hover) for tooltip.
 Defaults to x."
 
 	configurationOptions at: 'findNearestPointBy' put: aString
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> gapSize: aNumber [
-
-	"Defines when to display a gap in the graph, together with the
-gapUnit option.
-In case when dataGrouping is enabled, points can be grouped into a
-larger time span. This can make the grouped points to have a greater
-distance than the absolute value of gapSize property, which will result
-in disappearing graph completely. To prevent this situation the mentioned
-distance between grouped points is used instead of previously defined
-gapSize.
-In practice, this option is most often used to visualize gaps in
-time series. In a stock chart, intraday data is available for daytime
-hours, while gaps will appear in nights and weekends.
-Defaults to 0."
-
-	configurationOptions at: 'gapSize' put: aNumber
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> gapUnit: aString [
-
-	"Together with gapSize, this option defines
-where to draw gaps in the graph.
-When the gapUnit is relative (default), a gap size of 5 means
-that if the distance between two points is greater than five times
-that of the two closest points, the graph will be broken.
-When the gapUnit is value, the gap is based on absolute axis values,
-which on a datetime axis is milliseconds. This also applies to the
-navigator series that inherits gap options from the base series.
-Defaults to relative."
-
-	configurationOptions at: 'gapUnit' put: aString
 ]
 
 { #category : #accessing }
@@ -746,24 +636,6 @@ Defaults to #000000."
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> lineWidth: aNumber [
-
-	"The pixel width of the flag´s line/border.
-Defaults to 1."
-
-	configurationOptions at: 'lineWidth' put: aNumber
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> linecap: aHighchartsSeriesLinecapValue [
-
-	"The line cap used for line ends and line joins on the graph.
-Defaults to round."
-
-	configurationOptions at: 'linecap' put: aHighchartsSeriesLinecapValue
-]
-
-{ #category : #accessing }
 HighstockSeriesFlags >> linkedTo: aString [
 
 	"The id of another series to link to. Additionally,
@@ -786,20 +658,6 @@ properties to join in the data as per the joinBy option.
 "
 
 	configurationOptions at: 'mapData' put: anObject
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> marker [
-
-	"Options for the point markers of line-like series. Properties like
-fillColor, lineColor and lineWidth define the visual appearance
-of the markers. Other series types, like column series, don´t have
-markers, but have visual options on the series level instead.
-In styled mode, the markers can be styled with the
-.highcharts-point, .highcharts-point-hover and
-.highcharts-point-select class names.
-"
-	^ configurationOptions at: 'marker' ifAbsentPut: [ HighstockSeriesFlagsMarker new ]
 ]
 
 { #category : #accessing }
@@ -868,7 +726,7 @@ HighstockSeriesFlags >> onKey: aString [
 	"In case the flag is placed on a series, on what point key to place
 it. Line and columns have one key, y. In range or OHLC-type series,
 however, the flag can optionally be placed on the open, high,
- low or close key.
+low or close key.
 Defaults to y."
 
 	configurationOptions at: 'onKey' put: aString
@@ -922,7 +780,7 @@ pointInterval to 10. In true datetime axes, the pointInterval
 is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 Defaults to 1."
 
@@ -938,7 +796,7 @@ units, day, month and year. A day is usually the same as 24
 hours, but pointIntervalUnit also takes the DST crossover into
 consideration when dealing with local time. Combine this option with
 pointInterval to draw weeks, quarters, 6 months, 10 years etc.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 "
 
@@ -1134,16 +992,6 @@ HighstockSeriesFlags >> states: anObject [
 ]
 
 { #category : #accessing }
-HighstockSeriesFlags >> step: aString [
-
-	"Whether to apply steps to the line. Possible values are left,
-center and right.
-"
-
-	configurationOptions at: 'step' put: aString
-]
-
-{ #category : #accessing }
 HighstockSeriesFlags >> stickyTracking: aBoolean [
 
 	"Sticky tracking of mouse events. When true, the mouseOut event on a
@@ -1211,22 +1059,6 @@ value, so the tooltip rather displays the text option for each
 point.
 "
 	^ configurationOptions at: 'tooltip' ifAbsentPut: [ HighstockSeriesFlagsTooltip new ]
-]
-
-{ #category : #accessing }
-HighstockSeriesFlags >> turboThreshold: aNumber [
-
-	"When a series contains a data array that is longer than this, only
-one dimensional arrays of numbers, or two dimensional arrays with
-x and y values are allowed. Also, only the first point is tested,
-and the rest are assumed to be the same format. This saves expensive
-data checking and indexing in long series. Set it to 0 disable.
-Note:
-In boost mode turbo threshold is forced. Only array of numbers or
-two dimensional arrays are allowed.
-Defaults to 1000."
-
-	configurationOptions at: 'turboThreshold' put: aNumber
 ]
 
 { #category : #accessing }

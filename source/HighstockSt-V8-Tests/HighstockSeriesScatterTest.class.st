@@ -260,6 +260,21 @@ HighstockSeriesScatterTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesScatterTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesScatter new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'scatter';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesScatterTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -285,6 +300,21 @@ HighstockSeriesScatterTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'scatter';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesScatterTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesScatter new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'scatter';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

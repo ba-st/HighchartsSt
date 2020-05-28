@@ -285,6 +285,20 @@ to be loaded.
 ]
 
 { #category : #accessing }
+HighstockSeriesArea >> crisp: aBoolean [
+
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
+Defaults to true."
+
+	configurationOptions at: 'crisp' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockSeriesArea >> cropThreshold: aNumber [
 
 	"When the series contains less points than the crop threshold, all
@@ -314,10 +328,21 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighstockSeriesArea >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighstockSeriesArea >> dashStyle: aHighchartsDashStyleValue [
 
-	"A name for the dash style to use for the graph, or for some series
-types the outline of each shape.
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
 In styled mode, the
 stroke dash-array
 can be set with the same classes as listed under
@@ -508,15 +533,15 @@ HighstockSeriesArea >> gapSize: aNumber [
 
 	"Defines when to display a gap in the graph, together with the
 gapUnit option.
-In case when dataGrouping is enabled, points can be grouped into a
-larger time span. This can make the grouped points to have a greater
-distance than the absolute value of gapSize property, which will result
-in disappearing graph completely. To prevent this situation the mentioned
-distance between grouped points is used instead of previously defined
-gapSize.
+In case when dataGrouping is enabled, points can be grouped
+into a larger time span. This can make the grouped points to have
+a greater distance than the absolute value of gapSize property,
+which will result in disappearing graph completely. To prevent
+this situation the mentioned distance between grouped points is
+used instead of previously defined gapSize.
 In practice, this option is most often used to visualize gaps in
-time series. In a stock chart, intraday data is available for daytime
-hours, while gaps will appear in nights and weekends.
+time series. In a stock chart, intraday data is available for
+daytime hours, while gaps will appear in nights and weekends.
 Defaults to 0."
 
 	configurationOptions at: 'gapSize' put: aNumber
@@ -525,14 +550,15 @@ Defaults to 0."
 { #category : #accessing }
 HighstockSeriesArea >> gapUnit: aString [
 
-	"Together with gapSize, this option defines
-where to draw gaps in the graph.
-When the gapUnit is relative (default), a gap size of 5 means
-that if the distance between two points is greater than five times
-that of the two closest points, the graph will be broken.
-When the gapUnit is value, the gap is based on absolute axis values,
-which on a datetime axis is milliseconds. This also applies to the
-navigator series that inherits gap options from the base series.
+	"Together with gapSize, this option
+defines where to draw gaps in the graph.
+When the gapUnit is &quot;relative&quot; (default), a gap size of 5
+means that if the distance between two points is greater than
+5 times that of the two closest points, the graph will be broken.
+When the gapUnit is &quot;value&quot;, the gap is based on absolute
+axis values, which on a datetime axis is milliseconds. This also
+applies to the navigator series that inherits gap options from
+the base series.
 Defaults to relative."
 
 	configurationOptions at: 'gapUnit' put: aString
@@ -804,7 +830,7 @@ pointInterval to 10. In true datetime axes, the pointInterval
 is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 Defaults to 1."
 
@@ -820,7 +846,7 @@ units, day, month and year. A day is usually the same as 24
 hours, but pointIntervalUnit also takes the DST crossover into
 consideration when dealing with local time. Combine this option with
 pointInterval to draw weeks, quarters, 6 months, 10 years etc.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 "
 
@@ -1020,7 +1046,7 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockSeriesArea >> threshold: aNumber [
+HighstockSeriesArea >> threshold: aNumberOrNil [
 
 	"The Y axis value to serve as the base for the area, for
 distinguishing between values above and below a threshold. The area
@@ -1030,10 +1056,10 @@ If a number is given, the Y axis will scale to the threshold.
 If null, the scaling behaves like a line series with fill between
 the graph and the Y axis minimum.
 If Infinity or -Infinity, the area between the graph and the
-corresponing Y axis extreme is filled (since v6.1.0).
+corresponding Y axis extreme is filled (since v6.1.0).
 Defaults to 0."
 
-	configurationOptions at: 'threshold' put: aNumber
+	configurationOptions at: 'threshold' put: aNumberOrNil
 ]
 
 { #category : #accessing }

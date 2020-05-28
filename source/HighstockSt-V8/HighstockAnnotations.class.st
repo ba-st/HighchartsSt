@@ -29,13 +29,13 @@ HighstockAnnotations >> crookedLine [
 ]
 
 { #category : #accessing }
-HighstockAnnotations >> draggable: aString [
+HighstockAnnotations >> draggable: aHighchartsAnnotationDraggableValue [
 
 	"Allow an annotation to be draggable by a user. Possible
-values are &quot;x&quot;, &quot;xy&quot;, &quot;y&quot; and &quot;&quot; (disabled).
+values are ´x´, ´xy´, ´y´ and ´´ (disabled).
 Defaults to xy."
 
-	configurationOptions at: 'draggable' put: aString
+	configurationOptions at: 'draggable' put: aHighchartsAnnotationDraggableValue
 ]
 
 { #category : #accessing }
@@ -64,13 +64,13 @@ HighstockAnnotations >> fibonacci [
 ]
 
 { #category : #accessing }
-HighstockAnnotations >> id: aStringOrnumber [
+HighstockAnnotations >> id: aNumberOrstring [
 
-	"Sets an ID for an annotation. Can be user later when removing an
-annotation in Chart#removeAnnotation(id) method.
+	"Sets an ID for an annotation. Can be user later when
+removing an annotation in Chart#removeAnnotation(id) method.
 "
 
-	configurationOptions at: 'id' put: aStringOrnumber
+	configurationOptions at: 'id' put: aNumberOrstring
 ]
 
 { #category : #accessing }
@@ -94,8 +94,8 @@ can be overwritten by config for a specific label.
 { #category : #accessing }
 HighstockAnnotations >> labels [
 
-	"An array of labels for the annotation. For options that apply to
-multiple labels, they can be added to the
+	"An array of labels for the annotation. For options that apply
+to multiple labels, they can be added to the
 labelOptions.
 "
 	^ configurationOptions at: 'labels' ifAbsentPut: [ HighstockAnnotationsLabels new ]
@@ -120,9 +120,9 @@ HighstockAnnotations >> pitchfork [
 { #category : #accessing }
 HighstockAnnotations >> shapeOptions [
 
-	"Options for annotation´s shapes. Each shape inherits options from
-the shapeOptions object. An option from the shapeOptions can be
-overwritten by config for a specific shape.
+	"Options for annotation´s shapes. Each shape inherits options
+from the shapeOptions object. An option from the shapeOptions
+can be overwritten by config for a specific shape.
 "
 	^ configurationOptions at: 'shapeOptions' ifAbsentPut: [ HighstockAnnotationsShapeOptions new ]
 ]
@@ -130,8 +130,8 @@ overwritten by config for a specific shape.
 { #category : #accessing }
 HighstockAnnotations >> shapes [
 
-	"An array of shapes for the annotation. For options that apply to
-multiple shapes, then can be added to the
+	"An array of shapes for the annotation. For options that apply
+to multiple shapes, then can be added to the
 shapeOptions.
 "
 	^ configurationOptions at: 'shapes' ifAbsentPut: [ HighstockAnnotationsShapes new ]

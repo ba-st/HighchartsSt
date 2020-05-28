@@ -61,6 +61,20 @@ HighchartsSeriesTreemapDataTest >> testColorValue [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesTreemapDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesTreemapDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

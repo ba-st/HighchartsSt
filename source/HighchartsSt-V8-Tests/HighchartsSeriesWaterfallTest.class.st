@@ -365,6 +365,21 @@ HighchartsSeriesWaterfallTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWaterfallTest >> testDashStyle [
 
 	| component javascript expectedConfiguration |

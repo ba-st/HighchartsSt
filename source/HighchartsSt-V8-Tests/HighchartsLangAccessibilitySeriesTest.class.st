@@ -33,6 +33,20 @@ HighchartsLangAccessibilitySeriesTest >> testNullPointValue [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsLangAccessibilitySeriesTest >> testPointAnnotationsDescription [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLangAccessibilitySeries new.
+	component pointAnnotationsDescription: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pointAnnotationsDescription' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLangAccessibilitySeriesTest >> testXAxisDescription [
 
 	| component javascript expectedConfiguration |

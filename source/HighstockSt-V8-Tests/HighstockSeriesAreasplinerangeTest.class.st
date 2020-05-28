@@ -260,6 +260,21 @@ HighstockSeriesAreasplinerangeTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerange new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areasplinerange';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAreasplinerangeTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -285,6 +300,21 @@ HighstockSeriesAreasplinerangeTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'areasplinerange';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerange new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'areasplinerange';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -885,21 +915,6 @@ HighstockSeriesAreasplinerangeTest >> testStates [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'areasplinerange';
 		at: 'states' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeTest >> testStep [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesAreasplinerange new.
-	component step: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'areasplinerange';
-		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

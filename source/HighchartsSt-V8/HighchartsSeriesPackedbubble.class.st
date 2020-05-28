@@ -227,6 +227,43 @@ Defaults to z."
 ]
 
 { #category : #accessing }
+HighchartsSeriesPackedbubble >> compare: aString [
+
+	"Compare the values of the series against the first non-null, non-
+zero value in the visible range. The y axis will show percentage
+or absolute change depending on whether compare is set to &quot;percent&quot;
+or &quot;value&quot;. When this is applied to multiple series, it allows
+comparing the development of the series against each other. Adds
+a change field to every point object.
+"
+
+	configurationOptions at: 'compare' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> compareBase: aNumber [
+
+	"When compare is percent, this option
+dictates whether to use 0 or 100 as the base of comparison.
+Defaults to 0."
+
+	configurationOptions at: 'compareBase' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> compareStart: aBoolean [
+
+	"Defines if comparison should start from the first point within the visible
+range or should start from the first point before the range.
+In other words, this flag determines if first point within the visible range
+will have 0 (compareStart=true) or should have been already calculated
+according to the previous point (compareStart=false).
+Defaults to false."
+
+	configurationOptions at: 'compareStart' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsSeriesPackedbubble >> connectEnds: aBoolean [
 
 	"Polar charts only. Whether to connect the ends of a line series
@@ -253,6 +290,20 @@ HighchartsSeriesPackedbubble >> connectors [
 to be loaded.
 "
 	^ configurationOptions at: 'connectors' ifAbsentPut: [ HighchartsSeriesPackedbubbleConnectors new ]
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> crisp: aBoolean [
+
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
+Defaults to false."
+
+	configurationOptions at: 'crisp' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -285,10 +336,21 @@ as listed under series.color.
 ]
 
 { #category : #accessing }
+HighchartsSeriesPackedbubble >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesPackedbubble >> dashStyle: aHighchartsDashStyleValue [
 
-	"A name for the dash style to use for the graph, or for some series
-types the outline of each shape.
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
 In styled mode, the
 stroke dash-array
 can be set with the same classes as listed under
@@ -332,6 +394,24 @@ HighchartsSeriesPackedbubble >> data: anObject [
 ]
 
 { #category : #accessing }
+HighchartsSeriesPackedbubble >> dataGrouping [
+
+	"Data grouping is the concept of sampling the data values into larger
+blocks in order to ease readability and increase performance of the
+JavaScript charts. Highstock by default applies data grouping when
+the points become closer than a certain pixel value, determined by
+the groupPixelWidth option.
+If data grouping is applied, the grouping information of grouped
+points can be read from the Point.dataGroup. If point options other than
+the data itself are set, for example name or color or custom properties,
+the grouping logic doesn´t know how to group it. In this case the options of
+the first point instance are copied over to the group point. This can be
+altered through a custom approximation callback function.
+"
+	^ configurationOptions at: 'dataGrouping' ifAbsentPut: [ HighchartsSeriesPackedbubbleDataGrouping new ]
+]
+
+{ #category : #accessing }
 HighchartsSeriesPackedbubble >> dataLabels [
 
 	"Options for the series data labels, appearing next to each data
@@ -343,14 +423,6 @@ In styled mode, the data labels can be styled with the
 (see example).
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesPackedbubbleDataLabels new ]
-]
-
-{ #category : #accessing }
-HighchartsSeriesPackedbubble >> dataSorting [
-
-	"Options for the series data sorting.
-"
-	^ configurationOptions at: 'dataSorting' ifAbsentPut: [ HighchartsSeriesPackedbubbleDataSorting new ]
 ]
 
 { #category : #accessing }
@@ -373,19 +445,6 @@ negativeColor.
 Defaults to true."
 
 	configurationOptions at: 'displayNegative' put: aBoolean
-]
-
-{ #category : #accessing }
-HighchartsSeriesPackedbubble >> dragDrop [
-
-	"The draggable-points module allows points to be moved around or modified in
-the chart. In addition to the options mentioned under the dragDrop API
-structure, the module fires three events,
-point.dragStart,
-point.drag and
-point.drop.
-"
-	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighchartsSeriesPackedbubbleDragDrop new ]
 ]
 
 { #category : #accessing }
@@ -433,6 +492,42 @@ direct hover) for tooltip.
 Defaults to xy."
 
 	configurationOptions at: 'findNearestPointBy' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> gapSize: aNumber [
+
+	"Defines when to display a gap in the graph, together with the
+gapUnit option.
+In case when dataGrouping is enabled, points can be grouped
+into a larger time span. This can make the grouped points to have
+a greater distance than the absolute value of gapSize property,
+which will result in disappearing graph completely. To prevent
+this situation the mentioned distance between grouped points is
+used instead of previously defined gapSize.
+In practice, this option is most often used to visualize gaps in
+time series. In a stock chart, intraday data is available for
+daytime hours, while gaps will appear in nights and weekends.
+Defaults to 0."
+
+	configurationOptions at: 'gapSize' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> gapUnit: aString [
+
+	"Together with gapSize, this option
+defines where to draw gaps in the graph.
+When the gapUnit is &quot;relative&quot; (default), a gap size of 5
+means that if the distance between two points is greater than
+5 times that of the two closest points, the graph will be broken.
+When the gapUnit is &quot;value&quot;, the gap is based on absolute
+axis values, which on a datetime axis is milliseconds. This also
+applies to the navigator series that inherits gap options from
+the base series.
+Defaults to relative."
+
+	configurationOptions at: 'gapUnit' put: aString
 ]
 
 { #category : #accessing }
@@ -529,6 +624,22 @@ The series labels currently work with series types having a
 graph or an area.
 "
 	^ configurationOptions at: 'label' ifAbsentPut: [ HighchartsSeriesPackedbubbleLabel new ]
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> lastPrice [
+
+	"The line marks the last price from all points.
+"
+	^ configurationOptions at: 'lastPrice' ifAbsentPut: [ HighchartsSeriesPackedbubbleLastPrice new ]
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> lastVisiblePrice [
+
+	"The line marks the last price from visible range of points.
+"
+	^ configurationOptions at: 'lastVisiblePrice' ifAbsentPut: [ HighchartsSeriesPackedbubbleLastVisiblePrice new ]
 ]
 
 { #category : #accessing }
@@ -645,6 +756,20 @@ HighchartsSeriesPackedbubble >> name: aString [
 ]
 
 { #category : #accessing }
+HighchartsSeriesPackedbubble >> navigatorOptions: aHighchartsPlotSeriesOptions [
+
+	"Options for the corresponding navigator series if showInNavigator
+is true for this series. Available options are the same as any
+series, documented at plotOptions and
+series.
+These options are merged with options in navigator.series, and will take precedence if the same option is
+defined both places.
+"
+
+	configurationOptions at: 'navigatorOptions' put: aHighchartsPlotSeriesOptions
+]
+
+{ #category : #accessing }
 HighchartsSeriesPackedbubble >> negativeColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"When a point´s Z value is below the
@@ -692,7 +817,7 @@ pointInterval to 10. In true datetime axes, the pointInterval
 is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 Defaults to 1."
 
@@ -708,7 +833,7 @@ units, day, month and year. A day is usually the same as 24
 hours, but pointIntervalUnit also takes the DST crossover into
 consideration when dealing with local time. Combine this option with
 pointInterval to draw weeks, quarters, 6 months, 10 years etc.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 "
 
@@ -740,6 +865,19 @@ charts.
 "
 
 	configurationOptions at: 'pointPlacement' put: aStringOrnumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> pointRange: aNumber [
+
+	"The width of each point on the x axis. For example in a column chart
+with one value each day, the pointRange would be 1 day (= 24 * 3600
+
+1000 milliseconds). This is normally computed automatically, but
+this option can be used to override the automatic value.
+Defaults to 0."
+
+	configurationOptions at: 'pointRange' put: aNumber
 ]
 
 { #category : #accessing }
@@ -796,6 +934,16 @@ colorAxis by setting this option to true.
 "
 
 	configurationOptions at: 'showInLegend' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsSeriesPackedbubble >> showInNavigator: aBoolean [
+
+	"Whether or not to show the series in the navigator. Takes precedence
+over navigator.baseSeries if defined.
+"
+
+	configurationOptions at: 'showInNavigator' put: aBoolean
 ]
 
 { #category : #accessing }

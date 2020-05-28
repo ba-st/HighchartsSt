@@ -59,3 +59,17 @@ HighchartsSeriesNetworkgraphDataLabelsStyleTest >> testTextOutline [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesNetworkgraphDataLabelsStyleTest >> testTransition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesNetworkgraphDataLabelsStyle new.
+	component transition: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'transition' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

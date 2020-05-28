@@ -1316,12 +1316,6 @@ Highcharts.chart(´container´, {
 ]
 
 { #category : #accessing }
-HighstockPlotOptions >> packedBubble [
-
-	^ configurationOptions at: 'packedBubble' ifAbsentPut: [ HighstockPlotOptionsPackedBubble new ]
-]
-
-{ #category : #accessing }
 HighstockPlotOptions >> pc [
 
 	"Price channel (PC). This series requires the linkedTo option to be

@@ -18,10 +18,10 @@ HighstockAnnotationsControlPointOptions >> height: aNumber [
 ]
 
 { #category : #accessing }
-HighstockAnnotationsControlPointOptions >> positioner: anObject [
+HighstockAnnotationsControlPointOptions >> positioner: aHighchartsAnnotationControlPointPositionerFunction [
 
 
-	configurationOptions at: 'positioner' put: anObject
+	configurationOptions at: 'positioner' put: aHighchartsAnnotationControlPointPositionerFunction
 ]
 
 { #category : #accessing }

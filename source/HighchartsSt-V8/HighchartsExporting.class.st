@@ -164,6 +164,10 @@ text: The text for the menu item
 
 textKey: If internationalization is required, the key to a language
 string
+
+
+Custom text for the &quot;exitFullScreen&quot; can be set only in lang options
+(it is not a separate button).
 Defaults to {'viewFullscreen': {}, 'printChart': {}, 'separator': {}, 'downloadPNG': {}, 'downloadJPEG': {}, 'downloadPDF': {}, 'downloadSVG': {}}."
 
 	configurationOptions at: 'menuItemDefinitions' put: aHighchartsDictionaryOfHighchartsExportingMenuObject

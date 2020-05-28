@@ -16,6 +16,14 @@ HighstockLangAccessibilityScreenReaderSection >> afterRegionLabel: aString [
 ]
 
 { #category : #accessing }
+HighstockLangAccessibilityScreenReaderSection >> annotations [
+
+	"Language options for annotation descriptions.
+"
+	^ configurationOptions at: 'annotations' ifAbsentPut: [ HighstockLangAccessibilityScreenReaderSectionAnnotations new ]
+]
+
+{ #category : #accessing }
 HighstockLangAccessibilityScreenReaderSection >> beforeRegionLabel: aString [
 
 

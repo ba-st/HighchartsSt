@@ -271,6 +271,20 @@ HighstockSeriesLinearregressioninterceptTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesLinearregressioninterceptTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionintercept new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesLinearregressioninterceptTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -294,6 +308,20 @@ HighstockSeriesLinearregressioninterceptTest >> testCursor [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressioninterceptTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionintercept new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

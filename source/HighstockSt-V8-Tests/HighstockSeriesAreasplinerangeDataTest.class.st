@@ -19,6 +19,20 @@ HighstockSeriesAreasplinerangeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesAreasplinerangeDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

@@ -215,6 +215,21 @@ HighchartsSeriesGaugeTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesGaugeTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGauge new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'gauge';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesGaugeTest >> testCursor [
 
 	| component javascript expectedConfiguration |
@@ -225,6 +240,21 @@ HighchartsSeriesGaugeTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'gauge';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesGaugeTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGauge new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'gauge';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

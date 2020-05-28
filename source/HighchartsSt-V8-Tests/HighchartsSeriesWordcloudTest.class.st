@@ -335,6 +335,21 @@ HighchartsSeriesWordcloudTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesWordcloudTest >> testCropThreshold [
 
 	| component javascript expectedConfiguration |
@@ -360,6 +375,21 @@ HighchartsSeriesWordcloudTest >> testCursor [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'wordcloud';
 		at: 'cursor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

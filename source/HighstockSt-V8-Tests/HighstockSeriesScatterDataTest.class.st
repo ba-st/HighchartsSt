@@ -19,6 +19,20 @@ HighstockSeriesScatterDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesScatterDataTest >> testCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesScatterData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesScatterDataTest >> testDescription [
 
 	| component javascript expectedConfiguration |

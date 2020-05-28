@@ -49,7 +49,7 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
-HighstockTime >> getTimezoneOffset: aString [
+HighstockTime >> getTimezoneOffset: aHighchartsTimezoneOffsetCallbackFunction [
 
 	"A callback to return the time zone offset for a given datetime. It
 takes the timestamp in terms of milliseconds since January 1 1970,
@@ -58,7 +58,7 @@ for drawing time based charts in specific time zones using their
 local DST crossover dates, with the help of external libraries.
 Defaults to undefined."
 
-	configurationOptions at: 'getTimezoneOffset' put: aString
+	configurationOptions at: 'getTimezoneOffset' put: aHighchartsTimezoneOffsetCallbackFunction
 ]
 
 { #category : #accessing }

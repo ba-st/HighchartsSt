@@ -127,6 +127,15 @@ Defaults to 5000."
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsErrorbar >> boxDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the box.
+Defaults to Solid."
+
+	configurationOptions at: 'boxDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsErrorbar >> className: aString [
 
 	"An additional class name to apply to the series´ graphical elements.
@@ -238,12 +247,12 @@ to be loaded.
 { #category : #accessing }
 HighchartsPlotOptionsErrorbar >> crisp: aBoolean [
 
-	"When true, each column edge is rounded to its nearest pixel in order
-to render sharp on screen. In some cases, when there are a lot of
-densely packed columns, this leads to visible difference in column
-widths or distance between columns. In these cases, setting crisp
-to false may look better, even though each column is rendered
-blurry.
+	"When true, each point or column edge is rounded to its nearest pixel
+in order to render sharp on screen. In some cases, when there are a
+lot of densely packed columns, this leads to visible difference
+in column widths or distance between columns. In these cases,
+setting crisp to false may look better, even though each column
+is rendered blurry.
 Defaults to true."
 
 	configurationOptions at: 'crisp' put: aBoolean
@@ -276,6 +285,31 @@ as listed under series.color.
 "
 
 	configurationOptions at: 'cursor' put: aStringOrHighchartsCursorValue
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsErrorbar >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized
+functionality. Here you can add additional data for your own event
+callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsErrorbar >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the graph, or for some series types
+the outline of each shape.
+In styled mode, the
+stroke dash-array
+can be set with the same classes as listed under
+series.color.
+Defaults to Solid."
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
@@ -535,7 +569,16 @@ In styled mode, the median stroke width can be set with the
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsErrorbar >> medianWidth: aNumber [
+HighchartsPlotOptionsErrorbar >> medianDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the median.
+Defaults to Solid."
+
+	configurationOptions at: 'medianDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsErrorbar >> medianWidth: aNumberOrNil [
 
 	"The pixel width of the median line. If null, the
 lineWidth is used.
@@ -543,7 +586,7 @@ In styled mode, the median stroke width can be set with the
 .highcharts-boxplot-median class.
 Defaults to 2."
 
-	configurationOptions at: 'medianWidth' put: aNumber
+	configurationOptions at: 'medianWidth' put: aNumberOrNil
 ]
 
 { #category : #accessing }
@@ -609,7 +652,7 @@ pointInterval to 10. In true datetime axes, the pointInterval
 is set in milliseconds.
 It can be also be combined with pointIntervalUnit to draw irregular
 time intervals.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 Defaults to 1."
 
@@ -625,7 +668,7 @@ units, day, month and year. A day is usually the same as 24
 hours, but pointIntervalUnit also takes the DST crossover into
 consideration when dealing with local time. Combine this option with
 pointInterval to draw weeks, quarters, 6 months, 10 years etc.
-Please note that this options applies to the series data, not the
+Please note that this options applies to the _series data_, not the
 interval of the axis ticks, which is independent.
 "
 
@@ -888,6 +931,15 @@ In styled mode, the whisker stroke can be set with the
 "
 
 	configurationOptions at: 'whiskerColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsErrorbar >> whiskerDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the whiskers.
+Defaults to Solid."
+
+	configurationOptions at: 'whiskerDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }

@@ -55,6 +55,15 @@ HighchartsSeriesBoxplotData >> accessibility [
 ]
 
 { #category : #accessing }
+HighchartsSeriesBoxplotData >> boxDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the box.
+Defaults to Solid."
+
+	configurationOptions at: 'boxDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighchartsSeriesBoxplotData >> className: aString [
 
 	"An additional, individual class name for the data point´s graphic
@@ -87,6 +96,17 @@ by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesBoxplotData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality.
+Here you can add additional data for your own event callbacks and formatter
+callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
 ]
 
 { #category : #accessing }
@@ -188,6 +208,15 @@ middle area of the box.
 ]
 
 { #category : #accessing }
+HighchartsSeriesBoxplotData >> medianDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the median.
+Defaults to Solid."
+
+	configurationOptions at: 'medianDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
 HighchartsSeriesBoxplotData >> name: aString [
 
 	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
@@ -222,6 +251,24 @@ HighchartsSeriesBoxplotData >> selected: aBoolean [
 Defaults to false."
 
 	configurationOptions at: 'selected' put: aBoolean
+]
+
+{ #category : #accessing }
+HighchartsSeriesBoxplotData >> stemDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the stem.
+Defaults to Solid."
+
+	configurationOptions at: 'stemDashStyle' put: aHighchartsDashStyleValue
+]
+
+{ #category : #accessing }
+HighchartsSeriesBoxplotData >> whiskerDashStyle: aHighchartsDashStyleValue [
+
+	"The dash style of the whiskers.
+Defaults to Solid."
+
+	configurationOptions at: 'whiskerDashStyle' put: aHighchartsDashStyleValue
 ]
 
 { #category : #accessing }
