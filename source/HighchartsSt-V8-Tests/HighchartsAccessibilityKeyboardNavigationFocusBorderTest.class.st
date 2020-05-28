@@ -45,3 +45,17 @@ HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testMargin [
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibilityKeyboardNavigationFocusBorder new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
