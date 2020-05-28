@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testX [
+HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testY [
+HighstockAnnotationsFibonacciTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

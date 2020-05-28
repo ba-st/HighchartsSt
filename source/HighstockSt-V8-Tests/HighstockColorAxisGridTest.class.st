@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisGridTest >> testBorderColor [
+HighstockColorAxisGridTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockColorAxisGridTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisGridTest >> testBorderWidth [
+HighstockColorAxisGridTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockColorAxisGridTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisGridTest >> testCellHeight [
+HighstockColorAxisGridTest >> testSetCellHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockColorAxisGridTest >> testCellHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisGridTest >> testColumns [
+HighstockColorAxisGridTest >> testSetColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockColorAxisGridTest >> testColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisGridTest >> testEnabled [
+HighstockColorAxisGridTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

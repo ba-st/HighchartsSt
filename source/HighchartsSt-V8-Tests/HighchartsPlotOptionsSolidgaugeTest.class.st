@@ -5,7 +5,147 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testAllAreas [
+HighchartsPlotOptionsSolidgaugeTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSolidgauge new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSolidgaugeTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +159,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testAllowPointSelect [
+HighchartsPlotOptionsSolidgaugeTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +173,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testBoostBlending [
+HighchartsPlotOptionsSolidgaugeTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +187,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testBorderColor [
+HighchartsPlotOptionsSolidgaugeTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +201,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testBorderWidth [
+HighchartsPlotOptionsSolidgaugeTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +215,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testClassName [
+HighchartsPlotOptionsSolidgaugeTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +229,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testClip [
+HighchartsPlotOptionsSolidgaugeTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +243,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testColor [
+HighchartsPlotOptionsSolidgaugeTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +257,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testColorByPoint [
+HighchartsPlotOptionsSolidgaugeTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +271,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testColorIndex [
+HighchartsPlotOptionsSolidgaugeTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +285,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testCompare [
+HighchartsPlotOptionsSolidgaugeTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +299,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testCompareBase [
+HighchartsPlotOptionsSolidgaugeTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +313,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testCompareStart [
+HighchartsPlotOptionsSolidgaugeTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +327,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testCrisp [
+HighchartsPlotOptionsSolidgaugeTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +341,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testCursor [
+HighchartsPlotOptionsSolidgaugeTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +355,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testCustom [
+HighchartsPlotOptionsSolidgaugeTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +369,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testDescription [
+HighchartsPlotOptionsSolidgaugeTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +383,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testEnableMouseTracking [
+HighchartsPlotOptionsSolidgaugeTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +397,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testEvents [
+HighchartsPlotOptionsSolidgaugeTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +411,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testGapSize [
+HighchartsPlotOptionsSolidgaugeTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +425,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testGapUnit [
+HighchartsPlotOptionsSolidgaugeTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +439,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testIncludeInDataExport [
+HighchartsPlotOptionsSolidgaugeTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +453,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testInnerRadius [
+HighchartsPlotOptionsSolidgaugeTest >> testSetInnerRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +467,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testInnerRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testJoinBy [
+HighchartsPlotOptionsSolidgaugeTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +481,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testKeys [
+HighchartsPlotOptionsSolidgaugeTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +495,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testLineWidth [
+HighchartsPlotOptionsSolidgaugeTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +509,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testLinecap [
+HighchartsPlotOptionsSolidgaugeTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +523,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testLinkedTo [
+HighchartsPlotOptionsSolidgaugeTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +537,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testNavigatorOptions [
+HighchartsPlotOptionsSolidgaugeTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +551,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testOpacity [
+HighchartsPlotOptionsSolidgaugeTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +565,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testOvershoot [
+HighchartsPlotOptionsSolidgaugeTest >> testSetOvershoot [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +579,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testOvershoot [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsSolidgaugeTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +593,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testPointInterval [
+HighchartsPlotOptionsSolidgaugeTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +607,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testPointIntervalUnit [
+HighchartsPlotOptionsSolidgaugeTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +621,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testPointRange [
+HighchartsPlotOptionsSolidgaugeTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +635,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testPointStart [
+HighchartsPlotOptionsSolidgaugeTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +649,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testRadius [
+HighchartsPlotOptionsSolidgaugeTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +663,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testRounded [
+HighchartsPlotOptionsSolidgaugeTest >> testSetRounded [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +677,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testRounded [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testSelected [
+HighchartsPlotOptionsSolidgaugeTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +691,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testShowCheckbox [
+HighchartsPlotOptionsSolidgaugeTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +705,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testShowInLegend [
+HighchartsPlotOptionsSolidgaugeTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +719,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testShowInNavigator [
+HighchartsPlotOptionsSolidgaugeTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +733,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsSolidgaugeTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +747,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testStickyTracking [
+HighchartsPlotOptionsSolidgaugeTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +761,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testThreshold [
+HighchartsPlotOptionsSolidgaugeTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +775,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testUseOhlcData [
+HighchartsPlotOptionsSolidgaugeTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +789,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testVisible [
+HighchartsPlotOptionsSolidgaugeTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +803,7 @@ HighchartsPlotOptionsSolidgaugeTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTest >> testZIndex [
+HighchartsPlotOptionsSolidgaugeTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

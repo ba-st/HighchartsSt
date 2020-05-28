@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownActiveDataLabelStyleTest >> testColor [
+HighchartsDrilldownActiveDataLabelStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsDrilldownActiveDataLabelStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownActiveDataLabelStyleTest >> testCursor [
+HighchartsDrilldownActiveDataLabelStyleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsDrilldownActiveDataLabelStyleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownActiveDataLabelStyleTest >> testFontWeight [
+HighchartsDrilldownActiveDataLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsDrilldownActiveDataLabelStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownActiveDataLabelStyleTest >> testTextDecoration [
+HighchartsDrilldownActiveDataLabelStyleTest >> testSetTextDecoration [
 
 	| component javascript expectedConfiguration |
 

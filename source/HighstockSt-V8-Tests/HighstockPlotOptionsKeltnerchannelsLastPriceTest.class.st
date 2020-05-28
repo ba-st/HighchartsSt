@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsLastPriceTest >> testColor [
+HighstockPlotOptionsKeltnerchannelsLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsLastPriceTest >> testEnabled [
+HighstockPlotOptionsKeltnerchannelsLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

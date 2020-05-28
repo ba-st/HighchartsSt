@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesNormalTest >> testAnimation [
+HighstockSeriesSplineStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

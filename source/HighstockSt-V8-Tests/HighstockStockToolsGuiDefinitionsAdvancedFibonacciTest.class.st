@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsAdvancedFibonacciTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsAdvancedFibonacciTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

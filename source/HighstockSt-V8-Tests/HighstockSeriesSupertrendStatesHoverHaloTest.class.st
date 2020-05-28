@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverHaloTest >> testAttributes [
+HighstockSeriesSupertrendStatesHoverHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSupertrendStatesHoverHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverHaloTest >> testOpacity [
+HighstockSeriesSupertrendStatesHoverHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSupertrendStatesHoverHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverHaloTest >> testSize [
+HighstockSeriesSupertrendStatesHoverHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

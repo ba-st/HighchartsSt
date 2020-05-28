@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsArearangeDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsArearangeDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsArearangeDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsArearangeDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsArearangeDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

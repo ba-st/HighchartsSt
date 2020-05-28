@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testAfterAnimate [
+HighstockSeriesPsarEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPsarEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testCheckboxClick [
+HighstockSeriesPsarEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPsarEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testClick [
+HighstockSeriesPsarEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPsarEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testHide [
+HighstockSeriesPsarEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPsarEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testLegendItemClick [
+HighstockSeriesPsarEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPsarEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testMouseOut [
+HighstockSeriesPsarEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPsarEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testMouseOver [
+HighstockSeriesPsarEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPsarEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarEventsTest >> testShow [
+HighstockSeriesPsarEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

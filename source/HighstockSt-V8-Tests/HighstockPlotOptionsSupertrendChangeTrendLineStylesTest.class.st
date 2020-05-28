@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testDashStyle [
+HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testLineColor [
+HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testLineWidth [
+HighstockPlotOptionsSupertrendChangeTrendLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

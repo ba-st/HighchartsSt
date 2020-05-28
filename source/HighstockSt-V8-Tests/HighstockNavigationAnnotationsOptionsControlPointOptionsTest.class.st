@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testHeight [
+HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptionsControlPointOptions new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testPositioner [
+HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testSetPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testSymbol [
+HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testVisible [
+HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testWidth [
+HighstockNavigationAnnotationsOptionsControlPointOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

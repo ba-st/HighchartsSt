@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsMeasureMeasureXYTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsMeasureMeasureXYTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

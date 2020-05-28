@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhSenkouSpanTest >> testColor [
+HighstockSeriesIkhSenkouSpanTest >> testGetStyles [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesIkhSenkouSpan new.
+	component styles.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'styles' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesIkhSenkouSpanTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesIkhSenkouSpanTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhSenkouSpanTest >> testNegativeColor [
+HighstockSeriesIkhSenkouSpanTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 

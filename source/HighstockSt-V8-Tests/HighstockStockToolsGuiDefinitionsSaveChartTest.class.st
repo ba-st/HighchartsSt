@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsSaveChartTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsSaveChartTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

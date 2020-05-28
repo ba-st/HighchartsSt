@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsTextPathTest >> testAttributes [
+HighchartsSeriesWordcloudDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsTextPathTest >> testEnabled [
+HighchartsSeriesWordcloudDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

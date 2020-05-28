@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsCandlestickDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

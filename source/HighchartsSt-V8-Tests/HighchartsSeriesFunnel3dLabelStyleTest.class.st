@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelStyleTest >> testFontWeight [
+HighchartsSeriesFunnel3dLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

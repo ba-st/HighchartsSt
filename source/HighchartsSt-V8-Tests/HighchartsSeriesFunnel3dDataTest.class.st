@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testBorderColor [
+HighchartsSeriesFunnel3dDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dDataTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesFunnel3dDataTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testBorderWidth [
+HighchartsSeriesFunnel3dDataTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesFunnel3dDataTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testClassName [
+HighchartsSeriesFunnel3dDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesFunnel3dDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testColor [
+HighchartsSeriesFunnel3dDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesFunnel3dDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testColorIndex [
+HighchartsSeriesFunnel3dDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesFunnel3dDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testCustom [
+HighchartsSeriesFunnel3dDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesFunnel3dDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testDashStyle [
+HighchartsSeriesFunnel3dDataTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesFunnel3dDataTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testDescription [
+HighchartsSeriesFunnel3dDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesFunnel3dDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testDrilldown [
+HighchartsSeriesFunnel3dDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesFunnel3dDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testEvents [
+HighchartsSeriesFunnel3dDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesFunnel3dDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testGradientForSides [
+HighchartsSeriesFunnel3dDataTest >> testSetGradientForSides [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesFunnel3dDataTest >> testGradientForSides [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testId [
+HighchartsSeriesFunnel3dDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesFunnel3dDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testLabelrank [
+HighchartsSeriesFunnel3dDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesFunnel3dDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testName [
+HighchartsSeriesFunnel3dDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesFunnel3dDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testPointWidth [
+HighchartsSeriesFunnel3dDataTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesFunnel3dDataTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testSelected [
+HighchartsSeriesFunnel3dDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesFunnel3dDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testX [
+HighchartsSeriesFunnel3dDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesFunnel3dDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dDataTest >> testY [
+HighchartsSeriesFunnel3dDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

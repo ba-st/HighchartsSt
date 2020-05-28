@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsLabelsAccessibilityTest >> testDescription [
+HighchartsNavigationAnnotationsOptionsLabelsAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

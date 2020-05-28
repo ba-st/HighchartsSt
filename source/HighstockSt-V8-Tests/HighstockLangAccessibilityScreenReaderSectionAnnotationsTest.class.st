@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testDescriptionMultiplePoints [
+HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testSetDescriptionMultiplePoints [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testDescriptionM
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testDescriptionNoPoints [
+HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testSetDescriptionNoPoints [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testDescriptionN
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testDescriptionSinglePoint [
+HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testSetDescriptionSinglePoint [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testDescriptionS
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testHeading [
+HighstockLangAccessibilityScreenReaderSectionAnnotationsTest >> testSetHeading [
 
 	| component javascript expectedConfiguration |
 

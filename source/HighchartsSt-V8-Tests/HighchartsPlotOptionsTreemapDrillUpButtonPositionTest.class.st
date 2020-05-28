@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testAlign [
+HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testVerticalAlign [
+HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testX [
+HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testY [
+HighchartsPlotOptionsTreemapDrillUpButtonPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

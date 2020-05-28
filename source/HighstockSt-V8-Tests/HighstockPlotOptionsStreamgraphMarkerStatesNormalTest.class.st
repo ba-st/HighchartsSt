@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphMarkerStatesNormalTest >> testAnimation [
+HighstockPlotOptionsStreamgraphMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

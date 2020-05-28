@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testAlign [
+HighchartsChartParallelAxesLabelsTest >> testGetLevels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxesLabels new.
+	component levels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'levels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxesLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesLabelsTest >> testGetSymbol [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxesLabels new.
+	component symbol.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'symbol' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsChartParallelAxesLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testAutoRotation [
+HighchartsChartParallelAxesLabelsTest >> testSetAutoRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsChartParallelAxesLabelsTest >> testAutoRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testAutoRotationLimit [
+HighchartsChartParallelAxesLabelsTest >> testSetAutoRotationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsChartParallelAxesLabelsTest >> testAutoRotationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testDistance [
+HighchartsChartParallelAxesLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsChartParallelAxesLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testEnabled [
+HighchartsChartParallelAxesLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsChartParallelAxesLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testFormat [
+HighchartsChartParallelAxesLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsChartParallelAxesLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testFormatter [
+HighchartsChartParallelAxesLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsChartParallelAxesLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testIndentation [
+HighchartsChartParallelAxesLabelsTest >> testSetIndentation [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsChartParallelAxesLabelsTest >> testIndentation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testMaxStaggerLines [
+HighchartsChartParallelAxesLabelsTest >> testSetMaxStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsChartParallelAxesLabelsTest >> testMaxStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testOverflow [
+HighchartsChartParallelAxesLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsChartParallelAxesLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testPadding [
+HighchartsChartParallelAxesLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsChartParallelAxesLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testPosition3d [
+HighchartsChartParallelAxesLabelsTest >> testSetPosition3d [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsChartParallelAxesLabelsTest >> testPosition3d [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testReserveSpace [
+HighchartsChartParallelAxesLabelsTest >> testSetReserveSpace [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsChartParallelAxesLabelsTest >> testReserveSpace [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testRotation [
+HighchartsChartParallelAxesLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsChartParallelAxesLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testSkew3d [
+HighchartsChartParallelAxesLabelsTest >> testSetSkew3d [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsChartParallelAxesLabelsTest >> testSkew3d [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testStaggerLines [
+HighchartsChartParallelAxesLabelsTest >> testSetStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsChartParallelAxesLabelsTest >> testStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testStep [
+HighchartsChartParallelAxesLabelsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsChartParallelAxesLabelsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testUseHTML [
+HighchartsChartParallelAxesLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsChartParallelAxesLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testX [
+HighchartsChartParallelAxesLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsChartParallelAxesLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testY [
+HighchartsChartParallelAxesLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsChartParallelAxesLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsTest >> testZIndex [
+HighchartsChartParallelAxesLabelsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

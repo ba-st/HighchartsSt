@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testClassName [
+HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testClassName 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testColor [
+HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testCursor [
+HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testLineColor [
+HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testLineColor 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testLineWidth 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testPathFormat
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testZIndex [
+HighstockSeriesLinearregressioninterceptDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

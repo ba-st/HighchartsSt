@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbStatesNormalTest >> testAnimation [
+HighchartsPlotOptionsWindbarbStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

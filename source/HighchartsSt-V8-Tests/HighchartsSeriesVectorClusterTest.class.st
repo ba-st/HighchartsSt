@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterTest >> testAllowOverlap [
+HighchartsSeriesVectorClusterTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVectorCluster new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVectorClusterTest >> testGetLayoutAlgorithm [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVectorCluster new.
+	component layoutAlgorithm.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'layoutAlgorithm' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVectorClusterTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVectorCluster new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVectorClusterTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVectorCluster new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVectorClusterTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsSeriesVectorClusterTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterTest >> testAnimation [
+HighchartsSeriesVectorClusterTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsSeriesVectorClusterTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterTest >> testDrillToCluster [
+HighchartsSeriesVectorClusterTest >> testSetDrillToCluster [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsSeriesVectorClusterTest >> testDrillToCluster [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterTest >> testEnabled [
+HighchartsSeriesVectorClusterTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsSeriesVectorClusterTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterTest >> testEvents [
+HighchartsSeriesVectorClusterTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsSeriesVectorClusterTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterTest >> testMinimumClusterSize [
+HighchartsSeriesVectorClusterTest >> testSetMinimumClusterSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsSeriesVectorClusterTest >> testMinimumClusterSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterTest >> testStates [
+HighchartsSeriesVectorClusterTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 

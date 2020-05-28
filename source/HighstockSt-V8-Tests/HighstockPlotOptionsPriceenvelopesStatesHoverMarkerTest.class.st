@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testEnabled [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testEnabledThreshold 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testFillColor [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testHeight [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testLineColor [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testLineWidth [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testRadius [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSymbol [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testWidth [
+HighstockPlotOptionsPriceenvelopesStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

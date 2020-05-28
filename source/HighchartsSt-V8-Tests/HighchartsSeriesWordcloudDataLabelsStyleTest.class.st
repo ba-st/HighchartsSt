@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsStyleTest >> testColor [
+HighchartsSeriesWordcloudDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsStyleTest >> testFontSize [
+HighchartsSeriesWordcloudDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWordcloudDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsStyleTest >> testFontWeight [
+HighchartsSeriesWordcloudDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWordcloudDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsStyleTest >> testTextOutline [
+HighchartsSeriesWordcloudDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

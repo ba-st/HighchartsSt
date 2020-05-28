@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityZoomTest >> testMapZoomIn [
+HighstockLangAccessibilityZoomTest >> testSetMapZoomIn [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityZoomTest >> testMapZoomIn [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityZoomTest >> testMapZoomOut [
+HighstockLangAccessibilityZoomTest >> testSetMapZoomOut [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilityZoomTest >> testMapZoomOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityZoomTest >> testResetZoomButton [
+HighstockLangAccessibilityZoomTest >> testSetResetZoomButton [
 
 	| component javascript expectedConfiguration |
 

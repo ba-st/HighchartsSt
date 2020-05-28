@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnPointTest >> testEvents [
+HighchartsPlotOptionsColumnPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

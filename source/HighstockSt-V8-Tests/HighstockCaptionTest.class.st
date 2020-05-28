@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testAlign [
+HighstockCaptionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockCaptionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testFloating [
+HighstockCaptionTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockCaptionTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testMargin [
+HighstockCaptionTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockCaptionTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testStyle [
+HighstockCaptionTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockCaptionTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testText [
+HighstockCaptionTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockCaptionTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testUseHTML [
+HighstockCaptionTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockCaptionTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testVerticalAlign [
+HighstockCaptionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockCaptionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testX [
+HighstockCaptionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockCaptionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCaptionTest >> testY [
+HighstockCaptionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaParamsTest >> testIndex [
+HighstockSeriesDemaParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesDemaParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaParamsTest >> testPeriod [
+HighstockSeriesDemaParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

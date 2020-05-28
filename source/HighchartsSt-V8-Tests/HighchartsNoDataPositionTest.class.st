@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNoDataPositionTest >> testAlign [
+HighchartsNoDataPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsNoDataPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNoDataPositionTest >> testVerticalAlign [
+HighchartsNoDataPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsNoDataPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNoDataPositionTest >> testX [
+HighchartsNoDataPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsNoDataPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNoDataPositionTest >> testY [
+HighchartsNoDataPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

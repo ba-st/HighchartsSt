@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testAllAreas [
+HighstockSeriesNatrTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesNatr new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesNatrTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +229,7 @@ HighstockSeriesNatrTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testAllowPointSelect [
+HighstockSeriesNatrTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +243,7 @@ HighstockSeriesNatrTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testAnimationLimit [
+HighstockSeriesNatrTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +257,7 @@ HighstockSeriesNatrTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testBoostBlending [
+HighstockSeriesNatrTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +271,7 @@ HighstockSeriesNatrTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testBoostThreshold [
+HighstockSeriesNatrTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +285,7 @@ HighstockSeriesNatrTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testBorderColor [
+HighstockSeriesNatrTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +299,7 @@ HighstockSeriesNatrTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testBorderWidth [
+HighstockSeriesNatrTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +313,7 @@ HighstockSeriesNatrTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testClassName [
+HighstockSeriesNatrTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +327,7 @@ HighstockSeriesNatrTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testClip [
+HighstockSeriesNatrTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +341,7 @@ HighstockSeriesNatrTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testColor [
+HighstockSeriesNatrTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +355,7 @@ HighstockSeriesNatrTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testColorAxis [
+HighstockSeriesNatrTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +369,7 @@ HighstockSeriesNatrTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testColorIndex [
+HighstockSeriesNatrTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +383,7 @@ HighstockSeriesNatrTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testColorKey [
+HighstockSeriesNatrTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +397,7 @@ HighstockSeriesNatrTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCompare [
+HighstockSeriesNatrTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +411,7 @@ HighstockSeriesNatrTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCompareBase [
+HighstockSeriesNatrTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighstockSeriesNatrTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCompareStart [
+HighstockSeriesNatrTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockSeriesNatrTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCompareToMain [
+HighstockSeriesNatrTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,7 @@ HighstockSeriesNatrTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testConnectEnds [
+HighstockSeriesNatrTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockSeriesNatrTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testConnectNulls [
+HighstockSeriesNatrTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,7 @@ HighstockSeriesNatrTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCrisp [
+HighstockSeriesNatrTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +495,7 @@ HighstockSeriesNatrTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCropThreshold [
+HighstockSeriesNatrTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +509,7 @@ HighstockSeriesNatrTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCursor [
+HighstockSeriesNatrTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +523,7 @@ HighstockSeriesNatrTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testCustom [
+HighstockSeriesNatrTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +537,7 @@ HighstockSeriesNatrTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testDashStyle [
+HighstockSeriesNatrTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +551,7 @@ HighstockSeriesNatrTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testDescription [
+HighstockSeriesNatrTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +565,7 @@ HighstockSeriesNatrTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testEnableMouseTracking [
+HighstockSeriesNatrTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +579,7 @@ HighstockSeriesNatrTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testEvents [
+HighstockSeriesNatrTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +593,7 @@ HighstockSeriesNatrTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testFindNearestPointBy [
+HighstockSeriesNatrTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +607,7 @@ HighstockSeriesNatrTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testGapSize [
+HighstockSeriesNatrTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +621,7 @@ HighstockSeriesNatrTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testGapUnit [
+HighstockSeriesNatrTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighstockSeriesNatrTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testGetExtremesFromAll [
+HighstockSeriesNatrTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +649,7 @@ HighstockSeriesNatrTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testId [
+HighstockSeriesNatrTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +663,7 @@ HighstockSeriesNatrTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testIncludeInDataExport [
+HighstockSeriesNatrTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +677,7 @@ HighstockSeriesNatrTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testIndex [
+HighstockSeriesNatrTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +691,7 @@ HighstockSeriesNatrTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testJoinBy [
+HighstockSeriesNatrTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +705,7 @@ HighstockSeriesNatrTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testKeys [
+HighstockSeriesNatrTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +719,7 @@ HighstockSeriesNatrTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testLegendIndex [
+HighstockSeriesNatrTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +733,7 @@ HighstockSeriesNatrTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testLineWidth [
+HighstockSeriesNatrTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +747,7 @@ HighstockSeriesNatrTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testLinecap [
+HighstockSeriesNatrTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +761,7 @@ HighstockSeriesNatrTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testLinkedTo [
+HighstockSeriesNatrTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +775,7 @@ HighstockSeriesNatrTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testMapData [
+HighstockSeriesNatrTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +789,7 @@ HighstockSeriesNatrTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testName [
+HighstockSeriesNatrTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +803,7 @@ HighstockSeriesNatrTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testNavigatorOptions [
+HighstockSeriesNatrTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +817,7 @@ HighstockSeriesNatrTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testNegativeColor [
+HighstockSeriesNatrTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +831,7 @@ HighstockSeriesNatrTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testOpacity [
+HighstockSeriesNatrTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighstockSeriesNatrTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testPointDescriptionFormatter [
+HighstockSeriesNatrTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +859,7 @@ HighstockSeriesNatrTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testPointInterval [
+HighstockSeriesNatrTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +873,7 @@ HighstockSeriesNatrTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testPointIntervalUnit [
+HighstockSeriesNatrTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +887,7 @@ HighstockSeriesNatrTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testPointPlacement [
+HighstockSeriesNatrTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +901,7 @@ HighstockSeriesNatrTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testPointRange [
+HighstockSeriesNatrTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +915,7 @@ HighstockSeriesNatrTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testPointStart [
+HighstockSeriesNatrTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +929,7 @@ HighstockSeriesNatrTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testSelected [
+HighstockSeriesNatrTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +943,7 @@ HighstockSeriesNatrTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testShadow [
+HighstockSeriesNatrTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +957,7 @@ HighstockSeriesNatrTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testShowCheckbox [
+HighstockSeriesNatrTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +971,7 @@ HighstockSeriesNatrTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testShowInLegend [
+HighstockSeriesNatrTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +985,7 @@ HighstockSeriesNatrTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testShowInNavigator [
+HighstockSeriesNatrTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +999,7 @@ HighstockSeriesNatrTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testSkipKeyboardNavigation [
+HighstockSeriesNatrTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +1013,7 @@ HighstockSeriesNatrTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testSoftThreshold [
+HighstockSeriesNatrTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1027,7 @@ HighstockSeriesNatrTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testStack [
+HighstockSeriesNatrTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1041,7 @@ HighstockSeriesNatrTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testStacking [
+HighstockSeriesNatrTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1055,7 @@ HighstockSeriesNatrTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testStates [
+HighstockSeriesNatrTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1069,7 @@ HighstockSeriesNatrTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testStep [
+HighstockSeriesNatrTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1083,7 @@ HighstockSeriesNatrTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testStickyTracking [
+HighstockSeriesNatrTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1097,7 @@ HighstockSeriesNatrTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testThreshold [
+HighstockSeriesNatrTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1111,7 @@ HighstockSeriesNatrTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testTurboThreshold [
+HighstockSeriesNatrTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1125,7 @@ HighstockSeriesNatrTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testType [
+HighstockSeriesNatrTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1139,7 @@ HighstockSeriesNatrTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testVisible [
+HighstockSeriesNatrTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1153,7 @@ HighstockSeriesNatrTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testXAxis [
+HighstockSeriesNatrTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1167,7 @@ HighstockSeriesNatrTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testYAxis [
+HighstockSeriesNatrTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1181,7 @@ HighstockSeriesNatrTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testZIndex [
+HighstockSeriesNatrTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1195,7 @@ HighstockSeriesNatrTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrTest >> testZoneAxis [
+HighstockSeriesNatrTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

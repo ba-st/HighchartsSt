@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAnnounceNewDataTest >> testNewDataAnnounce [
+HighchartsLangAccessibilityAnnounceNewDataTest >> testSetNewDataAnnounce [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilityAnnounceNewDataTest >> testNewDataAnnounce [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceMultiple [
+HighchartsLangAccessibilityAnnounceNewDataTest >> testSetNewPointAnnounceMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceSingle [
+HighchartsLangAccessibilityAnnounceNewDataTest >> testSetNewPointAnnounceSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAnnounceNewDataTest >> testNewSeriesAnnounceMultiple [
+HighchartsLangAccessibilityAnnounceNewDataTest >> testSetNewSeriesAnnounceMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLangAccessibilityAnnounceNewDataTest >> testNewSeriesAnnounceMultiple 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAnnounceNewDataTest >> testNewSeriesAnnounceSingle [
+HighchartsLangAccessibilityAnnounceNewDataTest >> testSetNewSeriesAnnounceSingle [
 
 	| component javascript expectedConfiguration |
 

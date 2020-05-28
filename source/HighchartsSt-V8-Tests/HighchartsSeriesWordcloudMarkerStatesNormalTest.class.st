@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudMarkerStatesNormalTest >> testAnimation [
+HighchartsSeriesWordcloudMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

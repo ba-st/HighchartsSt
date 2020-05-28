@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testEnabled [
+HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testFillColor [
+HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testFillColor
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testLineColor [
+HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testLineColor
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testLineWidth
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testRadius [
+HighstockPlotOptionsLinearregressionslopeMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

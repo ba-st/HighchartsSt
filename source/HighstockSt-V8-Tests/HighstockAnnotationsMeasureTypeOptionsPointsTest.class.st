@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsMeasureTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsMeasureTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsPointsTest >> testX [
+HighstockAnnotationsMeasureTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsMeasureTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsPointsTest >> testY [
+HighstockAnnotationsMeasureTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataSortingTest >> testEnabled [
+HighstockSeriesZigzagDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesZigzagDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataSortingTest >> testMatchByName [
+HighstockSeriesZigzagDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesZigzagDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataSortingTest >> testSortKey [
+HighstockSeriesZigzagDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

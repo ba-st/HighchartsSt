@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testChildren [
+HighchartsDefsArrowTest >> testSetChildren [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsDefsArrowTest >> testChildren [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testId [
+HighchartsDefsArrowTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsDefsArrowTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testMarkerHeight [
+HighchartsDefsArrowTest >> testSetMarkerHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsDefsArrowTest >> testMarkerHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testMarkerWidth [
+HighchartsDefsArrowTest >> testSetMarkerWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsDefsArrowTest >> testMarkerWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testRefX [
+HighchartsDefsArrowTest >> testSetRefX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsDefsArrowTest >> testRefX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testRefY [
+HighchartsDefsArrowTest >> testSetRefY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsDefsArrowTest >> testRefY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testRender [
+HighchartsDefsArrowTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsDefsArrowTest >> testRender [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsArrowTest >> testTagName [
+HighchartsDefsArrowTest >> testSetTagName [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dTest >> testAlpha [
+HighchartsChartOptions3dTest >> testGetFrame [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartOptions3d new.
+	component frame.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'frame' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartOptions3dTest >> testSetAlpha [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsChartOptions3dTest >> testAlpha [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dTest >> testAxisLabelPosition [
+HighchartsChartOptions3dTest >> testSetAxisLabelPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsChartOptions3dTest >> testAxisLabelPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dTest >> testBeta [
+HighchartsChartOptions3dTest >> testSetBeta [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsChartOptions3dTest >> testBeta [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dTest >> testDepth [
+HighchartsChartOptions3dTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsChartOptions3dTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dTest >> testEnabled [
+HighchartsChartOptions3dTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsChartOptions3dTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dTest >> testFitToPlot [
+HighchartsChartOptions3dTest >> testSetFitToPlot [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsChartOptions3dTest >> testFitToPlot [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dTest >> testViewDistance [
+HighchartsChartOptions3dTest >> testSetViewDistance [
 
 	| component javascript expectedConfiguration |
 

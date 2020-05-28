@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsVennClusterDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 

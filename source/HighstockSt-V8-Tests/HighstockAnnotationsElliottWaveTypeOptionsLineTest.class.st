@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsLineTest >> testFill [
+HighstockAnnotationsElliottWaveTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsElliottWaveTypeOptionsLineTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsLineTest >> testStrokeWidth [
+HighstockAnnotationsElliottWaveTypeOptionsLineTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,202 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testAllAreas [
+HighstockSeriesFlagsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +215,7 @@ HighstockSeriesFlagsTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testAllowOverlapX [
+HighstockSeriesFlagsTest >> testSetAllowOverlapX [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +230,7 @@ HighstockSeriesFlagsTest >> testAllowOverlapX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testAllowPointSelect [
+HighstockSeriesFlagsTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +245,7 @@ HighstockSeriesFlagsTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testAnimationLimit [
+HighstockSeriesFlagsTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +260,7 @@ HighstockSeriesFlagsTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testBoostBlending [
+HighstockSeriesFlagsTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +275,7 @@ HighstockSeriesFlagsTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testBoostThreshold [
+HighstockSeriesFlagsTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +290,7 @@ HighstockSeriesFlagsTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testClassName [
+HighstockSeriesFlagsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +305,7 @@ HighstockSeriesFlagsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testClip [
+HighstockSeriesFlagsTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +320,7 @@ HighstockSeriesFlagsTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testColor [
+HighstockSeriesFlagsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +335,7 @@ HighstockSeriesFlagsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testColorAxis [
+HighstockSeriesFlagsTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +350,7 @@ HighstockSeriesFlagsTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testColorIndex [
+HighstockSeriesFlagsTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +365,7 @@ HighstockSeriesFlagsTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testColorKey [
+HighstockSeriesFlagsTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +380,7 @@ HighstockSeriesFlagsTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testColors [
+HighstockSeriesFlagsTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +395,7 @@ HighstockSeriesFlagsTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testCompare [
+HighstockSeriesFlagsTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +410,7 @@ HighstockSeriesFlagsTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testCompareBase [
+HighstockSeriesFlagsTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +425,7 @@ HighstockSeriesFlagsTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testCompareStart [
+HighstockSeriesFlagsTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +440,7 @@ HighstockSeriesFlagsTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testConnectEnds [
+HighstockSeriesFlagsTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +455,7 @@ HighstockSeriesFlagsTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testCrisp [
+HighstockSeriesFlagsTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +470,7 @@ HighstockSeriesFlagsTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testCropThreshold [
+HighstockSeriesFlagsTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +485,7 @@ HighstockSeriesFlagsTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testCursor [
+HighstockSeriesFlagsTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +500,7 @@ HighstockSeriesFlagsTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testCustom [
+HighstockSeriesFlagsTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +515,7 @@ HighstockSeriesFlagsTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testData [
+HighstockSeriesFlagsTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +530,7 @@ HighstockSeriesFlagsTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testDepth [
+HighstockSeriesFlagsTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +545,7 @@ HighstockSeriesFlagsTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testDescription [
+HighstockSeriesFlagsTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +560,7 @@ HighstockSeriesFlagsTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testEdgeColor [
+HighstockSeriesFlagsTest >> testSetEdgeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +575,7 @@ HighstockSeriesFlagsTest >> testEdgeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testEdgeWidth [
+HighstockSeriesFlagsTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +590,7 @@ HighstockSeriesFlagsTest >> testEdgeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testEnableMouseTracking [
+HighstockSeriesFlagsTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +605,7 @@ HighstockSeriesFlagsTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testEvents [
+HighstockSeriesFlagsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +620,7 @@ HighstockSeriesFlagsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testFillColor [
+HighstockSeriesFlagsTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +635,7 @@ HighstockSeriesFlagsTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testFindNearestPointBy [
+HighstockSeriesFlagsTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +650,7 @@ HighstockSeriesFlagsTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testGetExtremesFromAll [
+HighstockSeriesFlagsTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +665,7 @@ HighstockSeriesFlagsTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testGroupPadding [
+HighstockSeriesFlagsTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +680,7 @@ HighstockSeriesFlagsTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testGroupZPadding [
+HighstockSeriesFlagsTest >> testSetGroupZPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +695,7 @@ HighstockSeriesFlagsTest >> testGroupZPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testGrouping [
+HighstockSeriesFlagsTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +710,7 @@ HighstockSeriesFlagsTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testHeight [
+HighstockSeriesFlagsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +725,7 @@ HighstockSeriesFlagsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testId [
+HighstockSeriesFlagsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +740,7 @@ HighstockSeriesFlagsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testIncludeInDataExport [
+HighstockSeriesFlagsTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +755,7 @@ HighstockSeriesFlagsTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testIndex [
+HighstockSeriesFlagsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +770,7 @@ HighstockSeriesFlagsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testJoinBy [
+HighstockSeriesFlagsTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +785,7 @@ HighstockSeriesFlagsTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testKeys [
+HighstockSeriesFlagsTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +800,7 @@ HighstockSeriesFlagsTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testLegendIndex [
+HighstockSeriesFlagsTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +815,7 @@ HighstockSeriesFlagsTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testLineColor [
+HighstockSeriesFlagsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +830,7 @@ HighstockSeriesFlagsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testLinkedTo [
+HighstockSeriesFlagsTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +845,7 @@ HighstockSeriesFlagsTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testMapData [
+HighstockSeriesFlagsTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +860,7 @@ HighstockSeriesFlagsTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testMaxPointWidth [
+HighstockSeriesFlagsTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +875,7 @@ HighstockSeriesFlagsTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testMinPointLength [
+HighstockSeriesFlagsTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +890,7 @@ HighstockSeriesFlagsTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testName [
+HighstockSeriesFlagsTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +905,7 @@ HighstockSeriesFlagsTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testNavigatorOptions [
+HighstockSeriesFlagsTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +920,7 @@ HighstockSeriesFlagsTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testNegativeColor [
+HighstockSeriesFlagsTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +935,7 @@ HighstockSeriesFlagsTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testOnKey [
+HighstockSeriesFlagsTest >> testSetOnKey [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +950,7 @@ HighstockSeriesFlagsTest >> testOnKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testOnSeries [
+HighstockSeriesFlagsTest >> testSetOnSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +965,7 @@ HighstockSeriesFlagsTest >> testOnSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testOpacity [
+HighstockSeriesFlagsTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +980,7 @@ HighstockSeriesFlagsTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testPointDescriptionFormatter [
+HighstockSeriesFlagsTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +995,7 @@ HighstockSeriesFlagsTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testPointInterval [
+HighstockSeriesFlagsTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1010,7 @@ HighstockSeriesFlagsTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testPointIntervalUnit [
+HighstockSeriesFlagsTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1025,7 @@ HighstockSeriesFlagsTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testPointPlacement [
+HighstockSeriesFlagsTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1040,7 @@ HighstockSeriesFlagsTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testPointRange [
+HighstockSeriesFlagsTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1055,7 @@ HighstockSeriesFlagsTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testPointStart [
+HighstockSeriesFlagsTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1070,7 @@ HighstockSeriesFlagsTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testSelected [
+HighstockSeriesFlagsTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1085,7 @@ HighstockSeriesFlagsTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testShadow [
+HighstockSeriesFlagsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1100,7 @@ HighstockSeriesFlagsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testShape [
+HighstockSeriesFlagsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1115,7 @@ HighstockSeriesFlagsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testShowCheckbox [
+HighstockSeriesFlagsTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1130,7 @@ HighstockSeriesFlagsTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testShowInLegend [
+HighstockSeriesFlagsTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1145,7 @@ HighstockSeriesFlagsTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testShowInNavigator [
+HighstockSeriesFlagsTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1160,7 @@ HighstockSeriesFlagsTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testSkipKeyboardNavigation [
+HighstockSeriesFlagsTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1175,7 @@ HighstockSeriesFlagsTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testSoftThreshold [
+HighstockSeriesFlagsTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1190,7 @@ HighstockSeriesFlagsTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testStack [
+HighstockSeriesFlagsTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1205,7 @@ HighstockSeriesFlagsTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testStackDistance [
+HighstockSeriesFlagsTest >> testSetStackDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1220,7 @@ HighstockSeriesFlagsTest >> testStackDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testStacking [
+HighstockSeriesFlagsTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1235,7 @@ HighstockSeriesFlagsTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testStates [
+HighstockSeriesFlagsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1250,7 @@ HighstockSeriesFlagsTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testStickyTracking [
+HighstockSeriesFlagsTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1265,7 @@ HighstockSeriesFlagsTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testStyle [
+HighstockSeriesFlagsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1280,7 @@ HighstockSeriesFlagsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testTextAlign [
+HighstockSeriesFlagsTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1295,7 @@ HighstockSeriesFlagsTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testThreshold [
+HighstockSeriesFlagsTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1310,7 @@ HighstockSeriesFlagsTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testTitle [
+HighstockSeriesFlagsTest >> testSetTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1325,7 @@ HighstockSeriesFlagsTest >> testTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testType [
+HighstockSeriesFlagsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1340,7 @@ HighstockSeriesFlagsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testUseHTML [
+HighstockSeriesFlagsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1355,7 @@ HighstockSeriesFlagsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testVisible [
+HighstockSeriesFlagsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1370,7 @@ HighstockSeriesFlagsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testWidth [
+HighstockSeriesFlagsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -1190,7 +1385,7 @@ HighstockSeriesFlagsTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testXAxis [
+HighstockSeriesFlagsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1205,7 +1400,7 @@ HighstockSeriesFlagsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testY [
+HighstockSeriesFlagsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -1220,7 +1415,7 @@ HighstockSeriesFlagsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testYAxis [
+HighstockSeriesFlagsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1235,7 +1430,7 @@ HighstockSeriesFlagsTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testZIndex [
+HighstockSeriesFlagsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1250,7 +1445,7 @@ HighstockSeriesFlagsTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsTest >> testZoneAxis [
+HighstockSeriesFlagsTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

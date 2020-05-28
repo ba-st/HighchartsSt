@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerStatesNormalTest >> testAnimation [
+HighstockSeriesZigzagMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

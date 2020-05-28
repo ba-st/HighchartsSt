@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPaneBackgroundTest >> testBackgroundColor [
+HighchartsPaneBackgroundTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPaneBackgroundTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneBackgroundTest >> testBorderColor [
+HighchartsPaneBackgroundTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPaneBackgroundTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneBackgroundTest >> testBorderWidth [
+HighchartsPaneBackgroundTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPaneBackgroundTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneBackgroundTest >> testClassName [
+HighchartsPaneBackgroundTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPaneBackgroundTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneBackgroundTest >> testInnerRadius [
+HighchartsPaneBackgroundTest >> testSetInnerRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPaneBackgroundTest >> testInnerRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneBackgroundTest >> testOuterRadius [
+HighchartsPaneBackgroundTest >> testSetOuterRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPaneBackgroundTest >> testOuterRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneBackgroundTest >> testShape [
+HighchartsPaneBackgroundTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 

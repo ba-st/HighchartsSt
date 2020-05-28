@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineZonesTest >> testClassName [
+HighchartsSeriesSplineZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSplineZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineZonesTest >> testColor [
+HighchartsSeriesSplineZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSplineZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineZonesTest >> testDashStyle [
+HighchartsSeriesSplineZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSplineZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineZonesTest >> testFillColor [
+HighchartsSeriesSplineZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSplineZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineZonesTest >> testValue [
+HighchartsSeriesSplineZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

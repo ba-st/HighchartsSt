@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletTargetOptionsTest >> testBorderColor [
+HighchartsPlotOptionsBulletTargetOptionsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBulletTargetOptionsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletTargetOptionsTest >> testBorderWidth [
+HighchartsPlotOptionsBulletTargetOptionsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBulletTargetOptionsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletTargetOptionsTest >> testColor [
+HighchartsPlotOptionsBulletTargetOptionsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsBulletTargetOptionsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletTargetOptionsTest >> testHeight [
+HighchartsPlotOptionsBulletTargetOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsBulletTargetOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletTargetOptionsTest >> testWidth [
+HighchartsPlotOptionsBulletTargetOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

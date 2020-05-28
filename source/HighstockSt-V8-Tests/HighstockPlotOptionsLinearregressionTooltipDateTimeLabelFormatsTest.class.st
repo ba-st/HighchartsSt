@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testHour 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testMilli
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testMinut
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testMonth
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSecon
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testWeek 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsLinearregressionTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

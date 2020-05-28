@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticDataSortingTest >> testEnabled [
+HighstockSeriesStochasticDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStochasticDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticDataSortingTest >> testMatchByName [
+HighstockSeriesStochasticDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesStochasticDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticDataSortingTest >> testSortKey [
+HighstockSeriesStochasticDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

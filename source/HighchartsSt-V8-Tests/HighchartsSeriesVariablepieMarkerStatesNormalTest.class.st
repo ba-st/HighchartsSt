@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieMarkerStatesNormalTest >> testAnimation [
+HighchartsSeriesVariablepieMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

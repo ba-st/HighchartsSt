@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityPointTest >> testDateFormat [
+HighstockAccessibilityPointTest >> testSetDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAccessibilityPointTest >> testDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityPointTest >> testDateFormatter [
+HighstockAccessibilityPointTest >> testSetDateFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAccessibilityPointTest >> testDateFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityPointTest >> testDescriptionFormatter [
+HighstockAccessibilityPointTest >> testSetDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAccessibilityPointTest >> testDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityPointTest >> testValueDecimals [
+HighstockAccessibilityPointTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockAccessibilityPointTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityPointTest >> testValueDescriptionFormat [
+HighstockAccessibilityPointTest >> testSetValueDescriptionFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockAccessibilityPointTest >> testValueDescriptionFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityPointTest >> testValuePrefix [
+HighstockAccessibilityPointTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockAccessibilityPointTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityPointTest >> testValueSuffix [
+HighstockAccessibilityPointTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 

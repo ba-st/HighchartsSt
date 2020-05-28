@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testAfterAnimate [
+HighstockSeriesSlowstochasticEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSlowstochasticEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testCheckboxClick [
+HighstockSeriesSlowstochasticEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSlowstochasticEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testClick [
+HighstockSeriesSlowstochasticEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSlowstochasticEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testHide [
+HighstockSeriesSlowstochasticEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesSlowstochasticEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testLegendItemClick [
+HighstockSeriesSlowstochasticEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesSlowstochasticEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testMouseOut [
+HighstockSeriesSlowstochasticEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesSlowstochasticEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testMouseOver [
+HighstockSeriesSlowstochasticEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesSlowstochasticEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticEventsTest >> testShow [
+HighstockSeriesSlowstochasticEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testX [
+HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testY [
+HighstockAnnotationsPitchforkTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

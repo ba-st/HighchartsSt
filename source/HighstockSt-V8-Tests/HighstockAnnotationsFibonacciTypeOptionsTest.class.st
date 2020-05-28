@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsTest >> testBackgroundColors [
+HighstockAnnotationsFibonacciTypeOptionsTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciTypeOptions new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciTypeOptionsTest >> testGetLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciTypeOptions new.
+	component line.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'line' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciTypeOptionsTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciTypeOptions new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciTypeOptionsTest >> testSetBackgroundColors [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockAnnotationsFibonacciTypeOptionsTest >> testBackgroundColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsTest >> testHeight [
+HighstockAnnotationsFibonacciTypeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockAnnotationsFibonacciTypeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsTest >> testLineColor [
+HighstockAnnotationsFibonacciTypeOptionsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockAnnotationsFibonacciTypeOptionsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsTest >> testLineColors [
+HighstockAnnotationsFibonacciTypeOptionsTest >> testSetLineColors [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockAnnotationsFibonacciTypeOptionsTest >> testLineColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsTest >> testXAxis [
+HighstockAnnotationsFibonacciTypeOptionsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockAnnotationsFibonacciTypeOptionsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsTest >> testYAxis [
+HighstockAnnotationsFibonacciTypeOptionsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

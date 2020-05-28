@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsStreamgraphLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

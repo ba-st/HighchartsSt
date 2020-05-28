@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsThemeTest >> testFill [
+HighstockNavigationButtonOptionsThemeTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigationButtonOptionsThemeTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsThemeTest >> testPadding [
+HighstockNavigationButtonOptionsThemeTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigationButtonOptionsThemeTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsThemeTest >> testStroke [
+HighstockNavigationButtonOptionsThemeTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 

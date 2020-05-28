@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelPointTest >> testEvents [
+HighchartsSeriesDependencywheelPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDependencywheelDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDependencywheelDataGroupingTest >> testDateTimeLabelFormats
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsDependencywheelDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testForced [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsDependencywheelDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testGroupAll [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsDependencywheelDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsDependencywheelDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSmoothed [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataGroupingTest >> testUnits [
+HighchartsPlotOptionsDependencywheelDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

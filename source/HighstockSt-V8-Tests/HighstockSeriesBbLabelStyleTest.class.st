@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbLabelStyleTest >> testFontWeight [
+HighstockSeriesBbLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

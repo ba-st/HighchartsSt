@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsFilterTest >> testOperator [
+HighchartsSeriesWordcloudDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsFilterTest >> testProperty [
+HighchartsSeriesWordcloudDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWordcloudDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataLabelsFilterTest >> testValue [
+HighchartsSeriesWordcloudDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

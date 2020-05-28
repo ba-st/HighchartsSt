@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsWmaDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWmaDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsWmaDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWmaDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsWmaDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testAlign [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testFormat [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testFormatter [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testRotation [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testStyle [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testText [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testTextAlign [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testUseHTML [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testVerticalAlign [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testX [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockColorAxisCurrentDateIndicatorLabelTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorLabelTest >> testY [
+HighstockColorAxisCurrentDateIndicatorLabelTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLabelsTest >> testStyle [
+HighchartsLabelsTest >> testGetItems [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLabels new.
+	component items.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'items' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLabelsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

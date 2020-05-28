@@ -5,7 +5,147 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testAllAreas [
+HighchartsPlotOptionsWindbarbTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarb new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +159,7 @@ HighchartsPlotOptionsWindbarbTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testAllowPointSelect [
+HighchartsPlotOptionsWindbarbTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +173,7 @@ HighchartsPlotOptionsWindbarbTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testAnimationLimit [
+HighchartsPlotOptionsWindbarbTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +187,7 @@ HighchartsPlotOptionsWindbarbTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testBoostBlending [
+HighchartsPlotOptionsWindbarbTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +201,7 @@ HighchartsPlotOptionsWindbarbTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testBorderColor [
+HighchartsPlotOptionsWindbarbTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +215,7 @@ HighchartsPlotOptionsWindbarbTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testBorderRadius [
+HighchartsPlotOptionsWindbarbTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +229,7 @@ HighchartsPlotOptionsWindbarbTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testBorderWidth [
+HighchartsPlotOptionsWindbarbTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +243,7 @@ HighchartsPlotOptionsWindbarbTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testClassName [
+HighchartsPlotOptionsWindbarbTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +257,7 @@ HighchartsPlotOptionsWindbarbTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testClip [
+HighchartsPlotOptionsWindbarbTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +271,7 @@ HighchartsPlotOptionsWindbarbTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testColor [
+HighchartsPlotOptionsWindbarbTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +285,7 @@ HighchartsPlotOptionsWindbarbTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testColorAxis [
+HighchartsPlotOptionsWindbarbTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +299,7 @@ HighchartsPlotOptionsWindbarbTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testColorByPoint [
+HighchartsPlotOptionsWindbarbTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +313,7 @@ HighchartsPlotOptionsWindbarbTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testColorIndex [
+HighchartsPlotOptionsWindbarbTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +327,7 @@ HighchartsPlotOptionsWindbarbTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testColorKey [
+HighchartsPlotOptionsWindbarbTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +341,7 @@ HighchartsPlotOptionsWindbarbTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testColors [
+HighchartsPlotOptionsWindbarbTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +355,7 @@ HighchartsPlotOptionsWindbarbTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testCrisp [
+HighchartsPlotOptionsWindbarbTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +369,7 @@ HighchartsPlotOptionsWindbarbTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testCursor [
+HighchartsPlotOptionsWindbarbTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +383,7 @@ HighchartsPlotOptionsWindbarbTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testCustom [
+HighchartsPlotOptionsWindbarbTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +397,7 @@ HighchartsPlotOptionsWindbarbTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testDepth [
+HighchartsPlotOptionsWindbarbTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +411,7 @@ HighchartsPlotOptionsWindbarbTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testDescription [
+HighchartsPlotOptionsWindbarbTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +425,7 @@ HighchartsPlotOptionsWindbarbTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testEdgeColor [
+HighchartsPlotOptionsWindbarbTest >> testSetEdgeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +439,7 @@ HighchartsPlotOptionsWindbarbTest >> testEdgeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testEdgeWidth [
+HighchartsPlotOptionsWindbarbTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +453,7 @@ HighchartsPlotOptionsWindbarbTest >> testEdgeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testEnableMouseTracking [
+HighchartsPlotOptionsWindbarbTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +467,7 @@ HighchartsPlotOptionsWindbarbTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testEvents [
+HighchartsPlotOptionsWindbarbTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +481,7 @@ HighchartsPlotOptionsWindbarbTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testFindNearestPointBy [
+HighchartsPlotOptionsWindbarbTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +495,7 @@ HighchartsPlotOptionsWindbarbTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsWindbarbTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +509,7 @@ HighchartsPlotOptionsWindbarbTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testGroupPadding [
+HighchartsPlotOptionsWindbarbTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +523,7 @@ HighchartsPlotOptionsWindbarbTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testGroupZPadding [
+HighchartsPlotOptionsWindbarbTest >> testSetGroupZPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +537,7 @@ HighchartsPlotOptionsWindbarbTest >> testGroupZPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testGrouping [
+HighchartsPlotOptionsWindbarbTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +551,7 @@ HighchartsPlotOptionsWindbarbTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testIncludeInDataExport [
+HighchartsPlotOptionsWindbarbTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +565,7 @@ HighchartsPlotOptionsWindbarbTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testJoinBy [
+HighchartsPlotOptionsWindbarbTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +579,7 @@ HighchartsPlotOptionsWindbarbTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testKeys [
+HighchartsPlotOptionsWindbarbTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +593,7 @@ HighchartsPlotOptionsWindbarbTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testLineWidth [
+HighchartsPlotOptionsWindbarbTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +607,7 @@ HighchartsPlotOptionsWindbarbTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testLinkedTo [
+HighchartsPlotOptionsWindbarbTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +621,7 @@ HighchartsPlotOptionsWindbarbTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testMaxPointWidth [
+HighchartsPlotOptionsWindbarbTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +635,7 @@ HighchartsPlotOptionsWindbarbTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testMinPointLength [
+HighchartsPlotOptionsWindbarbTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +649,7 @@ HighchartsPlotOptionsWindbarbTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testNegativeColor [
+HighchartsPlotOptionsWindbarbTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +663,7 @@ HighchartsPlotOptionsWindbarbTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testOnSeries [
+HighchartsPlotOptionsWindbarbTest >> testSetOnSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +677,7 @@ HighchartsPlotOptionsWindbarbTest >> testOnSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testOpacity [
+HighchartsPlotOptionsWindbarbTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +691,7 @@ HighchartsPlotOptionsWindbarbTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsWindbarbTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +705,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointInterval [
+HighchartsPlotOptionsWindbarbTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +719,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointIntervalUnit [
+HighchartsPlotOptionsWindbarbTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +733,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointPadding [
+HighchartsPlotOptionsWindbarbTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +747,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointPlacement [
+HighchartsPlotOptionsWindbarbTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +761,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointRange [
+HighchartsPlotOptionsWindbarbTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +775,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointStart [
+HighchartsPlotOptionsWindbarbTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +789,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testPointWidth [
+HighchartsPlotOptionsWindbarbTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +803,7 @@ HighchartsPlotOptionsWindbarbTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testSelected [
+HighchartsPlotOptionsWindbarbTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +817,7 @@ HighchartsPlotOptionsWindbarbTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testShowCheckbox [
+HighchartsPlotOptionsWindbarbTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +831,7 @@ HighchartsPlotOptionsWindbarbTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testShowInLegend [
+HighchartsPlotOptionsWindbarbTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +845,7 @@ HighchartsPlotOptionsWindbarbTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsWindbarbTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +859,7 @@ HighchartsPlotOptionsWindbarbTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testSoftThreshold [
+HighchartsPlotOptionsWindbarbTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +873,7 @@ HighchartsPlotOptionsWindbarbTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testStates [
+HighchartsPlotOptionsWindbarbTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +887,7 @@ HighchartsPlotOptionsWindbarbTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testStickyTracking [
+HighchartsPlotOptionsWindbarbTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +901,7 @@ HighchartsPlotOptionsWindbarbTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testThreshold [
+HighchartsPlotOptionsWindbarbTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +915,7 @@ HighchartsPlotOptionsWindbarbTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testTurboThreshold [
+HighchartsPlotOptionsWindbarbTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +929,7 @@ HighchartsPlotOptionsWindbarbTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testVectorLength [
+HighchartsPlotOptionsWindbarbTest >> testSetVectorLength [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +943,7 @@ HighchartsPlotOptionsWindbarbTest >> testVectorLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testVisible [
+HighchartsPlotOptionsWindbarbTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +957,7 @@ HighchartsPlotOptionsWindbarbTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testXOffset [
+HighchartsPlotOptionsWindbarbTest >> testSetXOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +971,7 @@ HighchartsPlotOptionsWindbarbTest >> testXOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testYOffset [
+HighchartsPlotOptionsWindbarbTest >> testSetYOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +985,7 @@ HighchartsPlotOptionsWindbarbTest >> testYOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testZIndex [
+HighchartsPlotOptionsWindbarbTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +999,7 @@ HighchartsPlotOptionsWindbarbTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbTest >> testZoneAxis [
+HighchartsPlotOptionsWindbarbTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

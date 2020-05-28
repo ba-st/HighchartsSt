@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testBar [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetBar [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testBar [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testBarCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetBarCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testBarCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testBoxplot [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetBoxplot [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testBoxplot [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testBoxplotCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetBoxplotCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testBoxplotCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testBubble [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetBubble [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testBubble [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testBubbleCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetBubbleCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testBubbleCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testColumn [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testColumnCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetColumnCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testColumnCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testDefault [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetDefault [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testDefault [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testDefaultCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetDefaultCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testDefaultCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testLine [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetLine [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testLineCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetLineCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testLineCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testMap [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetMap [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testMap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testMapCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetMapCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testMapCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testMapbubble [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetMapbubble [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testMapbubble [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testMapbubbleCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetMapbubbleCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testMapbubbleCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testMapline [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetMapline [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testMapline [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testMaplineCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetMaplineCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testMaplineCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testPie [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetPie [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testPie [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testPieCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetPieCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testPieCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testScatter [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetScatter [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testScatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testScatterCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetScatterCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testScatterCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testSpline [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetSpline [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighstockLangAccessibilitySeriesSummaryTest >> testSpline [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesSummaryTest >> testSplineCombination [
+HighstockLangAccessibilitySeriesSummaryTest >> testSetSplineCombination [
 
 	| component javascript expectedConfiguration |
 

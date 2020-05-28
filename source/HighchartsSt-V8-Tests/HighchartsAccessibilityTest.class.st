@@ -5,7 +5,77 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityTest >> testCustomComponents [
+HighchartsAccessibilityTest >> testGetAnnounceNewData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component announceNewData.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'announceNewData' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testGetScreenReaderSection [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component screenReaderSection.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'screenReaderSection' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testGetSeries [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibility new.
+	component series.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'series' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityTest >> testSetCustomComponents [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +89,7 @@ HighchartsAccessibilityTest >> testCustomComponents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityTest >> testDescription [
+HighchartsAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighchartsAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityTest >> testEnabled [
+HighchartsAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,7 @@ HighchartsAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityTest >> testHighContrastTheme [
+HighchartsAccessibilityTest >> testSetHighContrastTheme [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighchartsAccessibilityTest >> testHighContrastTheme [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityTest >> testLandmarkVerbosity [
+HighchartsAccessibilityTest >> testSetLandmarkVerbosity [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighchartsAccessibilityTest >> testLandmarkVerbosity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityTest >> testLinkedDescription [
+HighchartsAccessibilityTest >> testSetLinkedDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighchartsAccessibilityTest >> testLinkedDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityTest >> testTypeDescription [
+HighchartsAccessibilityTest >> testSetTypeDescription [
 
 	| component javascript expectedConfiguration |
 

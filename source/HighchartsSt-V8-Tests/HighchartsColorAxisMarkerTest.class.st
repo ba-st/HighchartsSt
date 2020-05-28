@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisMarkerTest >> testColor [
+HighchartsColorAxisMarkerTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsColorAxisMarker new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsColorAxisMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsColorAxisMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisMarkerTest >> testWidth [
+HighchartsColorAxisMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

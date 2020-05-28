@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsCandlestickDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCandlestickDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsCandlestickDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

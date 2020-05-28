@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testMillisec
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsNetworkgraphTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

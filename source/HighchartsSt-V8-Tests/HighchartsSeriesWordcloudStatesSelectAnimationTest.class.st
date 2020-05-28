@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectAnimationTest >> testDuration [
+HighchartsSeriesWordcloudStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

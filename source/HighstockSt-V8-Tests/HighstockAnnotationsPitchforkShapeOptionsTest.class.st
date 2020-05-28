@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testDashStyle [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testFill [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testHeight [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testR [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testSnap [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testSrc [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testStroke [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testType [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockAnnotationsPitchforkShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkShapeOptionsTest >> testWidth [
+HighstockAnnotationsPitchforkShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

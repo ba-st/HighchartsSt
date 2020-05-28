@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsNatrDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsNatrDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsNatrDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsNatrDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsNatrDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsNatrDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsNatrDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

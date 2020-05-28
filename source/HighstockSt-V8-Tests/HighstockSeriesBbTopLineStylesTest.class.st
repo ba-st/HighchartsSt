@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbTopLineStylesTest >> testLineColor [
+HighstockSeriesBbTopLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesBbTopLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbTopLineStylesTest >> testLineWidth [
+HighstockSeriesBbTopLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

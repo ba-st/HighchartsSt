@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsStatesSelectAnimationTest >> testDuration [
+HighstockSeriesPivotpointsStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testAttributes [
+HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testOpacity [
+HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testSize [
+HighchartsPlotOptionsTimelineStatesHoverHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

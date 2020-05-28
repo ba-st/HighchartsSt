@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityTableTest >> testTableSummary [
+HighchartsLangAccessibilityTableTest >> testSetTableSummary [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilityTableTest >> testTableSummary [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityTableTest >> testViewAsDataTableButtonText [
+HighchartsLangAccessibilityTableTest >> testSetViewAsDataTableButtonText [
 
 	| component javascript expectedConfiguration |
 

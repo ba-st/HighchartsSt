@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLegendNavigationTest >> testActiveColor [
+HighstockLegendNavigationTest >> testSetActiveColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLegendNavigationTest >> testActiveColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendNavigationTest >> testAnimation [
+HighstockLegendNavigationTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLegendNavigationTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendNavigationTest >> testArrowSize [
+HighstockLegendNavigationTest >> testSetArrowSize [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLegendNavigationTest >> testArrowSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendNavigationTest >> testEnabled [
+HighstockLegendNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLegendNavigationTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendNavigationTest >> testInactiveColor [
+HighstockLegendNavigationTest >> testSetInactiveColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLegendNavigationTest >> testInactiveColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendNavigationTest >> testStyle [
+HighstockLegendNavigationTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

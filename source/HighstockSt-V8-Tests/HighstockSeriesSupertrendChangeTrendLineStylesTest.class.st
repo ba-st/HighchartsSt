@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendChangeTrendLineStylesTest >> testDashStyle [
+HighstockSeriesSupertrendChangeTrendLineStylesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSupertrendChangeTrendLineStylesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendChangeTrendLineStylesTest >> testLineColor [
+HighstockSeriesSupertrendChangeTrendLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSupertrendChangeTrendLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendChangeTrendLineStylesTest >> testLineWidth [
+HighstockSeriesSupertrendChangeTrendLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

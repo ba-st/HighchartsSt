@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsEventsTest >> testClick [
+HighstockRangeSelectorButtonsEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsCreditsTest >> testEnabled [
+HighchartsCreditsTest >> testGetPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsCredits new.
+	component position.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'position' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsCreditsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsCredits new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsCreditsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsCreditsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCreditsTest >> testHref [
+HighchartsCreditsTest >> testSetHref [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsCreditsTest >> testHref [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCreditsTest >> testText [
+HighchartsCreditsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 

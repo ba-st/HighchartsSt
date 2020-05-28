@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testDashStyle [
+HighstockAnnotationsShapesTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsShapes new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsShapesTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsShapes new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsShapesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockAnnotationsShapesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testFill [
+HighstockAnnotationsShapesTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockAnnotationsShapesTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testHeight [
+HighstockAnnotationsShapesTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockAnnotationsShapesTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testMarkerEnd [
+HighstockAnnotationsShapesTest >> testSetMarkerEnd [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockAnnotationsShapesTest >> testMarkerEnd [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testMarkerStart [
+HighstockAnnotationsShapesTest >> testSetMarkerStart [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockAnnotationsShapesTest >> testMarkerStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testR [
+HighstockAnnotationsShapesTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockAnnotationsShapesTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testSnap [
+HighstockAnnotationsShapesTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockAnnotationsShapesTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testSrc [
+HighstockAnnotationsShapesTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockAnnotationsShapesTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testStroke [
+HighstockAnnotationsShapesTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockAnnotationsShapesTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testStrokeWidth [
+HighstockAnnotationsShapesTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockAnnotationsShapesTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testType [
+HighstockAnnotationsShapesTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockAnnotationsShapesTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapesTest >> testWidth [
+HighstockAnnotationsShapesTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

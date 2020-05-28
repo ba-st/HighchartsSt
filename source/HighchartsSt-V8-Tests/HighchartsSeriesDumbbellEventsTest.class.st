@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testAfterAnimate [
+HighchartsSeriesDumbbellEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesDumbbellEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testCheckboxClick [
+HighchartsSeriesDumbbellEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesDumbbellEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testClick [
+HighchartsSeriesDumbbellEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesDumbbellEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testHide [
+HighchartsSeriesDumbbellEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesDumbbellEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testLegendItemClick [
+HighchartsSeriesDumbbellEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesDumbbellEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testMouseOut [
+HighchartsSeriesDumbbellEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesDumbbellEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testMouseOver [
+HighchartsSeriesDumbbellEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesDumbbellEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellEventsTest >> testShow [
+HighchartsSeriesDumbbellEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

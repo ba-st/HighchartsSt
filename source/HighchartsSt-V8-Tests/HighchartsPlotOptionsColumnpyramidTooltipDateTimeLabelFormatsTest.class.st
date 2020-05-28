@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMillise
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMinute 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSecond 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

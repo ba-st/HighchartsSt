@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiParamsTest >> testDecimals [
+HighstockSeriesRsiParamsTest >> testSetDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesRsiParamsTest >> testDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiParamsTest >> testPeriod [
+HighstockSeriesRsiParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

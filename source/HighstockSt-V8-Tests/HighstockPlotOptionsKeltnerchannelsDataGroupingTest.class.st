@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testApproximation [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testDateTimeLabelFormats 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testEnabled [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testForced [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testUnits [
+HighstockPlotOptionsKeltnerchannelsDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisDataClassesTest >> testColor [
+HighchartsColorAxisDataClassesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsColorAxisDataClassesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisDataClassesTest >> testFrom [
+HighchartsColorAxisDataClassesTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsColorAxisDataClassesTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisDataClassesTest >> testName [
+HighchartsColorAxisDataClassesTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsColorAxisDataClassesTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisDataClassesTest >> testTo [
+HighchartsColorAxisDataClassesTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

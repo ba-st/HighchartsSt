@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsTest >> testBorderColor [
+HighchartsSeriesTreemapLevelsTest >> testGetColorVariation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapLevels new.
+	component colorVariation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorVariation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapLevelsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapLevels new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapLevelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsSeriesTreemapLevelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsTest >> testBorderDashStyle [
+HighchartsSeriesTreemapLevelsTest >> testSetBorderDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsSeriesTreemapLevelsTest >> testBorderDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsTest >> testBorderWidth [
+HighchartsSeriesTreemapLevelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsSeriesTreemapLevelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsTest >> testColor [
+HighchartsSeriesTreemapLevelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsSeriesTreemapLevelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsTest >> testLayoutAlgorithm [
+HighchartsSeriesTreemapLevelsTest >> testSetLayoutAlgorithm [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsSeriesTreemapLevelsTest >> testLayoutAlgorithm [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsTest >> testLayoutStartingDirection [
+HighchartsSeriesTreemapLevelsTest >> testSetLayoutStartingDirection [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsSeriesTreemapLevelsTest >> testLayoutStartingDirection [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsTest >> testLevel [
+HighchartsSeriesTreemapLevelsTest >> testSetLevel [
 
 	| component javascript expectedConfiguration |
 

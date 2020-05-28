@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testEnabled [
+HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testFillColor [
+HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testFillColor 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testLineColor [
+HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testLineColor 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testLineWidth [
+HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testLineWidth 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testRadius [
+HighstockSeriesLinearregressioninterceptMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

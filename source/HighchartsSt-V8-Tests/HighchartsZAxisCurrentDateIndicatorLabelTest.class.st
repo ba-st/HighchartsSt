@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testAlign [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testFormat [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testFormatter [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testRotation [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testStyle [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testText [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testTextAlign [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testUseHTML [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testVerticalAlign [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testX [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsZAxisCurrentDateIndicatorLabelTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorLabelTest >> testY [
+HighchartsZAxisCurrentDateIndicatorLabelTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

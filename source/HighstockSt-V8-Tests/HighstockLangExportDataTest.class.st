@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangExportDataTest >> testCategoryDatetimeHeader [
+HighstockLangExportDataTest >> testSetCategoryDatetimeHeader [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangExportDataTest >> testCategoryDatetimeHeader [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangExportDataTest >> testCategoryHeader [
+HighstockLangExportDataTest >> testSetCategoryHeader [
 
 	| component javascript expectedConfiguration |
 

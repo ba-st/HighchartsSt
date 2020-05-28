@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsNetworkgraphDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

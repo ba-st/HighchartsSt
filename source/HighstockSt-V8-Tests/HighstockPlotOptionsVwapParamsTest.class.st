@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVwapParamsTest >> testPeriod [
+HighstockPlotOptionsVwapParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsVwapParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVwapParamsTest >> testVolumeSeriesID [
+HighstockPlotOptionsVwapParamsTest >> testSetVolumeSeriesID [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesNormalTest >> testAnimation [
+HighstockPlotOptionsLinearregressioninterceptStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

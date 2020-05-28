@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsFunnel3dLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

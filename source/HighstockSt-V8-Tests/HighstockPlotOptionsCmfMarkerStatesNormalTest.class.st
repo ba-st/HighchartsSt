@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfMarkerStatesNormalTest >> testAnimation [
+HighstockPlotOptionsCmfMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

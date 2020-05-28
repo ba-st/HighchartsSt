@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testAlign [
+HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testVerticalAlign [
+HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testX [
+HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testY [
+HighchartsPlotOptionsSunburstTraverseUpButtonPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

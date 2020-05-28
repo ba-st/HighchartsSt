@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsPyramid3dLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

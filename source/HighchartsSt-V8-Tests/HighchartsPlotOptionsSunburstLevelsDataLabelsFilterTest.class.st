@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsSunburstLevelsDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

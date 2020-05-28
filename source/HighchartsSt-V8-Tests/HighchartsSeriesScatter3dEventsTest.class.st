@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testAfterAnimate [
+HighchartsSeriesScatter3dEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesScatter3dEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testCheckboxClick [
+HighchartsSeriesScatter3dEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesScatter3dEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testClick [
+HighchartsSeriesScatter3dEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesScatter3dEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testHide [
+HighchartsSeriesScatter3dEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesScatter3dEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testLegendItemClick [
+HighchartsSeriesScatter3dEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesScatter3dEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testMouseOut [
+HighchartsSeriesScatter3dEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesScatter3dEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testMouseOver [
+HighchartsSeriesScatter3dEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesScatter3dEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dEventsTest >> testShow [
+HighchartsSeriesScatter3dEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

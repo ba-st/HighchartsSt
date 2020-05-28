@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellStatesSelectAnimationTest >> testDuration [
+HighchartsSeriesDumbbellStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

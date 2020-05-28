@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsLabelTest >> testEnabled [
+HighstockAnnotationsMeasureTypeOptionsLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsMeasureTypeOptionsLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsMeasureTypeOptionsLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsMeasureTypeOptionsLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsLabelTest >> testFormatter [
+HighstockAnnotationsMeasureTypeOptionsLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 

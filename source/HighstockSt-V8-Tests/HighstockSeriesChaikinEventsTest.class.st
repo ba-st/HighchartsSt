@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testAfterAnimate [
+HighstockSeriesChaikinEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesChaikinEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testCheckboxClick [
+HighstockSeriesChaikinEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesChaikinEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testClick [
+HighstockSeriesChaikinEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesChaikinEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testHide [
+HighstockSeriesChaikinEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesChaikinEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testLegendItemClick [
+HighstockSeriesChaikinEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesChaikinEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testMouseOut [
+HighstockSeriesChaikinEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesChaikinEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testMouseOver [
+HighstockSeriesChaikinEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesChaikinEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinEventsTest >> testShow [
+HighstockSeriesChaikinEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

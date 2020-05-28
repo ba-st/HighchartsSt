@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsStyleTest >> testColor [
+HighstockYAxisLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockYAxisLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsStyleTest >> testCursor [
+HighstockYAxisLabelsStyleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockYAxisLabelsStyleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsStyleTest >> testFontSize [
+HighstockYAxisLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 

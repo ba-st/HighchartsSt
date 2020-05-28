@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisMarkerAnimationTest >> testDuration [
+HighstockColorAxisMarkerAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

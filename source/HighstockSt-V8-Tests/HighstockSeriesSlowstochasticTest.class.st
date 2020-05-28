@@ -5,7 +5,231 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testAllAreas [
+HighstockSeriesSlowstochasticTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetSmoothedLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component smoothedLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'smoothedLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSlowstochastic new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSlowstochasticTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +243,7 @@ HighstockSeriesSlowstochasticTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testAllowPointSelect [
+HighstockSeriesSlowstochasticTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +257,7 @@ HighstockSeriesSlowstochasticTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testAnimationLimit [
+HighstockSeriesSlowstochasticTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +271,7 @@ HighstockSeriesSlowstochasticTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testBoostBlending [
+HighstockSeriesSlowstochasticTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +285,7 @@ HighstockSeriesSlowstochasticTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testBoostThreshold [
+HighstockSeriesSlowstochasticTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +299,7 @@ HighstockSeriesSlowstochasticTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testBorderColor [
+HighstockSeriesSlowstochasticTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +313,7 @@ HighstockSeriesSlowstochasticTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testBorderWidth [
+HighstockSeriesSlowstochasticTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +327,7 @@ HighstockSeriesSlowstochasticTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testClassName [
+HighstockSeriesSlowstochasticTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +341,7 @@ HighstockSeriesSlowstochasticTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testClip [
+HighstockSeriesSlowstochasticTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +355,7 @@ HighstockSeriesSlowstochasticTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testColor [
+HighstockSeriesSlowstochasticTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +369,7 @@ HighstockSeriesSlowstochasticTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testColorAxis [
+HighstockSeriesSlowstochasticTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +383,7 @@ HighstockSeriesSlowstochasticTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testColorIndex [
+HighstockSeriesSlowstochasticTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +397,7 @@ HighstockSeriesSlowstochasticTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testColorKey [
+HighstockSeriesSlowstochasticTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +411,7 @@ HighstockSeriesSlowstochasticTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCompare [
+HighstockSeriesSlowstochasticTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +425,7 @@ HighstockSeriesSlowstochasticTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCompareBase [
+HighstockSeriesSlowstochasticTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +439,7 @@ HighstockSeriesSlowstochasticTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCompareStart [
+HighstockSeriesSlowstochasticTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +453,7 @@ HighstockSeriesSlowstochasticTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCompareToMain [
+HighstockSeriesSlowstochasticTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +467,7 @@ HighstockSeriesSlowstochasticTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testConnectEnds [
+HighstockSeriesSlowstochasticTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +481,7 @@ HighstockSeriesSlowstochasticTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testConnectNulls [
+HighstockSeriesSlowstochasticTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +495,7 @@ HighstockSeriesSlowstochasticTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCrisp [
+HighstockSeriesSlowstochasticTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +509,7 @@ HighstockSeriesSlowstochasticTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCropThreshold [
+HighstockSeriesSlowstochasticTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +523,7 @@ HighstockSeriesSlowstochasticTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCursor [
+HighstockSeriesSlowstochasticTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +537,7 @@ HighstockSeriesSlowstochasticTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testCustom [
+HighstockSeriesSlowstochasticTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +551,7 @@ HighstockSeriesSlowstochasticTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testDashStyle [
+HighstockSeriesSlowstochasticTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +565,7 @@ HighstockSeriesSlowstochasticTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testDescription [
+HighstockSeriesSlowstochasticTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +579,7 @@ HighstockSeriesSlowstochasticTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testEnableMouseTracking [
+HighstockSeriesSlowstochasticTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +593,7 @@ HighstockSeriesSlowstochasticTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testEvents [
+HighstockSeriesSlowstochasticTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +607,7 @@ HighstockSeriesSlowstochasticTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testFindNearestPointBy [
+HighstockSeriesSlowstochasticTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +621,7 @@ HighstockSeriesSlowstochasticTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testGapSize [
+HighstockSeriesSlowstochasticTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +635,7 @@ HighstockSeriesSlowstochasticTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testGapUnit [
+HighstockSeriesSlowstochasticTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +649,7 @@ HighstockSeriesSlowstochasticTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testGetExtremesFromAll [
+HighstockSeriesSlowstochasticTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +663,7 @@ HighstockSeriesSlowstochasticTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testId [
+HighstockSeriesSlowstochasticTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +677,7 @@ HighstockSeriesSlowstochasticTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testIncludeInDataExport [
+HighstockSeriesSlowstochasticTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +691,7 @@ HighstockSeriesSlowstochasticTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testIndex [
+HighstockSeriesSlowstochasticTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +705,7 @@ HighstockSeriesSlowstochasticTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testJoinBy [
+HighstockSeriesSlowstochasticTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +719,7 @@ HighstockSeriesSlowstochasticTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testKeys [
+HighstockSeriesSlowstochasticTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +733,7 @@ HighstockSeriesSlowstochasticTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testLegendIndex [
+HighstockSeriesSlowstochasticTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +747,7 @@ HighstockSeriesSlowstochasticTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testLineWidth [
+HighstockSeriesSlowstochasticTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +761,7 @@ HighstockSeriesSlowstochasticTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testLinecap [
+HighstockSeriesSlowstochasticTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +775,7 @@ HighstockSeriesSlowstochasticTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testLinkedTo [
+HighstockSeriesSlowstochasticTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +789,7 @@ HighstockSeriesSlowstochasticTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testMapData [
+HighstockSeriesSlowstochasticTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +803,7 @@ HighstockSeriesSlowstochasticTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testName [
+HighstockSeriesSlowstochasticTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +817,7 @@ HighstockSeriesSlowstochasticTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testNavigatorOptions [
+HighstockSeriesSlowstochasticTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +831,7 @@ HighstockSeriesSlowstochasticTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testNegativeColor [
+HighstockSeriesSlowstochasticTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +845,7 @@ HighstockSeriesSlowstochasticTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testOpacity [
+HighstockSeriesSlowstochasticTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +859,7 @@ HighstockSeriesSlowstochasticTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testPointDescriptionFormatter [
+HighstockSeriesSlowstochasticTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +873,7 @@ HighstockSeriesSlowstochasticTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testPointInterval [
+HighstockSeriesSlowstochasticTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +887,7 @@ HighstockSeriesSlowstochasticTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testPointIntervalUnit [
+HighstockSeriesSlowstochasticTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +901,7 @@ HighstockSeriesSlowstochasticTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testPointPlacement [
+HighstockSeriesSlowstochasticTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +915,7 @@ HighstockSeriesSlowstochasticTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testPointRange [
+HighstockSeriesSlowstochasticTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +929,7 @@ HighstockSeriesSlowstochasticTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testPointStart [
+HighstockSeriesSlowstochasticTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +943,7 @@ HighstockSeriesSlowstochasticTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testSelected [
+HighstockSeriesSlowstochasticTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +957,7 @@ HighstockSeriesSlowstochasticTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testShadow [
+HighstockSeriesSlowstochasticTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +971,7 @@ HighstockSeriesSlowstochasticTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testShowCheckbox [
+HighstockSeriesSlowstochasticTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +985,7 @@ HighstockSeriesSlowstochasticTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testShowInLegend [
+HighstockSeriesSlowstochasticTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +999,7 @@ HighstockSeriesSlowstochasticTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testShowInNavigator [
+HighstockSeriesSlowstochasticTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +1013,7 @@ HighstockSeriesSlowstochasticTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testSkipKeyboardNavigation [
+HighstockSeriesSlowstochasticTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +1027,7 @@ HighstockSeriesSlowstochasticTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testSoftThreshold [
+HighstockSeriesSlowstochasticTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1041,7 @@ HighstockSeriesSlowstochasticTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testStack [
+HighstockSeriesSlowstochasticTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1055,7 @@ HighstockSeriesSlowstochasticTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testStacking [
+HighstockSeriesSlowstochasticTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1069,7 @@ HighstockSeriesSlowstochasticTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testStates [
+HighstockSeriesSlowstochasticTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1083,7 @@ HighstockSeriesSlowstochasticTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testStep [
+HighstockSeriesSlowstochasticTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1097,7 @@ HighstockSeriesSlowstochasticTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testStickyTracking [
+HighstockSeriesSlowstochasticTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1111,7 @@ HighstockSeriesSlowstochasticTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testThreshold [
+HighstockSeriesSlowstochasticTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1125,7 @@ HighstockSeriesSlowstochasticTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testTurboThreshold [
+HighstockSeriesSlowstochasticTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1139,7 @@ HighstockSeriesSlowstochasticTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testType [
+HighstockSeriesSlowstochasticTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1153,7 @@ HighstockSeriesSlowstochasticTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testVisible [
+HighstockSeriesSlowstochasticTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1167,7 @@ HighstockSeriesSlowstochasticTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testXAxis [
+HighstockSeriesSlowstochasticTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1181,7 @@ HighstockSeriesSlowstochasticTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testYAxis [
+HighstockSeriesSlowstochasticTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1195,7 @@ HighstockSeriesSlowstochasticTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testZIndex [
+HighstockSeriesSlowstochasticTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1209,7 @@ HighstockSeriesSlowstochasticTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTest >> testZoneAxis [
+HighstockSeriesSlowstochasticTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

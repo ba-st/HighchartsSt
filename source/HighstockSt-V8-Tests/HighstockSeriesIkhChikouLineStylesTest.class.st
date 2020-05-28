@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhChikouLineStylesTest >> testLineColor [
+HighstockSeriesIkhChikouLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesIkhChikouLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhChikouLineStylesTest >> testLineWidth [
+HighstockSeriesIkhChikouLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelLevelsTest >> testBorderColor [
+HighchartsSeriesDependencywheelLevelsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheelLevels new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelLevelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesDependencywheelLevelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelLevelsTest >> testBorderWidth [
+HighchartsSeriesDependencywheelLevelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesDependencywheelLevelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelLevelsTest >> testColor [
+HighchartsSeriesDependencywheelLevelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesDependencywheelLevelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelLevelsTest >> testColorByPoint [
+HighchartsSeriesDependencywheelLevelsTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesDependencywheelLevelsTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelLevelsTest >> testLevel [
+HighchartsSeriesDependencywheelLevelsTest >> testSetLevel [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesDependencywheelLevelsTest >> testLevel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelLevelsTest >> testLinkOpacity [
+HighchartsSeriesDependencywheelLevelsTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesDependencywheelLevelsTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelLevelsTest >> testStates [
+HighchartsSeriesDependencywheelLevelsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 

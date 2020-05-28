@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorPointTest >> testEvents [
+HighstockSeriesAroonoscillatorPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

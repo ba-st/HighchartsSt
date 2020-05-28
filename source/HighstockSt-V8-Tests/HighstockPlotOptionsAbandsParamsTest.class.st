@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsParamsTest >> testFactor [
+HighstockPlotOptionsAbandsParamsTest >> testSetFactor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAbandsParamsTest >> testFactor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsParamsTest >> testIndex [
+HighstockPlotOptionsAbandsParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAbandsParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsParamsTest >> testPeriod [
+HighstockPlotOptionsAbandsParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

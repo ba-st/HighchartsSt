@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testAlign [
+HighchartsAnnotationsLabelsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsLabels new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsLabelsTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsLabels new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsAnnotationsLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testAllowOverlap [
+HighchartsAnnotationsLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsAnnotationsLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testBackgroundColor [
+HighchartsAnnotationsLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsAnnotationsLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testBorderColor [
+HighchartsAnnotationsLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsAnnotationsLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testBorderRadius [
+HighchartsAnnotationsLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsAnnotationsLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testBorderWidth [
+HighchartsAnnotationsLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsAnnotationsLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testClassName [
+HighchartsAnnotationsLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsAnnotationsLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testCrop [
+HighchartsAnnotationsLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsAnnotationsLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testDistance [
+HighchartsAnnotationsLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsAnnotationsLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testFormat [
+HighchartsAnnotationsLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsAnnotationsLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testFormatter [
+HighchartsAnnotationsLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighchartsAnnotationsLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testOverflow [
+HighchartsAnnotationsLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsAnnotationsLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testPadding [
+HighchartsAnnotationsLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsAnnotationsLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testShadow [
+HighchartsAnnotationsLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsAnnotationsLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testShape [
+HighchartsAnnotationsLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighchartsAnnotationsLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testStyle [
+HighchartsAnnotationsLabelsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighchartsAnnotationsLabelsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testText [
+HighchartsAnnotationsLabelsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +271,7 @@ HighchartsAnnotationsLabelsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testUseHTML [
+HighchartsAnnotationsLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +285,7 @@ HighchartsAnnotationsLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testVerticalAlign [
+HighchartsAnnotationsLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +299,7 @@ HighchartsAnnotationsLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testX [
+HighchartsAnnotationsLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +313,7 @@ HighchartsAnnotationsLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsLabelsTest >> testY [
+HighchartsAnnotationsLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

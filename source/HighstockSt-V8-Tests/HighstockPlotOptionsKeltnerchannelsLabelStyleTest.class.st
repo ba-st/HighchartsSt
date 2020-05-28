@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsKeltnerchannelsLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

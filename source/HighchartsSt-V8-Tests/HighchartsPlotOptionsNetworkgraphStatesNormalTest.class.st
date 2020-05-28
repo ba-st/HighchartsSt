@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesNormalTest >> testAnimation [
+HighchartsPlotOptionsNetworkgraphStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

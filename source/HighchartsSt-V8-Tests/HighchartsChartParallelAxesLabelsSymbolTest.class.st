@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsSymbolTest >> testHeight [
+HighchartsChartParallelAxesLabelsSymbolTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesLabelsSymbolTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsSymbolTest >> testPadding [
+HighchartsChartParallelAxesLabelsSymbolTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartParallelAxesLabelsSymbolTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsSymbolTest >> testType [
+HighchartsChartParallelAxesLabelsSymbolTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsChartParallelAxesLabelsSymbolTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsSymbolTest >> testWidth [
+HighchartsChartParallelAxesLabelsSymbolTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsChartParallelAxesLabelsSymbolTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsSymbolTest >> testX [
+HighchartsChartParallelAxesLabelsSymbolTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsChartParallelAxesLabelsSymbolTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsSymbolTest >> testY [
+HighchartsChartParallelAxesLabelsSymbolTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

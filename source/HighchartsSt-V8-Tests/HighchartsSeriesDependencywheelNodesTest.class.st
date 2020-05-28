@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelNodesTest >> testColor [
+HighchartsSeriesDependencywheelNodesTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheelNodes new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelNodesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesDependencywheelNodesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelNodesTest >> testColorIndex [
+HighchartsSeriesDependencywheelNodesTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesDependencywheelNodesTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelNodesTest >> testColumn [
+HighchartsSeriesDependencywheelNodesTest >> testSetColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesDependencywheelNodesTest >> testColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelNodesTest >> testId [
+HighchartsSeriesDependencywheelNodesTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesDependencywheelNodesTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelNodesTest >> testLevel [
+HighchartsSeriesDependencywheelNodesTest >> testSetLevel [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesDependencywheelNodesTest >> testLevel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelNodesTest >> testName [
+HighchartsSeriesDependencywheelNodesTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 

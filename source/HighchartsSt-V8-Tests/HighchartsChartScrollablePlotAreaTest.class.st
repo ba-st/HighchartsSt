@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartScrollablePlotAreaTest >> testMinHeight [
+HighchartsChartScrollablePlotAreaTest >> testSetMinHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartScrollablePlotAreaTest >> testMinHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartScrollablePlotAreaTest >> testMinWidth [
+HighchartsChartScrollablePlotAreaTest >> testSetMinWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartScrollablePlotAreaTest >> testMinWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartScrollablePlotAreaTest >> testOpacity [
+HighchartsChartScrollablePlotAreaTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsChartScrollablePlotAreaTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartScrollablePlotAreaTest >> testScrollPositionX [
+HighchartsChartScrollablePlotAreaTest >> testSetScrollPositionX [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsChartScrollablePlotAreaTest >> testScrollPositionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartScrollablePlotAreaTest >> testScrollPositionY [
+HighchartsChartScrollablePlotAreaTest >> testSetScrollPositionY [
 
 	| component javascript expectedConfiguration |
 

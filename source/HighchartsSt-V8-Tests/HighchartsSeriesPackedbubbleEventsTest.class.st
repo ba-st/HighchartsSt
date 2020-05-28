@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testAfterAnimate [
+HighchartsSeriesPackedbubbleEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPackedbubbleEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testCheckboxClick [
+HighchartsSeriesPackedbubbleEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPackedbubbleEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testClick [
+HighchartsSeriesPackedbubbleEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPackedbubbleEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testHide [
+HighchartsSeriesPackedbubbleEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesPackedbubbleEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testLegendItemClick [
+HighchartsSeriesPackedbubbleEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesPackedbubbleEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testMouseOut [
+HighchartsSeriesPackedbubbleEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesPackedbubbleEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testMouseOver [
+HighchartsSeriesPackedbubbleEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesPackedbubbleEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleEventsTest >> testShow [
+HighchartsSeriesPackedbubbleEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

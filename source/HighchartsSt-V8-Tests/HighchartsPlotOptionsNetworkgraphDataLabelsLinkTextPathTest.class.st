@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsLinkTextPathTest >> testAttributes [
+HighchartsPlotOptionsNetworkgraphDataLabelsLinkTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsLinkTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsLinkTextPathTest >> testEnabled [
+HighchartsPlotOptionsNetworkgraphDataLabelsLinkTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

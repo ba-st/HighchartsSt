@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemStatesInactiveAnimationTest >> testDuration [
+HighchartsSeriesItemStatesInactiveAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

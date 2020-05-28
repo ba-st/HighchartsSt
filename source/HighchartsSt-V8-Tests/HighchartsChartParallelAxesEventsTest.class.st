@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesEventsTest >> testAfterBreaks [
+HighchartsChartParallelAxesEventsTest >> testSetAfterBreaks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesEventsTest >> testAfterBreaks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesEventsTest >> testAfterSetExtremes [
+HighchartsChartParallelAxesEventsTest >> testSetAfterSetExtremes [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartParallelAxesEventsTest >> testAfterSetExtremes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesEventsTest >> testPointBreak [
+HighchartsChartParallelAxesEventsTest >> testSetPointBreak [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsChartParallelAxesEventsTest >> testPointBreak [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesEventsTest >> testPointInBreak [
+HighchartsChartParallelAxesEventsTest >> testSetPointInBreak [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsChartParallelAxesEventsTest >> testPointInBreak [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesEventsTest >> testSetExtremes [
+HighchartsChartParallelAxesEventsTest >> testSetSetExtremes [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveDataLabelsStyleTest >> testColor [
+HighchartsSeriesBellcurveDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesBellcurveDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveDataLabelsStyleTest >> testFontSize [
+HighchartsSeriesBellcurveDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesBellcurveDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveDataLabelsStyleTest >> testFontWeight [
+HighchartsSeriesBellcurveDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesBellcurveDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveDataLabelsStyleTest >> testTextOutline [
+HighchartsSeriesBellcurveDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

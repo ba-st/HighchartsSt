@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testAfterAnimate [
+HighchartsSeriesErrorbarEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesErrorbarEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testCheckboxClick [
+HighchartsSeriesErrorbarEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesErrorbarEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testClick [
+HighchartsSeriesErrorbarEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesErrorbarEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testHide [
+HighchartsSeriesErrorbarEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesErrorbarEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testLegendItemClick [
+HighchartsSeriesErrorbarEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesErrorbarEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testMouseOut [
+HighchartsSeriesErrorbarEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesErrorbarEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testMouseOver [
+HighchartsSeriesErrorbarEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesErrorbarEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarEventsTest >> testShow [
+HighchartsSeriesErrorbarEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

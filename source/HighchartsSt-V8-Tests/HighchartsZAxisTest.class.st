@@ -5,7 +5,133 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testAlignTicks [
+HighchartsZAxisTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetCurrentDateIndicator [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component currentDateIndicator.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'currentDateIndicator' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetGrid [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component grid.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'grid' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetPlotBands [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component plotBands.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotBands' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetPlotLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component plotLines.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotLines' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetScrollbar [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component scrollbar.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'scrollbar' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxis new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +145,7 @@ HighchartsZAxisTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testAllowDecimals [
+HighchartsZAxisTest >> testSetAllowDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +159,7 @@ HighchartsZAxisTest >> testAllowDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testAlternateGridColor [
+HighchartsZAxisTest >> testSetAlternateGridColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +173,7 @@ HighchartsZAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testAngle [
+HighchartsZAxisTest >> testSetAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +187,7 @@ HighchartsZAxisTest >> testAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testCategories [
+HighchartsZAxisTest >> testSetCategories [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +201,7 @@ HighchartsZAxisTest >> testCategories [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testCeiling [
+HighchartsZAxisTest >> testSetCeiling [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +215,7 @@ HighchartsZAxisTest >> testCeiling [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testClassName [
+HighchartsZAxisTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +229,7 @@ HighchartsZAxisTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testEndOnTick [
+HighchartsZAxisTest >> testSetEndOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +243,7 @@ HighchartsZAxisTest >> testEndOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testEvents [
+HighchartsZAxisTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +257,7 @@ HighchartsZAxisTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testFloor [
+HighchartsZAxisTest >> testSetFloor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +271,7 @@ HighchartsZAxisTest >> testFloor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testGridLineColor [
+HighchartsZAxisTest >> testSetGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +285,7 @@ HighchartsZAxisTest >> testGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testGridLineDashStyle [
+HighchartsZAxisTest >> testSetGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +299,7 @@ HighchartsZAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testGridLineInterpolation [
+HighchartsZAxisTest >> testSetGridLineInterpolation [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +313,7 @@ HighchartsZAxisTest >> testGridLineInterpolation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testGridLineWidth [
+HighchartsZAxisTest >> testSetGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +327,7 @@ HighchartsZAxisTest >> testGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testGridZIndex [
+HighchartsZAxisTest >> testSetGridZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +341,7 @@ HighchartsZAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testId [
+HighchartsZAxisTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +355,7 @@ HighchartsZAxisTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testLinkedTo [
+HighchartsZAxisTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +369,7 @@ HighchartsZAxisTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMargin [
+HighchartsZAxisTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +383,7 @@ HighchartsZAxisTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMax [
+HighchartsZAxisTest >> testSetMax [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +397,7 @@ HighchartsZAxisTest >> testMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMaxPadding [
+HighchartsZAxisTest >> testSetMaxPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +411,7 @@ HighchartsZAxisTest >> testMaxPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMaxRange [
+HighchartsZAxisTest >> testSetMaxRange [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +425,7 @@ HighchartsZAxisTest >> testMaxRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMaxZoom [
+HighchartsZAxisTest >> testSetMaxZoom [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +439,7 @@ HighchartsZAxisTest >> testMaxZoom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMin [
+HighchartsZAxisTest >> testSetMin [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +453,7 @@ HighchartsZAxisTest >> testMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinPadding [
+HighchartsZAxisTest >> testSetMinPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +467,7 @@ HighchartsZAxisTest >> testMinPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinRange [
+HighchartsZAxisTest >> testSetMinRange [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +481,7 @@ HighchartsZAxisTest >> testMinRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinTickInterval [
+HighchartsZAxisTest >> testSetMinTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +495,7 @@ HighchartsZAxisTest >> testMinTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorGridLineColor [
+HighchartsZAxisTest >> testSetMinorGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +509,7 @@ HighchartsZAxisTest >> testMinorGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorGridLineDashStyle [
+HighchartsZAxisTest >> testSetMinorGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +523,7 @@ HighchartsZAxisTest >> testMinorGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorGridLineWidth [
+HighchartsZAxisTest >> testSetMinorGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +537,7 @@ HighchartsZAxisTest >> testMinorGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorTickColor [
+HighchartsZAxisTest >> testSetMinorTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +551,7 @@ HighchartsZAxisTest >> testMinorTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorTickInterval [
+HighchartsZAxisTest >> testSetMinorTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +565,7 @@ HighchartsZAxisTest >> testMinorTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorTickLength [
+HighchartsZAxisTest >> testSetMinorTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +579,7 @@ HighchartsZAxisTest >> testMinorTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorTickPosition [
+HighchartsZAxisTest >> testSetMinorTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +593,7 @@ HighchartsZAxisTest >> testMinorTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorTickWidth [
+HighchartsZAxisTest >> testSetMinorTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +607,7 @@ HighchartsZAxisTest >> testMinorTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testMinorTicks [
+HighchartsZAxisTest >> testSetMinorTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +621,7 @@ HighchartsZAxisTest >> testMinorTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testOffset [
+HighchartsZAxisTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +635,7 @@ HighchartsZAxisTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testOpposite [
+HighchartsZAxisTest >> testSetOpposite [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +649,7 @@ HighchartsZAxisTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testOrdinal [
+HighchartsZAxisTest >> testSetOrdinal [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +663,7 @@ HighchartsZAxisTest >> testOrdinal [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testOverscroll [
+HighchartsZAxisTest >> testSetOverscroll [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +677,7 @@ HighchartsZAxisTest >> testOverscroll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testPane [
+HighchartsZAxisTest >> testSetPane [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +691,7 @@ HighchartsZAxisTest >> testPane [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testRange [
+HighchartsZAxisTest >> testSetRange [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +705,7 @@ HighchartsZAxisTest >> testRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testReversed [
+HighchartsZAxisTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +719,7 @@ HighchartsZAxisTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testReversedStacks [
+HighchartsZAxisTest >> testSetReversedStacks [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +733,7 @@ HighchartsZAxisTest >> testReversedStacks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testShowFirstLabel [
+HighchartsZAxisTest >> testSetShowFirstLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +747,7 @@ HighchartsZAxisTest >> testShowFirstLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testShowLastLabel [
+HighchartsZAxisTest >> testSetShowLastLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +761,7 @@ HighchartsZAxisTest >> testShowLastLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testSoftMax [
+HighchartsZAxisTest >> testSetSoftMax [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +775,7 @@ HighchartsZAxisTest >> testSoftMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testSoftMin [
+HighchartsZAxisTest >> testSetSoftMin [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +789,7 @@ HighchartsZAxisTest >> testSoftMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testStartOfWeek [
+HighchartsZAxisTest >> testSetStartOfWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +803,7 @@ HighchartsZAxisTest >> testStartOfWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testStartOnTick [
+HighchartsZAxisTest >> testSetStartOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +817,7 @@ HighchartsZAxisTest >> testStartOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickAmount [
+HighchartsZAxisTest >> testSetTickAmount [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +831,7 @@ HighchartsZAxisTest >> testTickAmount [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickColor [
+HighchartsZAxisTest >> testSetTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +845,7 @@ HighchartsZAxisTest >> testTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickInterval [
+HighchartsZAxisTest >> testSetTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +859,7 @@ HighchartsZAxisTest >> testTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickLength [
+HighchartsZAxisTest >> testSetTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +873,7 @@ HighchartsZAxisTest >> testTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickPixelInterval [
+HighchartsZAxisTest >> testSetTickPixelInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +887,7 @@ HighchartsZAxisTest >> testTickPixelInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickPosition [
+HighchartsZAxisTest >> testSetTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +901,7 @@ HighchartsZAxisTest >> testTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickPositioner [
+HighchartsZAxisTest >> testSetTickPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +915,7 @@ HighchartsZAxisTest >> testTickPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickPositions [
+HighchartsZAxisTest >> testSetTickPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +929,7 @@ HighchartsZAxisTest >> testTickPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickWidth [
+HighchartsZAxisTest >> testSetTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +943,7 @@ HighchartsZAxisTest >> testTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testTickmarkPlacement [
+HighchartsZAxisTest >> testSetTickmarkPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +957,7 @@ HighchartsZAxisTest >> testTickmarkPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testType [
+HighchartsZAxisTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +971,7 @@ HighchartsZAxisTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testUniqueNames [
+HighchartsZAxisTest >> testSetUniqueNames [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +985,7 @@ HighchartsZAxisTest >> testUniqueNames [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testUnits [
+HighchartsZAxisTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +999,7 @@ HighchartsZAxisTest >> testUnits [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testVisible [
+HighchartsZAxisTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1013,7 @@ HighchartsZAxisTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisTest >> testZoomEnabled [
+HighchartsZAxisTest >> testSetZoomEnabled [
 
 	| component javascript expectedConfiguration |
 

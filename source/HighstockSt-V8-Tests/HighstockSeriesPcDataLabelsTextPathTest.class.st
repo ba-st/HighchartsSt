@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesPcDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPcDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesPcDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

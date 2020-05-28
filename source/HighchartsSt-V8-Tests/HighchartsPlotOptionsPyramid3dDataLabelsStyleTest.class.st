@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsPyramid3dDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

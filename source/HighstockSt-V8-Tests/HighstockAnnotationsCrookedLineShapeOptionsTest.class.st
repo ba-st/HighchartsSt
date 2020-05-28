@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testDashStyle [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testFill [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testHeight [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testR [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testSnap [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testSrc [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testStroke [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testType [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testWidth [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

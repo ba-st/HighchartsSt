@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testAttributes [
+HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testOpacity [
+HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testSize [
+HighstockPlotOptionsPivotpointsStatesHoverHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

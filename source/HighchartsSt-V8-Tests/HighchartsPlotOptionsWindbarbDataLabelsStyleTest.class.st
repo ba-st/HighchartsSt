@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsWindbarbDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

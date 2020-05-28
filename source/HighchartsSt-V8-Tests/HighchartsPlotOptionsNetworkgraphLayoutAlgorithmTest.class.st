@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testApproximation [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testAttractiveForce [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetAttractiveForce [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testAttractiveForce [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testEnableSimulation [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetEnableSimulation [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testEnableSimulation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testFriction [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetFriction [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testFriction [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testGravitationalConstant [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetGravitationalConstant [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testGravitationalConstan
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testInitialPositionRadius [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetInitialPositionRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testInitialPositionRadiu
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testInitialPositions [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetInitialPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testInitialPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testIntegration [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetIntegration [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testIntegration [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testLinkLength [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetLinkLength [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testLinkLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testMaxIterations [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetMaxIterations [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testMaxIterations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testMaxSpeed [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetMaxSpeed [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testMaxSpeed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testRepulsiveForce [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetRepulsiveForce [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testRepulsiveForce [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testTheta [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetTheta [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testTheta [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testType [
+HighchartsPlotOptionsNetworkgraphLayoutAlgorithmTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

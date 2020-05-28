@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testBorderColor [
+HighchartsSeriesBulletDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBulletData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBulletData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBulletData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletDataTest >> testGetTargetOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBulletData new.
+	component targetOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'targetOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletDataTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsSeriesBulletDataTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testBorderWidth [
+HighchartsSeriesBulletDataTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsSeriesBulletDataTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testClassName [
+HighchartsSeriesBulletDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsSeriesBulletDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testColor [
+HighchartsSeriesBulletDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsSeriesBulletDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testColorIndex [
+HighchartsSeriesBulletDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsSeriesBulletDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testCustom [
+HighchartsSeriesBulletDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsSeriesBulletDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testDashStyle [
+HighchartsSeriesBulletDataTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsSeriesBulletDataTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testDescription [
+HighchartsSeriesBulletDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsSeriesBulletDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testDrilldown [
+HighchartsSeriesBulletDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsSeriesBulletDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testEvents [
+HighchartsSeriesBulletDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighchartsSeriesBulletDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testId [
+HighchartsSeriesBulletDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighchartsSeriesBulletDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testLabelrank [
+HighchartsSeriesBulletDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighchartsSeriesBulletDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testName [
+HighchartsSeriesBulletDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +243,7 @@ HighchartsSeriesBulletDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testPointWidth [
+HighchartsSeriesBulletDataTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +257,7 @@ HighchartsSeriesBulletDataTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testSelected [
+HighchartsSeriesBulletDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +271,7 @@ HighchartsSeriesBulletDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testTarget [
+HighchartsSeriesBulletDataTest >> testSetTarget [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +285,7 @@ HighchartsSeriesBulletDataTest >> testTarget [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testX [
+HighchartsSeriesBulletDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +299,7 @@ HighchartsSeriesBulletDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletDataTest >> testY [
+HighchartsSeriesBulletDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

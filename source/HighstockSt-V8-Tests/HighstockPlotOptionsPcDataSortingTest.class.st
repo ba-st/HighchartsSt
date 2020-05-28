@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPcDataSortingTest >> testEnabled [
+HighstockPlotOptionsPcDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPcDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPcDataSortingTest >> testMatchByName [
+HighstockPlotOptionsPcDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPcDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPcDataSortingTest >> testSortKey [
+HighstockPlotOptionsPcDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

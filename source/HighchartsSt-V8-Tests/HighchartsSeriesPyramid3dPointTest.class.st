@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dPointTest >> testEvents [
+HighchartsSeriesPyramid3dPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

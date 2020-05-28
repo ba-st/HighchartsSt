@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockResponsiveRulesTest >> testChartOptions [
+HighstockResponsiveRulesTest >> testGetCondition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockResponsiveRules new.
+	component condition.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'condition' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockResponsiveRulesTest >> testSetChartOptions [
 
 	| component javascript expectedConfiguration |
 

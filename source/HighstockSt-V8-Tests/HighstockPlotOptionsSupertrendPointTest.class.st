@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendPointTest >> testEvents [
+HighstockPlotOptionsSupertrendPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

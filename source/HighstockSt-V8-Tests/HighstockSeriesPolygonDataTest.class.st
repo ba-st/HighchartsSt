@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testColor [
+HighstockSeriesPolygonDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygonData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygonData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygonData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygonData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighstockSeriesPolygonDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testCustom [
+HighstockSeriesPolygonDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighstockSeriesPolygonDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testDescription [
+HighstockSeriesPolygonDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighstockSeriesPolygonDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testEvents [
+HighstockSeriesPolygonDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighstockSeriesPolygonDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testId [
+HighstockSeriesPolygonDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighstockSeriesPolygonDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testLabelrank [
+HighstockSeriesPolygonDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighstockSeriesPolygonDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testName [
+HighstockSeriesPolygonDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighstockSeriesPolygonDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testSelected [
+HighstockSeriesPolygonDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighstockSeriesPolygonDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testX [
+HighstockSeriesPolygonDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighstockSeriesPolygonDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataTest >> testY [
+HighstockSeriesPolygonDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

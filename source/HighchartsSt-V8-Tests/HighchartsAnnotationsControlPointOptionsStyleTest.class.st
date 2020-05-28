@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsStyleTest >> testFill [
+HighchartsAnnotationsControlPointOptionsStyleTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAnnotationsControlPointOptionsStyleTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsStyleTest >> testStroke [
+HighchartsAnnotationsControlPointOptionsStyleTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAnnotationsControlPointOptionsStyleTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsStyleTest >> testWidth [
+HighchartsAnnotationsControlPointOptionsStyleTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

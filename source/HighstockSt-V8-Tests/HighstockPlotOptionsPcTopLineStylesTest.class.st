@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPcTopLineStylesTest >> testLineColor [
+HighstockPlotOptionsPcTopLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPcTopLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPcTopLineStylesTest >> testLineWidth [
+HighstockPlotOptionsPcTopLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

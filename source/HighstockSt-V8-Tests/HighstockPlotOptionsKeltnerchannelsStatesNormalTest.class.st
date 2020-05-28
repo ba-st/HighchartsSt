@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsStatesNormalTest >> testAnimation [
+HighstockPlotOptionsKeltnerchannelsStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

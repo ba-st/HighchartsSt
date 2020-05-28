@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDataSortingTest >> testEnabled [
+HighstockSeriesKeltnerchannelsDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDataSortingTest >> testMatchByName [
+HighstockSeriesKeltnerchannelsDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesKeltnerchannelsDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDataSortingTest >> testSortKey [
+HighstockSeriesKeltnerchannelsDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testAlign [
+HighstockLegendTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendTest >> testGetBubbleLegend [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component bubbleLegend.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bubbleLegend' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendTest >> testGetNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component navigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'navigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegend new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighstockLegendTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testAlignColumns [
+HighstockLegendTest >> testSetAlignColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighstockLegendTest >> testAlignColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testBackgroundColor [
+HighstockLegendTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighstockLegendTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testBorderColor [
+HighstockLegendTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighstockLegendTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testBorderRadius [
+HighstockLegendTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighstockLegendTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testBorderWidth [
+HighstockLegendTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighstockLegendTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testEnabled [
+HighstockLegendTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighstockLegendTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testFloating [
+HighstockLegendTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighstockLegendTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemCheckboxStyle [
+HighstockLegendTest >> testSetItemCheckboxStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighstockLegendTest >> testItemCheckboxStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemDistance [
+HighstockLegendTest >> testSetItemDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighstockLegendTest >> testItemDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemHiddenStyle [
+HighstockLegendTest >> testSetItemHiddenStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighstockLegendTest >> testItemHiddenStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemHoverStyle [
+HighstockLegendTest >> testSetItemHoverStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighstockLegendTest >> testItemHoverStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemMarginBottom [
+HighstockLegendTest >> testSetItemMarginBottom [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +243,7 @@ HighstockLegendTest >> testItemMarginBottom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemMarginTop [
+HighstockLegendTest >> testSetItemMarginTop [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +257,7 @@ HighstockLegendTest >> testItemMarginTop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemStyle [
+HighstockLegendTest >> testSetItemStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +271,7 @@ HighstockLegendTest >> testItemStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testItemWidth [
+HighstockLegendTest >> testSetItemWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +285,7 @@ HighstockLegendTest >> testItemWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testLabelFormat [
+HighstockLegendTest >> testSetLabelFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +299,7 @@ HighstockLegendTest >> testLabelFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testLabelFormatter [
+HighstockLegendTest >> testSetLabelFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +313,7 @@ HighstockLegendTest >> testLabelFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testLayout [
+HighstockLegendTest >> testSetLayout [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +327,7 @@ HighstockLegendTest >> testLayout [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testMargin [
+HighstockLegendTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +341,7 @@ HighstockLegendTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testMaxHeight [
+HighstockLegendTest >> testSetMaxHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +355,7 @@ HighstockLegendTest >> testMaxHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testPadding [
+HighstockLegendTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +369,7 @@ HighstockLegendTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testReversed [
+HighstockLegendTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +383,7 @@ HighstockLegendTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testRtl [
+HighstockLegendTest >> testSetRtl [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +397,7 @@ HighstockLegendTest >> testRtl [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testShadow [
+HighstockLegendTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +411,7 @@ HighstockLegendTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testSquareSymbol [
+HighstockLegendTest >> testSetSquareSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +425,7 @@ HighstockLegendTest >> testSquareSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testStyle [
+HighstockLegendTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +439,7 @@ HighstockLegendTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testSymbolHeight [
+HighstockLegendTest >> testSetSymbolHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +453,7 @@ HighstockLegendTest >> testSymbolHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testSymbolPadding [
+HighstockLegendTest >> testSetSymbolPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +467,7 @@ HighstockLegendTest >> testSymbolPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testSymbolRadius [
+HighstockLegendTest >> testSetSymbolRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +481,7 @@ HighstockLegendTest >> testSymbolRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testSymbolWidth [
+HighstockLegendTest >> testSetSymbolWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +495,7 @@ HighstockLegendTest >> testSymbolWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testUseHTML [
+HighstockLegendTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +509,7 @@ HighstockLegendTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testVerticalAlign [
+HighstockLegendTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +523,7 @@ HighstockLegendTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testWidth [
+HighstockLegendTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +537,7 @@ HighstockLegendTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testX [
+HighstockLegendTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +551,7 @@ HighstockLegendTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTest >> testY [
+HighstockLegendTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

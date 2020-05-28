@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testClassName [
+HighchartsXAxisPlotLinesTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxisPlotLines new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisPlotLinesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsXAxisPlotLinesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testColor [
+HighchartsXAxisPlotLinesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsXAxisPlotLinesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testDashStyle [
+HighchartsXAxisPlotLinesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsXAxisPlotLinesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testEvents [
+HighchartsXAxisPlotLinesTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsXAxisPlotLinesTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testId [
+HighchartsXAxisPlotLinesTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsXAxisPlotLinesTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testValue [
+HighchartsXAxisPlotLinesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsXAxisPlotLinesTest >> testValue [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testWidth [
+HighchartsXAxisPlotLinesTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsXAxisPlotLinesTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesTest >> testZIndex [
+HighchartsXAxisPlotLinesTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

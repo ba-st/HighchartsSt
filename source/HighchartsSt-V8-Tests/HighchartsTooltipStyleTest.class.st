@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsTooltipStyleTest >> testColor [
+HighchartsTooltipStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsTooltipStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipStyleTest >> testCursor [
+HighchartsTooltipStyleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsTooltipStyleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipStyleTest >> testFontSize [
+HighchartsTooltipStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsTooltipStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipStyleTest >> testWhiteSpace [
+HighchartsTooltipStyleTest >> testSetWhiteSpace [
 
 	| component javascript expectedConfiguration |
 

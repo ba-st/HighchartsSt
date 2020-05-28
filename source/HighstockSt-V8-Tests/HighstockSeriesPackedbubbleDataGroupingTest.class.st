@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testApproximation [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPackedbubbleDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPackedbubbleDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testEnabled [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPackedbubbleDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testForced [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPackedbubbleDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testGroupAll [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPackedbubbleDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPackedbubbleDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSmoothed [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPackedbubbleDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testUnits [
+HighstockSeriesPackedbubbleDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

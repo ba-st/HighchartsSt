@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testDashStyle [
+HighstockNavigationAnnotationsOptionsShapesTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptionsShapes new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsShapesTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptionsShapes new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testFill [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testHeight [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testMarkerEnd [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetMarkerEnd [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testMarkerEnd [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testMarkerStart [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetMarkerStart [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testMarkerStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testR [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testSnap [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testSrc [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testStroke [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testStrokeWidth [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testType [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockNavigationAnnotationsOptionsShapesTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesTest >> testWidth [
+HighstockNavigationAnnotationsOptionsShapesTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

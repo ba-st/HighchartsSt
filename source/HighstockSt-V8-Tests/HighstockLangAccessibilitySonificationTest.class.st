@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySonificationTest >> testPlayAsSoundButtonText [
+HighstockLangAccessibilitySonificationTest >> testSetPlayAsSoundButtonText [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilitySonificationTest >> testPlayAsSoundButtonText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySonificationTest >> testPlayAsSoundClickAnnouncement [
+HighstockLangAccessibilitySonificationTest >> testSetPlayAsSoundClickAnnouncement [
 
 	| component javascript expectedConfiguration |
 

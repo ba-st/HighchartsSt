@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testEnabled [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testFillColor [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testFillOpacity [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetFillOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testHeight [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testLineColor [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testLineWidth [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testRadius [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSymbol [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> t
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testWidth [
+HighchartsPlotOptionsPackedbubbleLayoutAlgorithmParentNodeOptionsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

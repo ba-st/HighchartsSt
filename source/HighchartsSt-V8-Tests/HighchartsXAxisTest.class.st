@@ -5,7 +5,119 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testAlignTicks [
+HighchartsXAxisTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGetBreaks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component breaks.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'breaks' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGetCrosshair [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component crosshair.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crosshair' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGetPlotBands [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component plotBands.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotBands' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGetPlotLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component plotLines.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotLines' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxis new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +131,7 @@ HighchartsXAxisTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testAllowDecimals [
+HighchartsXAxisTest >> testSetAllowDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +145,7 @@ HighchartsXAxisTest >> testAllowDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testAlternateGridColor [
+HighchartsXAxisTest >> testSetAlternateGridColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +159,7 @@ HighchartsXAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testAngle [
+HighchartsXAxisTest >> testSetAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +173,7 @@ HighchartsXAxisTest >> testAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testCategories [
+HighchartsXAxisTest >> testSetCategories [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +187,7 @@ HighchartsXAxisTest >> testCategories [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testCeiling [
+HighchartsXAxisTest >> testSetCeiling [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +201,7 @@ HighchartsXAxisTest >> testCeiling [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testClassName [
+HighchartsXAxisTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +215,7 @@ HighchartsXAxisTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testEndOnTick [
+HighchartsXAxisTest >> testSetEndOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +229,7 @@ HighchartsXAxisTest >> testEndOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testEvents [
+HighchartsXAxisTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +243,7 @@ HighchartsXAxisTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testFloor [
+HighchartsXAxisTest >> testSetFloor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +257,7 @@ HighchartsXAxisTest >> testFloor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testGridLineColor [
+HighchartsXAxisTest >> testSetGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +271,7 @@ HighchartsXAxisTest >> testGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testGridLineDashStyle [
+HighchartsXAxisTest >> testSetGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +285,7 @@ HighchartsXAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testGridLineInterpolation [
+HighchartsXAxisTest >> testSetGridLineInterpolation [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +299,7 @@ HighchartsXAxisTest >> testGridLineInterpolation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testGridLineWidth [
+HighchartsXAxisTest >> testSetGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +313,7 @@ HighchartsXAxisTest >> testGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testGridZIndex [
+HighchartsXAxisTest >> testSetGridZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +327,7 @@ HighchartsXAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testHeight [
+HighchartsXAxisTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +341,7 @@ HighchartsXAxisTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testId [
+HighchartsXAxisTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +355,7 @@ HighchartsXAxisTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testLeft [
+HighchartsXAxisTest >> testSetLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +369,7 @@ HighchartsXAxisTest >> testLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testLineColor [
+HighchartsXAxisTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +383,7 @@ HighchartsXAxisTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testLineWidth [
+HighchartsXAxisTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +397,7 @@ HighchartsXAxisTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testLinkedTo [
+HighchartsXAxisTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +411,7 @@ HighchartsXAxisTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMargin [
+HighchartsXAxisTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +425,7 @@ HighchartsXAxisTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMax [
+HighchartsXAxisTest >> testSetMax [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +439,7 @@ HighchartsXAxisTest >> testMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMaxPadding [
+HighchartsXAxisTest >> testSetMaxPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +453,7 @@ HighchartsXAxisTest >> testMaxPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMaxZoom [
+HighchartsXAxisTest >> testSetMaxZoom [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +467,7 @@ HighchartsXAxisTest >> testMaxZoom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMin [
+HighchartsXAxisTest >> testSetMin [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +481,7 @@ HighchartsXAxisTest >> testMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinPadding [
+HighchartsXAxisTest >> testSetMinPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +495,7 @@ HighchartsXAxisTest >> testMinPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinRange [
+HighchartsXAxisTest >> testSetMinRange [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +509,7 @@ HighchartsXAxisTest >> testMinRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinTickInterval [
+HighchartsXAxisTest >> testSetMinTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +523,7 @@ HighchartsXAxisTest >> testMinTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorGridLineColor [
+HighchartsXAxisTest >> testSetMinorGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +537,7 @@ HighchartsXAxisTest >> testMinorGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorGridLineDashStyle [
+HighchartsXAxisTest >> testSetMinorGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +551,7 @@ HighchartsXAxisTest >> testMinorGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorGridLineWidth [
+HighchartsXAxisTest >> testSetMinorGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +565,7 @@ HighchartsXAxisTest >> testMinorGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorTickColor [
+HighchartsXAxisTest >> testSetMinorTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +579,7 @@ HighchartsXAxisTest >> testMinorTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorTickInterval [
+HighchartsXAxisTest >> testSetMinorTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +593,7 @@ HighchartsXAxisTest >> testMinorTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorTickLength [
+HighchartsXAxisTest >> testSetMinorTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +607,7 @@ HighchartsXAxisTest >> testMinorTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorTickPosition [
+HighchartsXAxisTest >> testSetMinorTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +621,7 @@ HighchartsXAxisTest >> testMinorTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorTickWidth [
+HighchartsXAxisTest >> testSetMinorTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +635,7 @@ HighchartsXAxisTest >> testMinorTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testMinorTicks [
+HighchartsXAxisTest >> testSetMinorTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +649,7 @@ HighchartsXAxisTest >> testMinorTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testOffset [
+HighchartsXAxisTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +663,7 @@ HighchartsXAxisTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testOpposite [
+HighchartsXAxisTest >> testSetOpposite [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +677,7 @@ HighchartsXAxisTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testPane [
+HighchartsXAxisTest >> testSetPane [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +691,7 @@ HighchartsXAxisTest >> testPane [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testReversed [
+HighchartsXAxisTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +705,7 @@ HighchartsXAxisTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testReversedStacks [
+HighchartsXAxisTest >> testSetReversedStacks [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +719,7 @@ HighchartsXAxisTest >> testReversedStacks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testShowEmpty [
+HighchartsXAxisTest >> testSetShowEmpty [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +733,7 @@ HighchartsXAxisTest >> testShowEmpty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testShowFirstLabel [
+HighchartsXAxisTest >> testSetShowFirstLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +747,7 @@ HighchartsXAxisTest >> testShowFirstLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testShowLastLabel [
+HighchartsXAxisTest >> testSetShowLastLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +761,7 @@ HighchartsXAxisTest >> testShowLastLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testSoftMax [
+HighchartsXAxisTest >> testSetSoftMax [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +775,7 @@ HighchartsXAxisTest >> testSoftMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testSoftMin [
+HighchartsXAxisTest >> testSetSoftMin [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +789,7 @@ HighchartsXAxisTest >> testSoftMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testStartOfWeek [
+HighchartsXAxisTest >> testSetStartOfWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +803,7 @@ HighchartsXAxisTest >> testStartOfWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testStartOnTick [
+HighchartsXAxisTest >> testSetStartOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +817,7 @@ HighchartsXAxisTest >> testStartOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickAmount [
+HighchartsXAxisTest >> testSetTickAmount [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +831,7 @@ HighchartsXAxisTest >> testTickAmount [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickColor [
+HighchartsXAxisTest >> testSetTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +845,7 @@ HighchartsXAxisTest >> testTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickInterval [
+HighchartsXAxisTest >> testSetTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +859,7 @@ HighchartsXAxisTest >> testTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickLength [
+HighchartsXAxisTest >> testSetTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +873,7 @@ HighchartsXAxisTest >> testTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickPixelInterval [
+HighchartsXAxisTest >> testSetTickPixelInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +887,7 @@ HighchartsXAxisTest >> testTickPixelInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickPosition [
+HighchartsXAxisTest >> testSetTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +901,7 @@ HighchartsXAxisTest >> testTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickPositioner [
+HighchartsXAxisTest >> testSetTickPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +915,7 @@ HighchartsXAxisTest >> testTickPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickPositions [
+HighchartsXAxisTest >> testSetTickPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +929,7 @@ HighchartsXAxisTest >> testTickPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickWidth [
+HighchartsXAxisTest >> testSetTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +943,7 @@ HighchartsXAxisTest >> testTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTickmarkPlacement [
+HighchartsXAxisTest >> testSetTickmarkPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +957,7 @@ HighchartsXAxisTest >> testTickmarkPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testTop [
+HighchartsXAxisTest >> testSetTop [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +971,7 @@ HighchartsXAxisTest >> testTop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testType [
+HighchartsXAxisTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +985,7 @@ HighchartsXAxisTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testUniqueNames [
+HighchartsXAxisTest >> testSetUniqueNames [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +999,7 @@ HighchartsXAxisTest >> testUniqueNames [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testUnits [
+HighchartsXAxisTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1013,7 @@ HighchartsXAxisTest >> testUnits [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testVisible [
+HighchartsXAxisTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1027,7 @@ HighchartsXAxisTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testWidth [
+HighchartsXAxisTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1041,7 @@ HighchartsXAxisTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testZoomEnabled [
+HighchartsXAxisTest >> testSetZoomEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLoadingTest >> testHideDuration [
+HighstockLoadingTest >> testSetHideDuration [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLoadingTest >> testHideDuration [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLoadingTest >> testLabelStyle [
+HighstockLoadingTest >> testSetLabelStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLoadingTest >> testLabelStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLoadingTest >> testShowDuration [
+HighstockLoadingTest >> testSetShowDuration [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLoadingTest >> testShowDuration [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLoadingTest >> testStyle [
+HighstockLoadingTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

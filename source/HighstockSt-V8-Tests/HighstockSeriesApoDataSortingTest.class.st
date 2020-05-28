@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesApoDataSortingTest >> testEnabled [
+HighstockSeriesApoDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesApoDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesApoDataSortingTest >> testMatchByName [
+HighstockSeriesApoDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesApoDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesApoDataSortingTest >> testSortKey [
+HighstockSeriesApoDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

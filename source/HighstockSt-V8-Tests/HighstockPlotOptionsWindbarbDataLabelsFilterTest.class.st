@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsWindbarbDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

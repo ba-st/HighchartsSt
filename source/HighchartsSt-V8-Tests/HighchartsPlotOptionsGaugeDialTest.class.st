@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testBackgroundColor [
+HighchartsPlotOptionsGaugeDialTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsGaugeDialTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testBaseLength [
+HighchartsPlotOptionsGaugeDialTest >> testSetBaseLength [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsGaugeDialTest >> testBaseLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testBaseWidth [
+HighchartsPlotOptionsGaugeDialTest >> testSetBaseWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsGaugeDialTest >> testBaseWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testBorderColor [
+HighchartsPlotOptionsGaugeDialTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsGaugeDialTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testBorderWidth [
+HighchartsPlotOptionsGaugeDialTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsGaugeDialTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testRadius [
+HighchartsPlotOptionsGaugeDialTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsGaugeDialTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testRearLength [
+HighchartsPlotOptionsGaugeDialTest >> testSetRearLength [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsGaugeDialTest >> testRearLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeDialTest >> testTopWidth [
+HighchartsPlotOptionsGaugeDialTest >> testSetTopWidth [
 
 	| component javascript expectedConfiguration |
 

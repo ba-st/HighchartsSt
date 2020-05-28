@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testEnabled [
+HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibilityKeyboardNavigationFocusBorder new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testHideBrowserFocusOutline [
+HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testSetHideBrowserFocusOutline [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testHideBrowserFocus
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testMargin [
+HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -42,20 +56,6 @@ HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testMargin [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'margin' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationFocusBorderTest >> testStyle [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsAccessibilityKeyboardNavigationFocusBorder new.
-	component style.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'style' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

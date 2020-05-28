@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsDataSortingTest >> testEnabled [
+HighstockSeriesPivotpointsDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPivotpointsDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsDataSortingTest >> testMatchByName [
+HighstockSeriesPivotpointsDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPivotpointsDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsDataSortingTest >> testSortKey [
+HighstockSeriesPivotpointsDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesPointTest >> testX [
+HighchartsAnnotationsShapesPointTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAnnotationsShapesPointTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesPointTest >> testXAxis [
+HighchartsAnnotationsShapesPointTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAnnotationsShapesPointTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesPointTest >> testY [
+HighchartsAnnotationsShapesPointTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsAnnotationsShapesPointTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesPointTest >> testYAxis [
+HighchartsAnnotationsShapesPointTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsIkhChikouLineStylesTest >> testLineColor [
+HighstockPlotOptionsIkhChikouLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsIkhChikouLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsIkhChikouLineStylesTest >> testLineWidth [
+HighstockPlotOptionsIkhChikouLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testEnabled [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsHeatmapMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testFillColor [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testHeight [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testHeightPlus [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetHeightPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testHeightPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testLineColor [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testLineWidth [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testLineWidthPlus [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testWidth [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testWidthPlus [
+HighchartsPlotOptionsHeatmapMarkerStatesHoverTest >> testSetWidthPlus [
 
 	| component javascript expectedConfiguration |
 

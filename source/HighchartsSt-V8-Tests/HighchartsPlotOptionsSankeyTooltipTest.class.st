@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testChangeDecimals [
+HighchartsPlotOptionsSankeyTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSankeyTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSankeyTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testDistance [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testNodeFormat [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetNodeFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testNodeFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testNodeFormatter [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetNodeFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testNodeFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testNullFormat [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testPointFormat [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testStickOnContact [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighchartsPlotOptionsSankeyTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsSankeyTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

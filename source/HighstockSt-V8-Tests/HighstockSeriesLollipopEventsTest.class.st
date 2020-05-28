@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testAfterAnimate [
+HighstockSeriesLollipopEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLollipopEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testCheckboxClick [
+HighstockSeriesLollipopEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLollipopEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testClick [
+HighstockSeriesLollipopEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLollipopEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testHide [
+HighstockSeriesLollipopEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLollipopEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testLegendItemClick [
+HighstockSeriesLollipopEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLollipopEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testMouseOut [
+HighstockSeriesLollipopEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLollipopEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testMouseOver [
+HighstockSeriesLollipopEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLollipopEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopEventsTest >> testShow [
+HighstockSeriesLollipopEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

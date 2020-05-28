@@ -5,7 +5,245 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testAllAreas [
+HighstockSeriesPriceenvelopesTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetBottomLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component bottomLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bottomLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetTopLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component topLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'topLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopes new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +257,7 @@ HighstockSeriesPriceenvelopesTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testAllowPointSelect [
+HighstockSeriesPriceenvelopesTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +271,7 @@ HighstockSeriesPriceenvelopesTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testAnimationLimit [
+HighstockSeriesPriceenvelopesTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +285,7 @@ HighstockSeriesPriceenvelopesTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testBoostBlending [
+HighstockSeriesPriceenvelopesTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +299,7 @@ HighstockSeriesPriceenvelopesTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testBoostThreshold [
+HighstockSeriesPriceenvelopesTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +313,7 @@ HighstockSeriesPriceenvelopesTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testBorderColor [
+HighstockSeriesPriceenvelopesTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +327,7 @@ HighstockSeriesPriceenvelopesTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testBorderWidth [
+HighstockSeriesPriceenvelopesTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +341,7 @@ HighstockSeriesPriceenvelopesTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testClassName [
+HighstockSeriesPriceenvelopesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +355,7 @@ HighstockSeriesPriceenvelopesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testClip [
+HighstockSeriesPriceenvelopesTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +369,7 @@ HighstockSeriesPriceenvelopesTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testColor [
+HighstockSeriesPriceenvelopesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +383,7 @@ HighstockSeriesPriceenvelopesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testColorAxis [
+HighstockSeriesPriceenvelopesTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +397,7 @@ HighstockSeriesPriceenvelopesTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testColorIndex [
+HighstockSeriesPriceenvelopesTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +411,7 @@ HighstockSeriesPriceenvelopesTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testColorKey [
+HighstockSeriesPriceenvelopesTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +425,7 @@ HighstockSeriesPriceenvelopesTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCompare [
+HighstockSeriesPriceenvelopesTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +439,7 @@ HighstockSeriesPriceenvelopesTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCompareBase [
+HighstockSeriesPriceenvelopesTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +453,7 @@ HighstockSeriesPriceenvelopesTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCompareStart [
+HighstockSeriesPriceenvelopesTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +467,7 @@ HighstockSeriesPriceenvelopesTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCompareToMain [
+HighstockSeriesPriceenvelopesTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +481,7 @@ HighstockSeriesPriceenvelopesTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testConnectEnds [
+HighstockSeriesPriceenvelopesTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +495,7 @@ HighstockSeriesPriceenvelopesTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testConnectNulls [
+HighstockSeriesPriceenvelopesTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +509,7 @@ HighstockSeriesPriceenvelopesTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCrisp [
+HighstockSeriesPriceenvelopesTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +523,7 @@ HighstockSeriesPriceenvelopesTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCropThreshold [
+HighstockSeriesPriceenvelopesTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +537,7 @@ HighstockSeriesPriceenvelopesTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCursor [
+HighstockSeriesPriceenvelopesTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +551,7 @@ HighstockSeriesPriceenvelopesTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testCustom [
+HighstockSeriesPriceenvelopesTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +565,7 @@ HighstockSeriesPriceenvelopesTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testDashStyle [
+HighstockSeriesPriceenvelopesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +579,7 @@ HighstockSeriesPriceenvelopesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testDescription [
+HighstockSeriesPriceenvelopesTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +593,7 @@ HighstockSeriesPriceenvelopesTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testEnableMouseTracking [
+HighstockSeriesPriceenvelopesTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +607,7 @@ HighstockSeriesPriceenvelopesTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testEvents [
+HighstockSeriesPriceenvelopesTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +621,7 @@ HighstockSeriesPriceenvelopesTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testFindNearestPointBy [
+HighstockSeriesPriceenvelopesTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +635,7 @@ HighstockSeriesPriceenvelopesTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testGapSize [
+HighstockSeriesPriceenvelopesTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +649,7 @@ HighstockSeriesPriceenvelopesTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testGapUnit [
+HighstockSeriesPriceenvelopesTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +663,7 @@ HighstockSeriesPriceenvelopesTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testGetExtremesFromAll [
+HighstockSeriesPriceenvelopesTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +677,7 @@ HighstockSeriesPriceenvelopesTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testId [
+HighstockSeriesPriceenvelopesTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +691,7 @@ HighstockSeriesPriceenvelopesTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testIncludeInDataExport [
+HighstockSeriesPriceenvelopesTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +705,7 @@ HighstockSeriesPriceenvelopesTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testIndex [
+HighstockSeriesPriceenvelopesTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +719,7 @@ HighstockSeriesPriceenvelopesTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testJoinBy [
+HighstockSeriesPriceenvelopesTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +733,7 @@ HighstockSeriesPriceenvelopesTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testKeys [
+HighstockSeriesPriceenvelopesTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +747,7 @@ HighstockSeriesPriceenvelopesTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testLegendIndex [
+HighstockSeriesPriceenvelopesTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +761,7 @@ HighstockSeriesPriceenvelopesTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testLineWidth [
+HighstockSeriesPriceenvelopesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +775,7 @@ HighstockSeriesPriceenvelopesTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testLinecap [
+HighstockSeriesPriceenvelopesTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +789,7 @@ HighstockSeriesPriceenvelopesTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testLinkedTo [
+HighstockSeriesPriceenvelopesTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +803,7 @@ HighstockSeriesPriceenvelopesTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testMapData [
+HighstockSeriesPriceenvelopesTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +817,7 @@ HighstockSeriesPriceenvelopesTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testName [
+HighstockSeriesPriceenvelopesTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +831,7 @@ HighstockSeriesPriceenvelopesTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testNavigatorOptions [
+HighstockSeriesPriceenvelopesTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +845,7 @@ HighstockSeriesPriceenvelopesTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testNegativeColor [
+HighstockSeriesPriceenvelopesTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +859,7 @@ HighstockSeriesPriceenvelopesTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testOpacity [
+HighstockSeriesPriceenvelopesTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +873,7 @@ HighstockSeriesPriceenvelopesTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testPointDescriptionFormatter [
+HighstockSeriesPriceenvelopesTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +887,7 @@ HighstockSeriesPriceenvelopesTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testPointInterval [
+HighstockSeriesPriceenvelopesTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +901,7 @@ HighstockSeriesPriceenvelopesTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testPointIntervalUnit [
+HighstockSeriesPriceenvelopesTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +915,7 @@ HighstockSeriesPriceenvelopesTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testPointPlacement [
+HighstockSeriesPriceenvelopesTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +929,7 @@ HighstockSeriesPriceenvelopesTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testPointRange [
+HighstockSeriesPriceenvelopesTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +943,7 @@ HighstockSeriesPriceenvelopesTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testPointStart [
+HighstockSeriesPriceenvelopesTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +957,7 @@ HighstockSeriesPriceenvelopesTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testSelected [
+HighstockSeriesPriceenvelopesTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +971,7 @@ HighstockSeriesPriceenvelopesTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testShadow [
+HighstockSeriesPriceenvelopesTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +985,7 @@ HighstockSeriesPriceenvelopesTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testShowCheckbox [
+HighstockSeriesPriceenvelopesTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +999,7 @@ HighstockSeriesPriceenvelopesTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testShowInLegend [
+HighstockSeriesPriceenvelopesTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +1013,7 @@ HighstockSeriesPriceenvelopesTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testShowInNavigator [
+HighstockSeriesPriceenvelopesTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +1027,7 @@ HighstockSeriesPriceenvelopesTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testSkipKeyboardNavigation [
+HighstockSeriesPriceenvelopesTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +1041,7 @@ HighstockSeriesPriceenvelopesTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testSoftThreshold [
+HighstockSeriesPriceenvelopesTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1055,7 @@ HighstockSeriesPriceenvelopesTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testStack [
+HighstockSeriesPriceenvelopesTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1069,7 @@ HighstockSeriesPriceenvelopesTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testStacking [
+HighstockSeriesPriceenvelopesTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1083,7 @@ HighstockSeriesPriceenvelopesTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testStates [
+HighstockSeriesPriceenvelopesTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1097,7 @@ HighstockSeriesPriceenvelopesTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testStep [
+HighstockSeriesPriceenvelopesTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1111,7 @@ HighstockSeriesPriceenvelopesTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testStickyTracking [
+HighstockSeriesPriceenvelopesTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1125,7 @@ HighstockSeriesPriceenvelopesTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testThreshold [
+HighstockSeriesPriceenvelopesTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1139,7 @@ HighstockSeriesPriceenvelopesTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testTurboThreshold [
+HighstockSeriesPriceenvelopesTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1153,7 @@ HighstockSeriesPriceenvelopesTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testType [
+HighstockSeriesPriceenvelopesTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1167,7 @@ HighstockSeriesPriceenvelopesTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testVisible [
+HighstockSeriesPriceenvelopesTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1181,7 @@ HighstockSeriesPriceenvelopesTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testXAxis [
+HighstockSeriesPriceenvelopesTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1195,7 @@ HighstockSeriesPriceenvelopesTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testYAxis [
+HighstockSeriesPriceenvelopesTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1209,7 @@ HighstockSeriesPriceenvelopesTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testZIndex [
+HighstockSeriesPriceenvelopesTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1223,7 @@ HighstockSeriesPriceenvelopesTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTest >> testZoneAxis [
+HighstockSeriesPriceenvelopesTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

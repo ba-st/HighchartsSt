@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testApproximation [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptDataGroupingTest >> testDateTimeLabelFor
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testEnabled [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressioninterceptDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testForced [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressioninterceptDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testGroupAll [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressioninterceptDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressioninterceptDataGroupingTest >> testGroupPixelWidth 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSmoothed [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataGroupingTest >> testUnits [
+HighstockSeriesLinearregressioninterceptDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

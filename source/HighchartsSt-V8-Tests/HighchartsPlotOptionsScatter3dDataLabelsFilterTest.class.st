@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsScatter3dDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

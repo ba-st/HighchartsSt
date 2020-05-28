@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphAnimationTest >> testDuration [
+HighstockPlotOptionsStreamgraphAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

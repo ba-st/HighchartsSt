@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineTypeOptionsTest >> testXAxis [
+HighstockAnnotationsCrookedLineTypeOptionsTest >> testGetLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineTypeOptions new.
+	component line.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'line' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineTypeOptionsTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineTypeOptions new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineTypeOptionsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockAnnotationsCrookedLineTypeOptionsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineTypeOptionsTest >> testYAxis [
+HighstockAnnotationsCrookedLineTypeOptionsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

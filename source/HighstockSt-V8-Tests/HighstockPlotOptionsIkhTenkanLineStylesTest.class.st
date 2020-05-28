@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsIkhTenkanLineStylesTest >> testLineColor [
+HighstockPlotOptionsIkhTenkanLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsIkhTenkanLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsIkhTenkanLineStylesTest >> testLineWidth [
+HighstockPlotOptionsIkhTenkanLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

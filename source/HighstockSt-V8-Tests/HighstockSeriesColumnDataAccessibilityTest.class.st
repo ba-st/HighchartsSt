@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataAccessibilityTest >> testDescription [
+HighstockSeriesColumnDataAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

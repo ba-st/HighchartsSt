@@ -5,7 +5,77 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsTest >> testDraggable [
+HighchartsNavigationAnnotationsOptionsTest >> testGetControlPointOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptions new.
+	component controlPointOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'controlPointOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsTest >> testGetLabelOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptions new.
+	component labelOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labelOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptions new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsTest >> testGetShapeOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptions new.
+	component shapeOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'shapeOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsTest >> testGetShapes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptions new.
+	component shapes.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'shapes' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsTest >> testSetDraggable [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +89,7 @@ HighchartsNavigationAnnotationsOptionsTest >> testDraggable [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsTest >> testEvents [
+HighchartsNavigationAnnotationsOptionsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighchartsNavigationAnnotationsOptionsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsTest >> testId [
+HighchartsNavigationAnnotationsOptionsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,7 @@ HighchartsNavigationAnnotationsOptionsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsTest >> testVisible [
+HighchartsNavigationAnnotationsOptionsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighchartsNavigationAnnotationsOptionsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsTest >> testZIndex [
+HighchartsNavigationAnnotationsOptionsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

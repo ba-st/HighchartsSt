@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsCreditsPositionTest >> testAlign [
+HighchartsCreditsPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsCreditsPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCreditsPositionTest >> testVerticalAlign [
+HighchartsCreditsPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsCreditsPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCreditsPositionTest >> testX [
+HighchartsCreditsPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsCreditsPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCreditsPositionTest >> testY [
+HighchartsCreditsPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

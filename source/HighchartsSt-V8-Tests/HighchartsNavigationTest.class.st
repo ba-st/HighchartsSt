@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationTest >> testBindingsClassName [
+HighchartsNavigationTest >> testGetAnnotationsOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigation new.
+	component annotationsOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'annotationsOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationTest >> testGetBindings [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigation new.
+	component bindings.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bindings' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationTest >> testGetButtonOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigation new.
+	component buttonOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttonOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationTest >> testSetBindingsClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsNavigationTest >> testBindingsClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationTest >> testEvents [
+HighchartsNavigationTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsNavigationTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationTest >> testIconsURL [
+HighchartsNavigationTest >> testSetIconsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsNavigationTest >> testIconsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationTest >> testMenuItemHoverStyle [
+HighchartsNavigationTest >> testSetMenuItemHoverStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsNavigationTest >> testMenuItemHoverStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationTest >> testMenuItemStyle [
+HighchartsNavigationTest >> testSetMenuItemStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsNavigationTest >> testMenuItemStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationTest >> testMenuStyle [
+HighchartsNavigationTest >> testSetMenuStyle [
 
 	| component javascript expectedConfiguration |
 

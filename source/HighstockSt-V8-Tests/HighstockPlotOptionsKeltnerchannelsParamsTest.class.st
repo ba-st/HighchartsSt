@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsParamsTest >> testIndex [
+HighstockPlotOptionsKeltnerchannelsParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsParamsTest >> testMultiplierATR [
+HighstockPlotOptionsKeltnerchannelsParamsTest >> testSetMultiplierATR [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsKeltnerchannelsParamsTest >> testMultiplierATR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsParamsTest >> testPeriod [
+HighstockPlotOptionsKeltnerchannelsParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsKeltnerchannelsParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsParamsTest >> testPeriodATR [
+HighstockPlotOptionsKeltnerchannelsParamsTest >> testSetPeriodATR [
 
 	| component javascript expectedConfiguration |
 

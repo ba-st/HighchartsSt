@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveDataLabelsFilterTest >> testOperator [
+HighchartsSeriesBellcurveDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesBellcurveDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveDataLabelsFilterTest >> testProperty [
+HighchartsSeriesBellcurveDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesBellcurveDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveDataLabelsFilterTest >> testValue [
+HighchartsSeriesBellcurveDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

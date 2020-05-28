@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendRangesTest >> testBorderColor [
+HighchartsLegendBubbleLegendRangesTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLegendBubbleLegendRangesTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendRangesTest >> testColor [
+HighchartsLegendBubbleLegendRangesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLegendBubbleLegendRangesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendRangesTest >> testConnectorColor [
+HighchartsLegendBubbleLegendRangesTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLegendBubbleLegendRangesTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendRangesTest >> testValue [
+HighchartsLegendBubbleLegendRangesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

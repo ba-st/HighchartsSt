@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testMillis
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testMinute
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testMonth 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSecond
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsKeltnerchannelsTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,203 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testAllAreas [
+HighchartsSeriesParetoTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPareto new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesParetoTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +215,7 @@ HighchartsSeriesParetoTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testAllowPointSelect [
+HighchartsSeriesParetoTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +229,7 @@ HighchartsSeriesParetoTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testAnimationLimit [
+HighchartsSeriesParetoTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +243,7 @@ HighchartsSeriesParetoTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testBaseSeries [
+HighchartsSeriesParetoTest >> testSetBaseSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +257,7 @@ HighchartsSeriesParetoTest >> testBaseSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testBoostBlending [
+HighchartsSeriesParetoTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +271,7 @@ HighchartsSeriesParetoTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testBoostThreshold [
+HighchartsSeriesParetoTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +285,7 @@ HighchartsSeriesParetoTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testBorderColor [
+HighchartsSeriesParetoTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +299,7 @@ HighchartsSeriesParetoTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testBorderWidth [
+HighchartsSeriesParetoTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +313,7 @@ HighchartsSeriesParetoTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testClassName [
+HighchartsSeriesParetoTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +327,7 @@ HighchartsSeriesParetoTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testClip [
+HighchartsSeriesParetoTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +341,7 @@ HighchartsSeriesParetoTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testColor [
+HighchartsSeriesParetoTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +355,7 @@ HighchartsSeriesParetoTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testColorAxis [
+HighchartsSeriesParetoTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +369,7 @@ HighchartsSeriesParetoTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testColorIndex [
+HighchartsSeriesParetoTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +383,7 @@ HighchartsSeriesParetoTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testColorKey [
+HighchartsSeriesParetoTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +397,7 @@ HighchartsSeriesParetoTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testCompare [
+HighchartsSeriesParetoTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,7 @@ HighchartsSeriesParetoTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testCompareBase [
+HighchartsSeriesParetoTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +425,7 @@ HighchartsSeriesParetoTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testCompareStart [
+HighchartsSeriesParetoTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,7 @@ HighchartsSeriesParetoTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testConnectEnds [
+HighchartsSeriesParetoTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +453,7 @@ HighchartsSeriesParetoTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testConnectNulls [
+HighchartsSeriesParetoTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +467,7 @@ HighchartsSeriesParetoTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testCrisp [
+HighchartsSeriesParetoTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +481,7 @@ HighchartsSeriesParetoTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testCropThreshold [
+HighchartsSeriesParetoTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +495,7 @@ HighchartsSeriesParetoTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testCursor [
+HighchartsSeriesParetoTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +509,7 @@ HighchartsSeriesParetoTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testCustom [
+HighchartsSeriesParetoTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +523,7 @@ HighchartsSeriesParetoTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testDashStyle [
+HighchartsSeriesParetoTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +537,7 @@ HighchartsSeriesParetoTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testDescription [
+HighchartsSeriesParetoTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +551,7 @@ HighchartsSeriesParetoTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testEnableMouseTracking [
+HighchartsSeriesParetoTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +565,7 @@ HighchartsSeriesParetoTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testEvents [
+HighchartsSeriesParetoTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +579,7 @@ HighchartsSeriesParetoTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testFindNearestPointBy [
+HighchartsSeriesParetoTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +593,7 @@ HighchartsSeriesParetoTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testGapSize [
+HighchartsSeriesParetoTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +607,7 @@ HighchartsSeriesParetoTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testGapUnit [
+HighchartsSeriesParetoTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +621,7 @@ HighchartsSeriesParetoTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testGetExtremesFromAll [
+HighchartsSeriesParetoTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +635,7 @@ HighchartsSeriesParetoTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testId [
+HighchartsSeriesParetoTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +649,7 @@ HighchartsSeriesParetoTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testIncludeInDataExport [
+HighchartsSeriesParetoTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +663,7 @@ HighchartsSeriesParetoTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testIndex [
+HighchartsSeriesParetoTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +677,7 @@ HighchartsSeriesParetoTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testJoinBy [
+HighchartsSeriesParetoTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +691,7 @@ HighchartsSeriesParetoTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testKeys [
+HighchartsSeriesParetoTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +705,7 @@ HighchartsSeriesParetoTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testLegendIndex [
+HighchartsSeriesParetoTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +719,7 @@ HighchartsSeriesParetoTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testLineWidth [
+HighchartsSeriesParetoTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +733,7 @@ HighchartsSeriesParetoTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testLinecap [
+HighchartsSeriesParetoTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +747,7 @@ HighchartsSeriesParetoTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testLinkedTo [
+HighchartsSeriesParetoTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +761,7 @@ HighchartsSeriesParetoTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testMapData [
+HighchartsSeriesParetoTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +775,7 @@ HighchartsSeriesParetoTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testName [
+HighchartsSeriesParetoTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +789,7 @@ HighchartsSeriesParetoTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testNavigatorOptions [
+HighchartsSeriesParetoTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +803,7 @@ HighchartsSeriesParetoTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testNegativeColor [
+HighchartsSeriesParetoTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +817,7 @@ HighchartsSeriesParetoTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testOpacity [
+HighchartsSeriesParetoTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +831,7 @@ HighchartsSeriesParetoTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testPointDescriptionFormatter [
+HighchartsSeriesParetoTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +845,7 @@ HighchartsSeriesParetoTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testPointInterval [
+HighchartsSeriesParetoTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +859,7 @@ HighchartsSeriesParetoTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testPointIntervalUnit [
+HighchartsSeriesParetoTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +873,7 @@ HighchartsSeriesParetoTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testPointPlacement [
+HighchartsSeriesParetoTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +887,7 @@ HighchartsSeriesParetoTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testPointRange [
+HighchartsSeriesParetoTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +901,7 @@ HighchartsSeriesParetoTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testPointStart [
+HighchartsSeriesParetoTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +915,7 @@ HighchartsSeriesParetoTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testSelected [
+HighchartsSeriesParetoTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +929,7 @@ HighchartsSeriesParetoTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testShadow [
+HighchartsSeriesParetoTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +943,7 @@ HighchartsSeriesParetoTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testShowCheckbox [
+HighchartsSeriesParetoTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +957,7 @@ HighchartsSeriesParetoTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testShowInLegend [
+HighchartsSeriesParetoTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +971,7 @@ HighchartsSeriesParetoTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testShowInNavigator [
+HighchartsSeriesParetoTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +985,7 @@ HighchartsSeriesParetoTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testSkipKeyboardNavigation [
+HighchartsSeriesParetoTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +999,7 @@ HighchartsSeriesParetoTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testSoftThreshold [
+HighchartsSeriesParetoTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1013,7 @@ HighchartsSeriesParetoTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testStack [
+HighchartsSeriesParetoTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1027,7 @@ HighchartsSeriesParetoTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testStacking [
+HighchartsSeriesParetoTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1041,7 @@ HighchartsSeriesParetoTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testStates [
+HighchartsSeriesParetoTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1055,7 @@ HighchartsSeriesParetoTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testStep [
+HighchartsSeriesParetoTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1069,7 @@ HighchartsSeriesParetoTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testStickyTracking [
+HighchartsSeriesParetoTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1083,7 @@ HighchartsSeriesParetoTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testThreshold [
+HighchartsSeriesParetoTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1097,7 @@ HighchartsSeriesParetoTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testTurboThreshold [
+HighchartsSeriesParetoTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1111,7 @@ HighchartsSeriesParetoTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testType [
+HighchartsSeriesParetoTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1125,7 @@ HighchartsSeriesParetoTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testUseOhlcData [
+HighchartsSeriesParetoTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1139,7 @@ HighchartsSeriesParetoTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testVisible [
+HighchartsSeriesParetoTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1153,7 @@ HighchartsSeriesParetoTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testXAxis [
+HighchartsSeriesParetoTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1167,7 @@ HighchartsSeriesParetoTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testYAxis [
+HighchartsSeriesParetoTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1181,7 @@ HighchartsSeriesParetoTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testZIndex [
+HighchartsSeriesParetoTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -999,7 +1195,7 @@ HighchartsSeriesParetoTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoTest >> testZoneAxis [
+HighchartsSeriesParetoTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

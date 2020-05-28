@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideLabelStyleTest >> testFontWeight [
+HighchartsSeriesVariwideLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

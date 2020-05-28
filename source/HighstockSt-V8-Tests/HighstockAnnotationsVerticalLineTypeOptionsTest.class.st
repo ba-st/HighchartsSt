@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsTest >> testXAxis [
+HighstockAnnotationsVerticalLineTypeOptionsTest >> testGetConnector [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineTypeOptions new.
+	component connector.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connector' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineTypeOptionsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineTypeOptions new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineTypeOptionsTest >> testGetLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineTypeOptions new.
+	component line.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'line' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineTypeOptionsTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineTypeOptions new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineTypeOptionsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighstockAnnotationsVerticalLineTypeOptionsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsTest >> testYAxis [
+HighstockAnnotationsVerticalLineTypeOptionsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

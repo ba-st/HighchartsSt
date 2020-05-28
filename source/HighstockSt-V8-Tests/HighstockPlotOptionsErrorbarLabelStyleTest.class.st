@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsErrorbarLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

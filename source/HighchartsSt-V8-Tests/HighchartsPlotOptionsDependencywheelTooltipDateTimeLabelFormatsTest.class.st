@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testHour 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testMilli
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testMinut
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testMonth
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSecon
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testWeek 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsDependencywheelTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

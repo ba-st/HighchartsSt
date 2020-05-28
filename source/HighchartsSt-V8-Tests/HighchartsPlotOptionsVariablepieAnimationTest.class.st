@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieAnimationTest >> testDuration [
+HighchartsPlotOptionsVariablepieAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

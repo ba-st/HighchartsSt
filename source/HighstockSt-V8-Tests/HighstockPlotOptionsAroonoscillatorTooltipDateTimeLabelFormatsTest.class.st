@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testMillis
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testMinute
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testMonth 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSecond
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsAroonoscillatorTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

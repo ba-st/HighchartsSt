@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiTest >> testButtons [
+HighstockStockToolsGuiTest >> testGetDefinitions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockStockToolsGui new.
+	component definitions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'definitions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockStockToolsGuiTest >> testSetButtons [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockStockToolsGuiTest >> testButtons [
 ]
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiTest >> testClassName [
+HighstockStockToolsGuiTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockStockToolsGuiTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiTest >> testEnabled [
+HighstockStockToolsGuiTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockStockToolsGuiTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiTest >> testIconsURL [
+HighstockStockToolsGuiTest >> testSetIconsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockStockToolsGuiTest >> testIconsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiTest >> testToolbarClassName [
+HighstockStockToolsGuiTest >> testSetToolbarClassName [
 
 	| component javascript expectedConfiguration |
 

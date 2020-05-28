@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhDataLabelsStyleTest >> testColor [
+HighstockSeriesIkhDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesIkhDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhDataLabelsStyleTest >> testFontSize [
+HighstockSeriesIkhDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesIkhDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhDataLabelsStyleTest >> testFontWeight [
+HighstockSeriesIkhDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesIkhDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhDataLabelsStyleTest >> testTextOutline [
+HighstockSeriesIkhDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

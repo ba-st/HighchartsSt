@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testEnabled [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmapDataMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testFillColor [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testHeight [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testHeightPlus [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetHeightPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testHeightPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testLineColor [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testLineWidth [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testLineWidthPlus [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testWidth [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testWidthPlus [
+HighchartsSeriesHeatmapDataMarkerStatesHoverTest >> testSetWidthPlus [
 
 	| component javascript expectedConfiguration |
 

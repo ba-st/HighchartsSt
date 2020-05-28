@@ -5,7 +5,105 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testAlignTicks [
+HighchartsChartParallelAxesTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testGetCrosshair [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component crosshair.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crosshair' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testGetGrid [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component grid.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'grid' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testGetResize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component resize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'resize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxes new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +117,7 @@ HighchartsChartParallelAxesTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testAllowDecimals [
+HighchartsChartParallelAxesTest >> testSetAllowDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +131,7 @@ HighchartsChartParallelAxesTest >> testAllowDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testCategories [
+HighchartsChartParallelAxesTest >> testSetCategories [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +145,7 @@ HighchartsChartParallelAxesTest >> testCategories [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testCeiling [
+HighchartsChartParallelAxesTest >> testSetCeiling [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +159,7 @@ HighchartsChartParallelAxesTest >> testCeiling [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testClassName [
+HighchartsChartParallelAxesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +173,7 @@ HighchartsChartParallelAxesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testEndOnTick [
+HighchartsChartParallelAxesTest >> testSetEndOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +187,7 @@ HighchartsChartParallelAxesTest >> testEndOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testEvents [
+HighchartsChartParallelAxesTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +201,7 @@ HighchartsChartParallelAxesTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testFloor [
+HighchartsChartParallelAxesTest >> testSetFloor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +215,7 @@ HighchartsChartParallelAxesTest >> testFloor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testGridZIndex [
+HighchartsChartParallelAxesTest >> testSetGridZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +229,7 @@ HighchartsChartParallelAxesTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testHeight [
+HighchartsChartParallelAxesTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +243,7 @@ HighchartsChartParallelAxesTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testLeft [
+HighchartsChartParallelAxesTest >> testSetLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +257,7 @@ HighchartsChartParallelAxesTest >> testLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testLineColor [
+HighchartsChartParallelAxesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +271,7 @@ HighchartsChartParallelAxesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testLineWidth [
+HighchartsChartParallelAxesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +285,7 @@ HighchartsChartParallelAxesTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testLinkedTo [
+HighchartsChartParallelAxesTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +299,7 @@ HighchartsChartParallelAxesTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMargin [
+HighchartsChartParallelAxesTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +313,7 @@ HighchartsChartParallelAxesTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMax [
+HighchartsChartParallelAxesTest >> testSetMax [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +327,7 @@ HighchartsChartParallelAxesTest >> testMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMaxLength [
+HighchartsChartParallelAxesTest >> testSetMaxLength [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +341,7 @@ HighchartsChartParallelAxesTest >> testMaxLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMaxPadding [
+HighchartsChartParallelAxesTest >> testSetMaxPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +355,7 @@ HighchartsChartParallelAxesTest >> testMaxPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMaxRange [
+HighchartsChartParallelAxesTest >> testSetMaxRange [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +369,7 @@ HighchartsChartParallelAxesTest >> testMaxRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMin [
+HighchartsChartParallelAxesTest >> testSetMin [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +383,7 @@ HighchartsChartParallelAxesTest >> testMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinLength [
+HighchartsChartParallelAxesTest >> testSetMinLength [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +397,7 @@ HighchartsChartParallelAxesTest >> testMinLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinPadding [
+HighchartsChartParallelAxesTest >> testSetMinPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +411,7 @@ HighchartsChartParallelAxesTest >> testMinPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinRange [
+HighchartsChartParallelAxesTest >> testSetMinRange [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +425,7 @@ HighchartsChartParallelAxesTest >> testMinRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinTickInterval [
+HighchartsChartParallelAxesTest >> testSetMinTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +439,7 @@ HighchartsChartParallelAxesTest >> testMinTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinorTickColor [
+HighchartsChartParallelAxesTest >> testSetMinorTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +453,7 @@ HighchartsChartParallelAxesTest >> testMinorTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinorTickInterval [
+HighchartsChartParallelAxesTest >> testSetMinorTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +467,7 @@ HighchartsChartParallelAxesTest >> testMinorTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinorTickLength [
+HighchartsChartParallelAxesTest >> testSetMinorTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +481,7 @@ HighchartsChartParallelAxesTest >> testMinorTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinorTickPosition [
+HighchartsChartParallelAxesTest >> testSetMinorTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +495,7 @@ HighchartsChartParallelAxesTest >> testMinorTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinorTickWidth [
+HighchartsChartParallelAxesTest >> testSetMinorTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +509,7 @@ HighchartsChartParallelAxesTest >> testMinorTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testMinorTicks [
+HighchartsChartParallelAxesTest >> testSetMinorTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +523,7 @@ HighchartsChartParallelAxesTest >> testMinorTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testOffset [
+HighchartsChartParallelAxesTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +537,7 @@ HighchartsChartParallelAxesTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testOpposite [
+HighchartsChartParallelAxesTest >> testSetOpposite [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +551,7 @@ HighchartsChartParallelAxesTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testPane [
+HighchartsChartParallelAxesTest >> testSetPane [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +565,7 @@ HighchartsChartParallelAxesTest >> testPane [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testRange [
+HighchartsChartParallelAxesTest >> testSetRange [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +579,7 @@ HighchartsChartParallelAxesTest >> testRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testReversed [
+HighchartsChartParallelAxesTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +593,7 @@ HighchartsChartParallelAxesTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testReversedStacks [
+HighchartsChartParallelAxesTest >> testSetReversedStacks [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +607,7 @@ HighchartsChartParallelAxesTest >> testReversedStacks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testShowEmpty [
+HighchartsChartParallelAxesTest >> testSetShowEmpty [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +621,7 @@ HighchartsChartParallelAxesTest >> testShowEmpty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testShowFirstLabel [
+HighchartsChartParallelAxesTest >> testSetShowFirstLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +635,7 @@ HighchartsChartParallelAxesTest >> testShowFirstLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testShowLastLabel [
+HighchartsChartParallelAxesTest >> testSetShowLastLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +649,7 @@ HighchartsChartParallelAxesTest >> testShowLastLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testSoftMax [
+HighchartsChartParallelAxesTest >> testSetSoftMax [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +663,7 @@ HighchartsChartParallelAxesTest >> testSoftMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testSoftMin [
+HighchartsChartParallelAxesTest >> testSetSoftMin [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +677,7 @@ HighchartsChartParallelAxesTest >> testSoftMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testStartOfWeek [
+HighchartsChartParallelAxesTest >> testSetStartOfWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +691,7 @@ HighchartsChartParallelAxesTest >> testStartOfWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testStartOnTick [
+HighchartsChartParallelAxesTest >> testSetStartOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +705,7 @@ HighchartsChartParallelAxesTest >> testStartOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testStaticScale [
+HighchartsChartParallelAxesTest >> testSetStaticScale [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +719,7 @@ HighchartsChartParallelAxesTest >> testStaticScale [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickAmount [
+HighchartsChartParallelAxesTest >> testSetTickAmount [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +733,7 @@ HighchartsChartParallelAxesTest >> testTickAmount [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickColor [
+HighchartsChartParallelAxesTest >> testSetTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +747,7 @@ HighchartsChartParallelAxesTest >> testTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickInterval [
+HighchartsChartParallelAxesTest >> testSetTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +761,7 @@ HighchartsChartParallelAxesTest >> testTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickLength [
+HighchartsChartParallelAxesTest >> testSetTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +775,7 @@ HighchartsChartParallelAxesTest >> testTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickPixelInterval [
+HighchartsChartParallelAxesTest >> testSetTickPixelInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +789,7 @@ HighchartsChartParallelAxesTest >> testTickPixelInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickPosition [
+HighchartsChartParallelAxesTest >> testSetTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +803,7 @@ HighchartsChartParallelAxesTest >> testTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickPositioner [
+HighchartsChartParallelAxesTest >> testSetTickPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +817,7 @@ HighchartsChartParallelAxesTest >> testTickPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickPositions [
+HighchartsChartParallelAxesTest >> testSetTickPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +831,7 @@ HighchartsChartParallelAxesTest >> testTickPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickWidth [
+HighchartsChartParallelAxesTest >> testSetTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +845,7 @@ HighchartsChartParallelAxesTest >> testTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTickmarkPlacement [
+HighchartsChartParallelAxesTest >> testSetTickmarkPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +859,7 @@ HighchartsChartParallelAxesTest >> testTickmarkPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTooltipValueFormat [
+HighchartsChartParallelAxesTest >> testSetTooltipValueFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +873,7 @@ HighchartsChartParallelAxesTest >> testTooltipValueFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testTop [
+HighchartsChartParallelAxesTest >> testSetTop [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +887,7 @@ HighchartsChartParallelAxesTest >> testTop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testType [
+HighchartsChartParallelAxesTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +901,7 @@ HighchartsChartParallelAxesTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testUniqueNames [
+HighchartsChartParallelAxesTest >> testSetUniqueNames [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +915,7 @@ HighchartsChartParallelAxesTest >> testUniqueNames [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testUnits [
+HighchartsChartParallelAxesTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +929,7 @@ HighchartsChartParallelAxesTest >> testUnits [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testVisible [
+HighchartsChartParallelAxesTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +943,7 @@ HighchartsChartParallelAxesTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testWidth [
+HighchartsChartParallelAxesTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +957,7 @@ HighchartsChartParallelAxesTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTest >> testZoomEnabled [
+HighchartsChartParallelAxesTest >> testSetZoomEnabled [
 
 	| component javascript expectedConfiguration |
 

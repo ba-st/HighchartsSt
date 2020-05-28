@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsIkhLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsIkhLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

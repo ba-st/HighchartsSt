@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testAllButtonsEnabled [
+HighstockRangeSelectorTest >> testGetButtonPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockRangeSelector new.
+	component buttonPosition.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttonPosition' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockRangeSelectorTest >> testGetButtons [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockRangeSelector new.
+	component buttons.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttons' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockRangeSelectorTest >> testGetInputPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockRangeSelector new.
+	component inputPosition.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'inputPosition' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockRangeSelectorTest >> testSetAllButtonsEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockRangeSelectorTest >> testAllButtonsEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testButtonSpacing [
+HighstockRangeSelectorTest >> testSetButtonSpacing [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockRangeSelectorTest >> testButtonSpacing [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testButtonTheme [
+HighstockRangeSelectorTest >> testSetButtonTheme [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockRangeSelectorTest >> testButtonTheme [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testEnabled [
+HighstockRangeSelectorTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockRangeSelectorTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testFloating [
+HighstockRangeSelectorTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockRangeSelectorTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testHeight [
+HighstockRangeSelectorTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockRangeSelectorTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputBoxBorderColor [
+HighstockRangeSelectorTest >> testSetInputBoxBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockRangeSelectorTest >> testInputBoxBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputBoxHeight [
+HighstockRangeSelectorTest >> testSetInputBoxHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockRangeSelectorTest >> testInputBoxHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputBoxStyle [
+HighstockRangeSelectorTest >> testSetInputBoxStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockRangeSelectorTest >> testInputBoxStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputBoxWidth [
+HighstockRangeSelectorTest >> testSetInputBoxWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockRangeSelectorTest >> testInputBoxWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputDateFormat [
+HighstockRangeSelectorTest >> testSetInputDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockRangeSelectorTest >> testInputDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputDateParser [
+HighstockRangeSelectorTest >> testSetInputDateParser [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockRangeSelectorTest >> testInputDateParser [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputEditDateFormat [
+HighstockRangeSelectorTest >> testSetInputEditDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockRangeSelectorTest >> testInputEditDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputEnabled [
+HighstockRangeSelectorTest >> testSetInputEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockRangeSelectorTest >> testInputEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testInputStyle [
+HighstockRangeSelectorTest >> testSetInputStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockRangeSelectorTest >> testInputStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testLabelStyle [
+HighstockRangeSelectorTest >> testSetLabelStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockRangeSelectorTest >> testLabelStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testSelected [
+HighstockRangeSelectorTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockRangeSelectorTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testVerticalAlign [
+HighstockRangeSelectorTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockRangeSelectorTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testX [
+HighstockRangeSelectorTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockRangeSelectorTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorTest >> testY [
+HighstockRangeSelectorTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

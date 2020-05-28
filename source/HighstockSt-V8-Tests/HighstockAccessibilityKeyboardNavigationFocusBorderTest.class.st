@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testEnabled [
+HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibilityKeyboardNavigationFocusBorder new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testHideBrowserFocusOutline [
+HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testSetHideBrowserFocusOutline [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testHideBrowserFocusO
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testMargin [
+HighstockAccessibilityKeyboardNavigationFocusBorderTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 

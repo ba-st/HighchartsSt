@@ -5,7 +5,189 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testAllAreas [
+HighstockPlotOptionsCandlestickTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestick new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +201,7 @@ HighstockPlotOptionsCandlestickTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testAllowPointSelect [
+HighstockPlotOptionsCandlestickTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +215,7 @@ HighstockPlotOptionsCandlestickTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testAnimationLimit [
+HighstockPlotOptionsCandlestickTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +229,7 @@ HighstockPlotOptionsCandlestickTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testBoostBlending [
+HighstockPlotOptionsCandlestickTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +243,7 @@ HighstockPlotOptionsCandlestickTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testBoostThreshold [
+HighstockPlotOptionsCandlestickTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +257,7 @@ HighstockPlotOptionsCandlestickTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testClassName [
+HighstockPlotOptionsCandlestickTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +271,7 @@ HighstockPlotOptionsCandlestickTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testClip [
+HighstockPlotOptionsCandlestickTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +285,7 @@ HighstockPlotOptionsCandlestickTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testColor [
+HighstockPlotOptionsCandlestickTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +299,7 @@ HighstockPlotOptionsCandlestickTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testColorAxis [
+HighstockPlotOptionsCandlestickTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +313,7 @@ HighstockPlotOptionsCandlestickTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testColorByPoint [
+HighstockPlotOptionsCandlestickTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +327,7 @@ HighstockPlotOptionsCandlestickTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testColorIndex [
+HighstockPlotOptionsCandlestickTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +341,7 @@ HighstockPlotOptionsCandlestickTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testColorKey [
+HighstockPlotOptionsCandlestickTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +355,7 @@ HighstockPlotOptionsCandlestickTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testColors [
+HighstockPlotOptionsCandlestickTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +369,7 @@ HighstockPlotOptionsCandlestickTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testCompare [
+HighstockPlotOptionsCandlestickTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +383,7 @@ HighstockPlotOptionsCandlestickTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testCompareBase [
+HighstockPlotOptionsCandlestickTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +397,7 @@ HighstockPlotOptionsCandlestickTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testCompareStart [
+HighstockPlotOptionsCandlestickTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +411,7 @@ HighstockPlotOptionsCandlestickTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testCropThreshold [
+HighstockPlotOptionsCandlestickTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +425,7 @@ HighstockPlotOptionsCandlestickTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testCursor [
+HighstockPlotOptionsCandlestickTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighstockPlotOptionsCandlestickTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testCustom [
+HighstockPlotOptionsCandlestickTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighstockPlotOptionsCandlestickTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testDashStyle [
+HighstockPlotOptionsCandlestickTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighstockPlotOptionsCandlestickTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testDepth [
+HighstockPlotOptionsCandlestickTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighstockPlotOptionsCandlestickTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testDescription [
+HighstockPlotOptionsCandlestickTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighstockPlotOptionsCandlestickTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testEdgeColor [
+HighstockPlotOptionsCandlestickTest >> testSetEdgeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighstockPlotOptionsCandlestickTest >> testEdgeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testEdgeWidth [
+HighstockPlotOptionsCandlestickTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighstockPlotOptionsCandlestickTest >> testEdgeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testEnableMouseTracking [
+HighstockPlotOptionsCandlestickTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighstockPlotOptionsCandlestickTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testEvents [
+HighstockPlotOptionsCandlestickTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighstockPlotOptionsCandlestickTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testFindNearestPointBy [
+HighstockPlotOptionsCandlestickTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighstockPlotOptionsCandlestickTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testGetExtremesFromAll [
+HighstockPlotOptionsCandlestickTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighstockPlotOptionsCandlestickTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testGroupPadding [
+HighstockPlotOptionsCandlestickTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighstockPlotOptionsCandlestickTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testGroupZPadding [
+HighstockPlotOptionsCandlestickTest >> testSetGroupZPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighstockPlotOptionsCandlestickTest >> testGroupZPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testGrouping [
+HighstockPlotOptionsCandlestickTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighstockPlotOptionsCandlestickTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testIncludeInDataExport [
+HighstockPlotOptionsCandlestickTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighstockPlotOptionsCandlestickTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testJoinBy [
+HighstockPlotOptionsCandlestickTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighstockPlotOptionsCandlestickTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testKeys [
+HighstockPlotOptionsCandlestickTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighstockPlotOptionsCandlestickTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testLineColor [
+HighstockPlotOptionsCandlestickTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighstockPlotOptionsCandlestickTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testLineWidth [
+HighstockPlotOptionsCandlestickTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighstockPlotOptionsCandlestickTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testLinkedTo [
+HighstockPlotOptionsCandlestickTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighstockPlotOptionsCandlestickTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testMaxPointWidth [
+HighstockPlotOptionsCandlestickTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighstockPlotOptionsCandlestickTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testMinPointLength [
+HighstockPlotOptionsCandlestickTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +733,7 @@ HighstockPlotOptionsCandlestickTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testNavigatorOptions [
+HighstockPlotOptionsCandlestickTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +747,7 @@ HighstockPlotOptionsCandlestickTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testNegativeColor [
+HighstockPlotOptionsCandlestickTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +761,7 @@ HighstockPlotOptionsCandlestickTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testOpacity [
+HighstockPlotOptionsCandlestickTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +775,7 @@ HighstockPlotOptionsCandlestickTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsCandlestickTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +789,7 @@ HighstockPlotOptionsCandlestickTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointInterval [
+HighstockPlotOptionsCandlestickTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +803,7 @@ HighstockPlotOptionsCandlestickTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointIntervalUnit [
+HighstockPlotOptionsCandlestickTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +817,7 @@ HighstockPlotOptionsCandlestickTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointPadding [
+HighstockPlotOptionsCandlestickTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +831,7 @@ HighstockPlotOptionsCandlestickTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointPlacement [
+HighstockPlotOptionsCandlestickTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +845,7 @@ HighstockPlotOptionsCandlestickTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointRange [
+HighstockPlotOptionsCandlestickTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +859,7 @@ HighstockPlotOptionsCandlestickTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointStart [
+HighstockPlotOptionsCandlestickTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +873,7 @@ HighstockPlotOptionsCandlestickTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointValKey [
+HighstockPlotOptionsCandlestickTest >> testSetPointValKey [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +887,7 @@ HighstockPlotOptionsCandlestickTest >> testPointValKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testPointWidth [
+HighstockPlotOptionsCandlestickTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +901,7 @@ HighstockPlotOptionsCandlestickTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testSelected [
+HighstockPlotOptionsCandlestickTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +915,7 @@ HighstockPlotOptionsCandlestickTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testShadow [
+HighstockPlotOptionsCandlestickTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +929,7 @@ HighstockPlotOptionsCandlestickTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testShowCheckbox [
+HighstockPlotOptionsCandlestickTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +943,7 @@ HighstockPlotOptionsCandlestickTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testShowInLegend [
+HighstockPlotOptionsCandlestickTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +957,7 @@ HighstockPlotOptionsCandlestickTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testShowInNavigator [
+HighstockPlotOptionsCandlestickTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +971,7 @@ HighstockPlotOptionsCandlestickTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsCandlestickTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +985,7 @@ HighstockPlotOptionsCandlestickTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testSoftThreshold [
+HighstockPlotOptionsCandlestickTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +999,7 @@ HighstockPlotOptionsCandlestickTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testStates [
+HighstockPlotOptionsCandlestickTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1013,7 @@ HighstockPlotOptionsCandlestickTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testStickyTracking [
+HighstockPlotOptionsCandlestickTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1027,7 @@ HighstockPlotOptionsCandlestickTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testThreshold [
+HighstockPlotOptionsCandlestickTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1041,7 @@ HighstockPlotOptionsCandlestickTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testTurboThreshold [
+HighstockPlotOptionsCandlestickTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1055,7 @@ HighstockPlotOptionsCandlestickTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testUpColor [
+HighstockPlotOptionsCandlestickTest >> testSetUpColor [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1069,7 @@ HighstockPlotOptionsCandlestickTest >> testUpColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testUpLineColor [
+HighstockPlotOptionsCandlestickTest >> testSetUpLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1083,7 @@ HighstockPlotOptionsCandlestickTest >> testUpLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testVisible [
+HighstockPlotOptionsCandlestickTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1097,7 @@ HighstockPlotOptionsCandlestickTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testZIndex [
+HighstockPlotOptionsCandlestickTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1111,7 @@ HighstockPlotOptionsCandlestickTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTest >> testZoneAxis [
+HighstockPlotOptionsCandlestickTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

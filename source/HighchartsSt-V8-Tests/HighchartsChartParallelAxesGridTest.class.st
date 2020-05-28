@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesGridTest >> testBorderColor [
+HighchartsChartParallelAxesGridTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesGridTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesGridTest >> testBorderWidth [
+HighchartsChartParallelAxesGridTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartParallelAxesGridTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesGridTest >> testCellHeight [
+HighchartsChartParallelAxesGridTest >> testSetCellHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsChartParallelAxesGridTest >> testCellHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesGridTest >> testColumns [
+HighchartsChartParallelAxesGridTest >> testSetColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsChartParallelAxesGridTest >> testColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesGridTest >> testEnabled [
+HighchartsChartParallelAxesGridTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testClassName [
+HighchartsSeriesColumnrangeDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnrangeData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnrangeDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnrangeData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnrangeDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnrangeData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnrangeDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesColumnrangeDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testColor [
+HighchartsSeriesColumnrangeDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesColumnrangeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testColorIndex [
+HighchartsSeriesColumnrangeDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesColumnrangeDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testCustom [
+HighchartsSeriesColumnrangeDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesColumnrangeDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testDescription [
+HighchartsSeriesColumnrangeDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesColumnrangeDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testDrilldown [
+HighchartsSeriesColumnrangeDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesColumnrangeDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testEvents [
+HighchartsSeriesColumnrangeDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesColumnrangeDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testHigh [
+HighchartsSeriesColumnrangeDataTest >> testSetHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesColumnrangeDataTest >> testHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testId [
+HighchartsSeriesColumnrangeDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesColumnrangeDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testLabelrank [
+HighchartsSeriesColumnrangeDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesColumnrangeDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testLow [
+HighchartsSeriesColumnrangeDataTest >> testSetLow [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesColumnrangeDataTest >> testLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testName [
+HighchartsSeriesColumnrangeDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesColumnrangeDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testSelected [
+HighchartsSeriesColumnrangeDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesColumnrangeDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataTest >> testX [
+HighchartsSeriesColumnrangeDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 

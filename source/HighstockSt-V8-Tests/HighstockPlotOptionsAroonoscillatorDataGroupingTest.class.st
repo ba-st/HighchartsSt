@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testApproximation [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testDateTimeLabelFormats 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testEnabled [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testForced [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testUnits [
+HighstockPlotOptionsAroonoscillatorDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

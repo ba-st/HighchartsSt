@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsEventsTest >> testAdd [
+HighchartsAnnotationsEventsTest >> testSetAdd [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAnnotationsEventsTest >> testAdd [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsEventsTest >> testAfterUpdate [
+HighchartsAnnotationsEventsTest >> testSetAfterUpdate [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAnnotationsEventsTest >> testAfterUpdate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsEventsTest >> testRemove [
+HighchartsAnnotationsEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 

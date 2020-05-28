@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testX [
+HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testY [
+HighstockAnnotationsInfinityLineTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinePointTest >> testEvents [
+HighstockPlotOptionsLinePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

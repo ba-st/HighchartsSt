@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsTimeTest >> testDate [
+HighchartsTimeTest >> testSetDate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsTimeTest >> testDate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTimeTest >> testGetTimezoneOffset [
+HighchartsTimeTest >> testSetGetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsTimeTest >> testGetTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTimeTest >> testTimezone [
+HighchartsTimeTest >> testSetTimezone [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsTimeTest >> testTimezone [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTimeTest >> testTimezoneOffset [
+HighchartsTimeTest >> testSetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsTimeTest >> testTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTimeTest >> testUseUTC [
+HighchartsTimeTest >> testSetUseUTC [
 
 	| component javascript expectedConfiguration |
 

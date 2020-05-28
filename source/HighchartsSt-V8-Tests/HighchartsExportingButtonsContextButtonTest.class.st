@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testAlign [
+HighchartsExportingButtonsContextButtonTest >> testGetTheme [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExportingButtonsContextButton new.
+	component theme.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'theme' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsExportingButtonsContextButtonTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsExportingButtonsContextButtonTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testButtonSpacing [
+HighchartsExportingButtonsContextButtonTest >> testSetButtonSpacing [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsExportingButtonsContextButtonTest >> testButtonSpacing [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testClassName [
+HighchartsExportingButtonsContextButtonTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsExportingButtonsContextButtonTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testEnabled [
+HighchartsExportingButtonsContextButtonTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsExportingButtonsContextButtonTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testHeight [
+HighchartsExportingButtonsContextButtonTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsExportingButtonsContextButtonTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testMenuClassName [
+HighchartsExportingButtonsContextButtonTest >> testSetMenuClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsExportingButtonsContextButtonTest >> testMenuClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testMenuItems [
+HighchartsExportingButtonsContextButtonTest >> testSetMenuItems [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsExportingButtonsContextButtonTest >> testMenuItems [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testOnclick [
+HighchartsExportingButtonsContextButtonTest >> testSetOnclick [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsExportingButtonsContextButtonTest >> testOnclick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testSymbol [
+HighchartsExportingButtonsContextButtonTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsExportingButtonsContextButtonTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testSymbolFill [
+HighchartsExportingButtonsContextButtonTest >> testSetSymbolFill [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsExportingButtonsContextButtonTest >> testSymbolFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testSymbolSize [
+HighchartsExportingButtonsContextButtonTest >> testSetSymbolSize [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsExportingButtonsContextButtonTest >> testSymbolSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testSymbolStroke [
+HighchartsExportingButtonsContextButtonTest >> testSetSymbolStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsExportingButtonsContextButtonTest >> testSymbolStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testSymbolStrokeWidth [
+HighchartsExportingButtonsContextButtonTest >> testSetSymbolStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsExportingButtonsContextButtonTest >> testSymbolStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testSymbolX [
+HighchartsExportingButtonsContextButtonTest >> testSetSymbolX [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsExportingButtonsContextButtonTest >> testSymbolX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testSymbolY [
+HighchartsExportingButtonsContextButtonTest >> testSetSymbolY [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighchartsExportingButtonsContextButtonTest >> testSymbolY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testText [
+HighchartsExportingButtonsContextButtonTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighchartsExportingButtonsContextButtonTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testTitleKey [
+HighchartsExportingButtonsContextButtonTest >> testSetTitleKey [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighchartsExportingButtonsContextButtonTest >> testTitleKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testVerticalAlign [
+HighchartsExportingButtonsContextButtonTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighchartsExportingButtonsContextButtonTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testWidth [
+HighchartsExportingButtonsContextButtonTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighchartsExportingButtonsContextButtonTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testX [
+HighchartsExportingButtonsContextButtonTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighchartsExportingButtonsContextButtonTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> testY [
+HighchartsExportingButtonsContextButtonTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +313,7 @@ HighchartsExportingButtonsContextButtonTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonTest >> test_titleKey [
+HighchartsExportingButtonsContextButtonTest >> testSet_titleKey [
 
 	| component javascript expectedConfiguration |
 

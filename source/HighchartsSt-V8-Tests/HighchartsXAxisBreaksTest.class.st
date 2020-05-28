@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisBreaksTest >> testBreakSize [
+HighchartsXAxisBreaksTest >> testSetBreakSize [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsXAxisBreaksTest >> testBreakSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisBreaksTest >> testFrom [
+HighchartsXAxisBreaksTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsXAxisBreaksTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisBreaksTest >> testRepeat [
+HighchartsXAxisBreaksTest >> testSetRepeat [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsXAxisBreaksTest >> testRepeat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisBreaksTest >> testTo [
+HighchartsXAxisBreaksTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

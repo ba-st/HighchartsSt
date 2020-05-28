@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsTest >> testBorderColor [
+HighchartsSeriesSunburstLevelsTest >> testGetColorVariation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstLevels new.
+	component colorVariation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorVariation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstLevelsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstLevels new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstLevelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsSeriesSunburstLevelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsTest >> testBorderDashStyle [
+HighchartsSeriesSunburstLevelsTest >> testSetBorderDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsSeriesSunburstLevelsTest >> testBorderDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsTest >> testBorderWidth [
+HighchartsSeriesSunburstLevelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsSeriesSunburstLevelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsTest >> testColor [
+HighchartsSeriesSunburstLevelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsSeriesSunburstLevelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsTest >> testLevelSize [
+HighchartsSeriesSunburstLevelsTest >> testSetLevelSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsSeriesSunburstLevelsTest >> testLevelSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsTest >> testRotation [
+HighchartsSeriesSunburstLevelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsSeriesSunburstLevelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsTest >> testRotationMode [
+HighchartsSeriesSunburstLevelsTest >> testSetRotationMode [
 
 	| component javascript expectedConfiguration |
 

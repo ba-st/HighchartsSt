@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsExportingCsvTest >> testColumnHeaderFormatter [
+HighchartsExportingCsvTest >> testSetColumnHeaderFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsExportingCsvTest >> testColumnHeaderFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingCsvTest >> testDateFormat [
+HighchartsExportingCsvTest >> testSetDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsExportingCsvTest >> testDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingCsvTest >> testDecimalPoint [
+HighchartsExportingCsvTest >> testSetDecimalPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsExportingCsvTest >> testDecimalPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingCsvTest >> testItemDelimiter [
+HighchartsExportingCsvTest >> testSetItemDelimiter [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsExportingCsvTest >> testItemDelimiter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingCsvTest >> testLineDelimiter [
+HighchartsExportingCsvTest >> testSetLineDelimiter [
 
 	| component javascript expectedConfiguration |
 

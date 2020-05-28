@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testAllowPointSelect [
+HighstockPlotOptionsStochasticTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetSmoothedLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component smoothedLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'smoothedLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStochastic new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStochasticTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +229,7 @@ HighstockPlotOptionsStochasticTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testAnimationLimit [
+HighstockPlotOptionsStochasticTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +243,7 @@ HighstockPlotOptionsStochasticTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testBoostBlending [
+HighstockPlotOptionsStochasticTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +257,7 @@ HighstockPlotOptionsStochasticTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testBoostThreshold [
+HighstockPlotOptionsStochasticTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +271,7 @@ HighstockPlotOptionsStochasticTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testBorderColor [
+HighstockPlotOptionsStochasticTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +285,7 @@ HighstockPlotOptionsStochasticTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testBorderWidth [
+HighstockPlotOptionsStochasticTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +299,7 @@ HighstockPlotOptionsStochasticTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testClassName [
+HighstockPlotOptionsStochasticTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +313,7 @@ HighstockPlotOptionsStochasticTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testClip [
+HighstockPlotOptionsStochasticTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +327,7 @@ HighstockPlotOptionsStochasticTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testColor [
+HighstockPlotOptionsStochasticTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +341,7 @@ HighstockPlotOptionsStochasticTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testColorIndex [
+HighstockPlotOptionsStochasticTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +355,7 @@ HighstockPlotOptionsStochasticTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testColorKey [
+HighstockPlotOptionsStochasticTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +369,7 @@ HighstockPlotOptionsStochasticTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCompare [
+HighstockPlotOptionsStochasticTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +383,7 @@ HighstockPlotOptionsStochasticTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCompareBase [
+HighstockPlotOptionsStochasticTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +397,7 @@ HighstockPlotOptionsStochasticTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCompareStart [
+HighstockPlotOptionsStochasticTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +411,7 @@ HighstockPlotOptionsStochasticTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCompareToMain [
+HighstockPlotOptionsStochasticTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighstockPlotOptionsStochasticTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testConnectEnds [
+HighstockPlotOptionsStochasticTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockPlotOptionsStochasticTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testConnectNulls [
+HighstockPlotOptionsStochasticTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,7 @@ HighstockPlotOptionsStochasticTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCrisp [
+HighstockPlotOptionsStochasticTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockPlotOptionsStochasticTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCropThreshold [
+HighstockPlotOptionsStochasticTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,7 @@ HighstockPlotOptionsStochasticTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCursor [
+HighstockPlotOptionsStochasticTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +495,7 @@ HighstockPlotOptionsStochasticTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testCustom [
+HighstockPlotOptionsStochasticTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +509,7 @@ HighstockPlotOptionsStochasticTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testDashStyle [
+HighstockPlotOptionsStochasticTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +523,7 @@ HighstockPlotOptionsStochasticTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testDescription [
+HighstockPlotOptionsStochasticTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +537,7 @@ HighstockPlotOptionsStochasticTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testEnableMouseTracking [
+HighstockPlotOptionsStochasticTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +551,7 @@ HighstockPlotOptionsStochasticTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testEvents [
+HighstockPlotOptionsStochasticTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +565,7 @@ HighstockPlotOptionsStochasticTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testFindNearestPointBy [
+HighstockPlotOptionsStochasticTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +579,7 @@ HighstockPlotOptionsStochasticTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testGapSize [
+HighstockPlotOptionsStochasticTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +593,7 @@ HighstockPlotOptionsStochasticTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testGapUnit [
+HighstockPlotOptionsStochasticTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +607,7 @@ HighstockPlotOptionsStochasticTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testGetExtremesFromAll [
+HighstockPlotOptionsStochasticTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +621,7 @@ HighstockPlotOptionsStochasticTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testIncludeInDataExport [
+HighstockPlotOptionsStochasticTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighstockPlotOptionsStochasticTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testLineWidth [
+HighstockPlotOptionsStochasticTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +649,7 @@ HighstockPlotOptionsStochasticTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testLinecap [
+HighstockPlotOptionsStochasticTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +663,7 @@ HighstockPlotOptionsStochasticTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testLinkedTo [
+HighstockPlotOptionsStochasticTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +677,7 @@ HighstockPlotOptionsStochasticTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testName [
+HighstockPlotOptionsStochasticTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +691,7 @@ HighstockPlotOptionsStochasticTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testNegativeColor [
+HighstockPlotOptionsStochasticTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +705,7 @@ HighstockPlotOptionsStochasticTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testOpacity [
+HighstockPlotOptionsStochasticTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +719,7 @@ HighstockPlotOptionsStochasticTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsStochasticTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +733,7 @@ HighstockPlotOptionsStochasticTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testSelected [
+HighstockPlotOptionsStochasticTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +747,7 @@ HighstockPlotOptionsStochasticTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testShadow [
+HighstockPlotOptionsStochasticTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +761,7 @@ HighstockPlotOptionsStochasticTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testShowCheckbox [
+HighstockPlotOptionsStochasticTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +775,7 @@ HighstockPlotOptionsStochasticTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testShowInLegend [
+HighstockPlotOptionsStochasticTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +789,7 @@ HighstockPlotOptionsStochasticTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsStochasticTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +803,7 @@ HighstockPlotOptionsStochasticTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testSoftThreshold [
+HighstockPlotOptionsStochasticTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +817,7 @@ HighstockPlotOptionsStochasticTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testStates [
+HighstockPlotOptionsStochasticTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +831,7 @@ HighstockPlotOptionsStochasticTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testStep [
+HighstockPlotOptionsStochasticTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighstockPlotOptionsStochasticTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testStickyTracking [
+HighstockPlotOptionsStochasticTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +859,7 @@ HighstockPlotOptionsStochasticTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testThreshold [
+HighstockPlotOptionsStochasticTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +873,7 @@ HighstockPlotOptionsStochasticTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testTurboThreshold [
+HighstockPlotOptionsStochasticTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +887,7 @@ HighstockPlotOptionsStochasticTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testVisible [
+HighstockPlotOptionsStochasticTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +901,7 @@ HighstockPlotOptionsStochasticTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testZIndex [
+HighstockPlotOptionsStochasticTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +915,7 @@ HighstockPlotOptionsStochasticTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticTest >> testZoneAxis [
+HighstockPlotOptionsStochasticTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityScreenReaderSectionTest >> testAfterRegionLabel [
+HighchartsLangAccessibilityScreenReaderSectionTest >> testGetAnnotations [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLangAccessibilityScreenReaderSection new.
+	component annotations.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'annotations' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLangAccessibilityScreenReaderSectionTest >> testSetAfterRegionLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsLangAccessibilityScreenReaderSectionTest >> testAfterRegionLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityScreenReaderSectionTest >> testBeforeRegionLabel [
+HighchartsLangAccessibilityScreenReaderSectionTest >> testSetBeforeRegionLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsLangAccessibilityScreenReaderSectionTest >> testBeforeRegionLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityScreenReaderSectionTest >> testEndOfChartMarker [
+HighchartsLangAccessibilityScreenReaderSectionTest >> testSetEndOfChartMarker [
 
 	| component javascript expectedConfiguration |
 

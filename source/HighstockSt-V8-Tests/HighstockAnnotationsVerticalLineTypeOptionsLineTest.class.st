@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLineTest >> testFill [
+HighstockAnnotationsVerticalLineTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

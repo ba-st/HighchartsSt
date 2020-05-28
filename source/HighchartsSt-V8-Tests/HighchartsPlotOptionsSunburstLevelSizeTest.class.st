@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelSizeTest >> testUnit [
+HighchartsPlotOptionsSunburstLevelSizeTest >> testSetUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSunburstLevelSizeTest >> testUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelSizeTest >> testValue [
+HighchartsPlotOptionsSunburstLevelSizeTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

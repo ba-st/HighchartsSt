@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesPointsTest >> testX [
+HighstockNavigationAnnotationsOptionsShapesPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigationAnnotationsOptionsShapesPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesPointsTest >> testXAxis [
+HighstockNavigationAnnotationsOptionsShapesPointsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigationAnnotationsOptionsShapesPointsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesPointsTest >> testY [
+HighstockNavigationAnnotationsOptionsShapesPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigationAnnotationsOptionsShapesPointsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapesPointsTest >> testYAxis [
+HighstockNavigationAnnotationsOptionsShapesPointsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

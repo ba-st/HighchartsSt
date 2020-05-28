@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMomentumStatesHoverAnimationTest >> testDuration [
+HighstockPlotOptionsMomentumStatesHoverAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointTest >> testEvents [
+HighchartsPlotOptionsSolidgaugePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

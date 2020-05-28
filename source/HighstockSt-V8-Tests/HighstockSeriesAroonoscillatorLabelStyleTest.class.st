@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelStyleTest >> testFontWeight [
+HighstockSeriesAroonoscillatorLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

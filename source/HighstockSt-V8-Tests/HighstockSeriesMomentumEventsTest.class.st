@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testAfterAnimate [
+HighstockSeriesMomentumEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMomentumEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testCheckboxClick [
+HighstockSeriesMomentumEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesMomentumEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testClick [
+HighstockSeriesMomentumEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesMomentumEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testHide [
+HighstockSeriesMomentumEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesMomentumEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testLegendItemClick [
+HighstockSeriesMomentumEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesMomentumEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testMouseOut [
+HighstockSeriesMomentumEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesMomentumEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testMouseOver [
+HighstockSeriesMomentumEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesMomentumEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumEventsTest >> testShow [
+HighstockSeriesMomentumEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrParamsTest >> testPeriod [
+HighstockSeriesWilliamsrParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testBorderRadius [
+HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testBorderRadiu
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testColor [
+HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testLineWidth [
+HighchartsAccessibilityKeyboardNavigationFocusBorderStyleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

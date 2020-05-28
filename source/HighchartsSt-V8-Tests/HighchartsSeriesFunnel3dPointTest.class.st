@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dPointTest >> testEvents [
+HighchartsSeriesFunnel3dPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

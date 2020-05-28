@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdParamsTest >> testIndex [
+HighstockSeriesMacdParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMacdParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdParamsTest >> testLongPeriod [
+HighstockSeriesMacdParamsTest >> testSetLongPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesMacdParamsTest >> testLongPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdParamsTest >> testPeriod [
+HighstockSeriesMacdParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesMacdParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdParamsTest >> testShortPeriod [
+HighstockSeriesMacdParamsTest >> testSetShortPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesMacdParamsTest >> testShortPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdParamsTest >> testSignalPeriod [
+HighstockSeriesMacdParamsTest >> testSetSignalPeriod [
 
 	| component javascript expectedConfiguration |
 

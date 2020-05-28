@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testColor [
+HighstockSeriesLollipopDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLollipopData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLollipopDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLollipopData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLollipopDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLollipopData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLollipopDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesLollipopDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testConnectorColor [
+HighstockSeriesLollipopDataTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesLollipopDataTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testConnectorWidth [
+HighstockSeriesLollipopDataTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesLollipopDataTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testCustom [
+HighstockSeriesLollipopDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesLollipopDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testDescription [
+HighstockSeriesLollipopDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesLollipopDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testEvents [
+HighstockSeriesLollipopDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesLollipopDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testHigh [
+HighstockSeriesLollipopDataTest >> testSetHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockSeriesLollipopDataTest >> testHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testId [
+HighstockSeriesLollipopDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockSeriesLollipopDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testLabelrank [
+HighstockSeriesLollipopDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockSeriesLollipopDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testLow [
+HighstockSeriesLollipopDataTest >> testSetLow [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockSeriesLollipopDataTest >> testLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testName [
+HighstockSeriesLollipopDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockSeriesLollipopDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testSelected [
+HighstockSeriesLollipopDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockSeriesLollipopDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopDataTest >> testX [
+HighstockSeriesLollipopDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaPointTest >> testEvents [
+HighstockSeriesWmaPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

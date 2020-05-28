@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testAddSeries [
+HighstockChartEventsTest >> testSetAddSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockChartEventsTest >> testAddSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testAfterPrint [
+HighstockChartEventsTest >> testSetAfterPrint [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockChartEventsTest >> testAfterPrint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testBeforePrint [
+HighstockChartEventsTest >> testSetBeforePrint [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockChartEventsTest >> testBeforePrint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testClick [
+HighstockChartEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockChartEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testExportData [
+HighstockChartEventsTest >> testSetExportData [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockChartEventsTest >> testExportData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testLoad [
+HighstockChartEventsTest >> testSetLoad [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockChartEventsTest >> testLoad [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testRedraw [
+HighstockChartEventsTest >> testSetRedraw [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockChartEventsTest >> testRedraw [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testRender [
+HighstockChartEventsTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockChartEventsTest >> testRender [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartEventsTest >> testSelection [
+HighstockChartEventsTest >> testSetSelection [
 
 	| component javascript expectedConfiguration |
 

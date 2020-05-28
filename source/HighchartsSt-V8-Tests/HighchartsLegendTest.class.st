@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testAlign [
+HighchartsLegendTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegend new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendTest >> testGetBubbleLegend [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegend new.
+	component bubbleLegend.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bubbleLegend' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendTest >> testGetNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegend new.
+	component navigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'navigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegend new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsLegendTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testAlignColumns [
+HighchartsLegendTest >> testSetAlignColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsLegendTest >> testAlignColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testBackgroundColor [
+HighchartsLegendTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsLegendTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testBorderColor [
+HighchartsLegendTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsLegendTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testBorderRadius [
+HighchartsLegendTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsLegendTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testBorderWidth [
+HighchartsLegendTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsLegendTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testEnabled [
+HighchartsLegendTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsLegendTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testFloating [
+HighchartsLegendTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsLegendTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemCheckboxStyle [
+HighchartsLegendTest >> testSetItemCheckboxStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsLegendTest >> testItemCheckboxStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemDistance [
+HighchartsLegendTest >> testSetItemDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighchartsLegendTest >> testItemDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemHiddenStyle [
+HighchartsLegendTest >> testSetItemHiddenStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighchartsLegendTest >> testItemHiddenStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemHoverStyle [
+HighchartsLegendTest >> testSetItemHoverStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighchartsLegendTest >> testItemHoverStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemMarginBottom [
+HighchartsLegendTest >> testSetItemMarginBottom [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +243,7 @@ HighchartsLegendTest >> testItemMarginBottom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemMarginTop [
+HighchartsLegendTest >> testSetItemMarginTop [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +257,7 @@ HighchartsLegendTest >> testItemMarginTop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemStyle [
+HighchartsLegendTest >> testSetItemStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +271,7 @@ HighchartsLegendTest >> testItemStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testItemWidth [
+HighchartsLegendTest >> testSetItemWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +285,7 @@ HighchartsLegendTest >> testItemWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testLabelFormat [
+HighchartsLegendTest >> testSetLabelFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +299,7 @@ HighchartsLegendTest >> testLabelFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testLabelFormatter [
+HighchartsLegendTest >> testSetLabelFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +313,7 @@ HighchartsLegendTest >> testLabelFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testLayout [
+HighchartsLegendTest >> testSetLayout [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +327,7 @@ HighchartsLegendTest >> testLayout [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testLineHeight [
+HighchartsLegendTest >> testSetLineHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +341,7 @@ HighchartsLegendTest >> testLineHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testMargin [
+HighchartsLegendTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +355,7 @@ HighchartsLegendTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testMaxHeight [
+HighchartsLegendTest >> testSetMaxHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +369,7 @@ HighchartsLegendTest >> testMaxHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testPadding [
+HighchartsLegendTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +383,7 @@ HighchartsLegendTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testReversed [
+HighchartsLegendTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +397,7 @@ HighchartsLegendTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testRtl [
+HighchartsLegendTest >> testSetRtl [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +411,7 @@ HighchartsLegendTest >> testRtl [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testShadow [
+HighchartsLegendTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +425,7 @@ HighchartsLegendTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testSquareSymbol [
+HighchartsLegendTest >> testSetSquareSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +439,7 @@ HighchartsLegendTest >> testSquareSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testStyle [
+HighchartsLegendTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +453,7 @@ HighchartsLegendTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testSymbolHeight [
+HighchartsLegendTest >> testSetSymbolHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +467,7 @@ HighchartsLegendTest >> testSymbolHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testSymbolPadding [
+HighchartsLegendTest >> testSetSymbolPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +481,7 @@ HighchartsLegendTest >> testSymbolPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testSymbolRadius [
+HighchartsLegendTest >> testSetSymbolRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +495,7 @@ HighchartsLegendTest >> testSymbolRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testSymbolWidth [
+HighchartsLegendTest >> testSetSymbolWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +509,7 @@ HighchartsLegendTest >> testSymbolWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testUseHTML [
+HighchartsLegendTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +523,7 @@ HighchartsLegendTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testVerticalAlign [
+HighchartsLegendTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +537,7 @@ HighchartsLegendTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testWidth [
+HighchartsLegendTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +551,7 @@ HighchartsLegendTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testX [
+HighchartsLegendTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +565,7 @@ HighchartsLegendTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTest >> testY [
+HighchartsLegendTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

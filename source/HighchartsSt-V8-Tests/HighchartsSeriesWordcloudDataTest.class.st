@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testClassName [
+HighchartsSeriesWordcloudDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloudData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloudData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloudData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesWordcloudDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testColor [
+HighchartsSeriesWordcloudDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesWordcloudDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testColorIndex [
+HighchartsSeriesWordcloudDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesWordcloudDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testCustom [
+HighchartsSeriesWordcloudDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesWordcloudDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testDescription [
+HighchartsSeriesWordcloudDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesWordcloudDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testEvents [
+HighchartsSeriesWordcloudDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesWordcloudDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testId [
+HighchartsSeriesWordcloudDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesWordcloudDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testLabelrank [
+HighchartsSeriesWordcloudDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesWordcloudDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testName [
+HighchartsSeriesWordcloudDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesWordcloudDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataTest >> testSelected [
+HighchartsSeriesWordcloudDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsHeatmapLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

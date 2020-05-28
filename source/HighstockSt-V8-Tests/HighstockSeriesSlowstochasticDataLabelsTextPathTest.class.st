@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesSlowstochasticDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSlowstochasticDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesSlowstochasticDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

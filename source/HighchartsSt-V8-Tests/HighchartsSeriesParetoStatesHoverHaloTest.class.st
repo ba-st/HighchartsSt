@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoStatesHoverHaloTest >> testAttributes [
+HighchartsSeriesParetoStatesHoverHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesParetoStatesHoverHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoStatesHoverHaloTest >> testOpacity [
+HighchartsSeriesParetoStatesHoverHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesParetoStatesHoverHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoStatesHoverHaloTest >> testSize [
+HighchartsSeriesParetoStatesHoverHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

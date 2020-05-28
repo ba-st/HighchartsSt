@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testEnabled [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testEnable
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testEnable
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testFillColor [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testFillCo
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testHeight [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testHeight
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testLineColor [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testLineCo
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testLineWidth [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testLineWi
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testRadius [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testRadius
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSymbol [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSymbol
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testWidth [
+HighstockPlotOptionsLinearregressioninterceptStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

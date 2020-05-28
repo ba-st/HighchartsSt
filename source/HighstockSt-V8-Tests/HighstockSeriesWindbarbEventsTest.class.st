@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testAfterAnimate [
+HighstockSeriesWindbarbEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesWindbarbEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testCheckboxClick [
+HighstockSeriesWindbarbEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesWindbarbEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testClick [
+HighstockSeriesWindbarbEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesWindbarbEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testHide [
+HighstockSeriesWindbarbEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesWindbarbEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testLegendItemClick [
+HighstockSeriesWindbarbEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesWindbarbEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testMouseOut [
+HighstockSeriesWindbarbEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesWindbarbEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testMouseOver [
+HighstockSeriesWindbarbEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesWindbarbEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbEventsTest >> testShow [
+HighstockSeriesWindbarbEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

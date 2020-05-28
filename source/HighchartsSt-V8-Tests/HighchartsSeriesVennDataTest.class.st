@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testClassName [
+HighchartsSeriesVennDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVennData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVennData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVennData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesVennDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testColor [
+HighchartsSeriesVennDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesVennDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testColorIndex [
+HighchartsSeriesVennDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesVennDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testCustom [
+HighchartsSeriesVennDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesVennDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testDescription [
+HighchartsSeriesVennDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesVennDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testDrilldown [
+HighchartsSeriesVennDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesVennDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testEvents [
+HighchartsSeriesVennDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesVennDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testId [
+HighchartsSeriesVennDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesVennDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testLabelrank [
+HighchartsSeriesVennDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesVennDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testName [
+HighchartsSeriesVennDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesVennDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testSelected [
+HighchartsSeriesVennDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesVennDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testSets [
+HighchartsSeriesVennDataTest >> testSetSets [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesVennDataTest >> testSets [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataTest >> testValue [
+HighchartsSeriesVennDataTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsTest >> testHeight [
+HighstockAnnotationsTunnelTypeOptionsTest >> testGetBackground [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsTunnelTypeOptions new.
+	component background.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'background' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsTunnelTypeOptionsTest >> testGetLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsTunnelTypeOptions new.
+	component line.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'line' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsTunnelTypeOptionsTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsTunnelTypeOptions new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsTunnelTypeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockAnnotationsTunnelTypeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsTest >> testHeightControlPoint [
+HighstockAnnotationsTunnelTypeOptionsTest >> testSetHeightControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockAnnotationsTunnelTypeOptionsTest >> testHeightControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsTest >> testXAxis [
+HighstockAnnotationsTunnelTypeOptionsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockAnnotationsTunnelTypeOptionsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsTest >> testYAxis [
+HighstockAnnotationsTunnelTypeOptionsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

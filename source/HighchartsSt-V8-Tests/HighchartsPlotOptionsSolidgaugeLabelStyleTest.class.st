@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsSolidgaugeLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

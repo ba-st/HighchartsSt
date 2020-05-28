@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testColor [
+HighstockSeriesAreasplinerangeDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesAreasplinerangeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testCustom [
+HighstockSeriesAreasplinerangeDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesAreasplinerangeDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testDescription [
+HighstockSeriesAreasplinerangeDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesAreasplinerangeDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testEvents [
+HighstockSeriesAreasplinerangeDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesAreasplinerangeDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testHigh [
+HighstockSeriesAreasplinerangeDataTest >> testSetHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesAreasplinerangeDataTest >> testHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testId [
+HighstockSeriesAreasplinerangeDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesAreasplinerangeDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testLabelrank [
+HighstockSeriesAreasplinerangeDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockSeriesAreasplinerangeDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testLow [
+HighstockSeriesAreasplinerangeDataTest >> testSetLow [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockSeriesAreasplinerangeDataTest >> testLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testName [
+HighstockSeriesAreasplinerangeDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockSeriesAreasplinerangeDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testSelected [
+HighstockSeriesAreasplinerangeDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockSeriesAreasplinerangeDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDataTest >> testX [
+HighstockSeriesAreasplinerangeDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 

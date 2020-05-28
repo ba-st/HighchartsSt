@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testChildren [
+HighstockDefsArrowTest >> testSetChildren [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockDefsArrowTest >> testChildren [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testId [
+HighstockDefsArrowTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockDefsArrowTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testMarkerHeight [
+HighstockDefsArrowTest >> testSetMarkerHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockDefsArrowTest >> testMarkerHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testMarkerWidth [
+HighstockDefsArrowTest >> testSetMarkerWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockDefsArrowTest >> testMarkerWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testRefX [
+HighstockDefsArrowTest >> testSetRefX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockDefsArrowTest >> testRefX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testRefY [
+HighstockDefsArrowTest >> testSetRefY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockDefsArrowTest >> testRefY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testRender [
+HighstockDefsArrowTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockDefsArrowTest >> testRender [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsArrowTest >> testTagName [
+HighstockDefsArrowTest >> testSetTagName [
 
 	| component javascript expectedConfiguration |
 

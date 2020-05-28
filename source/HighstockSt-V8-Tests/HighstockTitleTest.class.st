@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testAlign [
+HighstockTitleTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockTitleTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testFloating [
+HighstockTitleTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockTitleTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testMargin [
+HighstockTitleTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockTitleTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testStyle [
+HighstockTitleTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockTitleTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testText [
+HighstockTitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockTitleTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testUseHTML [
+HighstockTitleTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockTitleTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testVerticalAlign [
+HighstockTitleTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockTitleTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testWidthAdjust [
+HighstockTitleTest >> testSetWidthAdjust [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockTitleTest >> testWidthAdjust [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testX [
+HighstockTitleTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockTitleTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTitleTest >> testY [
+HighstockTitleTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testAllowHTML [
+HighchartsExportingTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExporting new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsExportingTest >> testGetButtons [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExporting new.
+	component buttons.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttons' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsExportingTest >> testGetCsv [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExporting new.
+	component csv.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'csv' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsExportingTest >> testSetAllowHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsExportingTest >> testAllowHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testChartOptions [
+HighchartsExportingTest >> testSetChartOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsExportingTest >> testChartOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testEnabled [
+HighchartsExportingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsExportingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testError [
+HighchartsExportingTest >> testSetError [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsExportingTest >> testError [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testFallbackToExportServer [
+HighchartsExportingTest >> testSetFallbackToExportServer [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsExportingTest >> testFallbackToExportServer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testFilename [
+HighchartsExportingTest >> testSetFilename [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsExportingTest >> testFilename [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testFormAttributes [
+HighchartsExportingTest >> testSetFormAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsExportingTest >> testFormAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testLibURL [
+HighchartsExportingTest >> testSetLibURL [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsExportingTest >> testLibURL [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testMenuItemDefinitions [
+HighchartsExportingTest >> testSetMenuItemDefinitions [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsExportingTest >> testMenuItemDefinitions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testPrintMaxWidth [
+HighchartsExportingTest >> testSetPrintMaxWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsExportingTest >> testPrintMaxWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testScale [
+HighchartsExportingTest >> testSetScale [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsExportingTest >> testScale [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testShowTable [
+HighchartsExportingTest >> testSetShowTable [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsExportingTest >> testShowTable [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testSourceHeight [
+HighchartsExportingTest >> testSetSourceHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsExportingTest >> testSourceHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testSourceWidth [
+HighchartsExportingTest >> testSetSourceWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsExportingTest >> testSourceWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testTableCaption [
+HighchartsExportingTest >> testSetTableCaption [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsExportingTest >> testTableCaption [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testType [
+HighchartsExportingTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsExportingTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testUrl [
+HighchartsExportingTest >> testSetUrl [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsExportingTest >> testUrl [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testUseMultiLevelHeaders [
+HighchartsExportingTest >> testSetUseMultiLevelHeaders [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsExportingTest >> testUseMultiLevelHeaders [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testUseRowspanHeaders [
+HighchartsExportingTest >> testSetUseRowspanHeaders [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsExportingTest >> testUseRowspanHeaders [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingTest >> testWidth [
+HighchartsExportingTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

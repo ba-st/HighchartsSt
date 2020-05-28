@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorParamsTest >> testPeriod [
+HighstockSeriesAroonoscillatorParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

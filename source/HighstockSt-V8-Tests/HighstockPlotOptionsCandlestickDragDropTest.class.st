@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDragMaxX [
+HighstockPlotOptionsCandlestickDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestickDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestickDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDragMaxY [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDragMinX [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDragMinY [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDragPrecisionX [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDragPrecisionY [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDragSensitivity [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDraggableClose [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDraggableClose [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDraggableClose [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDraggableHigh [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDraggableHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDraggableHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDraggableLow [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDraggableLow [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDraggableLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDraggableOpen [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDraggableOpen [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDraggableOpen [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDraggableX [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testDraggableY [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testGroupBy [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockPlotOptionsCandlestickDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDragDropTest >> testLiveRedraw [
+HighstockPlotOptionsCandlestickDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

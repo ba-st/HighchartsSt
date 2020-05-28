@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphPointTest >> testEvents [
+HighchartsPlotOptionsStreamgraphPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

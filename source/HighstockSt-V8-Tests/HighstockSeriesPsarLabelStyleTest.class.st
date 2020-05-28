@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarLabelStyleTest >> testFontWeight [
+HighstockSeriesPsarLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testClassName [
+HighchartsSeriesWindbarbDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarbData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarbData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarbData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWindbarbData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWindbarbDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsSeriesWindbarbDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testColor [
+HighchartsSeriesWindbarbDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsSeriesWindbarbDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testColorIndex [
+HighchartsSeriesWindbarbDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsSeriesWindbarbDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testCustom [
+HighchartsSeriesWindbarbDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsSeriesWindbarbDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testDescription [
+HighchartsSeriesWindbarbDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsSeriesWindbarbDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testDirection [
+HighchartsSeriesWindbarbDataTest >> testSetDirection [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsSeriesWindbarbDataTest >> testDirection [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testDrilldown [
+HighchartsSeriesWindbarbDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsSeriesWindbarbDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testEvents [
+HighchartsSeriesWindbarbDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsSeriesWindbarbDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testId [
+HighchartsSeriesWindbarbDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsSeriesWindbarbDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testLabelrank [
+HighchartsSeriesWindbarbDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighchartsSeriesWindbarbDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testName [
+HighchartsSeriesWindbarbDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighchartsSeriesWindbarbDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testSelected [
+HighchartsSeriesWindbarbDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighchartsSeriesWindbarbDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testValue [
+HighchartsSeriesWindbarbDataTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +243,7 @@ HighchartsSeriesWindbarbDataTest >> testValue [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testX [
+HighchartsSeriesWindbarbDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +257,7 @@ HighchartsSeriesWindbarbDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataTest >> testY [
+HighchartsSeriesWindbarbDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoParamsTest >> testIndex [
+HighstockPlotOptionsApoParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsApoParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoParamsTest >> testPeriods [
+HighstockPlotOptionsApoParamsTest >> testSetPeriods [
 
 	| component javascript expectedConfiguration |
 

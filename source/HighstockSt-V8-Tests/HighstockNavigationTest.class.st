@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationTest >> testBindingsClassName [
+HighstockNavigationTest >> testGetAnnotationsOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigation new.
+	component annotationsOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'annotationsOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationTest >> testGetBindings [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigation new.
+	component bindings.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bindings' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationTest >> testGetButtonOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigation new.
+	component buttonOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttonOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationTest >> testSetBindingsClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockNavigationTest >> testBindingsClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationTest >> testEvents [
+HighstockNavigationTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockNavigationTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationTest >> testIconsURL [
+HighstockNavigationTest >> testSetIconsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockNavigationTest >> testIconsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationTest >> testMenuItemHoverStyle [
+HighstockNavigationTest >> testSetMenuItemHoverStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockNavigationTest >> testMenuItemHoverStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationTest >> testMenuItemStyle [
+HighstockNavigationTest >> testSetMenuItemStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockNavigationTest >> testMenuItemStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationTest >> testMenuStyle [
+HighstockNavigationTest >> testSetMenuStyle [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testArrowInfinityLine [
+HighstockNavigationBindingsTest >> testSetArrowInfinityLine [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigationBindingsTest >> testArrowInfinityLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testArrowRay [
+HighstockNavigationBindingsTest >> testSetArrowRay [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigationBindingsTest >> testArrowRay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testArrowSegment [
+HighstockNavigationBindingsTest >> testSetArrowSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigationBindingsTest >> testArrowSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testCircleAnnotation [
+HighstockNavigationBindingsTest >> testSetCircleAnnotation [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockNavigationBindingsTest >> testCircleAnnotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testCrooked3 [
+HighstockNavigationBindingsTest >> testSetCrooked3 [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockNavigationBindingsTest >> testCrooked3 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testCrooked5 [
+HighstockNavigationBindingsTest >> testSetCrooked5 [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockNavigationBindingsTest >> testCrooked5 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testCurrentPriceIndicator [
+HighstockNavigationBindingsTest >> testSetCurrentPriceIndicator [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockNavigationBindingsTest >> testCurrentPriceIndicator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testElliott3 [
+HighstockNavigationBindingsTest >> testSetElliott3 [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockNavigationBindingsTest >> testElliott3 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testElliott5 [
+HighstockNavigationBindingsTest >> testSetElliott5 [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockNavigationBindingsTest >> testElliott5 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testFibonacci [
+HighstockNavigationBindingsTest >> testSetFibonacci [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockNavigationBindingsTest >> testFibonacci [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testFlagCirclepin [
+HighstockNavigationBindingsTest >> testSetFlagCirclepin [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockNavigationBindingsTest >> testFlagCirclepin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testFlagDiamondpin [
+HighstockNavigationBindingsTest >> testSetFlagDiamondpin [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockNavigationBindingsTest >> testFlagDiamondpin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testFlagSimplepin [
+HighstockNavigationBindingsTest >> testSetFlagSimplepin [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockNavigationBindingsTest >> testFlagSimplepin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testFlagSquarepin [
+HighstockNavigationBindingsTest >> testSetFlagSquarepin [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockNavigationBindingsTest >> testFlagSquarepin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testFullScreen [
+HighstockNavigationBindingsTest >> testSetFullScreen [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockNavigationBindingsTest >> testFullScreen [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testHorizontalLine [
+HighstockNavigationBindingsTest >> testSetHorizontalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockNavigationBindingsTest >> testHorizontalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testIndicators [
+HighstockNavigationBindingsTest >> testSetIndicators [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockNavigationBindingsTest >> testIndicators [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testInfinityLine [
+HighstockNavigationBindingsTest >> testSetInfinityLine [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockNavigationBindingsTest >> testInfinityLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testLabelAnnotation [
+HighstockNavigationBindingsTest >> testSetLabelAnnotation [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockNavigationBindingsTest >> testLabelAnnotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testMeasureX [
+HighstockNavigationBindingsTest >> testSetMeasureX [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockNavigationBindingsTest >> testMeasureX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testMeasureXY [
+HighstockNavigationBindingsTest >> testSetMeasureXY [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockNavigationBindingsTest >> testMeasureXY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testMeasureY [
+HighstockNavigationBindingsTest >> testSetMeasureY [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighstockNavigationBindingsTest >> testMeasureY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testParallelChannel [
+HighstockNavigationBindingsTest >> testSetParallelChannel [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighstockNavigationBindingsTest >> testParallelChannel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testPitchfork [
+HighstockNavigationBindingsTest >> testSetPitchfork [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +341,7 @@ HighstockNavigationBindingsTest >> testPitchfork [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testRay [
+HighstockNavigationBindingsTest >> testSetRay [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +355,7 @@ HighstockNavigationBindingsTest >> testRay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testRectangleAnnotation [
+HighstockNavigationBindingsTest >> testSetRectangleAnnotation [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +369,7 @@ HighstockNavigationBindingsTest >> testRectangleAnnotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testSaveChart [
+HighstockNavigationBindingsTest >> testSetSaveChart [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +383,7 @@ HighstockNavigationBindingsTest >> testSaveChart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testSegment [
+HighstockNavigationBindingsTest >> testSetSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +397,7 @@ HighstockNavigationBindingsTest >> testSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testSeriesTypeCandlestick [
+HighstockNavigationBindingsTest >> testSetSeriesTypeCandlestick [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +411,7 @@ HighstockNavigationBindingsTest >> testSeriesTypeCandlestick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testSeriesTypeLine [
+HighstockNavigationBindingsTest >> testSetSeriesTypeLine [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +425,7 @@ HighstockNavigationBindingsTest >> testSeriesTypeLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testSeriesTypeOhlc [
+HighstockNavigationBindingsTest >> testSetSeriesTypeOhlc [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +439,7 @@ HighstockNavigationBindingsTest >> testSeriesTypeOhlc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testToggleAnnotations [
+HighstockNavigationBindingsTest >> testSetToggleAnnotations [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +453,7 @@ HighstockNavigationBindingsTest >> testToggleAnnotations [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testVerticalArrow [
+HighstockNavigationBindingsTest >> testSetVerticalArrow [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +467,7 @@ HighstockNavigationBindingsTest >> testVerticalArrow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testVerticalCounter [
+HighstockNavigationBindingsTest >> testSetVerticalCounter [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +481,7 @@ HighstockNavigationBindingsTest >> testVerticalCounter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testVerticalLabel [
+HighstockNavigationBindingsTest >> testSetVerticalLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +495,7 @@ HighstockNavigationBindingsTest >> testVerticalLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testVerticalLine [
+HighstockNavigationBindingsTest >> testSetVerticalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +509,7 @@ HighstockNavigationBindingsTest >> testVerticalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testZoomX [
+HighstockNavigationBindingsTest >> testSetZoomX [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +523,7 @@ HighstockNavigationBindingsTest >> testZoomX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testZoomXY [
+HighstockNavigationBindingsTest >> testSetZoomXY [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +537,7 @@ HighstockNavigationBindingsTest >> testZoomXY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationBindingsTest >> testZoomY [
+HighstockNavigationBindingsTest >> testSetZoomY [
 
 	| component javascript expectedConfiguration |
 

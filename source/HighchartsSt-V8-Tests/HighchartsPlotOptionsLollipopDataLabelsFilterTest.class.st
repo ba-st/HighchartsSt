@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsLollipopDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

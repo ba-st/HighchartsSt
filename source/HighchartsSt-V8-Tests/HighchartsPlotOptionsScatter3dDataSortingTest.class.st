@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dDataSortingTest >> testEnabled [
+HighchartsPlotOptionsScatter3dDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatter3dDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dDataSortingTest >> testMatchByName [
+HighchartsPlotOptionsScatter3dDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsScatter3dDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dDataSortingTest >> testSortKey [
+HighchartsPlotOptionsScatter3dDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

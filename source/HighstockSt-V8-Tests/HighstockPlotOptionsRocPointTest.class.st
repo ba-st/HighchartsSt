@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocPointTest >> testEvents [
+HighstockPlotOptionsRocPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

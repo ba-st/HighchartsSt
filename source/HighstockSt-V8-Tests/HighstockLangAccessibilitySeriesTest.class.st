@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTest >> testDescription [
+HighstockLangAccessibilitySeriesTest >> testGetSummary [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLangAccessibilitySeries new.
+	component summary.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'summary' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangAccessibilitySeriesTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockLangAccessibilitySeriesTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTest >> testNullPointValue [
+HighstockLangAccessibilitySeriesTest >> testSetNullPointValue [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockLangAccessibilitySeriesTest >> testNullPointValue [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTest >> testPointAnnotationsDescription [
+HighstockLangAccessibilitySeriesTest >> testSetPointAnnotationsDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockLangAccessibilitySeriesTest >> testPointAnnotationsDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTest >> testXAxisDescription [
+HighstockLangAccessibilitySeriesTest >> testSetXAxisDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockLangAccessibilitySeriesTest >> testXAxisDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTest >> testYAxisDescription [
+HighstockLangAccessibilitySeriesTest >> testSetYAxisDescription [
 
 	| component javascript expectedConfiguration |
 

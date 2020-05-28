@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendDataSortingTest >> testEnabled [
+HighstockPlotOptionsSupertrendDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSupertrendDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendDataSortingTest >> testMatchByName [
+HighstockPlotOptionsSupertrendDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsSupertrendDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendDataSortingTest >> testSortKey [
+HighstockPlotOptionsSupertrendDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

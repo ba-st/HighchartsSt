@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorMarkerStatesNormalTest >> testAnimation [
+HighstockPlotOptionsAroonoscillatorMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

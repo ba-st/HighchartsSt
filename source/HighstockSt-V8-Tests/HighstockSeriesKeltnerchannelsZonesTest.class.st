@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsZonesTest >> testClassName [
+HighstockSeriesKeltnerchannelsZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsZonesTest >> testColor [
+HighstockSeriesKeltnerchannelsZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesKeltnerchannelsZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsZonesTest >> testDashStyle [
+HighstockSeriesKeltnerchannelsZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesKeltnerchannelsZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsZonesTest >> testFillColor [
+HighstockSeriesKeltnerchannelsZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesKeltnerchannelsZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsZonesTest >> testValue [
+HighstockSeriesKeltnerchannelsZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

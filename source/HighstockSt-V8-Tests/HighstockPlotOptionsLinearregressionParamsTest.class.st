@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionParamsTest >> testIndex [
+HighstockPlotOptionsLinearregressionParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionParamsTest >> testPeriod [
+HighstockPlotOptionsLinearregressionParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionParamsTest >> testXAxisUnit [
+HighstockPlotOptionsLinearregressionParamsTest >> testSetXAxisUnit [
 
 	| component javascript expectedConfiguration |
 

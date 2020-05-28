@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsLastPriceTest >> testColor [
+HighstockPlotOptionsPivotpointsLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPivotpointsLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsLastPriceTest >> testEnabled [
+HighstockPlotOptionsPivotpointsLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataLabelsFilterTest >> testOperator [
+HighstockSeriesPolygonDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPolygonDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataLabelsFilterTest >> testProperty [
+HighstockSeriesPolygonDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPolygonDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataLabelsFilterTest >> testValue [
+HighstockSeriesPolygonDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

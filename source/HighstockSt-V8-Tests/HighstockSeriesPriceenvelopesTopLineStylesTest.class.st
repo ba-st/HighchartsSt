@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTopLineStylesTest >> testLineColor [
+HighstockSeriesPriceenvelopesTopLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesTopLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesTopLineStylesTest >> testLineWidth [
+HighstockSeriesPriceenvelopesTopLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderStatesInactiveAnimationTest >> testDuration [
+HighchartsPlotOptionsCylinderStatesInactiveAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

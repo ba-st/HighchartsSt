@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testApproximation [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testAttractiveForce [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetAttractiveForce [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testAttractiveForce [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testEnableSimulation [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetEnableSimulation [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testEnableSimulation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testFriction [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetFriction [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testFriction [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testGravitationalConstant [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetGravitationalConstant [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testGravitationalConstant [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testInitialPositionRadius [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetInitialPositionRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testInitialPositionRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testInitialPositions [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetInitialPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testInitialPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testIntegration [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetIntegration [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testIntegration [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testLinkLength [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetLinkLength [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testLinkLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testMaxIterations [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetMaxIterations [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testMaxIterations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testMaxSpeed [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetMaxSpeed [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testMaxSpeed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testRepulsiveForce [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetRepulsiveForce [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testRepulsiveForce [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testTheta [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetTheta [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testTheta [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testType [
+HighchartsSeriesNetworkgraphLayoutAlgorithmTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testDashStyle [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testFill [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testHeight [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testR [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testSnap [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testSrc [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testStroke [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testType [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testWidth [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

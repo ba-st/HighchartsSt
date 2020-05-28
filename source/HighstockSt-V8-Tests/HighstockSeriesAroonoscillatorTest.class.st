@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testAllowPointSelect [
+HighstockSeriesAroonoscillatorTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +229,7 @@ HighstockSeriesAroonoscillatorTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testAnimationLimit [
+HighstockSeriesAroonoscillatorTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +243,7 @@ HighstockSeriesAroonoscillatorTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBoostBlending [
+HighstockSeriesAroonoscillatorTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +257,7 @@ HighstockSeriesAroonoscillatorTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBoostThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +271,7 @@ HighstockSeriesAroonoscillatorTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBorderColor [
+HighstockSeriesAroonoscillatorTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +285,7 @@ HighstockSeriesAroonoscillatorTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBorderWidth [
+HighstockSeriesAroonoscillatorTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +299,7 @@ HighstockSeriesAroonoscillatorTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testClassName [
+HighstockSeriesAroonoscillatorTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +313,7 @@ HighstockSeriesAroonoscillatorTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testClip [
+HighstockSeriesAroonoscillatorTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +327,7 @@ HighstockSeriesAroonoscillatorTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testColor [
+HighstockSeriesAroonoscillatorTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +341,7 @@ HighstockSeriesAroonoscillatorTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testColorIndex [
+HighstockSeriesAroonoscillatorTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +355,7 @@ HighstockSeriesAroonoscillatorTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testColorKey [
+HighstockSeriesAroonoscillatorTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +369,7 @@ HighstockSeriesAroonoscillatorTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCompareStart [
+HighstockSeriesAroonoscillatorTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +383,7 @@ HighstockSeriesAroonoscillatorTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCompareToMain [
+HighstockSeriesAroonoscillatorTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +397,7 @@ HighstockSeriesAroonoscillatorTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testConnectEnds [
+HighstockSeriesAroonoscillatorTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +411,7 @@ HighstockSeriesAroonoscillatorTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testConnectNulls [
+HighstockSeriesAroonoscillatorTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighstockSeriesAroonoscillatorTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCrisp [
+HighstockSeriesAroonoscillatorTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockSeriesAroonoscillatorTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCropThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,7 @@ HighstockSeriesAroonoscillatorTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCursor [
+HighstockSeriesAroonoscillatorTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockSeriesAroonoscillatorTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCustom [
+HighstockSeriesAroonoscillatorTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,7 @@ HighstockSeriesAroonoscillatorTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testDashStyle [
+HighstockSeriesAroonoscillatorTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +495,7 @@ HighstockSeriesAroonoscillatorTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testDescription [
+HighstockSeriesAroonoscillatorTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +509,7 @@ HighstockSeriesAroonoscillatorTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testEnableMouseTracking [
+HighstockSeriesAroonoscillatorTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +523,7 @@ HighstockSeriesAroonoscillatorTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testEvents [
+HighstockSeriesAroonoscillatorTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +537,7 @@ HighstockSeriesAroonoscillatorTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testFindNearestPointBy [
+HighstockSeriesAroonoscillatorTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +551,7 @@ HighstockSeriesAroonoscillatorTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testGapSize [
+HighstockSeriesAroonoscillatorTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +565,7 @@ HighstockSeriesAroonoscillatorTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testGapUnit [
+HighstockSeriesAroonoscillatorTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +579,7 @@ HighstockSeriesAroonoscillatorTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testGetExtremesFromAll [
+HighstockSeriesAroonoscillatorTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +593,7 @@ HighstockSeriesAroonoscillatorTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testId [
+HighstockSeriesAroonoscillatorTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +607,7 @@ HighstockSeriesAroonoscillatorTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testIncludeInDataExport [
+HighstockSeriesAroonoscillatorTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +621,7 @@ HighstockSeriesAroonoscillatorTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testIndex [
+HighstockSeriesAroonoscillatorTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighstockSeriesAroonoscillatorTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLegendIndex [
+HighstockSeriesAroonoscillatorTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +649,7 @@ HighstockSeriesAroonoscillatorTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLineWidth [
+HighstockSeriesAroonoscillatorTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +663,7 @@ HighstockSeriesAroonoscillatorTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLinecap [
+HighstockSeriesAroonoscillatorTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +677,7 @@ HighstockSeriesAroonoscillatorTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLinkedTo [
+HighstockSeriesAroonoscillatorTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +691,7 @@ HighstockSeriesAroonoscillatorTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testMapData [
+HighstockSeriesAroonoscillatorTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +705,7 @@ HighstockSeriesAroonoscillatorTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testName [
+HighstockSeriesAroonoscillatorTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +719,7 @@ HighstockSeriesAroonoscillatorTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testNegativeColor [
+HighstockSeriesAroonoscillatorTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +733,7 @@ HighstockSeriesAroonoscillatorTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testOpacity [
+HighstockSeriesAroonoscillatorTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +747,7 @@ HighstockSeriesAroonoscillatorTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testPointDescriptionFormatter [
+HighstockSeriesAroonoscillatorTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +761,7 @@ HighstockSeriesAroonoscillatorTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testSelected [
+HighstockSeriesAroonoscillatorTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +775,7 @@ HighstockSeriesAroonoscillatorTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testShadow [
+HighstockSeriesAroonoscillatorTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +789,7 @@ HighstockSeriesAroonoscillatorTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testShowCheckbox [
+HighstockSeriesAroonoscillatorTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +803,7 @@ HighstockSeriesAroonoscillatorTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testShowInLegend [
+HighstockSeriesAroonoscillatorTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +817,7 @@ HighstockSeriesAroonoscillatorTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testSkipKeyboardNavigation [
+HighstockSeriesAroonoscillatorTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +831,7 @@ HighstockSeriesAroonoscillatorTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testSoftThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighstockSeriesAroonoscillatorTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStack [
+HighstockSeriesAroonoscillatorTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +859,7 @@ HighstockSeriesAroonoscillatorTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStates [
+HighstockSeriesAroonoscillatorTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +873,7 @@ HighstockSeriesAroonoscillatorTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStep [
+HighstockSeriesAroonoscillatorTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +887,7 @@ HighstockSeriesAroonoscillatorTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStickyTracking [
+HighstockSeriesAroonoscillatorTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +901,7 @@ HighstockSeriesAroonoscillatorTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +915,7 @@ HighstockSeriesAroonoscillatorTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testTurboThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +929,7 @@ HighstockSeriesAroonoscillatorTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testType [
+HighstockSeriesAroonoscillatorTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +943,7 @@ HighstockSeriesAroonoscillatorTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testVisible [
+HighstockSeriesAroonoscillatorTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +957,7 @@ HighstockSeriesAroonoscillatorTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testXAxis [
+HighstockSeriesAroonoscillatorTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +971,7 @@ HighstockSeriesAroonoscillatorTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testYAxis [
+HighstockSeriesAroonoscillatorTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +985,7 @@ HighstockSeriesAroonoscillatorTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testZIndex [
+HighstockSeriesAroonoscillatorTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +999,7 @@ HighstockSeriesAroonoscillatorTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testZoneAxis [
+HighstockSeriesAroonoscillatorTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

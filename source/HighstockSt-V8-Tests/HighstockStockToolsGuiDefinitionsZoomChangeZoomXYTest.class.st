@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsZoomChangeZoomXYTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsZoomChangeZoomXYTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsChaikinLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

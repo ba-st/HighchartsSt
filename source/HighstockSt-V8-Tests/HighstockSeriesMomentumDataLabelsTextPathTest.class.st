@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesMomentumDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMomentumDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesMomentumDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

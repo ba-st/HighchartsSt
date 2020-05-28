@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataAccessibilityTest >> testDescription [
+HighchartsSeriesSolidgaugeDataAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

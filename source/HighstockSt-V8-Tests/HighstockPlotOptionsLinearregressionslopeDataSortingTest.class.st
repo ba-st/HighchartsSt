@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testEnabled [
+HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testMatchByName [
+HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testSortKey [
+HighstockPlotOptionsLinearregressionslopeDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

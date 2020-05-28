@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testX [
+HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testY [
+HighstockAnnotationsCrookedLineTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

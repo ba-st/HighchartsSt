@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsFilterTest >> testOperator [
+HighstockSeriesZigzagDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesZigzagDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsFilterTest >> testProperty [
+HighstockSeriesZigzagDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesZigzagDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsFilterTest >> testValue [
+HighstockSeriesZigzagDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

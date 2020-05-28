@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphLastPriceTest >> testColor [
+HighstockSeriesStreamgraphLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStreamgraphLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphLastPriceTest >> testEnabled [
+HighstockSeriesStreamgraphLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

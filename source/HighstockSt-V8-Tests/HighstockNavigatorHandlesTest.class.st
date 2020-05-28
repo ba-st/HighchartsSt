@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorHandlesTest >> testBackgroundColor [
+HighstockNavigatorHandlesTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigatorHandlesTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorHandlesTest >> testBorderColor [
+HighstockNavigatorHandlesTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigatorHandlesTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorHandlesTest >> testEnabled [
+HighstockNavigatorHandlesTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigatorHandlesTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorHandlesTest >> testHeight [
+HighstockNavigatorHandlesTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockNavigatorHandlesTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorHandlesTest >> testLineWidth [
+HighstockNavigatorHandlesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockNavigatorHandlesTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorHandlesTest >> testSymbols [
+HighstockNavigatorHandlesTest >> testSetSymbols [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockNavigatorHandlesTest >> testSymbols [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorHandlesTest >> testWidth [
+HighstockNavigatorHandlesTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

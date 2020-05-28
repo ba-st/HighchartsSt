@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsPointsLabelAccessibilityTest >> testDescription [
+HighstockAnnotationsElliottWaveTypeOptionsPointsLabelAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

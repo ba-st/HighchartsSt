@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLabelsItemsTest >> testHtml [
+HighchartsLabelsItemsTest >> testSetHtml [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLabelsItemsTest >> testHtml [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLabelsItemsTest >> testStyle [
+HighchartsLabelsItemsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

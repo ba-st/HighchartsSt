@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennPointTest >> testEvents [
+HighchartsPlotOptionsVennPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

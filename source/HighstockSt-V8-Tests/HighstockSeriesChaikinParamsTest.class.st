@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinParamsTest >> testPeriods [
+HighstockSeriesChaikinParamsTest >> testSetPeriods [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesChaikinParamsTest >> testPeriods [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinParamsTest >> testVolumeSeriesID [
+HighstockSeriesChaikinParamsTest >> testSetVolumeSeriesID [
 
 	| component javascript expectedConfiguration |
 

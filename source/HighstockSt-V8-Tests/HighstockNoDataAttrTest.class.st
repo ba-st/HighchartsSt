@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNoDataAttrTest >> testZIndex [
+HighstockNoDataAttrTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

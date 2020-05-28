@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsLinearregressionLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

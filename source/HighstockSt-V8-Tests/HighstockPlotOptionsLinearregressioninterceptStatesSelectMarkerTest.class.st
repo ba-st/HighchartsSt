@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testEnabled [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testEnabl
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testEnabl
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testFillColor [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testFillC
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testHeight [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testHeigh
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testLineColor [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testLineC
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testLineWidth [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testLineW
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testRadius [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testRadiu
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSymbol [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSymbo
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testWidth [
+HighstockPlotOptionsLinearregressioninterceptStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

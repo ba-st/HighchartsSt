@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterAnimationTest >> testDuration [
+HighchartsPlotOptionsScatterAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

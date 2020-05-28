@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleJitterTest >> testX [
+HighstockSeriesBubbleJitterTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesBubbleJitterTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleJitterTest >> testY [
+HighstockSeriesBubbleJitterTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

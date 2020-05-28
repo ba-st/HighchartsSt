@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testBorderColor [
+HighchartsLegendBubbleLegendTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegendBubbleLegend new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendBubbleLegendTest >> testGetRanges [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLegendBubbleLegend new.
+	component ranges.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'ranges' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLegendBubbleLegendTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsLegendBubbleLegendTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testBorderWidth [
+HighchartsLegendBubbleLegendTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsLegendBubbleLegendTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testClassName [
+HighchartsLegendBubbleLegendTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsLegendBubbleLegendTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testColor [
+HighchartsLegendBubbleLegendTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsLegendBubbleLegendTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testConnectorClassName [
+HighchartsLegendBubbleLegendTest >> testSetConnectorClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsLegendBubbleLegendTest >> testConnectorClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testConnectorColor [
+HighchartsLegendBubbleLegendTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsLegendBubbleLegendTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testConnectorDistance [
+HighchartsLegendBubbleLegendTest >> testSetConnectorDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsLegendBubbleLegendTest >> testConnectorDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testConnectorWidth [
+HighchartsLegendBubbleLegendTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsLegendBubbleLegendTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testEnabled [
+HighchartsLegendBubbleLegendTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsLegendBubbleLegendTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testLegendIndex [
+HighchartsLegendBubbleLegendTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsLegendBubbleLegendTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testMaxSize [
+HighchartsLegendBubbleLegendTest >> testSetMaxSize [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighchartsLegendBubbleLegendTest >> testMaxSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testMinSize [
+HighchartsLegendBubbleLegendTest >> testSetMinSize [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsLegendBubbleLegendTest >> testMinSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testSizeBy [
+HighchartsLegendBubbleLegendTest >> testSetSizeBy [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsLegendBubbleLegendTest >> testSizeBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testSizeByAbsoluteValue [
+HighchartsLegendBubbleLegendTest >> testSetSizeByAbsoluteValue [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsLegendBubbleLegendTest >> testSizeByAbsoluteValue [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testZIndex [
+HighchartsLegendBubbleLegendTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighchartsLegendBubbleLegendTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendTest >> testZThreshold [
+HighchartsLegendBubbleLegendTest >> testSetZThreshold [
 
 	| component javascript expectedConfiguration |
 

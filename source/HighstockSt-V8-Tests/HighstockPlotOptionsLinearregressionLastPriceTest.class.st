@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionLastPriceTest >> testColor [
+HighstockPlotOptionsLinearregressionLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionLastPriceTest >> testEnabled [
+HighstockPlotOptionsLinearregressionLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

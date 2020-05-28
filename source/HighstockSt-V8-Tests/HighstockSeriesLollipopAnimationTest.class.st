@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopAnimationTest >> testDuration [
+HighstockSeriesLollipopAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

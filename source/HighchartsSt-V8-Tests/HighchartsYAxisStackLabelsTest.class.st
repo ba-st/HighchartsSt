@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testAlign [
+HighchartsYAxisStackLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxisStackLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisStackLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsYAxisStackLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testAllowOverlap [
+HighchartsYAxisStackLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsYAxisStackLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testBackgroundColor [
+HighchartsYAxisStackLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsYAxisStackLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testBorderColor [
+HighchartsYAxisStackLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsYAxisStackLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testBorderRadius [
+HighchartsYAxisStackLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsYAxisStackLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testBorderWidth [
+HighchartsYAxisStackLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsYAxisStackLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testCrop [
+HighchartsYAxisStackLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsYAxisStackLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testEnabled [
+HighchartsYAxisStackLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsYAxisStackLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testFormat [
+HighchartsYAxisStackLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsYAxisStackLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testFormatter [
+HighchartsYAxisStackLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsYAxisStackLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testOverflow [
+HighchartsYAxisStackLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsYAxisStackLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testRotation [
+HighchartsYAxisStackLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsYAxisStackLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testTextAlign [
+HighchartsYAxisStackLabelsTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsYAxisStackLabelsTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testUseHTML [
+HighchartsYAxisStackLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsYAxisStackLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testVerticalAlign [
+HighchartsYAxisStackLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighchartsYAxisStackLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testX [
+HighchartsYAxisStackLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighchartsYAxisStackLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsTest >> testY [
+HighchartsYAxisStackLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

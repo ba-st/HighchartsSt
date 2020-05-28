@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testAfterAnimate [
+HighstockSeriesAroonoscillatorEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAroonoscillatorEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testCheckboxClick [
+HighstockSeriesAroonoscillatorEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAroonoscillatorEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testClick [
+HighstockSeriesAroonoscillatorEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAroonoscillatorEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testHide [
+HighstockSeriesAroonoscillatorEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAroonoscillatorEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testLegendItemClick [
+HighstockSeriesAroonoscillatorEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAroonoscillatorEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testMouseOut [
+HighstockSeriesAroonoscillatorEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAroonoscillatorEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testMouseOver [
+HighstockSeriesAroonoscillatorEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAroonoscillatorEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorEventsTest >> testShow [
+HighstockSeriesAroonoscillatorEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

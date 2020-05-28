@@ -5,7 +5,119 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testAlignTicks [
+HighstockNavigatorXAxisTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGetBreaks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component breaks.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'breaks' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGetCrosshair [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component crosshair.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crosshair' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGetPlotBands [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component plotBands.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotBands' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGetPlotLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component plotLines.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotLines' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxis new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +131,7 @@ HighstockNavigatorXAxisTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testAllowDecimals [
+HighstockNavigatorXAxisTest >> testSetAllowDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +145,7 @@ HighstockNavigatorXAxisTest >> testAllowDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testAlternateGridColor [
+HighstockNavigatorXAxisTest >> testSetAlternateGridColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +159,7 @@ HighstockNavigatorXAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testAngle [
+HighstockNavigatorXAxisTest >> testSetAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +173,7 @@ HighstockNavigatorXAxisTest >> testAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testCeiling [
+HighstockNavigatorXAxisTest >> testSetCeiling [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +187,7 @@ HighstockNavigatorXAxisTest >> testCeiling [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testClassName [
+HighstockNavigatorXAxisTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +201,7 @@ HighstockNavigatorXAxisTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testEndOnTick [
+HighstockNavigatorXAxisTest >> testSetEndOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +215,7 @@ HighstockNavigatorXAxisTest >> testEndOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testEvents [
+HighstockNavigatorXAxisTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +229,7 @@ HighstockNavigatorXAxisTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testFloor [
+HighstockNavigatorXAxisTest >> testSetFloor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +243,7 @@ HighstockNavigatorXAxisTest >> testFloor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testGridLineColor [
+HighstockNavigatorXAxisTest >> testSetGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +257,7 @@ HighstockNavigatorXAxisTest >> testGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testGridLineDashStyle [
+HighstockNavigatorXAxisTest >> testSetGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +271,7 @@ HighstockNavigatorXAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testGridLineInterpolation [
+HighstockNavigatorXAxisTest >> testSetGridLineInterpolation [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +285,7 @@ HighstockNavigatorXAxisTest >> testGridLineInterpolation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testGridLineWidth [
+HighstockNavigatorXAxisTest >> testSetGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +299,7 @@ HighstockNavigatorXAxisTest >> testGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testGridZIndex [
+HighstockNavigatorXAxisTest >> testSetGridZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +313,7 @@ HighstockNavigatorXAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testHeight [
+HighstockNavigatorXAxisTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +327,7 @@ HighstockNavigatorXAxisTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testId [
+HighstockNavigatorXAxisTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +341,7 @@ HighstockNavigatorXAxisTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testLeft [
+HighstockNavigatorXAxisTest >> testSetLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +355,7 @@ HighstockNavigatorXAxisTest >> testLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testLineColor [
+HighstockNavigatorXAxisTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +369,7 @@ HighstockNavigatorXAxisTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testLineWidth [
+HighstockNavigatorXAxisTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +383,7 @@ HighstockNavigatorXAxisTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMargin [
+HighstockNavigatorXAxisTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +397,7 @@ HighstockNavigatorXAxisTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMax [
+HighstockNavigatorXAxisTest >> testSetMax [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +411,7 @@ HighstockNavigatorXAxisTest >> testMax [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMaxPadding [
+HighstockNavigatorXAxisTest >> testSetMaxPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +425,7 @@ HighstockNavigatorXAxisTest >> testMaxPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMin [
+HighstockNavigatorXAxisTest >> testSetMin [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +439,7 @@ HighstockNavigatorXAxisTest >> testMin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinPadding [
+HighstockNavigatorXAxisTest >> testSetMinPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +453,7 @@ HighstockNavigatorXAxisTest >> testMinPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinTickInterval [
+HighstockNavigatorXAxisTest >> testSetMinTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +467,7 @@ HighstockNavigatorXAxisTest >> testMinTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorGridLineColor [
+HighstockNavigatorXAxisTest >> testSetMinorGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +481,7 @@ HighstockNavigatorXAxisTest >> testMinorGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorGridLineDashStyle [
+HighstockNavigatorXAxisTest >> testSetMinorGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +495,7 @@ HighstockNavigatorXAxisTest >> testMinorGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorGridLineWidth [
+HighstockNavigatorXAxisTest >> testSetMinorGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +509,7 @@ HighstockNavigatorXAxisTest >> testMinorGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorTickColor [
+HighstockNavigatorXAxisTest >> testSetMinorTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +523,7 @@ HighstockNavigatorXAxisTest >> testMinorTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorTickInterval [
+HighstockNavigatorXAxisTest >> testSetMinorTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +537,7 @@ HighstockNavigatorXAxisTest >> testMinorTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorTickLength [
+HighstockNavigatorXAxisTest >> testSetMinorTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +551,7 @@ HighstockNavigatorXAxisTest >> testMinorTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorTickPosition [
+HighstockNavigatorXAxisTest >> testSetMinorTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +565,7 @@ HighstockNavigatorXAxisTest >> testMinorTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorTickWidth [
+HighstockNavigatorXAxisTest >> testSetMinorTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +579,7 @@ HighstockNavigatorXAxisTest >> testMinorTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testMinorTicks [
+HighstockNavigatorXAxisTest >> testSetMinorTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +593,7 @@ HighstockNavigatorXAxisTest >> testMinorTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testOffset [
+HighstockNavigatorXAxisTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +607,7 @@ HighstockNavigatorXAxisTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testOrdinal [
+HighstockNavigatorXAxisTest >> testSetOrdinal [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +621,7 @@ HighstockNavigatorXAxisTest >> testOrdinal [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testOverscroll [
+HighstockNavigatorXAxisTest >> testSetOverscroll [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +635,7 @@ HighstockNavigatorXAxisTest >> testOverscroll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testPane [
+HighstockNavigatorXAxisTest >> testSetPane [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +649,7 @@ HighstockNavigatorXAxisTest >> testPane [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testReversed [
+HighstockNavigatorXAxisTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +663,7 @@ HighstockNavigatorXAxisTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testReversedStacks [
+HighstockNavigatorXAxisTest >> testSetReversedStacks [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +677,7 @@ HighstockNavigatorXAxisTest >> testReversedStacks [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testShowFirstLabel [
+HighstockNavigatorXAxisTest >> testSetShowFirstLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +691,7 @@ HighstockNavigatorXAxisTest >> testShowFirstLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testShowLastLabel [
+HighstockNavigatorXAxisTest >> testSetShowLastLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +705,7 @@ HighstockNavigatorXAxisTest >> testShowLastLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testSoftMax [
+HighstockNavigatorXAxisTest >> testSetSoftMax [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +719,7 @@ HighstockNavigatorXAxisTest >> testSoftMax [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testSoftMin [
+HighstockNavigatorXAxisTest >> testSetSoftMin [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +733,7 @@ HighstockNavigatorXAxisTest >> testSoftMin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testStartOfWeek [
+HighstockNavigatorXAxisTest >> testSetStartOfWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +747,7 @@ HighstockNavigatorXAxisTest >> testStartOfWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testStartOnTick [
+HighstockNavigatorXAxisTest >> testSetStartOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +761,7 @@ HighstockNavigatorXAxisTest >> testStartOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickAmount [
+HighstockNavigatorXAxisTest >> testSetTickAmount [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +775,7 @@ HighstockNavigatorXAxisTest >> testTickAmount [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickColor [
+HighstockNavigatorXAxisTest >> testSetTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +789,7 @@ HighstockNavigatorXAxisTest >> testTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickInterval [
+HighstockNavigatorXAxisTest >> testSetTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +803,7 @@ HighstockNavigatorXAxisTest >> testTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickLength [
+HighstockNavigatorXAxisTest >> testSetTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +817,7 @@ HighstockNavigatorXAxisTest >> testTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickPixelInterval [
+HighstockNavigatorXAxisTest >> testSetTickPixelInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +831,7 @@ HighstockNavigatorXAxisTest >> testTickPixelInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickPosition [
+HighstockNavigatorXAxisTest >> testSetTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +845,7 @@ HighstockNavigatorXAxisTest >> testTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickPositioner [
+HighstockNavigatorXAxisTest >> testSetTickPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +859,7 @@ HighstockNavigatorXAxisTest >> testTickPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickPositions [
+HighstockNavigatorXAxisTest >> testSetTickPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +873,7 @@ HighstockNavigatorXAxisTest >> testTickPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTickWidth [
+HighstockNavigatorXAxisTest >> testSetTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +887,7 @@ HighstockNavigatorXAxisTest >> testTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testTop [
+HighstockNavigatorXAxisTest >> testSetTop [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +901,7 @@ HighstockNavigatorXAxisTest >> testTop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testUnits [
+HighstockNavigatorXAxisTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +915,7 @@ HighstockNavigatorXAxisTest >> testUnits [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testVisible [
+HighstockNavigatorXAxisTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +929,7 @@ HighstockNavigatorXAxisTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testWidth [
+HighstockNavigatorXAxisTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +943,7 @@ HighstockNavigatorXAxisTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTest >> testZoomEnabled [
+HighstockNavigatorXAxisTest >> testSetZoomEnabled [
 
 	| component javascript expectedConfiguration |
 

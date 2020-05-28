@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsBottomLineStylesTest >> testLineWidth [
+HighstockSeriesAbandsBottomLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

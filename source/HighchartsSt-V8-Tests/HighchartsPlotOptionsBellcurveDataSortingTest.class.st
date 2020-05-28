@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveDataSortingTest >> testEnabled [
+HighchartsPlotOptionsBellcurveDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBellcurveDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveDataSortingTest >> testMatchByName [
+HighchartsPlotOptionsBellcurveDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBellcurveDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveDataSortingTest >> testSortKey [
+HighchartsPlotOptionsBellcurveDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

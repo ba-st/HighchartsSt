@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsIkhPointTest >> testEvents [
+HighstockPlotOptionsIkhPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
