@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsSimpleShapesCircleTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsSimpleShapesCircleTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

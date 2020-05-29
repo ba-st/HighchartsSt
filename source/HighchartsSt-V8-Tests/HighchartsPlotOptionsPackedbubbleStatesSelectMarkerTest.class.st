@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testEnabled [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testEnabledThreshold 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testFillColor [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testHeight [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testLineColor [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testLineWidth [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testRadius [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSymbol [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testWidth [
+HighchartsPlotOptionsPackedbubbleStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

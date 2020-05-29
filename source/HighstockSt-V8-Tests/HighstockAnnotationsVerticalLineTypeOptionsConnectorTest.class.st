@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testDashStyle [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testFill [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testMarkerEnd [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetMarkerEnd [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testMarkerEnd [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSnap [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSrc [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testStroke [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testStrokeWidth [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesHoverAnimationTest >> testDuration [
+HighchartsPlotOptionsScatter3dStatesHoverAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

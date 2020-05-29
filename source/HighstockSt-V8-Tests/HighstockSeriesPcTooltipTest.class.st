@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testChangeDecimals [
+HighstockSeriesPcTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPcTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPcTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesPcTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testClusterFormat [
+HighstockSeriesPcTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesPcTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testDistance [
+HighstockSeriesPcTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesPcTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testFollowPointer [
+HighstockSeriesPcTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesPcTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testFollowTouchMove [
+HighstockSeriesPcTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesPcTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testFooterFormat [
+HighstockSeriesPcTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesPcTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testHeaderFormat [
+HighstockSeriesPcTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesPcTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testNullFormat [
+HighstockSeriesPcTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesPcTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testNullFormatter [
+HighstockSeriesPcTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockSeriesPcTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testPointFormat [
+HighstockSeriesPcTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockSeriesPcTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testPointFormatter [
+HighstockSeriesPcTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockSeriesPcTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testStickOnContact [
+HighstockSeriesPcTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockSeriesPcTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testValueDecimals [
+HighstockSeriesPcTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockSeriesPcTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testValuePrefix [
+HighstockSeriesPcTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockSeriesPcTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testValueSuffix [
+HighstockSeriesPcTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockSeriesPcTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPcTooltipTest >> testXDateFormat [
+HighstockSeriesPcTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

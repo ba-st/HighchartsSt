@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testBoxesToAvoid [
+HighstockSeriesWmaLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWmaLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWmaLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesWmaLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testConnectorAllowed [
+HighstockSeriesWmaLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesWmaLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesWmaLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesWmaLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testEnabled [
+HighstockSeriesWmaLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesWmaLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testFormat [
+HighstockSeriesWmaLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesWmaLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testFormatter [
+HighstockSeriesWmaLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesWmaLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testMaxFontSize [
+HighstockSeriesWmaLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesWmaLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testMinFontSize [
+HighstockSeriesWmaLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesWmaLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaLabelTest >> testOnArea [
+HighstockSeriesWmaLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

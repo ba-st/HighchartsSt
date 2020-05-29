@@ -27,8 +27,7 @@ Defaults to -2."
 { #category : #accessing }
 HighstockAnnotationsTunnelTypeOptions >> heightControlPoint: anObject [
 
-	"Options for the control point which controls
-the annotation´s height.
+	"Options for the control point which controls the annotation´s height.
 "
 
 	configurationOptions at: 'heightControlPoint' put: anObject
@@ -51,9 +50,7 @@ HighstockAnnotationsTunnelTypeOptions >> points [
 { #category : #accessing }
 HighstockAnnotationsTunnelTypeOptions >> xAxis: aNumber [
 
-	"This number defines which xAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the xAxis array.
+	"This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'xAxis' put: aNumber
@@ -62,9 +59,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockAnnotationsTunnelTypeOptions >> yAxis: aNumber [
 
-	"This number defines which yAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the xAxis array.
+	"This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'yAxis' put: aNumber

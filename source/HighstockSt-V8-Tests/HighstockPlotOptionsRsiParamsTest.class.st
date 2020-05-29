@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRsiParamsTest >> testDecimals [
+HighstockPlotOptionsRsiParamsTest >> testSetDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsRsiParamsTest >> testDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRsiParamsTest >> testPeriod [
+HighstockPlotOptionsRsiParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

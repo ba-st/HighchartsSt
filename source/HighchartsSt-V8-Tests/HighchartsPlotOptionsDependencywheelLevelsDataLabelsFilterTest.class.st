@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsDependencywheelLevelsDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

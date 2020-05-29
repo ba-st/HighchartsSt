@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testAfterAnimate [
+HighchartsSeriesStreamgraphEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesStreamgraphEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testCheckboxClick [
+HighchartsSeriesStreamgraphEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesStreamgraphEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testClick [
+HighchartsSeriesStreamgraphEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesStreamgraphEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testHide [
+HighchartsSeriesStreamgraphEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesStreamgraphEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testLegendItemClick [
+HighchartsSeriesStreamgraphEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesStreamgraphEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testMouseOut [
+HighchartsSeriesStreamgraphEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesStreamgraphEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testMouseOver [
+HighchartsSeriesStreamgraphEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesStreamgraphEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphEventsTest >> testShow [
+HighchartsSeriesStreamgraphEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

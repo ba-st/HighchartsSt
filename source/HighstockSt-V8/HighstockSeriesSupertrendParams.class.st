@@ -19,9 +19,7 @@ Defaults to 3."
 { #category : #accessing }
 HighstockSeriesSupertrendParams >> period: aNumber [
 
-	"The base period for indicator Supertrend Indicator calculations.
-This is the number of data points which are taken into account
-for the indicator calculations.
+	"The base period for indicator Supertrend Indicator calculations. This is the number of data points which are taken into account for the indicator calculations.
 Defaults to 10."
 
 	configurationOptions at: 'period' put: aNumber

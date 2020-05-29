@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesInactiveAnimationTest >> testDuration [
+HighstockPlotOptionsWilliamsrStatesInactiveAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownDrillUpButtonPositionTest >> testAlign [
+HighchartsDrilldownDrillUpButtonPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsDrilldownDrillUpButtonPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownDrillUpButtonPositionTest >> testVerticalAlign [
+HighchartsDrilldownDrillUpButtonPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsDrilldownDrillUpButtonPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownDrillUpButtonPositionTest >> testX [
+HighchartsDrilldownDrillUpButtonPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsDrilldownDrillUpButtonPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownDrillUpButtonPositionTest >> testY [
+HighchartsDrilldownDrillUpButtonPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

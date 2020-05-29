@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testClassName [
+HighchartsSeriesTilemapDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTilemapData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTilemapDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTilemapData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTilemapDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTilemapData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTilemapDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesTilemapDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testColor [
+HighchartsSeriesTilemapDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesTilemapDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testColorIndex [
+HighchartsSeriesTilemapDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesTilemapDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testCustom [
+HighchartsSeriesTilemapDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesTilemapDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testDescription [
+HighchartsSeriesTilemapDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesTilemapDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testDrilldown [
+HighchartsSeriesTilemapDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesTilemapDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testEvents [
+HighchartsSeriesTilemapDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesTilemapDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testId [
+HighchartsSeriesTilemapDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesTilemapDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testLabelrank [
+HighchartsSeriesTilemapDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesTilemapDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testName [
+HighchartsSeriesTilemapDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesTilemapDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testPointPadding [
+HighchartsSeriesTilemapDataTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesTilemapDataTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testSelected [
+HighchartsSeriesTilemapDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesTilemapDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testValue [
+HighchartsSeriesTilemapDataTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesTilemapDataTest >> testValue [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testX [
+HighchartsSeriesTilemapDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesTilemapDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataTest >> testY [
+HighchartsSeriesTilemapDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

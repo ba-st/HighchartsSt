@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testChangeDecimals [
+HighstockSeriesMacdTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesMacdTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesMacdTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesMacdTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testClusterFormat [
+HighstockSeriesMacdTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesMacdTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testDistance [
+HighstockSeriesMacdTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesMacdTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testFollowPointer [
+HighstockSeriesMacdTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesMacdTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testFollowTouchMove [
+HighstockSeriesMacdTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesMacdTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testFooterFormat [
+HighstockSeriesMacdTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesMacdTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testHeaderFormat [
+HighstockSeriesMacdTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesMacdTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testNullFormat [
+HighstockSeriesMacdTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesMacdTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testNullFormatter [
+HighstockSeriesMacdTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockSeriesMacdTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testPointFormat [
+HighstockSeriesMacdTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockSeriesMacdTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testPointFormatter [
+HighstockSeriesMacdTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockSeriesMacdTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testStickOnContact [
+HighstockSeriesMacdTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockSeriesMacdTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testValueDecimals [
+HighstockSeriesMacdTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockSeriesMacdTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testValuePrefix [
+HighstockSeriesMacdTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockSeriesMacdTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testValueSuffix [
+HighstockSeriesMacdTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockSeriesMacdTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdTooltipTest >> testXDateFormat [
+HighstockSeriesMacdTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

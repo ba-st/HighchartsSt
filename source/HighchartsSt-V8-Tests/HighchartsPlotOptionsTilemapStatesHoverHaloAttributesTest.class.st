@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapStatesHoverHaloAttributesTest >> testZIndex [
+HighchartsPlotOptionsTilemapStatesHoverHaloAttributesTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

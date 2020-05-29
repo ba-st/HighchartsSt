@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testBoxesToAvoid [
+HighstockSeriesPriceenvelopesLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPriceenvelopesLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPriceenvelopesLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testConnectorAllowed [
+HighstockSeriesPriceenvelopesLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesPriceenvelopesLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testEnabled [
+HighstockSeriesPriceenvelopesLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testFormat [
+HighstockSeriesPriceenvelopesLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testFormatter [
+HighstockSeriesPriceenvelopesLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testMaxFontSize [
+HighstockSeriesPriceenvelopesLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testMinFontSize [
+HighstockSeriesPriceenvelopesLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesPriceenvelopesLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesLabelTest >> testOnArea [
+HighstockSeriesPriceenvelopesLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

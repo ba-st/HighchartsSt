@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDragMaxX [
+HighstockPlotOptionsDumbbellDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDragMaxY [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDragMinX [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDragMinY [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDragPrecisionX [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDragPrecisionY [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDragSensitivity [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDraggableHigh [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDraggableHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDraggableHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDraggableLow [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDraggableLow [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDraggableLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDraggableX [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testDraggableY [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testGroupBy [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockPlotOptionsDumbbellDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDragDropTest >> testLiveRedraw [
+HighstockPlotOptionsDumbbellDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

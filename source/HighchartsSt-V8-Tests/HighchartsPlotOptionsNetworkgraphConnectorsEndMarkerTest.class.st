@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testAlign [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testColor [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testEnabled [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testHeight [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testInside [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testLineColor [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testLineWidth [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testRadius [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSymbol [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testWidth [
+HighchartsPlotOptionsNetworkgraphConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

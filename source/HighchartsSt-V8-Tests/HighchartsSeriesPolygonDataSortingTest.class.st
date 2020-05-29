@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataSortingTest >> testEnabled [
+HighchartsSeriesPolygonDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPolygonDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataSortingTest >> testMatchByName [
+HighchartsSeriesPolygonDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPolygonDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataSortingTest >> testSortKey [
+HighchartsSeriesPolygonDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

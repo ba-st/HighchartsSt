@@ -27,8 +27,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsPlotOptionsSankeyLevelsStatesInactive >> linkOpacity: aNumber [
 
-	"Opacity for the links between nodes in the sankey diagram in
-inactive mode.
+	"Opacity for the links between nodes in the sankey diagram in inactive mode.
 Defaults to 0.1."
 
 	configurationOptions at: 'linkOpacity' put: aNumber

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testChangeDecimals [
+HighstockPlotOptionsChaikinTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsChaikinTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsChaikinTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testClusterFormat [
+HighstockPlotOptionsChaikinTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testDistance [
+HighstockPlotOptionsChaikinTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testFollowPointer [
+HighstockPlotOptionsChaikinTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testFollowTouchMove [
+HighstockPlotOptionsChaikinTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testFooterFormat [
+HighstockPlotOptionsChaikinTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testHeaderFormat [
+HighstockPlotOptionsChaikinTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testNullFormat [
+HighstockPlotOptionsChaikinTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testNullFormatter [
+HighstockPlotOptionsChaikinTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testPointFormat [
+HighstockPlotOptionsChaikinTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testPointFormatter [
+HighstockPlotOptionsChaikinTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testStickOnContact [
+HighstockPlotOptionsChaikinTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testValueDecimals [
+HighstockPlotOptionsChaikinTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testValuePrefix [
+HighstockPlotOptionsChaikinTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testValueSuffix [
+HighstockPlotOptionsChaikinTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockPlotOptionsChaikinTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinTooltipTest >> testXDateFormat [
+HighstockPlotOptionsChaikinTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

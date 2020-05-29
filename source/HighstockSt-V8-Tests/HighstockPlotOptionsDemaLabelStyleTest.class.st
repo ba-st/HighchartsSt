@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsDemaLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

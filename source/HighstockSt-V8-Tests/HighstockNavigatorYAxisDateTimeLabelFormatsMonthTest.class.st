@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisDateTimeLabelFormatsMonthTest >> testMain [
+HighstockNavigatorYAxisDateTimeLabelFormatsMonthTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 

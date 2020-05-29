@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testBoxesToAvoid [
+HighstockPlotOptionsCmfLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCmfLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCmfLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsCmfLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testConnectorAllowed [
+HighstockPlotOptionsCmfLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsCmfLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testConnectorNeighbourDistance [
+HighstockPlotOptionsCmfLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsCmfLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testEnabled [
+HighstockPlotOptionsCmfLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsCmfLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testFormat [
+HighstockPlotOptionsCmfLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsCmfLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testFormatter [
+HighstockPlotOptionsCmfLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsCmfLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testMaxFontSize [
+HighstockPlotOptionsCmfLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsCmfLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testMinFontSize [
+HighstockPlotOptionsCmfLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsCmfLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLabelTest >> testOnArea [
+HighstockPlotOptionsCmfLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

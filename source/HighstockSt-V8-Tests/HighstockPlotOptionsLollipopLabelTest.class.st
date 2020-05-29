@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testBoxesToAvoid [
+HighstockPlotOptionsLollipopLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLollipopLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLollipopLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsLollipopLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testConnectorAllowed [
+HighstockPlotOptionsLollipopLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsLollipopLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testConnectorNeighbourDistance [
+HighstockPlotOptionsLollipopLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsLollipopLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testEnabled [
+HighstockPlotOptionsLollipopLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsLollipopLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testFormat [
+HighstockPlotOptionsLollipopLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsLollipopLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testFormatter [
+HighstockPlotOptionsLollipopLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsLollipopLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testMaxFontSize [
+HighstockPlotOptionsLollipopLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsLollipopLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testMinFontSize [
+HighstockPlotOptionsLollipopLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsLollipopLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopLabelTest >> testOnArea [
+HighstockPlotOptionsLollipopLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

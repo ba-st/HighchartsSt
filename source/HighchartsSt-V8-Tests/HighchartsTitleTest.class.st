@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testAlign [
+HighchartsTitleTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsTitleTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testFloating [
+HighchartsTitleTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsTitleTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testMargin [
+HighchartsTitleTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsTitleTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testStyle [
+HighchartsTitleTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsTitleTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testText [
+HighchartsTitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsTitleTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testUseHTML [
+HighchartsTitleTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsTitleTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testVerticalAlign [
+HighchartsTitleTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsTitleTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testWidthAdjust [
+HighchartsTitleTest >> testSetWidthAdjust [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsTitleTest >> testWidthAdjust [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testX [
+HighchartsTitleTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsTitleTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTitleTest >> testY [
+HighchartsTitleTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAdParamsTest >> testIndex [
+HighstockPlotOptionsAdParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAdParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAdParamsTest >> testPeriod [
+HighstockPlotOptionsAdParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAdParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAdParamsTest >> testVolumeSeriesID [
+HighstockPlotOptionsAdParamsTest >> testSetVolumeSeriesID [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testAlign [
+HighstockLegendBubbleLegendLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLegendBubbleLegendLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testAllowOverlap [
+HighstockLegendBubbleLegendLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLegendBubbleLegendLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testClassName [
+HighstockLegendBubbleLegendLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLegendBubbleLegendLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testFormat [
+HighstockLegendBubbleLegendLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLegendBubbleLegendLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testFormatter [
+HighstockLegendBubbleLegendLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLegendBubbleLegendLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testStyle [
+HighstockLegendBubbleLegendLabelsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockLegendBubbleLegendLabelsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testX [
+HighstockLegendBubbleLegendLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockLegendBubbleLegendLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendLabelsTest >> testY [
+HighstockLegendBubbleLegendLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

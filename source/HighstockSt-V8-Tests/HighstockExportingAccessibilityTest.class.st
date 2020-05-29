@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockExportingAccessibilityTest >> testEnabled [
+HighstockExportingAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

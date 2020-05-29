@@ -7,9 +7,7 @@ Class {
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptionsLabel >> enabled: aBoolean [
 
-	"Enable or disable the label text (min, max, average,
-bins values).
-Defaults to true.
+	"Enable or disable the label text (min, max, average, bins values). Defaults to true.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean
@@ -18,44 +16,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptionsLabel >> formatter: aFunction [
 
-	"Formatter function for the label text.
-Available data are:
-
-
-
-
-
-
-`this.min`
-
-The mininimum value of the points in the selected
-range.
-
-
-
-
-
-`this.max`
-
-The maximum value of the points in the selected
-range.
-
-
-
-
-
-`this.average`
-
-The average value of the points in the selected
-range.
-
-
-
-
-
-`this.bins`
-
-The amount of the points in the selected range.
+	"Formatter function for the label text. Available data are:       `this.min`  The mininimum value of the points in the selected range.      `this.max`  The maximum value of the points in the selected range.      `this.average`  The average value of the points in the selected range.      `this.bins`  The amount of the points in the selected range.
 Defaults to undefined."
 
 	configurationOptions at: 'formatter' put: aFunction

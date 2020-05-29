@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationLevelsTest >> testBorderColor [
+HighchartsPlotOptionsOrganizationLevelsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsOrganizationLevels new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsOrganizationLevelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsOrganizationLevelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationLevelsTest >> testBorderWidth [
+HighchartsPlotOptionsOrganizationLevelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsOrganizationLevelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationLevelsTest >> testColor [
+HighchartsPlotOptionsOrganizationLevelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsOrganizationLevelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationLevelsTest >> testColorByPoint [
+HighchartsPlotOptionsOrganizationLevelsTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsOrganizationLevelsTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationLevelsTest >> testLevel [
+HighchartsPlotOptionsOrganizationLevelsTest >> testSetLevel [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsOrganizationLevelsTest >> testLevel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationLevelsTest >> testLinkOpacity [
+HighchartsPlotOptionsOrganizationLevelsTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsOrganizationLevelsTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationLevelsTest >> testStates [
+HighchartsPlotOptionsOrganizationLevelsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 

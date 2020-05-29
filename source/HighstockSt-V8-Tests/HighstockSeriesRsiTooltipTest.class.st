@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testChangeDecimals [
+HighstockSeriesRsiTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesRsiTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesRsiTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesRsiTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testClusterFormat [
+HighstockSeriesRsiTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesRsiTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testDistance [
+HighstockSeriesRsiTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesRsiTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testFollowPointer [
+HighstockSeriesRsiTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesRsiTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testFollowTouchMove [
+HighstockSeriesRsiTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesRsiTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testFooterFormat [
+HighstockSeriesRsiTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesRsiTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testHeaderFormat [
+HighstockSeriesRsiTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesRsiTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testNullFormat [
+HighstockSeriesRsiTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesRsiTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testNullFormatter [
+HighstockSeriesRsiTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockSeriesRsiTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testPointFormat [
+HighstockSeriesRsiTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockSeriesRsiTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testPointFormatter [
+HighstockSeriesRsiTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockSeriesRsiTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testStickOnContact [
+HighstockSeriesRsiTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockSeriesRsiTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testValueDecimals [
+HighstockSeriesRsiTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockSeriesRsiTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testValuePrefix [
+HighstockSeriesRsiTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockSeriesRsiTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testValueSuffix [
+HighstockSeriesRsiTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockSeriesRsiTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRsiTooltipTest >> testXDateFormat [
+HighstockSeriesRsiTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

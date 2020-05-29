@@ -31,18 +31,8 @@ HighstockStockToolsGuiDefinitionsLines >> horizontalLine [
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsLines >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'segment',
-  'arrowSegment',
-  'ray',
-  'arrowRay',
-  'line',
-  'arrowLine',
-  'horizontalLine',
-  'verticalLine'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'segment',   'arrowSegment',   'ray',   'arrowRay',   'line',   'arrowLine',   'horizontalLine',   'verticalLine' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

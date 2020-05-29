@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsAdvancedParallelChannelTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsAdvancedParallelChannelTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

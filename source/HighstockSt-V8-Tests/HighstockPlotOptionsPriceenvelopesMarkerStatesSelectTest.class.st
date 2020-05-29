@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testEnabled [
+HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testFillColor [
+HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testLineColor [
+HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testRadius [
+HighstockPlotOptionsPriceenvelopesMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

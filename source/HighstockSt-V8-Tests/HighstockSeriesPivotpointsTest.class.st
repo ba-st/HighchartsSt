@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testAllAreas [
+HighstockSeriesPivotpointsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPivotpoints new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPivotpointsTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +229,7 @@ HighstockSeriesPivotpointsTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testAllowPointSelect [
+HighstockSeriesPivotpointsTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +243,7 @@ HighstockSeriesPivotpointsTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testAnimationLimit [
+HighstockSeriesPivotpointsTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +257,7 @@ HighstockSeriesPivotpointsTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testBoostBlending [
+HighstockSeriesPivotpointsTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +271,7 @@ HighstockSeriesPivotpointsTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testBoostThreshold [
+HighstockSeriesPivotpointsTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +285,7 @@ HighstockSeriesPivotpointsTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testBorderColor [
+HighstockSeriesPivotpointsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +299,7 @@ HighstockSeriesPivotpointsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testBorderWidth [
+HighstockSeriesPivotpointsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +313,7 @@ HighstockSeriesPivotpointsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testClassName [
+HighstockSeriesPivotpointsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +327,7 @@ HighstockSeriesPivotpointsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testClip [
+HighstockSeriesPivotpointsTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +341,7 @@ HighstockSeriesPivotpointsTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testColor [
+HighstockSeriesPivotpointsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +355,7 @@ HighstockSeriesPivotpointsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testColorAxis [
+HighstockSeriesPivotpointsTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +369,7 @@ HighstockSeriesPivotpointsTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testColorIndex [
+HighstockSeriesPivotpointsTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +383,7 @@ HighstockSeriesPivotpointsTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testColorKey [
+HighstockSeriesPivotpointsTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +397,7 @@ HighstockSeriesPivotpointsTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCompare [
+HighstockSeriesPivotpointsTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +411,7 @@ HighstockSeriesPivotpointsTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCompareBase [
+HighstockSeriesPivotpointsTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighstockSeriesPivotpointsTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCompareStart [
+HighstockSeriesPivotpointsTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockSeriesPivotpointsTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCompareToMain [
+HighstockSeriesPivotpointsTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,7 @@ HighstockSeriesPivotpointsTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testConnectEnds [
+HighstockSeriesPivotpointsTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockSeriesPivotpointsTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testConnectNulls [
+HighstockSeriesPivotpointsTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,7 @@ HighstockSeriesPivotpointsTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCrisp [
+HighstockSeriesPivotpointsTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +495,7 @@ HighstockSeriesPivotpointsTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCropThreshold [
+HighstockSeriesPivotpointsTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +509,7 @@ HighstockSeriesPivotpointsTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCursor [
+HighstockSeriesPivotpointsTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +523,7 @@ HighstockSeriesPivotpointsTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testCustom [
+HighstockSeriesPivotpointsTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +537,7 @@ HighstockSeriesPivotpointsTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testDashStyle [
+HighstockSeriesPivotpointsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +551,7 @@ HighstockSeriesPivotpointsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testDescription [
+HighstockSeriesPivotpointsTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +565,7 @@ HighstockSeriesPivotpointsTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testEnableMouseTracking [
+HighstockSeriesPivotpointsTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +579,7 @@ HighstockSeriesPivotpointsTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testEvents [
+HighstockSeriesPivotpointsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +593,7 @@ HighstockSeriesPivotpointsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testFindNearestPointBy [
+HighstockSeriesPivotpointsTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +607,7 @@ HighstockSeriesPivotpointsTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testGapSize [
+HighstockSeriesPivotpointsTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +621,7 @@ HighstockSeriesPivotpointsTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testGapUnit [
+HighstockSeriesPivotpointsTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighstockSeriesPivotpointsTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testGetExtremesFromAll [
+HighstockSeriesPivotpointsTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +649,7 @@ HighstockSeriesPivotpointsTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testId [
+HighstockSeriesPivotpointsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +663,7 @@ HighstockSeriesPivotpointsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testIncludeInDataExport [
+HighstockSeriesPivotpointsTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +677,7 @@ HighstockSeriesPivotpointsTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testIndex [
+HighstockSeriesPivotpointsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +691,7 @@ HighstockSeriesPivotpointsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testJoinBy [
+HighstockSeriesPivotpointsTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +705,7 @@ HighstockSeriesPivotpointsTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testKeys [
+HighstockSeriesPivotpointsTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +719,7 @@ HighstockSeriesPivotpointsTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testLegendIndex [
+HighstockSeriesPivotpointsTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +733,7 @@ HighstockSeriesPivotpointsTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testLineWidth [
+HighstockSeriesPivotpointsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +747,7 @@ HighstockSeriesPivotpointsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testLinecap [
+HighstockSeriesPivotpointsTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +761,7 @@ HighstockSeriesPivotpointsTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testLinkedTo [
+HighstockSeriesPivotpointsTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +775,7 @@ HighstockSeriesPivotpointsTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testMapData [
+HighstockSeriesPivotpointsTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +789,7 @@ HighstockSeriesPivotpointsTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testName [
+HighstockSeriesPivotpointsTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +803,7 @@ HighstockSeriesPivotpointsTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testNavigatorOptions [
+HighstockSeriesPivotpointsTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +817,7 @@ HighstockSeriesPivotpointsTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testNegativeColor [
+HighstockSeriesPivotpointsTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +831,7 @@ HighstockSeriesPivotpointsTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testOpacity [
+HighstockSeriesPivotpointsTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighstockSeriesPivotpointsTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testPointDescriptionFormatter [
+HighstockSeriesPivotpointsTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +859,7 @@ HighstockSeriesPivotpointsTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testPointInterval [
+HighstockSeriesPivotpointsTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +873,7 @@ HighstockSeriesPivotpointsTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testPointIntervalUnit [
+HighstockSeriesPivotpointsTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +887,7 @@ HighstockSeriesPivotpointsTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testPointPlacement [
+HighstockSeriesPivotpointsTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +901,7 @@ HighstockSeriesPivotpointsTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testPointRange [
+HighstockSeriesPivotpointsTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +915,7 @@ HighstockSeriesPivotpointsTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testPointStart [
+HighstockSeriesPivotpointsTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +929,7 @@ HighstockSeriesPivotpointsTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testSelected [
+HighstockSeriesPivotpointsTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +943,7 @@ HighstockSeriesPivotpointsTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testShadow [
+HighstockSeriesPivotpointsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +957,7 @@ HighstockSeriesPivotpointsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testShowCheckbox [
+HighstockSeriesPivotpointsTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +971,7 @@ HighstockSeriesPivotpointsTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testShowInLegend [
+HighstockSeriesPivotpointsTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +985,7 @@ HighstockSeriesPivotpointsTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testShowInNavigator [
+HighstockSeriesPivotpointsTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +999,7 @@ HighstockSeriesPivotpointsTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testSkipKeyboardNavigation [
+HighstockSeriesPivotpointsTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +1013,7 @@ HighstockSeriesPivotpointsTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testSoftThreshold [
+HighstockSeriesPivotpointsTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1027,7 @@ HighstockSeriesPivotpointsTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testStack [
+HighstockSeriesPivotpointsTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1041,7 @@ HighstockSeriesPivotpointsTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testStacking [
+HighstockSeriesPivotpointsTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1055,7 @@ HighstockSeriesPivotpointsTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testStates [
+HighstockSeriesPivotpointsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1069,7 @@ HighstockSeriesPivotpointsTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testStep [
+HighstockSeriesPivotpointsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1083,7 @@ HighstockSeriesPivotpointsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testStickyTracking [
+HighstockSeriesPivotpointsTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1097,7 @@ HighstockSeriesPivotpointsTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testThreshold [
+HighstockSeriesPivotpointsTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1111,7 @@ HighstockSeriesPivotpointsTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testTurboThreshold [
+HighstockSeriesPivotpointsTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1125,7 @@ HighstockSeriesPivotpointsTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testType [
+HighstockSeriesPivotpointsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1139,7 @@ HighstockSeriesPivotpointsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testVisible [
+HighstockSeriesPivotpointsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1153,7 @@ HighstockSeriesPivotpointsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testXAxis [
+HighstockSeriesPivotpointsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1167,7 @@ HighstockSeriesPivotpointsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testYAxis [
+HighstockSeriesPivotpointsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1181,7 @@ HighstockSeriesPivotpointsTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testZIndex [
+HighstockSeriesPivotpointsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1195,7 @@ HighstockSeriesPivotpointsTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsTest >> testZoneAxis [
+HighstockSeriesPivotpointsTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

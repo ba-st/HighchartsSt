@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairTest >> testClassName [
+HighstockNavigatorYAxisCrosshairTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorYAxisCrosshair new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorYAxisCrosshairTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigatorYAxisCrosshairTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairTest >> testColor [
+HighstockNavigatorYAxisCrosshairTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigatorYAxisCrosshairTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairTest >> testDashStyle [
+HighstockNavigatorYAxisCrosshairTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigatorYAxisCrosshairTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairTest >> testSnap [
+HighstockNavigatorYAxisCrosshairTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigatorYAxisCrosshairTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairTest >> testWidth [
+HighstockNavigatorYAxisCrosshairTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockNavigatorYAxisCrosshairTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairTest >> testZIndex [
+HighstockNavigatorYAxisCrosshairTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testAfterAnimate [
+HighchartsSeriesBellcurveEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesBellcurveEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testCheckboxClick [
+HighchartsSeriesBellcurveEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesBellcurveEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testClick [
+HighchartsSeriesBellcurveEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesBellcurveEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testHide [
+HighchartsSeriesBellcurveEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesBellcurveEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testLegendItemClick [
+HighchartsSeriesBellcurveEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesBellcurveEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testMouseOut [
+HighchartsSeriesBellcurveEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesBellcurveEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testMouseOver [
+HighchartsSeriesBellcurveEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesBellcurveEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveEventsTest >> testShow [
+HighchartsSeriesBellcurveEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testMillisecon
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsCandlestickTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

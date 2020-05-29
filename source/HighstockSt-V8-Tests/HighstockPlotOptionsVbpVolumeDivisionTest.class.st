@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpVolumeDivisionTest >> testEnabled [
+HighstockPlotOptionsVbpVolumeDivisionTest >> testGetStyles [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsVbpVolumeDivision new.
+	component styles.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'styles' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsVbpVolumeDivisionTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

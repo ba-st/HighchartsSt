@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testEnabled [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstDataMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testFillColor [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testHeight [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testHeightPlus [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetHeightPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testHeightPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testLineColor [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testLineWidth [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testLineWidthPlus [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testWidth [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testWidthPlus [
+HighchartsSeriesSunburstDataMarkerStatesHoverTest >> testSetWidthPlus [
 
 	| component javascript expectedConfiguration |
 

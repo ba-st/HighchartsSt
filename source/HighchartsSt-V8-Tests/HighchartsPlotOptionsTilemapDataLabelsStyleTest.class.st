@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsTilemapDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

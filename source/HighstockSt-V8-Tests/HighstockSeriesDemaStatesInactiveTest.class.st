@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaStatesInactiveTest >> testEnabled [
+HighstockSeriesDemaStatesInactiveTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDemaStatesInactive new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDemaStatesInactiveTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesDemaStatesInactiveTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaStatesInactiveTest >> testOpacity [
+HighstockSeriesDemaStatesInactiveTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 

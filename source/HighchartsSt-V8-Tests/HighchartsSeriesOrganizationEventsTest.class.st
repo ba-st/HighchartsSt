@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testAfterAnimate [
+HighchartsSeriesOrganizationEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesOrganizationEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testCheckboxClick [
+HighchartsSeriesOrganizationEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesOrganizationEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testClick [
+HighchartsSeriesOrganizationEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesOrganizationEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testHide [
+HighchartsSeriesOrganizationEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesOrganizationEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testLegendItemClick [
+HighchartsSeriesOrganizationEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesOrganizationEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testMouseOut [
+HighchartsSeriesOrganizationEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesOrganizationEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testMouseOver [
+HighchartsSeriesOrganizationEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesOrganizationEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationEventsTest >> testShow [
+HighchartsSeriesOrganizationEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbStatesSelectAnimationTest >> testDuration [
+HighstockPlotOptionsWindbarbStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

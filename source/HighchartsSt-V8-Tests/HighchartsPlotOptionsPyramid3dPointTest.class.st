@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointTest >> testEvents [
+HighchartsPlotOptionsPyramid3dPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

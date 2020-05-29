@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testAlign [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testColor [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testEnabled [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testHeight [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testInside [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testLineColor [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testLineWidth [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testRadius [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSymbol [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testWidth [
+HighstockSeriesPackedbubbleConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

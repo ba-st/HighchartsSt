@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsPackedbubbleLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

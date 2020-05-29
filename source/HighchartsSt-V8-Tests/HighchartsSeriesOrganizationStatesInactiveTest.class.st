@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesInactiveTest >> testEnabled [
+HighchartsSeriesOrganizationStatesInactiveTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganizationStatesInactive new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationStatesInactiveTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesOrganizationStatesInactiveTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesInactiveTest >> testLinkOpacity [
+HighchartsSeriesOrganizationStatesInactiveTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesOrganizationStatesInactiveTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesInactiveTest >> testOpacity [
+HighchartsSeriesOrganizationStatesInactiveTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 

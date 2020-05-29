@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsResponsiveRulesConditionTest >> testCallback [
+HighchartsResponsiveRulesConditionTest >> testSetCallback [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsResponsiveRulesConditionTest >> testCallback [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsResponsiveRulesConditionTest >> testMaxHeight [
+HighchartsResponsiveRulesConditionTest >> testSetMaxHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsResponsiveRulesConditionTest >> testMaxHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsResponsiveRulesConditionTest >> testMaxWidth [
+HighchartsResponsiveRulesConditionTest >> testSetMaxWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsResponsiveRulesConditionTest >> testMaxWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsResponsiveRulesConditionTest >> testMinHeight [
+HighchartsResponsiveRulesConditionTest >> testSetMinHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsResponsiveRulesConditionTest >> testMinHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsResponsiveRulesConditionTest >> testMinWidth [
+HighchartsResponsiveRulesConditionTest >> testSetMinWidth [
 
 	| component javascript expectedConfiguration |
 

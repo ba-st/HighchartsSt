@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testEnabled [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testFillColor [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testHeight [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testLineColor [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testLineWidth [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testRadius [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSymbol [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testWidth [
+HighchartsPlotOptionsTreemapClusterZonesMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

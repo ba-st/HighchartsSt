@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testChangeDecimals [
+HighchartsPlotOptionsVennTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsVennTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsVennTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsVennTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testDistance [
+HighchartsPlotOptionsVennTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsVennTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsVennTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsVennTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsVennTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsVennTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsVennTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsVennTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsVennTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsVennTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testNullFormat [
+HighchartsPlotOptionsVennTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsVennTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsVennTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsVennTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testPointFormat [
+HighchartsPlotOptionsVennTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsPlotOptionsVennTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsVennTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsPlotOptionsVennTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testStickOnContact [
+HighchartsPlotOptionsVennTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsPlotOptionsVennTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsVennTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsPlotOptionsVennTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsVennTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsPlotOptionsVennTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsVennTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighchartsPlotOptionsVennTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsVennTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testChangeDecimals [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressionangleTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testClusterFormat [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testDistance [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testFollowPointer [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testFollowTouchMove [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testFooterFormat [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testHeaderFormat [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testNullFormat [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testNullFormatter [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testPointFormat [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testPointFormatter [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testStickOnContact [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testValueDecimals [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testValuePrefix [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testValueSuffix [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockPlotOptionsLinearregressionangleTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleTooltipTest >> testXDateFormat [
+HighstockPlotOptionsLinearregressionangleTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

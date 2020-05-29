@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDataLabelsTextPathTest >> testAttributes [
+HighchartsPlotOptionsColumnDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDataLabelsTextPathTest >> testEnabled [
+HighchartsPlotOptionsColumnDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

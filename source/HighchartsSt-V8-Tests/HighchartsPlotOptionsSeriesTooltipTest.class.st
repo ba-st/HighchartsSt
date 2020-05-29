@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsSeriesTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSeriesTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSeriesTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testDistance [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testNullFormat [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testPointFormat [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testStickOnContact [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsPlotOptionsSeriesTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsSeriesTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

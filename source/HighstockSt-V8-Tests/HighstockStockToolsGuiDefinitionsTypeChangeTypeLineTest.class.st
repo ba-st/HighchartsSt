@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsTypeChangeTypeLineTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsTypeChangeTypeLineTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,133 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testAlignTicks [
+HighchartsYAxisTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetBreaks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component breaks.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'breaks' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetCrosshair [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component crosshair.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crosshair' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetPlotBands [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component plotBands.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotBands' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetPlotLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component plotLines.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotLines' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetStackLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component stackLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stackLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxis new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +145,7 @@ HighchartsYAxisTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testAllowDecimals [
+HighchartsYAxisTest >> testSetAllowDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +159,7 @@ HighchartsYAxisTest >> testAllowDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testAlternateGridColor [
+HighchartsYAxisTest >> testSetAlternateGridColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +173,7 @@ HighchartsYAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testAngle [
+HighchartsYAxisTest >> testSetAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +187,7 @@ HighchartsYAxisTest >> testAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testCategories [
+HighchartsYAxisTest >> testSetCategories [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +201,7 @@ HighchartsYAxisTest >> testCategories [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testCeiling [
+HighchartsYAxisTest >> testSetCeiling [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +215,7 @@ HighchartsYAxisTest >> testCeiling [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testClassName [
+HighchartsYAxisTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +229,7 @@ HighchartsYAxisTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testEndOnTick [
+HighchartsYAxisTest >> testSetEndOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +243,7 @@ HighchartsYAxisTest >> testEndOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testEvents [
+HighchartsYAxisTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +257,7 @@ HighchartsYAxisTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testFloor [
+HighchartsYAxisTest >> testSetFloor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +271,7 @@ HighchartsYAxisTest >> testFloor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testGridLineColor [
+HighchartsYAxisTest >> testSetGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +285,7 @@ HighchartsYAxisTest >> testGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testGridLineDashStyle [
+HighchartsYAxisTest >> testSetGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +299,7 @@ HighchartsYAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testGridLineInterpolation [
+HighchartsYAxisTest >> testSetGridLineInterpolation [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +313,7 @@ HighchartsYAxisTest >> testGridLineInterpolation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testGridLineWidth [
+HighchartsYAxisTest >> testSetGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +327,7 @@ HighchartsYAxisTest >> testGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testGridZIndex [
+HighchartsYAxisTest >> testSetGridZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +341,7 @@ HighchartsYAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testHeight [
+HighchartsYAxisTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +355,7 @@ HighchartsYAxisTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testId [
+HighchartsYAxisTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +369,7 @@ HighchartsYAxisTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testLeft [
+HighchartsYAxisTest >> testSetLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +383,7 @@ HighchartsYAxisTest >> testLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testLineColor [
+HighchartsYAxisTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +397,7 @@ HighchartsYAxisTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testLineWidth [
+HighchartsYAxisTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +411,7 @@ HighchartsYAxisTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testLinkedTo [
+HighchartsYAxisTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +425,7 @@ HighchartsYAxisTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMargin [
+HighchartsYAxisTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +439,7 @@ HighchartsYAxisTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMax [
+HighchartsYAxisTest >> testSetMax [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +453,7 @@ HighchartsYAxisTest >> testMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMaxColor [
+HighchartsYAxisTest >> testSetMaxColor [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +467,7 @@ HighchartsYAxisTest >> testMaxColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMaxPadding [
+HighchartsYAxisTest >> testSetMaxPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +481,7 @@ HighchartsYAxisTest >> testMaxPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMaxZoom [
+HighchartsYAxisTest >> testSetMaxZoom [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +495,7 @@ HighchartsYAxisTest >> testMaxZoom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMin [
+HighchartsYAxisTest >> testSetMin [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +509,7 @@ HighchartsYAxisTest >> testMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinColor [
+HighchartsYAxisTest >> testSetMinColor [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +523,7 @@ HighchartsYAxisTest >> testMinColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinPadding [
+HighchartsYAxisTest >> testSetMinPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +537,7 @@ HighchartsYAxisTest >> testMinPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinRange [
+HighchartsYAxisTest >> testSetMinRange [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +551,7 @@ HighchartsYAxisTest >> testMinRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinTickInterval [
+HighchartsYAxisTest >> testSetMinTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +565,7 @@ HighchartsYAxisTest >> testMinTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorGridLineColor [
+HighchartsYAxisTest >> testSetMinorGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +579,7 @@ HighchartsYAxisTest >> testMinorGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorGridLineDashStyle [
+HighchartsYAxisTest >> testSetMinorGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +593,7 @@ HighchartsYAxisTest >> testMinorGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorGridLineWidth [
+HighchartsYAxisTest >> testSetMinorGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +607,7 @@ HighchartsYAxisTest >> testMinorGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorTickColor [
+HighchartsYAxisTest >> testSetMinorTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +621,7 @@ HighchartsYAxisTest >> testMinorTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorTickInterval [
+HighchartsYAxisTest >> testSetMinorTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +635,7 @@ HighchartsYAxisTest >> testMinorTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorTickLength [
+HighchartsYAxisTest >> testSetMinorTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +649,7 @@ HighchartsYAxisTest >> testMinorTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorTickPosition [
+HighchartsYAxisTest >> testSetMinorTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +663,7 @@ HighchartsYAxisTest >> testMinorTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorTickWidth [
+HighchartsYAxisTest >> testSetMinorTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +677,7 @@ HighchartsYAxisTest >> testMinorTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testMinorTicks [
+HighchartsYAxisTest >> testSetMinorTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +691,7 @@ HighchartsYAxisTest >> testMinorTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testOffset [
+HighchartsYAxisTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +705,7 @@ HighchartsYAxisTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testOpposite [
+HighchartsYAxisTest >> testSetOpposite [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +719,7 @@ HighchartsYAxisTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testPane [
+HighchartsYAxisTest >> testSetPane [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +733,7 @@ HighchartsYAxisTest >> testPane [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testReversed [
+HighchartsYAxisTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +747,7 @@ HighchartsYAxisTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testReversedStacks [
+HighchartsYAxisTest >> testSetReversedStacks [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +761,7 @@ HighchartsYAxisTest >> testReversedStacks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testShowEmpty [
+HighchartsYAxisTest >> testSetShowEmpty [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +775,7 @@ HighchartsYAxisTest >> testShowEmpty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testShowFirstLabel [
+HighchartsYAxisTest >> testSetShowFirstLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +789,7 @@ HighchartsYAxisTest >> testShowFirstLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testShowLastLabel [
+HighchartsYAxisTest >> testSetShowLastLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +803,7 @@ HighchartsYAxisTest >> testShowLastLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testSoftMax [
+HighchartsYAxisTest >> testSetSoftMax [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +817,7 @@ HighchartsYAxisTest >> testSoftMax [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testSoftMin [
+HighchartsYAxisTest >> testSetSoftMin [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +831,7 @@ HighchartsYAxisTest >> testSoftMin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testStartOfWeek [
+HighchartsYAxisTest >> testSetStartOfWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +845,7 @@ HighchartsYAxisTest >> testStartOfWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testStartOnTick [
+HighchartsYAxisTest >> testSetStartOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +859,7 @@ HighchartsYAxisTest >> testStartOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testStops [
+HighchartsYAxisTest >> testSetStops [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +873,7 @@ HighchartsYAxisTest >> testStops [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickAmount [
+HighchartsYAxisTest >> testSetTickAmount [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +887,7 @@ HighchartsYAxisTest >> testTickAmount [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickColor [
+HighchartsYAxisTest >> testSetTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +901,7 @@ HighchartsYAxisTest >> testTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickInterval [
+HighchartsYAxisTest >> testSetTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +915,7 @@ HighchartsYAxisTest >> testTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickLength [
+HighchartsYAxisTest >> testSetTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +929,7 @@ HighchartsYAxisTest >> testTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickPixelInterval [
+HighchartsYAxisTest >> testSetTickPixelInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +943,7 @@ HighchartsYAxisTest >> testTickPixelInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickPosition [
+HighchartsYAxisTest >> testSetTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +957,7 @@ HighchartsYAxisTest >> testTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickPositioner [
+HighchartsYAxisTest >> testSetTickPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +971,7 @@ HighchartsYAxisTest >> testTickPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickPositions [
+HighchartsYAxisTest >> testSetTickPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +985,7 @@ HighchartsYAxisTest >> testTickPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickWidth [
+HighchartsYAxisTest >> testSetTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +999,7 @@ HighchartsYAxisTest >> testTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTickmarkPlacement [
+HighchartsYAxisTest >> testSetTickmarkPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1013,7 @@ HighchartsYAxisTest >> testTickmarkPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTooltipValueFormat [
+HighchartsYAxisTest >> testSetTooltipValueFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1027,7 @@ HighchartsYAxisTest >> testTooltipValueFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testTop [
+HighchartsYAxisTest >> testSetTop [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1041,7 @@ HighchartsYAxisTest >> testTop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testType [
+HighchartsYAxisTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1055,7 @@ HighchartsYAxisTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testUniqueNames [
+HighchartsYAxisTest >> testSetUniqueNames [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1069,7 @@ HighchartsYAxisTest >> testUniqueNames [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testUnits [
+HighchartsYAxisTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1083,7 @@ HighchartsYAxisTest >> testUnits [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testVisible [
+HighchartsYAxisTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1097,7 @@ HighchartsYAxisTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testWidth [
+HighchartsYAxisTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1111,7 @@ HighchartsYAxisTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTest >> testZoomEnabled [
+HighchartsYAxisTest >> testSetZoomEnabled [
 
 	| component javascript expectedConfiguration |
 

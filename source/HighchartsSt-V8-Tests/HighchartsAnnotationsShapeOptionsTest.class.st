@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testDashStyle [
+HighchartsAnnotationsShapeOptionsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAnnotationsShapeOptionsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testFill [
+HighchartsAnnotationsShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAnnotationsShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testHeight [
+HighchartsAnnotationsShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsAnnotationsShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testR [
+HighchartsAnnotationsShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsAnnotationsShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testSnap [
+HighchartsAnnotationsShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsAnnotationsShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testSrc [
+HighchartsAnnotationsShapeOptionsTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsAnnotationsShapeOptionsTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testStroke [
+HighchartsAnnotationsShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsAnnotationsShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testStrokeWidth [
+HighchartsAnnotationsShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsAnnotationsShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testType [
+HighchartsAnnotationsShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsAnnotationsShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testWidth [
+HighchartsAnnotationsShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

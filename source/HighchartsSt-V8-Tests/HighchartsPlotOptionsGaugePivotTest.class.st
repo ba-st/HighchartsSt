@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugePivotTest >> testBackgroundColor [
+HighchartsPlotOptionsGaugePivotTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsGaugePivotTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugePivotTest >> testBorderColor [
+HighchartsPlotOptionsGaugePivotTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsGaugePivotTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugePivotTest >> testBorderWidth [
+HighchartsPlotOptionsGaugePivotTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsGaugePivotTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugePivotTest >> testRadius [
+HighchartsPlotOptionsGaugePivotTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

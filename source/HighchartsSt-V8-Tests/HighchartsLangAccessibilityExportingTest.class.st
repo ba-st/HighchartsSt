@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityExportingTest >> testChartMenuLabel [
+HighchartsLangAccessibilityExportingTest >> testSetChartMenuLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilityExportingTest >> testChartMenuLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityExportingTest >> testExportRegionLabel [
+HighchartsLangAccessibilityExportingTest >> testSetExportRegionLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLangAccessibilityExportingTest >> testExportRegionLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityExportingTest >> testMenuButtonLabel [
+HighchartsLangAccessibilityExportingTest >> testSetMenuButtonLabel [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,245 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testAllowPointSelect [
+HighstockSeriesKeltnerchannelsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetBottomLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component bottomLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bottomLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetTopLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component topLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'topLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +257,7 @@ HighstockSeriesKeltnerchannelsTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testAnimationLimit [
+HighstockSeriesKeltnerchannelsTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +271,7 @@ HighstockSeriesKeltnerchannelsTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBoostBlending [
+HighstockSeriesKeltnerchannelsTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +285,7 @@ HighstockSeriesKeltnerchannelsTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBoostThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +299,7 @@ HighstockSeriesKeltnerchannelsTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBorderColor [
+HighstockSeriesKeltnerchannelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +313,7 @@ HighstockSeriesKeltnerchannelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBorderWidth [
+HighstockSeriesKeltnerchannelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +327,7 @@ HighstockSeriesKeltnerchannelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testClassName [
+HighstockSeriesKeltnerchannelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +341,7 @@ HighstockSeriesKeltnerchannelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testClip [
+HighstockSeriesKeltnerchannelsTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +355,7 @@ HighstockSeriesKeltnerchannelsTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testColor [
+HighstockSeriesKeltnerchannelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +369,7 @@ HighstockSeriesKeltnerchannelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testColorIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +383,7 @@ HighstockSeriesKeltnerchannelsTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testColorKey [
+HighstockSeriesKeltnerchannelsTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +397,7 @@ HighstockSeriesKeltnerchannelsTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCompareStart [
+HighstockSeriesKeltnerchannelsTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +411,7 @@ HighstockSeriesKeltnerchannelsTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCompareToMain [
+HighstockSeriesKeltnerchannelsTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +425,7 @@ HighstockSeriesKeltnerchannelsTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testConnectEnds [
+HighstockSeriesKeltnerchannelsTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +439,7 @@ HighstockSeriesKeltnerchannelsTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testConnectNulls [
+HighstockSeriesKeltnerchannelsTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +453,7 @@ HighstockSeriesKeltnerchannelsTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCrisp [
+HighstockSeriesKeltnerchannelsTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +467,7 @@ HighstockSeriesKeltnerchannelsTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCropThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +481,7 @@ HighstockSeriesKeltnerchannelsTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCursor [
+HighstockSeriesKeltnerchannelsTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +495,7 @@ HighstockSeriesKeltnerchannelsTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCustom [
+HighstockSeriesKeltnerchannelsTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +509,7 @@ HighstockSeriesKeltnerchannelsTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testDashStyle [
+HighstockSeriesKeltnerchannelsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +523,7 @@ HighstockSeriesKeltnerchannelsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testDescription [
+HighstockSeriesKeltnerchannelsTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +537,7 @@ HighstockSeriesKeltnerchannelsTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testEnableMouseTracking [
+HighstockSeriesKeltnerchannelsTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +551,7 @@ HighstockSeriesKeltnerchannelsTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testEvents [
+HighstockSeriesKeltnerchannelsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +565,7 @@ HighstockSeriesKeltnerchannelsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testFindNearestPointBy [
+HighstockSeriesKeltnerchannelsTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +579,7 @@ HighstockSeriesKeltnerchannelsTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testGapSize [
+HighstockSeriesKeltnerchannelsTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +593,7 @@ HighstockSeriesKeltnerchannelsTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testGapUnit [
+HighstockSeriesKeltnerchannelsTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +607,7 @@ HighstockSeriesKeltnerchannelsTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testGetExtremesFromAll [
+HighstockSeriesKeltnerchannelsTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +621,7 @@ HighstockSeriesKeltnerchannelsTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testId [
+HighstockSeriesKeltnerchannelsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +635,7 @@ HighstockSeriesKeltnerchannelsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testIncludeInDataExport [
+HighstockSeriesKeltnerchannelsTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +649,7 @@ HighstockSeriesKeltnerchannelsTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +663,7 @@ HighstockSeriesKeltnerchannelsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLegendIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +677,7 @@ HighstockSeriesKeltnerchannelsTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLineWidth [
+HighstockSeriesKeltnerchannelsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +691,7 @@ HighstockSeriesKeltnerchannelsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLinecap [
+HighstockSeriesKeltnerchannelsTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +705,7 @@ HighstockSeriesKeltnerchannelsTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLinkedTo [
+HighstockSeriesKeltnerchannelsTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +719,7 @@ HighstockSeriesKeltnerchannelsTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testMapData [
+HighstockSeriesKeltnerchannelsTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +733,7 @@ HighstockSeriesKeltnerchannelsTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testName [
+HighstockSeriesKeltnerchannelsTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +747,7 @@ HighstockSeriesKeltnerchannelsTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testNegativeColor [
+HighstockSeriesKeltnerchannelsTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +761,7 @@ HighstockSeriesKeltnerchannelsTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testOpacity [
+HighstockSeriesKeltnerchannelsTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +775,7 @@ HighstockSeriesKeltnerchannelsTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testPointDescriptionFormatter [
+HighstockSeriesKeltnerchannelsTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +789,7 @@ HighstockSeriesKeltnerchannelsTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testSelected [
+HighstockSeriesKeltnerchannelsTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +803,7 @@ HighstockSeriesKeltnerchannelsTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testShadow [
+HighstockSeriesKeltnerchannelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +817,7 @@ HighstockSeriesKeltnerchannelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testShowCheckbox [
+HighstockSeriesKeltnerchannelsTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +831,7 @@ HighstockSeriesKeltnerchannelsTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testShowInLegend [
+HighstockSeriesKeltnerchannelsTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +845,7 @@ HighstockSeriesKeltnerchannelsTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testSkipKeyboardNavigation [
+HighstockSeriesKeltnerchannelsTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +859,7 @@ HighstockSeriesKeltnerchannelsTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testSoftThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +873,7 @@ HighstockSeriesKeltnerchannelsTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStack [
+HighstockSeriesKeltnerchannelsTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +887,7 @@ HighstockSeriesKeltnerchannelsTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStates [
+HighstockSeriesKeltnerchannelsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +901,7 @@ HighstockSeriesKeltnerchannelsTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStep [
+HighstockSeriesKeltnerchannelsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +915,7 @@ HighstockSeriesKeltnerchannelsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStickyTracking [
+HighstockSeriesKeltnerchannelsTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +929,7 @@ HighstockSeriesKeltnerchannelsTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +943,7 @@ HighstockSeriesKeltnerchannelsTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testTurboThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +957,7 @@ HighstockSeriesKeltnerchannelsTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testType [
+HighstockSeriesKeltnerchannelsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +971,7 @@ HighstockSeriesKeltnerchannelsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testVisible [
+HighstockSeriesKeltnerchannelsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +985,7 @@ HighstockSeriesKeltnerchannelsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testXAxis [
+HighstockSeriesKeltnerchannelsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +999,7 @@ HighstockSeriesKeltnerchannelsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testYAxis [
+HighstockSeriesKeltnerchannelsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +1013,7 @@ HighstockSeriesKeltnerchannelsTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testZIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +1027,7 @@ HighstockSeriesKeltnerchannelsTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testZoneAxis [
+HighstockSeriesKeltnerchannelsTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

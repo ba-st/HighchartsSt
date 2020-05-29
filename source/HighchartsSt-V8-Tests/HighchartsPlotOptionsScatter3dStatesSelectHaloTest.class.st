@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testAttributes [
+HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testOpacity [
+HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testSize [
+HighchartsPlotOptionsScatter3dStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

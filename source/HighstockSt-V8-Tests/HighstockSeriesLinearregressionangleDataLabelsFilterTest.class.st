@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testOperator [
+HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testProperty [
+HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testValue [
+HighstockSeriesLinearregressionangleDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

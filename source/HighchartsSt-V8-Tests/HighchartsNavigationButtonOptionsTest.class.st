@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testAlign [
+HighchartsNavigationButtonOptionsTest >> testGetTheme [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationButtonOptions new.
+	component theme.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'theme' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationButtonOptionsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsNavigationButtonOptionsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testButtonSpacing [
+HighchartsNavigationButtonOptionsTest >> testSetButtonSpacing [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsNavigationButtonOptionsTest >> testButtonSpacing [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testEnabled [
+HighchartsNavigationButtonOptionsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsNavigationButtonOptionsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testHeight [
+HighchartsNavigationButtonOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsNavigationButtonOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testSymbolFill [
+HighchartsNavigationButtonOptionsTest >> testSetSymbolFill [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsNavigationButtonOptionsTest >> testSymbolFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testSymbolSize [
+HighchartsNavigationButtonOptionsTest >> testSetSymbolSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsNavigationButtonOptionsTest >> testSymbolSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testSymbolStroke [
+HighchartsNavigationButtonOptionsTest >> testSetSymbolStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsNavigationButtonOptionsTest >> testSymbolStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testSymbolStrokeWidth [
+HighchartsNavigationButtonOptionsTest >> testSetSymbolStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsNavigationButtonOptionsTest >> testSymbolStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testSymbolX [
+HighchartsNavigationButtonOptionsTest >> testSetSymbolX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsNavigationButtonOptionsTest >> testSymbolX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testSymbolY [
+HighchartsNavigationButtonOptionsTest >> testSetSymbolY [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsNavigationButtonOptionsTest >> testSymbolY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testText [
+HighchartsNavigationButtonOptionsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsNavigationButtonOptionsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testVerticalAlign [
+HighchartsNavigationButtonOptionsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsNavigationButtonOptionsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testWidth [
+HighchartsNavigationButtonOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsNavigationButtonOptionsTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsTest >> testY [
+HighchartsNavigationButtonOptionsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

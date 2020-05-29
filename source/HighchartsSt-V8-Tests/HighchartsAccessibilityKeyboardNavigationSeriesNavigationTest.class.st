@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testMode [
+HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testSetMode [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testMode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testPointNavigationEnabledThreshold [
+HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testSetPointNavigationEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testPointNaviga
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testSkipNullPoints [
+HighchartsAccessibilityKeyboardNavigationSeriesNavigationTest >> testSetSkipNullPoints [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testAlign [
+HighstockNavigationButtonOptionsTest >> testGetTheme [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationButtonOptions new.
+	component theme.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'theme' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationButtonOptionsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigationButtonOptionsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testButtonSpacing [
+HighstockNavigationButtonOptionsTest >> testSetButtonSpacing [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigationButtonOptionsTest >> testButtonSpacing [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testEnabled [
+HighstockNavigationButtonOptionsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigationButtonOptionsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testHeight [
+HighstockNavigationButtonOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigationButtonOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testSymbolFill [
+HighstockNavigationButtonOptionsTest >> testSetSymbolFill [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockNavigationButtonOptionsTest >> testSymbolFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testSymbolSize [
+HighstockNavigationButtonOptionsTest >> testSetSymbolSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockNavigationButtonOptionsTest >> testSymbolSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testSymbolStroke [
+HighstockNavigationButtonOptionsTest >> testSetSymbolStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockNavigationButtonOptionsTest >> testSymbolStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testSymbolStrokeWidth [
+HighstockNavigationButtonOptionsTest >> testSetSymbolStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockNavigationButtonOptionsTest >> testSymbolStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testSymbolX [
+HighstockNavigationButtonOptionsTest >> testSetSymbolX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockNavigationButtonOptionsTest >> testSymbolX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testSymbolY [
+HighstockNavigationButtonOptionsTest >> testSetSymbolY [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockNavigationButtonOptionsTest >> testSymbolY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testText [
+HighstockNavigationButtonOptionsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockNavigationButtonOptionsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testVerticalAlign [
+HighstockNavigationButtonOptionsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockNavigationButtonOptionsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testWidth [
+HighstockNavigationButtonOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockNavigationButtonOptionsTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationButtonOptionsTest >> testY [
+HighstockNavigationButtonOptionsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

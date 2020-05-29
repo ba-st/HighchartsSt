@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsWindbarbLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

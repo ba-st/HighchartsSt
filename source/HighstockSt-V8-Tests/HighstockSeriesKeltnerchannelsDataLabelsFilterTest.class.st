@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testOperator [
+HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testProperty [
+HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testValue [
+HighstockSeriesKeltnerchannelsDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

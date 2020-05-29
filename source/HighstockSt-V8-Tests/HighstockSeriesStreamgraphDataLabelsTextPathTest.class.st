@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesStreamgraphDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStreamgraphDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesStreamgraphDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testEnabled [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVennClusterZonesMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testFillColor [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVennClusterZonesMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testHeight [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVennClusterZonesMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testLineColor [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVennClusterZonesMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testLineWidth [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesVennClusterZonesMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testRadius [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesVennClusterZonesMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testSymbol [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesVennClusterZonesMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterZonesMarkerTest >> testWidth [
+HighchartsSeriesVennClusterZonesMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPcParamsTest >> testPeriod [
+HighstockPlotOptionsPcParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

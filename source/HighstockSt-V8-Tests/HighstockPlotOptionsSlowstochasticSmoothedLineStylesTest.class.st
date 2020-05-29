@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticSmoothedLineStylesTest >> testLineColor [
+HighstockPlotOptionsSlowstochasticSmoothedLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSlowstochasticSmoothedLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticSmoothedLineStylesTest >> testLineWidth [
+HighstockPlotOptionsSlowstochasticSmoothedLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

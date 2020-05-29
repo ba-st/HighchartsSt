@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectHaloTest >> testAttributes [
+HighchartsSeriesWordcloudStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectHaloTest >> testOpacity [
+HighchartsSeriesWordcloudStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWordcloudStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectHaloTest >> testSize [
+HighchartsSeriesWordcloudStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

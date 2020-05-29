@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesLinearregressionangleDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressionangleDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesLinearregressionangleDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

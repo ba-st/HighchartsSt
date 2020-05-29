@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testChangeDecimals [
+HighchartsSeriesFunnel3dTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testClusterFormat [
+HighchartsSeriesFunnel3dTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testDistance [
+HighchartsSeriesFunnel3dTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testFollowPointer [
+HighchartsSeriesFunnel3dTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testFollowTouchMove [
+HighchartsSeriesFunnel3dTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testFooterFormat [
+HighchartsSeriesFunnel3dTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testHeaderFormat [
+HighchartsSeriesFunnel3dTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testNullFormat [
+HighchartsSeriesFunnel3dTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testNullFormatter [
+HighchartsSeriesFunnel3dTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testPointFormat [
+HighchartsSeriesFunnel3dTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testPointFormatter [
+HighchartsSeriesFunnel3dTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testStickOnContact [
+HighchartsSeriesFunnel3dTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testValueDecimals [
+HighchartsSeriesFunnel3dTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testValuePrefix [
+HighchartsSeriesFunnel3dTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testValueSuffix [
+HighchartsSeriesFunnel3dTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighchartsSeriesFunnel3dTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTooltipTest >> testXDateFormat [
+HighchartsSeriesFunnel3dTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

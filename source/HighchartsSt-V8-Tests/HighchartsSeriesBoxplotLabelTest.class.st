@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testBoxesToAvoid [
+HighchartsSeriesBoxplotLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBoxplotLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesBoxplotLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testConnectorAllowed [
+HighchartsSeriesBoxplotLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesBoxplotLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testConnectorNeighbourDistance [
+HighchartsSeriesBoxplotLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesBoxplotLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testEnabled [
+HighchartsSeriesBoxplotLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesBoxplotLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testFormat [
+HighchartsSeriesBoxplotLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesBoxplotLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testFormatter [
+HighchartsSeriesBoxplotLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesBoxplotLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testMaxFontSize [
+HighchartsSeriesBoxplotLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesBoxplotLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testMinFontSize [
+HighchartsSeriesBoxplotLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesBoxplotLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLabelTest >> testOnArea [
+HighchartsSeriesBoxplotLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

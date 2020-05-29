@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityKeyboardNavigationTest >> testEnabled [
+HighstockAccessibilityKeyboardNavigationTest >> testGetFocusBorder [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibilityKeyboardNavigation new.
+	component focusBorder.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'focusBorder' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityKeyboardNavigationTest >> testGetSeriesNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibilityKeyboardNavigation new.
+	component seriesNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'seriesNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockAccessibilityKeyboardNavigationTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityKeyboardNavigationTest >> testOrder [
+HighstockAccessibilityKeyboardNavigationTest >> testSetOrder [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockAccessibilityKeyboardNavigationTest >> testOrder [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityKeyboardNavigationTest >> testWrapAround [
+HighstockAccessibilityKeyboardNavigationTest >> testSetWrapAround [
 
 	| component javascript expectedConfiguration |
 

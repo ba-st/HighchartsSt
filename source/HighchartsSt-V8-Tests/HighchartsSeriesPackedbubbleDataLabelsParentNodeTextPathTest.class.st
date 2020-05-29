@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataLabelsParentNodeTextPathTest >> testEnabled [
+HighchartsSeriesPackedbubbleDataLabelsParentNodeTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

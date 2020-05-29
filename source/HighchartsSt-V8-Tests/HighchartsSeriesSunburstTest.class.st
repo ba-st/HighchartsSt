@@ -5,7 +5,262 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testAllAreas [
+HighchartsSeriesSunburstTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetLevelSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component levelSize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'levelSize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetLevels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component levels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'levels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetTraverseUpButton [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component traverseUpButton.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'traverseUpButton' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburst new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sunburst';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +275,7 @@ HighchartsSeriesSunburstTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testAllowDrillToNode [
+HighchartsSeriesSunburstTest >> testSetAllowDrillToNode [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +290,7 @@ HighchartsSeriesSunburstTest >> testAllowDrillToNode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testAllowPointSelect [
+HighchartsSeriesSunburstTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +305,7 @@ HighchartsSeriesSunburstTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testAllowTraversingTree [
+HighchartsSeriesSunburstTest >> testSetAllowTraversingTree [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +320,7 @@ HighchartsSeriesSunburstTest >> testAllowTraversingTree [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testAnimationLimit [
+HighchartsSeriesSunburstTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +335,7 @@ HighchartsSeriesSunburstTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testBoostBlending [
+HighchartsSeriesSunburstTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +350,7 @@ HighchartsSeriesSunburstTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testBoostThreshold [
+HighchartsSeriesSunburstTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +365,7 @@ HighchartsSeriesSunburstTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testBorderColor [
+HighchartsSeriesSunburstTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +380,7 @@ HighchartsSeriesSunburstTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testBorderWidth [
+HighchartsSeriesSunburstTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +395,7 @@ HighchartsSeriesSunburstTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCenter [
+HighchartsSeriesSunburstTest >> testSetCenter [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +410,7 @@ HighchartsSeriesSunburstTest >> testCenter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testClassName [
+HighchartsSeriesSunburstTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +425,7 @@ HighchartsSeriesSunburstTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testClip [
+HighchartsSeriesSunburstTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +440,7 @@ HighchartsSeriesSunburstTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testColor [
+HighchartsSeriesSunburstTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +455,7 @@ HighchartsSeriesSunburstTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testColorAxis [
+HighchartsSeriesSunburstTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +470,7 @@ HighchartsSeriesSunburstTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testColorByPoint [
+HighchartsSeriesSunburstTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +485,7 @@ HighchartsSeriesSunburstTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testColorIndex [
+HighchartsSeriesSunburstTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +500,7 @@ HighchartsSeriesSunburstTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testColorKey [
+HighchartsSeriesSunburstTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +515,7 @@ HighchartsSeriesSunburstTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testColors [
+HighchartsSeriesSunburstTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +530,7 @@ HighchartsSeriesSunburstTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCompare [
+HighchartsSeriesSunburstTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +545,7 @@ HighchartsSeriesSunburstTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCompareBase [
+HighchartsSeriesSunburstTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +560,7 @@ HighchartsSeriesSunburstTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCompareStart [
+HighchartsSeriesSunburstTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +575,7 @@ HighchartsSeriesSunburstTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testConnectEnds [
+HighchartsSeriesSunburstTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +590,7 @@ HighchartsSeriesSunburstTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testConnectNulls [
+HighchartsSeriesSunburstTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +605,7 @@ HighchartsSeriesSunburstTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCrisp [
+HighchartsSeriesSunburstTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +620,7 @@ HighchartsSeriesSunburstTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCropThreshold [
+HighchartsSeriesSunburstTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +635,7 @@ HighchartsSeriesSunburstTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCursor [
+HighchartsSeriesSunburstTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +650,7 @@ HighchartsSeriesSunburstTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testCustom [
+HighchartsSeriesSunburstTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +665,7 @@ HighchartsSeriesSunburstTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testDashStyle [
+HighchartsSeriesSunburstTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +680,7 @@ HighchartsSeriesSunburstTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testData [
+HighchartsSeriesSunburstTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +695,7 @@ HighchartsSeriesSunburstTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testDescription [
+HighchartsSeriesSunburstTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +710,7 @@ HighchartsSeriesSunburstTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testEnableMouseTracking [
+HighchartsSeriesSunburstTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +725,7 @@ HighchartsSeriesSunburstTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testEvents [
+HighchartsSeriesSunburstTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +740,7 @@ HighchartsSeriesSunburstTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testFillColor [
+HighchartsSeriesSunburstTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +755,7 @@ HighchartsSeriesSunburstTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testFindNearestPointBy [
+HighchartsSeriesSunburstTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +770,7 @@ HighchartsSeriesSunburstTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testGapSize [
+HighchartsSeriesSunburstTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +785,7 @@ HighchartsSeriesSunburstTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testGapUnit [
+HighchartsSeriesSunburstTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +800,7 @@ HighchartsSeriesSunburstTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testGetExtremesFromAll [
+HighchartsSeriesSunburstTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +815,7 @@ HighchartsSeriesSunburstTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testId [
+HighchartsSeriesSunburstTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +830,7 @@ HighchartsSeriesSunburstTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testIncludeInDataExport [
+HighchartsSeriesSunburstTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +845,7 @@ HighchartsSeriesSunburstTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testIndex [
+HighchartsSeriesSunburstTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +860,7 @@ HighchartsSeriesSunburstTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testJoinBy [
+HighchartsSeriesSunburstTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +875,7 @@ HighchartsSeriesSunburstTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testKeys [
+HighchartsSeriesSunburstTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +890,7 @@ HighchartsSeriesSunburstTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testLegendIndex [
+HighchartsSeriesSunburstTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +905,7 @@ HighchartsSeriesSunburstTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testLevelIsConstant [
+HighchartsSeriesSunburstTest >> testSetLevelIsConstant [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +920,7 @@ HighchartsSeriesSunburstTest >> testLevelIsConstant [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testLineWidth [
+HighchartsSeriesSunburstTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +935,7 @@ HighchartsSeriesSunburstTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testLinecap [
+HighchartsSeriesSunburstTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +950,7 @@ HighchartsSeriesSunburstTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testLinkedTo [
+HighchartsSeriesSunburstTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +965,7 @@ HighchartsSeriesSunburstTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testMapData [
+HighchartsSeriesSunburstTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +980,7 @@ HighchartsSeriesSunburstTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testName [
+HighchartsSeriesSunburstTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +995,7 @@ HighchartsSeriesSunburstTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testNavigatorOptions [
+HighchartsSeriesSunburstTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1010,7 @@ HighchartsSeriesSunburstTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testNegativeColor [
+HighchartsSeriesSunburstTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1025,7 @@ HighchartsSeriesSunburstTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testOpacity [
+HighchartsSeriesSunburstTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1040,7 @@ HighchartsSeriesSunburstTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testPointDescriptionFormatter [
+HighchartsSeriesSunburstTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1055,7 @@ HighchartsSeriesSunburstTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testPointInterval [
+HighchartsSeriesSunburstTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1070,7 @@ HighchartsSeriesSunburstTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testPointIntervalUnit [
+HighchartsSeriesSunburstTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1085,7 @@ HighchartsSeriesSunburstTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testPointPlacement [
+HighchartsSeriesSunburstTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1100,7 @@ HighchartsSeriesSunburstTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testPointRange [
+HighchartsSeriesSunburstTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1115,7 @@ HighchartsSeriesSunburstTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testPointStart [
+HighchartsSeriesSunburstTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1130,7 @@ HighchartsSeriesSunburstTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testRootId [
+HighchartsSeriesSunburstTest >> testSetRootId [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1145,7 @@ HighchartsSeriesSunburstTest >> testRootId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testSelected [
+HighchartsSeriesSunburstTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1160,7 @@ HighchartsSeriesSunburstTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testShadow [
+HighchartsSeriesSunburstTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1175,7 @@ HighchartsSeriesSunburstTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testShowCheckbox [
+HighchartsSeriesSunburstTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1190,7 @@ HighchartsSeriesSunburstTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testShowInLegend [
+HighchartsSeriesSunburstTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1205,7 @@ HighchartsSeriesSunburstTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testShowInNavigator [
+HighchartsSeriesSunburstTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1220,7 @@ HighchartsSeriesSunburstTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testSize [
+HighchartsSeriesSunburstTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1235,7 @@ HighchartsSeriesSunburstTest >> testSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testSkipKeyboardNavigation [
+HighchartsSeriesSunburstTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1250,7 @@ HighchartsSeriesSunburstTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testSlicedOffset [
+HighchartsSeriesSunburstTest >> testSetSlicedOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1265,7 @@ HighchartsSeriesSunburstTest >> testSlicedOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testSoftThreshold [
+HighchartsSeriesSunburstTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1280,7 @@ HighchartsSeriesSunburstTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testStacking [
+HighchartsSeriesSunburstTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1295,7 @@ HighchartsSeriesSunburstTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testStartAngle [
+HighchartsSeriesSunburstTest >> testSetStartAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1310,7 @@ HighchartsSeriesSunburstTest >> testStartAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testStates [
+HighchartsSeriesSunburstTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1325,7 @@ HighchartsSeriesSunburstTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testStep [
+HighchartsSeriesSunburstTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1340,7 @@ HighchartsSeriesSunburstTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testStickyTracking [
+HighchartsSeriesSunburstTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1355,7 @@ HighchartsSeriesSunburstTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testThreshold [
+HighchartsSeriesSunburstTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1370,7 @@ HighchartsSeriesSunburstTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testTurboThreshold [
+HighchartsSeriesSunburstTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1385,7 @@ HighchartsSeriesSunburstTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testType [
+HighchartsSeriesSunburstTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1400,7 @@ HighchartsSeriesSunburstTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testUseOhlcData [
+HighchartsSeriesSunburstTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1415,7 @@ HighchartsSeriesSunburstTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testVisible [
+HighchartsSeriesSunburstTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1430,7 @@ HighchartsSeriesSunburstTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testXAxis [
+HighchartsSeriesSunburstTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1190,7 +1445,7 @@ HighchartsSeriesSunburstTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testYAxis [
+HighchartsSeriesSunburstTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1205,7 +1460,7 @@ HighchartsSeriesSunburstTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testZIndex [
+HighchartsSeriesSunburstTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1220,7 +1475,7 @@ HighchartsSeriesSunburstTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstTest >> testZoneAxis [
+HighchartsSeriesSunburstTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

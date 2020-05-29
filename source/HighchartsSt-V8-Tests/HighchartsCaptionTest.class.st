@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testAlign [
+HighchartsCaptionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsCaptionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testFloating [
+HighchartsCaptionTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsCaptionTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testMargin [
+HighchartsCaptionTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsCaptionTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testStyle [
+HighchartsCaptionTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsCaptionTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testText [
+HighchartsCaptionTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsCaptionTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testUseHTML [
+HighchartsCaptionTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsCaptionTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testVerticalAlign [
+HighchartsCaptionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsCaptionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testX [
+HighchartsCaptionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsCaptionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsCaptionTest >> testY [
+HighchartsCaptionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

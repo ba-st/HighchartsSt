@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNoDataAttrTest >> testZIndex [
+HighchartsNoDataAttrTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

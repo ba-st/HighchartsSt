@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testAcrossPanes [
+HighstockXAxisPlotBandsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxisPlotBands new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockXAxisPlotBandsTest >> testSetAcrossPanes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockXAxisPlotBandsTest >> testAcrossPanes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testBorderColor [
+HighstockXAxisPlotBandsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockXAxisPlotBandsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testBorderWidth [
+HighstockXAxisPlotBandsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockXAxisPlotBandsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testClassName [
+HighstockXAxisPlotBandsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockXAxisPlotBandsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testColor [
+HighstockXAxisPlotBandsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockXAxisPlotBandsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testEvents [
+HighstockXAxisPlotBandsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockXAxisPlotBandsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testFrom [
+HighstockXAxisPlotBandsTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockXAxisPlotBandsTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testId [
+HighstockXAxisPlotBandsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockXAxisPlotBandsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testTo [
+HighstockXAxisPlotBandsTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockXAxisPlotBandsTest >> testTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsTest >> testZIndex [
+HighstockXAxisPlotBandsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

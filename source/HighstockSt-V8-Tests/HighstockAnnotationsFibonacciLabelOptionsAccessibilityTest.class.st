@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsAccessibilityTest >> testDescription [
+HighstockAnnotationsFibonacciLabelOptionsAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

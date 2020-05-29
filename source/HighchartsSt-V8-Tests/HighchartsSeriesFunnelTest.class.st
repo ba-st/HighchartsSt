@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testAllAreas [
+HighchartsSeriesFunnelTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +230,7 @@ HighchartsSeriesFunnelTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testAllowPointSelect [
+HighchartsSeriesFunnelTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +245,7 @@ HighchartsSeriesFunnelTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testAnimationLimit [
+HighchartsSeriesFunnelTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +260,7 @@ HighchartsSeriesFunnelTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testBoostBlending [
+HighchartsSeriesFunnelTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +275,7 @@ HighchartsSeriesFunnelTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testBoostThreshold [
+HighchartsSeriesFunnelTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +290,7 @@ HighchartsSeriesFunnelTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testBorderColor [
+HighchartsSeriesFunnelTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +305,7 @@ HighchartsSeriesFunnelTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testBorderWidth [
+HighchartsSeriesFunnelTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +320,7 @@ HighchartsSeriesFunnelTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCenter [
+HighchartsSeriesFunnelTest >> testSetCenter [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +335,7 @@ HighchartsSeriesFunnelTest >> testCenter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testClassName [
+HighchartsSeriesFunnelTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +350,7 @@ HighchartsSeriesFunnelTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testClip [
+HighchartsSeriesFunnelTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +365,7 @@ HighchartsSeriesFunnelTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testColor [
+HighchartsSeriesFunnelTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +380,7 @@ HighchartsSeriesFunnelTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testColorAxis [
+HighchartsSeriesFunnelTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +395,7 @@ HighchartsSeriesFunnelTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testColorIndex [
+HighchartsSeriesFunnelTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +410,7 @@ HighchartsSeriesFunnelTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testColorKey [
+HighchartsSeriesFunnelTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighchartsSeriesFunnelTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testColors [
+HighchartsSeriesFunnelTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +440,7 @@ HighchartsSeriesFunnelTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCompare [
+HighchartsSeriesFunnelTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +455,7 @@ HighchartsSeriesFunnelTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCompareBase [
+HighchartsSeriesFunnelTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +470,7 @@ HighchartsSeriesFunnelTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCompareStart [
+HighchartsSeriesFunnelTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +485,7 @@ HighchartsSeriesFunnelTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testConnectEnds [
+HighchartsSeriesFunnelTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +500,7 @@ HighchartsSeriesFunnelTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testConnectNulls [
+HighchartsSeriesFunnelTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +515,7 @@ HighchartsSeriesFunnelTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCrisp [
+HighchartsSeriesFunnelTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +530,7 @@ HighchartsSeriesFunnelTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCropThreshold [
+HighchartsSeriesFunnelTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +545,7 @@ HighchartsSeriesFunnelTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCursor [
+HighchartsSeriesFunnelTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +560,7 @@ HighchartsSeriesFunnelTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testCustom [
+HighchartsSeriesFunnelTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +575,7 @@ HighchartsSeriesFunnelTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testDashStyle [
+HighchartsSeriesFunnelTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +590,7 @@ HighchartsSeriesFunnelTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testData [
+HighchartsSeriesFunnelTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +605,7 @@ HighchartsSeriesFunnelTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testDepth [
+HighchartsSeriesFunnelTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +620,7 @@ HighchartsSeriesFunnelTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testDescription [
+HighchartsSeriesFunnelTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighchartsSeriesFunnelTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testEnableMouseTracking [
+HighchartsSeriesFunnelTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +650,7 @@ HighchartsSeriesFunnelTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testEndAngle [
+HighchartsSeriesFunnelTest >> testSetEndAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +665,7 @@ HighchartsSeriesFunnelTest >> testEndAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testEvents [
+HighchartsSeriesFunnelTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +680,7 @@ HighchartsSeriesFunnelTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testFillColor [
+HighchartsSeriesFunnelTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +695,7 @@ HighchartsSeriesFunnelTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testFindNearestPointBy [
+HighchartsSeriesFunnelTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +710,7 @@ HighchartsSeriesFunnelTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testGapSize [
+HighchartsSeriesFunnelTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +725,7 @@ HighchartsSeriesFunnelTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testGapUnit [
+HighchartsSeriesFunnelTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +740,7 @@ HighchartsSeriesFunnelTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testGetExtremesFromAll [
+HighchartsSeriesFunnelTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +755,7 @@ HighchartsSeriesFunnelTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testHeight [
+HighchartsSeriesFunnelTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +770,7 @@ HighchartsSeriesFunnelTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testId [
+HighchartsSeriesFunnelTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +785,7 @@ HighchartsSeriesFunnelTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testIgnoreHiddenPoint [
+HighchartsSeriesFunnelTest >> testSetIgnoreHiddenPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +800,7 @@ HighchartsSeriesFunnelTest >> testIgnoreHiddenPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testIncludeInDataExport [
+HighchartsSeriesFunnelTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +815,7 @@ HighchartsSeriesFunnelTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testIndex [
+HighchartsSeriesFunnelTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +830,7 @@ HighchartsSeriesFunnelTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testJoinBy [
+HighchartsSeriesFunnelTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighchartsSeriesFunnelTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testKeys [
+HighchartsSeriesFunnelTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +860,7 @@ HighchartsSeriesFunnelTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testLegendIndex [
+HighchartsSeriesFunnelTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +875,7 @@ HighchartsSeriesFunnelTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testLineWidth [
+HighchartsSeriesFunnelTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +890,7 @@ HighchartsSeriesFunnelTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testLinecap [
+HighchartsSeriesFunnelTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +905,7 @@ HighchartsSeriesFunnelTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testLinkedTo [
+HighchartsSeriesFunnelTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +920,7 @@ HighchartsSeriesFunnelTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testMapData [
+HighchartsSeriesFunnelTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +935,7 @@ HighchartsSeriesFunnelTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testMinSize [
+HighchartsSeriesFunnelTest >> testSetMinSize [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +950,7 @@ HighchartsSeriesFunnelTest >> testMinSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testName [
+HighchartsSeriesFunnelTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +965,7 @@ HighchartsSeriesFunnelTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testNavigatorOptions [
+HighchartsSeriesFunnelTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +980,7 @@ HighchartsSeriesFunnelTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testNeckHeight [
+HighchartsSeriesFunnelTest >> testSetNeckHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +995,7 @@ HighchartsSeriesFunnelTest >> testNeckHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testNeckWidth [
+HighchartsSeriesFunnelTest >> testSetNeckWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1010,7 @@ HighchartsSeriesFunnelTest >> testNeckWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testNegativeColor [
+HighchartsSeriesFunnelTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1025,7 @@ HighchartsSeriesFunnelTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testOpacity [
+HighchartsSeriesFunnelTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1040,7 @@ HighchartsSeriesFunnelTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testPointDescriptionFormatter [
+HighchartsSeriesFunnelTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1055,7 @@ HighchartsSeriesFunnelTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testPointInterval [
+HighchartsSeriesFunnelTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1070,7 @@ HighchartsSeriesFunnelTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testPointIntervalUnit [
+HighchartsSeriesFunnelTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1085,7 @@ HighchartsSeriesFunnelTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testPointPlacement [
+HighchartsSeriesFunnelTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1100,7 @@ HighchartsSeriesFunnelTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testPointRange [
+HighchartsSeriesFunnelTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1115,7 @@ HighchartsSeriesFunnelTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testPointStart [
+HighchartsSeriesFunnelTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1130,7 @@ HighchartsSeriesFunnelTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testReversed [
+HighchartsSeriesFunnelTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1145,7 @@ HighchartsSeriesFunnelTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testSelected [
+HighchartsSeriesFunnelTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1160,7 @@ HighchartsSeriesFunnelTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testShadow [
+HighchartsSeriesFunnelTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1175,7 @@ HighchartsSeriesFunnelTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testShowCheckbox [
+HighchartsSeriesFunnelTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1190,7 @@ HighchartsSeriesFunnelTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testShowInLegend [
+HighchartsSeriesFunnelTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1205,7 @@ HighchartsSeriesFunnelTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testShowInNavigator [
+HighchartsSeriesFunnelTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1220,7 @@ HighchartsSeriesFunnelTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testSkipKeyboardNavigation [
+HighchartsSeriesFunnelTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1235,7 @@ HighchartsSeriesFunnelTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testSlicedOffset [
+HighchartsSeriesFunnelTest >> testSetSlicedOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1250,7 @@ HighchartsSeriesFunnelTest >> testSlicedOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testSoftThreshold [
+HighchartsSeriesFunnelTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1265,7 @@ HighchartsSeriesFunnelTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testStacking [
+HighchartsSeriesFunnelTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1280,7 @@ HighchartsSeriesFunnelTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testStartAngle [
+HighchartsSeriesFunnelTest >> testSetStartAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1295,7 @@ HighchartsSeriesFunnelTest >> testStartAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testStates [
+HighchartsSeriesFunnelTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1310,7 @@ HighchartsSeriesFunnelTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testStep [
+HighchartsSeriesFunnelTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1325,7 @@ HighchartsSeriesFunnelTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testStickyTracking [
+HighchartsSeriesFunnelTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1340,7 @@ HighchartsSeriesFunnelTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testThreshold [
+HighchartsSeriesFunnelTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1355,7 @@ HighchartsSeriesFunnelTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testTurboThreshold [
+HighchartsSeriesFunnelTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1370,7 @@ HighchartsSeriesFunnelTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testType [
+HighchartsSeriesFunnelTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1385,7 @@ HighchartsSeriesFunnelTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testUseOhlcData [
+HighchartsSeriesFunnelTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -1190,7 +1400,7 @@ HighchartsSeriesFunnelTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testVisible [
+HighchartsSeriesFunnelTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1205,7 +1415,7 @@ HighchartsSeriesFunnelTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testWidth [
+HighchartsSeriesFunnelTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -1220,7 +1430,7 @@ HighchartsSeriesFunnelTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testZIndex [
+HighchartsSeriesFunnelTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1235,7 +1445,7 @@ HighchartsSeriesFunnelTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelTest >> testZoneAxis [
+HighchartsSeriesFunnelTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

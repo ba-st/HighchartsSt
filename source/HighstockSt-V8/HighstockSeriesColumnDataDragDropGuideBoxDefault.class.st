@@ -10,8 +10,7 @@ Class {
 { #category : #accessing }
 HighstockSeriesColumnDataDragDropGuideBoxDefault >> className: aString [
 
-	"CSS class name of the guide box in this state. Defaults to
-highcharts-drag-box-default.
+	"CSS class name of the guide box in this state. Defaults to highcharts-drag-box-default.
 Defaults to highcharts-drag-box-default."
 
 	configurationOptions at: 'className' put: aString

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallPointTest >> testEvents [
+HighchartsPlotOptionsWaterfallPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

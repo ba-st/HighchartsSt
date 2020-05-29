@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testEnabled [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testFillColor [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testHeight [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testLineColor [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testLineWidth [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testRadius [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSymbol [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testWidth [
+HighchartsPlotOptionsScatterClusterZonesMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testBackgroundColor [
+HighchartsSeriesGaugeDialTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesGaugeDialTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testBaseLength [
+HighchartsSeriesGaugeDialTest >> testSetBaseLength [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesGaugeDialTest >> testBaseLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testBaseWidth [
+HighchartsSeriesGaugeDialTest >> testSetBaseWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesGaugeDialTest >> testBaseWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testBorderColor [
+HighchartsSeriesGaugeDialTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesGaugeDialTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testBorderWidth [
+HighchartsSeriesGaugeDialTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesGaugeDialTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testRadius [
+HighchartsSeriesGaugeDialTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesGaugeDialTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testRearLength [
+HighchartsSeriesGaugeDialTest >> testSetRearLength [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesGaugeDialTest >> testRearLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDialTest >> testTopWidth [
+HighchartsSeriesGaugeDialTest >> testSetTopWidth [
 
 	| component javascript expectedConfiguration |
 

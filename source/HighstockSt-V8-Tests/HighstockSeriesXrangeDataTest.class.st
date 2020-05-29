@@ -5,7 +5,77 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testColor [
+HighstockSeriesXrangeDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDataTest >> testGetPartialFill [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeData new.
+	component partialFill.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'partialFill' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +89,7 @@ HighstockSeriesXrangeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testCustom [
+HighstockSeriesXrangeDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighstockSeriesXrangeDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testDescription [
+HighstockSeriesXrangeDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,7 @@ HighstockSeriesXrangeDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testEvents [
+HighstockSeriesXrangeDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighstockSeriesXrangeDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testId [
+HighstockSeriesXrangeDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighstockSeriesXrangeDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testLabelrank [
+HighstockSeriesXrangeDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighstockSeriesXrangeDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testName [
+HighstockSeriesXrangeDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +173,7 @@ HighstockSeriesXrangeDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testSelected [
+HighstockSeriesXrangeDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +187,7 @@ HighstockSeriesXrangeDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testX [
+HighstockSeriesXrangeDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +201,7 @@ HighstockSeriesXrangeDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testX2 [
+HighstockSeriesXrangeDataTest >> testSetX2 [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +215,7 @@ HighstockSeriesXrangeDataTest >> testX2 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataTest >> testY [
+HighstockSeriesXrangeDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

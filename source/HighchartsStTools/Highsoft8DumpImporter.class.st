@@ -83,11 +83,13 @@ Highsoft8DumpImporter >> addMethodChangeToInitializeTypeOf: anElement for: aSele
 { #category : #'private - custom changes' }
 Highsoft8DumpImporter >> addSeriesTypeSelectorOf: definedClass to: selectorsOfInterest [
 
-	(definedClass name beginsWith: self seriesClassName)
-		and: [ (definedClass includesSelector: #data)
-				and: [ ((RBClass existingNamed: self seriesClassName asSymbol)
-						whichSelectorsReferToClass: (RBClass existingNamed: definedClass name))
-						ifNotEmpty: [ :selectors | selectorsOfInterest add: selectors any ] ] ]
+	( definedClass name beginsWith: self seriesClassName )
+		and: [ ( definedClass includesSelector: #data )
+				and: [ ( ( RBClass existingNamed: self seriesClassName asSymbol )
+						whichSelectorsReferToClass: ( RBClass existingNamed: definedClass name ) )
+						ifNotEmpty: [ :selectors | selectorsOfInterest add: selectors any ]
+					]
+			]
 ]
 
 { #category : #'private - argument type' }
@@ -104,7 +106,7 @@ Highsoft8DumpImporter >> argumentTypeFrom: anElement [
 { #category : #'private - accessing' }
 Highsoft8DumpImporter >> classNameFor: anElement accessedFrom: aClassName [
 
-	^ '<1s><2s>' expandMacrosWith: aClassName with: (self selectorFrom: anElement) capitalized
+	^ '<1s><2s>' expandMacrosWith: aClassName with: ( self selectorFrom: anElement ) capitalized
 ]
 
 { #category : #'private - accessing' }
@@ -528,6 +530,14 @@ Highsoft8DumpImporter >> markAsUsedSelectorOf: aChange [
 
 { #category : #'private - comment' }
 Highsoft8DumpImporter >> methodCommentFrom: anElement [
+
+	^ ( self methodCommentWithLineFeedsFrom: anElement )
+		copyReplaceAll: ( String with: Character linefeed )
+		with: ' '
+]
+
+{ #category : #'private - comment' }
+Highsoft8DumpImporter >> methodCommentWithLineFeedsFrom: anElement [
 
 	anElement
 		at: 'description'

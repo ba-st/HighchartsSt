@@ -38,8 +38,7 @@ HighchartsSeriesTreemapData >> accessibility [
 { #category : #accessing }
 HighchartsSeriesTreemapData >> className: aString [
 
-	"An additional, individual class name for the data point´s graphic
-representation.
+	"An additional, individual class name for the data point´s graphic representation.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -48,9 +47,7 @@ representation.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the point. In heat maps the point color is rarely set
-explicitly, as we use the color to denote the value. Options for
-this are set in the colorAxis configuration.
+	"The color of the point. In heat maps the point color is rarely set explicitly, as we use the color to denote the value. Options for this are set in the colorAxis configuration.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -59,11 +56,7 @@ this are set in the colorAxis configuration.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> colorIndex: aNumber [
 
-	"A specific color index to use for the point, so its graphic representations
-are given the class name highcharts-color-{n}. In styled mode this will
-change the color of the graphic. In non-styled mode, the color by is set by
-the fill attribute, so the change in class name won´t have a visual effect
-by default.
+	"A specific color index to use for the point, so its graphic representations are given the class name highcharts-color-{n}. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the fill attribute, so the change in class name won´t have a visual effect by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -72,9 +65,7 @@ by default.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> colorValue: aNumber [
 
-	"Serves a purpose only if a colorAxis object is defined in the chart
-options. This value will decide which color the point gets from the
-scale of the colorAxis.
+	"Serves a purpose only if a colorAxis object is defined in the chart options. This value will decide which color the point gets from the scale of the colorAxis.
 "
 
 	configurationOptions at: 'colorValue' put: aNumber
@@ -83,9 +74,7 @@ scale of the colorAxis.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> custom: anObject [
 
-	"A reserved subspace to store options and values for customized functionality.
-Here you can add additional data for your own event callbacks and formatter
-callbacks.
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
 "
 
 	configurationOptions at: 'custom' put: anObject
@@ -94,8 +83,7 @@ callbacks.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesTreemapDataDataLabels new ]
 ]
@@ -103,8 +91,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -113,8 +100,7 @@ about the point.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> dragDrop [
 
-	"Point specific options for the draggable-points module. Overrides options on
-series.dragDrop.
+	"Point specific options for the draggable-points module. Overrides options on series.dragDrop.
 "
 	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighchartsSeriesTreemapDataDragDrop new ]
 ]
@@ -122,8 +108,7 @@ series.dragDrop.
 { #category : #accessing }
 HighchartsSeriesTreemapData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series array to
-use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -141,8 +126,7 @@ HighchartsSeriesTreemapData >> events: anObject [
 { #category : #accessing }
 HighchartsSeriesTreemapData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -151,9 +135,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighchartsSeriesTreemapData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
@@ -179,10 +161,7 @@ HighchartsSeriesTreemapData >> name: aString [
 { #category : #accessing }
 HighchartsSeriesTreemapData >> parent: aString [
 
-	"Only for treemap. Use this option to build a tree structure. The
-value should be the id of the point which is the parent. If no points
-has a matching id, or this option is undefined, then the parent will
-be set to the root.
+	"Only for treemap. Use this option to build a tree structure. The value should be the id of the point which is the parent. If no points has a matching id, or this option is undefined, then the parent will be set to the root.
 "
 
 	configurationOptions at: 'parent' put: aString
@@ -209,8 +188,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesTreemapData >> value: aNumberOrNil [
 
-	"The value of the point, resulting in a relative area of the point
-in the treemap.
+	"The value of the point, resulting in a relative area of the point in the treemap.
 "
 
 	configurationOptions at: 'value' put: aNumberOrNil

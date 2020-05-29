@@ -13,13 +13,8 @@ HighstockStockToolsGuiDefinitionsAdvanced >> fibonacci [
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsAdvanced >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'fibonacci',
-  'pitchfork',
-  'parallelChannel'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'fibonacci',   'pitchfork',   'parallelChannel' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

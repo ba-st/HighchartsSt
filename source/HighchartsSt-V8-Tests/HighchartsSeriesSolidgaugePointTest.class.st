@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugePointTest >> testEvents [
+HighchartsSeriesSolidgaugePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testAlign [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testBackgroundColor [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testBorderColor [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testBorderRadius [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testBorderWidth [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testEnabled [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testFormat [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testFormatter [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testPadding [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testShape [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockNavigatorYAxisCrosshairLabelTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisCrosshairLabelTest >> testStyle [
+HighstockNavigatorYAxisCrosshairLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

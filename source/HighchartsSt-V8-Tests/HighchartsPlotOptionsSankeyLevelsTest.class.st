@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsTest >> testBorderColor [
+HighchartsPlotOptionsSankeyLevelsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSankeyLevels new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSankeyLevelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsSankeyLevelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsTest >> testBorderWidth [
+HighchartsPlotOptionsSankeyLevelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsSankeyLevelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsTest >> testColor [
+HighchartsPlotOptionsSankeyLevelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsSankeyLevelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsTest >> testColorByPoint [
+HighchartsPlotOptionsSankeyLevelsTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsSankeyLevelsTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsTest >> testLevel [
+HighchartsPlotOptionsSankeyLevelsTest >> testSetLevel [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsSankeyLevelsTest >> testLevel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsTest >> testLinkOpacity [
+HighchartsPlotOptionsSankeyLevelsTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsSankeyLevelsTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsTest >> testStates [
+HighchartsPlotOptionsSankeyLevelsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 

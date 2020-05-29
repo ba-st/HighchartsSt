@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesTest >> testClassName [
+HighchartsPlotOptionsScatterClusterZonesTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatterClusterZones new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatterClusterZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsScatterClusterZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesTest >> testFrom [
+HighchartsPlotOptionsScatterClusterZonesTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsScatterClusterZonesTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterZonesTest >> testTo [
+HighchartsPlotOptionsScatterClusterZonesTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testApproximation [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockRangeSelectorButtonsDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testDateTimeLabelFormats [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockRangeSelectorButtonsDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testEnabled [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockRangeSelectorButtonsDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testForced [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockRangeSelectorButtonsDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testGroupAll [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockRangeSelectorButtonsDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testGroupPixelWidth [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockRangeSelectorButtonsDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testSmoothed [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockRangeSelectorButtonsDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsDataGroupingTest >> testUnits [
+HighstockRangeSelectorButtonsDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

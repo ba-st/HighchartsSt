@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataLabelsStyleTest >> testColor [
+HighchartsSeriesScatter3dDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesScatter3dDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataLabelsStyleTest >> testFontSize [
+HighchartsSeriesScatter3dDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesScatter3dDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataLabelsStyleTest >> testFontWeight [
+HighchartsSeriesScatter3dDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesScatter3dDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataLabelsStyleTest >> testTextOutline [
+HighchartsSeriesScatter3dDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

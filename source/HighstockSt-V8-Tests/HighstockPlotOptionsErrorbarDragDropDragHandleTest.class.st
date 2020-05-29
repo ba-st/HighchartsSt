@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testClassName [
+HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testColor [
+HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testCursor [
+HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testLineColor [
+HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testLineWidth [
+HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testPathFormatter [
+HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testZIndex [
+HighstockPlotOptionsErrorbarDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

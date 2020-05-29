@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testAfterAnimate [
+HighstockSeriesStochasticEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStochasticEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testCheckboxClick [
+HighstockSeriesStochasticEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesStochasticEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testClick [
+HighstockSeriesStochasticEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesStochasticEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testHide [
+HighstockSeriesStochasticEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesStochasticEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testLegendItemClick [
+HighstockSeriesStochasticEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesStochasticEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testMouseOut [
+HighstockSeriesStochasticEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesStochasticEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testMouseOver [
+HighstockSeriesStochasticEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesStochasticEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticEventsTest >> testShow [
+HighstockSeriesStochasticEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

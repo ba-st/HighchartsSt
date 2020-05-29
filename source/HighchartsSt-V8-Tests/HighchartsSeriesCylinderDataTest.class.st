@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testBorderColor [
+HighchartsSeriesCylinderDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinderData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesCylinderDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinderData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesCylinderDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinderData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesCylinderDataTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesCylinderDataTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testBorderWidth [
+HighchartsSeriesCylinderDataTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesCylinderDataTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testClassName [
+HighchartsSeriesCylinderDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesCylinderDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testColor [
+HighchartsSeriesCylinderDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesCylinderDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testColorIndex [
+HighchartsSeriesCylinderDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesCylinderDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testCustom [
+HighchartsSeriesCylinderDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesCylinderDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testDashStyle [
+HighchartsSeriesCylinderDataTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesCylinderDataTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testDescription [
+HighchartsSeriesCylinderDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesCylinderDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testDrilldown [
+HighchartsSeriesCylinderDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesCylinderDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testEvents [
+HighchartsSeriesCylinderDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesCylinderDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testId [
+HighchartsSeriesCylinderDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesCylinderDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testLabelrank [
+HighchartsSeriesCylinderDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesCylinderDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testName [
+HighchartsSeriesCylinderDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesCylinderDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testPointWidth [
+HighchartsSeriesCylinderDataTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesCylinderDataTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testSelected [
+HighchartsSeriesCylinderDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesCylinderDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testX [
+HighchartsSeriesCylinderDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesCylinderDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataTest >> testY [
+HighchartsSeriesCylinderDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

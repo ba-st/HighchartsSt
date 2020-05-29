@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testBarMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetBarMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityChartTypesTest >> testBarMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testBarSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetBarSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilityChartTypesTest >> testBarSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testBoxplotMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetBoxplotMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangAccessibilityChartTypesTest >> testBoxplotMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testBoxplotSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetBoxplotSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLangAccessibilityChartTypesTest >> testBoxplotSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testBubbleMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetBubbleMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLangAccessibilityChartTypesTest >> testBubbleMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testBubbleSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetBubbleSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockLangAccessibilityChartTypesTest >> testBubbleSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testColumnMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetColumnMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockLangAccessibilityChartTypesTest >> testColumnMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testColumnSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetColumnSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockLangAccessibilityChartTypesTest >> testColumnSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testCombinationChart [
+HighstockLangAccessibilityChartTypesTest >> testSetCombinationChart [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockLangAccessibilityChartTypesTest >> testCombinationChart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testDefaultMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetDefaultMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockLangAccessibilityChartTypesTest >> testDefaultMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testDefaultSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetDefaultSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockLangAccessibilityChartTypesTest >> testDefaultSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testEmptyChart [
+HighstockLangAccessibilityChartTypesTest >> testSetEmptyChart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockLangAccessibilityChartTypesTest >> testEmptyChart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testLineMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetLineMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockLangAccessibilityChartTypesTest >> testLineMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testLineSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetLineSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockLangAccessibilityChartTypesTest >> testLineSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testMapTypeDescription [
+HighstockLangAccessibilityChartTypesTest >> testSetMapTypeDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockLangAccessibilityChartTypesTest >> testMapTypeDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testPieMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetPieMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockLangAccessibilityChartTypesTest >> testPieMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testPieSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetPieSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockLangAccessibilityChartTypesTest >> testPieSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testScatterMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetScatterMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockLangAccessibilityChartTypesTest >> testScatterMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testScatterSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetScatterSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockLangAccessibilityChartTypesTest >> testScatterSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testSplineMultiple [
+HighstockLangAccessibilityChartTypesTest >> testSetSplineMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockLangAccessibilityChartTypesTest >> testSplineMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testSplineSingle [
+HighstockLangAccessibilityChartTypesTest >> testSetSplineSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockLangAccessibilityChartTypesTest >> testSplineSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityChartTypesTest >> testUnknownMap [
+HighstockLangAccessibilityChartTypesTest >> testSetUnknownMap [
 
 	| component javascript expectedConfiguration |
 

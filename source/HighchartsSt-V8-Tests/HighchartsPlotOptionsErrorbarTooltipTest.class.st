@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsErrorbarTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsErrorbarTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testDistance [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testNullFormat [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testPointFormat [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testStickOnContact [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsPlotOptionsErrorbarTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsErrorbarTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

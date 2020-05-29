@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataSortingTest >> testEnabled [
+HighchartsSeriesWindbarbDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWindbarbDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataSortingTest >> testMatchByName [
+HighchartsSeriesWindbarbDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWindbarbDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataSortingTest >> testSortKey [
+HighchartsSeriesWindbarbDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

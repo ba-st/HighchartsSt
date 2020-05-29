@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAnnounceNewDataTest >> testNewDataAnnounce [
+HighstockLangAccessibilityAnnounceNewDataTest >> testSetNewDataAnnounce [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityAnnounceNewDataTest >> testNewDataAnnounce [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceMultiple [
+HighstockLangAccessibilityAnnounceNewDataTest >> testSetNewPointAnnounceMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceSingle [
+HighstockLangAccessibilityAnnounceNewDataTest >> testSetNewPointAnnounceSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangAccessibilityAnnounceNewDataTest >> testNewPointAnnounceSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAnnounceNewDataTest >> testNewSeriesAnnounceMultiple [
+HighstockLangAccessibilityAnnounceNewDataTest >> testSetNewSeriesAnnounceMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLangAccessibilityAnnounceNewDataTest >> testNewSeriesAnnounceMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAnnounceNewDataTest >> testNewSeriesAnnounceSingle [
+HighstockLangAccessibilityAnnounceNewDataTest >> testSetNewSeriesAnnounceSingle [
 
 	| component javascript expectedConfiguration |
 

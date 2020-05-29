@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideDataSortingTest >> testEnabled [
+HighchartsSeriesVariwideDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVariwideDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideDataSortingTest >> testMatchByName [
+HighchartsSeriesVariwideDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVariwideDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideDataSortingTest >> testSortKey [
+HighchartsSeriesVariwideDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

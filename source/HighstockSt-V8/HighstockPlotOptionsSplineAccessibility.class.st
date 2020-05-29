@@ -45,9 +45,7 @@ HighstockPlotOptionsSplineAccessibility >> keyboardNavigation [
 { #category : #accessing }
 HighstockPlotOptionsSplineAccessibility >> pointDescriptionFormatter: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Formatter function to use instead of the default for point
-descriptions. Same as accessibility.point.descriptionFormatter, but for
-a single series.
+	"Formatter function to use instead of the default for point descriptions. Same as accessibility.point.descriptionFormatter, but for a single series.
 "
 
 	configurationOptions at: 'pointDescriptionFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint

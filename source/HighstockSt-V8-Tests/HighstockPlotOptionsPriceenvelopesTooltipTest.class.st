@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testChangeDecimals [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopesTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testClusterFormat [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testDistance [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testFollowPointer [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testFollowTouchMove [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testFooterFormat [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testHeaderFormat [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testNullFormat [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testNullFormatter [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testPointFormat [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testPointFormatter [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testStickOnContact [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testValueDecimals [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testValuePrefix [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testValueSuffix [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockPlotOptionsPriceenvelopesTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipTest >> testXDateFormat [
+HighstockPlotOptionsPriceenvelopesTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

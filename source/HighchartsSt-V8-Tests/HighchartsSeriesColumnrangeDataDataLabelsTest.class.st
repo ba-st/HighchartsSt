@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testAlign [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnrangeDataDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnrangeDataDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnrangeDataDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testAllowOverlap [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testBackgroundColor [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testBorderColor [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testBorderRadius [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testBorderWidth [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testClassName [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testColor [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testCrop [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testDefer [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testEnabled [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testFormat [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testFormatter [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testInside [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testNullFormat [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testNullFormatter [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testOverflow [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testPadding [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testPosition [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testRotation [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testShadow [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testShape [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testUseHTML [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testX [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testXHigh [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetXHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testXHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testXLow [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetXLow [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testXLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testY [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testYHigh [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetYHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +453,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testYHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testYLow [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetYLow [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +467,7 @@ HighchartsSeriesColumnrangeDataDataLabelsTest >> testYLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeDataDataLabelsTest >> testZ [
+HighchartsSeriesColumnrangeDataDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

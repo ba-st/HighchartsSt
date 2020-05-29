@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisDateTimeLabelFormatsDayTest >> testMain [
+HighchartsYAxisDateTimeLabelFormatsDayTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 

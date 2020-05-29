@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testAnimation [
+HighchartsTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsTooltipTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsTooltip new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsTooltipTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsTooltipTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testBackgroundColor [
+HighchartsTooltipTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsTooltipTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testBorderColor [
+HighchartsTooltipTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsTooltipTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testBorderRadius [
+HighchartsTooltipTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsTooltipTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testBorderWidth [
+HighchartsTooltipTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsTooltipTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testClassName [
+HighchartsTooltipTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsTooltipTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testClusterFormat [
+HighchartsTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testCrosshairs [
+HighchartsTooltipTest >> testSetCrosshairs [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsTooltipTest >> testCrosshairs [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testDistance [
+HighchartsTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testEnabled [
+HighchartsTooltipTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsTooltipTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testFollowPointer [
+HighchartsTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighchartsTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testFollowTouchMove [
+HighchartsTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testFooterFormat [
+HighchartsTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testFormatter [
+HighchartsTooltipTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsTooltipTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testHeaderFormat [
+HighchartsTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighchartsTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testHeaderShape [
+HighchartsTooltipTest >> testSetHeaderShape [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighchartsTooltipTest >> testHeaderShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testHideDelay [
+HighchartsTooltipTest >> testSetHideDelay [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +271,7 @@ HighchartsTooltipTest >> testHideDelay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testNullFormat [
+HighchartsTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +285,7 @@ HighchartsTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testNullFormatter [
+HighchartsTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +299,7 @@ HighchartsTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testOutside [
+HighchartsTooltipTest >> testSetOutside [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +313,7 @@ HighchartsTooltipTest >> testOutside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testPadding [
+HighchartsTooltipTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +327,7 @@ HighchartsTooltipTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testPointFormat [
+HighchartsTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +341,7 @@ HighchartsTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testPointFormatter [
+HighchartsTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +355,7 @@ HighchartsTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testPositioner [
+HighchartsTooltipTest >> testSetPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +369,7 @@ HighchartsTooltipTest >> testPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testShadow [
+HighchartsTooltipTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +383,7 @@ HighchartsTooltipTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testShape [
+HighchartsTooltipTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +397,7 @@ HighchartsTooltipTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testShared [
+HighchartsTooltipTest >> testSetShared [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +411,7 @@ HighchartsTooltipTest >> testShared [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testSnap [
+HighchartsTooltipTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +425,7 @@ HighchartsTooltipTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testSplit [
+HighchartsTooltipTest >> testSetSplit [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +439,7 @@ HighchartsTooltipTest >> testSplit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testStickOnContact [
+HighchartsTooltipTest >> testSetStickOnContact [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +453,7 @@ HighchartsTooltipTest >> testStickOnContact [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testUseHTML [
+HighchartsTooltipTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +467,7 @@ HighchartsTooltipTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testValueDecimals [
+HighchartsTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +481,7 @@ HighchartsTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testValuePrefix [
+HighchartsTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +495,7 @@ HighchartsTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testValueSuffix [
+HighchartsTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +509,7 @@ HighchartsTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsTooltipTest >> testXDateFormat [
+HighchartsTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

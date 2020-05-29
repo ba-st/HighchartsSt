@@ -5,7 +5,203 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testAllowPointSelect [
+HighstockPlotOptionsTrixTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrix new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrixTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +215,7 @@ HighstockPlotOptionsTrixTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testAnimationLimit [
+HighstockPlotOptionsTrixTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +229,7 @@ HighstockPlotOptionsTrixTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testBoostBlending [
+HighstockPlotOptionsTrixTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +243,7 @@ HighstockPlotOptionsTrixTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testBoostThreshold [
+HighstockPlotOptionsTrixTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +257,7 @@ HighstockPlotOptionsTrixTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testBorderColor [
+HighstockPlotOptionsTrixTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +271,7 @@ HighstockPlotOptionsTrixTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testBorderWidth [
+HighstockPlotOptionsTrixTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +285,7 @@ HighstockPlotOptionsTrixTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testClassName [
+HighstockPlotOptionsTrixTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +299,7 @@ HighstockPlotOptionsTrixTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testClip [
+HighstockPlotOptionsTrixTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +313,7 @@ HighstockPlotOptionsTrixTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testColor [
+HighstockPlotOptionsTrixTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +327,7 @@ HighstockPlotOptionsTrixTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testColorIndex [
+HighstockPlotOptionsTrixTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +341,7 @@ HighstockPlotOptionsTrixTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testColorKey [
+HighstockPlotOptionsTrixTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +355,7 @@ HighstockPlotOptionsTrixTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testCompareStart [
+HighstockPlotOptionsTrixTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +369,7 @@ HighstockPlotOptionsTrixTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testCompareToMain [
+HighstockPlotOptionsTrixTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +383,7 @@ HighstockPlotOptionsTrixTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testConnectEnds [
+HighstockPlotOptionsTrixTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +397,7 @@ HighstockPlotOptionsTrixTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testConnectNulls [
+HighstockPlotOptionsTrixTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,7 @@ HighstockPlotOptionsTrixTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testCrisp [
+HighstockPlotOptionsTrixTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +425,7 @@ HighstockPlotOptionsTrixTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testCropThreshold [
+HighstockPlotOptionsTrixTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,7 @@ HighstockPlotOptionsTrixTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testCursor [
+HighstockPlotOptionsTrixTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +453,7 @@ HighstockPlotOptionsTrixTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testCustom [
+HighstockPlotOptionsTrixTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +467,7 @@ HighstockPlotOptionsTrixTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testDashStyle [
+HighstockPlotOptionsTrixTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +481,7 @@ HighstockPlotOptionsTrixTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testDescription [
+HighstockPlotOptionsTrixTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +495,7 @@ HighstockPlotOptionsTrixTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testEnableMouseTracking [
+HighstockPlotOptionsTrixTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +509,7 @@ HighstockPlotOptionsTrixTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testEvents [
+HighstockPlotOptionsTrixTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +523,7 @@ HighstockPlotOptionsTrixTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testFindNearestPointBy [
+HighstockPlotOptionsTrixTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +537,7 @@ HighstockPlotOptionsTrixTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testGapSize [
+HighstockPlotOptionsTrixTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +551,7 @@ HighstockPlotOptionsTrixTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testGapUnit [
+HighstockPlotOptionsTrixTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +565,7 @@ HighstockPlotOptionsTrixTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testGetExtremesFromAll [
+HighstockPlotOptionsTrixTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +579,7 @@ HighstockPlotOptionsTrixTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testIncludeInDataExport [
+HighstockPlotOptionsTrixTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +593,7 @@ HighstockPlotOptionsTrixTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testLineWidth [
+HighstockPlotOptionsTrixTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +607,7 @@ HighstockPlotOptionsTrixTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testLinecap [
+HighstockPlotOptionsTrixTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +621,7 @@ HighstockPlotOptionsTrixTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testLinkedTo [
+HighstockPlotOptionsTrixTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +635,7 @@ HighstockPlotOptionsTrixTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testName [
+HighstockPlotOptionsTrixTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +649,7 @@ HighstockPlotOptionsTrixTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testNegativeColor [
+HighstockPlotOptionsTrixTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +663,7 @@ HighstockPlotOptionsTrixTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testOpacity [
+HighstockPlotOptionsTrixTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +677,7 @@ HighstockPlotOptionsTrixTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsTrixTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +691,7 @@ HighstockPlotOptionsTrixTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testSelected [
+HighstockPlotOptionsTrixTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +705,7 @@ HighstockPlotOptionsTrixTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testShadow [
+HighstockPlotOptionsTrixTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +719,7 @@ HighstockPlotOptionsTrixTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testShowCheckbox [
+HighstockPlotOptionsTrixTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +733,7 @@ HighstockPlotOptionsTrixTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testShowInLegend [
+HighstockPlotOptionsTrixTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +747,7 @@ HighstockPlotOptionsTrixTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsTrixTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +761,7 @@ HighstockPlotOptionsTrixTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testSoftThreshold [
+HighstockPlotOptionsTrixTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +775,7 @@ HighstockPlotOptionsTrixTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testStates [
+HighstockPlotOptionsTrixTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +789,7 @@ HighstockPlotOptionsTrixTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testStep [
+HighstockPlotOptionsTrixTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +803,7 @@ HighstockPlotOptionsTrixTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testStickyTracking [
+HighstockPlotOptionsTrixTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +817,7 @@ HighstockPlotOptionsTrixTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testThreshold [
+HighstockPlotOptionsTrixTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +831,7 @@ HighstockPlotOptionsTrixTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testTurboThreshold [
+HighstockPlotOptionsTrixTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +845,7 @@ HighstockPlotOptionsTrixTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testVisible [
+HighstockPlotOptionsTrixTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +859,7 @@ HighstockPlotOptionsTrixTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testZIndex [
+HighstockPlotOptionsTrixTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +873,7 @@ HighstockPlotOptionsTrixTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixTest >> testZoneAxis [
+HighstockPlotOptionsTrixTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

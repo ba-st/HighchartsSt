@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testClassName [
+HighchartsSeriesVariablepieDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariablepieData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVariablepieDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariablepieData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVariablepieDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariablepieData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVariablepieDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesVariablepieDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testColor [
+HighchartsSeriesVariablepieDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesVariablepieDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testColorIndex [
+HighchartsSeriesVariablepieDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesVariablepieDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testCustom [
+HighchartsSeriesVariablepieDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesVariablepieDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testDescription [
+HighchartsSeriesVariablepieDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesVariablepieDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testDrilldown [
+HighchartsSeriesVariablepieDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesVariablepieDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testEvents [
+HighchartsSeriesVariablepieDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesVariablepieDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testId [
+HighchartsSeriesVariablepieDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesVariablepieDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testLabelrank [
+HighchartsSeriesVariablepieDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesVariablepieDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testLegendIndex [
+HighchartsSeriesVariablepieDataTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesVariablepieDataTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testName [
+HighchartsSeriesVariablepieDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesVariablepieDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testSelected [
+HighchartsSeriesVariablepieDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesVariablepieDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testSliced [
+HighchartsSeriesVariablepieDataTest >> testSetSliced [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesVariablepieDataTest >> testSliced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataTest >> testY [
+HighchartsSeriesVariablepieDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsEventsTest >> testAdd [
+HighstockNavigationAnnotationsOptionsEventsTest >> testSetAdd [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigationAnnotationsOptionsEventsTest >> testAdd [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsEventsTest >> testAfterUpdate [
+HighstockNavigationAnnotationsOptionsEventsTest >> testSetAfterUpdate [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigationAnnotationsOptionsEventsTest >> testAfterUpdate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsEventsTest >> testRemove [
+HighstockNavigationAnnotationsOptionsEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 

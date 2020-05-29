@@ -60,8 +60,7 @@ HighchartsSeriesScatterDragDrop >> dragMinY: aNumber [
 { #category : #accessing }
 HighchartsSeriesScatterDragDrop >> dragPrecisionX: aNumber [
 
-	"The X precision value to drag to for this series. Set to 0 to disable. By
-default this is disabled, except for category axes, where the default is 1.
+	"The X precision value to drag to for this series. Set to 0 to disable. By default this is disabled, except for category axes, where the default is 1.
 Defaults to 0."
 
 	configurationOptions at: 'dragPrecisionX' put: aNumber
@@ -70,8 +69,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesScatterDragDrop >> dragPrecisionY: aNumber [
 
-	"The Y precision value to drag to for this series. Set to 0 to disable. By
-default this is disabled, except for category axes, where the default is 1.
+	"The Y precision value to drag to for this series. Set to 0 to disable. By default this is disabled, except for category axes, where the default is 1.
 Defaults to 0."
 
 	configurationOptions at: 'dragPrecisionY' put: aNumber
@@ -80,9 +78,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesScatterDragDrop >> dragSensitivity: aNumber [
 
-	"The amount of pixels to drag the pointer before it counts as a drag
-operation. This prevents drag/drop to fire when just clicking or selecting
-points.
+	"The amount of pixels to drag the pointer before it counts as a drag operation. This prevents drag/drop to fire when just clicking or selecting points.
 Defaults to 2."
 
 	configurationOptions at: 'dragSensitivity' put: aNumber
@@ -100,8 +96,7 @@ HighchartsSeriesScatterDragDrop >> draggableX: aBoolean [
 { #category : #accessing }
 HighchartsSeriesScatterDragDrop >> draggableY: aBoolean [
 
-	"Enable dragging in the Y dimension. Note that this is not supported for
-TreeGrid axes (the default axis type in Gantt charts).
+	"Enable dragging in the Y dimension. Note that this is not supported for TreeGrid axes (the default axis type in Gantt charts).
 "
 
 	configurationOptions at: 'draggableY' put: aBoolean
@@ -110,8 +105,7 @@ TreeGrid axes (the default axis type in Gantt charts).
 { #category : #accessing }
 HighchartsSeriesScatterDragDrop >> groupBy: aString [
 
-	"Group the points by a property. Points with the same property value will be
-grouped together when moving.
+	"Group the points by a property. Points with the same property value will be grouped together when moving.
 "
 
 	configurationOptions at: 'groupBy' put: aString
@@ -120,8 +114,7 @@ grouped together when moving.
 { #category : #accessing }
 HighchartsSeriesScatterDragDrop >> guideBox [
 
-	"Style options for the guide box. The guide box has one state by default, the
-default state.
+	"Style options for the guide box. The guide box has one state by default, the default state.
 "
 	^ configurationOptions at: 'guideBox' ifAbsentPut: [ HighchartsSeriesScatterDragDropGuideBox new ]
 ]
@@ -129,8 +122,7 @@ default state.
 { #category : #accessing }
 HighchartsSeriesScatterDragDrop >> liveRedraw: aBoolean [
 
-	"Update points as they are dragged. If false, a guide box is drawn to
-illustrate the new point size.
+	"Update points as they are dragged. If false, a guide box is drawn to illustrate the new point size.
 Defaults to true."
 
 	configurationOptions at: 'liveRedraw' put: aBoolean

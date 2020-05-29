@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testBar [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetBar [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testBar [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testBarCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetBarCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testBarCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testBoxplot [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetBoxplot [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testBoxplot [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testBoxplotCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetBoxplotCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testBoxplotCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testBubble [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetBubble [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testBubble [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testBubbleCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetBubbleCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testBubbleCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testColumn [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testColumnCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetColumnCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testColumnCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testDefault [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetDefault [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testDefault [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testDefaultCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetDefaultCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testDefaultCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testLine [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetLine [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testLine [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testLineCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetLineCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testLineCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testMap [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetMap [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testMap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testMapCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetMapCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testMapCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testMapbubble [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetMapbubble [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testMapbubble [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testMapbubbleCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetMapbubbleCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testMapbubbleCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testMapline [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetMapline [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testMapline [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testMaplineCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetMaplineCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testMaplineCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testPie [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetPie [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testPie [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testPieCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetPieCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testPieCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testScatter [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetScatter [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testScatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testScatterCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetScatterCombination [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testScatterCombination [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testSpline [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetSpline [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighchartsLangAccessibilitySeriesSummaryTest >> testSpline [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesSummaryTest >> testSplineCombination [
+HighchartsLangAccessibilitySeriesSummaryTest >> testSetSplineCombination [
 
 	| component javascript expectedConfiguration |
 

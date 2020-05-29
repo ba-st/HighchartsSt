@@ -22,8 +22,7 @@ Class {
 { #category : #accessing }
 HighchartsNavigationBindings >> circleAnnotation: aHighchartsNavigationBindingsOptionsObject [
 
-	"A circle annotation bindings. Includes start and one event in
-steps array.
+	"A circle annotation bindings. Includes start and one event in steps array.
 "
 
 	configurationOptions at: 'circleAnnotation' put: aHighchartsNavigationBindingsOptionsObject
@@ -41,8 +40,7 @@ HighchartsNavigationBindings >> labelAnnotation: aHighchartsNavigationBindingsOp
 { #category : #accessing }
 HighchartsNavigationBindings >> rectangleAnnotation: aHighchartsNavigationBindingsOptionsObject [
 
-	"A rectangle annotation bindings. Includes start and one event
-in steps array.
+	"A rectangle annotation bindings. Includes start and one event in steps array.
 "
 
 	configurationOptions at: 'rectangleAnnotation' put: aHighchartsNavigationBindingsOptionsObject

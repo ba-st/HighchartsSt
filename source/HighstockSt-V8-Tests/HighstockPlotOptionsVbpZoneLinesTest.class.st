@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpZoneLinesTest >> testEnabled [
+HighstockPlotOptionsVbpZoneLinesTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsVbpZoneLinesTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpZoneLinesTest >> testStyles [
+HighstockPlotOptionsVbpZoneLinesTest >> testSetStyles [
 
 	| component javascript expectedConfiguration |
 

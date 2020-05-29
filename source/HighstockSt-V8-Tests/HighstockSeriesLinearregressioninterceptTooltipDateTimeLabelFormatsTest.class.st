@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testD
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testH
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testM
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testM
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testM
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testS
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testW
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockSeriesLinearregressioninterceptTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

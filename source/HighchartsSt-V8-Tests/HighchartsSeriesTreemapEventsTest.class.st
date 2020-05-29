@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testAfterAnimate [
+HighchartsSeriesTreemapEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTreemapEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testCheckboxClick [
+HighchartsSeriesTreemapEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTreemapEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testClick [
+HighchartsSeriesTreemapEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTreemapEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testHide [
+HighchartsSeriesTreemapEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTreemapEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testLegendItemClick [
+HighchartsSeriesTreemapEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesTreemapEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testMouseOut [
+HighchartsSeriesTreemapEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesTreemapEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testMouseOver [
+HighchartsSeriesTreemapEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesTreemapEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testSetRootNode [
+HighchartsSeriesTreemapEventsTest >> testSetSetRootNode [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesTreemapEventsTest >> testSetRootNode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapEventsTest >> testShow [
+HighchartsSeriesTreemapEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptPointTest >> testEvents [
+HighstockPlotOptionsLinearregressioninterceptPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

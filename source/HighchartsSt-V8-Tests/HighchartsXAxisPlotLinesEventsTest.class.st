@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesEventsTest >> testClick [
+HighchartsXAxisPlotLinesEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsXAxisPlotLinesEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesEventsTest >> testMousemove [
+HighchartsXAxisPlotLinesEventsTest >> testSetMousemove [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsXAxisPlotLinesEventsTest >> testMousemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesEventsTest >> testMouseout [
+HighchartsXAxisPlotLinesEventsTest >> testSetMouseout [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsXAxisPlotLinesEventsTest >> testMouseout [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotLinesEventsTest >> testMouseover [
+HighchartsXAxisPlotLinesEventsTest >> testSetMouseover [
 
 	| component javascript expectedConfiguration |
 

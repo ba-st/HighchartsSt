@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationEventsTest >> testClosePopup [
+HighstockNavigationEventsTest >> testSetClosePopup [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigationEventsTest >> testClosePopup [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationEventsTest >> testDeselectButton [
+HighstockNavigationEventsTest >> testSetDeselectButton [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigationEventsTest >> testDeselectButton [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationEventsTest >> testSelectButton [
+HighstockNavigationEventsTest >> testSetSelectButton [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigationEventsTest >> testSelectButton [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationEventsTest >> testShowPopup [
+HighstockNavigationEventsTest >> testSetShowPopup [
 
 	| component javascript expectedConfiguration |
 

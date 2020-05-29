@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testDashStyle [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testFill [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testHeight [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testR [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSnap [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSrc [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStroke [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStrokeWidth [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testType [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testWidth [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

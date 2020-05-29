@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleMarkerTest >> testFillColor [
+HighchartsSeriesPackedbubbleMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPackedbubbleMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleMarkerTest >> testFillOpacity [
+HighchartsSeriesPackedbubbleMarkerTest >> testSetFillOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPackedbubbleMarkerTest >> testFillOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleMarkerTest >> testLineColor [
+HighchartsSeriesPackedbubbleMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPackedbubbleMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleMarkerTest >> testLineWidth [
+HighchartsSeriesPackedbubbleMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesPackedbubbleMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleMarkerTest >> testStates [
+HighchartsSeriesPackedbubbleMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesPackedbubbleMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleMarkerTest >> testSymbol [
+HighchartsSeriesPackedbubbleMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testClassName [
+HighstockNavigatorSeriesTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorSeries new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorSeriesTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorSeries new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorSeriesTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorSeries new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorSeriesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockNavigatorSeriesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testColor [
+HighstockNavigatorSeriesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockNavigatorSeriesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testData [
+HighstockNavigatorSeriesTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockNavigatorSeriesTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testFillOpacity [
+HighstockNavigatorSeriesTest >> testSetFillOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockNavigatorSeriesTest >> testFillOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testId [
+HighstockNavigatorSeriesTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockNavigatorSeriesTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testLineColor [
+HighstockNavigatorSeriesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockNavigatorSeriesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testLineWidth [
+HighstockNavigatorSeriesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockNavigatorSeriesTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testPointRange [
+HighstockNavigatorSeriesTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockNavigatorSeriesTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testThreshold [
+HighstockNavigatorSeriesTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockNavigatorSeriesTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesTest >> testType [
+HighstockNavigatorSeriesTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

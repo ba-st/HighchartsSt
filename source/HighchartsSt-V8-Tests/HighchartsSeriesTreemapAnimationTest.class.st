@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapAnimationTest >> testDuration [
+HighchartsSeriesTreemapAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testBoxesToAvoid [
+HighchartsSeriesHistogramLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogramLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesHistogramLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testConnectorAllowed [
+HighchartsSeriesHistogramLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesHistogramLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testConnectorNeighbourDistance [
+HighchartsSeriesHistogramLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesHistogramLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testEnabled [
+HighchartsSeriesHistogramLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesHistogramLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testFormat [
+HighchartsSeriesHistogramLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesHistogramLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testFormatter [
+HighchartsSeriesHistogramLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesHistogramLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testMaxFontSize [
+HighchartsSeriesHistogramLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesHistogramLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testMinFontSize [
+HighchartsSeriesHistogramLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesHistogramLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramLabelTest >> testOnArea [
+HighchartsSeriesHistogramLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

@@ -10,10 +10,7 @@ Class {
 { #category : #accessing }
 HighstockResponsiveRulesCondition >> callback: aHighchartsResponsiveCallbackFunction [
 
-	"A callback function to gain complete control on when the responsive
-rule applies. Return true if it applies. This opens for checking
-against other metrics than the chart size, for example the document
-size or other elements.
+	"A callback function to gain complete control on when the responsive rule applies. Return true if it applies. This opens for checking against other metrics than the chart size, for example the document size or other elements.
 "
 
 	configurationOptions at: 'callback' put: aHighchartsResponsiveCallbackFunction

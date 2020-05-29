@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsGaugeLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

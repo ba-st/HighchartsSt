@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsIkhSenkouSpanStylesTest >> testFill [
+HighstockPlotOptionsIkhSenkouSpanStylesTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

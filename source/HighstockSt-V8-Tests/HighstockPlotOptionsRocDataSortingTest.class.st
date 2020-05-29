@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataSortingTest >> testEnabled [
+HighstockPlotOptionsRocDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsRocDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataSortingTest >> testMatchByName [
+HighstockPlotOptionsRocDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsRocDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataSortingTest >> testSortKey [
+HighstockPlotOptionsRocDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

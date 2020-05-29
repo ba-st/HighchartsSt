@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testMillisecon
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsSolidgaugeTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

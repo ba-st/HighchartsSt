@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityAnnounceNewDataTest >> testAnnouncementFormatter [
+HighchartsAccessibilityAnnounceNewDataTest >> testSetAnnouncementFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAccessibilityAnnounceNewDataTest >> testAnnouncementFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityAnnounceNewDataTest >> testEnabled [
+HighchartsAccessibilityAnnounceNewDataTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAccessibilityAnnounceNewDataTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityAnnounceNewDataTest >> testInterruptUser [
+HighchartsAccessibilityAnnounceNewDataTest >> testSetInterruptUser [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsAccessibilityAnnounceNewDataTest >> testInterruptUser [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityAnnounceNewDataTest >> testMinAnnounceInterval [
+HighchartsAccessibilityAnnounceNewDataTest >> testSetMinAnnounceInterval [
 
 	| component javascript expectedConfiguration |
 

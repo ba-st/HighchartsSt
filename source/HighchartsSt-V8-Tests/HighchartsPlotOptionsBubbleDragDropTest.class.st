@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDragMaxX [
+HighchartsPlotOptionsBubbleDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBubbleDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBubbleDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBubbleDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDragMaxY [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDragMinX [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDragMinY [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDragPrecisionX [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDragPrecisionY [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDragSensitivity [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDraggableX [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testDraggableY [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testGroupBy [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsPlotOptionsBubbleDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropTest >> testLiveRedraw [
+HighchartsPlotOptionsBubbleDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudLastPriceTest >> testColor [
+HighchartsPlotOptionsWordcloudLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWordcloudLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudLastPriceTest >> testEnabled [
+HighchartsPlotOptionsWordcloudLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

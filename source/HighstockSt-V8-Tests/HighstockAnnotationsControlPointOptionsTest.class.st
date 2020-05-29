@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsTest >> testHeight [
+HighstockAnnotationsControlPointOptionsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsControlPointOptions new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsControlPointOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsControlPointOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsTest >> testPositioner [
+HighstockAnnotationsControlPointOptionsTest >> testSetPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsControlPointOptionsTest >> testPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsTest >> testSymbol [
+HighstockAnnotationsControlPointOptionsTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsControlPointOptionsTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsTest >> testVisible [
+HighstockAnnotationsControlPointOptionsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockAnnotationsControlPointOptionsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsTest >> testWidth [
+HighstockAnnotationsControlPointOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

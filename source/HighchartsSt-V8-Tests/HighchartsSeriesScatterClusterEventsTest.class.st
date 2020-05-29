@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterClusterEventsTest >> testDrillToCluster [
+HighchartsSeriesScatterClusterEventsTest >> testSetDrillToCluster [
 
 	| component javascript expectedConfiguration |
 

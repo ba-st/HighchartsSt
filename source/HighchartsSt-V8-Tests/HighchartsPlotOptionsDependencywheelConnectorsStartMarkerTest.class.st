@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testAlign [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testColor [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testEnabled [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testHeight [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testInside [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testLineColor [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testLineWidth [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testRadius [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSymbol [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testVerticalAli
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testWidth [
+HighchartsPlotOptionsDependencywheelConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

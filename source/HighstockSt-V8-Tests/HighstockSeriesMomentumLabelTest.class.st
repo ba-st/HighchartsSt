@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testBoxesToAvoid [
+HighstockSeriesMomentumLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesMomentumLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesMomentumLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesMomentumLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testConnectorAllowed [
+HighstockSeriesMomentumLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesMomentumLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesMomentumLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesMomentumLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testEnabled [
+HighstockSeriesMomentumLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesMomentumLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testFormat [
+HighstockSeriesMomentumLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesMomentumLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testFormatter [
+HighstockSeriesMomentumLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesMomentumLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testMaxFontSize [
+HighstockSeriesMomentumLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesMomentumLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testMinFontSize [
+HighstockSeriesMomentumLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesMomentumLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumLabelTest >> testOnArea [
+HighstockSeriesMomentumLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

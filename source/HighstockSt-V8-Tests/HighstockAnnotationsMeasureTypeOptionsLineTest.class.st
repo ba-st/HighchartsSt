@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsLineTest >> testFill [
+HighstockAnnotationsMeasureTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

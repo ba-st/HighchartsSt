@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockDefsReverseArrowTest >> testId [
+HighstockDefsReverseArrowTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockDefsReverseArrowTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsReverseArrowTest >> testMarkerHeight [
+HighstockDefsReverseArrowTest >> testSetMarkerHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockDefsReverseArrowTest >> testMarkerHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsReverseArrowTest >> testMarkerWidth [
+HighstockDefsReverseArrowTest >> testSetMarkerWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockDefsReverseArrowTest >> testMarkerWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsReverseArrowTest >> testRefX [
+HighstockDefsReverseArrowTest >> testSetRefX [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockDefsReverseArrowTest >> testRefX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsReverseArrowTest >> testRefY [
+HighstockDefsReverseArrowTest >> testSetRefY [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockDefsReverseArrowTest >> testRefY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsReverseArrowTest >> testRender [
+HighstockDefsReverseArrowTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockDefsReverseArrowTest >> testRender [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDefsReverseArrowTest >> testTagName [
+HighstockDefsReverseArrowTest >> testSetTagName [
 
 	| component javascript expectedConfiguration |
 

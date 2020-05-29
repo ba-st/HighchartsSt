@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testEnabled [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testEnabledThre
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testFillColor [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testHeight [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testLineColor [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testLineWidth [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testRadius [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSymbol [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testWidth [
+HighstockSeriesLinearregressioninterceptStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

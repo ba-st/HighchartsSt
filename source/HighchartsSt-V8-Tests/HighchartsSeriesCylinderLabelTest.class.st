@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testBoxesToAvoid [
+HighchartsSeriesCylinderLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinderLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesCylinderLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesCylinderLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testConnectorAllowed [
+HighchartsSeriesCylinderLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesCylinderLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testConnectorNeighbourDistance [
+HighchartsSeriesCylinderLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesCylinderLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testEnabled [
+HighchartsSeriesCylinderLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesCylinderLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testFormat [
+HighchartsSeriesCylinderLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesCylinderLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testFormatter [
+HighchartsSeriesCylinderLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesCylinderLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testMaxFontSize [
+HighchartsSeriesCylinderLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesCylinderLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testMinFontSize [
+HighchartsSeriesCylinderLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesCylinderLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderLabelTest >> testOnArea [
+HighchartsSeriesCylinderLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

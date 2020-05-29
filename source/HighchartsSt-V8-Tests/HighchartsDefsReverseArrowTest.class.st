@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDefsReverseArrowTest >> testId [
+HighchartsDefsReverseArrowTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsDefsReverseArrowTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsReverseArrowTest >> testMarkerHeight [
+HighchartsDefsReverseArrowTest >> testSetMarkerHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsDefsReverseArrowTest >> testMarkerHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsReverseArrowTest >> testMarkerWidth [
+HighchartsDefsReverseArrowTest >> testSetMarkerWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsDefsReverseArrowTest >> testMarkerWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsReverseArrowTest >> testRefX [
+HighchartsDefsReverseArrowTest >> testSetRefX [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsDefsReverseArrowTest >> testRefX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsReverseArrowTest >> testRefY [
+HighchartsDefsReverseArrowTest >> testSetRefY [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsDefsReverseArrowTest >> testRefY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsReverseArrowTest >> testRender [
+HighchartsDefsReverseArrowTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsDefsReverseArrowTest >> testRender [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDefsReverseArrowTest >> testTagName [
+HighchartsDefsReverseArrowTest >> testSetTagName [
 
 	| component javascript expectedConfiguration |
 

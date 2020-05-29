@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsEmaPointTest >> testEvents [
+HighstockPlotOptionsEmaPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,77 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityTest >> testCustomComponents [
+HighstockAccessibilityTest >> testGetAnnounceNewData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibility new.
+	component announceNewData.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'announceNewData' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibility new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityTest >> testGetScreenReaderSection [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibility new.
+	component screenReaderSection.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'screenReaderSection' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityTest >> testGetSeries [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibility new.
+	component series.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'series' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityTest >> testSetCustomComponents [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +89,7 @@ HighstockAccessibilityTest >> testCustomComponents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityTest >> testDescription [
+HighstockAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighstockAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityTest >> testEnabled [
+HighstockAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,7 @@ HighstockAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityTest >> testHighContrastTheme [
+HighstockAccessibilityTest >> testSetHighContrastTheme [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighstockAccessibilityTest >> testHighContrastTheme [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityTest >> testLandmarkVerbosity [
+HighstockAccessibilityTest >> testSetLandmarkVerbosity [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighstockAccessibilityTest >> testLandmarkVerbosity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityTest >> testLinkedDescription [
+HighstockAccessibilityTest >> testSetLinkedDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighstockAccessibilityTest >> testLinkedDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityTest >> testTypeDescription [
+HighstockAccessibilityTest >> testSetTypeDescription [
 
 	| component javascript expectedConfiguration |
 

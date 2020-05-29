@@ -31,8 +31,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsXAxisPlotBands >> className: aString [
 
-	"A custom class name, in addition to the default highcharts-plot-band,
-to apply to each individual band.
+	"A custom class name, in addition to the default highcharts-plot-band, to apply to each individual band.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -50,8 +49,7 @@ Defaults to #e6ebf5."
 { #category : #accessing }
 HighchartsXAxisPlotBands >> events: anObject [
 
-	"An object defining mouse events for the plot band. Supported properties
-are click, mouseover, mouseout, mousemove.
+	"An object defining mouse events for the plot band. Supported properties are click, mouseover, mouseout, mousemove.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -95,10 +93,7 @@ HighchartsXAxisPlotBands >> to: aNumber [
 { #category : #accessing }
 HighchartsXAxisPlotBands >> zIndex: aNumber [
 
-	"The z index of the plot band within the chart, relative to other
-elements. Using the same z index as another element may give
-unpredictable results, as the last rendered element will be on top.
-Values from 0 to 20 make sense.
+	"The z index of the plot band within the chart, relative to other elements. Using the same z index as another element may give unpredictable results, as the last rendered element will be on top. Values from 0 to 20 make sense.
 "
 
 	configurationOptions at: 'zIndex' put: aNumber

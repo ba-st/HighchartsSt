@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsWordcloudLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

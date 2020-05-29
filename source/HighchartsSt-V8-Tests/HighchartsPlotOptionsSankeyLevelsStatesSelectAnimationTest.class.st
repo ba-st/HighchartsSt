@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsStatesSelectAnimationTest >> testDuration [
+HighchartsPlotOptionsSankeyLevelsStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

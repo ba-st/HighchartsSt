@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testAlign [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testBackgroundColor [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testBorderColor [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testBorderRadius [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testBorderWidth [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testEnabled [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testFormat [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testFormatter [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testPadding [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testShape [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsChartParallelAxesCrosshairLabelTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairLabelTest >> testStyle [
+HighchartsChartParallelAxesCrosshairLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

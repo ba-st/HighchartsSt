@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudPointTest >> testEvents [
+HighchartsPlotOptionsWordcloudPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

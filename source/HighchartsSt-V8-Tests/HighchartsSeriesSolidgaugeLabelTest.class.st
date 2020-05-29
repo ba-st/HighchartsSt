@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testBoxesToAvoid [
+HighchartsSeriesSolidgaugeLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgaugeLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testConnectorAllowed [
+HighchartsSeriesSolidgaugeLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testConnectorNeighbourDistance [
+HighchartsSeriesSolidgaugeLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testEnabled [
+HighchartsSeriesSolidgaugeLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testFormat [
+HighchartsSeriesSolidgaugeLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testFormatter [
+HighchartsSeriesSolidgaugeLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testMaxFontSize [
+HighchartsSeriesSolidgaugeLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testMinFontSize [
+HighchartsSeriesSolidgaugeLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesSolidgaugeLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLabelTest >> testOnArea [
+HighchartsSeriesSolidgaugeLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

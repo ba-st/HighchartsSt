@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testBoxesToAvoid [
+HighstockSeriesCandlestickLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestickLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCandlestickLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesCandlestickLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testConnectorAllowed [
+HighstockSeriesCandlestickLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesCandlestickLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesCandlestickLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesCandlestickLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testEnabled [
+HighstockSeriesCandlestickLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesCandlestickLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testFormat [
+HighstockSeriesCandlestickLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesCandlestickLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testFormatter [
+HighstockSeriesCandlestickLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesCandlestickLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testMaxFontSize [
+HighstockSeriesCandlestickLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesCandlestickLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testMinFontSize [
+HighstockSeriesCandlestickLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesCandlestickLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickLabelTest >> testOnArea [
+HighstockSeriesCandlestickLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

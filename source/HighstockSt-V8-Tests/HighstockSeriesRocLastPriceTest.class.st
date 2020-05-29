@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesRocLastPriceTest >> testColor [
+HighstockSeriesRocLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesRocLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesRocLastPriceTest >> testEnabled [
+HighstockSeriesRocLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

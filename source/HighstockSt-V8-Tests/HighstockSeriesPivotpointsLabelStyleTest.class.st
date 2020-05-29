@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsLabelStyleTest >> testFontWeight [
+HighstockSeriesPivotpointsLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

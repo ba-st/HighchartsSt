@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsMarkerStatesNormalTest >> testAnimation [
+HighstockPlotOptionsPivotpointsMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testBoxesToAvoid [
+HighstockSeriesAroonoscillatorLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillatorLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testConnectorAllowed [
+HighstockSeriesAroonoscillatorLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesAroonoscillatorLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testEnabled [
+HighstockSeriesAroonoscillatorLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testFormat [
+HighstockSeriesAroonoscillatorLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testFormatter [
+HighstockSeriesAroonoscillatorLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testMaxFontSize [
+HighstockSeriesAroonoscillatorLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testMinFontSize [
+HighstockSeriesAroonoscillatorLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesAroonoscillatorLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorLabelTest >> testOnArea [
+HighstockSeriesAroonoscillatorLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

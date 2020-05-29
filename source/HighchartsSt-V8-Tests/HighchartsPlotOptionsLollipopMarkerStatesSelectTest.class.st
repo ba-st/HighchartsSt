@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testEnabled [
+HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testFillColor [
+HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testLineColor [
+HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testLineWidth [
+HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testRadius [
+HighchartsPlotOptionsLollipopMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

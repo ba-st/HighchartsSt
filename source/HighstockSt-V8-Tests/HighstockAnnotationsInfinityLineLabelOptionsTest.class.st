@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testAlign [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsInfinityLineLabelOptions new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testAllowOverlap [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testBackgroundColor [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testBorderColor [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testBorderRadius [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testBorderWidth [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testClassName [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testCrop [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testDistance [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testFormat [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testFormatter [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testOverflow [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testPadding [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testShadow [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testShape [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testStyle [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testText [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testUseHTML [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testVerticalAlign [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testX [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighstockAnnotationsInfinityLineLabelOptionsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsTest >> testY [
+HighstockAnnotationsInfinityLineLabelOptionsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsAnimationTest >> testDuration [
+HighstockSeriesKeltnerchannelsAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

@@ -7,8 +7,7 @@ Class {
 { #category : #accessing }
 HighstockSeriesPcTopLineStyles >> lineColor: aHighchartsColorString [
 
-	"Color of the top line. If not set, it´s inherited from
-plotOptions.pc.color.
+	"Color of the top line. If not set, it´s inherited from plotOptions.pc.color.
 "
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorString

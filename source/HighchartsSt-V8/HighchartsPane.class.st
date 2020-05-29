@@ -19,9 +19,7 @@ HighchartsPane >> background [
 { #category : #accessing }
 HighchartsPane >> center: anArrayOfstringOrnumber [
 
-	"The center of a polar chart or angular gauge, given as an array
-of [x, y] positions. Positions can be given as integers that
-transform to pixels, or as percentages of the plot area size.
+	"The center of a polar chart or angular gauge, given as an array of [x, y] positions. Positions can be given as integers that transform to pixels, or as percentages of the plot area size.
 Defaults to ['50%', '50%']."
 
 	configurationOptions at: 'center' put: anArrayOfstringOrnumber
@@ -30,10 +28,7 @@ Defaults to ['50%', '50%']."
 { #category : #accessing }
 HighchartsPane >> endAngle: aNumber [
 
-	"The end angle of the polar X axis or gauge value axis, given in
-degrees where 0 is north. Defaults to startAngle
-
-360.
+	"The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to startAngle  360.
 "
 
 	configurationOptions at: 'endAngle' put: aNumber
@@ -42,8 +37,7 @@ degrees where 0 is north. Defaults to startAngle
 { #category : #accessing }
 HighchartsPane >> innerSize: aNumberOrstring [
 
-	"The inner size of the pane, either as a number defining pixels, or a
-percentage defining a percentage of the pane´s size.
+	"The inner size of the pane, either as a number defining pixels, or a percentage defining a percentage of the pane´s size.
 Defaults to 0%."
 
 	configurationOptions at: 'innerSize' put: aNumberOrstring
@@ -52,9 +46,7 @@ Defaults to 0%."
 { #category : #accessing }
 HighchartsPane >> size: aNumberOrstring [
 
-	"The size of the pane, either as a number defining pixels, or a
-percentage defining a percentage of the available plot area (the
-smallest of the plot height or plot width).
+	"The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the available plot area (the smallest of the plot height or plot width).
 Defaults to 85%."
 
 	configurationOptions at: 'size' put: aNumberOrstring
@@ -63,8 +55,7 @@ Defaults to 85%."
 { #category : #accessing }
 HighchartsPane >> startAngle: aNumber [
 
-	"The start angle of the polar X axis or gauge axis, given in degrees
-where 0 is north. Defaults to 0.
+	"The start angle of the polar X axis or gauge axis, given in degrees where 0 is north. Defaults to 0.
 Defaults to 0."
 
 	configurationOptions at: 'startAngle' put: aNumber

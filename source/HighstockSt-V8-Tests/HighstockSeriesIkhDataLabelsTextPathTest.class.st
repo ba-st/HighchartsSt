@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesIkhDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesIkhDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesIkhDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

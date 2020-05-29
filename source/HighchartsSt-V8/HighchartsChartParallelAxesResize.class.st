@@ -13,8 +13,7 @@ Class {
 { #category : #accessing }
 HighchartsChartParallelAxesResize >> controlledAxis [
 
-	"Contains two arrays of axes that are controlled by control line
-of the axis.
+	"Contains two arrays of axes that are controlled by control line of the axis.
 "
 	^ configurationOptions at: 'controlledAxis' ifAbsentPut: [ HighchartsChartParallelAxesResizeControlledAxis new ]
 ]
@@ -22,8 +21,7 @@ of the axis.
 { #category : #accessing }
 HighchartsChartParallelAxesResize >> cursor: aString [
 
-	"Cursor style for the control line.
-In styled mode use class highcharts-axis-resizer instead.
+	"Cursor style for the control line. In styled mode use class highcharts-axis-resizer instead.
 Defaults to ns-resize."
 
 	configurationOptions at: 'cursor' put: aString
@@ -41,8 +39,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsChartParallelAxesResize >> lineColor: aHighchartsColorString [
 
-	"Color of the control line.
-In styled mode use class highcharts-axis-resizer instead.
+	"Color of the control line. In styled mode use class highcharts-axis-resizer instead.
 Defaults to #cccccc."
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorString
@@ -51,8 +48,7 @@ Defaults to #cccccc."
 { #category : #accessing }
 HighchartsChartParallelAxesResize >> lineDashStyle: aString [
 
-	"Dash style of the control line.
-In styled mode use class highcharts-axis-resizer instead.
+	"Dash style of the control line. In styled mode use class highcharts-axis-resizer instead.
 Defaults to Solid."
 
 	configurationOptions at: 'lineDashStyle' put: aString
@@ -61,8 +57,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsChartParallelAxesResize >> lineWidth: aNumber [
 
-	"Width of the control line.
-In styled mode use class highcharts-axis-resizer instead.
+	"Width of the control line. In styled mode use class highcharts-axis-resizer instead.
 Defaults to 4."
 
 	configurationOptions at: 'lineWidth' put: aNumber

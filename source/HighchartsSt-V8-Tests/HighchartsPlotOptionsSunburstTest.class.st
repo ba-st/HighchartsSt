@@ -5,7 +5,161 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testAllowDrillToNode [
+HighchartsPlotOptionsSunburstTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetLevelSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component levelSize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'levelSize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetLevels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component levels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'levels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testGetTraverseUpButton [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburst new.
+	component traverseUpButton.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'traverseUpButton' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstTest >> testSetAllowDrillToNode [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +173,7 @@ HighchartsPlotOptionsSunburstTest >> testAllowDrillToNode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testAllowPointSelect [
+HighchartsPlotOptionsSunburstTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +187,7 @@ HighchartsPlotOptionsSunburstTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testAllowTraversingTree [
+HighchartsPlotOptionsSunburstTest >> testSetAllowTraversingTree [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +201,7 @@ HighchartsPlotOptionsSunburstTest >> testAllowTraversingTree [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testBoostBlending [
+HighchartsPlotOptionsSunburstTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +215,7 @@ HighchartsPlotOptionsSunburstTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testBorderColor [
+HighchartsPlotOptionsSunburstTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +229,7 @@ HighchartsPlotOptionsSunburstTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testBorderWidth [
+HighchartsPlotOptionsSunburstTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +243,7 @@ HighchartsPlotOptionsSunburstTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testCenter [
+HighchartsPlotOptionsSunburstTest >> testSetCenter [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +257,7 @@ HighchartsPlotOptionsSunburstTest >> testCenter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testClassName [
+HighchartsPlotOptionsSunburstTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +271,7 @@ HighchartsPlotOptionsSunburstTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testColor [
+HighchartsPlotOptionsSunburstTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +285,7 @@ HighchartsPlotOptionsSunburstTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testColorByPoint [
+HighchartsPlotOptionsSunburstTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +299,7 @@ HighchartsPlotOptionsSunburstTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testColorIndex [
+HighchartsPlotOptionsSunburstTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +313,7 @@ HighchartsPlotOptionsSunburstTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testColors [
+HighchartsPlotOptionsSunburstTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +327,7 @@ HighchartsPlotOptionsSunburstTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testCompareStart [
+HighchartsPlotOptionsSunburstTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +341,7 @@ HighchartsPlotOptionsSunburstTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testCrisp [
+HighchartsPlotOptionsSunburstTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +355,7 @@ HighchartsPlotOptionsSunburstTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testCursor [
+HighchartsPlotOptionsSunburstTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +369,7 @@ HighchartsPlotOptionsSunburstTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testCustom [
+HighchartsPlotOptionsSunburstTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +383,7 @@ HighchartsPlotOptionsSunburstTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testDescription [
+HighchartsPlotOptionsSunburstTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +397,7 @@ HighchartsPlotOptionsSunburstTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testEnableMouseTracking [
+HighchartsPlotOptionsSunburstTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +411,7 @@ HighchartsPlotOptionsSunburstTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testEvents [
+HighchartsPlotOptionsSunburstTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +425,7 @@ HighchartsPlotOptionsSunburstTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testFillColor [
+HighchartsPlotOptionsSunburstTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +439,7 @@ HighchartsPlotOptionsSunburstTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testIncludeInDataExport [
+HighchartsPlotOptionsSunburstTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +453,7 @@ HighchartsPlotOptionsSunburstTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testKeys [
+HighchartsPlotOptionsSunburstTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +467,7 @@ HighchartsPlotOptionsSunburstTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testLevelIsConstant [
+HighchartsPlotOptionsSunburstTest >> testSetLevelIsConstant [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +481,7 @@ HighchartsPlotOptionsSunburstTest >> testLevelIsConstant [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testLinkedTo [
+HighchartsPlotOptionsSunburstTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +495,7 @@ HighchartsPlotOptionsSunburstTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testOpacity [
+HighchartsPlotOptionsSunburstTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +509,7 @@ HighchartsPlotOptionsSunburstTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsSunburstTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +523,7 @@ HighchartsPlotOptionsSunburstTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testRootId [
+HighchartsPlotOptionsSunburstTest >> testSetRootId [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +537,7 @@ HighchartsPlotOptionsSunburstTest >> testRootId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testSelected [
+HighchartsPlotOptionsSunburstTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +551,7 @@ HighchartsPlotOptionsSunburstTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testShadow [
+HighchartsPlotOptionsSunburstTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +565,7 @@ HighchartsPlotOptionsSunburstTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testShowCheckbox [
+HighchartsPlotOptionsSunburstTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +579,7 @@ HighchartsPlotOptionsSunburstTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testShowInLegend [
+HighchartsPlotOptionsSunburstTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +593,7 @@ HighchartsPlotOptionsSunburstTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testShowInNavigator [
+HighchartsPlotOptionsSunburstTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +607,7 @@ HighchartsPlotOptionsSunburstTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testSize [
+HighchartsPlotOptionsSunburstTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +621,7 @@ HighchartsPlotOptionsSunburstTest >> testSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsSunburstTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +635,7 @@ HighchartsPlotOptionsSunburstTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testSlicedOffset [
+HighchartsPlotOptionsSunburstTest >> testSetSlicedOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +649,7 @@ HighchartsPlotOptionsSunburstTest >> testSlicedOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testStartAngle [
+HighchartsPlotOptionsSunburstTest >> testSetStartAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +663,7 @@ HighchartsPlotOptionsSunburstTest >> testStartAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testStates [
+HighchartsPlotOptionsSunburstTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +677,7 @@ HighchartsPlotOptionsSunburstTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testStickyTracking [
+HighchartsPlotOptionsSunburstTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +691,7 @@ HighchartsPlotOptionsSunburstTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testUseOhlcData [
+HighchartsPlotOptionsSunburstTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +705,7 @@ HighchartsPlotOptionsSunburstTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testVisible [
+HighchartsPlotOptionsSunburstTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +719,7 @@ HighchartsPlotOptionsSunburstTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testZIndex [
+HighchartsPlotOptionsSunburstTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

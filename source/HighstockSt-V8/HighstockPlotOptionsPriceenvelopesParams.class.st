@@ -10,8 +10,7 @@ Class {
 { #category : #accessing }
 HighstockPlotOptionsPriceenvelopesParams >> bottomBand: aNumber [
 
-	"Percentage below the moving average that should be displayed.
-0.1 means 90. Relative to the calculated value.
+	"Percentage below the moving average that should be displayed. 0.1 means 90. Relative to the calculated value.
 Defaults to 0.1."
 
 	configurationOptions at: 'bottomBand' put: aNumber
@@ -20,9 +19,7 @@ Defaults to 0.1."
 { #category : #accessing }
 HighstockPlotOptionsPriceenvelopesParams >> index: aNumber [
 
-	"The point index which indicator calculations will base. For
-example using OHLC data, index=2 means the indicator will be
-calculated using Low values.
+	"The point index which indicator calculations will base. For example using OHLC data, index=2 means the indicator will be calculated using Low values.
 Defaults to 0."
 
 	configurationOptions at: 'index' put: aNumber
@@ -31,9 +28,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockPlotOptionsPriceenvelopesParams >> period: aNumber [
 
-	"The base period for indicator calculations. This is the number of
-data points which are taken into account for the indicator
-calculations.
+	"The base period for indicator calculations. This is the number of data points which are taken into account for the indicator calculations.
 Defaults to 20."
 
 	configurationOptions at: 'period' put: aNumber
@@ -42,8 +37,7 @@ Defaults to 20."
 { #category : #accessing }
 HighstockPlotOptionsPriceenvelopesParams >> topBand: aNumber [
 
-	"Percentage above the moving average that should be displayed.
-0.1 means 110. Relative to the calculated value.
+	"Percentage above the moving average that should be displayed. 0.1 means 110. Relative to the calculated value.
 Defaults to 0.1."
 
 	configurationOptions at: 'topBand' put: aNumber

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testAddButton [
+HighstockLangNavigationPopupTest >> testSetAddButton [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangNavigationPopupTest >> testAddButton [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testArrowLine [
+HighstockLangNavigationPopupTest >> testSetArrowLine [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangNavigationPopupTest >> testArrowLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testArrowRay [
+HighstockLangNavigationPopupTest >> testSetArrowRay [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangNavigationPopupTest >> testArrowRay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testArrowSegment [
+HighstockLangNavigationPopupTest >> testSetArrowSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLangNavigationPopupTest >> testArrowSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testBackground [
+HighstockLangNavigationPopupTest >> testSetBackground [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLangNavigationPopupTest >> testBackground [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testBackgroundColor [
+HighstockLangNavigationPopupTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockLangNavigationPopupTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testBackgroundColors [
+HighstockLangNavigationPopupTest >> testSetBackgroundColors [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockLangNavigationPopupTest >> testBackgroundColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testBorderColor [
+HighstockLangNavigationPopupTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockLangNavigationPopupTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testBorderRadius [
+HighstockLangNavigationPopupTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockLangNavigationPopupTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testBorderWidth [
+HighstockLangNavigationPopupTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockLangNavigationPopupTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testCircle [
+HighstockLangNavigationPopupTest >> testSetCircle [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockLangNavigationPopupTest >> testCircle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testColor [
+HighstockLangNavigationPopupTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockLangNavigationPopupTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testConnector [
+HighstockLangNavigationPopupTest >> testSetConnector [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockLangNavigationPopupTest >> testConnector [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testCrooked3 [
+HighstockLangNavigationPopupTest >> testSetCrooked3 [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockLangNavigationPopupTest >> testCrooked3 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testCrooked5 [
+HighstockLangNavigationPopupTest >> testSetCrooked5 [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockLangNavigationPopupTest >> testCrooked5 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testCrosshairX [
+HighstockLangNavigationPopupTest >> testSetCrosshairX [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockLangNavigationPopupTest >> testCrosshairX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testCrosshairY [
+HighstockLangNavigationPopupTest >> testSetCrosshairY [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockLangNavigationPopupTest >> testCrosshairY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testEditButton [
+HighstockLangNavigationPopupTest >> testSetEditButton [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockLangNavigationPopupTest >> testEditButton [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testElliott3 [
+HighstockLangNavigationPopupTest >> testSetElliott3 [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockLangNavigationPopupTest >> testElliott3 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testElliott5 [
+HighstockLangNavigationPopupTest >> testSetElliott5 [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockLangNavigationPopupTest >> testElliott5 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testFibonacci [
+HighstockLangNavigationPopupTest >> testSetFibonacci [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockLangNavigationPopupTest >> testFibonacci [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testFill [
+HighstockLangNavigationPopupTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighstockLangNavigationPopupTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testFlags [
+HighstockLangNavigationPopupTest >> testSetFlags [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighstockLangNavigationPopupTest >> testFlags [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testFontSize [
+HighstockLangNavigationPopupTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +341,7 @@ HighstockLangNavigationPopupTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testFormat [
+HighstockLangNavigationPopupTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +355,7 @@ HighstockLangNavigationPopupTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testHeight [
+HighstockLangNavigationPopupTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +369,7 @@ HighstockLangNavigationPopupTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testHorizontalLine [
+HighstockLangNavigationPopupTest >> testSetHorizontalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +383,7 @@ HighstockLangNavigationPopupTest >> testHorizontalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testInfinityLine [
+HighstockLangNavigationPopupTest >> testSetInfinityLine [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +397,7 @@ HighstockLangNavigationPopupTest >> testInfinityLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testInnerBackground [
+HighstockLangNavigationPopupTest >> testSetInnerBackground [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +411,7 @@ HighstockLangNavigationPopupTest >> testInnerBackground [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testLabel [
+HighstockLangNavigationPopupTest >> testSetLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +425,7 @@ HighstockLangNavigationPopupTest >> testLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testLabelOptions [
+HighstockLangNavigationPopupTest >> testSetLabelOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +439,7 @@ HighstockLangNavigationPopupTest >> testLabelOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testLabels [
+HighstockLangNavigationPopupTest >> testSetLabels [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +453,7 @@ HighstockLangNavigationPopupTest >> testLabels [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testLine [
+HighstockLangNavigationPopupTest >> testSetLine [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +467,7 @@ HighstockLangNavigationPopupTest >> testLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testLines [
+HighstockLangNavigationPopupTest >> testSetLines [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +481,7 @@ HighstockLangNavigationPopupTest >> testLines [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testMeasure [
+HighstockLangNavigationPopupTest >> testSetMeasure [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +495,7 @@ HighstockLangNavigationPopupTest >> testMeasure [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testMeasureX [
+HighstockLangNavigationPopupTest >> testSetMeasureX [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +509,7 @@ HighstockLangNavigationPopupTest >> testMeasureX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testMeasureXY [
+HighstockLangNavigationPopupTest >> testSetMeasureXY [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +523,7 @@ HighstockLangNavigationPopupTest >> testMeasureXY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testMeasureY [
+HighstockLangNavigationPopupTest >> testSetMeasureY [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +537,7 @@ HighstockLangNavigationPopupTest >> testMeasureY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testName [
+HighstockLangNavigationPopupTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +551,7 @@ HighstockLangNavigationPopupTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testOuterBackground [
+HighstockLangNavigationPopupTest >> testSetOuterBackground [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +565,7 @@ HighstockLangNavigationPopupTest >> testOuterBackground [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testPadding [
+HighstockLangNavigationPopupTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +579,7 @@ HighstockLangNavigationPopupTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testParallelChannel [
+HighstockLangNavigationPopupTest >> testSetParallelChannel [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +593,7 @@ HighstockLangNavigationPopupTest >> testParallelChannel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testPitchfork [
+HighstockLangNavigationPopupTest >> testSetPitchfork [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +607,7 @@ HighstockLangNavigationPopupTest >> testPitchfork [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testRay [
+HighstockLangNavigationPopupTest >> testSetRay [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +621,7 @@ HighstockLangNavigationPopupTest >> testRay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testRectangle [
+HighstockLangNavigationPopupTest >> testSetRectangle [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +635,7 @@ HighstockLangNavigationPopupTest >> testRectangle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testRemoveButton [
+HighstockLangNavigationPopupTest >> testSetRemoveButton [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +649,7 @@ HighstockLangNavigationPopupTest >> testRemoveButton [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testSaveButton [
+HighstockLangNavigationPopupTest >> testSetSaveButton [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +663,7 @@ HighstockLangNavigationPopupTest >> testSaveButton [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testSegment [
+HighstockLangNavigationPopupTest >> testSetSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +677,7 @@ HighstockLangNavigationPopupTest >> testSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testSeries [
+HighstockLangNavigationPopupTest >> testSetSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +691,7 @@ HighstockLangNavigationPopupTest >> testSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testShapeOptions [
+HighstockLangNavigationPopupTest >> testSetShapeOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +705,7 @@ HighstockLangNavigationPopupTest >> testShapeOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testShapes [
+HighstockLangNavigationPopupTest >> testSetShapes [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +719,7 @@ HighstockLangNavigationPopupTest >> testShapes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testSimpleShapes [
+HighstockLangNavigationPopupTest >> testSetSimpleShapes [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +733,7 @@ HighstockLangNavigationPopupTest >> testSimpleShapes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testStroke [
+HighstockLangNavigationPopupTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +747,7 @@ HighstockLangNavigationPopupTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testStrokeWidth [
+HighstockLangNavigationPopupTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +761,7 @@ HighstockLangNavigationPopupTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testStyle [
+HighstockLangNavigationPopupTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +775,7 @@ HighstockLangNavigationPopupTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testTitle [
+HighstockLangNavigationPopupTest >> testSetTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +789,7 @@ HighstockLangNavigationPopupTest >> testTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testTunnel [
+HighstockLangNavigationPopupTest >> testSetTunnel [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +803,7 @@ HighstockLangNavigationPopupTest >> testTunnel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testTypeOptions [
+HighstockLangNavigationPopupTest >> testSetTypeOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +817,7 @@ HighstockLangNavigationPopupTest >> testTypeOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testVerticalArrow [
+HighstockLangNavigationPopupTest >> testSetVerticalArrow [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +831,7 @@ HighstockLangNavigationPopupTest >> testVerticalArrow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testVerticalCounter [
+HighstockLangNavigationPopupTest >> testSetVerticalCounter [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +845,7 @@ HighstockLangNavigationPopupTest >> testVerticalCounter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testVerticalLabel [
+HighstockLangNavigationPopupTest >> testSetVerticalLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +859,7 @@ HighstockLangNavigationPopupTest >> testVerticalLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testVerticalLine [
+HighstockLangNavigationPopupTest >> testSetVerticalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +873,7 @@ HighstockLangNavigationPopupTest >> testVerticalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangNavigationPopupTest >> testVolume [
+HighstockLangNavigationPopupTest >> testSetVolume [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisDateTimeLabelFormatsMillisecondTest >> testMain [
+HighchartsZAxisDateTimeLabelFormatsMillisecondTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsZAxisDateTimeLabelFormatsMillisecondTest >> testMain [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisDateTimeLabelFormatsMillisecondTest >> testRange [
+HighchartsZAxisDateTimeLabelFormatsMillisecondTest >> testSetRange [
 
 	| component javascript expectedConfiguration |
 

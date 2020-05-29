@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallLabelStyleTest >> testFontWeight [
+HighchartsSeriesWaterfallLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

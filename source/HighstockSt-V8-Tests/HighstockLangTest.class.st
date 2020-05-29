@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testContextButtonTitle [
+HighstockLangTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangTest >> testGetExportData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component exportData.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exportData' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangTest >> testGetNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component navigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'navigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangTest >> testGetStockTools [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component stockTools.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stockTools' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLangTest >> testSetContextButtonTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighstockLangTest >> testContextButtonTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testDecimalPoint [
+HighstockLangTest >> testSetDecimalPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighstockLangTest >> testDecimalPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testDownloadCSV [
+HighstockLangTest >> testSetDownloadCSV [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighstockLangTest >> testDownloadCSV [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testDownloadJPEG [
+HighstockLangTest >> testSetDownloadJPEG [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighstockLangTest >> testDownloadJPEG [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testDownloadPDF [
+HighstockLangTest >> testSetDownloadPDF [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighstockLangTest >> testDownloadPDF [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testDownloadPNG [
+HighstockLangTest >> testSetDownloadPNG [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighstockLangTest >> testDownloadPNG [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testDownloadSVG [
+HighstockLangTest >> testSetDownloadSVG [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighstockLangTest >> testDownloadSVG [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testDownloadXLS [
+HighstockLangTest >> testSetDownloadXLS [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighstockLangTest >> testDownloadXLS [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testExitFullscreen [
+HighstockLangTest >> testSetExitFullscreen [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighstockLangTest >> testExitFullscreen [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testInvalidDate [
+HighstockLangTest >> testSetInvalidDate [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighstockLangTest >> testInvalidDate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testLoading [
+HighstockLangTest >> testSetLoading [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighstockLangTest >> testLoading [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testMonths [
+HighstockLangTest >> testSetMonths [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighstockLangTest >> testMonths [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testNoData [
+HighstockLangTest >> testSetNoData [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +243,7 @@ HighstockLangTest >> testNoData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testNumericSymbolMagnitude [
+HighstockLangTest >> testSetNumericSymbolMagnitude [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +257,7 @@ HighstockLangTest >> testNumericSymbolMagnitude [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testNumericSymbols [
+HighstockLangTest >> testSetNumericSymbols [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +271,7 @@ HighstockLangTest >> testNumericSymbols [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testPrintChart [
+HighstockLangTest >> testSetPrintChart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +285,7 @@ HighstockLangTest >> testPrintChart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testRangeSelectorFrom [
+HighstockLangTest >> testSetRangeSelectorFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +299,7 @@ HighstockLangTest >> testRangeSelectorFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testRangeSelectorTo [
+HighstockLangTest >> testSetRangeSelectorTo [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +313,7 @@ HighstockLangTest >> testRangeSelectorTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testRangeSelectorZoom [
+HighstockLangTest >> testSetRangeSelectorZoom [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +327,7 @@ HighstockLangTest >> testRangeSelectorZoom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testResetZoom [
+HighstockLangTest >> testSetResetZoom [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +341,7 @@ HighstockLangTest >> testResetZoom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testResetZoomTitle [
+HighstockLangTest >> testSetResetZoomTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +355,7 @@ HighstockLangTest >> testResetZoomTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testShortMonths [
+HighstockLangTest >> testSetShortMonths [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +369,7 @@ HighstockLangTest >> testShortMonths [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testShortWeekdays [
+HighstockLangTest >> testSetShortWeekdays [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +383,7 @@ HighstockLangTest >> testShortWeekdays [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testThousandsSep [
+HighstockLangTest >> testSetThousandsSep [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +397,7 @@ HighstockLangTest >> testThousandsSep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testViewData [
+HighstockLangTest >> testSetViewData [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +411,7 @@ HighstockLangTest >> testViewData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testViewFullscreen [
+HighstockLangTest >> testSetViewFullscreen [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +425,7 @@ HighstockLangTest >> testViewFullscreen [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangTest >> testWeekdays [
+HighstockLangTest >> testSetWeekdays [
 
 	| component javascript expectedConfiguration |
 

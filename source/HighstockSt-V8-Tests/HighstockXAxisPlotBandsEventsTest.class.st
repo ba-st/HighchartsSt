@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsEventsTest >> testClick [
+HighstockXAxisPlotBandsEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockXAxisPlotBandsEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsEventsTest >> testMousemove [
+HighstockXAxisPlotBandsEventsTest >> testSetMousemove [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockXAxisPlotBandsEventsTest >> testMousemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsEventsTest >> testMouseout [
+HighstockXAxisPlotBandsEventsTest >> testSetMouseout [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockXAxisPlotBandsEventsTest >> testMouseout [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisPlotBandsEventsTest >> testMouseover [
+HighstockXAxisPlotBandsEventsTest >> testSetMouseover [
 
 	| component javascript expectedConfiguration |
 

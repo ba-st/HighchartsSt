@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesHeatmapMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesHeatmapMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testHeight [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesHeatmapMarkerStatesSelectTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testHeightPlus [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetHeightPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesHeatmapMarkerStatesSelectTest >> testHeightPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesHeatmapMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesHeatmapMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testWidth [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesHeatmapMarkerStatesSelectTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapMarkerStatesSelectTest >> testWidthPlus [
+HighchartsSeriesHeatmapMarkerStatesSelectTest >> testSetWidthPlus [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testAllAreas [
+HighstockSeriesZigzagTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesZigzag new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesZigzagTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +229,7 @@ HighstockSeriesZigzagTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testAllowPointSelect [
+HighstockSeriesZigzagTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +243,7 @@ HighstockSeriesZigzagTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testAnimationLimit [
+HighstockSeriesZigzagTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +257,7 @@ HighstockSeriesZigzagTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testBoostBlending [
+HighstockSeriesZigzagTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +271,7 @@ HighstockSeriesZigzagTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testBoostThreshold [
+HighstockSeriesZigzagTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +285,7 @@ HighstockSeriesZigzagTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testBorderColor [
+HighstockSeriesZigzagTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +299,7 @@ HighstockSeriesZigzagTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testBorderWidth [
+HighstockSeriesZigzagTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +313,7 @@ HighstockSeriesZigzagTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testClassName [
+HighstockSeriesZigzagTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +327,7 @@ HighstockSeriesZigzagTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testClip [
+HighstockSeriesZigzagTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +341,7 @@ HighstockSeriesZigzagTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testColor [
+HighstockSeriesZigzagTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +355,7 @@ HighstockSeriesZigzagTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testColorAxis [
+HighstockSeriesZigzagTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +369,7 @@ HighstockSeriesZigzagTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testColorIndex [
+HighstockSeriesZigzagTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +383,7 @@ HighstockSeriesZigzagTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testColorKey [
+HighstockSeriesZigzagTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +397,7 @@ HighstockSeriesZigzagTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCompare [
+HighstockSeriesZigzagTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +411,7 @@ HighstockSeriesZigzagTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCompareBase [
+HighstockSeriesZigzagTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighstockSeriesZigzagTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCompareStart [
+HighstockSeriesZigzagTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockSeriesZigzagTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCompareToMain [
+HighstockSeriesZigzagTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,7 @@ HighstockSeriesZigzagTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testConnectEnds [
+HighstockSeriesZigzagTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockSeriesZigzagTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testConnectNulls [
+HighstockSeriesZigzagTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,7 @@ HighstockSeriesZigzagTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCrisp [
+HighstockSeriesZigzagTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +495,7 @@ HighstockSeriesZigzagTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCropThreshold [
+HighstockSeriesZigzagTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +509,7 @@ HighstockSeriesZigzagTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCursor [
+HighstockSeriesZigzagTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +523,7 @@ HighstockSeriesZigzagTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testCustom [
+HighstockSeriesZigzagTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +537,7 @@ HighstockSeriesZigzagTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testDashStyle [
+HighstockSeriesZigzagTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +551,7 @@ HighstockSeriesZigzagTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testDescription [
+HighstockSeriesZigzagTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +565,7 @@ HighstockSeriesZigzagTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testEnableMouseTracking [
+HighstockSeriesZigzagTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +579,7 @@ HighstockSeriesZigzagTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testEvents [
+HighstockSeriesZigzagTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +593,7 @@ HighstockSeriesZigzagTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testFindNearestPointBy [
+HighstockSeriesZigzagTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +607,7 @@ HighstockSeriesZigzagTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testGapSize [
+HighstockSeriesZigzagTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +621,7 @@ HighstockSeriesZigzagTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testGapUnit [
+HighstockSeriesZigzagTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighstockSeriesZigzagTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testGetExtremesFromAll [
+HighstockSeriesZigzagTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +649,7 @@ HighstockSeriesZigzagTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testId [
+HighstockSeriesZigzagTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +663,7 @@ HighstockSeriesZigzagTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testIncludeInDataExport [
+HighstockSeriesZigzagTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +677,7 @@ HighstockSeriesZigzagTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testIndex [
+HighstockSeriesZigzagTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +691,7 @@ HighstockSeriesZigzagTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testJoinBy [
+HighstockSeriesZigzagTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +705,7 @@ HighstockSeriesZigzagTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testKeys [
+HighstockSeriesZigzagTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +719,7 @@ HighstockSeriesZigzagTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testLegendIndex [
+HighstockSeriesZigzagTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +733,7 @@ HighstockSeriesZigzagTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testLineWidth [
+HighstockSeriesZigzagTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +747,7 @@ HighstockSeriesZigzagTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testLinecap [
+HighstockSeriesZigzagTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +761,7 @@ HighstockSeriesZigzagTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testLinkedTo [
+HighstockSeriesZigzagTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +775,7 @@ HighstockSeriesZigzagTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testMapData [
+HighstockSeriesZigzagTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +789,7 @@ HighstockSeriesZigzagTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testName [
+HighstockSeriesZigzagTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +803,7 @@ HighstockSeriesZigzagTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testNavigatorOptions [
+HighstockSeriesZigzagTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +817,7 @@ HighstockSeriesZigzagTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testNegativeColor [
+HighstockSeriesZigzagTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +831,7 @@ HighstockSeriesZigzagTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testOpacity [
+HighstockSeriesZigzagTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighstockSeriesZigzagTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testPointDescriptionFormatter [
+HighstockSeriesZigzagTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +859,7 @@ HighstockSeriesZigzagTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testPointInterval [
+HighstockSeriesZigzagTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +873,7 @@ HighstockSeriesZigzagTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testPointIntervalUnit [
+HighstockSeriesZigzagTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +887,7 @@ HighstockSeriesZigzagTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testPointPlacement [
+HighstockSeriesZigzagTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +901,7 @@ HighstockSeriesZigzagTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testPointRange [
+HighstockSeriesZigzagTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +915,7 @@ HighstockSeriesZigzagTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testPointStart [
+HighstockSeriesZigzagTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +929,7 @@ HighstockSeriesZigzagTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testSelected [
+HighstockSeriesZigzagTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +943,7 @@ HighstockSeriesZigzagTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testShadow [
+HighstockSeriesZigzagTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +957,7 @@ HighstockSeriesZigzagTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testShowCheckbox [
+HighstockSeriesZigzagTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +971,7 @@ HighstockSeriesZigzagTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testShowInLegend [
+HighstockSeriesZigzagTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +985,7 @@ HighstockSeriesZigzagTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testShowInNavigator [
+HighstockSeriesZigzagTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +999,7 @@ HighstockSeriesZigzagTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testSkipKeyboardNavigation [
+HighstockSeriesZigzagTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +1013,7 @@ HighstockSeriesZigzagTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testSoftThreshold [
+HighstockSeriesZigzagTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1027,7 @@ HighstockSeriesZigzagTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testStack [
+HighstockSeriesZigzagTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1041,7 @@ HighstockSeriesZigzagTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testStacking [
+HighstockSeriesZigzagTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1055,7 @@ HighstockSeriesZigzagTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testStates [
+HighstockSeriesZigzagTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1069,7 @@ HighstockSeriesZigzagTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testStep [
+HighstockSeriesZigzagTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1083,7 @@ HighstockSeriesZigzagTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testStickyTracking [
+HighstockSeriesZigzagTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1097,7 @@ HighstockSeriesZigzagTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testThreshold [
+HighstockSeriesZigzagTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1111,7 @@ HighstockSeriesZigzagTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testTurboThreshold [
+HighstockSeriesZigzagTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1125,7 @@ HighstockSeriesZigzagTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testType [
+HighstockSeriesZigzagTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1139,7 @@ HighstockSeriesZigzagTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testVisible [
+HighstockSeriesZigzagTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1153,7 @@ HighstockSeriesZigzagTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testXAxis [
+HighstockSeriesZigzagTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1167,7 @@ HighstockSeriesZigzagTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testYAxis [
+HighstockSeriesZigzagTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1181,7 @@ HighstockSeriesZigzagTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testZIndex [
+HighstockSeriesZigzagTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1195,7 @@ HighstockSeriesZigzagTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagTest >> testZoneAxis [
+HighstockSeriesZigzagTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

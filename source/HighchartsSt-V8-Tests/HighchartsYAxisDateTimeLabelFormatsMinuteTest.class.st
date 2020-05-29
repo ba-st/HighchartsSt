@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisDateTimeLabelFormatsMinuteTest >> testMain [
+HighchartsYAxisDateTimeLabelFormatsMinuteTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsYAxisDateTimeLabelFormatsMinuteTest >> testMain [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisDateTimeLabelFormatsMinuteTest >> testRange [
+HighchartsYAxisDateTimeLabelFormatsMinuteTest >> testSetRange [
 
 	| component javascript expectedConfiguration |
 

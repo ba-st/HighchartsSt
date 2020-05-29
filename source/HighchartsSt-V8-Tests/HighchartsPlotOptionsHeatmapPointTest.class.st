@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapPointTest >> testEvents [
+HighchartsPlotOptionsHeatmapPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

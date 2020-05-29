@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDragMaxX [
+HighstockSeriesOhlcDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlcDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlcDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockSeriesOhlcDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDragMaxY [
+HighstockSeriesOhlcDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockSeriesOhlcDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDragMinX [
+HighstockSeriesOhlcDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockSeriesOhlcDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDragMinY [
+HighstockSeriesOhlcDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockSeriesOhlcDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDragPrecisionX [
+HighstockSeriesOhlcDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockSeriesOhlcDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDragPrecisionY [
+HighstockSeriesOhlcDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockSeriesOhlcDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDragSensitivity [
+HighstockSeriesOhlcDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockSeriesOhlcDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDraggableClose [
+HighstockSeriesOhlcDragDropTest >> testSetDraggableClose [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockSeriesOhlcDragDropTest >> testDraggableClose [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDraggableHigh [
+HighstockSeriesOhlcDragDropTest >> testSetDraggableHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockSeriesOhlcDragDropTest >> testDraggableHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDraggableLow [
+HighstockSeriesOhlcDragDropTest >> testSetDraggableLow [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockSeriesOhlcDragDropTest >> testDraggableLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDraggableOpen [
+HighstockSeriesOhlcDragDropTest >> testSetDraggableOpen [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockSeriesOhlcDragDropTest >> testDraggableOpen [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDraggableX [
+HighstockSeriesOhlcDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockSeriesOhlcDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testDraggableY [
+HighstockSeriesOhlcDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockSeriesOhlcDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testGroupBy [
+HighstockSeriesOhlcDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockSeriesOhlcDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcDragDropTest >> testLiveRedraw [
+HighstockSeriesOhlcDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

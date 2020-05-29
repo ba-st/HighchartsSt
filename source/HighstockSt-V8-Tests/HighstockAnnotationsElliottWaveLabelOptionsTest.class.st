@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testAlign [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsElliottWaveLabelOptions new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testAllowOverlap [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testBackgroundColor [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testBorderColor [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testBorderRadius [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testBorderWidth [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testClassName [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testCrop [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testDistance [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testFormat [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testFormatter [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testOverflow [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testPadding [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testShadow [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testShape [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testStyle [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testText [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testType [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testUseHTML [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testVerticalAlign [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testX [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +313,7 @@ HighstockAnnotationsElliottWaveLabelOptionsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveLabelOptionsTest >> testY [
+HighstockAnnotationsElliottWaveLabelOptionsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

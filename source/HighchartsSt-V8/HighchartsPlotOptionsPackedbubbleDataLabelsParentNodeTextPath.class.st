@@ -11,8 +11,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsPackedbubbleDataLabelsParentNodeTextPath >> enabled: aBoolean [
 
-	"Enable or disable textPath option for link´s or marker´s
-data labels.
+	"Enable or disable textPath option for link´s or marker´s data labels.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean

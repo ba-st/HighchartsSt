@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonDataLabelsTextPathTest >> testAttributes [
+HighchartsPlotOptionsPolygonDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPolygonDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonDataLabelsTextPathTest >> testEnabled [
+HighchartsPlotOptionsPolygonDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testAlignTicks [
+HighstockChartTest >> testGetPanning [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChart new.
+	component panning.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'panning' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockChartTest >> testGetResetZoomButton [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChart new.
+	component resetZoomButton.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'resetZoomButton' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockChartTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockChartTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testAnimation [
+HighstockChartTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockChartTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testBackgroundColor [
+HighstockChartTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockChartTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testBorderColor [
+HighstockChartTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockChartTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testBorderRadius [
+HighstockChartTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockChartTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testBorderWidth [
+HighstockChartTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockChartTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testClassName [
+HighstockChartTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockChartTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testColorCount [
+HighstockChartTest >> testSetColorCount [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockChartTest >> testColorCount [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testDisplayErrors [
+HighstockChartTest >> testSetDisplayErrors [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockChartTest >> testDisplayErrors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testEvents [
+HighstockChartTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockChartTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testHeight [
+HighstockChartTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockChartTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testIgnoreHiddenSeries [
+HighstockChartTest >> testSetIgnoreHiddenSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockChartTest >> testIgnoreHiddenSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testInverted [
+HighstockChartTest >> testSetInverted [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockChartTest >> testInverted [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testMargin [
+HighstockChartTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockChartTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testMarginBottom [
+HighstockChartTest >> testSetMarginBottom [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighstockChartTest >> testMarginBottom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testMarginLeft [
+HighstockChartTest >> testSetMarginLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighstockChartTest >> testMarginLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testMarginRight [
+HighstockChartTest >> testSetMarginRight [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +271,7 @@ HighstockChartTest >> testMarginRight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testMarginTop [
+HighstockChartTest >> testSetMarginTop [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +285,7 @@ HighstockChartTest >> testMarginTop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testNumberFormatter [
+HighstockChartTest >> testSetNumberFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +299,7 @@ HighstockChartTest >> testNumberFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testPinchType [
+HighstockChartTest >> testSetPinchType [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +313,7 @@ HighstockChartTest >> testPinchType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testPlotBackgroundColor [
+HighstockChartTest >> testSetPlotBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +327,7 @@ HighstockChartTest >> testPlotBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testPlotBackgroundImage [
+HighstockChartTest >> testSetPlotBackgroundImage [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +341,7 @@ HighstockChartTest >> testPlotBackgroundImage [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testPlotBorderColor [
+HighstockChartTest >> testSetPlotBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +355,7 @@ HighstockChartTest >> testPlotBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testPlotBorderWidth [
+HighstockChartTest >> testSetPlotBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +369,7 @@ HighstockChartTest >> testPlotBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testPlotShadow [
+HighstockChartTest >> testSetPlotShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +383,7 @@ HighstockChartTest >> testPlotShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testReflow [
+HighstockChartTest >> testSetReflow [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +397,7 @@ HighstockChartTest >> testReflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testRenderTo [
+HighstockChartTest >> testSetRenderTo [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +411,7 @@ HighstockChartTest >> testRenderTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testSelectionMarkerFill [
+HighstockChartTest >> testSetSelectionMarkerFill [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +425,7 @@ HighstockChartTest >> testSelectionMarkerFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testShadow [
+HighstockChartTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +439,7 @@ HighstockChartTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testSpacing [
+HighstockChartTest >> testSetSpacing [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +453,7 @@ HighstockChartTest >> testSpacing [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testSpacingBottom [
+HighstockChartTest >> testSetSpacingBottom [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +467,7 @@ HighstockChartTest >> testSpacingBottom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testSpacingLeft [
+HighstockChartTest >> testSetSpacingLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +481,7 @@ HighstockChartTest >> testSpacingLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testSpacingRight [
+HighstockChartTest >> testSetSpacingRight [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +495,7 @@ HighstockChartTest >> testSpacingRight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testSpacingTop [
+HighstockChartTest >> testSetSpacingTop [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +509,7 @@ HighstockChartTest >> testSpacingTop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testStyle [
+HighstockChartTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +523,7 @@ HighstockChartTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testStyledMode [
+HighstockChartTest >> testSetStyledMode [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +537,7 @@ HighstockChartTest >> testStyledMode [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testType [
+HighstockChartTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +551,7 @@ HighstockChartTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testWidth [
+HighstockChartTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +565,7 @@ HighstockChartTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testZoomKey [
+HighstockChartTest >> testSetZoomKey [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +579,7 @@ HighstockChartTest >> testZoomKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartTest >> testZoomType [
+HighstockChartTest >> testSetZoomType [
 
 	| component javascript expectedConfiguration |
 

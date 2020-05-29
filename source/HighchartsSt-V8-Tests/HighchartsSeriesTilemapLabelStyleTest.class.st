@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapLabelStyleTest >> testFontWeight [
+HighchartsSeriesTilemapLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

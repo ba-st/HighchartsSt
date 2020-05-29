@@ -5,7 +5,189 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testAllAreas [
+HighstockPlotOptionsErrorbarTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsErrorbar new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsErrorbarTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +201,7 @@ HighstockPlotOptionsErrorbarTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testAllowPointSelect [
+HighstockPlotOptionsErrorbarTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +215,7 @@ HighstockPlotOptionsErrorbarTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testAnimationLimit [
+HighstockPlotOptionsErrorbarTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +229,7 @@ HighstockPlotOptionsErrorbarTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testBoostBlending [
+HighstockPlotOptionsErrorbarTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +243,7 @@ HighstockPlotOptionsErrorbarTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testBoostThreshold [
+HighstockPlotOptionsErrorbarTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +257,7 @@ HighstockPlotOptionsErrorbarTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testClassName [
+HighstockPlotOptionsErrorbarTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +271,7 @@ HighstockPlotOptionsErrorbarTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testClip [
+HighstockPlotOptionsErrorbarTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +285,7 @@ HighstockPlotOptionsErrorbarTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testColorAxis [
+HighstockPlotOptionsErrorbarTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +299,7 @@ HighstockPlotOptionsErrorbarTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testColorByPoint [
+HighstockPlotOptionsErrorbarTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +313,7 @@ HighstockPlotOptionsErrorbarTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testColorIndex [
+HighstockPlotOptionsErrorbarTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +327,7 @@ HighstockPlotOptionsErrorbarTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testColorKey [
+HighstockPlotOptionsErrorbarTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +341,7 @@ HighstockPlotOptionsErrorbarTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testColors [
+HighstockPlotOptionsErrorbarTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +355,7 @@ HighstockPlotOptionsErrorbarTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testCompare [
+HighstockPlotOptionsErrorbarTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +369,7 @@ HighstockPlotOptionsErrorbarTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testCompareBase [
+HighstockPlotOptionsErrorbarTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +383,7 @@ HighstockPlotOptionsErrorbarTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testCompareStart [
+HighstockPlotOptionsErrorbarTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +397,7 @@ HighstockPlotOptionsErrorbarTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testCrisp [
+HighstockPlotOptionsErrorbarTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +411,7 @@ HighstockPlotOptionsErrorbarTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testCropThreshold [
+HighstockPlotOptionsErrorbarTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +425,7 @@ HighstockPlotOptionsErrorbarTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testCursor [
+HighstockPlotOptionsErrorbarTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighstockPlotOptionsErrorbarTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testCustom [
+HighstockPlotOptionsErrorbarTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighstockPlotOptionsErrorbarTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testDashStyle [
+HighstockPlotOptionsErrorbarTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighstockPlotOptionsErrorbarTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testDescription [
+HighstockPlotOptionsErrorbarTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighstockPlotOptionsErrorbarTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testEnableMouseTracking [
+HighstockPlotOptionsErrorbarTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighstockPlotOptionsErrorbarTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testEvents [
+HighstockPlotOptionsErrorbarTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighstockPlotOptionsErrorbarTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testFindNearestPointBy [
+HighstockPlotOptionsErrorbarTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighstockPlotOptionsErrorbarTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testGetExtremesFromAll [
+HighstockPlotOptionsErrorbarTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighstockPlotOptionsErrorbarTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testGroupPadding [
+HighstockPlotOptionsErrorbarTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighstockPlotOptionsErrorbarTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testGrouping [
+HighstockPlotOptionsErrorbarTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighstockPlotOptionsErrorbarTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testIncludeInDataExport [
+HighstockPlotOptionsErrorbarTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighstockPlotOptionsErrorbarTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testJoinBy [
+HighstockPlotOptionsErrorbarTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighstockPlotOptionsErrorbarTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testKeys [
+HighstockPlotOptionsErrorbarTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighstockPlotOptionsErrorbarTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testMaxPointWidth [
+HighstockPlotOptionsErrorbarTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighstockPlotOptionsErrorbarTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testMinPointLength [
+HighstockPlotOptionsErrorbarTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighstockPlotOptionsErrorbarTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testNavigatorOptions [
+HighstockPlotOptionsErrorbarTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighstockPlotOptionsErrorbarTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testNegativeColor [
+HighstockPlotOptionsErrorbarTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighstockPlotOptionsErrorbarTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testOpacity [
+HighstockPlotOptionsErrorbarTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighstockPlotOptionsErrorbarTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsErrorbarTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighstockPlotOptionsErrorbarTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointInterval [
+HighstockPlotOptionsErrorbarTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighstockPlotOptionsErrorbarTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointIntervalUnit [
+HighstockPlotOptionsErrorbarTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighstockPlotOptionsErrorbarTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointPadding [
+HighstockPlotOptionsErrorbarTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +733,7 @@ HighstockPlotOptionsErrorbarTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointPlacement [
+HighstockPlotOptionsErrorbarTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +747,7 @@ HighstockPlotOptionsErrorbarTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointRange [
+HighstockPlotOptionsErrorbarTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +761,7 @@ HighstockPlotOptionsErrorbarTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointStart [
+HighstockPlotOptionsErrorbarTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +775,7 @@ HighstockPlotOptionsErrorbarTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testPointWidth [
+HighstockPlotOptionsErrorbarTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +789,7 @@ HighstockPlotOptionsErrorbarTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testSelected [
+HighstockPlotOptionsErrorbarTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +803,7 @@ HighstockPlotOptionsErrorbarTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testShadow [
+HighstockPlotOptionsErrorbarTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +817,7 @@ HighstockPlotOptionsErrorbarTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testShowCheckbox [
+HighstockPlotOptionsErrorbarTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +831,7 @@ HighstockPlotOptionsErrorbarTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testShowInLegend [
+HighstockPlotOptionsErrorbarTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +845,7 @@ HighstockPlotOptionsErrorbarTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testShowInNavigator [
+HighstockPlotOptionsErrorbarTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +859,7 @@ HighstockPlotOptionsErrorbarTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsErrorbarTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +873,7 @@ HighstockPlotOptionsErrorbarTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testSoftThreshold [
+HighstockPlotOptionsErrorbarTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +887,7 @@ HighstockPlotOptionsErrorbarTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testStacking [
+HighstockPlotOptionsErrorbarTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +901,7 @@ HighstockPlotOptionsErrorbarTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testStickyTracking [
+HighstockPlotOptionsErrorbarTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +915,7 @@ HighstockPlotOptionsErrorbarTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testTurboThreshold [
+HighstockPlotOptionsErrorbarTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +929,7 @@ HighstockPlotOptionsErrorbarTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testVisible [
+HighstockPlotOptionsErrorbarTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +943,7 @@ HighstockPlotOptionsErrorbarTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testZIndex [
+HighstockPlotOptionsErrorbarTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +957,7 @@ HighstockPlotOptionsErrorbarTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testZoneAxis [
+HighstockPlotOptionsErrorbarTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

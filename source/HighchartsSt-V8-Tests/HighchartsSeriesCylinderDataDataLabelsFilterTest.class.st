@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataDataLabelsFilterTest >> testOperator [
+HighchartsSeriesCylinderDataDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesCylinderDataDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataDataLabelsFilterTest >> testProperty [
+HighchartsSeriesCylinderDataDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesCylinderDataDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderDataDataLabelsFilterTest >> testValue [
+HighchartsSeriesCylinderDataDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

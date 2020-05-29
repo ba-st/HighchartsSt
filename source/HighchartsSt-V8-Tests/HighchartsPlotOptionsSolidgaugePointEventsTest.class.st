@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testClick [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testDrag [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testDragStart [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testDrop [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testMouseOut [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testMouseOver [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testRemove [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testSelect [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testUnselect [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsSolidgaugePointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugePointEventsTest >> testUpdate [
+HighchartsPlotOptionsSolidgaugePointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

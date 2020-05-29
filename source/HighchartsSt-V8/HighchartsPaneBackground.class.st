@@ -46,8 +46,7 @@ HighchartsPaneBackground >> className: aString [
 { #category : #accessing }
 HighchartsPaneBackground >> innerRadius: aNumberOrstring [
 
-	"The inner radius of the pane background. Can be either numeric
-(pixels) or a percentage string.
+	"The inner radius of the pane background. Can be either numeric (pixels) or a percentage string.
 Defaults to 0."
 
 	configurationOptions at: 'innerRadius' put: aNumberOrstring
@@ -56,8 +55,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsPaneBackground >> outerRadius: aNumberOrstring [
 
-	"The outer radius of the circular pane background. Can be either
-numeric (pixels) or a percentage string.
+	"The outer radius of the circular pane background. Can be either numeric (pixels) or a percentage string.
 Defaults to 105%."
 
 	configurationOptions at: 'outerRadius' put: aNumberOrstring
@@ -66,9 +64,7 @@ Defaults to 105%."
 { #category : #accessing }
 HighchartsPaneBackground >> shape: aHighchartsPaneBackgroundShapeValue [
 
-	"The shape of the pane background. When solid, the background
-is circular. When arc, the background extends only from the min
-to the max of the value axis.
+	"The shape of the pane background. When solid, the background is circular. When arc, the background extends only from the min to the max of the value axis.
 Defaults to circle."
 
 	configurationOptions at: 'shape' put: aHighchartsPaneBackgroundShapeValue

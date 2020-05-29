@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testAlign [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineTypeOptionsLabel new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testAllowOverlap [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBackgroundColor [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBorderColor [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBorderRadius [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBorderWidth [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testClassName [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testCrop [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testDistance [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testFormat [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testFormatter [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testOffset [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testOverflow [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testPadding [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testShadow [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testShape [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testStyle [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testText [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testUseHTML [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testVerticalAlign [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testX [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +313,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testY [
+HighstockAnnotationsVerticalLineTypeOptionsLabelTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

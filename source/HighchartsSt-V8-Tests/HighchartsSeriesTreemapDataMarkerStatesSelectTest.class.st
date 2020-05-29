@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testHeight [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testHeightPlus [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetHeightPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testHeightPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testWidth [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testWidthPlus [
+HighchartsSeriesTreemapDataMarkerStatesSelectTest >> testSetWidthPlus [
 
 	| component javascript expectedConfiguration |
 

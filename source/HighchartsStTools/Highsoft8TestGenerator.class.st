@@ -158,6 +158,18 @@ Highsoft8TestGenerator >> isConsideredGetter: aSelector [
 ]
 
 { #category : #'private - testing' }
+Highsoft8TestGenerator >> isConsideredSeriesAccessing: aSelector of: aModelClass [
+
+	^ aModelClass name = #HighchartsSeries or: [ aModelClass name = #HighstockSeries ]
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isConsideredSeriesGetter: aSelector of: aModelClass [
+
+	^ aSelector = #series and: [ aModelClass name = #Highchart or: [ aModelClass name = #Highstock ] ]
+]
+
+{ #category : #'private - testing' }
 Highsoft8TestGenerator >> isConsideredSetter: selector [
 
 	^ ( selector indexOf: $: ) = selector size
@@ -166,20 +178,32 @@ Highsoft8TestGenerator >> isConsideredSetter: selector [
 { #category : #'private - testing' }
 Highsoft8TestGenerator >> isForTestingAddSeriesOf: aChange [
 
-	^ aChange selector = 'testAddSeriesOf'
+	^ aChange selector = 'testSetAddSeriesOf'
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isForTestingAxisAccessing: aChange [
+
+	^ ( aChange selector beginsWith: 'testGet' ) and: [ aChange selector endsWith: 'Axis' ]
 ]
 
 { #category : #'private - testing' }
 Highsoft8TestGenerator >> isForTestingChartId: aChange [
 
 	^ ( aChange changeClassName = #HighchartTest or: [ aChange changeClassName = #HighstockTest ] )
-		and: [ aChange selector = 'testId' ]
+		and: [ aChange selector = 'testSetId' ]
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isForTestingInitialize: aChange [
+
+	^ aChange selector = 'testGetInitialize'
 ]
 
 { #category : #'private - testing' }
 Highsoft8TestGenerator >> isForTestingJavascriptContent: aChange [
 
-	^ aChange selector = 'testJavascriptContentOn'
+	^ aChange selector = 'testSetJavascriptContentOn'
 ]
 
 { #category : #'private - processing' }
@@ -205,7 +229,12 @@ Highsoft8TestGenerator >> removeUnwantedChanges [
 	unwantedChanges := methodChanges
 		select: [ :change | 
 			( self isForTestingChartId: change )
-				or: [ ( self isForTestingJavascriptContent: change ) or: [ self isForTestingAddSeriesOf: change ] ]
+				or: [ ( self isForTestingJavascriptContent: change )
+						or: [ ( self isForTestingAddSeriesOf: change )
+								or:
+									[ ( self isForTestingAxisAccessing: change ) or: [ self isForTestingInitialize: change ] ]
+							]
+					]
 			].
 
 	methodChanges removeAll: unwantedChanges
@@ -242,7 +271,7 @@ Highsoft8TestGenerator >> sourceCodeToTest: aSelector of: aModelClass appending:
 ]
 
 { #category : #'private - accessing' }
-Highsoft8TestGenerator >> sourceCodeToTestGetter: aSelector of: aModelClass appending: anExtraContent [
+Highsoft8TestGenerator >> sourceCodeToTestDefaultGetter: aSelector of: aModelClass appending: anExtraContent [
 
 	^ 'testGet<1s>
 
@@ -253,6 +282,62 @@ Highsoft8TestGenerator >> sourceCodeToTestGetter: aSelector of: aModelClass appe
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new<4s>
 		at: ''<3s>'' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript'
+		expandMacrosWithArguments:
+			( OrderedCollection new
+				add: aSelector capitalized;
+				add: aModelClass greaseString;
+				add: aSelector;
+				add: anExtraContent;
+				yourself )
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestGetter: aSelector of: aModelClass appending: anExtraContent [
+
+	( self isConsideredSeriesAccessing: aSelector of: aModelClass )
+		ifTrue: [ ^ self sourceCodeToTestSeriesAccessing: aSelector of: aModelClass appending: anExtraContent ].
+	( self isConsideredSeriesGetter: aSelector of: aModelClass )
+		ifTrue: [ ^ self sourceCodeToTestSeriesGetter: aSelector of: aModelClass appending: anExtraContent ].
+	^ self sourceCodeToTestDefaultGetter: aSelector of: aModelClass appending: anExtraContent
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestSeriesAccessing: aSelector of: aModelClass appending: anExtraContent [
+
+	^ 'testGet<1s>
+
+	| component javascript expectedConfiguration |
+
+	component := <2s> new.
+	component <3s>.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new<4s>
+		at: ''type'' put: ''<3s>'';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript'
+		expandMacrosWithArguments:
+			( OrderedCollection new
+				add: aSelector capitalized;
+				add: aModelClass greaseString;
+				add: aSelector;
+				add: anExtraContent;
+				yourself )
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestSeriesGetter: aSelector of: aModelClass appending: anExtraContent [
+
+	^ 'testGet<1s>
+
+	| component javascript expectedConfiguration |
+
+	component := <2s> new.
+	component <3s>.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new<4s>
+		at: ''<3s>'' put: #();
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript'
 		expandMacrosWithArguments:

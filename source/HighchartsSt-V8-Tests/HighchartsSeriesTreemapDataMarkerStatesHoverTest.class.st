@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testEnabled [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapDataMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testFillColor [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testHeight [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testHeightPlus [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetHeightPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testHeightPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testLineColor [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testLineWidth [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testLineWidthPlus [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testWidth [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testWidthPlus [
+HighchartsSeriesTreemapDataMarkerStatesHoverTest >> testSetWidthPlus [
 
 	| component javascript expectedConfiguration |
 

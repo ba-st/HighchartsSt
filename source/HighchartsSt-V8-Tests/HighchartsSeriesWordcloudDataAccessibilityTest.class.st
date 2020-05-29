@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudDataAccessibilityTest >> testDescription [
+HighchartsSeriesWordcloudDataAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

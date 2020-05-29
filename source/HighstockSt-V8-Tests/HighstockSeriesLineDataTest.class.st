@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testColor [
+HighstockSeriesLineDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLineData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLineDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLineData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLineDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLineData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLineDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLineData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLineDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighstockSeriesLineDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testCustom [
+HighstockSeriesLineDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighstockSeriesLineDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testDescription [
+HighstockSeriesLineDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighstockSeriesLineDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testEvents [
+HighstockSeriesLineDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighstockSeriesLineDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testId [
+HighstockSeriesLineDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighstockSeriesLineDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testLabelrank [
+HighstockSeriesLineDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighstockSeriesLineDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testName [
+HighstockSeriesLineDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighstockSeriesLineDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testSelected [
+HighstockSeriesLineDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighstockSeriesLineDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testX [
+HighstockSeriesLineDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighstockSeriesLineDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLineDataTest >> testY [
+HighstockSeriesLineDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

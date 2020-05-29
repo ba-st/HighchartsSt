@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsDumbbellLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsScatterLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

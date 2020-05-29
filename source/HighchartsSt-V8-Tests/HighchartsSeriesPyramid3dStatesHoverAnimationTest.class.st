@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dStatesHoverAnimationTest >> testDuration [
+HighchartsSeriesPyramid3dStatesHoverAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

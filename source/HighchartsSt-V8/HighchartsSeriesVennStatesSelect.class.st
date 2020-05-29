@@ -48,8 +48,7 @@ Defaults to #cccccc."
 { #category : #accessing }
 HighchartsSeriesVennStatesSelect >> enabled: aBoolean [
 
-	"Enable separate styles for the hovered series to visualize
-that the user hovers either the series itself or the legend.
+	"Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean
@@ -58,9 +57,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesVennStatesSelect >> lineWidth: aNumber [
 
-	"Pixel width of the graph line. By default this property is
-undefined, and the lineWidthPlus property dictates how much
-to increase the linewidth from normal state.
+	"Pixel width of the graph line. By default this property is undefined, and the lineWidthPlus property dictates how much to increase the linewidth from normal state.
 "
 
 	configurationOptions at: 'lineWidth' put: aNumber
@@ -78,10 +75,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsSeriesVennStatesSelect >> marker [
 
-	"In Highcharts 1.0, the appearance of all markers belonging
-to the hovered series. For settings on the hover state of the
-individual point, see
-marker.states.hover.
+	"In Highcharts 1.0, the appearance of all markers belonging to the hovered series. For settings on the hover state of the individual point, see marker.states.hover.
 "
 	^ configurationOptions at: 'marker' ifAbsentPut: [ HighchartsSeriesVennStatesSelectMarker new ]
 ]

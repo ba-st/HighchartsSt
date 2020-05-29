@@ -12,8 +12,7 @@ Class {
 { #category : #accessing }
 HighstockCaption >> align: aHighchartsAlignValue [
 
-	"The horizontal alignment of the caption. Can be one of &quot;left&quot;,
- &quot;center&quot; and &quot;right&quot;.
+	"The horizontal alignment of the caption. Can be one of &quot;left&quot;,  &quot;center&quot; and &quot;right&quot;.
 Defaults to left."
 
 	configurationOptions at: 'align' put: aHighchartsAlignValue
@@ -22,8 +21,7 @@ Defaults to left."
 { #category : #accessing }
 HighstockCaption >> floating: aBoolean [
 
-	"When the caption is floating, the plot area will not move to make
-space for it.
+	"When the caption is floating, the plot area will not move to make space for it.
 Defaults to false."
 
 	configurationOptions at: 'floating' put: aBoolean
@@ -41,9 +39,7 @@ Defaults to 15."
 { #category : #accessing }
 HighstockCaption >> style: aHighchartsCSSObject [
 
-	"CSS styles for the caption.
-In styled mode, the caption style is given in the
-.highcharts-caption class.
+	"CSS styles for the caption. In styled mode, the caption style is given in the .highcharts-caption class.
 Defaults to {'color': '#666666'}."
 
 	configurationOptions at: 'style' put: aHighchartsCSSObject
@@ -61,9 +57,7 @@ Defaults to ."
 { #category : #accessing }
 HighstockCaption >> useHTML: aBoolean [
 
-	"Whether to
-use HTML
-to render the text.
+	"Whether to use HTML to render the text.
 Defaults to false."
 
 	configurationOptions at: 'useHTML' put: aBoolean
@@ -72,9 +66,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockCaption >> verticalAlign: aHighchartsVerticalAlignValue [
 
-	"The vertical alignment of the caption. Can be one of &quot;top&quot;,
-&quot;middle&quot; and &quot;bottom&quot;. When middle, the caption behaves as
-floating.
+	"The vertical alignment of the caption. Can be one of &quot;top&quot;, &quot;middle&quot; and &quot;bottom&quot;. When middle, the caption behaves as floating.
 Defaults to bottom."
 
 	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
@@ -83,8 +75,7 @@ Defaults to bottom."
 { #category : #accessing }
 HighstockCaption >> x: aNumber [
 
-	"The x position of the caption relative to the alignment within
-chart.spacingLeft and chart.spacingRight.
+	"The x position of the caption relative to the alignment within chart.spacingLeft and chart.spacingRight.
 Defaults to 0."
 
 	configurationOptions at: 'x' put: aNumber
@@ -93,8 +84,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockCaption >> y: aNumber [
 
-	"The y position of the caption relative to the alignment within
-chart.spacingTop and chart.spacingBottom.
+	"The y position of the caption relative to the alignment within chart.spacingTop and chart.spacingBottom.
 "
 
 	configurationOptions at: 'y' put: aNumber

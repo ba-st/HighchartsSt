@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagAnimationTest >> testDuration [
+HighstockSeriesZigzagAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

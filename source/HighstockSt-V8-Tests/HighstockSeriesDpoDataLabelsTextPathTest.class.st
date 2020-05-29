@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesDpoDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesDpoDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesDpoDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDpoDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesDpoDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

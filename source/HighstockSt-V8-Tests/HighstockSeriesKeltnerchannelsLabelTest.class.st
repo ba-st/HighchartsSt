@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testBoxesToAvoid [
+HighstockSeriesKeltnerchannelsLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannelsLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testConnectorAllowed [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testEnabled [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testFormat [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testFormatter [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testMaxFontSize [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testMinFontSize [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesKeltnerchannelsLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLabelTest >> testOnArea [
+HighstockSeriesKeltnerchannelsLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testAfterAnimate [
+HighstockSeriesFlagsEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesFlagsEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testCheckboxClick [
+HighstockSeriesFlagsEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesFlagsEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testClick [
+HighstockSeriesFlagsEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesFlagsEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testHide [
+HighstockSeriesFlagsEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesFlagsEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testLegendItemClick [
+HighstockSeriesFlagsEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesFlagsEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testMouseOut [
+HighstockSeriesFlagsEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesFlagsEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testMouseOver [
+HighstockSeriesFlagsEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesFlagsEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsEventsTest >> testShow [
+HighstockSeriesFlagsEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

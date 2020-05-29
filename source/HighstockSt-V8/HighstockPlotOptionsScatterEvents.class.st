@@ -12,8 +12,7 @@ Class {
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> afterAnimate: aHighchartsSeriesAfterAnimateCallbackFunction [
 
-	"Fires after the series has finished its initial animation, or in case
-animation is disabled, immediately as the series is displayed.
+	"Fires after the series has finished its initial animation, or in case animation is disabled, immediately as the series is displayed.
 "
 
 	configurationOptions at: 'afterAnimate' put: aHighchartsSeriesAfterAnimateCallbackFunction
@@ -22,11 +21,7 @@ animation is disabled, immediately as the series is displayed.
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> checkboxClick: aHighchartsSeriesCheckboxClickCallbackFunction [
 
-	"Fires when the checkbox next to the series´ name in the legend is
-clicked. One parameter, event, is passed to the function. The state
-of the checkbox is found by event.checked. The checked item is
-found by event.item. Return false to prevent the default action
-which is to toggle the select state of the series.
+	"Fires when the checkbox next to the series´ name in the legend is clicked. One parameter, event, is passed to the function. The state of the checkbox is found by event.checked. The checked item is found by event.item. Return false to prevent the default action which is to toggle the select state of the series.
 "
 
 	configurationOptions at: 'checkboxClick' put: aHighchartsSeriesCheckboxClickCallbackFunction
@@ -35,9 +30,7 @@ which is to toggle the select state of the series.
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> click: aHighchartsSeriesClickCallbackFunction [
 
-	"Fires when the series is clicked. One parameter, event, is passed
-to the function, containing common event information. Additionally,
-event.point holds a pointer to the nearest point on the graph.
+	"Fires when the series is clicked. One parameter, event, is passed to the function, containing common event information. Additionally, event.point holds a pointer to the nearest point on the graph.
 "
 
 	configurationOptions at: 'click' put: aHighchartsSeriesClickCallbackFunction
@@ -46,8 +39,7 @@ event.point holds a pointer to the nearest point on the graph.
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> hide: aHighchartsSeriesHideCallbackFunction [
 
-	"Fires when the series is hidden after chart generation time, either
-by clicking the legend item or by calling .hide().
+	"Fires when the series is hidden after chart generation time, either by clicking the legend item or by calling .hide().
 "
 
 	configurationOptions at: 'hide' put: aHighchartsSeriesHideCallbackFunction
@@ -56,10 +48,7 @@ by clicking the legend item or by calling .hide().
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> legendItemClick: aHighchartsSeriesLegendItemClickCallbackFunction [
 
-	"Fires when the legend item belonging to the series is clicked. One
-parameter, event, is passed to the function. The default action
-is to toggle the visibility of the series. This can be prevented
-by returning false or calling event.preventDefault().
+	"Fires when the legend item belonging to the series is clicked. One parameter, event, is passed to the function. The default action is to toggle the visibility of the series. This can be prevented by returning false or calling event.preventDefault().
 "
 
 	configurationOptions at: 'legendItemClick' put: aHighchartsSeriesLegendItemClickCallbackFunction
@@ -68,11 +57,7 @@ by returning false or calling event.preventDefault().
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> mouseOut: aHighchartsSeriesMouseOutCallbackFunction [
 
-	"Fires when the mouse leaves the graph. One parameter, event, is
-passed to the function, containing common event information. If the
-stickyTracking option is true, mouseOut
-doesn´t happen before the mouse enters another graph or leaves the
-plot area.
+	"Fires when the mouse leaves the graph. One parameter, event, is passed to the function, containing common event information. If the stickyTracking option is true, mouseOut doesn´t happen before the mouse enters another graph or leaves the plot area.
 "
 
 	configurationOptions at: 'mouseOut' put: aHighchartsSeriesMouseOutCallbackFunction
@@ -81,8 +66,7 @@ plot area.
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> mouseOver: aHighchartsSeriesMouseOverCallbackFunction [
 
-	"Fires when the mouse enters the graph. One parameter, event, is
-passed to the function, containing common event information.
+	"Fires when the mouse enters the graph. One parameter, event, is passed to the function, containing common event information.
 "
 
 	configurationOptions at: 'mouseOver' put: aHighchartsSeriesMouseOverCallbackFunction
@@ -91,8 +75,7 @@ passed to the function, containing common event information.
 { #category : #accessing }
 HighstockPlotOptionsScatterEvents >> show: aHighchartsSeriesShowCallbackFunction [
 
-	"Fires when the series is shown after chart generation time, either
-by clicking the legend item or by calling .show().
+	"Fires when the series is shown after chart generation time, either by clicking the legend item or by calling .show().
 "
 
 	configurationOptions at: 'show' put: aHighchartsSeriesShowCallbackFunction

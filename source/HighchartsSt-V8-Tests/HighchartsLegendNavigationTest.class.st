@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLegendNavigationTest >> testActiveColor [
+HighchartsLegendNavigationTest >> testSetActiveColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLegendNavigationTest >> testActiveColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendNavigationTest >> testAnimation [
+HighchartsLegendNavigationTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLegendNavigationTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendNavigationTest >> testArrowSize [
+HighchartsLegendNavigationTest >> testSetArrowSize [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLegendNavigationTest >> testArrowSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendNavigationTest >> testEnabled [
+HighchartsLegendNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLegendNavigationTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendNavigationTest >> testInactiveColor [
+HighchartsLegendNavigationTest >> testSetInactiveColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsLegendNavigationTest >> testInactiveColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendNavigationTest >> testStyle [
+HighchartsLegendNavigationTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

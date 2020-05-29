@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testClassName [
+HighchartsSeriesPackedbubbleDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesPackedbubbleDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testColor [
+HighchartsSeriesPackedbubbleDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesPackedbubbleDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testColorIndex [
+HighchartsSeriesPackedbubbleDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesPackedbubbleDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testCustom [
+HighchartsSeriesPackedbubbleDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesPackedbubbleDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testDescription [
+HighchartsSeriesPackedbubbleDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesPackedbubbleDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testDrilldown [
+HighchartsSeriesPackedbubbleDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesPackedbubbleDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testEvents [
+HighchartsSeriesPackedbubbleDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesPackedbubbleDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testId [
+HighchartsSeriesPackedbubbleDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesPackedbubbleDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testLabelrank [
+HighchartsSeriesPackedbubbleDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesPackedbubbleDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testName [
+HighchartsSeriesPackedbubbleDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesPackedbubbleDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataTest >> testSelected [
+HighchartsSeriesPackedbubbleDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 

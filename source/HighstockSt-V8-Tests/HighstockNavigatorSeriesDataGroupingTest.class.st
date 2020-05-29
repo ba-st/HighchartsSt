@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testApproximation [
+HighstockNavigatorSeriesDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigatorSeriesDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testDateTimeLabelFormats [
+HighstockNavigatorSeriesDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigatorSeriesDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testEnabled [
+HighstockNavigatorSeriesDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigatorSeriesDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testForced [
+HighstockNavigatorSeriesDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockNavigatorSeriesDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testGroupAll [
+HighstockNavigatorSeriesDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockNavigatorSeriesDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testGroupPixelWidth [
+HighstockNavigatorSeriesDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockNavigatorSeriesDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testSmoothed [
+HighstockNavigatorSeriesDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockNavigatorSeriesDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorSeriesDataGroupingTest >> testUnits [
+HighstockNavigatorSeriesDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

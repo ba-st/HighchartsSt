@@ -105,9 +105,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockColorAxisScrollbar >> height: aNumber [
 
-	"The height of the scrollbar. The height also applies to the width
-of the scroll arrows so that they are always squares. Defaults to
-20 for touch devices and 14 for mouse devices.
+	"The height of the scrollbar. The height also applies to the width of the scroll arrows so that they are always squares. Defaults to 20 for touch devices and 14 for mouse devices.
 Defaults to 20/14."
 
 	configurationOptions at: 'height' put: aNumber
@@ -116,9 +114,7 @@ Defaults to 20/14."
 { #category : #accessing }
 HighstockColorAxisScrollbar >> liveRedraw: aBoolean [
 
-	"Whether to redraw the main chart as the scrollbar or the navigator
-zoomed window is moved. Defaults to true for modern browsers and
-false for legacy IE browsers as well as mobile devices.
+	"Whether to redraw the main chart as the scrollbar or the navigator zoomed window is moved. Defaults to true for modern browsers and false for legacy IE browsers as well as mobile devices.
 Defaults to undefined."
 
 	configurationOptions at: 'liveRedraw' put: aBoolean
@@ -127,8 +123,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockColorAxisScrollbar >> margin: aNumber [
 
-	"The margin between the scrollbar and its axis when the scrollbar is
-applied directly to an axis.
+	"The margin between the scrollbar and its axis when the scrollbar is applied directly to an axis.
 Defaults to 10."
 
 	configurationOptions at: 'margin' put: aNumber
@@ -155,8 +150,7 @@ Defaults to #333333."
 { #category : #accessing }
 HighstockColorAxisScrollbar >> showFull: aBoolean [
 
-	"Whether to show or hide the scrollbar when the scrolled content is
-zoomed out to it full extent.
+	"Whether to show or hide the scrollbar when the scrolled content is zoomed out to it full extent.
 Defaults to true."
 
 	configurationOptions at: 'showFull' put: aBoolean

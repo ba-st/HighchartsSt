@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testAfterAnimate [
+HighchartsSeriesWordcloudEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testCheckboxClick [
+HighchartsSeriesWordcloudEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWordcloudEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testClick [
+HighchartsSeriesWordcloudEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWordcloudEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testHide [
+HighchartsSeriesWordcloudEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesWordcloudEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testLegendItemClick [
+HighchartsSeriesWordcloudEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesWordcloudEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testMouseOut [
+HighchartsSeriesWordcloudEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesWordcloudEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testMouseOver [
+HighchartsSeriesWordcloudEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesWordcloudEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudEventsTest >> testShow [
+HighchartsSeriesWordcloudEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

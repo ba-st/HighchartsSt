@@ -112,10 +112,7 @@ Defaults to null."
 { #category : #accessing }
 HighstockNavigationButtonOptions >> theme [
 
-	"A configuration object for the button theme. The object accepts
-SVG properties like stroke-width, stroke and fill.
-Tri-state button styles are supported by the states.hover and
-states.select objects.
+	"A configuration object for the button theme. The object accepts SVG properties like stroke-width, stroke and fill. Tri-state button styles are supported by the states.hover and states.select objects.
 "
 	^ configurationOptions at: 'theme' ifAbsentPut: [ HighstockNavigationButtonOptionsTheme new ]
 ]
@@ -123,8 +120,7 @@ states.select objects.
 { #category : #accessing }
 HighstockNavigationButtonOptions >> verticalAlign: aHighchartsVerticalAlignValue [
 
-	"The vertical alignment of the buttons. Can be one of &quot;top&quot;,
-&quot;middle&quot; or &quot;bottom&quot;.
+	"The vertical alignment of the buttons. Can be one of &quot;top&quot;, &quot;middle&quot; or &quot;bottom&quot;.
 Defaults to top."
 
 	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
@@ -142,8 +138,7 @@ Defaults to 24."
 { #category : #accessing }
 HighstockNavigationButtonOptions >> y: aNumber [
 
-	"The vertical offset of the button´s position relative to its
-verticalAlign.
+	"The vertical offset of the button´s position relative to its verticalAlign.
 Defaults to 0."
 
 	configurationOptions at: 'y' put: aNumber

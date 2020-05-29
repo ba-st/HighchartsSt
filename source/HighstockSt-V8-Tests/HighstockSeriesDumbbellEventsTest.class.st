@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testAfterAnimate [
+HighstockSeriesDumbbellEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesDumbbellEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testCheckboxClick [
+HighstockSeriesDumbbellEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesDumbbellEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testClick [
+HighstockSeriesDumbbellEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesDumbbellEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testHide [
+HighstockSeriesDumbbellEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesDumbbellEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testLegendItemClick [
+HighstockSeriesDumbbellEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesDumbbellEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testMouseOut [
+HighstockSeriesDumbbellEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesDumbbellEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testMouseOver [
+HighstockSeriesDumbbellEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesDumbbellEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellEventsTest >> testShow [
+HighstockSeriesDumbbellEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

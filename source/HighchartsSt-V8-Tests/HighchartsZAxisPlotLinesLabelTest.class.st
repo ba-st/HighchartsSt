@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testAlign [
+HighchartsZAxisPlotLinesLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsZAxisPlotLinesLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testFormatter [
+HighchartsZAxisPlotLinesLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsZAxisPlotLinesLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testRotation [
+HighchartsZAxisPlotLinesLabelTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsZAxisPlotLinesLabelTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testStyle [
+HighchartsZAxisPlotLinesLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsZAxisPlotLinesLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testText [
+HighchartsZAxisPlotLinesLabelTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsZAxisPlotLinesLabelTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testTextAlign [
+HighchartsZAxisPlotLinesLabelTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsZAxisPlotLinesLabelTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testUseHTML [
+HighchartsZAxisPlotLinesLabelTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsZAxisPlotLinesLabelTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testVerticalAlign [
+HighchartsZAxisPlotLinesLabelTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsZAxisPlotLinesLabelTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testX [
+HighchartsZAxisPlotLinesLabelTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsZAxisPlotLinesLabelTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisPlotLinesLabelTest >> testY [
+HighchartsZAxisPlotLinesLabelTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

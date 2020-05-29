@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsParamsTest >> testAlgorithm [
+HighstockSeriesPivotpointsParamsTest >> testSetAlgorithm [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPivotpointsParamsTest >> testAlgorithm [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsParamsTest >> testPeriod [
+HighstockSeriesPivotpointsParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

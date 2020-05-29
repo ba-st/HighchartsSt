@@ -5,7 +5,245 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testAllowPointSelect [
+HighstockSeriesAbandsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetBottomLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component bottomLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bottomLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetTopLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component topLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'topLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAbands new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAbandsTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +257,7 @@ HighstockSeriesAbandsTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testAnimationLimit [
+HighstockSeriesAbandsTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +271,7 @@ HighstockSeriesAbandsTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testBoostBlending [
+HighstockSeriesAbandsTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +285,7 @@ HighstockSeriesAbandsTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testBoostThreshold [
+HighstockSeriesAbandsTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +299,7 @@ HighstockSeriesAbandsTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testBorderColor [
+HighstockSeriesAbandsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +313,7 @@ HighstockSeriesAbandsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testBorderWidth [
+HighstockSeriesAbandsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +327,7 @@ HighstockSeriesAbandsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testClassName [
+HighstockSeriesAbandsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +341,7 @@ HighstockSeriesAbandsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testClip [
+HighstockSeriesAbandsTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +355,7 @@ HighstockSeriesAbandsTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testColor [
+HighstockSeriesAbandsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +369,7 @@ HighstockSeriesAbandsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testColorIndex [
+HighstockSeriesAbandsTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +383,7 @@ HighstockSeriesAbandsTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testColorKey [
+HighstockSeriesAbandsTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +397,7 @@ HighstockSeriesAbandsTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testCompareStart [
+HighstockSeriesAbandsTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +411,7 @@ HighstockSeriesAbandsTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testCompareToMain [
+HighstockSeriesAbandsTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +425,7 @@ HighstockSeriesAbandsTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testConnectEnds [
+HighstockSeriesAbandsTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +439,7 @@ HighstockSeriesAbandsTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testConnectNulls [
+HighstockSeriesAbandsTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +453,7 @@ HighstockSeriesAbandsTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testCrisp [
+HighstockSeriesAbandsTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +467,7 @@ HighstockSeriesAbandsTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testCropThreshold [
+HighstockSeriesAbandsTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +481,7 @@ HighstockSeriesAbandsTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testCursor [
+HighstockSeriesAbandsTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +495,7 @@ HighstockSeriesAbandsTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testCustom [
+HighstockSeriesAbandsTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +509,7 @@ HighstockSeriesAbandsTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testDashStyle [
+HighstockSeriesAbandsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +523,7 @@ HighstockSeriesAbandsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testDescription [
+HighstockSeriesAbandsTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +537,7 @@ HighstockSeriesAbandsTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testEnableMouseTracking [
+HighstockSeriesAbandsTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +551,7 @@ HighstockSeriesAbandsTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testEvents [
+HighstockSeriesAbandsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +565,7 @@ HighstockSeriesAbandsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testFindNearestPointBy [
+HighstockSeriesAbandsTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +579,7 @@ HighstockSeriesAbandsTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testGapSize [
+HighstockSeriesAbandsTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +593,7 @@ HighstockSeriesAbandsTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testGapUnit [
+HighstockSeriesAbandsTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +607,7 @@ HighstockSeriesAbandsTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testGetExtremesFromAll [
+HighstockSeriesAbandsTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +621,7 @@ HighstockSeriesAbandsTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testId [
+HighstockSeriesAbandsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +635,7 @@ HighstockSeriesAbandsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testIncludeInDataExport [
+HighstockSeriesAbandsTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +649,7 @@ HighstockSeriesAbandsTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testIndex [
+HighstockSeriesAbandsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +663,7 @@ HighstockSeriesAbandsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testLegendIndex [
+HighstockSeriesAbandsTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +677,7 @@ HighstockSeriesAbandsTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testLineWidth [
+HighstockSeriesAbandsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +691,7 @@ HighstockSeriesAbandsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testLinecap [
+HighstockSeriesAbandsTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +705,7 @@ HighstockSeriesAbandsTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testLinkedTo [
+HighstockSeriesAbandsTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +719,7 @@ HighstockSeriesAbandsTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testMapData [
+HighstockSeriesAbandsTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +733,7 @@ HighstockSeriesAbandsTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testName [
+HighstockSeriesAbandsTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +747,7 @@ HighstockSeriesAbandsTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testNegativeColor [
+HighstockSeriesAbandsTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +761,7 @@ HighstockSeriesAbandsTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testOpacity [
+HighstockSeriesAbandsTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +775,7 @@ HighstockSeriesAbandsTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testPointDescriptionFormatter [
+HighstockSeriesAbandsTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +789,7 @@ HighstockSeriesAbandsTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testSelected [
+HighstockSeriesAbandsTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +803,7 @@ HighstockSeriesAbandsTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testShadow [
+HighstockSeriesAbandsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +817,7 @@ HighstockSeriesAbandsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testShowCheckbox [
+HighstockSeriesAbandsTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +831,7 @@ HighstockSeriesAbandsTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testShowInLegend [
+HighstockSeriesAbandsTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +845,7 @@ HighstockSeriesAbandsTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testSkipKeyboardNavigation [
+HighstockSeriesAbandsTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +859,7 @@ HighstockSeriesAbandsTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testSoftThreshold [
+HighstockSeriesAbandsTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +873,7 @@ HighstockSeriesAbandsTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testStack [
+HighstockSeriesAbandsTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +887,7 @@ HighstockSeriesAbandsTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testStates [
+HighstockSeriesAbandsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +901,7 @@ HighstockSeriesAbandsTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testStep [
+HighstockSeriesAbandsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +915,7 @@ HighstockSeriesAbandsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testStickyTracking [
+HighstockSeriesAbandsTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +929,7 @@ HighstockSeriesAbandsTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testThreshold [
+HighstockSeriesAbandsTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +943,7 @@ HighstockSeriesAbandsTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testTurboThreshold [
+HighstockSeriesAbandsTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +957,7 @@ HighstockSeriesAbandsTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testType [
+HighstockSeriesAbandsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +971,7 @@ HighstockSeriesAbandsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testVisible [
+HighstockSeriesAbandsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +985,7 @@ HighstockSeriesAbandsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testXAxis [
+HighstockSeriesAbandsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +999,7 @@ HighstockSeriesAbandsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testYAxis [
+HighstockSeriesAbandsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +1013,7 @@ HighstockSeriesAbandsTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testZIndex [
+HighstockSeriesAbandsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +1027,7 @@ HighstockSeriesAbandsTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAbandsTest >> testZoneAxis [
+HighstockSeriesAbandsTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

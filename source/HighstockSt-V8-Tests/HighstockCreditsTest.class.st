@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockCreditsTest >> testEnabled [
+HighstockCreditsTest >> testGetPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockCredits new.
+	component position.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'position' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockCreditsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockCredits new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockCreditsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockCreditsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCreditsTest >> testHref [
+HighstockCreditsTest >> testSetHref [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockCreditsTest >> testHref [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCreditsTest >> testText [
+HighstockCreditsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 

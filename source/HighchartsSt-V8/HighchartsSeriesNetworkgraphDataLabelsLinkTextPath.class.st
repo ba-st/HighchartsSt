@@ -23,8 +23,7 @@ HighchartsSeriesNetworkgraphDataLabelsLinkTextPath >> attributes: aHighchartsSVG
 { #category : #accessing }
 HighchartsSeriesNetworkgraphDataLabelsLinkTextPath >> enabled: aBoolean [
 
-	"Enable or disable textPath option for link´s or marker´s data
-labels.
+	"Enable or disable textPath option for link´s or marker´s data labels.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean

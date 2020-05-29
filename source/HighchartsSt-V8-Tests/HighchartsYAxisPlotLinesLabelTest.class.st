@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testAlign [
+HighchartsYAxisPlotLinesLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsYAxisPlotLinesLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testFormatter [
+HighchartsYAxisPlotLinesLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsYAxisPlotLinesLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testRotation [
+HighchartsYAxisPlotLinesLabelTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsYAxisPlotLinesLabelTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testStyle [
+HighchartsYAxisPlotLinesLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsYAxisPlotLinesLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testText [
+HighchartsYAxisPlotLinesLabelTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsYAxisPlotLinesLabelTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testTextAlign [
+HighchartsYAxisPlotLinesLabelTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsYAxisPlotLinesLabelTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testUseHTML [
+HighchartsYAxisPlotLinesLabelTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsYAxisPlotLinesLabelTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testVerticalAlign [
+HighchartsYAxisPlotLinesLabelTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsYAxisPlotLinesLabelTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testX [
+HighchartsYAxisPlotLinesLabelTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsYAxisPlotLinesLabelTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotLinesLabelTest >> testY [
+HighchartsYAxisPlotLinesLabelTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

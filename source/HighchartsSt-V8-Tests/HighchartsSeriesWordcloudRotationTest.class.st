@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudRotationTest >> testFrom [
+HighchartsSeriesWordcloudRotationTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudRotationTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudRotationTest >> testOrientations [
+HighchartsSeriesWordcloudRotationTest >> testSetOrientations [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWordcloudRotationTest >> testOrientations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudRotationTest >> testTo [
+HighchartsSeriesWordcloudRotationTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

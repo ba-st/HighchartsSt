@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplinePointTest >> testEvents [
+HighchartsSeriesSplinePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

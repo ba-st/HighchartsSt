@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbPointTest >> testEvents [
+HighstockPlotOptionsWindbarbPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

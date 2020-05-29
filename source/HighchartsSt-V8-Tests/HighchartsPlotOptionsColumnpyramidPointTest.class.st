@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidPointTest >> testEvents [
+HighchartsPlotOptionsColumnpyramidPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

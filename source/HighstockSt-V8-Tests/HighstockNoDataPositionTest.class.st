@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNoDataPositionTest >> testAlign [
+HighstockNoDataPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNoDataPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNoDataPositionTest >> testVerticalAlign [
+HighstockNoDataPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNoDataPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNoDataPositionTest >> testX [
+HighstockNoDataPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNoDataPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNoDataPositionTest >> testY [
+HighstockNoDataPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

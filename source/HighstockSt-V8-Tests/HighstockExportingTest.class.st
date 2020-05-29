@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testAllowHTML [
+HighstockExportingTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExporting new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingTest >> testGetButtons [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExporting new.
+	component buttons.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'buttons' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingTest >> testGetCsv [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExporting new.
+	component csv.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'csv' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingTest >> testSetAllowHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockExportingTest >> testAllowHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testChartOptions [
+HighstockExportingTest >> testSetChartOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockExportingTest >> testChartOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testEnabled [
+HighstockExportingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockExportingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testError [
+HighstockExportingTest >> testSetError [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockExportingTest >> testError [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testFallbackToExportServer [
+HighstockExportingTest >> testSetFallbackToExportServer [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockExportingTest >> testFallbackToExportServer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testFilename [
+HighstockExportingTest >> testSetFilename [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockExportingTest >> testFilename [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testFormAttributes [
+HighstockExportingTest >> testSetFormAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockExportingTest >> testFormAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testLibURL [
+HighstockExportingTest >> testSetLibURL [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockExportingTest >> testLibURL [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testMenuItemDefinitions [
+HighstockExportingTest >> testSetMenuItemDefinitions [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockExportingTest >> testMenuItemDefinitions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testPrintMaxWidth [
+HighstockExportingTest >> testSetPrintMaxWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockExportingTest >> testPrintMaxWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testScale [
+HighstockExportingTest >> testSetScale [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockExportingTest >> testScale [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testShowTable [
+HighstockExportingTest >> testSetShowTable [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockExportingTest >> testShowTable [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testSourceHeight [
+HighstockExportingTest >> testSetSourceHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockExportingTest >> testSourceHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testSourceWidth [
+HighstockExportingTest >> testSetSourceWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockExportingTest >> testSourceWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testTableCaption [
+HighstockExportingTest >> testSetTableCaption [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockExportingTest >> testTableCaption [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testType [
+HighstockExportingTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockExportingTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testUrl [
+HighstockExportingTest >> testSetUrl [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockExportingTest >> testUrl [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testUseMultiLevelHeaders [
+HighstockExportingTest >> testSetUseMultiLevelHeaders [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockExportingTest >> testUseMultiLevelHeaders [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testUseRowspanHeaders [
+HighstockExportingTest >> testSetUseRowspanHeaders [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockExportingTest >> testUseRowspanHeaders [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingTest >> testWidth [
+HighstockExportingTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testMilliseco
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsStreamgraphTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

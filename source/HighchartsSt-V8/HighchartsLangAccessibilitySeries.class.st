@@ -12,8 +12,7 @@ Class {
 { #category : #accessing }
 HighchartsLangAccessibilitySeries >> description: aString [
 
-	"User supplied description text. This is added in the point
-comment description by default if present.
+	"User supplied description text. This is added in the point comment description by default if present.
 Defaults to {description}."
 
 	configurationOptions at: 'description' put: aString
@@ -31,8 +30,7 @@ Defaults to No value."
 { #category : #accessing }
 HighchartsLangAccessibilitySeries >> pointAnnotationsDescription: aString [
 
-	"Description for annotations on a point, as it is made available
-to assistive technology.
+	"Description for annotations on a point, as it is made available to assistive technology.
 Defaults to {Annotation: #each(annotations). }."
 
 	configurationOptions at: 'pointAnnotationsDescription' put: aString
@@ -41,17 +39,7 @@ Defaults to {Annotation: #each(annotations). }."
 { #category : #accessing }
 HighchartsLangAccessibilitySeries >> summary [
 
-	"Lang configuration for the series main summary. Each series
-type has two modes:
-
-This series type is the only series type used in the
-chart
-
-This is a combination chart with multiple series types
-
-
-If a definition does not exist for the specific series type
-and mode, the ´default´ lang definitions are used.
+	"Lang configuration for the series main summary. Each series type has two modes:  This series type is the only series type used in the chart  This is a combination chart with multiple series types   If a definition does not exist for the specific series type and mode, the ´default´ lang definitions are used.
 "
 	^ configurationOptions at: 'summary' ifAbsentPut: [ HighchartsLangAccessibilitySeriesSummary new ]
 ]
@@ -59,8 +47,7 @@ and mode, the ´default´ lang definitions are used.
 { #category : #accessing }
 HighchartsLangAccessibilitySeries >> xAxisDescription: aString [
 
-	"xAxis description for series if there are multiple xAxes in
-the chart.
+	"xAxis description for series if there are multiple xAxes in the chart.
 Defaults to X axis, {name}."
 
 	configurationOptions at: 'xAxisDescription' put: aString
@@ -69,8 +56,7 @@ Defaults to X axis, {name}."
 { #category : #accessing }
 HighchartsLangAccessibilitySeries >> yAxisDescription: aString [
 
-	"yAxis description for series if there are multiple yAxes in
-the chart.
+	"yAxis description for series if there are multiple yAxes in the chart.
 Defaults to Y axis, {name}."
 
 	configurationOptions at: 'yAxisDescription' put: aString

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testClassName [
+HighchartsSeriesDumbbellDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDumbbellData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDumbbellDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDumbbellData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDumbbellDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDumbbellData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDumbbellDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesDumbbellDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testColor [
+HighchartsSeriesDumbbellDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesDumbbellDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testColorIndex [
+HighchartsSeriesDumbbellDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesDumbbellDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testConnectorColor [
+HighchartsSeriesDumbbellDataTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesDumbbellDataTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testConnectorWidth [
+HighchartsSeriesDumbbellDataTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesDumbbellDataTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testCustom [
+HighchartsSeriesDumbbellDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesDumbbellDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testDescription [
+HighchartsSeriesDumbbellDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesDumbbellDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testDrilldown [
+HighchartsSeriesDumbbellDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesDumbbellDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testEvents [
+HighchartsSeriesDumbbellDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesDumbbellDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testHigh [
+HighchartsSeriesDumbbellDataTest >> testSetHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesDumbbellDataTest >> testHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testId [
+HighchartsSeriesDumbbellDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesDumbbellDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testLabelrank [
+HighchartsSeriesDumbbellDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesDumbbellDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testLow [
+HighchartsSeriesDumbbellDataTest >> testSetLow [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesDumbbellDataTest >> testLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testLowColor [
+HighchartsSeriesDumbbellDataTest >> testSetLowColor [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesDumbbellDataTest >> testLowColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testName [
+HighchartsSeriesDumbbellDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesDumbbellDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testSelected [
+HighchartsSeriesDumbbellDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesDumbbellDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataTest >> testX [
+HighchartsSeriesDumbbellDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 

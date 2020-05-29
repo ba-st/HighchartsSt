@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testHeight [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testHeightPlus [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetHeightPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testHeightPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testWidth [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testWidthPlus [
+HighchartsSeriesSunburstDataMarkerStatesSelectTest >> testSetWidthPlus [
 
 	| component javascript expectedConfiguration |
 

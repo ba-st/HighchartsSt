@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testAfterAnimate [
+HighchartsSeriesParetoEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesParetoEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testCheckboxClick [
+HighchartsSeriesParetoEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesParetoEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testClick [
+HighchartsSeriesParetoEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesParetoEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testHide [
+HighchartsSeriesParetoEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesParetoEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testLegendItemClick [
+HighchartsSeriesParetoEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesParetoEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testMouseOut [
+HighchartsSeriesParetoEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesParetoEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testMouseOver [
+HighchartsSeriesParetoEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesParetoEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesParetoEventsTest >> testShow [
+HighchartsSeriesParetoEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopDataLabelsTextPathTest >> testAttributes [
+HighchartsSeriesLollipopDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesLollipopDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopDataLabelsTextPathTest >> testEnabled [
+HighchartsSeriesLollipopDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

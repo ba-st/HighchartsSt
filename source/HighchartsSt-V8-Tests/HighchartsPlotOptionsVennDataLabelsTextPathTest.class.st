@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennDataLabelsTextPathTest >> testAttributes [
+HighchartsPlotOptionsVennDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVennDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennDataLabelsTextPathTest >> testEnabled [
+HighchartsPlotOptionsVennDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

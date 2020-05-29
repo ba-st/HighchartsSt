@@ -66,8 +66,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> className: aString [
 
-	"An additional, individual class name for the data point´s graphic
-representation.
+	"An additional, individual class name for the data point´s graphic representation.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -76,10 +75,7 @@ representation.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use
-colorIndex.
+	"Individual color for the point. By default the color is pulled from the global colors array. In styled mode, the color option doesn´t take effect. Instead, use colorIndex.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -88,11 +84,7 @@ colorIndex.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> colorIndex: aNumber [
 
-	"A specific color index to use for the point, so its graphic representations
-are given the class name highcharts-color-{n}. In styled mode this will
-change the color of the graphic. In non-styled mode, the color by is set by
-the fill attribute, so the change in class name won´t have a visual effect
-by default.
+	"A specific color index to use for the point, so its graphic representations are given the class name highcharts-color-{n}. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the fill attribute, so the change in class name won´t have a visual effect by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -101,9 +93,7 @@ by default.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> custom: anObject [
 
-	"A reserved subspace to store options and values for customized functionality.
-Here you can add additional data for your own event callbacks and formatter
-callbacks.
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
 "
 
 	configurationOptions at: 'custom' put: anObject
@@ -112,8 +102,7 @@ callbacks.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesBoxplotDataDataLabels new ]
 ]
@@ -121,8 +110,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -131,8 +119,7 @@ about the point.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> dragDrop [
 
-	"Point specific options for the draggable-points module. Overrides options on
-series.dragDrop.
+	"Point specific options for the draggable-points module. Overrides options on series.dragDrop.
 "
 	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighchartsSeriesBoxplotDataDragDrop new ]
 ]
@@ -140,8 +127,7 @@ series.dragDrop.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series array to
-use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -159,8 +145,7 @@ HighchartsSeriesBoxplotData >> events: anObject [
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> high: aNumber [
 
-	"The high value for each data point, signifying the highest value
-in the sample set. The top whisker is drawn here.
+	"The high value for each data point, signifying the highest value in the sample set. The top whisker is drawn here.
 "
 
 	configurationOptions at: 'high' put: aNumber
@@ -169,8 +154,7 @@ in the sample set. The top whisker is drawn here.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -179,9 +163,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
@@ -190,8 +172,7 @@ will be drawn.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> low: aNumber [
 
-	"The low value for each data point, signifying the lowest value
-in the sample set. The bottom whisker is drawn here.
+	"The low value for each data point, signifying the lowest value in the sample set. The bottom whisker is drawn here.
 "
 
 	configurationOptions at: 'low' put: aNumber
@@ -200,8 +181,7 @@ in the sample set. The bottom whisker is drawn here.
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> median: aNumber [
 
-	"The median for each data point. This is drawn as a line through the
-middle area of the box.
+	"The median for each data point. This is drawn as a line through the middle area of the box.
 "
 
 	configurationOptions at: 'median' put: aNumber
@@ -228,8 +208,7 @@ HighchartsSeriesBoxplotData >> name: aString [
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> q1: aNumber [
 
-	"The lower quartile for each data point. This is the bottom of the
-box.
+	"The lower quartile for each data point. This is the bottom of the box.
 "
 
 	configurationOptions at: 'q1' put: aNumber
@@ -274,8 +253,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsSeriesBoxplotData >> x: aNumber [
 
-	"The x value of the point. For datetime axes, the X value is the timestamp
-in milliseconds since 1970.
+	"The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
 "
 
 	configurationOptions at: 'x' put: aNumber

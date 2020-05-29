@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testAfterAnimate [
+HighchartsSeriesCylinderEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesCylinderEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testCheckboxClick [
+HighchartsSeriesCylinderEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesCylinderEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testClick [
+HighchartsSeriesCylinderEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesCylinderEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testHide [
+HighchartsSeriesCylinderEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesCylinderEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testLegendItemClick [
+HighchartsSeriesCylinderEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesCylinderEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testMouseOut [
+HighchartsSeriesCylinderEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesCylinderEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testMouseOver [
+HighchartsSeriesCylinderEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesCylinderEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderEventsTest >> testShow [
+HighchartsSeriesCylinderEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

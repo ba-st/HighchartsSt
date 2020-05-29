@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dFrameSideTest >> testColor [
+HighchartsChartOptions3dFrameSideTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartOptions3dFrameSideTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dFrameSideTest >> testSize [
+HighchartsChartOptions3dFrameSideTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

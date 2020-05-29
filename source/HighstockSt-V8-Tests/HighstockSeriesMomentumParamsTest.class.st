@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumParamsTest >> testIndex [
+HighstockSeriesMomentumParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMomentumParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumParamsTest >> testPeriod [
+HighstockSeriesMomentumParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

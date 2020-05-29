@@ -32,8 +32,7 @@ HighchartsSeriesOrganizationData >> accessibility [
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> className: aString [
 
-	"An additional, individual class name for the data point´s graphic
-representation.
+	"An additional, individual class name for the data point´s graphic representation.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -42,10 +41,7 @@ representation.
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color for the individual link. By default, the link color is the same
-as the node it extends from. The series.fillOpacity option also applies to
-the points, so when setting a specific link color, consider setting the
-fillOpacity to 1.
+	"The color for the individual link. By default, the link color is the same as the node it extends from. The series.fillOpacity option also applies to the points, so when setting a specific link color, consider setting the fillOpacity to 1.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -54,11 +50,7 @@ fillOpacity to 1.
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> colorIndex: aNumber [
 
-	"A specific color index to use for the point, so its graphic representations
-are given the class name highcharts-color-{n}. In styled mode this will
-change the color of the graphic. In non-styled mode, the color by is set by
-the fill attribute, so the change in class name won´t have a visual effect
-by default.
+	"A specific color index to use for the point, so its graphic representations are given the class name highcharts-color-{n}. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the fill attribute, so the change in class name won´t have a visual effect by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -67,9 +59,7 @@ by default.
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> custom: anObject [
 
-	"A reserved subspace to store options and values for customized functionality.
-Here you can add additional data for your own event callbacks and formatter
-callbacks.
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
 "
 
 	configurationOptions at: 'custom' put: anObject
@@ -78,8 +68,7 @@ callbacks.
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesOrganizationDataDataLabels new ]
 ]
@@ -87,8 +76,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -115,8 +103,7 @@ HighchartsSeriesOrganizationData >> from: aString [
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -125,9 +112,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighchartsSeriesOrganizationData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber

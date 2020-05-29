@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsColumnpyramidLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

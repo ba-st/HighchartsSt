@@ -52,10 +52,7 @@ HighstockSeriesPolygonData >> accessibility [
 { #category : #accessing }
 HighstockSeriesPolygonData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use
-colorIndex.
+	"Individual color for the point. By default the color is pulled from the global colors array. In styled mode, the color option doesn´t take effect. Instead, use colorIndex.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -64,9 +61,7 @@ colorIndex.
 { #category : #accessing }
 HighstockSeriesPolygonData >> custom: anObject [
 
-	"A reserved subspace to store options and values for customized functionality.
-Here you can add additional data for your own event callbacks and formatter
-callbacks.
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
 "
 
 	configurationOptions at: 'custom' put: anObject
@@ -75,8 +70,7 @@ callbacks.
 { #category : #accessing }
 HighstockSeriesPolygonData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighstockSeriesPolygonDataDataLabels new ]
 ]
@@ -84,8 +78,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighstockSeriesPolygonData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -94,8 +87,7 @@ about the point.
 { #category : #accessing }
 HighstockSeriesPolygonData >> dragDrop [
 
-	"Point specific options for the draggable-points module. Overrides options on
-series.dragDrop.
+	"Point specific options for the draggable-points module. Overrides options on series.dragDrop.
 "
 	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighstockSeriesPolygonDataDragDrop new ]
 ]
@@ -112,8 +104,7 @@ HighstockSeriesPolygonData >> events: anObject [
 { #category : #accessing }
 HighstockSeriesPolygonData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -122,9 +113,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighstockSeriesPolygonData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
@@ -159,8 +148,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockSeriesPolygonData >> x: aNumber [
 
-	"The x value of the point. For datetime axes, the X value is the timestamp
-in milliseconds since 1970.
+	"The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
 "
 
 	configurationOptions at: 'x' put: aNumber

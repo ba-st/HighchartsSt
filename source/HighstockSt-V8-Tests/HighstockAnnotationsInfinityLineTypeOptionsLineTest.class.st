@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineTypeOptionsLineTest >> testFill [
+HighstockAnnotationsInfinityLineTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

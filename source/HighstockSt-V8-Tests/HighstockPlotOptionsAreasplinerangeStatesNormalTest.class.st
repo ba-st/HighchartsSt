@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesNormalTest >> testAnimation [
+HighstockPlotOptionsAreasplinerangeStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

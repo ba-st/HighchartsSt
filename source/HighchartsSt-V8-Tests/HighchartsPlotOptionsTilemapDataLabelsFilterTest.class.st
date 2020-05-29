@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsTilemapDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

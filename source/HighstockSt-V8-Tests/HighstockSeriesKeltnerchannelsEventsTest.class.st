@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testAfterAnimate [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testCheckboxClick [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesKeltnerchannelsEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testClick [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesKeltnerchannelsEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testHide [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesKeltnerchannelsEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testLegendItemClick [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesKeltnerchannelsEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testMouseOut [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesKeltnerchannelsEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testMouseOver [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesKeltnerchannelsEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsEventsTest >> testShow [
+HighstockSeriesKeltnerchannelsEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

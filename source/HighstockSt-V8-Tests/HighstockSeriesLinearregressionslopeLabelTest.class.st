@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testBoxesToAvoid [
+HighstockSeriesLinearregressionslopeLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testConnectorAllowed [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testConnectorNeighbourDistance 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testEnabled [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testFormat [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testFormatter [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testMaxFontSize [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testMinFontSize [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesLinearregressionslopeLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeLabelTest >> testOnArea [
+HighstockSeriesLinearregressionslopeLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

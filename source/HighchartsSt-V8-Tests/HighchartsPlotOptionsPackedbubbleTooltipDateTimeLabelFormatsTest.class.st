@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testMillisec
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsPackedbubbleTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

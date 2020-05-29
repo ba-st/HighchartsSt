@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonThemeTest >> testFill [
+HighstockExportingButtonsContextButtonThemeTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockExportingButtonsContextButtonThemeTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonThemeTest >> testPadding [
+HighstockExportingButtonsContextButtonThemeTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockExportingButtonsContextButtonThemeTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonThemeTest >> testStroke [
+HighstockExportingButtonsContextButtonThemeTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 

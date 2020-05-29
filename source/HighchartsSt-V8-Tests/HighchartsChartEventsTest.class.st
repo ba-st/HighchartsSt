@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testAddSeries [
+HighchartsChartEventsTest >> testSetAddSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartEventsTest >> testAddSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testAfterPrint [
+HighchartsChartEventsTest >> testSetAfterPrint [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartEventsTest >> testAfterPrint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testBeforePrint [
+HighchartsChartEventsTest >> testSetBeforePrint [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsChartEventsTest >> testBeforePrint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testClick [
+HighchartsChartEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsChartEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testDrilldown [
+HighchartsChartEventsTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsChartEventsTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testDrillup [
+HighchartsChartEventsTest >> testSetDrillup [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsChartEventsTest >> testDrillup [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testDrillupall [
+HighchartsChartEventsTest >> testSetDrillupall [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsChartEventsTest >> testDrillupall [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testExportData [
+HighchartsChartEventsTest >> testSetExportData [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsChartEventsTest >> testExportData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testLoad [
+HighchartsChartEventsTest >> testSetLoad [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsChartEventsTest >> testLoad [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testRedraw [
+HighchartsChartEventsTest >> testSetRedraw [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsChartEventsTest >> testRedraw [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testRender [
+HighchartsChartEventsTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsChartEventsTest >> testRender [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartEventsTest >> testSelection [
+HighchartsChartEventsTest >> testSetSelection [
 
 	| component javascript expectedConfiguration |
 

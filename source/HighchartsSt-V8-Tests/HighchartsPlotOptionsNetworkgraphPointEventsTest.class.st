@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testClick [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testDrag [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testDragStart [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testDrop [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testRemove [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSelect [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testUnselect [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsNetworkgraphPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphPointEventsTest >> testUpdate [
+HighchartsPlotOptionsNetworkgraphPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

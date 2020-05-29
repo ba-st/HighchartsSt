@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataSortingTest >> testEnabled [
+HighchartsSeriesDumbbellDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesDumbbellDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataSortingTest >> testMatchByName [
+HighchartsSeriesDumbbellDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesDumbbellDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDumbbellDataSortingTest >> testSortKey [
+HighchartsSeriesDumbbellDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

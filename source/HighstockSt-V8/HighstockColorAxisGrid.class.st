@@ -28,8 +28,7 @@ Defaults to 1."
 { #category : #accessing }
 HighstockColorAxisGrid >> cellHeight: aNumber [
 
-	"Set cell height for grid axis labels. By default this is calculated from font
-size. This option only applies to horizontal axes.
+	"Set cell height for grid axis labels. By default this is calculated from font size. This option only applies to horizontal axes.
 "
 
 	configurationOptions at: 'cellHeight' put: aNumber
@@ -38,9 +37,7 @@ size. This option only applies to horizontal axes.
 { #category : #accessing }
 HighstockColorAxisGrid >> columns: anArrayOfHighchartsXAxisOptions [
 
-	"Set specific options for each column (or row for horizontal axes) in the
-grid. Each extra column/row is its own axis, and the axis options can be set
-here.
+	"Set specific options for each column (or row for horizontal axes) in the grid. Each extra column/row is its own axis, and the axis options can be set here.
 "
 
 	configurationOptions at: 'columns' put: anArrayOfHighchartsXAxisOptions

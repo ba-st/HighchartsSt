@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataLabelsTextPathTest >> testAttributes [
+HighchartsSeriesPyramidDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPyramidDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataLabelsTextPathTest >> testEnabled [
+HighchartsSeriesPyramidDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

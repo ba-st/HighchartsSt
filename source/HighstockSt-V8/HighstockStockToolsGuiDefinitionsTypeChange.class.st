@@ -7,13 +7,8 @@ Class {
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsTypeChange >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'typeOHLC',
-  'typeLine',
-  'typeCandlestick'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'typeOHLC',   'typeLine',   'typeCandlestick' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

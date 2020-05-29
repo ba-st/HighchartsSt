@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataSortingTest >> testEnabled [
+HighstockPlotOptionsWmaDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWmaDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataSortingTest >> testMatchByName [
+HighstockPlotOptionsWmaDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWmaDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataSortingTest >> testSortKey [
+HighstockPlotOptionsWmaDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

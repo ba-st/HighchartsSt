@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorStatesInactiveAnimationTest >> testDuration [
+HighstockSeriesVectorStatesInactiveAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeAnimationTest >> testDuration [
+HighchartsPlotOptionsSolidgaugeAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

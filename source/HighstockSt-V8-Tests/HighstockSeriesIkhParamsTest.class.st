@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhParamsTest >> testIndex [
+HighstockSeriesIkhParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesIkhParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhParamsTest >> testPeriod [
+HighstockSeriesIkhParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesIkhParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhParamsTest >> testPeriodSenkouSpanB [
+HighstockSeriesIkhParamsTest >> testSetPeriodSenkouSpanB [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesIkhParamsTest >> testPeriodSenkouSpanB [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesIkhParamsTest >> testPeriodTenkan [
+HighstockSeriesIkhParamsTest >> testSetPeriodTenkan [
 
 	| component javascript expectedConfiguration |
 

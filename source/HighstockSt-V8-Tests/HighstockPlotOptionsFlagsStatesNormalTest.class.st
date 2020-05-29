@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsFlagsStatesNormalTest >> testAnimation [
+HighstockPlotOptionsFlagsStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

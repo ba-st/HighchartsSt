@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testAcrossPanes [
+HighstockNavigatorYAxisPlotBandsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorYAxisPlotBands new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorYAxisPlotBandsTest >> testSetAcrossPanes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testAcrossPanes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testBorderColor [
+HighstockNavigatorYAxisPlotBandsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testBorderWidth [
+HighstockNavigatorYAxisPlotBandsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testClassName [
+HighstockNavigatorYAxisPlotBandsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testColor [
+HighstockNavigatorYAxisPlotBandsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testEvents [
+HighstockNavigatorYAxisPlotBandsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testFrom [
+HighstockNavigatorYAxisPlotBandsTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testId [
+HighstockNavigatorYAxisPlotBandsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testInnerRadius [
+HighstockNavigatorYAxisPlotBandsTest >> testSetInnerRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testInnerRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testOuterRadius [
+HighstockNavigatorYAxisPlotBandsTest >> testSetOuterRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testOuterRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testThickness [
+HighstockNavigatorYAxisPlotBandsTest >> testSetThickness [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testThickness [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testTo [
+HighstockNavigatorYAxisPlotBandsTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockNavigatorYAxisPlotBandsTest >> testTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisPlotBandsTest >> testZIndex [
+HighstockNavigatorYAxisPlotBandsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

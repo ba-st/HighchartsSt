@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testAlign [
+HighstockNavigatorYAxisStackLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorYAxisStackLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorYAxisStackLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testAllowOverlap [
+HighstockNavigatorYAxisStackLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testBackgroundColor [
+HighstockNavigatorYAxisStackLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testBorderColor [
+HighstockNavigatorYAxisStackLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testBorderRadius [
+HighstockNavigatorYAxisStackLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testBorderWidth [
+HighstockNavigatorYAxisStackLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testCrop [
+HighstockNavigatorYAxisStackLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testEnabled [
+HighstockNavigatorYAxisStackLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testFormat [
+HighstockNavigatorYAxisStackLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testFormatter [
+HighstockNavigatorYAxisStackLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testOverflow [
+HighstockNavigatorYAxisStackLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testRotation [
+HighstockNavigatorYAxisStackLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testTextAlign [
+HighstockNavigatorYAxisStackLabelsTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testUseHTML [
+HighstockNavigatorYAxisStackLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testVerticalAlign [
+HighstockNavigatorYAxisStackLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testX [
+HighstockNavigatorYAxisStackLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighstockNavigatorYAxisStackLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisStackLabelsTest >> testY [
+HighstockNavigatorYAxisStackLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

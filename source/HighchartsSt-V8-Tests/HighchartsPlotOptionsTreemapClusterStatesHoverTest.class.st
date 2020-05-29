@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterStatesHoverTest >> testFillColor [
+HighchartsPlotOptionsTreemapClusterStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 

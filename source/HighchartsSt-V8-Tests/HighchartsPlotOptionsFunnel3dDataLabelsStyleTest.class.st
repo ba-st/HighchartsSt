@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsFunnel3dDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

@@ -10,8 +10,7 @@ Class {
 { #category : #accessing }
 HighstockLegendBubbleLegendLabels >> align: aHighchartsAlignValue [
 
-	"The alignment of the labels compared to the bubble
-legend. Can be one of left, center or right.
+	"The alignment of the labels compared to the bubble legend. Can be one of left, center or right.
 Defaults to right."
 
 	configurationOptions at: 'align' put: aHighchartsAlignValue
@@ -29,9 +28,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockLegendBubbleLegendLabels >> className: aString [
 
-	"An additional class name to apply to the bubble legend
-label graphical elements. This option does not replace
-default class names of the graphical element.
+	"An additional class name to apply to the bubble legend label graphical elements. This option does not replace default class names of the graphical element.
 Defaults to undefined."
 
 	configurationOptions at: 'className' put: aString
@@ -40,8 +37,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighstockLegendBubbleLegendLabels >> format: aString [
 
-	"A format string for the bubble legend labels. Available
-variables are the same as for formatter.
+	"A format string for the bubble legend labels. Available variables are the same as for formatter.
 Defaults to ."
 
 	configurationOptions at: 'format' put: aString
@@ -50,13 +46,7 @@ Defaults to ."
 { #category : #accessing }
 HighstockLegendBubbleLegendLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsBubbleLegendFormatterContextObject [
 
-	"Available this properties are:
-
-this.value: The bubble value.
-
-this.radius: The radius of the bubble range.
-
-this.center: The center y position of the range.
+	"Available this properties are:  this.value: The bubble value.  this.radius: The radius of the bubble range.  this.center: The center y position of the range.
 Defaults to undefined."
 
 	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsBubbleLegendFormatterContextObject
@@ -74,8 +64,7 @@ HighstockLegendBubbleLegendLabels >> style: aHighchartsCSSObject [
 { #category : #accessing }
 HighstockLegendBubbleLegendLabels >> x: aNumber [
 
-	"The x position offset of the label relative to the
-connector.
+	"The x position offset of the label relative to the connector.
 Defaults to 0."
 
 	configurationOptions at: 'x' put: aNumber
@@ -84,8 +73,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockLegendBubbleLegendLabels >> y: aNumber [
 
-	"The y position offset of the label relative to the
-connector.
+	"The y position offset of the label relative to the connector.
 Defaults to 0."
 
 	configurationOptions at: 'y' put: aNumber

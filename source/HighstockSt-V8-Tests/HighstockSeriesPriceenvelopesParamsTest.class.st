@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesParamsTest >> testBottomBand [
+HighstockSeriesPriceenvelopesParamsTest >> testSetBottomBand [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesParamsTest >> testBottomBand [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesParamsTest >> testIndex [
+HighstockSeriesPriceenvelopesParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesParamsTest >> testPeriod [
+HighstockSeriesPriceenvelopesParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesParamsTest >> testTopBand [
+HighstockSeriesPriceenvelopesParamsTest >> testSetTopBand [
 
 	| component javascript expectedConfiguration |
 

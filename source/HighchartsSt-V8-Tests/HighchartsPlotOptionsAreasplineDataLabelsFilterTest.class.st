@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsAreasplineDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

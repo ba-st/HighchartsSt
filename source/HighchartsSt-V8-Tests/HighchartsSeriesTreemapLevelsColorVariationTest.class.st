@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsColorVariationTest >> testKey [
+HighchartsSeriesTreemapLevelsColorVariationTest >> testSetKey [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTreemapLevelsColorVariationTest >> testKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapLevelsColorVariationTest >> testTo [
+HighchartsSeriesTreemapLevelsColorVariationTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

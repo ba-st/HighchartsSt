@@ -5,7 +5,231 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testAllowPointSelect [
+HighstockPlotOptionsMacdTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetMacdLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component macdLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'macdLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetSignalLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component signalLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'signalLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacd new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +243,7 @@ HighstockPlotOptionsMacdTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testAnimationLimit [
+HighstockPlotOptionsMacdTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +257,7 @@ HighstockPlotOptionsMacdTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testBoostBlending [
+HighstockPlotOptionsMacdTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +271,7 @@ HighstockPlotOptionsMacdTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testBoostThreshold [
+HighstockPlotOptionsMacdTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +285,7 @@ HighstockPlotOptionsMacdTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testBorderColor [
+HighstockPlotOptionsMacdTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +299,7 @@ HighstockPlotOptionsMacdTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testBorderWidth [
+HighstockPlotOptionsMacdTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +313,7 @@ HighstockPlotOptionsMacdTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testClassName [
+HighstockPlotOptionsMacdTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +327,7 @@ HighstockPlotOptionsMacdTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testClip [
+HighstockPlotOptionsMacdTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +341,7 @@ HighstockPlotOptionsMacdTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testColor [
+HighstockPlotOptionsMacdTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +355,7 @@ HighstockPlotOptionsMacdTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testColorIndex [
+HighstockPlotOptionsMacdTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +369,7 @@ HighstockPlotOptionsMacdTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testColorKey [
+HighstockPlotOptionsMacdTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +383,7 @@ HighstockPlotOptionsMacdTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCompare [
+HighstockPlotOptionsMacdTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +397,7 @@ HighstockPlotOptionsMacdTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCompareBase [
+HighstockPlotOptionsMacdTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +411,7 @@ HighstockPlotOptionsMacdTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCompareStart [
+HighstockPlotOptionsMacdTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +425,7 @@ HighstockPlotOptionsMacdTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCompareToMain [
+HighstockPlotOptionsMacdTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +439,7 @@ HighstockPlotOptionsMacdTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testConnectEnds [
+HighstockPlotOptionsMacdTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +453,7 @@ HighstockPlotOptionsMacdTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testConnectNulls [
+HighstockPlotOptionsMacdTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +467,7 @@ HighstockPlotOptionsMacdTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCrisp [
+HighstockPlotOptionsMacdTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +481,7 @@ HighstockPlotOptionsMacdTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCropThreshold [
+HighstockPlotOptionsMacdTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +495,7 @@ HighstockPlotOptionsMacdTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCursor [
+HighstockPlotOptionsMacdTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +509,7 @@ HighstockPlotOptionsMacdTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testCustom [
+HighstockPlotOptionsMacdTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +523,7 @@ HighstockPlotOptionsMacdTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testDashStyle [
+HighstockPlotOptionsMacdTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +537,7 @@ HighstockPlotOptionsMacdTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testDescription [
+HighstockPlotOptionsMacdTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +551,7 @@ HighstockPlotOptionsMacdTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testEnableMouseTracking [
+HighstockPlotOptionsMacdTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +565,7 @@ HighstockPlotOptionsMacdTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testEvents [
+HighstockPlotOptionsMacdTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +579,7 @@ HighstockPlotOptionsMacdTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testFindNearestPointBy [
+HighstockPlotOptionsMacdTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +593,7 @@ HighstockPlotOptionsMacdTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testGapSize [
+HighstockPlotOptionsMacdTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +607,7 @@ HighstockPlotOptionsMacdTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testGapUnit [
+HighstockPlotOptionsMacdTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +621,7 @@ HighstockPlotOptionsMacdTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testGetExtremesFromAll [
+HighstockPlotOptionsMacdTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +635,7 @@ HighstockPlotOptionsMacdTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testGroupPadding [
+HighstockPlotOptionsMacdTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +649,7 @@ HighstockPlotOptionsMacdTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testIncludeInDataExport [
+HighstockPlotOptionsMacdTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +663,7 @@ HighstockPlotOptionsMacdTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testLineWidth [
+HighstockPlotOptionsMacdTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +677,7 @@ HighstockPlotOptionsMacdTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testLinecap [
+HighstockPlotOptionsMacdTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +691,7 @@ HighstockPlotOptionsMacdTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testLinkedTo [
+HighstockPlotOptionsMacdTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +705,7 @@ HighstockPlotOptionsMacdTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testMinPointLength [
+HighstockPlotOptionsMacdTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +719,7 @@ HighstockPlotOptionsMacdTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testName [
+HighstockPlotOptionsMacdTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +733,7 @@ HighstockPlotOptionsMacdTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testNegativeColor [
+HighstockPlotOptionsMacdTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +747,7 @@ HighstockPlotOptionsMacdTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testOpacity [
+HighstockPlotOptionsMacdTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +761,7 @@ HighstockPlotOptionsMacdTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsMacdTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +775,7 @@ HighstockPlotOptionsMacdTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testPointPadding [
+HighstockPlotOptionsMacdTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +789,7 @@ HighstockPlotOptionsMacdTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testSelected [
+HighstockPlotOptionsMacdTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +803,7 @@ HighstockPlotOptionsMacdTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testShadow [
+HighstockPlotOptionsMacdTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +817,7 @@ HighstockPlotOptionsMacdTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testShowCheckbox [
+HighstockPlotOptionsMacdTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +831,7 @@ HighstockPlotOptionsMacdTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testShowInLegend [
+HighstockPlotOptionsMacdTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +845,7 @@ HighstockPlotOptionsMacdTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsMacdTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +859,7 @@ HighstockPlotOptionsMacdTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testSoftThreshold [
+HighstockPlotOptionsMacdTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +873,7 @@ HighstockPlotOptionsMacdTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testStates [
+HighstockPlotOptionsMacdTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +887,7 @@ HighstockPlotOptionsMacdTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testStep [
+HighstockPlotOptionsMacdTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +901,7 @@ HighstockPlotOptionsMacdTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testStickyTracking [
+HighstockPlotOptionsMacdTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +915,7 @@ HighstockPlotOptionsMacdTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testThreshold [
+HighstockPlotOptionsMacdTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +929,7 @@ HighstockPlotOptionsMacdTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testTurboThreshold [
+HighstockPlotOptionsMacdTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +943,7 @@ HighstockPlotOptionsMacdTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testVisible [
+HighstockPlotOptionsMacdTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +957,7 @@ HighstockPlotOptionsMacdTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testZIndex [
+HighstockPlotOptionsMacdTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +971,7 @@ HighstockPlotOptionsMacdTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdTest >> testZoneAxis [
+HighstockPlotOptionsMacdTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

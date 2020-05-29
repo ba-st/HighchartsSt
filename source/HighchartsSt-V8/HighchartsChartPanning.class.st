@@ -23,8 +23,7 @@ HighchartsChartPanning >> enabled: aBoolean [
 { #category : #accessing }
 HighchartsChartPanning >> type: aString [
 
-	"Decides in what dimensions the user can pan the chart. Can be
-one of x, y, or xy.
+	"Decides in what dimensions the user can pan the chart. Can be one of x, y, or xy.
 Defaults to x."
 
 	configurationOptions at: 'type' put: aString

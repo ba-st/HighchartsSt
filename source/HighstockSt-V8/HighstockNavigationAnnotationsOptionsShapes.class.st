@@ -39,8 +39,7 @@ HighstockNavigationAnnotationsOptionsShapes >> height: aNumber [
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapes >> markerEnd: aString [
 
-	"Id of the marker which will be drawn at the final vertex of
-the path. Custom markers can be defined in defs property.
+	"Id of the marker which will be drawn at the final vertex of the path. Custom markers can be defined in defs property.
 "
 
 	configurationOptions at: 'markerEnd' put: aString
@@ -49,8 +48,7 @@ the path. Custom markers can be defined in defs property.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapes >> markerStart: aString [
 
-	"Id of the marker which will be drawn at the first vertex of
-the path. Custom markers can be defined in defs property.
+	"Id of the marker which will be drawn at the first vertex of the path. Custom markers can be defined in defs property.
 "
 
 	configurationOptions at: 'markerStart' put: aString
@@ -59,10 +57,7 @@ the path. Custom markers can be defined in defs property.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapes >> point [
 
-	"This option defines the point to which the shape will be
-connected. It can be either the point which exists in the
-series - it is referenced by the point´s id - or a new point
-with defined x, y properties and optionally axes.
+	"This option defines the point to which the shape will be connected. It can be either the point which exists in the series - it is referenced by the point´s id - or a new point with defined x, y properties and optionally axes.
 "
 	^ configurationOptions at: 'point' ifAbsentPut: [ HighstockNavigationAnnotationsOptionsShapesPoint new ]
 ]
@@ -70,9 +65,7 @@ with defined x, y properties and optionally axes.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapes >> points [
 
-	"An array of points for the shape. This option is available
-for shapes which can use multiple points such as path. A
-point can be either a point object or a point´s id.
+	"An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point´s id.
 "
 	^ configurationOptions at: 'points' ifAbsentPut: [ HighstockNavigationAnnotationsOptionsShapesPoints new ]
 ]
@@ -89,8 +82,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapes >> snap: aNumber [
 
-	"Defines additional snapping area around an annotation
-making this annotation to focus. Defined in pixels.
+	"Defines additional snapping area around an annotation making this annotation to focus. Defined in pixels.
 Defaults to 2."
 
 	configurationOptions at: 'snap' put: aNumber
@@ -99,8 +91,7 @@ Defaults to 2."
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapes >> src: aString [
 
-	"The URL for an image to use as the annotation shape. Note,
-type has to be set to ´image´.
+	"The URL for an image to use as the annotation shape. Note, type has to be set to ´image´.
 "
 
 	configurationOptions at: 'src' put: aString

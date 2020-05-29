@@ -23,9 +23,7 @@ HighchartsYAxisCrosshair >> className: aString [
 { #category : #accessing }
 HighchartsYAxisCrosshair >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the crosshair. Defaults to #cccccc for numeric and
-datetime axes, and rgba(204,214,235,0.25) for category axes, where
-the crosshair by default highlights the whole category.
+	"The color of the crosshair. Defaults to #cccccc for numeric and datetime axes, and rgba(204,214,235,0.25) for category axes, where the crosshair by default highlights the whole category.
 Defaults to #cccccc."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -34,9 +32,7 @@ Defaults to #cccccc."
 { #category : #accessing }
 HighchartsYAxisCrosshair >> dashStyle: aHighchartsDashStyleValue [
 
-	"The dash style for the crosshair. See
-plotOptions.series.dashStyle
-for possible values.
+	"The dash style for the crosshair. See plotOptions.series.dashStyle for possible values.
 Defaults to Solid."
 
 	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
@@ -45,8 +41,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsYAxisCrosshair >> snap: aBoolean [
 
-	"Whether the crosshair should snap to the point or follow the pointer
-independent of points.
+	"Whether the crosshair should snap to the point or follow the pointer independent of points.
 Defaults to true."
 
 	configurationOptions at: 'snap' put: aBoolean
@@ -55,8 +50,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsYAxisCrosshair >> width: aNumber [
 
-	"The pixel width of the crosshair. Defaults to 1 for numeric or
-datetime axes, and for one category width for category axes.
+	"The pixel width of the crosshair. Defaults to 1 for numeric or datetime axes, and for one category width for category axes.
 Defaults to 1."
 
 	configurationOptions at: 'width' put: aNumber
@@ -65,8 +59,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsYAxisCrosshair >> zIndex: aNumber [
 
-	"The Z index of the crosshair. Higher Z indices allow drawing the
-crosshair on top of the series or behind the grid lines.
+	"The Z index of the crosshair. Higher Z indices allow drawing the crosshair on top of the series or behind the grid lines.
 Defaults to 2."
 
 	configurationOptions at: 'zIndex' put: aNumber

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsRocDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsRocDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsRocDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsRocDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsRocDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsRocDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsRocDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

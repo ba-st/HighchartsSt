@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testAlign [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testColor [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testEnabled [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testEnabled 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testHeight [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testInside [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testLineColor [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testLineColo
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testLineWidth [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testLineWidt
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testRadius [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSymbol [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testVertical
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testWidth [
+HighstockPlotOptionsLinearregressionangleConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

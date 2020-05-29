@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testEnabled [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testEnabledThreshol
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testFillColor [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testHeight [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testLineColor [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testLineWidth [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testRadius [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSymbol [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testWidth [
+HighstockSeriesLinearregressionslopeStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

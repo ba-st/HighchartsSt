@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieEventsTest >> testAfterAnimate [
+HighchartsSeriesPieEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPieEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieEventsTest >> testCheckboxClick [
+HighchartsSeriesPieEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPieEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieEventsTest >> testClick [
+HighchartsSeriesPieEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPieEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieEventsTest >> testHide [
+HighchartsSeriesPieEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesPieEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieEventsTest >> testMouseOut [
+HighchartsSeriesPieEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesPieEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieEventsTest >> testMouseOver [
+HighchartsSeriesPieEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesPieEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieEventsTest >> testShow [
+HighchartsSeriesPieEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

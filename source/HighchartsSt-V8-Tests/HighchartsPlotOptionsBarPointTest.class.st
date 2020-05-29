@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarPointTest >> testEvents [
+HighchartsPlotOptionsBarPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

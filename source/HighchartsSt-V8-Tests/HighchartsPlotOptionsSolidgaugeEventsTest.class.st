@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSolidgaugeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSolidgaugeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testClick [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSolidgaugeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testHide [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSolidgaugeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSolidgaugeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testMouseOut [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSolidgaugeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testMouseOver [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSolidgaugeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeEventsTest >> testShow [
+HighchartsPlotOptionsSolidgaugeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

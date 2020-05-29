@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testAcrossPanes [
+HighstockYAxisPlotBandsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxisPlotBands new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisPlotBandsTest >> testSetAcrossPanes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockYAxisPlotBandsTest >> testAcrossPanes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testBorderColor [
+HighstockYAxisPlotBandsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockYAxisPlotBandsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testBorderWidth [
+HighstockYAxisPlotBandsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockYAxisPlotBandsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testClassName [
+HighstockYAxisPlotBandsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockYAxisPlotBandsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testColor [
+HighstockYAxisPlotBandsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockYAxisPlotBandsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testEvents [
+HighstockYAxisPlotBandsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockYAxisPlotBandsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testFrom [
+HighstockYAxisPlotBandsTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockYAxisPlotBandsTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testId [
+HighstockYAxisPlotBandsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockYAxisPlotBandsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testTo [
+HighstockYAxisPlotBandsTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockYAxisPlotBandsTest >> testTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisPlotBandsTest >> testZIndex [
+HighstockYAxisPlotBandsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

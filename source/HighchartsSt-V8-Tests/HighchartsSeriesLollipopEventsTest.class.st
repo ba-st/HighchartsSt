@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testAfterAnimate [
+HighchartsSeriesLollipopEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesLollipopEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testCheckboxClick [
+HighchartsSeriesLollipopEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesLollipopEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testClick [
+HighchartsSeriesLollipopEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesLollipopEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testHide [
+HighchartsSeriesLollipopEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesLollipopEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testLegendItemClick [
+HighchartsSeriesLollipopEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesLollipopEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testMouseOut [
+HighchartsSeriesLollipopEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesLollipopEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testMouseOver [
+HighchartsSeriesLollipopEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesLollipopEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopEventsTest >> testShow [
+HighchartsSeriesLollipopEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

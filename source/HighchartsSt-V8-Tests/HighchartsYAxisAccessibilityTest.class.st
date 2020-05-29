@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisAccessibilityTest >> testDescription [
+HighchartsYAxisAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsYAxisAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisAccessibilityTest >> testEnabled [
+HighchartsYAxisAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsYAxisAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisAccessibilityTest >> testRangeDescription [
+HighchartsYAxisAccessibilityTest >> testSetRangeDescription [
 
 	| component javascript expectedConfiguration |
 

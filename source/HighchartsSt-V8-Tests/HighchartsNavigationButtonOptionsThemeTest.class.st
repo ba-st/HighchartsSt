@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsThemeTest >> testFill [
+HighchartsNavigationButtonOptionsThemeTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsNavigationButtonOptionsThemeTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsThemeTest >> testPadding [
+HighchartsNavigationButtonOptionsThemeTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsNavigationButtonOptionsThemeTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationButtonOptionsThemeTest >> testStroke [
+HighchartsNavigationButtonOptionsThemeTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 

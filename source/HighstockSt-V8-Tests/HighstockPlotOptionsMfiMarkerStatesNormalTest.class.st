@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMfiMarkerStatesNormalTest >> testAnimation [
+HighstockPlotOptionsMfiMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

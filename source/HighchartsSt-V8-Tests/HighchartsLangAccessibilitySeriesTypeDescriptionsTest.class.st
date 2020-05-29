@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testArearange [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetArearange [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testArearange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testAreasplinerange [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetAreasplinerange [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testAreasplinerange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testBoxplot [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetBoxplot [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testBoxplot [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testBubble [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetBubble [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testBubble [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testColumnrange [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetColumnrange [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testColumnrange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testErrorbar [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetErrorbar [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testErrorbar [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testFunnel [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetFunnel [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testFunnel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testPyramid [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetPyramid [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testPyramid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testWaterfall [
+HighchartsLangAccessibilitySeriesTypeDescriptionsTest >> testSetWaterfall [
 
 	| component javascript expectedConfiguration |
 

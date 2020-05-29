@@ -39,8 +39,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsSeriesHeatmapDataMarkerStatesSelect >> heightPlus: aNumberOrundefined [
 
-	"The number of pixels to increase the height of the
-hovered point.
+	"The number of pixels to increase the height of the hovered point.
 Defaults to undefined."
 
 	configurationOptions at: 'heightPlus' put: aNumberOrundefined
@@ -49,8 +48,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsSeriesHeatmapDataMarkerStatesSelect >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the point marker´s outline. When
-undefined, the series´ or point´s color is used.
+	"The color of the point marker´s outline. When undefined, the series´ or point´s color is used.
 Defaults to #000000."
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -77,8 +75,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsSeriesHeatmapDataMarkerStatesSelect >> widthPlus: aNumberOrundefined [
 
-	"The number of pixels to increase the width of the
-hovered point.
+	"The number of pixels to increase the width of the hovered point.
 Defaults to undefined."
 
 	configurationOptions at: 'widthPlus' put: aNumberOrundefined

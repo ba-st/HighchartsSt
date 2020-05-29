@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsRocDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsRocDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsRocDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsRocDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsRocDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testAllAreas [
+HighstockSeriesLinearregressionangleTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionangle new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionangleTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +229,7 @@ HighstockSeriesLinearregressionangleTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testAllowPointSelect [
+HighstockSeriesLinearregressionangleTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +243,7 @@ HighstockSeriesLinearregressionangleTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testAnimationLimit [
+HighstockSeriesLinearregressionangleTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +257,7 @@ HighstockSeriesLinearregressionangleTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testBoostBlending [
+HighstockSeriesLinearregressionangleTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +271,7 @@ HighstockSeriesLinearregressionangleTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testBoostThreshold [
+HighstockSeriesLinearregressionangleTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +285,7 @@ HighstockSeriesLinearregressionangleTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testBorderColor [
+HighstockSeriesLinearregressionangleTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +299,7 @@ HighstockSeriesLinearregressionangleTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testBorderWidth [
+HighstockSeriesLinearregressionangleTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +313,7 @@ HighstockSeriesLinearregressionangleTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testClassName [
+HighstockSeriesLinearregressionangleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +327,7 @@ HighstockSeriesLinearregressionangleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testClip [
+HighstockSeriesLinearregressionangleTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +341,7 @@ HighstockSeriesLinearregressionangleTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testColor [
+HighstockSeriesLinearregressionangleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +355,7 @@ HighstockSeriesLinearregressionangleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testColorAxis [
+HighstockSeriesLinearregressionangleTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +369,7 @@ HighstockSeriesLinearregressionangleTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testColorIndex [
+HighstockSeriesLinearregressionangleTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +383,7 @@ HighstockSeriesLinearregressionangleTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testColorKey [
+HighstockSeriesLinearregressionangleTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +397,7 @@ HighstockSeriesLinearregressionangleTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCompare [
+HighstockSeriesLinearregressionangleTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +411,7 @@ HighstockSeriesLinearregressionangleTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCompareBase [
+HighstockSeriesLinearregressionangleTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighstockSeriesLinearregressionangleTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCompareStart [
+HighstockSeriesLinearregressionangleTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockSeriesLinearregressionangleTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCompareToMain [
+HighstockSeriesLinearregressionangleTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,7 @@ HighstockSeriesLinearregressionangleTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testConnectEnds [
+HighstockSeriesLinearregressionangleTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockSeriesLinearregressionangleTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testConnectNulls [
+HighstockSeriesLinearregressionangleTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,7 @@ HighstockSeriesLinearregressionangleTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCrisp [
+HighstockSeriesLinearregressionangleTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +495,7 @@ HighstockSeriesLinearregressionangleTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCropThreshold [
+HighstockSeriesLinearregressionangleTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +509,7 @@ HighstockSeriesLinearregressionangleTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCursor [
+HighstockSeriesLinearregressionangleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +523,7 @@ HighstockSeriesLinearregressionangleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testCustom [
+HighstockSeriesLinearregressionangleTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +537,7 @@ HighstockSeriesLinearregressionangleTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testDashStyle [
+HighstockSeriesLinearregressionangleTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +551,7 @@ HighstockSeriesLinearregressionangleTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testDescription [
+HighstockSeriesLinearregressionangleTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +565,7 @@ HighstockSeriesLinearregressionangleTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testEnableMouseTracking [
+HighstockSeriesLinearregressionangleTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +579,7 @@ HighstockSeriesLinearregressionangleTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testEvents [
+HighstockSeriesLinearregressionangleTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +593,7 @@ HighstockSeriesLinearregressionangleTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testFindNearestPointBy [
+HighstockSeriesLinearregressionangleTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +607,7 @@ HighstockSeriesLinearregressionangleTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testGapSize [
+HighstockSeriesLinearregressionangleTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +621,7 @@ HighstockSeriesLinearregressionangleTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testGapUnit [
+HighstockSeriesLinearregressionangleTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighstockSeriesLinearregressionangleTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testGetExtremesFromAll [
+HighstockSeriesLinearregressionangleTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +649,7 @@ HighstockSeriesLinearregressionangleTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testId [
+HighstockSeriesLinearregressionangleTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +663,7 @@ HighstockSeriesLinearregressionangleTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testIncludeInDataExport [
+HighstockSeriesLinearregressionangleTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +677,7 @@ HighstockSeriesLinearregressionangleTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testIndex [
+HighstockSeriesLinearregressionangleTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +691,7 @@ HighstockSeriesLinearregressionangleTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testJoinBy [
+HighstockSeriesLinearregressionangleTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +705,7 @@ HighstockSeriesLinearregressionangleTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testKeys [
+HighstockSeriesLinearregressionangleTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +719,7 @@ HighstockSeriesLinearregressionangleTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testLegendIndex [
+HighstockSeriesLinearregressionangleTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +733,7 @@ HighstockSeriesLinearregressionangleTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testLineWidth [
+HighstockSeriesLinearregressionangleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +747,7 @@ HighstockSeriesLinearregressionangleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testLinecap [
+HighstockSeriesLinearregressionangleTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +761,7 @@ HighstockSeriesLinearregressionangleTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testLinkedTo [
+HighstockSeriesLinearregressionangleTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +775,7 @@ HighstockSeriesLinearregressionangleTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testMapData [
+HighstockSeriesLinearregressionangleTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +789,7 @@ HighstockSeriesLinearregressionangleTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testName [
+HighstockSeriesLinearregressionangleTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +803,7 @@ HighstockSeriesLinearregressionangleTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testNavigatorOptions [
+HighstockSeriesLinearregressionangleTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +817,7 @@ HighstockSeriesLinearregressionangleTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testNegativeColor [
+HighstockSeriesLinearregressionangleTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +831,7 @@ HighstockSeriesLinearregressionangleTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testOpacity [
+HighstockSeriesLinearregressionangleTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighstockSeriesLinearregressionangleTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testPointDescriptionFormatter [
+HighstockSeriesLinearregressionangleTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +859,7 @@ HighstockSeriesLinearregressionangleTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testPointInterval [
+HighstockSeriesLinearregressionangleTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +873,7 @@ HighstockSeriesLinearregressionangleTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testPointIntervalUnit [
+HighstockSeriesLinearregressionangleTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +887,7 @@ HighstockSeriesLinearregressionangleTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testPointPlacement [
+HighstockSeriesLinearregressionangleTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +901,7 @@ HighstockSeriesLinearregressionangleTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testPointRange [
+HighstockSeriesLinearregressionangleTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +915,7 @@ HighstockSeriesLinearregressionangleTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testPointStart [
+HighstockSeriesLinearregressionangleTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +929,7 @@ HighstockSeriesLinearregressionangleTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testSelected [
+HighstockSeriesLinearregressionangleTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +943,7 @@ HighstockSeriesLinearregressionangleTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testShadow [
+HighstockSeriesLinearregressionangleTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +957,7 @@ HighstockSeriesLinearregressionangleTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testShowCheckbox [
+HighstockSeriesLinearregressionangleTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +971,7 @@ HighstockSeriesLinearregressionangleTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testShowInLegend [
+HighstockSeriesLinearregressionangleTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +985,7 @@ HighstockSeriesLinearregressionangleTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testShowInNavigator [
+HighstockSeriesLinearregressionangleTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +999,7 @@ HighstockSeriesLinearregressionangleTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testSkipKeyboardNavigation [
+HighstockSeriesLinearregressionangleTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +1013,7 @@ HighstockSeriesLinearregressionangleTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testSoftThreshold [
+HighstockSeriesLinearregressionangleTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1027,7 @@ HighstockSeriesLinearregressionangleTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testStack [
+HighstockSeriesLinearregressionangleTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1041,7 @@ HighstockSeriesLinearregressionangleTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testStacking [
+HighstockSeriesLinearregressionangleTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1055,7 @@ HighstockSeriesLinearregressionangleTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testStates [
+HighstockSeriesLinearregressionangleTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1069,7 @@ HighstockSeriesLinearregressionangleTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testStep [
+HighstockSeriesLinearregressionangleTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1083,7 @@ HighstockSeriesLinearregressionangleTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testStickyTracking [
+HighstockSeriesLinearregressionangleTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1097,7 @@ HighstockSeriesLinearregressionangleTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testThreshold [
+HighstockSeriesLinearregressionangleTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -901,7 +1111,7 @@ HighstockSeriesLinearregressionangleTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testTurboThreshold [
+HighstockSeriesLinearregressionangleTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -915,7 +1125,7 @@ HighstockSeriesLinearregressionangleTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testType [
+HighstockSeriesLinearregressionangleTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -929,7 +1139,7 @@ HighstockSeriesLinearregressionangleTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testVisible [
+HighstockSeriesLinearregressionangleTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -943,7 +1153,7 @@ HighstockSeriesLinearregressionangleTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testXAxis [
+HighstockSeriesLinearregressionangleTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -957,7 +1167,7 @@ HighstockSeriesLinearregressionangleTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testYAxis [
+HighstockSeriesLinearregressionangleTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -971,7 +1181,7 @@ HighstockSeriesLinearregressionangleTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testZIndex [
+HighstockSeriesLinearregressionangleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -985,7 +1195,7 @@ HighstockSeriesLinearregressionangleTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleTest >> testZoneAxis [
+HighstockSeriesLinearregressionangleTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

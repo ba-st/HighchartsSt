@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeControlledAxisTest >> testNext [
+HighstockYAxisResizeControlledAxisTest >> testSetNext [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockYAxisResizeControlledAxisTest >> testNext [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeControlledAxisTest >> testPrev [
+HighstockYAxisResizeControlledAxisTest >> testSetPrev [
 
 	| component javascript expectedConfiguration |
 

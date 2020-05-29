@@ -12,9 +12,7 @@ Class {
 { #category : #accessing }
 HighstockYAxisResizeControlledAxis >> next: anArrayOfnumberOrstring [
 
-	"Array of axes that should move out of the way of resizing
-being done for the current axis. If not set, the next axis
-will be used.
+	"Array of axes that should move out of the way of resizing being done for the current axis. If not set, the next axis will be used.
 Defaults to []."
 
 	configurationOptions at: 'next' put: anArrayOfnumberOrstring
@@ -23,8 +21,7 @@ Defaults to []."
 { #category : #accessing }
 HighstockYAxisResizeControlledAxis >> prev: anArrayOfnumberOrstring [
 
-	"Array of axes that should move with the current axis
-while resizing.
+	"Array of axes that should move with the current axis while resizing.
 Defaults to []."
 
 	configurationOptions at: 'prev' put: anArrayOfnumberOrstring

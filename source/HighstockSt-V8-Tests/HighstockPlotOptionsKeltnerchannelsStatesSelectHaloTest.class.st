@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testAttributes [
+HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testOpacity [
+HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testSize [
+HighstockPlotOptionsKeltnerchannelsStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

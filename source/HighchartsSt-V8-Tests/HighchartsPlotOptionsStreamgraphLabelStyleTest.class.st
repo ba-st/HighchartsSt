@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsStreamgraphLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

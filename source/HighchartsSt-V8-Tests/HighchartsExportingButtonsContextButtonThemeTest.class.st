@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonThemeTest >> testFill [
+HighchartsExportingButtonsContextButtonThemeTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsExportingButtonsContextButtonThemeTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonThemeTest >> testPadding [
+HighchartsExportingButtonsContextButtonThemeTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsExportingButtonsContextButtonThemeTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsExportingButtonsContextButtonThemeTest >> testStroke [
+HighchartsExportingButtonsContextButtonThemeTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 

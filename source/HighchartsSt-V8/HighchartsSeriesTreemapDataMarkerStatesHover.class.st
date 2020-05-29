@@ -27,9 +27,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesTreemapDataMarkerStatesHover >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The fill color of the marker in hover state. When
-undefined, the series´ or point´s fillColor for normal
-state is used.
+	"The fill color of the marker in hover state. When undefined, the series´ or point´s fillColor for normal state is used.
 "
 
 	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -47,8 +45,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsSeriesTreemapDataMarkerStatesHover >> heightPlus: aNumberOrundefined [
 
-	"The number of pixels to increase the height of the
-hovered point.
+	"The number of pixels to increase the height of the hovered point.
 Defaults to undefined."
 
 	configurationOptions at: 'heightPlus' put: aNumberOrundefined
@@ -57,9 +54,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsSeriesTreemapDataMarkerStatesHover >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the point marker´s outline. When
-undefined, the series´ or point´s lineColor for normal
-state is used.
+	"The color of the point marker´s outline. When undefined, the series´ or point´s lineColor for normal state is used.
 "
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -68,9 +63,7 @@ state is used.
 { #category : #accessing }
 HighchartsSeriesTreemapDataMarkerStatesHover >> lineWidth: aNumber [
 
-	"The width of the point marker´s outline. When
-undefined, the series´ or point´s lineWidth for normal
-state is used.
+	"The width of the point marker´s outline. When undefined, the series´ or point´s lineWidth for normal state is used.
 "
 
 	configurationOptions at: 'lineWidth' put: aNumber
@@ -97,8 +90,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsSeriesTreemapDataMarkerStatesHover >> widthPlus: aNumberOrundefined [
 
-	"The number of pixels to increase the width of the
-hovered point.
+	"The number of pixels to increase the width of the hovered point.
 Defaults to undefined."
 
 	configurationOptions at: 'widthPlus' put: aNumberOrundefined

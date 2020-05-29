@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testAcrossPanes [
+HighstockNavigatorXAxisPlotLinesTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorXAxisPlotLines new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorXAxisPlotLinesTest >> testSetAcrossPanes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testAcrossPanes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testClassName [
+HighstockNavigatorXAxisPlotLinesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testColor [
+HighstockNavigatorXAxisPlotLinesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testDashStyle [
+HighstockNavigatorXAxisPlotLinesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testEvents [
+HighstockNavigatorXAxisPlotLinesTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testId [
+HighstockNavigatorXAxisPlotLinesTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testValue [
+HighstockNavigatorXAxisPlotLinesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testValue [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testWidth [
+HighstockNavigatorXAxisPlotLinesTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockNavigatorXAxisPlotLinesTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotLinesTest >> testZIndex [
+HighstockNavigatorXAxisPlotLinesTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

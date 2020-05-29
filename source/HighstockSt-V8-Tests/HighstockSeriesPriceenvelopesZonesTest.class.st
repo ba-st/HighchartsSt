@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesZonesTest >> testClassName [
+HighstockSeriesPriceenvelopesZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesZonesTest >> testColor [
+HighstockSeriesPriceenvelopesZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesZonesTest >> testDashStyle [
+HighstockSeriesPriceenvelopesZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesZonesTest >> testFillColor [
+HighstockSeriesPriceenvelopesZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPriceenvelopesZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesZonesTest >> testValue [
+HighstockSeriesPriceenvelopesZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

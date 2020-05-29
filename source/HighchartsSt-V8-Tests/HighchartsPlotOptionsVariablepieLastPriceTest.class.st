@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieLastPriceTest >> testColor [
+HighchartsPlotOptionsVariablepieLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVariablepieLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieLastPriceTest >> testEnabled [
+HighchartsPlotOptionsVariablepieLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

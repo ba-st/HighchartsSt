@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaStatesSelectAnimationTest >> testDuration [
+HighstockPlotOptionsDemaStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

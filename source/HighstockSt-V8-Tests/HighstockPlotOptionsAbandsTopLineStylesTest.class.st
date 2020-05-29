@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsTopLineStylesTest >> testLineWidth [
+HighstockPlotOptionsAbandsTopLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

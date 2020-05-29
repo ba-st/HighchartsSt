@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testFontSize
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testFontWeig
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsLinearregressioninterceptDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

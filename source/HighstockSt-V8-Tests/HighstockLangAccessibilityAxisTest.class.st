@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testRangeCategories [
+HighstockLangAccessibilityAxisTest >> testSetRangeCategories [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityAxisTest >> testRangeCategories [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testRangeFromTo [
+HighstockLangAccessibilityAxisTest >> testSetRangeFromTo [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilityAxisTest >> testRangeFromTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testTimeRangeDays [
+HighstockLangAccessibilityAxisTest >> testSetTimeRangeDays [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangAccessibilityAxisTest >> testTimeRangeDays [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testTimeRangeHours [
+HighstockLangAccessibilityAxisTest >> testSetTimeRangeHours [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLangAccessibilityAxisTest >> testTimeRangeHours [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testTimeRangeMinutes [
+HighstockLangAccessibilityAxisTest >> testSetTimeRangeMinutes [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLangAccessibilityAxisTest >> testTimeRangeMinutes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testTimeRangeSeconds [
+HighstockLangAccessibilityAxisTest >> testSetTimeRangeSeconds [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockLangAccessibilityAxisTest >> testTimeRangeSeconds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testXAxisDescriptionPlural [
+HighstockLangAccessibilityAxisTest >> testSetXAxisDescriptionPlural [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockLangAccessibilityAxisTest >> testXAxisDescriptionPlural [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testXAxisDescriptionSingular [
+HighstockLangAccessibilityAxisTest >> testSetXAxisDescriptionSingular [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockLangAccessibilityAxisTest >> testXAxisDescriptionSingular [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testYAxisDescriptionPlural [
+HighstockLangAccessibilityAxisTest >> testSetYAxisDescriptionPlural [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockLangAccessibilityAxisTest >> testYAxisDescriptionPlural [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityAxisTest >> testYAxisDescriptionSingular [
+HighstockLangAccessibilityAxisTest >> testSetYAxisDescriptionSingular [
 
 	| component javascript expectedConfiguration |
 

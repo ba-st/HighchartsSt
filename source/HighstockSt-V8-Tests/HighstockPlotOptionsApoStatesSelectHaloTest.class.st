@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoStatesSelectHaloTest >> testAttributes [
+HighstockPlotOptionsApoStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsApoStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoStatesSelectHaloTest >> testOpacity [
+HighstockPlotOptionsApoStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsApoStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoStatesSelectHaloTest >> testSize [
+HighstockPlotOptionsApoStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

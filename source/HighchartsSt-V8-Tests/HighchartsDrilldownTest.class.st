@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownTest >> testActiveAxisLabelStyle [
+HighchartsDrilldownTest >> testGetActiveDataLabelStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsDrilldown new.
+	component activeDataLabelStyle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'activeDataLabelStyle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDrilldownTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsDrilldown new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDrilldownTest >> testGetDrillUpButton [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsDrilldown new.
+	component drillUpButton.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'drillUpButton' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDrilldownTest >> testSetActiveAxisLabelStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsDrilldownTest >> testActiveAxisLabelStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownTest >> testAllowPointDrilldown [
+HighchartsDrilldownTest >> testSetAllowPointDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsDrilldownTest >> testAllowPointDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownTest >> testSeries [
+HighchartsDrilldownTest >> testSetSeries [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testAfterAnimate [
+HighstockSeriesTrendlineEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesTrendlineEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testCheckboxClick [
+HighstockSeriesTrendlineEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesTrendlineEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testClick [
+HighstockSeriesTrendlineEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesTrendlineEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testHide [
+HighstockSeriesTrendlineEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesTrendlineEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testLegendItemClick [
+HighstockSeriesTrendlineEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesTrendlineEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testMouseOut [
+HighstockSeriesTrendlineEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesTrendlineEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testMouseOver [
+HighstockSeriesTrendlineEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesTrendlineEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineEventsTest >> testShow [
+HighstockSeriesTrendlineEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

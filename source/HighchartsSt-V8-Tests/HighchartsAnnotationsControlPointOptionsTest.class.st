@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsTest >> testHeight [
+HighchartsAnnotationsControlPointOptionsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsControlPointOptions new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsControlPointOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsAnnotationsControlPointOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsTest >> testPositioner [
+HighchartsAnnotationsControlPointOptionsTest >> testSetPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsAnnotationsControlPointOptionsTest >> testPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsTest >> testSymbol [
+HighchartsAnnotationsControlPointOptionsTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsAnnotationsControlPointOptionsTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsTest >> testVisible [
+HighchartsAnnotationsControlPointOptionsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsAnnotationsControlPointOptionsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsControlPointOptionsTest >> testWidth [
+HighchartsAnnotationsControlPointOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

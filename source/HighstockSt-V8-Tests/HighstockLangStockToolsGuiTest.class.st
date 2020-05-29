@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testAdvanced [
+HighstockLangStockToolsGuiTest >> testSetAdvanced [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangStockToolsGuiTest >> testAdvanced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testArrowLine [
+HighstockLangStockToolsGuiTest >> testSetArrowLine [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangStockToolsGuiTest >> testArrowLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testArrowRay [
+HighstockLangStockToolsGuiTest >> testSetArrowRay [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangStockToolsGuiTest >> testArrowRay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testArrowSegment [
+HighstockLangStockToolsGuiTest >> testSetArrowSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLangStockToolsGuiTest >> testArrowSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testCircle [
+HighstockLangStockToolsGuiTest >> testSetCircle [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLangStockToolsGuiTest >> testCircle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testCrooked3 [
+HighstockLangStockToolsGuiTest >> testSetCrooked3 [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockLangStockToolsGuiTest >> testCrooked3 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testCrooked5 [
+HighstockLangStockToolsGuiTest >> testSetCrooked5 [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockLangStockToolsGuiTest >> testCrooked5 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testCrookedLines [
+HighstockLangStockToolsGuiTest >> testSetCrookedLines [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockLangStockToolsGuiTest >> testCrookedLines [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testCurrentPriceIndicator [
+HighstockLangStockToolsGuiTest >> testSetCurrentPriceIndicator [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockLangStockToolsGuiTest >> testCurrentPriceIndicator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testElliott3 [
+HighstockLangStockToolsGuiTest >> testSetElliott3 [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockLangStockToolsGuiTest >> testElliott3 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testElliott5 [
+HighstockLangStockToolsGuiTest >> testSetElliott5 [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockLangStockToolsGuiTest >> testElliott5 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testFibonacci [
+HighstockLangStockToolsGuiTest >> testSetFibonacci [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockLangStockToolsGuiTest >> testFibonacci [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testFlagCirclepin [
+HighstockLangStockToolsGuiTest >> testSetFlagCirclepin [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockLangStockToolsGuiTest >> testFlagCirclepin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testFlagDiamondpin [
+HighstockLangStockToolsGuiTest >> testSetFlagDiamondpin [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockLangStockToolsGuiTest >> testFlagDiamondpin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testFlagSimplepin [
+HighstockLangStockToolsGuiTest >> testSetFlagSimplepin [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockLangStockToolsGuiTest >> testFlagSimplepin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testFlagSquarepin [
+HighstockLangStockToolsGuiTest >> testSetFlagSquarepin [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockLangStockToolsGuiTest >> testFlagSquarepin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testFlags [
+HighstockLangStockToolsGuiTest >> testSetFlags [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockLangStockToolsGuiTest >> testFlags [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testFullScreen [
+HighstockLangStockToolsGuiTest >> testSetFullScreen [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockLangStockToolsGuiTest >> testFullScreen [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testHorizontalLine [
+HighstockLangStockToolsGuiTest >> testSetHorizontalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockLangStockToolsGuiTest >> testHorizontalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testIndicators [
+HighstockLangStockToolsGuiTest >> testSetIndicators [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockLangStockToolsGuiTest >> testIndicators [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testInfinityLine [
+HighstockLangStockToolsGuiTest >> testSetInfinityLine [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockLangStockToolsGuiTest >> testInfinityLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testLabel [
+HighstockLangStockToolsGuiTest >> testSetLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighstockLangStockToolsGuiTest >> testLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testLine [
+HighstockLangStockToolsGuiTest >> testSetLine [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighstockLangStockToolsGuiTest >> testLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testLines [
+HighstockLangStockToolsGuiTest >> testSetLines [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +341,7 @@ HighstockLangStockToolsGuiTest >> testLines [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testMeasure [
+HighstockLangStockToolsGuiTest >> testSetMeasure [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +355,7 @@ HighstockLangStockToolsGuiTest >> testMeasure [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testMeasureX [
+HighstockLangStockToolsGuiTest >> testSetMeasureX [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +369,7 @@ HighstockLangStockToolsGuiTest >> testMeasureX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testMeasureXY [
+HighstockLangStockToolsGuiTest >> testSetMeasureXY [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +383,7 @@ HighstockLangStockToolsGuiTest >> testMeasureXY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testMeasureY [
+HighstockLangStockToolsGuiTest >> testSetMeasureY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +397,7 @@ HighstockLangStockToolsGuiTest >> testMeasureY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testParallelChannel [
+HighstockLangStockToolsGuiTest >> testSetParallelChannel [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +411,7 @@ HighstockLangStockToolsGuiTest >> testParallelChannel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testPitchfork [
+HighstockLangStockToolsGuiTest >> testSetPitchfork [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +425,7 @@ HighstockLangStockToolsGuiTest >> testPitchfork [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testRay [
+HighstockLangStockToolsGuiTest >> testSetRay [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +439,7 @@ HighstockLangStockToolsGuiTest >> testRay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testRectangle [
+HighstockLangStockToolsGuiTest >> testSetRectangle [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +453,7 @@ HighstockLangStockToolsGuiTest >> testRectangle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testSaveChart [
+HighstockLangStockToolsGuiTest >> testSetSaveChart [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +467,7 @@ HighstockLangStockToolsGuiTest >> testSaveChart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testSegment [
+HighstockLangStockToolsGuiTest >> testSetSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +481,7 @@ HighstockLangStockToolsGuiTest >> testSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testSimpleShapes [
+HighstockLangStockToolsGuiTest >> testSetSimpleShapes [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +495,7 @@ HighstockLangStockToolsGuiTest >> testSimpleShapes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testToggleAnnotations [
+HighstockLangStockToolsGuiTest >> testSetToggleAnnotations [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +509,7 @@ HighstockLangStockToolsGuiTest >> testToggleAnnotations [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testTypeCandlestick [
+HighstockLangStockToolsGuiTest >> testSetTypeCandlestick [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +523,7 @@ HighstockLangStockToolsGuiTest >> testTypeCandlestick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testTypeChange [
+HighstockLangStockToolsGuiTest >> testSetTypeChange [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +537,7 @@ HighstockLangStockToolsGuiTest >> testTypeChange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testTypeLine [
+HighstockLangStockToolsGuiTest >> testSetTypeLine [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +551,7 @@ HighstockLangStockToolsGuiTest >> testTypeLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testTypeOHLC [
+HighstockLangStockToolsGuiTest >> testSetTypeOHLC [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +565,7 @@ HighstockLangStockToolsGuiTest >> testTypeOHLC [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testVerticalArrow [
+HighstockLangStockToolsGuiTest >> testSetVerticalArrow [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +579,7 @@ HighstockLangStockToolsGuiTest >> testVerticalArrow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testVerticalCounter [
+HighstockLangStockToolsGuiTest >> testSetVerticalCounter [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +593,7 @@ HighstockLangStockToolsGuiTest >> testVerticalCounter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testVerticalLabel [
+HighstockLangStockToolsGuiTest >> testSetVerticalLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +607,7 @@ HighstockLangStockToolsGuiTest >> testVerticalLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testVerticalLabels [
+HighstockLangStockToolsGuiTest >> testSetVerticalLabels [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +621,7 @@ HighstockLangStockToolsGuiTest >> testVerticalLabels [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testVerticalLine [
+HighstockLangStockToolsGuiTest >> testSetVerticalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +635,7 @@ HighstockLangStockToolsGuiTest >> testVerticalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testZoomChange [
+HighstockLangStockToolsGuiTest >> testSetZoomChange [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +649,7 @@ HighstockLangStockToolsGuiTest >> testZoomChange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testZoomX [
+HighstockLangStockToolsGuiTest >> testSetZoomX [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +663,7 @@ HighstockLangStockToolsGuiTest >> testZoomX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testZoomXY [
+HighstockLangStockToolsGuiTest >> testSetZoomXY [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +677,7 @@ HighstockLangStockToolsGuiTest >> testZoomXY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangStockToolsGuiTest >> testZoomY [
+HighstockLangStockToolsGuiTest >> testSetZoomY [
 
 	| component javascript expectedConfiguration |
 

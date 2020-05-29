@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testAfterAnimate [
+HighstockSeriesXrangeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesXrangeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testCheckboxClick [
+HighstockSeriesXrangeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesXrangeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testClick [
+HighstockSeriesXrangeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesXrangeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testHide [
+HighstockSeriesXrangeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesXrangeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testLegendItemClick [
+HighstockSeriesXrangeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesXrangeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testMouseOut [
+HighstockSeriesXrangeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesXrangeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testMouseOver [
+HighstockSeriesXrangeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesXrangeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeEventsTest >> testShow [
+HighstockSeriesXrangeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

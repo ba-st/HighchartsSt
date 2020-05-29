@@ -34,8 +34,7 @@ HighchartsSeriesXrangeData >> accessibility [
 { #category : #accessing }
 HighchartsSeriesXrangeData >> className: aString [
 
-	"An additional, individual class name for the data point´s graphic
-representation.
+	"An additional, individual class name for the data point´s graphic representation.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -44,10 +43,7 @@ representation.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use
-colorIndex.
+	"Individual color for the point. By default the color is pulled from the global colors array. In styled mode, the color option doesn´t take effect. Instead, use colorIndex.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -56,11 +52,7 @@ colorIndex.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> colorIndex: aNumber [
 
-	"A specific color index to use for the point, so its graphic representations
-are given the class name highcharts-color-{n}. In styled mode this will
-change the color of the graphic. In non-styled mode, the color by is set by
-the fill attribute, so the change in class name won´t have a visual effect
-by default.
+	"A specific color index to use for the point, so its graphic representations are given the class name highcharts-color-{n}. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the fill attribute, so the change in class name won´t have a visual effect by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -69,9 +61,7 @@ by default.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> custom: anObject [
 
-	"A reserved subspace to store options and values for customized functionality.
-Here you can add additional data for your own event callbacks and formatter
-callbacks.
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
 "
 
 	configurationOptions at: 'custom' put: anObject
@@ -80,8 +70,7 @@ callbacks.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesXrangeDataDataLabels new ]
 ]
@@ -89,8 +78,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -99,8 +87,7 @@ about the point.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> dragDrop [
 
-	"Point specific options for the draggable-points module. Overrides options on
-series.dragDrop.
+	"Point specific options for the draggable-points module. Overrides options on series.dragDrop.
 "
 	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighchartsSeriesXrangeDataDragDrop new ]
 ]
@@ -108,8 +95,7 @@ series.dragDrop.
 { #category : #accessing }
 HighchartsSeriesXrangeData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series array to
-use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -127,8 +113,7 @@ HighchartsSeriesXrangeData >> events: anObject [
 { #category : #accessing }
 HighchartsSeriesXrangeData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -137,9 +122,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighchartsSeriesXrangeData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
@@ -165,9 +148,7 @@ HighchartsSeriesXrangeData >> name: aString [
 { #category : #accessing }
 HighchartsSeriesXrangeData >> partialFill [
 
-	"A partial fill for each point, typically used to visualize how much of
-a task is performed. The partial fill object can be set either on series
-or point level.
+	"A partial fill for each point, typically used to visualize how much of a task is performed. The partial fill object can be set either on series or point level.
 "
 	^ configurationOptions at: 'partialFill' ifAbsentPut: [ HighchartsSeriesXrangeDataPartialFill new ]
 ]

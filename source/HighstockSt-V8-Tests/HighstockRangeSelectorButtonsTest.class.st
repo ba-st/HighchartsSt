@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsTest >> testCount [
+HighstockRangeSelectorButtonsTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockRangeSelectorButtons new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockRangeSelectorButtonsTest >> testSetCount [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockRangeSelectorButtonsTest >> testCount [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsTest >> testEvents [
+HighstockRangeSelectorButtonsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockRangeSelectorButtonsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsTest >> testOffsetMax [
+HighstockRangeSelectorButtonsTest >> testSetOffsetMax [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockRangeSelectorButtonsTest >> testOffsetMax [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsTest >> testOffsetMin [
+HighstockRangeSelectorButtonsTest >> testSetOffsetMin [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockRangeSelectorButtonsTest >> testOffsetMin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsTest >> testPreserveDataGrouping [
+HighstockRangeSelectorButtonsTest >> testSetPreserveDataGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockRangeSelectorButtonsTest >> testPreserveDataGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsTest >> testText [
+HighstockRangeSelectorButtonsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockRangeSelectorButtonsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonsTest >> testType [
+HighstockRangeSelectorButtonsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

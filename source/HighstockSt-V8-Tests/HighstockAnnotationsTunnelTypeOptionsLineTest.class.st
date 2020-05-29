@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsLineTest >> testFill [
+HighstockAnnotationsTunnelTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsTunnelTypeOptionsLineTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsLineTest >> testStrokeWidth [
+HighstockAnnotationsTunnelTypeOptionsLineTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 

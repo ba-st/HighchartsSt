@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockXAxisEventsTest >> testAfterSetExtremes [
+HighstockXAxisEventsTest >> testSetAfterSetExtremes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockXAxisEventsTest >> testAfterSetExtremes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisEventsTest >> testPointInBreak [
+HighstockXAxisEventsTest >> testSetPointInBreak [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockXAxisEventsTest >> testPointInBreak [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisEventsTest >> testSetExtremes [
+HighstockXAxisEventsTest >> testSetSetExtremes [
 
 	| component javascript expectedConfiguration |
 

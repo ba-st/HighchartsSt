@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testClassName [
+HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testClassName
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testColor [
+HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testCursor [
+HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testLineColor [
+HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testLineColor
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testLineWidth [
+HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testLineWidth
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testZIndex [
+HighstockSeriesLinearregressionslopeDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

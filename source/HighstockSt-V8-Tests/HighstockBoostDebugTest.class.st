@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockBoostDebugTest >> testShowSkipSummary [
+HighstockBoostDebugTest >> testSetShowSkipSummary [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockBoostDebugTest >> testShowSkipSummary [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostDebugTest >> testTimeBufferCopy [
+HighstockBoostDebugTest >> testSetTimeBufferCopy [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockBoostDebugTest >> testTimeBufferCopy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostDebugTest >> testTimeKDTree [
+HighstockBoostDebugTest >> testSetTimeKDTree [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockBoostDebugTest >> testTimeKDTree [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostDebugTest >> testTimeRendering [
+HighstockBoostDebugTest >> testSetTimeRendering [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockBoostDebugTest >> testTimeRendering [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostDebugTest >> testTimeSeriesProcessing [
+HighstockBoostDebugTest >> testSetTimeSeriesProcessing [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockBoostDebugTest >> testTimeSeriesProcessing [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostDebugTest >> testTimeSetup [
+HighstockBoostDebugTest >> testSetTimeSetup [
 
 	| component javascript expectedConfiguration |
 

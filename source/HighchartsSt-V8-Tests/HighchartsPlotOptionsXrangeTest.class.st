@@ -5,7 +5,133 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testAllAreas [
+HighchartsPlotOptionsXrangeTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetPartialFill [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component partialFill.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'partialFill' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsXrange new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsXrangeTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +145,7 @@ HighchartsPlotOptionsXrangeTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testAllowPointSelect [
+HighchartsPlotOptionsXrangeTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +159,7 @@ HighchartsPlotOptionsXrangeTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testAnimationLimit [
+HighchartsPlotOptionsXrangeTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +173,7 @@ HighchartsPlotOptionsXrangeTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testBoostBlending [
+HighchartsPlotOptionsXrangeTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +187,7 @@ HighchartsPlotOptionsXrangeTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testBorderColor [
+HighchartsPlotOptionsXrangeTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +201,7 @@ HighchartsPlotOptionsXrangeTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testBorderRadius [
+HighchartsPlotOptionsXrangeTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +215,7 @@ HighchartsPlotOptionsXrangeTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testBorderWidth [
+HighchartsPlotOptionsXrangeTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +229,7 @@ HighchartsPlotOptionsXrangeTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testClassName [
+HighchartsPlotOptionsXrangeTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +243,7 @@ HighchartsPlotOptionsXrangeTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testClip [
+HighchartsPlotOptionsXrangeTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +257,7 @@ HighchartsPlotOptionsXrangeTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testColor [
+HighchartsPlotOptionsXrangeTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +271,7 @@ HighchartsPlotOptionsXrangeTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testColorAxis [
+HighchartsPlotOptionsXrangeTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +285,7 @@ HighchartsPlotOptionsXrangeTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testColorByPoint [
+HighchartsPlotOptionsXrangeTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +299,7 @@ HighchartsPlotOptionsXrangeTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testColorIndex [
+HighchartsPlotOptionsXrangeTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +313,7 @@ HighchartsPlotOptionsXrangeTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testColorKey [
+HighchartsPlotOptionsXrangeTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +327,7 @@ HighchartsPlotOptionsXrangeTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testColors [
+HighchartsPlotOptionsXrangeTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +341,7 @@ HighchartsPlotOptionsXrangeTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testCursor [
+HighchartsPlotOptionsXrangeTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +355,7 @@ HighchartsPlotOptionsXrangeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testCustom [
+HighchartsPlotOptionsXrangeTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +369,7 @@ HighchartsPlotOptionsXrangeTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testDashStyle [
+HighchartsPlotOptionsXrangeTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +383,7 @@ HighchartsPlotOptionsXrangeTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testDescription [
+HighchartsPlotOptionsXrangeTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +397,7 @@ HighchartsPlotOptionsXrangeTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testEnableMouseTracking [
+HighchartsPlotOptionsXrangeTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +411,7 @@ HighchartsPlotOptionsXrangeTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testEvents [
+HighchartsPlotOptionsXrangeTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +425,7 @@ HighchartsPlotOptionsXrangeTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testGroupPadding [
+HighchartsPlotOptionsXrangeTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +439,7 @@ HighchartsPlotOptionsXrangeTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testGroupZPadding [
+HighchartsPlotOptionsXrangeTest >> testSetGroupZPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +453,7 @@ HighchartsPlotOptionsXrangeTest >> testGroupZPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testGrouping [
+HighchartsPlotOptionsXrangeTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +467,7 @@ HighchartsPlotOptionsXrangeTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testIncludeInDataExport [
+HighchartsPlotOptionsXrangeTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +481,7 @@ HighchartsPlotOptionsXrangeTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testJoinBy [
+HighchartsPlotOptionsXrangeTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +495,7 @@ HighchartsPlotOptionsXrangeTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testKeys [
+HighchartsPlotOptionsXrangeTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +509,7 @@ HighchartsPlotOptionsXrangeTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testLinkedTo [
+HighchartsPlotOptionsXrangeTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +523,7 @@ HighchartsPlotOptionsXrangeTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testMaxPointWidth [
+HighchartsPlotOptionsXrangeTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +537,7 @@ HighchartsPlotOptionsXrangeTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testMinPointLength [
+HighchartsPlotOptionsXrangeTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +551,7 @@ HighchartsPlotOptionsXrangeTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testOpacity [
+HighchartsPlotOptionsXrangeTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +565,7 @@ HighchartsPlotOptionsXrangeTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsXrangeTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +579,7 @@ HighchartsPlotOptionsXrangeTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testPointPadding [
+HighchartsPlotOptionsXrangeTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +593,7 @@ HighchartsPlotOptionsXrangeTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testPointWidth [
+HighchartsPlotOptionsXrangeTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +607,7 @@ HighchartsPlotOptionsXrangeTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testSelected [
+HighchartsPlotOptionsXrangeTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +621,7 @@ HighchartsPlotOptionsXrangeTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testShadow [
+HighchartsPlotOptionsXrangeTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +635,7 @@ HighchartsPlotOptionsXrangeTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testShowCheckbox [
+HighchartsPlotOptionsXrangeTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +649,7 @@ HighchartsPlotOptionsXrangeTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testShowInLegend [
+HighchartsPlotOptionsXrangeTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +663,7 @@ HighchartsPlotOptionsXrangeTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsXrangeTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +677,7 @@ HighchartsPlotOptionsXrangeTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testStates [
+HighchartsPlotOptionsXrangeTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +691,7 @@ HighchartsPlotOptionsXrangeTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testStickyTracking [
+HighchartsPlotOptionsXrangeTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +705,7 @@ HighchartsPlotOptionsXrangeTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testTurboThreshold [
+HighchartsPlotOptionsXrangeTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +719,7 @@ HighchartsPlotOptionsXrangeTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testVisible [
+HighchartsPlotOptionsXrangeTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +733,7 @@ HighchartsPlotOptionsXrangeTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testZIndex [
+HighchartsPlotOptionsXrangeTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +747,7 @@ HighchartsPlotOptionsXrangeTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangeTest >> testZoneAxis [
+HighchartsPlotOptionsXrangeTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

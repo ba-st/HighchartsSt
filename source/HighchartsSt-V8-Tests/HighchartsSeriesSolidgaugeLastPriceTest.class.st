@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLastPriceTest >> testColor [
+HighchartsSeriesSolidgaugeLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSolidgaugeLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeLastPriceTest >> testEnabled [
+HighchartsSeriesSolidgaugeLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

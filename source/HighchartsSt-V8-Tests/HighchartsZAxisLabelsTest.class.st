@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testAlign [
+HighchartsZAxisLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsZAxisLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsZAxisLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsZAxisLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testAutoRotation [
+HighchartsZAxisLabelsTest >> testSetAutoRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsZAxisLabelsTest >> testAutoRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testAutoRotationLimit [
+HighchartsZAxisLabelsTest >> testSetAutoRotationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsZAxisLabelsTest >> testAutoRotationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testDistance [
+HighchartsZAxisLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsZAxisLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testEnabled [
+HighchartsZAxisLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsZAxisLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testFormat [
+HighchartsZAxisLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsZAxisLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testFormatter [
+HighchartsZAxisLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsZAxisLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testIndentation [
+HighchartsZAxisLabelsTest >> testSetIndentation [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsZAxisLabelsTest >> testIndentation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testMaxStaggerLines [
+HighchartsZAxisLabelsTest >> testSetMaxStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsZAxisLabelsTest >> testMaxStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testOverflow [
+HighchartsZAxisLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsZAxisLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testPadding [
+HighchartsZAxisLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsZAxisLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testPosition3d [
+HighchartsZAxisLabelsTest >> testSetPosition3d [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsZAxisLabelsTest >> testPosition3d [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testReserveSpace [
+HighchartsZAxisLabelsTest >> testSetReserveSpace [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsZAxisLabelsTest >> testReserveSpace [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testRotation [
+HighchartsZAxisLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsZAxisLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testSkew3d [
+HighchartsZAxisLabelsTest >> testSetSkew3d [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighchartsZAxisLabelsTest >> testSkew3d [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testStaggerLines [
+HighchartsZAxisLabelsTest >> testSetStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighchartsZAxisLabelsTest >> testStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testStep [
+HighchartsZAxisLabelsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighchartsZAxisLabelsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testUseHTML [
+HighchartsZAxisLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighchartsZAxisLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testX [
+HighchartsZAxisLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighchartsZAxisLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testY [
+HighchartsZAxisLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighchartsZAxisLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisLabelsTest >> testZIndex [
+HighchartsZAxisLabelsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

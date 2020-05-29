@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testColor [
+HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testFontSize [
+HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testFontWeight [
+HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testTextOutline [
+HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testTextOutline [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testTextOverflow [
+HighchartsSeriesSunburstLevelsDataLabelsStyleTest >> testSetTextOverflow [
 
 	| component javascript expectedConfiguration |
 

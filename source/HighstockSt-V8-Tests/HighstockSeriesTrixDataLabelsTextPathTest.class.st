@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesTrixDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesTrixDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesTrixDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

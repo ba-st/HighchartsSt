@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsFlagsFlagSquarepinTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsFlagsFlagSquarepinTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

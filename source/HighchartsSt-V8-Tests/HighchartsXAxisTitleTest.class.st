@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testAlign [
+HighchartsXAxisTitleTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsXAxisTitle new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsXAxisTitleTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsXAxisTitleTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testEnabled [
+HighchartsXAxisTitleTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsXAxisTitleTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testMargin [
+HighchartsXAxisTitleTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsXAxisTitleTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testOffset [
+HighchartsXAxisTitleTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsXAxisTitleTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testPosition3d [
+HighchartsXAxisTitleTest >> testSetPosition3d [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsXAxisTitleTest >> testPosition3d [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testReserveSpace [
+HighchartsXAxisTitleTest >> testSetReserveSpace [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsXAxisTitleTest >> testReserveSpace [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testRotation [
+HighchartsXAxisTitleTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsXAxisTitleTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testSkew3d [
+HighchartsXAxisTitleTest >> testSetSkew3d [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsXAxisTitleTest >> testSkew3d [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testText [
+HighchartsXAxisTitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsXAxisTitleTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testTextAlign [
+HighchartsXAxisTitleTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsXAxisTitleTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testUseHTML [
+HighchartsXAxisTitleTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsXAxisTitleTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testX [
+HighchartsXAxisTitleTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsXAxisTitleTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTitleTest >> testY [
+HighchartsXAxisTitleTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

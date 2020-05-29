@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineLabelOptionsAccessibilityTest >> testDescription [
+HighstockAnnotationsInfinityLineLabelOptionsAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

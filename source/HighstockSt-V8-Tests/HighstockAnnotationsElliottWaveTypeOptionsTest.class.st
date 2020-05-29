@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsTest >> testXAxis [
+HighstockAnnotationsElliottWaveTypeOptionsTest >> testGetLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsElliottWaveTypeOptions new.
+	component line.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'line' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsElliottWaveTypeOptionsTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsElliottWaveTypeOptions new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsElliottWaveTypeOptionsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockAnnotationsElliottWaveTypeOptionsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsTest >> testYAxis [
+HighstockAnnotationsElliottWaveTypeOptionsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

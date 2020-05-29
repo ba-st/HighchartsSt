@@ -19,8 +19,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockAccessibilityKeyboardNavigation >> focusBorder [
 
-	"Options for the focus border drawn around elements while
-navigating through them.
+	"Options for the focus border drawn around elements while navigating through them.
 "
 	^ configurationOptions at: 'focusBorder' ifAbsentPut: [ HighstockAccessibilityKeyboardNavigationFocusBorder new ]
 ]
@@ -28,10 +27,7 @@ navigating through them.
 { #category : #accessing }
 HighstockAccessibilityKeyboardNavigation >> order: anArrayOfstring [
 
-	"Order of tab navigation in the chart. Determines which elements
-are tabbed to first. Available elements are: series, zoom,
-rangeSelector, chartMenu, legend. In addition, any custom
-components can be added here.
+	"Order of tab navigation in the chart. Determines which elements are tabbed to first. Available elements are: series, zoom, rangeSelector, chartMenu, legend. In addition, any custom components can be added here.
 "
 
 	configurationOptions at: 'order' put: anArrayOfstring
@@ -48,8 +44,7 @@ HighstockAccessibilityKeyboardNavigation >> seriesNavigation [
 { #category : #accessing }
 HighstockAccessibilityKeyboardNavigation >> wrapAround: aBoolean [
 
-	"Whether or not to wrap around when reaching the end of arrow-key
-navigation for an element in the chart.
+	"Whether or not to wrap around when reaching the end of arrow-key navigation for an element in the chart.
 Defaults to true."
 
 	configurationOptions at: 'wrapAround' put: aBoolean

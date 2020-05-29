@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairTest >> testClassName [
+HighstockXAxisCrosshairTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockXAxisCrosshair new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockXAxisCrosshairTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockXAxisCrosshairTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairTest >> testColor [
+HighstockXAxisCrosshairTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockXAxisCrosshairTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairTest >> testDashStyle [
+HighstockXAxisCrosshairTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockXAxisCrosshairTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairTest >> testSnap [
+HighstockXAxisCrosshairTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockXAxisCrosshairTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairTest >> testWidth [
+HighstockXAxisCrosshairTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockXAxisCrosshairTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairTest >> testZIndex [
+HighstockXAxisCrosshairTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

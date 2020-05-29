@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesVbpParamsTest >> testRanges [
+HighstockSeriesVbpParamsTest >> testSetRanges [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesVbpParamsTest >> testRanges [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVbpParamsTest >> testVolumeSeriesID [
+HighstockSeriesVbpParamsTest >> testSetVolumeSeriesID [
 
 	| component javascript expectedConfiguration |
 

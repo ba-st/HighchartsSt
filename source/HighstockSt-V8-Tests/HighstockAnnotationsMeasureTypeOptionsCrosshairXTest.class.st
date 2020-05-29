@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testDashStyle [
+HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testEnabled [
+HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testMarkerEnd [
+HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testSetMarkerEnd [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testMarkerEnd [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testZIndex [
+HighstockAnnotationsMeasureTypeOptionsCrosshairXTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

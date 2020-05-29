@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testAfterAnimate [
+HighstockSeriesAtrEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAtrEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testCheckboxClick [
+HighstockSeriesAtrEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAtrEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testClick [
+HighstockSeriesAtrEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAtrEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testHide [
+HighstockSeriesAtrEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAtrEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testLegendItemClick [
+HighstockSeriesAtrEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAtrEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testMouseOut [
+HighstockSeriesAtrEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAtrEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testMouseOver [
+HighstockSeriesAtrEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAtrEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAtrEventsTest >> testShow [
+HighstockSeriesAtrEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

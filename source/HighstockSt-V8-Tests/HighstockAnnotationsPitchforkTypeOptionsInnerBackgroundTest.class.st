@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testDashStyle [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testFill [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSnap [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSrc [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetSrc [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSrc [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testStroke [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testStrokeWidth [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 

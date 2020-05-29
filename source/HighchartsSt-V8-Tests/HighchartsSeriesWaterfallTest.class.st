@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testAllAreas [
+HighchartsSeriesWaterfallTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWaterfall new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'waterfall';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWaterfallTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +245,7 @@ HighchartsSeriesWaterfallTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testAllowPointSelect [
+HighchartsSeriesWaterfallTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +260,7 @@ HighchartsSeriesWaterfallTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testAnimationLimit [
+HighchartsSeriesWaterfallTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +275,7 @@ HighchartsSeriesWaterfallTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testBoostBlending [
+HighchartsSeriesWaterfallTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +290,7 @@ HighchartsSeriesWaterfallTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testBoostThreshold [
+HighchartsSeriesWaterfallTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +305,7 @@ HighchartsSeriesWaterfallTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testBorderColor [
+HighchartsSeriesWaterfallTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +320,7 @@ HighchartsSeriesWaterfallTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testBorderRadius [
+HighchartsSeriesWaterfallTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +335,7 @@ HighchartsSeriesWaterfallTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testBorderWidth [
+HighchartsSeriesWaterfallTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +350,7 @@ HighchartsSeriesWaterfallTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testClassName [
+HighchartsSeriesWaterfallTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +365,7 @@ HighchartsSeriesWaterfallTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testClip [
+HighchartsSeriesWaterfallTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +380,7 @@ HighchartsSeriesWaterfallTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testColor [
+HighchartsSeriesWaterfallTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +395,7 @@ HighchartsSeriesWaterfallTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testColorAxis [
+HighchartsSeriesWaterfallTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +410,7 @@ HighchartsSeriesWaterfallTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testColorByPoint [
+HighchartsSeriesWaterfallTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +425,7 @@ HighchartsSeriesWaterfallTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testColorIndex [
+HighchartsSeriesWaterfallTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +440,7 @@ HighchartsSeriesWaterfallTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testColorKey [
+HighchartsSeriesWaterfallTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +455,7 @@ HighchartsSeriesWaterfallTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testColors [
+HighchartsSeriesWaterfallTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +470,7 @@ HighchartsSeriesWaterfallTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testCompare [
+HighchartsSeriesWaterfallTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +485,7 @@ HighchartsSeriesWaterfallTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testCompareBase [
+HighchartsSeriesWaterfallTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +500,7 @@ HighchartsSeriesWaterfallTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testCompareStart [
+HighchartsSeriesWaterfallTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +515,7 @@ HighchartsSeriesWaterfallTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testConnectEnds [
+HighchartsSeriesWaterfallTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +530,7 @@ HighchartsSeriesWaterfallTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testConnectNulls [
+HighchartsSeriesWaterfallTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +545,7 @@ HighchartsSeriesWaterfallTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testCrisp [
+HighchartsSeriesWaterfallTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +560,7 @@ HighchartsSeriesWaterfallTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testCropThreshold [
+HighchartsSeriesWaterfallTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +575,7 @@ HighchartsSeriesWaterfallTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testCursor [
+HighchartsSeriesWaterfallTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +590,7 @@ HighchartsSeriesWaterfallTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testCustom [
+HighchartsSeriesWaterfallTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +605,7 @@ HighchartsSeriesWaterfallTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testDashStyle [
+HighchartsSeriesWaterfallTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +620,7 @@ HighchartsSeriesWaterfallTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testData [
+HighchartsSeriesWaterfallTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +635,7 @@ HighchartsSeriesWaterfallTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testDepth [
+HighchartsSeriesWaterfallTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +650,7 @@ HighchartsSeriesWaterfallTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testDescription [
+HighchartsSeriesWaterfallTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +665,7 @@ HighchartsSeriesWaterfallTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testEdgeColor [
+HighchartsSeriesWaterfallTest >> testSetEdgeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +680,7 @@ HighchartsSeriesWaterfallTest >> testEdgeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testEdgeWidth [
+HighchartsSeriesWaterfallTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +695,7 @@ HighchartsSeriesWaterfallTest >> testEdgeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testEnableMouseTracking [
+HighchartsSeriesWaterfallTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +710,7 @@ HighchartsSeriesWaterfallTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testEvents [
+HighchartsSeriesWaterfallTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +725,7 @@ HighchartsSeriesWaterfallTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testFindNearestPointBy [
+HighchartsSeriesWaterfallTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +740,7 @@ HighchartsSeriesWaterfallTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testGapSize [
+HighchartsSeriesWaterfallTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +755,7 @@ HighchartsSeriesWaterfallTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testGapUnit [
+HighchartsSeriesWaterfallTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +770,7 @@ HighchartsSeriesWaterfallTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testGetExtremesFromAll [
+HighchartsSeriesWaterfallTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +785,7 @@ HighchartsSeriesWaterfallTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testGroupPadding [
+HighchartsSeriesWaterfallTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +800,7 @@ HighchartsSeriesWaterfallTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testGroupZPadding [
+HighchartsSeriesWaterfallTest >> testSetGroupZPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +815,7 @@ HighchartsSeriesWaterfallTest >> testGroupZPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testGrouping [
+HighchartsSeriesWaterfallTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +830,7 @@ HighchartsSeriesWaterfallTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testId [
+HighchartsSeriesWaterfallTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +845,7 @@ HighchartsSeriesWaterfallTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testIncludeInDataExport [
+HighchartsSeriesWaterfallTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +860,7 @@ HighchartsSeriesWaterfallTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testIndex [
+HighchartsSeriesWaterfallTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +875,7 @@ HighchartsSeriesWaterfallTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testJoinBy [
+HighchartsSeriesWaterfallTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +890,7 @@ HighchartsSeriesWaterfallTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testKeys [
+HighchartsSeriesWaterfallTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +905,7 @@ HighchartsSeriesWaterfallTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testLegendIndex [
+HighchartsSeriesWaterfallTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +920,7 @@ HighchartsSeriesWaterfallTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testLineColor [
+HighchartsSeriesWaterfallTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +935,7 @@ HighchartsSeriesWaterfallTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testLineWidth [
+HighchartsSeriesWaterfallTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +950,7 @@ HighchartsSeriesWaterfallTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testLinecap [
+HighchartsSeriesWaterfallTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +965,7 @@ HighchartsSeriesWaterfallTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testLinkedTo [
+HighchartsSeriesWaterfallTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +980,7 @@ HighchartsSeriesWaterfallTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testMapData [
+HighchartsSeriesWaterfallTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +995,7 @@ HighchartsSeriesWaterfallTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testMaxPointWidth [
+HighchartsSeriesWaterfallTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1010,7 @@ HighchartsSeriesWaterfallTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testMinPointLength [
+HighchartsSeriesWaterfallTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1025,7 @@ HighchartsSeriesWaterfallTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testName [
+HighchartsSeriesWaterfallTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1040,7 @@ HighchartsSeriesWaterfallTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testNavigatorOptions [
+HighchartsSeriesWaterfallTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1055,7 @@ HighchartsSeriesWaterfallTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testNegativeColor [
+HighchartsSeriesWaterfallTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1070,7 @@ HighchartsSeriesWaterfallTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testOpacity [
+HighchartsSeriesWaterfallTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1085,7 @@ HighchartsSeriesWaterfallTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointDescriptionFormatter [
+HighchartsSeriesWaterfallTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1100,7 @@ HighchartsSeriesWaterfallTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointInterval [
+HighchartsSeriesWaterfallTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1115,7 @@ HighchartsSeriesWaterfallTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointIntervalUnit [
+HighchartsSeriesWaterfallTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1130,7 @@ HighchartsSeriesWaterfallTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointPadding [
+HighchartsSeriesWaterfallTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1145,7 @@ HighchartsSeriesWaterfallTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointPlacement [
+HighchartsSeriesWaterfallTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1160,7 @@ HighchartsSeriesWaterfallTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointRange [
+HighchartsSeriesWaterfallTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1175,7 @@ HighchartsSeriesWaterfallTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointStart [
+HighchartsSeriesWaterfallTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1190,7 @@ HighchartsSeriesWaterfallTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testPointWidth [
+HighchartsSeriesWaterfallTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1205,7 @@ HighchartsSeriesWaterfallTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testSelected [
+HighchartsSeriesWaterfallTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1220,7 @@ HighchartsSeriesWaterfallTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testShadow [
+HighchartsSeriesWaterfallTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1235,7 @@ HighchartsSeriesWaterfallTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testShowCheckbox [
+HighchartsSeriesWaterfallTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1250,7 @@ HighchartsSeriesWaterfallTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testShowInLegend [
+HighchartsSeriesWaterfallTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1265,7 @@ HighchartsSeriesWaterfallTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testShowInNavigator [
+HighchartsSeriesWaterfallTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1280,7 @@ HighchartsSeriesWaterfallTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testSkipKeyboardNavigation [
+HighchartsSeriesWaterfallTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1295,7 @@ HighchartsSeriesWaterfallTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testSoftThreshold [
+HighchartsSeriesWaterfallTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1310,7 @@ HighchartsSeriesWaterfallTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testStack [
+HighchartsSeriesWaterfallTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1325,7 @@ HighchartsSeriesWaterfallTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testStacking [
+HighchartsSeriesWaterfallTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1340,7 @@ HighchartsSeriesWaterfallTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testStates [
+HighchartsSeriesWaterfallTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1355,7 @@ HighchartsSeriesWaterfallTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testStep [
+HighchartsSeriesWaterfallTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1370,7 @@ HighchartsSeriesWaterfallTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testStickyTracking [
+HighchartsSeriesWaterfallTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1385,7 @@ HighchartsSeriesWaterfallTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testThreshold [
+HighchartsSeriesWaterfallTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1400,7 @@ HighchartsSeriesWaterfallTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testTurboThreshold [
+HighchartsSeriesWaterfallTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1190,7 +1415,7 @@ HighchartsSeriesWaterfallTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testType [
+HighchartsSeriesWaterfallTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1205,7 +1430,7 @@ HighchartsSeriesWaterfallTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testUpColor [
+HighchartsSeriesWaterfallTest >> testSetUpColor [
 
 	| component javascript expectedConfiguration |
 
@@ -1220,7 +1445,7 @@ HighchartsSeriesWaterfallTest >> testUpColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testVisible [
+HighchartsSeriesWaterfallTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1235,7 +1460,7 @@ HighchartsSeriesWaterfallTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testXAxis [
+HighchartsSeriesWaterfallTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1250,7 +1475,7 @@ HighchartsSeriesWaterfallTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testYAxis [
+HighchartsSeriesWaterfallTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1265,7 +1490,7 @@ HighchartsSeriesWaterfallTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testZIndex [
+HighchartsSeriesWaterfallTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1280,7 +1505,7 @@ HighchartsSeriesWaterfallTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testZoneAxis [
+HighchartsSeriesWaterfallTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

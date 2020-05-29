@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsTreemapClusterDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 

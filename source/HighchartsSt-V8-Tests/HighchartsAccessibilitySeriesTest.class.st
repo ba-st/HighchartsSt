@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilitySeriesTest >> testDescribeSingleSeries [
+HighchartsAccessibilitySeriesTest >> testSetDescribeSingleSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAccessibilitySeriesTest >> testDescribeSingleSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilitySeriesTest >> testDescriptionFormatter [
+HighchartsAccessibilitySeriesTest >> testSetDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAccessibilitySeriesTest >> testDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilitySeriesTest >> testPointDescriptionEnabledThreshold [
+HighchartsAccessibilitySeriesTest >> testSetPointDescriptionEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 

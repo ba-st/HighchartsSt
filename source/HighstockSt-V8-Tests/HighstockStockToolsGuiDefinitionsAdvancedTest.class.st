@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsAdvancedTest >> testItems [
+HighstockStockToolsGuiDefinitionsAdvancedTest >> testGetFibonacci [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockStockToolsGuiDefinitionsAdvanced new.
+	component fibonacci.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'fibonacci' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockStockToolsGuiDefinitionsAdvancedTest >> testGetParallelChannel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockStockToolsGuiDefinitionsAdvanced new.
+	component parallelChannel.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'parallelChannel' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockStockToolsGuiDefinitionsAdvancedTest >> testGetPitchfork [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockStockToolsGuiDefinitionsAdvanced new.
+	component pitchfork.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pitchfork' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockStockToolsGuiDefinitionsAdvancedTest >> testSetItems [
 
 	| component javascript expectedConfiguration |
 

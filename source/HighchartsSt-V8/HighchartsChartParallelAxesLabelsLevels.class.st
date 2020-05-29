@@ -11,8 +11,7 @@ Class {
 { #category : #accessing }
 HighchartsChartParallelAxesLabelsLevels >> level: aNumber [
 
-	"Specify the level which the options within this object
-applies to.
+	"Specify the level which the options within this object applies to.
 "
 
 	configurationOptions at: 'level' put: aNumber

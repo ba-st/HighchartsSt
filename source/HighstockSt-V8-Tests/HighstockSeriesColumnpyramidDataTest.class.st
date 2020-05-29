@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testColor [
+HighstockSeriesColumnpyramidDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramidData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramidData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramidData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesColumnpyramidDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testCustom [
+HighstockSeriesColumnpyramidDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesColumnpyramidDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testDescription [
+HighstockSeriesColumnpyramidDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesColumnpyramidDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testEvents [
+HighstockSeriesColumnpyramidDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesColumnpyramidDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testId [
+HighstockSeriesColumnpyramidDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesColumnpyramidDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testLabelrank [
+HighstockSeriesColumnpyramidDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesColumnpyramidDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testName [
+HighstockSeriesColumnpyramidDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockSeriesColumnpyramidDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testSelected [
+HighstockSeriesColumnpyramidDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockSeriesColumnpyramidDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testX [
+HighstockSeriesColumnpyramidDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockSeriesColumnpyramidDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDataTest >> testY [
+HighstockSeriesColumnpyramidDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

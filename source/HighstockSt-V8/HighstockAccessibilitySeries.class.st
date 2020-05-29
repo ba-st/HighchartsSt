@@ -12,8 +12,7 @@ Class {
 { #category : #accessing }
 HighstockAccessibilitySeries >> describeSingleSeries: aBoolean [
 
-	"Whether or not to add series descriptions to charts with a single
-series.
+	"Whether or not to add series descriptions to charts with a single series.
 Defaults to false."
 
 	configurationOptions at: 'describeSingleSeries' put: aBoolean
@@ -22,11 +21,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockAccessibilitySeries >> descriptionFormatter: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsSeries [
 
-	"Formatter function to use instead of the default for series
-descriptions. Receives one argument, series, referring to the
-series to describe. Should return a string with the description
-of the series for a screen reader user. If false is returned,
-the default formatter will be used for that series.
+	"Formatter function to use instead of the default for series descriptions. Receives one argument, series, referring to the series to describe. Should return a string with the description of the series for a screen reader user. If false is returned, the default formatter will be used for that series.
 "
 
 	configurationOptions at: 'descriptionFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsSeries
@@ -35,9 +30,7 @@ the default formatter will be used for that series.
 { #category : #accessing }
 HighstockAccessibilitySeries >> pointDescriptionEnabledThreshold: aBooleanOrnumber [
 
-	"When a series contains more points than this, we no longer expose
-information about individual points to screen readers.
-Set to false to disable.
+	"When a series contains more points than this, we no longer expose information about individual points to screen readers. Set to false to disable.
 Defaults to 200."
 
 	configurationOptions at: 'pointDescriptionEnabledThreshold' put: aBooleanOrnumber

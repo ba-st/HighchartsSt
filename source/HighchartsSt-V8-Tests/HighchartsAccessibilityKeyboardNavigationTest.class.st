@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationTest >> testEnabled [
+HighchartsAccessibilityKeyboardNavigationTest >> testGetFocusBorder [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibilityKeyboardNavigation new.
+	component focusBorder.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'focusBorder' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityKeyboardNavigationTest >> testGetSeriesNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibilityKeyboardNavigation new.
+	component seriesNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'seriesNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsAccessibilityKeyboardNavigationTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationTest >> testOrder [
+HighchartsAccessibilityKeyboardNavigationTest >> testSetOrder [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsAccessibilityKeyboardNavigationTest >> testOrder [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityKeyboardNavigationTest >> testWrapAround [
+HighchartsAccessibilityKeyboardNavigationTest >> testSetWrapAround [
 
 	| component javascript expectedConfiguration |
 

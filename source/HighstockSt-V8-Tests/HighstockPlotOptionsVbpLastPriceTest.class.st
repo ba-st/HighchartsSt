@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpLastPriceTest >> testColor [
+HighstockPlotOptionsVbpLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsVbpLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpLastPriceTest >> testEnabled [
+HighstockPlotOptionsVbpLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

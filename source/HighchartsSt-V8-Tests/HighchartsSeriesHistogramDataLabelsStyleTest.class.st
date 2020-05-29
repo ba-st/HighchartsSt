@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramDataLabelsStyleTest >> testColor [
+HighchartsSeriesHistogramDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesHistogramDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramDataLabelsStyleTest >> testFontSize [
+HighchartsSeriesHistogramDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesHistogramDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramDataLabelsStyleTest >> testFontWeight [
+HighchartsSeriesHistogramDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesHistogramDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramDataLabelsStyleTest >> testTextOutline [
+HighchartsSeriesHistogramDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,231 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testAllowPointSelect [
+HighstockPlotOptionsPriceenvelopesTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetBottomLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component bottomLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'bottomLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetTopLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component topLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'topLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPriceenvelopes new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPriceenvelopesTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +243,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testAnimationLimit [
+HighstockPlotOptionsPriceenvelopesTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +257,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testBoostBlending [
+HighstockPlotOptionsPriceenvelopesTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +271,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testBoostThreshold [
+HighstockPlotOptionsPriceenvelopesTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +285,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testBorderColor [
+HighstockPlotOptionsPriceenvelopesTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +299,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testBorderWidth [
+HighstockPlotOptionsPriceenvelopesTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +313,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testClassName [
+HighstockPlotOptionsPriceenvelopesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +327,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testClip [
+HighstockPlotOptionsPriceenvelopesTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +341,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testColor [
+HighstockPlotOptionsPriceenvelopesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +355,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testColorIndex [
+HighstockPlotOptionsPriceenvelopesTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +369,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testColorKey [
+HighstockPlotOptionsPriceenvelopesTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +383,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCompare [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +397,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCompareBase [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +411,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCompareStart [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +425,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCompareToMain [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +439,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testConnectEnds [
+HighstockPlotOptionsPriceenvelopesTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +453,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testConnectNulls [
+HighstockPlotOptionsPriceenvelopesTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +467,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCrisp [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +481,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCropThreshold [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +495,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCursor [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +509,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testCustom [
+HighstockPlotOptionsPriceenvelopesTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +523,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testDashStyle [
+HighstockPlotOptionsPriceenvelopesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +537,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testDescription [
+HighstockPlotOptionsPriceenvelopesTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +551,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testEnableMouseTracking [
+HighstockPlotOptionsPriceenvelopesTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +565,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testEvents [
+HighstockPlotOptionsPriceenvelopesTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +579,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testFindNearestPointBy [
+HighstockPlotOptionsPriceenvelopesTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +593,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testGapSize [
+HighstockPlotOptionsPriceenvelopesTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +607,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testGapUnit [
+HighstockPlotOptionsPriceenvelopesTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +621,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testGetExtremesFromAll [
+HighstockPlotOptionsPriceenvelopesTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +635,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testIncludeInDataExport [
+HighstockPlotOptionsPriceenvelopesTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +649,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testLineWidth [
+HighstockPlotOptionsPriceenvelopesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +663,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testLinecap [
+HighstockPlotOptionsPriceenvelopesTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +677,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testLinkedTo [
+HighstockPlotOptionsPriceenvelopesTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +691,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testName [
+HighstockPlotOptionsPriceenvelopesTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +705,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testNegativeColor [
+HighstockPlotOptionsPriceenvelopesTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +719,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testOpacity [
+HighstockPlotOptionsPriceenvelopesTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +733,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsPriceenvelopesTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +747,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testSelected [
+HighstockPlotOptionsPriceenvelopesTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +761,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testShadow [
+HighstockPlotOptionsPriceenvelopesTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +775,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testShowCheckbox [
+HighstockPlotOptionsPriceenvelopesTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +789,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testShowInLegend [
+HighstockPlotOptionsPriceenvelopesTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +803,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsPriceenvelopesTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +817,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testSoftThreshold [
+HighstockPlotOptionsPriceenvelopesTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +831,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testStates [
+HighstockPlotOptionsPriceenvelopesTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +845,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testStep [
+HighstockPlotOptionsPriceenvelopesTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +859,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testStickyTracking [
+HighstockPlotOptionsPriceenvelopesTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +873,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testThreshold [
+HighstockPlotOptionsPriceenvelopesTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +887,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testTurboThreshold [
+HighstockPlotOptionsPriceenvelopesTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +901,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testVisible [
+HighstockPlotOptionsPriceenvelopesTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +915,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testZIndex [
+HighstockPlotOptionsPriceenvelopesTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +929,7 @@ HighstockPlotOptionsPriceenvelopesTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTest >> testZoneAxis [
+HighstockPlotOptionsPriceenvelopesTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

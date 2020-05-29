@@ -10,9 +10,7 @@ Class {
 { #category : #accessing }
 HighstockPlotOptionsWmaParams >> index: aNumber [
 
-	"The point index which indicator calculations will base. For
-example using OHLC data, index=2 means the indicator will be
-calculated using Low values.
+	"The point index which indicator calculations will base. For example using OHLC data, index=2 means the indicator will be calculated using Low values.
 Defaults to 3."
 
 	configurationOptions at: 'index' put: aNumber
@@ -21,9 +19,7 @@ Defaults to 3."
 { #category : #accessing }
 HighstockPlotOptionsWmaParams >> period: aNumber [
 
-	"The base period for indicator calculations. This is the number of
-data points which are taken into account for the indicator
-calculations.
+	"The base period for indicator calculations. This is the number of data points which are taken into account for the indicator calculations.
 Defaults to 9."
 
 	configurationOptions at: 'period' put: aNumber

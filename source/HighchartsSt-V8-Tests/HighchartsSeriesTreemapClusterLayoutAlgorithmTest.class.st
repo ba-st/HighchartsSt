@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testDistance [
+HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testGridSize [
+HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testSetGridSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testGridSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testIterations [
+HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testSetIterations [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testIterations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testKmeansThreshold [
+HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testSetKmeansThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testKmeansThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testType [
+HighchartsSeriesTreemapClusterLayoutAlgorithmTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

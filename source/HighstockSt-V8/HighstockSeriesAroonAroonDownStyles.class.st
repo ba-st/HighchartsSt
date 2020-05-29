@@ -10,8 +10,7 @@ Class {
 { #category : #accessing }
 HighstockSeriesAroonAroonDownStyles >> lineColor: aHighchartsColorString [
 
-	"Color of the line. If not set, it´s inherited from
-plotOptions.aroon.color.
+	"Color of the line. If not set, it´s inherited from plotOptions.aroon.color.
 Defaults to undefined."
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorString

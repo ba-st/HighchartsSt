@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testClassName [
+HighchartsSeriesDependencywheelDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheelData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesDependencywheelDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testColor [
+HighchartsSeriesDependencywheelDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesDependencywheelDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testColorIndex [
+HighchartsSeriesDependencywheelDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesDependencywheelDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testCustom [
+HighchartsSeriesDependencywheelDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesDependencywheelDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testDescription [
+HighchartsSeriesDependencywheelDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesDependencywheelDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testEvents [
+HighchartsSeriesDependencywheelDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesDependencywheelDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testFrom [
+HighchartsSeriesDependencywheelDataTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesDependencywheelDataTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testId [
+HighchartsSeriesDependencywheelDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesDependencywheelDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testLabelrank [
+HighchartsSeriesDependencywheelDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsSeriesDependencywheelDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testName [
+HighchartsSeriesDependencywheelDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsSeriesDependencywheelDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testSelected [
+HighchartsSeriesDependencywheelDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsSeriesDependencywheelDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testTo [
+HighchartsSeriesDependencywheelDataTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsSeriesDependencywheelDataTest >> testTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataTest >> testWeight [
+HighchartsSeriesDependencywheelDataTest >> testSetWeight [
 
 	| component javascript expectedConfiguration |
 

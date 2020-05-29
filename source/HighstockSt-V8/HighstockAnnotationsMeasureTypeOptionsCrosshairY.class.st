@@ -11,8 +11,7 @@ Class {
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptionsCrosshairY >> dashStyle: aHighchartsDashStyleValue [
 
-	"The dash or dot style of the crosshair´s line. For possible
-values, see this demonstration.
+	"The dash or dot style of the crosshair´s line. For possible values, see this demonstration.
 Defaults to Dash."
 
 	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
@@ -30,8 +29,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptionsCrosshairY >> markerEnd: aString [
 
-	"The marker-end defines the arrowhead that will be drawn
-at the final vertex of the given crosshair´s path.
+	"The marker-end defines the arrowhead that will be drawn at the final vertex of the given crosshair´s path.
 Defaults to arrow."
 
 	configurationOptions at: 'markerEnd' put: aString

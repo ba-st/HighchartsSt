@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapStatesNormalTest >> testAnimation [
+HighchartsSeriesTilemapStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

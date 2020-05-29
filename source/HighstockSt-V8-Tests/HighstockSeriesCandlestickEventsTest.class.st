@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testAfterAnimate [
+HighstockSeriesCandlestickEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesCandlestickEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testCheckboxClick [
+HighstockSeriesCandlestickEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesCandlestickEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testClick [
+HighstockSeriesCandlestickEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesCandlestickEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testHide [
+HighstockSeriesCandlestickEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesCandlestickEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testLegendItemClick [
+HighstockSeriesCandlestickEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesCandlestickEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testMouseOut [
+HighstockSeriesCandlestickEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesCandlestickEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testMouseOver [
+HighstockSeriesCandlestickEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesCandlestickEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickEventsTest >> testShow [
+HighstockSeriesCandlestickEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

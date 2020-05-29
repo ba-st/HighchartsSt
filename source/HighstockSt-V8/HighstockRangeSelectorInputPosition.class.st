@@ -11,8 +11,7 @@ Class {
 { #category : #accessing }
 HighstockRangeSelectorInputPosition >> align: aHighchartsAlignValue [
 
-	"The alignment of the input box. Allowed properties are left,
-center, right.
+	"The alignment of the input box. Allowed properties are left, center, right.
 Defaults to right."
 
 	configurationOptions at: 'align' put: aHighchartsAlignValue

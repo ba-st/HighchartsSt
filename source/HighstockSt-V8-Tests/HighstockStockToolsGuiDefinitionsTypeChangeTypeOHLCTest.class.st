@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsTypeChangeTypeOHLCTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsTypeChangeTypeOHLCTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

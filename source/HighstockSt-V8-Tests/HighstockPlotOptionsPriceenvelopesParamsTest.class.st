@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesParamsTest >> testBottomBand [
+HighstockPlotOptionsPriceenvelopesParamsTest >> testSetBottomBand [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPriceenvelopesParamsTest >> testBottomBand [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesParamsTest >> testIndex [
+HighstockPlotOptionsPriceenvelopesParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesParamsTest >> testPeriod [
+HighstockPlotOptionsPriceenvelopesParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPriceenvelopesParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesParamsTest >> testTopBand [
+HighstockPlotOptionsPriceenvelopesParamsTest >> testSetTopBand [
 
 	| component javascript expectedConfiguration |
 

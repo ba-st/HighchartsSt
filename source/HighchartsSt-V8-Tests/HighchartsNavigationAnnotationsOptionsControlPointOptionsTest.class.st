@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testHeight [
+HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptionsControlPointOptions new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testPositioner [
+HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testSetPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testPositioner 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testSymbol [
+HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testVisible [
+HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testWidth [
+HighchartsNavigationAnnotationsOptionsControlPointOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

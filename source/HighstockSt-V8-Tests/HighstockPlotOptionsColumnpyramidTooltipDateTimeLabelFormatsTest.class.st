@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMillisec
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsColumnpyramidTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

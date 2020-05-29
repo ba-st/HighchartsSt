@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsLineTest >> testFill [
+HighstockAnnotationsPitchforkTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testAfterAnimate [
+HighchartsSeriesFunnel3dEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesFunnel3dEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testCheckboxClick [
+HighchartsSeriesFunnel3dEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesFunnel3dEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testClick [
+HighchartsSeriesFunnel3dEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesFunnel3dEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testHide [
+HighchartsSeriesFunnel3dEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesFunnel3dEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testLegendItemClick [
+HighchartsSeriesFunnel3dEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesFunnel3dEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testMouseOut [
+HighchartsSeriesFunnel3dEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesFunnel3dEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testMouseOver [
+HighchartsSeriesFunnel3dEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesFunnel3dEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dEventsTest >> testShow [
+HighchartsSeriesFunnel3dEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

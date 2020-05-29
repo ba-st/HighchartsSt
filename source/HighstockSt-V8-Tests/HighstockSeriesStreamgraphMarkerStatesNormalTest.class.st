@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphMarkerStatesNormalTest >> testAnimation [
+HighstockSeriesStreamgraphMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

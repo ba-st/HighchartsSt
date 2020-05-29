@@ -15,8 +15,7 @@ Class {
 { #category : #accessing }
 HighstockSeriesBubbleDataLabelsFilter >> operator: aString [
 
-	"The operator to compare by. Can be one of &gt;, &lt;, &gt;=, &lt;=,
-==, and ===.
+	"The operator to compare by. Can be one of &gt;, &lt;, &gt;=, &lt;=, ==, and ===.
 "
 
 	configurationOptions at: 'operator' put: aString
@@ -25,10 +24,7 @@ HighstockSeriesBubbleDataLabelsFilter >> operator: aString [
 { #category : #accessing }
 HighstockSeriesBubbleDataLabelsFilter >> property: aString [
 
-	"The point property to filter by. Point options are passed
-directly to properties, additionally there are y value,
-percentage and others listed under {@link Highcharts.Point}
-members.
+	"The point property to filter by. Point options are passed directly to properties, additionally there are y value, percentage and others listed under {@link Highcharts.Point} members.
 "
 
 	configurationOptions at: 'property' put: aString

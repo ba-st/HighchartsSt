@@ -12,8 +12,7 @@ Class {
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapesPoints >> x: aNumber [
 
-	"The x position of the point. Units can be either in axis
-or chart pixel coordinates.
+	"The x position of the point. Units can be either in axis or chart pixel coordinates.
 "
 
 	configurationOptions at: 'x' put: aNumber
@@ -22,11 +21,7 @@ or chart pixel coordinates.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapesPoints >> xAxis: aNumberOrstringOrNil [
 
-	"This number defines which xAxis the point is connected to.
-It refers to either the axis id or the index of the axis in
-the xAxis array. If the option is not configured or the axis
-is not found the point´s x coordinate refers to the chart
-pixels.
+	"This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array. If the option is not configured or the axis is not found the point´s x coordinate refers to the chart pixels.
 "
 
 	configurationOptions at: 'xAxis' put: aNumberOrstringOrNil
@@ -35,8 +30,7 @@ pixels.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapesPoints >> y: aNumber [
 
-	"The y position of the point. Units can be either in axis
-or chart pixel coordinates.
+	"The y position of the point. Units can be either in axis or chart pixel coordinates.
 "
 
 	configurationOptions at: 'y' put: aNumber
@@ -45,11 +39,7 @@ or chart pixel coordinates.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsShapesPoints >> yAxis: aNumberOrstringOrNil [
 
-	"This number defines which yAxis the point is connected to.
-It refers to either the axis id or the index of the axis in
-the yAxis array. If the option is not configured or the axis
-is not found the point´s y coordinate refers to the chart
-pixels.
+	"This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the yAxis array. If the option is not configured or the axis is not found the point´s y coordinate refers to the chart pixels.
 "
 
 	configurationOptions at: 'yAxis' put: aNumberOrstringOrNil

@@ -23,8 +23,7 @@ HighchartsSeriesPackedbubbleDataLabelsTextPath >> attributes: aHighchartsSVGAttr
 { #category : #accessing }
 HighchartsSeriesPackedbubbleDataLabelsTextPath >> enabled: aBoolean [
 
-	"Enable or disable textPath option for link´s or marker´s data
-labels.
+	"Enable or disable textPath option for link´s or marker´s data labels.
 "
 
 	configurationOptions at: 'enabled' put: aBoolean

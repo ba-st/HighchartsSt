@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellZonesTest >> testClassName [
+HighstockSeriesDumbbellZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesDumbbellZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellZonesTest >> testColor [
+HighstockSeriesDumbbellZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesDumbbellZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellZonesTest >> testDashStyle [
+HighstockSeriesDumbbellZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesDumbbellZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellZonesTest >> testFillColor [
+HighstockSeriesDumbbellZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesDumbbellZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellZonesTest >> testValue [
+HighstockSeriesDumbbellZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

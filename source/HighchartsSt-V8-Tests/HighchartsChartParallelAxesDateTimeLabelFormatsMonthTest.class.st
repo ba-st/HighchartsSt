@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesDateTimeLabelFormatsMonthTest >> testMain [
+HighchartsChartParallelAxesDateTimeLabelFormatsMonthTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 

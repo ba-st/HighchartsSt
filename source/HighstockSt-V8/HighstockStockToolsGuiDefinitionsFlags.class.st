@@ -31,14 +31,8 @@ HighstockStockToolsGuiDefinitionsFlags >> flagSquarepin [
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsFlags >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'flagCirclepin',
-  'flagDiamondpin',
-  'flagSquarepin',
-  'flagSimplepin'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'flagCirclepin',   'flagDiamondpin',   'flagSquarepin',   'flagSimplepin' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

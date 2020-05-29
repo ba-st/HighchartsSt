@@ -5,7 +5,189 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testAllAreas [
+HighchartsPlotOptionsBellcurveTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurve new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +201,7 @@ HighchartsPlotOptionsBellcurveTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testAllowPointSelect [
+HighchartsPlotOptionsBellcurveTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +215,7 @@ HighchartsPlotOptionsBellcurveTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testAnimationLimit [
+HighchartsPlotOptionsBellcurveTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +229,7 @@ HighchartsPlotOptionsBellcurveTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testBoostBlending [
+HighchartsPlotOptionsBellcurveTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +243,7 @@ HighchartsPlotOptionsBellcurveTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testBorderColor [
+HighchartsPlotOptionsBellcurveTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +257,7 @@ HighchartsPlotOptionsBellcurveTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testBorderWidth [
+HighchartsPlotOptionsBellcurveTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +271,7 @@ HighchartsPlotOptionsBellcurveTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testClassName [
+HighchartsPlotOptionsBellcurveTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +285,7 @@ HighchartsPlotOptionsBellcurveTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testClip [
+HighchartsPlotOptionsBellcurveTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +299,7 @@ HighchartsPlotOptionsBellcurveTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testColor [
+HighchartsPlotOptionsBellcurveTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +313,7 @@ HighchartsPlotOptionsBellcurveTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testColorAxis [
+HighchartsPlotOptionsBellcurveTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +327,7 @@ HighchartsPlotOptionsBellcurveTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testColorIndex [
+HighchartsPlotOptionsBellcurveTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +341,7 @@ HighchartsPlotOptionsBellcurveTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testColorKey [
+HighchartsPlotOptionsBellcurveTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +355,7 @@ HighchartsPlotOptionsBellcurveTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testCompare [
+HighchartsPlotOptionsBellcurveTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +369,7 @@ HighchartsPlotOptionsBellcurveTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testCompareBase [
+HighchartsPlotOptionsBellcurveTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +383,7 @@ HighchartsPlotOptionsBellcurveTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testCompareStart [
+HighchartsPlotOptionsBellcurveTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +397,7 @@ HighchartsPlotOptionsBellcurveTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testConnectEnds [
+HighchartsPlotOptionsBellcurveTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +411,7 @@ HighchartsPlotOptionsBellcurveTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testCrisp [
+HighchartsPlotOptionsBellcurveTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +425,7 @@ HighchartsPlotOptionsBellcurveTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testCropThreshold [
+HighchartsPlotOptionsBellcurveTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighchartsPlotOptionsBellcurveTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testCursor [
+HighchartsPlotOptionsBellcurveTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighchartsPlotOptionsBellcurveTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testCustom [
+HighchartsPlotOptionsBellcurveTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighchartsPlotOptionsBellcurveTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testDashStyle [
+HighchartsPlotOptionsBellcurveTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighchartsPlotOptionsBellcurveTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testDescription [
+HighchartsPlotOptionsBellcurveTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighchartsPlotOptionsBellcurveTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testEnableMouseTracking [
+HighchartsPlotOptionsBellcurveTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighchartsPlotOptionsBellcurveTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testEvents [
+HighchartsPlotOptionsBellcurveTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighchartsPlotOptionsBellcurveTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testFillColor [
+HighchartsPlotOptionsBellcurveTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighchartsPlotOptionsBellcurveTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testFillOpacity [
+HighchartsPlotOptionsBellcurveTest >> testSetFillOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighchartsPlotOptionsBellcurveTest >> testFillOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testFindNearestPointBy [
+HighchartsPlotOptionsBellcurveTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighchartsPlotOptionsBellcurveTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testGapSize [
+HighchartsPlotOptionsBellcurveTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighchartsPlotOptionsBellcurveTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testGapUnit [
+HighchartsPlotOptionsBellcurveTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighchartsPlotOptionsBellcurveTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsBellcurveTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighchartsPlotOptionsBellcurveTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testIncludeInDataExport [
+HighchartsPlotOptionsBellcurveTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighchartsPlotOptionsBellcurveTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testIntervals [
+HighchartsPlotOptionsBellcurveTest >> testSetIntervals [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighchartsPlotOptionsBellcurveTest >> testIntervals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testJoinBy [
+HighchartsPlotOptionsBellcurveTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighchartsPlotOptionsBellcurveTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testKeys [
+HighchartsPlotOptionsBellcurveTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighchartsPlotOptionsBellcurveTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testLineColor [
+HighchartsPlotOptionsBellcurveTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighchartsPlotOptionsBellcurveTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testLineWidth [
+HighchartsPlotOptionsBellcurveTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighchartsPlotOptionsBellcurveTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testLinecap [
+HighchartsPlotOptionsBellcurveTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighchartsPlotOptionsBellcurveTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testLinkedTo [
+HighchartsPlotOptionsBellcurveTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighchartsPlotOptionsBellcurveTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testNavigatorOptions [
+HighchartsPlotOptionsBellcurveTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +733,7 @@ HighchartsPlotOptionsBellcurveTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testNegativeColor [
+HighchartsPlotOptionsBellcurveTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +747,7 @@ HighchartsPlotOptionsBellcurveTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testNegativeFillColor [
+HighchartsPlotOptionsBellcurveTest >> testSetNegativeFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +761,7 @@ HighchartsPlotOptionsBellcurveTest >> testNegativeFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testOpacity [
+HighchartsPlotOptionsBellcurveTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +775,7 @@ HighchartsPlotOptionsBellcurveTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsBellcurveTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +789,7 @@ HighchartsPlotOptionsBellcurveTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testPointPlacement [
+HighchartsPlotOptionsBellcurveTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +803,7 @@ HighchartsPlotOptionsBellcurveTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testPointRange [
+HighchartsPlotOptionsBellcurveTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +817,7 @@ HighchartsPlotOptionsBellcurveTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testPointStart [
+HighchartsPlotOptionsBellcurveTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +831,7 @@ HighchartsPlotOptionsBellcurveTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testPointsInInterval [
+HighchartsPlotOptionsBellcurveTest >> testSetPointsInInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +845,7 @@ HighchartsPlotOptionsBellcurveTest >> testPointsInInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testSelected [
+HighchartsPlotOptionsBellcurveTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +859,7 @@ HighchartsPlotOptionsBellcurveTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testShadow [
+HighchartsPlotOptionsBellcurveTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +873,7 @@ HighchartsPlotOptionsBellcurveTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testShowCheckbox [
+HighchartsPlotOptionsBellcurveTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +887,7 @@ HighchartsPlotOptionsBellcurveTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testShowInLegend [
+HighchartsPlotOptionsBellcurveTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +901,7 @@ HighchartsPlotOptionsBellcurveTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testShowInNavigator [
+HighchartsPlotOptionsBellcurveTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +915,7 @@ HighchartsPlotOptionsBellcurveTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsBellcurveTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +929,7 @@ HighchartsPlotOptionsBellcurveTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testSoftThreshold [
+HighchartsPlotOptionsBellcurveTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +943,7 @@ HighchartsPlotOptionsBellcurveTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testStates [
+HighchartsPlotOptionsBellcurveTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +957,7 @@ HighchartsPlotOptionsBellcurveTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testStickyTracking [
+HighchartsPlotOptionsBellcurveTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +971,7 @@ HighchartsPlotOptionsBellcurveTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testThreshold [
+HighchartsPlotOptionsBellcurveTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +985,7 @@ HighchartsPlotOptionsBellcurveTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testTrackByArea [
+HighchartsPlotOptionsBellcurveTest >> testSetTrackByArea [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +999,7 @@ HighchartsPlotOptionsBellcurveTest >> testTrackByArea [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testTurboThreshold [
+HighchartsPlotOptionsBellcurveTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1013,7 @@ HighchartsPlotOptionsBellcurveTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testVisible [
+HighchartsPlotOptionsBellcurveTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1027,7 @@ HighchartsPlotOptionsBellcurveTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testZIndex [
+HighchartsPlotOptionsBellcurveTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +1041,7 @@ HighchartsPlotOptionsBellcurveTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTest >> testZoneAxis [
+HighchartsPlotOptionsBellcurveTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

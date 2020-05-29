@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testColor [
+HighstockSeriesVectorDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVectorData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVectorDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVectorData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVectorDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVectorData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVectorDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesVectorData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesVectorDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighstockSeriesVectorDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testCustom [
+HighstockSeriesVectorDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighstockSeriesVectorDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testDescription [
+HighstockSeriesVectorDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighstockSeriesVectorDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testDirection [
+HighstockSeriesVectorDataTest >> testSetDirection [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighstockSeriesVectorDataTest >> testDirection [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testEvents [
+HighstockSeriesVectorDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighstockSeriesVectorDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testId [
+HighstockSeriesVectorDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighstockSeriesVectorDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testLabelrank [
+HighstockSeriesVectorDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighstockSeriesVectorDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testLength [
+HighstockSeriesVectorDataTest >> testSetLength [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighstockSeriesVectorDataTest >> testLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testName [
+HighstockSeriesVectorDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighstockSeriesVectorDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testSelected [
+HighstockSeriesVectorDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighstockSeriesVectorDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testX [
+HighstockSeriesVectorDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighstockSeriesVectorDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorDataTest >> testY [
+HighstockSeriesVectorDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsTreemapEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsTreemapEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testClick [
+HighchartsPlotOptionsTreemapEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testHide [
+HighchartsPlotOptionsTreemapEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsTreemapEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testMouseOut [
+HighchartsPlotOptionsTreemapEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testMouseOver [
+HighchartsPlotOptionsTreemapEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testSetRootNode [
+HighchartsPlotOptionsTreemapEventsTest >> testSetSetRootNode [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsTreemapEventsTest >> testSetRootNode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapEventsTest >> testShow [
+HighchartsPlotOptionsTreemapEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

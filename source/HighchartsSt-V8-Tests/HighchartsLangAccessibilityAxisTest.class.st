@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testRangeCategories [
+HighchartsLangAccessibilityAxisTest >> testSetRangeCategories [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilityAxisTest >> testRangeCategories [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testRangeFromTo [
+HighchartsLangAccessibilityAxisTest >> testSetRangeFromTo [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLangAccessibilityAxisTest >> testRangeFromTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testTimeRangeDays [
+HighchartsLangAccessibilityAxisTest >> testSetTimeRangeDays [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLangAccessibilityAxisTest >> testTimeRangeDays [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testTimeRangeHours [
+HighchartsLangAccessibilityAxisTest >> testSetTimeRangeHours [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLangAccessibilityAxisTest >> testTimeRangeHours [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testTimeRangeMinutes [
+HighchartsLangAccessibilityAxisTest >> testSetTimeRangeMinutes [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsLangAccessibilityAxisTest >> testTimeRangeMinutes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testTimeRangeSeconds [
+HighchartsLangAccessibilityAxisTest >> testSetTimeRangeSeconds [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsLangAccessibilityAxisTest >> testTimeRangeSeconds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testXAxisDescriptionPlural [
+HighchartsLangAccessibilityAxisTest >> testSetXAxisDescriptionPlural [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsLangAccessibilityAxisTest >> testXAxisDescriptionPlural [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testXAxisDescriptionSingular [
+HighchartsLangAccessibilityAxisTest >> testSetXAxisDescriptionSingular [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsLangAccessibilityAxisTest >> testXAxisDescriptionSingular [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testYAxisDescriptionPlural [
+HighchartsLangAccessibilityAxisTest >> testSetYAxisDescriptionPlural [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsLangAccessibilityAxisTest >> testYAxisDescriptionPlural [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityAxisTest >> testYAxisDescriptionSingular [
+HighchartsLangAccessibilityAxisTest >> testSetYAxisDescriptionSingular [
 
 	| component javascript expectedConfiguration |
 

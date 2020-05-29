@@ -25,8 +25,7 @@ HighchartsChartParallelAxesLabelsSymbol >> padding: aNumber [
 { #category : #accessing }
 HighchartsChartParallelAxesLabelsSymbol >> type: aHighchartsSymbolKeyValue [
 
-	"The symbol type. Points to a definition function in
-the Highcharts.Renderer.symbols collection.
+	"The symbol type. Points to a definition function in the Highcharts.Renderer.symbols collection.
 Defaults to triangle."
 
 	configurationOptions at: 'type' put: aHighchartsSymbolKeyValue

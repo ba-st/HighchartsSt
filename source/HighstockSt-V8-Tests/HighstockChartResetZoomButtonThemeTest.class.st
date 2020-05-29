@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockChartResetZoomButtonThemeTest >> testZIndex [
+HighstockChartResetZoomButtonThemeTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

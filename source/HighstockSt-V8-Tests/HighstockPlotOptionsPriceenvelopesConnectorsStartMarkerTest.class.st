@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testAlign [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testColor [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testEnabled [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testHeight [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testInside [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testLineColor [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testLineWidth [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testRadius [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSymbol [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testVerticalAlign
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testWidth [
+HighstockPlotOptionsPriceenvelopesConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

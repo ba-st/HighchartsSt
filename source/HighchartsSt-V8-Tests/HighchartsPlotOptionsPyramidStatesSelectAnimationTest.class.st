@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidStatesSelectAnimationTest >> testDuration [
+HighchartsPlotOptionsPyramidStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

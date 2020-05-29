@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesAccessibilityTest >> testDescription [
+HighchartsChartParallelAxesAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesAccessibilityTest >> testEnabled [
+HighchartsChartParallelAxesAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartParallelAxesAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesAccessibilityTest >> testRangeDescription [
+HighchartsChartParallelAxesAccessibilityTest >> testSetRangeDescription [
 
 	| component javascript expectedConfiguration |
 

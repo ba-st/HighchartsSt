@@ -55,8 +55,7 @@ HighchartsPlotOptionsDependencywheelLevels >> dataLabels [
 { #category : #accessing }
 HighchartsPlotOptionsDependencywheelLevels >> level: aNumber [
 
-	"Decides which level takes effect from the options set in the levels
-object.
+	"Decides which level takes effect from the options set in the levels object.
 "
 
 	configurationOptions at: 'level' put: aNumber

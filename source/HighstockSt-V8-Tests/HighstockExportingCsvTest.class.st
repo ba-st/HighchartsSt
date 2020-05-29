@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockExportingCsvTest >> testColumnHeaderFormatter [
+HighstockExportingCsvTest >> testSetColumnHeaderFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockExportingCsvTest >> testColumnHeaderFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingCsvTest >> testDateFormat [
+HighstockExportingCsvTest >> testSetDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockExportingCsvTest >> testDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingCsvTest >> testDecimalPoint [
+HighstockExportingCsvTest >> testSetDecimalPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockExportingCsvTest >> testDecimalPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingCsvTest >> testItemDelimiter [
+HighstockExportingCsvTest >> testSetItemDelimiter [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockExportingCsvTest >> testItemDelimiter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingCsvTest >> testLineDelimiter [
+HighstockExportingCsvTest >> testSetLineDelimiter [
 
 	| component javascript expectedConfiguration |
 

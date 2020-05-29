@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLegendTitleTest >> testStyle [
+HighstockLegendTitleTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLegendTitleTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendTitleTest >> testText [
+HighstockLegendTitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 

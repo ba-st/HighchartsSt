@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testClassName [
+HighchartsSeriesPyramidDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramidData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramidDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramidData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramidDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramidData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramidDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesPyramidDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testColor [
+HighchartsSeriesPyramidDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesPyramidDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testColorIndex [
+HighchartsSeriesPyramidDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesPyramidDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testCustom [
+HighchartsSeriesPyramidDataTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesPyramidDataTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testDescription [
+HighchartsSeriesPyramidDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesPyramidDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testDrilldown [
+HighchartsSeriesPyramidDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesPyramidDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testEvents [
+HighchartsSeriesPyramidDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesPyramidDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testId [
+HighchartsSeriesPyramidDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesPyramidDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testLabelrank [
+HighchartsSeriesPyramidDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesPyramidDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testLegendIndex [
+HighchartsSeriesPyramidDataTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesPyramidDataTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testName [
+HighchartsSeriesPyramidDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesPyramidDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testSelected [
+HighchartsSeriesPyramidDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesPyramidDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramidDataTest >> testY [
+HighchartsSeriesPyramidDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

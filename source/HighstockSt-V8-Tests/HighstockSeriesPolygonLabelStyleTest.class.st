@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonLabelStyleTest >> testFontWeight [
+HighstockSeriesPolygonLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsCrookedLinesCrooked5Test >> testSymbol [
+HighstockStockToolsGuiDefinitionsCrookedLinesCrooked5Test >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

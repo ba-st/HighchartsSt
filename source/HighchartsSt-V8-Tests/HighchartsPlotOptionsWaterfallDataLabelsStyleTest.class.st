@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsWaterfallDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

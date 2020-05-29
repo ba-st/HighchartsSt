@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesApoPointTest >> testEvents [
+HighstockSeriesApoPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

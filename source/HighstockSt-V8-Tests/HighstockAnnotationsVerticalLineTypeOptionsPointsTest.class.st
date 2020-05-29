@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testX [
+HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testY [
+HighstockAnnotationsVerticalLineTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testAllAreas [
+HighstockSeriesOhlcTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlc new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ohlc';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +245,7 @@ HighstockSeriesOhlcTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testAllowPointSelect [
+HighstockSeriesOhlcTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +260,7 @@ HighstockSeriesOhlcTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testAnimationLimit [
+HighstockSeriesOhlcTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +275,7 @@ HighstockSeriesOhlcTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testBoostBlending [
+HighstockSeriesOhlcTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +290,7 @@ HighstockSeriesOhlcTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testBoostThreshold [
+HighstockSeriesOhlcTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +305,7 @@ HighstockSeriesOhlcTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testBorderColor [
+HighstockSeriesOhlcTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +320,7 @@ HighstockSeriesOhlcTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testBorderWidth [
+HighstockSeriesOhlcTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +335,7 @@ HighstockSeriesOhlcTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testClassName [
+HighstockSeriesOhlcTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +350,7 @@ HighstockSeriesOhlcTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testClip [
+HighstockSeriesOhlcTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +365,7 @@ HighstockSeriesOhlcTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testColor [
+HighstockSeriesOhlcTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +380,7 @@ HighstockSeriesOhlcTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testColorAxis [
+HighstockSeriesOhlcTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +395,7 @@ HighstockSeriesOhlcTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testColorByPoint [
+HighstockSeriesOhlcTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +410,7 @@ HighstockSeriesOhlcTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testColorIndex [
+HighstockSeriesOhlcTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +425,7 @@ HighstockSeriesOhlcTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testColorKey [
+HighstockSeriesOhlcTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +440,7 @@ HighstockSeriesOhlcTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testColors [
+HighstockSeriesOhlcTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +455,7 @@ HighstockSeriesOhlcTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testCompare [
+HighstockSeriesOhlcTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +470,7 @@ HighstockSeriesOhlcTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testCompareBase [
+HighstockSeriesOhlcTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +485,7 @@ HighstockSeriesOhlcTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testCompareStart [
+HighstockSeriesOhlcTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +500,7 @@ HighstockSeriesOhlcTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testConnectEnds [
+HighstockSeriesOhlcTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +515,7 @@ HighstockSeriesOhlcTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testConnectNulls [
+HighstockSeriesOhlcTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +530,7 @@ HighstockSeriesOhlcTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testCrisp [
+HighstockSeriesOhlcTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +545,7 @@ HighstockSeriesOhlcTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testCropThreshold [
+HighstockSeriesOhlcTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +560,7 @@ HighstockSeriesOhlcTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testCursor [
+HighstockSeriesOhlcTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +575,7 @@ HighstockSeriesOhlcTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testCustom [
+HighstockSeriesOhlcTest >> testSetCustom [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +590,7 @@ HighstockSeriesOhlcTest >> testCustom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testDashStyle [
+HighstockSeriesOhlcTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +605,7 @@ HighstockSeriesOhlcTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testData [
+HighstockSeriesOhlcTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +620,7 @@ HighstockSeriesOhlcTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testDepth [
+HighstockSeriesOhlcTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +635,7 @@ HighstockSeriesOhlcTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testDescription [
+HighstockSeriesOhlcTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +650,7 @@ HighstockSeriesOhlcTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testEdgeColor [
+HighstockSeriesOhlcTest >> testSetEdgeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +665,7 @@ HighstockSeriesOhlcTest >> testEdgeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testEdgeWidth [
+HighstockSeriesOhlcTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +680,7 @@ HighstockSeriesOhlcTest >> testEdgeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testEnableMouseTracking [
+HighstockSeriesOhlcTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +695,7 @@ HighstockSeriesOhlcTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testEvents [
+HighstockSeriesOhlcTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +710,7 @@ HighstockSeriesOhlcTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testFindNearestPointBy [
+HighstockSeriesOhlcTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +725,7 @@ HighstockSeriesOhlcTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testGapSize [
+HighstockSeriesOhlcTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +740,7 @@ HighstockSeriesOhlcTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testGapUnit [
+HighstockSeriesOhlcTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +755,7 @@ HighstockSeriesOhlcTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testGetExtremesFromAll [
+HighstockSeriesOhlcTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +770,7 @@ HighstockSeriesOhlcTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testGroupPadding [
+HighstockSeriesOhlcTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +785,7 @@ HighstockSeriesOhlcTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testGroupZPadding [
+HighstockSeriesOhlcTest >> testSetGroupZPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +800,7 @@ HighstockSeriesOhlcTest >> testGroupZPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testGrouping [
+HighstockSeriesOhlcTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +815,7 @@ HighstockSeriesOhlcTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testId [
+HighstockSeriesOhlcTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +830,7 @@ HighstockSeriesOhlcTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testIncludeInDataExport [
+HighstockSeriesOhlcTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +845,7 @@ HighstockSeriesOhlcTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testIndex [
+HighstockSeriesOhlcTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +860,7 @@ HighstockSeriesOhlcTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testJoinBy [
+HighstockSeriesOhlcTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +875,7 @@ HighstockSeriesOhlcTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testKeys [
+HighstockSeriesOhlcTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +890,7 @@ HighstockSeriesOhlcTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testLegendIndex [
+HighstockSeriesOhlcTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +905,7 @@ HighstockSeriesOhlcTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testLineWidth [
+HighstockSeriesOhlcTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +920,7 @@ HighstockSeriesOhlcTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testLinecap [
+HighstockSeriesOhlcTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +935,7 @@ HighstockSeriesOhlcTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testLinkedTo [
+HighstockSeriesOhlcTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +950,7 @@ HighstockSeriesOhlcTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testMapData [
+HighstockSeriesOhlcTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +965,7 @@ HighstockSeriesOhlcTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testMaxPointWidth [
+HighstockSeriesOhlcTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +980,7 @@ HighstockSeriesOhlcTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testMinPointLength [
+HighstockSeriesOhlcTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +995,7 @@ HighstockSeriesOhlcTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testName [
+HighstockSeriesOhlcTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1010,7 @@ HighstockSeriesOhlcTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testNavigatorOptions [
+HighstockSeriesOhlcTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1025,7 @@ HighstockSeriesOhlcTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testNegativeColor [
+HighstockSeriesOhlcTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1040,7 @@ HighstockSeriesOhlcTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testOpacity [
+HighstockSeriesOhlcTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1055,7 @@ HighstockSeriesOhlcTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointDescriptionFormatter [
+HighstockSeriesOhlcTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1070,7 @@ HighstockSeriesOhlcTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointInterval [
+HighstockSeriesOhlcTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1085,7 @@ HighstockSeriesOhlcTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointIntervalUnit [
+HighstockSeriesOhlcTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1100,7 @@ HighstockSeriesOhlcTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointPadding [
+HighstockSeriesOhlcTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1115,7 @@ HighstockSeriesOhlcTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointPlacement [
+HighstockSeriesOhlcTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1130,7 @@ HighstockSeriesOhlcTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointRange [
+HighstockSeriesOhlcTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1145,7 @@ HighstockSeriesOhlcTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointStart [
+HighstockSeriesOhlcTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1160,7 @@ HighstockSeriesOhlcTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointValKey [
+HighstockSeriesOhlcTest >> testSetPointValKey [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1175,7 @@ HighstockSeriesOhlcTest >> testPointValKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testPointWidth [
+HighstockSeriesOhlcTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1190,7 @@ HighstockSeriesOhlcTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testSelected [
+HighstockSeriesOhlcTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1205,7 @@ HighstockSeriesOhlcTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testShadow [
+HighstockSeriesOhlcTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1220,7 @@ HighstockSeriesOhlcTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testShowCheckbox [
+HighstockSeriesOhlcTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1235,7 @@ HighstockSeriesOhlcTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testShowInLegend [
+HighstockSeriesOhlcTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1250,7 @@ HighstockSeriesOhlcTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testShowInNavigator [
+HighstockSeriesOhlcTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1265,7 @@ HighstockSeriesOhlcTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testSkipKeyboardNavigation [
+HighstockSeriesOhlcTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1280,7 @@ HighstockSeriesOhlcTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testSoftThreshold [
+HighstockSeriesOhlcTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1295,7 @@ HighstockSeriesOhlcTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testStack [
+HighstockSeriesOhlcTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1310,7 @@ HighstockSeriesOhlcTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testStacking [
+HighstockSeriesOhlcTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1325,7 @@ HighstockSeriesOhlcTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testStates [
+HighstockSeriesOhlcTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1340,7 @@ HighstockSeriesOhlcTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testStep [
+HighstockSeriesOhlcTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1355,7 @@ HighstockSeriesOhlcTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testStickyTracking [
+HighstockSeriesOhlcTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1370,7 @@ HighstockSeriesOhlcTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testThreshold [
+HighstockSeriesOhlcTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1385,7 @@ HighstockSeriesOhlcTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testTurboThreshold [
+HighstockSeriesOhlcTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1400,7 @@ HighstockSeriesOhlcTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testType [
+HighstockSeriesOhlcTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1190,7 +1415,7 @@ HighstockSeriesOhlcTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testUpColor [
+HighstockSeriesOhlcTest >> testSetUpColor [
 
 	| component javascript expectedConfiguration |
 
@@ -1205,7 +1430,7 @@ HighstockSeriesOhlcTest >> testUpColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testVisible [
+HighstockSeriesOhlcTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1220,7 +1445,7 @@ HighstockSeriesOhlcTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testXAxis [
+HighstockSeriesOhlcTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1235,7 +1460,7 @@ HighstockSeriesOhlcTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testYAxis [
+HighstockSeriesOhlcTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1250,7 +1475,7 @@ HighstockSeriesOhlcTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testZIndex [
+HighstockSeriesOhlcTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1265,7 +1490,7 @@ HighstockSeriesOhlcTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcTest >> testZoneAxis [
+HighstockSeriesOhlcTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

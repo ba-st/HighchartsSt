@@ -16,8 +16,7 @@ HighstockAnnotationsEvents >> add: aHighchartsEventCallbackFunctionOfHighchartsA
 { #category : #accessing }
 HighstockAnnotationsEvents >> afterUpdate: aHighchartsEventCallbackFunctionOfHighchartsAnnotation [
 
-	"Event callback when annotation is updated (e.g. drag and
-droppped or resized by control points).
+	"Event callback when annotation is updated (e.g. drag and droppped or resized by control points).
 "
 
 	configurationOptions at: 'afterUpdate' put: aHighchartsEventCallbackFunctionOfHighchartsAnnotation

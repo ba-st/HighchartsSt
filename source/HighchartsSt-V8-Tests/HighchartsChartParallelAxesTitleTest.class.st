@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesTitleTest >> testTextAlign [
+HighchartsChartParallelAxesTitleTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 

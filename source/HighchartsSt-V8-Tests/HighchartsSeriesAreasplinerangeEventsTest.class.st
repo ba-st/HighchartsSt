@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testAfterAnimate [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesAreasplinerangeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testCheckboxClick [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesAreasplinerangeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testClick [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesAreasplinerangeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testHide [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesAreasplinerangeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testLegendItemClick [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesAreasplinerangeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testMouseOut [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesAreasplinerangeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testMouseOver [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesAreasplinerangeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeEventsTest >> testShow [
+HighchartsSeriesAreasplinerangeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 
