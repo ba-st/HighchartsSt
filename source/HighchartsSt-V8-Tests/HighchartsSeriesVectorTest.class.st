@@ -125,6 +125,21 @@ HighchartsSeriesVectorTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesVectorTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVector new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'vector';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesVectorTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

@@ -80,6 +80,21 @@ HighchartsSeriesNetworkgraphTest >> testGetDataLabels [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesNetworkgraphTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesNetworkgraph new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'networkgraph';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesNetworkgraphTest >> testGetLastPrice [
 
 	| component javascript expectedConfiguration |

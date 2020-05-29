@@ -125,6 +125,21 @@ HighchartsSeriesVariwideTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesVariwideTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariwide new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'variwide';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesVariwideTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

@@ -125,6 +125,21 @@ HighchartsSeriesCylinderTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesCylinderTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesCylinder new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'cylinder';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesCylinderTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

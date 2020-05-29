@@ -125,6 +125,21 @@ HighchartsSeriesGaugeTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesGaugeTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGauge new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'gauge';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesGaugeTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

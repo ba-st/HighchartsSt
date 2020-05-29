@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockYAxisResizeTest >> testGetControlledAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxisResize new.
+	component controlledAxis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'controlledAxis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockYAxisResizeTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |

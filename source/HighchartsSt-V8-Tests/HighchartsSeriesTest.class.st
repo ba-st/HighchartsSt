@@ -13,7 +13,7 @@ HighchartsSeriesTest >> testGetArea [
 	component area.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'area';
+		at: 'area' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -27,7 +27,7 @@ HighchartsSeriesTest >> testGetArearange [
 	component arearange.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'arearange';
+		at: 'arearange' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -41,7 +41,7 @@ HighchartsSeriesTest >> testGetAreaspline [
 	component areaspline.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'areaspline';
+		at: 'areaspline' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -55,7 +55,7 @@ HighchartsSeriesTest >> testGetAreasplinerange [
 	component areasplinerange.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'areasplinerange';
+		at: 'areasplinerange' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -69,7 +69,7 @@ HighchartsSeriesTest >> testGetBar [
 	component bar.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'bar';
+		at: 'bar' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -83,7 +83,7 @@ HighchartsSeriesTest >> testGetBellcurve [
 	component bellcurve.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'bellcurve';
+		at: 'bellcurve' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -97,7 +97,7 @@ HighchartsSeriesTest >> testGetBoxplot [
 	component boxplot.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'boxplot';
+		at: 'boxplot' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -111,7 +111,7 @@ HighchartsSeriesTest >> testGetBubble [
 	component bubble.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'bubble';
+		at: 'bubble' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -125,7 +125,7 @@ HighchartsSeriesTest >> testGetBullet [
 	component bullet.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'bullet';
+		at: 'bullet' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -139,7 +139,7 @@ HighchartsSeriesTest >> testGetColumn [
 	component column.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'column';
+		at: 'column' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -153,7 +153,7 @@ HighchartsSeriesTest >> testGetColumnpyramid [
 	component columnpyramid.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'columnpyramid';
+		at: 'columnpyramid' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -167,7 +167,7 @@ HighchartsSeriesTest >> testGetColumnrange [
 	component columnrange.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'columnrange';
+		at: 'columnrange' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -181,7 +181,7 @@ HighchartsSeriesTest >> testGetCylinder [
 	component cylinder.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'cylinder';
+		at: 'cylinder' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -195,7 +195,7 @@ HighchartsSeriesTest >> testGetDependencywheel [
 	component dependencywheel.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'dependencywheel';
+		at: 'dependencywheel' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -209,7 +209,7 @@ HighchartsSeriesTest >> testGetDumbbell [
 	component dumbbell.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'dumbbell';
+		at: 'dumbbell' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -223,7 +223,7 @@ HighchartsSeriesTest >> testGetErrorbar [
 	component errorbar.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'errorbar';
+		at: 'errorbar' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -237,7 +237,7 @@ HighchartsSeriesTest >> testGetFunnel [
 	component funnel.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'funnel';
+		at: 'funnel' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -251,7 +251,7 @@ HighchartsSeriesTest >> testGetFunnel3d [
 	component funnel3d.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'funnel3d';
+		at: 'funnel3d' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -265,7 +265,7 @@ HighchartsSeriesTest >> testGetGauge [
 	component gauge.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'gauge';
+		at: 'gauge' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -279,7 +279,7 @@ HighchartsSeriesTest >> testGetHeatmap [
 	component heatmap.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'heatmap';
+		at: 'heatmap' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -293,7 +293,7 @@ HighchartsSeriesTest >> testGetHistogram [
 	component histogram.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'histogram';
+		at: 'histogram' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -307,7 +307,7 @@ HighchartsSeriesTest >> testGetItem [
 	component item.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'item';
+		at: 'item' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -321,7 +321,7 @@ HighchartsSeriesTest >> testGetLine [
 	component line.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'line';
+		at: 'line' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -335,7 +335,7 @@ HighchartsSeriesTest >> testGetLollipop [
 	component lollipop.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'lollipop';
+		at: 'lollipop' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -349,7 +349,7 @@ HighchartsSeriesTest >> testGetNetworkgraph [
 	component networkgraph.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'networkgraph';
+		at: 'networkgraph' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -363,7 +363,7 @@ HighchartsSeriesTest >> testGetOrganization [
 	component organization.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'organization';
+		at: 'organization' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -377,7 +377,7 @@ HighchartsSeriesTest >> testGetPackedbubble [
 	component packedbubble.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'packedbubble';
+		at: 'packedbubble' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -391,7 +391,7 @@ HighchartsSeriesTest >> testGetPareto [
 	component pareto.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'pareto';
+		at: 'pareto' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -405,7 +405,7 @@ HighchartsSeriesTest >> testGetPie [
 	component pie.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'pie';
+		at: 'pie' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -419,7 +419,7 @@ HighchartsSeriesTest >> testGetPolygon [
 	component polygon.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'polygon';
+		at: 'polygon' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -433,7 +433,7 @@ HighchartsSeriesTest >> testGetPyramid [
 	component pyramid.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'pyramid';
+		at: 'pyramid' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -447,7 +447,7 @@ HighchartsSeriesTest >> testGetPyramid3d [
 	component pyramid3d.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'pyramid3d';
+		at: 'pyramid3d' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -461,7 +461,7 @@ HighchartsSeriesTest >> testGetSankey [
 	component sankey.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'sankey';
+		at: 'sankey' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -475,7 +475,7 @@ HighchartsSeriesTest >> testGetScatter [
 	component scatter.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'scatter';
+		at: 'scatter' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -489,7 +489,7 @@ HighchartsSeriesTest >> testGetScatter3d [
 	component scatter3d.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'scatter3d';
+		at: 'scatter3d' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -503,7 +503,7 @@ HighchartsSeriesTest >> testGetSolidgauge [
 	component solidgauge.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'solidgauge';
+		at: 'solidgauge' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -517,7 +517,7 @@ HighchartsSeriesTest >> testGetSpline [
 	component spline.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'spline';
+		at: 'spline' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -531,7 +531,7 @@ HighchartsSeriesTest >> testGetStreamgraph [
 	component streamgraph.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'streamgraph';
+		at: 'streamgraph' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -545,7 +545,7 @@ HighchartsSeriesTest >> testGetSunburst [
 	component sunburst.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'sunburst';
+		at: 'sunburst' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -559,7 +559,7 @@ HighchartsSeriesTest >> testGetTilemap [
 	component tilemap.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'tilemap';
+		at: 'tilemap' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -573,7 +573,7 @@ HighchartsSeriesTest >> testGetTimeline [
 	component timeline.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'timeline';
+		at: 'timeline' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -587,7 +587,7 @@ HighchartsSeriesTest >> testGetTreemap [
 	component treemap.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'treemap';
+		at: 'treemap' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -601,7 +601,7 @@ HighchartsSeriesTest >> testGetVariablepie [
 	component variablepie.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'variablepie';
+		at: 'variablepie' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -615,7 +615,7 @@ HighchartsSeriesTest >> testGetVariwide [
 	component variwide.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'variwide';
+		at: 'variwide' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -629,7 +629,7 @@ HighchartsSeriesTest >> testGetVector [
 	component vector.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'vector';
+		at: 'vector' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -643,7 +643,7 @@ HighchartsSeriesTest >> testGetVenn [
 	component venn.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'venn';
+		at: 'venn' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -657,7 +657,7 @@ HighchartsSeriesTest >> testGetWaterfall [
 	component waterfall.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'waterfall';
+		at: 'waterfall' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -671,7 +671,7 @@ HighchartsSeriesTest >> testGetWindbarb [
 	component windbarb.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'windbarb';
+		at: 'windbarb' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -685,7 +685,7 @@ HighchartsSeriesTest >> testGetWordcloud [
 	component wordcloud.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'wordcloud';
+		at: 'wordcloud' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -699,7 +699,21 @@ HighchartsSeriesTest >> testGetXrange [
 	component xrange.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'xrange';
+		at: 'xrange' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTest >> testSetJavascriptContentOn [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeries new.
+	component javascriptContentOn: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'javascriptContentOn' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

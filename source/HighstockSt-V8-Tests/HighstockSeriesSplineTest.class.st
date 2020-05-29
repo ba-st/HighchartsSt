@@ -125,6 +125,21 @@ HighstockSeriesSplineTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesSplineTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSpline new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'spline';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesSplineTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

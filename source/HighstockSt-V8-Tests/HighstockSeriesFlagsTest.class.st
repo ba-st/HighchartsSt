@@ -95,6 +95,21 @@ HighstockSeriesFlagsTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'initialize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesFlagsTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

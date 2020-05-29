@@ -19,6 +19,20 @@ HighchartTest >> testGetAccessibility [
 ]
 
 { #category : #'tests-accessing' }
+HighchartTest >> testGetAddYAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component addYAxis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'addYAxis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartTest >> testGetAnnotations [
 
 	| component javascript expectedConfiguration |
@@ -70,6 +84,20 @@ HighchartTest >> testGetChart [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'chart' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartTest >> testGetColorAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component colorAxis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'colorAxis' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -154,6 +182,20 @@ HighchartTest >> testGetGlobal [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'global' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartTest >> testGetInitialize [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component initialize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'initialize' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -293,7 +335,7 @@ HighchartTest >> testGetSeries [
 	component series.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'series' put: #();
+		at: 'series' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -355,6 +397,62 @@ HighchartTest >> testGetTooltip [
 ]
 
 { #category : #'tests-accessing' }
+HighchartTest >> testGetXAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component xAxis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'xAxis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartTest >> testGetYAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component yAxis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'yAxis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartTest >> testGetZAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component zAxis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zAxis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartTest >> testSetAddSeriesOf [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component addSeriesOf: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'addSeriesOf' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
@@ -364,6 +462,20 @@ HighchartTest >> testSetColors [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'colors' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartTest >> testSetId [
+
+	| component javascript expectedConfiguration |
+
+	component := Highchart new.
+	component id: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

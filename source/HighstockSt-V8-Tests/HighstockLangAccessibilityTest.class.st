@@ -19,6 +19,20 @@ HighstockLangAccessibilityTest >> testGetAnnounceNewData [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLangAccessibilityTest >> testGetAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLangAccessibility new.
+	component axis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'axis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLangAccessibilityTest >> testGetChartTypes [
 
 	| component javascript expectedConfiguration |

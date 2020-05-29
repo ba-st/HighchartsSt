@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsChartParallelAxesResizeTest >> testGetControlledAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxesResize new.
+	component controlledAxis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'controlledAxis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsChartParallelAxesResizeTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |

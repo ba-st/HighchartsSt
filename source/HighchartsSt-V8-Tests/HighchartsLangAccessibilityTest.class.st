@@ -19,6 +19,20 @@ HighchartsLangAccessibilityTest >> testGetAnnounceNewData [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsLangAccessibilityTest >> testGetAxis [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLangAccessibility new.
+	component axis.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'axis' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLangAccessibilityTest >> testGetChartTypes [
 
 	| component javascript expectedConfiguration |
