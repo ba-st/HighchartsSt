@@ -1,3 +1,6 @@
+"
+Options for the point markers of line-like series.
+"
 Class {
 	#name : #HighchartsSeriesVectorDataMarker,
 	#superclass : #HighchartsComponent,

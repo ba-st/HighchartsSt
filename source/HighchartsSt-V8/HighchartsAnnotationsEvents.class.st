@@ -1,3 +1,6 @@
+"
+Events available in annotations.
+"
 Class {
 	#name : #HighchartsAnnotationsEvents,
 	#superclass : #HighchartsComponent,

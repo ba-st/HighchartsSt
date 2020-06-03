@@ -11,15 +11,15 @@ few settings, see the complete options set below. If the total number of
 data points exceeds the series´
 turboThreshold,
 this option is not available.
-data: [{
+  data: [{
     value: 9,
     name: &quot;Point2&quot;,
     color: &quot;#00FF00&quot;
-}, {
+  }, {
     value: 6,
     name: &quot;Point1&quot;,
     color: &quot;#FF00FF&quot;
-}]
+  }]
 "
 Class {
 	#name : #HighchartsSeriesTreemapData,

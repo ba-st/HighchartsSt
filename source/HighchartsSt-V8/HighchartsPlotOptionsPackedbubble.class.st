@@ -3,7 +3,6 @@ A packed bubble series is a two dimensional series type, where each point
 renders a value in X, Y position. Each point is drawn as a bubble
 where the bubbles don´t overlap with each other and the radius
 of the bubble relates to the value.
-Requires highcharts-more.js.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

@@ -13,6 +13,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetAccessibility [
 	component accessibility.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'accessibility' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -27,6 +28,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetAnimation [
 	component animation.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'animation' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -41,6 +43,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetConnectors [
 	component connectors.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'connectors' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -55,6 +58,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetDataGrouping [
 	component dataGrouping.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'dataGrouping' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -69,6 +73,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetDataLabels [
 	component dataLabels.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'dataLabels' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -83,6 +88,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetDataSorting [
 	component dataSorting.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'dataSorting' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -97,6 +103,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetDragDrop [
 	component dragDrop.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'dragDrop' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -111,6 +118,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetLabel [
 	component label.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'label' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -125,6 +133,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetLastPrice [
 	component lastPrice.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'lastPrice' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -139,6 +148,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetLastVisiblePrice [
 	component lastVisiblePrice.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'lastVisiblePrice' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -153,6 +163,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetMarker [
 	component marker.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'marker' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -167,6 +178,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetParams [
 	component params.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'params' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -181,6 +193,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetPoint [
 	component point.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'point' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -195,6 +208,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetTooltip [
 	component tooltip.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'tooltip' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -209,6 +223,7 @@ HighstockSeriesLinearregressioninterceptTest >> testGetZones [
 	component zones.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'zones' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -223,6 +238,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetAllAreas [
 	component allAreas: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'allAreas' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -237,6 +253,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetAllowPointSelect [
 	component allowPointSelect: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'allowPointSelect' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -251,6 +268,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetAnimationLimit [
 	component animationLimit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'animationLimit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -265,6 +283,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetBoostBlending [
 	component boostBlending: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -279,6 +298,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetBoostThreshold [
 	component boostThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'boostThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -293,6 +313,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetBorderColor [
 	component borderColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'borderColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -307,6 +328,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetBorderWidth [
 	component borderWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'borderWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -321,6 +343,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetClassName [
 	component className: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'className' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -335,6 +358,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetClip [
 	component clip: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -349,6 +373,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetColor [
 	component color: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'color' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -363,6 +388,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetColorAxis [
 	component colorAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'colorAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -377,6 +403,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetColorIndex [
 	component colorIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'colorIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -391,6 +418,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetColorKey [
 	component colorKey: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -405,6 +433,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCompare [
 	component compare: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'compare' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -419,6 +448,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCompareBase [
 	component compareBase: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'compareBase' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -433,6 +463,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCompareStart [
 	component compareStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'compareStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -447,6 +478,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCompareToMain [
 	component compareToMain: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'compareToMain' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -461,6 +493,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetConnectEnds [
 	component connectEnds: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'connectEnds' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -475,6 +508,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetConnectNulls [
 	component connectNulls: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'connectNulls' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -489,6 +523,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCrisp [
 	component crisp: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'crisp' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -503,6 +538,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCropThreshold [
 	component cropThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -517,6 +553,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCursor [
 	component cursor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'cursor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -531,6 +568,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetCustom [
 	component custom: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'custom' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -545,7 +583,23 @@ HighstockSeriesLinearregressioninterceptTest >> testSetDashStyle [
 	component dashStyle: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressioninterceptTest >> testSetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionintercept new.
+	component data: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
+		at: 'data' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -559,6 +613,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetDescription [
 	component description: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'description' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -573,6 +628,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetEnableMouseTracking [
 	component enableMouseTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'enableMouseTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -587,6 +643,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetEvents [
 	component events: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'events' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -601,6 +658,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetFindNearestPointBy [
 	component findNearestPointBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'findNearestPointBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -615,6 +673,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetGapSize [
 	component gapSize: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'gapSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -629,6 +688,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetGapUnit [
 	component gapUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'gapUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -643,6 +703,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetGetExtremesFromAll [
 	component getExtremesFromAll: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'getExtremesFromAll' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -657,6 +718,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetId [
 	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -671,6 +733,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetIncludeInDataExport [
 	component includeInDataExport: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -685,6 +748,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetIndex [
 	component index: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'index' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -699,6 +763,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetJoinBy [
 	component joinBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'joinBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -713,6 +778,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetKeys [
 	component keys: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'keys' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -727,6 +793,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetLegendIndex [
 	component legendIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'legendIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -741,6 +808,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetLineWidth [
 	component lineWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'lineWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -755,6 +823,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetLinecap [
 	component linecap: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'linecap' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -769,6 +838,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetLinkedTo [
 	component linkedTo: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'linkedTo' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -783,6 +853,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetMapData [
 	component mapData: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'mapData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -797,6 +868,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetName [
 	component name: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'name' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -811,6 +883,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetNavigatorOptions [
 	component navigatorOptions: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'navigatorOptions' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -825,6 +898,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetNegativeColor [
 	component negativeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'negativeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -839,6 +913,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetOpacity [
 	component opacity: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -853,6 +928,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetPointDescriptionFormatter
 	component pointDescriptionFormatter: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'pointDescriptionFormatter' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -867,6 +943,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetPointInterval [
 	component pointInterval: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'pointInterval' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -881,6 +958,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetPointIntervalUnit [
 	component pointIntervalUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'pointIntervalUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -895,6 +973,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetPointPlacement [
 	component pointPlacement: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'pointPlacement' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -909,6 +988,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetPointRange [
 	component pointRange: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'pointRange' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -923,6 +1003,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetPointStart [
 	component pointStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'pointStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -937,6 +1018,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetSelected [
 	component selected: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'selected' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -951,6 +1033,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetShadow [
 	component shadow: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'shadow' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -965,6 +1048,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetShowCheckbox [
 	component showCheckbox: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'showCheckbox' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -979,6 +1063,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetShowInLegend [
 	component showInLegend: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'showInLegend' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -993,6 +1078,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetShowInNavigator [
 	component showInNavigator: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'showInNavigator' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1007,6 +1093,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetSkipKeyboardNavigation [
 	component skipKeyboardNavigation: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'skipKeyboardNavigation' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1021,6 +1108,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetSoftThreshold [
 	component softThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'softThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1035,6 +1123,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetStack [
 	component stack: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'stack' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1049,6 +1138,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetStacking [
 	component stacking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'stacking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1063,6 +1153,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetStates [
 	component states: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'states' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1077,6 +1168,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetStep [
 	component step: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1091,6 +1183,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetStickyTracking [
 	component stickyTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'stickyTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1105,6 +1198,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetThreshold [
 	component threshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'threshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1119,6 +1213,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetTurboThreshold [
 	component turboThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'turboThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1133,6 +1228,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetType [
 	component type: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'type' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1147,6 +1243,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetVisible [
 	component visible: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'visible' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1161,6 +1258,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetXAxis [
 	component xAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'xAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1175,6 +1273,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetYAxis [
 	component yAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'yAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1189,6 +1288,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetZIndex [
 	component zIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'zIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
@@ -1203,6 +1303,7 @@ HighstockSeriesLinearregressioninterceptTest >> testSetZoneAxis [
 	component zoneAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'linearregressionintercept';
 		at: 'zoneAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript

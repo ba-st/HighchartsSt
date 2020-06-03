@@ -7,21 +7,24 @@ Class {
 	#instVars : [
 		'configurationOptions'
 	],
-	#category : 'HighchartsStCore'
+	#category : #HighchartsStCore
 }
 
 { #category : #accessing }
 HighchartsComponent >> configurationOptions [
+
 	^ configurationOptions
 ]
 
 { #category : #initialization }
 HighchartsComponent >> initialize [
+
 	super initialize.
 	configurationOptions := Dictionary new
 ]
 
 { #category : #printing }
 HighchartsComponent >> javascriptContentOn: aStream [
-	aStream javascript: configurationOptions 
+
+	aStream javascript: configurationOptions
 ]

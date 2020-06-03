@@ -110,21 +110,6 @@ HighchartsSeriesLineTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesLine new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'line';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesLineTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

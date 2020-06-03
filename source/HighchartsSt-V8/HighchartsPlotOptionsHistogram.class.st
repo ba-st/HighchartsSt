@@ -1,7 +1,7 @@
 "
-A histogram is a column series which represents the distribution of the data
-set in the base series. Histogram splits data into bins and shows their
-frequencies.
+A histogram is a column series which represents the distribution of the
+data set in the base series. Histogram splits data into bins and shows
+their frequencies.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

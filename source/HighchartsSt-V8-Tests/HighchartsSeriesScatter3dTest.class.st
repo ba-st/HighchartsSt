@@ -125,21 +125,6 @@ HighchartsSeriesScatter3dTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesScatter3d new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'scatter3d';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesScatter3dTest >> testGetJitter [
 
 	| component javascript expectedConfiguration |

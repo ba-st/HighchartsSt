@@ -125,21 +125,6 @@ HighstockSeriesDumbbellTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesDumbbell new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'dumbbell';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesDumbbellTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

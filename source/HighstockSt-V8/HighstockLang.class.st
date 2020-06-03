@@ -5,13 +5,13 @@ set it before any chart is initialized.
 Highcharts.setOptions({
     lang: {
         months: [
-            'Janvier', 'Février', 'Mars', 'Avril',
-            'Mai', 'Juin', 'Juillet', 'Août',
-            'Septembre', 'Octobre', 'Novembre', 'Décembre'
+            ´Janvier´, ´Février´, ´Mars´, ´Avril´,
+            ´Mai´, ´Juin´, ´Juillet´, ´Août´,
+            ´Septembre´, ´Octobre´, ´Novembre´, ´Décembre´
         ],
         weekdays: [
-            'Dimanche', 'Lundi', 'Mardi', 'Mercredi',
-            'Jeudi', 'Vendredi', 'Samedi'
+            ´Dimanche´, ´Lundi´, ´Mardi´, ´Mercredi´,
+            ´Jeudi´, ´Vendredi´, ´Samedi´
         ]
     }
 });

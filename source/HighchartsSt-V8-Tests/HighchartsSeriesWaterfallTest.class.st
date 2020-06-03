@@ -125,21 +125,6 @@ HighchartsSeriesWaterfallTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesWaterfall new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'waterfall';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesWaterfallTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

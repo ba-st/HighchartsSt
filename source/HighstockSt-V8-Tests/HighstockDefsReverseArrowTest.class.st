@@ -1,103 +1,103 @@
 Class {
-	#name : #HighstockSeriesPackedbubbleConnectorsTest,
+	#name : #HighstockDefsReverseArrowTest,
 	#superclass : #TestCase,
 	#category : #'HighstockSt-V8-Tests'
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsTest >> testGetEndMarker [
+HighstockDefsReverseArrowTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleConnectors new.
-	component endMarker.
+	component := HighstockDefsReverseArrow new.
+	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'endMarker' put: Dictionary new;
+		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsTest >> testGetMarker [
+HighstockDefsReverseArrowTest >> testSetMarkerHeight [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleConnectors new.
-	component marker.
+	component := HighstockDefsReverseArrow new.
+	component markerHeight: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'marker' put: Dictionary new;
+		at: 'markerHeight' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsTest >> testGetStartMarker [
+HighstockDefsReverseArrowTest >> testSetMarkerWidth [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleConnectors new.
-	component startMarker.
+	component := HighstockDefsReverseArrow new.
+	component markerWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'startMarker' put: Dictionary new;
+		at: 'markerWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsTest >> testSetDashStyle [
+HighstockDefsReverseArrowTest >> testSetRefX [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleConnectors new.
-	component dashStyle: 'test'.
+	component := HighstockDefsReverseArrow new.
+	component refX: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'dashStyle' put: 'test';
+		at: 'refX' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsTest >> testSetLineColor [
+HighstockDefsReverseArrowTest >> testSetRefY [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleConnectors new.
-	component lineColor: 'test'.
+	component := HighstockDefsReverseArrow new.
+	component refY: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'lineColor' put: 'test';
+		at: 'refY' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsTest >> testSetLineWidth [
+HighstockDefsReverseArrowTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleConnectors new.
-	component lineWidth: 'test'.
+	component := HighstockDefsReverseArrow new.
+	component render: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'lineWidth' put: 'test';
+		at: 'render' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleConnectorsTest >> testSetType [
+HighstockDefsReverseArrowTest >> testSetTagName [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleConnectors new.
-	component type: 'test'.
+	component := HighstockDefsReverseArrow new.
+	component tagName: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'type' put: 'test';
+		at: 'tagName' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

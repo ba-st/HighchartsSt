@@ -73,8 +73,8 @@ Highsoft8TestGenerator >> extraCodeInSourceToTest: aModelClass [
 	| extraCode |
 
 	extraCode := ''.
-	( aModelClass name beginsWith: seriesClassName )
-		and: [ ( aModelClass includesSelector: #data )
+	( aModelClass name beginsWithSubCollection: seriesClassName )
+		and: [ ( aModelClass includesSelector: #type: )
 				and: [ ( ( RBClass existingNamed: seriesClassName asSymbol )
 						whichSelectorsReferToClass: ( RBClass existingNamed: aModelClass name ) )
 						ifNotEmpty: [ :selectors | 

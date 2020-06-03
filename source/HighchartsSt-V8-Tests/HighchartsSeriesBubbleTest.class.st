@@ -110,21 +110,6 @@ HighchartsSeriesBubbleTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBubbleTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesBubble new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'bubble';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesBubbleTest >> testGetJitter [
 
 	| component javascript expectedConfiguration |

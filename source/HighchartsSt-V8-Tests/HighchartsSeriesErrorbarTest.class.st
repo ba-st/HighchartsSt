@@ -125,21 +125,6 @@ HighchartsSeriesErrorbarTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesErrorbar new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'errorbar';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesErrorbarTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

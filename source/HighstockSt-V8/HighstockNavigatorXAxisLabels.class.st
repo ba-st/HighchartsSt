@@ -1,5 +1,7 @@
 "
 The axis labels show the number or category for each tick.
+Since v8.0.0: Labels are animated in categorized x-axis with
+updating data if tickInterval and step is set to 1.
 "
 Class {
 	#name : #HighstockNavigatorXAxisLabels,

@@ -1,8 +1,7 @@
 "
 The area spline range is a cartesian series type with higher and
 lower Y values along an X axis. The area inside the range is colored, and
-the graph outlining the area is a smoothed spline. Requires
-highcharts-more.js.
+the graph outlining the area is a smoothed spline.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

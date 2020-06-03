@@ -1,6 +1,6 @@
 "
 Set options on specific levels. Takes precedence over series options,
-but not point options.
+but not node and link options.
 "
 Class {
 	#name : #HighchartsPlotOptionsDependencywheelLevels,

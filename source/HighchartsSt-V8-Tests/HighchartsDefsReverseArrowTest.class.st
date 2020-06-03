@@ -1,117 +1,103 @@
 Class {
-	#name : #HighstockSeriesPackedbubbleDataGroupingTest,
+	#name : #HighchartsDefsReverseArrowTest,
 	#superclass : #TestCase,
-	#category : #'HighstockSt-V8-Tests'
+	#category : #'HighchartsSt-V8-Tests'
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetApproximation [
+HighchartsDefsReverseArrowTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component approximation: 'test'.
+	component := HighchartsDefsReverseArrow new.
+	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'approximation' put: 'test';
+		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetDateTimeLabelFormats [
+HighchartsDefsReverseArrowTest >> testSetMarkerHeight [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component dateTimeLabelFormats: 'test'.
+	component := HighchartsDefsReverseArrow new.
+	component markerHeight: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'dateTimeLabelFormats' put: 'test';
+		at: 'markerHeight' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetEnabled [
+HighchartsDefsReverseArrowTest >> testSetMarkerWidth [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component enabled: 'test'.
+	component := HighchartsDefsReverseArrow new.
+	component markerWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'enabled' put: 'test';
+		at: 'markerWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetForced [
+HighchartsDefsReverseArrowTest >> testSetRefX [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component forced: 'test'.
+	component := HighchartsDefsReverseArrow new.
+	component refX: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'forced' put: 'test';
+		at: 'refX' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetGroupAll [
+HighchartsDefsReverseArrowTest >> testSetRefY [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component groupAll: 'test'.
+	component := HighchartsDefsReverseArrow new.
+	component refY: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'groupAll' put: 'test';
+		at: 'refY' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetGroupPixelWidth [
+HighchartsDefsReverseArrowTest >> testSetRender [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component groupPixelWidth: 'test'.
+	component := HighchartsDefsReverseArrow new.
+	component render: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'groupPixelWidth' put: 'test';
+		at: 'render' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetSmoothed [
+HighchartsDefsReverseArrowTest >> testSetTagName [
 
 	| component javascript expectedConfiguration |
 
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component smoothed: 'test'.
+	component := HighchartsDefsReverseArrow new.
+	component tagName: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'smoothed' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesPackedbubbleDataGroupingTest >> testSetUnits [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesPackedbubbleDataGrouping new.
-	component units: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'units' put: 'test';
+		at: 'tagName' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

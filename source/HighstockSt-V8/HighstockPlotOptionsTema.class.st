@@ -1,8 +1,7 @@
 "
-Normalized average true range indicator (NATR). This series requires
+Triple exponential moving average (TEMA) indicator. This series requires
 linkedTo option to be set and should be loaded after the
 stock/indicators/indicators.js and stock/indicators/ema.js.
-Requires https://code.highcharts.com/stock/indicators/ema.js.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

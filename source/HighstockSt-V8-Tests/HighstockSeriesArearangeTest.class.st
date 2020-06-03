@@ -125,21 +125,6 @@ HighstockSeriesArearangeTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesArearange new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'arearange';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesArearangeTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

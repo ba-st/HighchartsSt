@@ -19,20 +19,6 @@ HighstockTest >> testGetAccessibility [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTest >> testGetAddYAxis [
-
-	| component javascript expectedConfiguration |
-
-	component := Highstock new.
-	component addYAxis.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'addYAxis' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockTest >> testGetAnnotations [
 
 	| component javascript expectedConfiguration |
@@ -84,20 +70,6 @@ HighstockTest >> testGetChart [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'chart' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockTest >> testGetColorAxis [
-
-	| component javascript expectedConfiguration |
-
-	component := Highstock new.
-	component colorAxis.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'colorAxis' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -168,20 +140,6 @@ HighstockTest >> testGetGlobal [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'global' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := Highstock new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'initialize' put: Dictionary new;
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -349,7 +307,7 @@ HighstockTest >> testGetSeries [
 	component series.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'series' put: Dictionary new;
+		at: 'series' put: #();
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -425,48 +383,6 @@ HighstockTest >> testGetTooltip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTest >> testGetXAxis [
-
-	| component javascript expectedConfiguration |
-
-	component := Highstock new.
-	component xAxis.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'xAxis' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockTest >> testGetYAxis [
-
-	| component javascript expectedConfiguration |
-
-	component := Highstock new.
-	component yAxis.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'yAxis' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockTest >> testSetAddSeriesOf [
-
-	| component javascript expectedConfiguration |
-
-	component := Highstock new.
-	component addSeriesOf: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'addSeriesOf' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
@@ -476,20 +392,6 @@ HighstockTest >> testSetColors [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'colors' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockTest >> testSetId [
-
-	| component javascript expectedConfiguration |
-
-	component := Highstock new.
-	component id: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

@@ -1,6 +1,6 @@
 "
-A pyramid series is a special type of funnel, without neck and reversed by
-default. Requires the funnel module.
+A pyramid series is a special type of funnel, without neck and reversed
+by default.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

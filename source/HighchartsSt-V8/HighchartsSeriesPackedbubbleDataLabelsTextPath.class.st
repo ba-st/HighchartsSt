@@ -1,9 +1,7 @@
 "
-Options for a label text which should follow marker´s shape.
-Border and background are disabled for a label that follows a
-path.
-Note: Only SVG-based renderer supports this option. Setting
-useHTML to true will disable this option.
+Options for a node label text which should follow marker´s
+shape.
+Note: Only SVG-based renderer supports this option.
 "
 Class {
 	#name : #HighchartsSeriesPackedbubbleDataLabelsTextPath,

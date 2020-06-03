@@ -125,21 +125,6 @@ HighstockSeriesColumnpyramidTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesColumnpyramid new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'columnpyramid';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesColumnpyramidTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

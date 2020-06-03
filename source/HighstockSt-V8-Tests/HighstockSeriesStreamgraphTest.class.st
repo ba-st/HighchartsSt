@@ -125,21 +125,6 @@ HighstockSeriesStreamgraphTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesStreamgraph new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'streamgraph';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesStreamgraphTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

@@ -125,21 +125,6 @@ HighstockSeriesAreasplinerangeTest >> testGetDragDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesAreasplinerange new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'areasplinerange';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesAreasplinerangeTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

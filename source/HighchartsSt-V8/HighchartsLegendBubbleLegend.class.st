@@ -4,7 +4,6 @@ presents the scale of the bubble series. Individual bubble ranges
 can be defined by user or calculated from series. In the case of
 automatically calculated ranges, a 1px margin of error is
 permitted.
-Requires highcharts-more.js.
 "
 Class {
 	#name : #HighchartsLegendBubbleLegend,

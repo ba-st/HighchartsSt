@@ -1,5 +1,5 @@
 "
-Individual point events
+The individual point events.
 "
 Class {
 	#name : #HighchartsSeriesTimelineDataEvents,

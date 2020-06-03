@@ -2,7 +2,7 @@
 A variable pie series is a two dimensional series type, where each point
 renders an Y and Z value.  Each point is drawn as a pie slice where the
 size (arc) of the slice relates to the Y value and the radius of pie
-slice relates to the Z value. Requires highcharts-more.js.
+slice relates to the Z value.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

@@ -2,8 +2,6 @@
 A pyramid3d is a 3d version of pyramid series type. Pyramid charts are
 a type of chart often used to visualize stages in a sales project,
 where the top are the initial stages with the most clients.
-It requires that the highcharts-3d.js, cylinder.js,
-funnel3d.js and pyramid3d modules are loaded.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

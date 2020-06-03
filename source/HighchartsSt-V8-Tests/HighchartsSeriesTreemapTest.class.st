@@ -140,21 +140,6 @@ HighchartsSeriesTreemapTest >> testGetDrillUpButton [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesTreemap new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'treemap';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesTreemapTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

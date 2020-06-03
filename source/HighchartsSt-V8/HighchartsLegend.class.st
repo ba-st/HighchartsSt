@@ -154,12 +154,12 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsLegend >> itemStyle: aCssDeclarationBlock [
+HighchartsLegend >> itemStyle: aHighchartsCSSObject [
 
-	"CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default textOverflow property makes long texts truncate. Set it to null to wrap text instead. A width property can be added to control the text width. 
-Defaults to { 'color': '#333333', 'cursor': 'pointer', 'fontSize': '12px', 'fontWeight': 'bold', 'textOverflow': 'ellipsis' }."
+	"CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default textOverflow property makes long texts truncate. Set it to undefined to wrap text instead. A width property can be added to control the text width.
+Defaults to {'color': '#333333', 'cursor': 'pointer', 'fontSize': '12px', 'fontWeight': 'bold', 'textOverflow': 'ellipsis'}."
 
-	configurationOptions at: 'itemStyle' put: aCssDeclarationBlock
+	configurationOptions at: 'itemStyle' put: aHighchartsCSSObject
 ]
 
 { #category : #accessing }

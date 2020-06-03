@@ -255,6 +255,13 @@ Defaults to Solid."
 ]
 
 { #category : #accessing }
+HighstockSeriesAo >> data: anObject [
+
+
+	configurationOptions at: 'data' put: anObject
+]
+
+{ #category : #accessing }
 HighstockSeriesAo >> dataGrouping [
 
 	"Data grouping is the concept of sampling the data values into larger blocks in order to ease readability and increase performance of the JavaScript charts. Highstock by default applies data grouping when the points become closer than a certain pixel value, determined by the groupPixelWidth option. If data grouping is applied, the grouping information of grouped points can be read from the Point.dataGroup. If point options other than the data itself are set, for example name or color or custom properties, the grouping logic doesn´t know how to group it. In this case the options of the first point instance are copied over to the group point. This can be altered through a custom approximation callback function.
@@ -394,9 +401,9 @@ HighstockSeriesAo >> index: aNumber [
 
 { #category : #initialization }
 HighstockSeriesAo >> initialize [
-
-super initialize.
-self type: 'ao'
+	
+	super initialize.
+	self type: 'ao'
 ]
 
 { #category : #accessing }

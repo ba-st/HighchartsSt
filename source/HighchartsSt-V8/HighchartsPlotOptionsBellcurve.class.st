@@ -1,8 +1,8 @@
 "
-A bell curve is an areaspline series which represents the probability density
-function of the normal distribution. It calculates mean and standard
-deviation of the base series data and plots the curve according to the
-calculated parameters.
+A bell curve is an areaspline series which represents the probability
+density function of the normal distribution. It calculates mean and
+standard deviation of the base series data and plots the curve according
+to the calculated parameters.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

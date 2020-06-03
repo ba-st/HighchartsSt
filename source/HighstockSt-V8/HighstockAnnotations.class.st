@@ -1,7 +1,7 @@
 "
-Options for configuring annotations, for example labels, arrows or
-shapes. Annotations can be tied to points, axis coordinates or chart
-pixel coordinates.
+A basic type of an annotation. It allows to add custom labels
+or shapes. The items  can be tied to points, axis coordinates
+or chart pixel coordinates.
 "
 Class {
 	#name : #HighstockAnnotations,

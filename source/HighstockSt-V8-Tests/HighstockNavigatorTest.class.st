@@ -33,34 +33,6 @@ HighstockNavigatorTest >> testGetSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testGetXAxis [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockNavigator new.
-	component xAxis.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'xAxis' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockNavigatorTest >> testGetYAxis [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockNavigator new.
-	component yAxis.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'yAxis' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockNavigatorTest >> testSetAdaptToUpdatedData [
 
 	| component javascript expectedConfiguration |

@@ -95,21 +95,6 @@ HighchartsSeriesPackedbubbleTest >> testGetDataLabels [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesPackedbubble new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'packedbubble';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesPackedbubbleTest >> testGetLabel [
 
 	| component javascript expectedConfiguration |

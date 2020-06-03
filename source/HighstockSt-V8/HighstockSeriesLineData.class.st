@@ -34,6 +34,15 @@ data: [{
     name: &quot;Point1&quot;,
     color: &quot;#FF00FF&quot;
 }]
+
+
+Note: In TypeScript you have to extend PointOptionsObject with an
+additional declaration to allow custom data types:
+declare module `highcharts` {
+  interface PointOptionsObject {
+    custom: Record&lt;string, (boolean|number|string)&gt;;
+  }
+}
 "
 Class {
 	#name : #HighstockSeriesLineData,

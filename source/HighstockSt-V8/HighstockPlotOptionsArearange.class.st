@@ -1,7 +1,6 @@
 "
 The area range series is a carteseian series with higher and lower values for
 each point along an X axis, where the area between the values is shaded.
-Requires highcharts-more.js.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

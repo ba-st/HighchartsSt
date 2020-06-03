@@ -1,8 +1,6 @@
 "
-Options for axis resizing. This feature requires the
-drag-panes.js
-module. It adds a thick line between panes which the user can drag
-in order to resize the panes.
+Options for axis resizing. It adds a thick line between panes which
+the user can drag in order to resize the panes.
 "
 Class {
 	#name : #HighstockYAxisResize,

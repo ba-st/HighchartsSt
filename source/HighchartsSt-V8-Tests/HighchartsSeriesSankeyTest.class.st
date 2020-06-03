@@ -95,21 +95,6 @@ HighchartsSeriesSankeyTest >> testGetDataLabels [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testGetInitialize [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesSankey new.
-	component initialize.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'sankey';
-		at: 'initialize' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesSankeyTest >> testGetLastPrice [
 
 	| component javascript expectedConfiguration |

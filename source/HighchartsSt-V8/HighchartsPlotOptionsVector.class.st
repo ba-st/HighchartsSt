@@ -1,6 +1,6 @@
 "
-A vector plot is a type of cartesian chart where each point has an X and Y
-position, a length and a direction. Vectors are drawn as arrows.
+A vector plot is a type of cartesian chart where each point has an X and
+Y position, a length and a direction. Vectors are drawn as arrows.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

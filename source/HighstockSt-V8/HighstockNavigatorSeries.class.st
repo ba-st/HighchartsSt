@@ -6,7 +6,7 @@ Unless data is explicitly defined on navigator.series, the data
 is borrowed from the first series in the chart.
 Default series options for the navigator series are:
 series: {
-    type: 'areaspline',
+    type: ´areaspline´,
     fillOpacity: 0.05,
     dataGrouping: {
         smoothed: true

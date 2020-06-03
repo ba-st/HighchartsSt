@@ -1,7 +1,6 @@
 "
 Point specific options for the draggable-points module. Overrides options on
 series.dragDrop.
-Requires the draggable-points module.
 "
 Class {
 	#name : #HighstockSeriesSplineDataDragDrop,

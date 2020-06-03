@@ -44,9 +44,23 @@ Highstock8DumpImporter >> generateCustomChanges [
 	self logToOutput: 'Custom Changes - Started'.
 	self generateCustomClassChangeOf: 'Highstock' for: 'Highstock'.
 	self generateCustomHighchartsNamespaceChanges.
+	self generateCustomHighchartWebViewChanges.
 	self generateCustomHighstockChanges.
 	self generateCustomSeriesChanges.
 	self logToOutput: 'Custom Changes - Finished'
+]
+
+{ #category : #'private - custom changes' }
+Highstock8DumpImporter >> generateCustomHighchartWebViewChanges [
+
+	self
+		generateCustomClassMethodChangeIn: 'HighchartWebView'
+		with:
+			'forStockChart
+
+	^ self buildingChartUsing: [ :canvas | canvas highcharts newStockChart ]'
+		classifiedAs: ( '*<1s>' expandMacrosWith: packageName )
+		for: 'HighchartWebView.forStockChart'
 ]
 
 { #category : #'private - custom changes' }
@@ -58,7 +72,7 @@ Highstock8DumpImporter >> generateCustomHighchartsNamespaceChanges [
 			'newStockChart
   
 	^ Highstock new'
-		classifiedAs: ('*<1s>' expandMacrosWith: packageName)
+		classifiedAs: ( '*<1s>' expandMacrosWith: packageName )
 		for: 'HighchartsNamespace.newStockChart'
 ]
 

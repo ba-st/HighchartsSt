@@ -1,7 +1,7 @@
 "
 Column pyramid series display one pyramid per value along an X axis.
-Requires highcharts-more.js. To display horizontal pyramids,
-set chart.inverted to true.
+To display horizontal pyramids, set chart.inverted to
+true.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

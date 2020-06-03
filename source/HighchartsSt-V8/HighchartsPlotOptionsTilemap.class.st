@@ -1,5 +1,6 @@
 "
-A tilemap series is a type of heatmap where the tile shapes are configurable.
+A tilemap series is a type of heatmap where the tile shapes are
+configurable.
 In TypeScript the type option must always be set.
 Configuration options for the series are given in three levels:
 

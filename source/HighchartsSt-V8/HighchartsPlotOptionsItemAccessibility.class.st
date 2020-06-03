@@ -1,5 +1,5 @@
 "
-Accessibility options for a series. Requires the accessibility module.
+Accessibility options for a series.
 "
 Class {
 	#name : #HighchartsPlotOptionsItemAccessibility,

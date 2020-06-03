@@ -1,3 +1,6 @@
+"
+The animation for entering the inactive state.
+"
 Class {
 	#name : #HighstockPlotOptionsStreamgraphStatesInactiveAnimation,
 	#superclass : #HighchartsComponent,

@@ -1,6 +1,6 @@
 "
-Options for the navigator Y axis. Default series options
-for the navigator yAxis are:
+Options for the navigator Y axis. Default series options for the
+navigator yAxis are:
 yAxis: {
     gridLineWidth: 0,
     startOnTick: false,

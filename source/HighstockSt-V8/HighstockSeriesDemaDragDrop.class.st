@@ -5,7 +5,6 @@ structure, the module fires three events,
 point.dragStart,
 point.drag and
 point.drop.
-It requires the modules/draggable-points.js file to be loaded.
 "
 Class {
 	#name : #HighstockSeriesDemaDragDrop,

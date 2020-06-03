@@ -1,9 +1,3 @@
-"
-Options for annotation´s control points. Each control point
-inherits options from controlPointOptions object.
-Options from the controlPointOptions can be overwritten
-by options in a specific control point.
-"
 Class {
 	#name : #HighstockAnnotationsMeasureControlPointOptions,
 	#superclass : #HighchartsComponent,
