@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellStatesSelectTest >> testBorderColor [
+HighstockPlotOptionsDumbbellStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsDumbbellStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellStatesSelectTest >> testBorderWidth [
+HighstockPlotOptionsDumbbellStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsDumbbellStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellStatesSelectTest >> testColor [
+HighstockPlotOptionsDumbbellStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsDumbbellStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellStatesSelectTest >> testEnabled [
+HighstockPlotOptionsDumbbellStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsDumbbellStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsDumbbellStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsDumbbellStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellStatesSelectTest >> testLineWidthPlus [
+HighstockPlotOptionsDumbbellStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

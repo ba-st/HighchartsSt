@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVectorAccessibilityTest >> testDescription [
+HighstockPlotOptionsVectorAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsVectorAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsVectorAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsVectorAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVectorAccessibilityTest >> testEnabled [
+HighstockPlotOptionsVectorAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsVectorAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVectorAccessibilityTest >> testExposeAsGroupOnly [
+HighstockPlotOptionsVectorAccessibilityTest >> testSetExposeAsGroupOnly [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsVectorAccessibilityTest >> testExposeAsGroupOnly [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVectorAccessibilityTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsVectorAccessibilityTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 

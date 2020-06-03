@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineStatesSelectTest >> testBorderColor [
+HighstockPlotOptionsLineStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLineStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLineStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLineStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLineStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLineStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLineStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsLineStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineStatesSelectTest >> testBorderWidth [
+HighstockPlotOptionsLineStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsLineStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineStatesSelectTest >> testColor [
+HighstockPlotOptionsLineStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsLineStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineStatesSelectTest >> testEnabled [
+HighstockPlotOptionsLineStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsLineStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsLineStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsLineStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineStatesSelectTest >> testLineWidthPlus [
+HighstockPlotOptionsLineStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

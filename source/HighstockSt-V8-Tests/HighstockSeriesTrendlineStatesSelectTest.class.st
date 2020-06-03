@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineStatesSelectTest >> testBorderColor [
+HighstockSeriesTrendlineStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesTrendlineStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesTrendlineStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesTrendlineStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesTrendlineStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesTrendlineStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesTrendlineStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesTrendlineStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineStatesSelectTest >> testBorderWidth [
+HighstockSeriesTrendlineStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesTrendlineStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineStatesSelectTest >> testColor [
+HighstockSeriesTrendlineStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesTrendlineStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineStatesSelectTest >> testEnabled [
+HighstockSeriesTrendlineStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesTrendlineStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineStatesSelectTest >> testLineWidth [
+HighstockSeriesTrendlineStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesTrendlineStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineStatesSelectTest >> testLineWidthPlus [
+HighstockSeriesTrendlineStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

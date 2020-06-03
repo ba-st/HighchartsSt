@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testEnabled [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testFillColor [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testHeight [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testLineColor [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testLineWidth [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testRadius [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testStates [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testSymbol [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsTrendlineMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerTest >> testWidth [
+HighstockPlotOptionsTrendlineMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

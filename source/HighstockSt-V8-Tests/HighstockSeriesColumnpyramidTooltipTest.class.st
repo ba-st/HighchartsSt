@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testChangeDecimals [
+HighstockSeriesColumnpyramidTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramidTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testClusterFormat [
+HighstockSeriesColumnpyramidTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testDistance [
+HighstockSeriesColumnpyramidTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testFollowPointer [
+HighstockSeriesColumnpyramidTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testFollowTouchMove [
+HighstockSeriesColumnpyramidTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testFooterFormat [
+HighstockSeriesColumnpyramidTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testHeaderFormat [
+HighstockSeriesColumnpyramidTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testNullFormat [
+HighstockSeriesColumnpyramidTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testNullFormatter [
+HighstockSeriesColumnpyramidTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testPointFormat [
+HighstockSeriesColumnpyramidTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testPointFormatter [
+HighstockSeriesColumnpyramidTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockSeriesColumnpyramidTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testValueDecimals [
+HighstockSeriesColumnpyramidTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnpyramidTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnpyramidTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testValuePrefix [
+HighstockSeriesColumnpyramidTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testValueSuffix [
+HighstockSeriesColumnpyramidTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockSeriesColumnpyramidTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidTooltipTest >> testXDateFormat [
+HighstockSeriesColumnpyramidTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

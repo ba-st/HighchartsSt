@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testClick [
+HighstockPlotOptionsCciPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCciPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testDrag [
+HighstockPlotOptionsCciPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsCciPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testDragStart [
+HighstockPlotOptionsCciPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsCciPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testDrop [
+HighstockPlotOptionsCciPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsCciPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testMouseOut [
+HighstockPlotOptionsCciPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsCciPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testMouseOver [
+HighstockPlotOptionsCciPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsCciPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testRemove [
+HighstockPlotOptionsCciPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsCciPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testSelect [
+HighstockPlotOptionsCciPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsCciPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testUnselect [
+HighstockPlotOptionsCciPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsCciPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciPointEventsTest >> testUpdate [
+HighstockPlotOptionsCciPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

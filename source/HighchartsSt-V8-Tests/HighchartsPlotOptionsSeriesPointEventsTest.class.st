@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testClick [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testDrag [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testDragStart [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testDrop [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testRemove [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testSelect [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testUnselect [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsSeriesPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSeriesPointEventsTest >> testUpdate [
+HighchartsPlotOptionsSeriesPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

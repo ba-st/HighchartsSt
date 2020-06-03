@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testEnabled [
+HighstockSeriesMfiMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMfiMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testEnabledThreshold [
+HighstockSeriesMfiMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesMfiMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testFillColor [
+HighstockSeriesMfiMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesMfiMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testHeight [
+HighstockSeriesMfiMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesMfiMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testLineColor [
+HighstockSeriesMfiMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesMfiMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testLineWidth [
+HighstockSeriesMfiMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesMfiMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testRadius [
+HighstockSeriesMfiMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesMfiMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testStates [
+HighstockSeriesMfiMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesMfiMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testSymbol [
+HighstockSeriesMfiMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesMfiMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiMarkerTest >> testWidth [
+HighstockSeriesMfiMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

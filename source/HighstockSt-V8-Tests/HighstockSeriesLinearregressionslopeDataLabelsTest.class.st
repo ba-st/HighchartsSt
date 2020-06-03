@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testAlign [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testAllowOverlap [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testBackgroundColor [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testBorderColor [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testBorderRadius [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testBorderWidth [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testClassName [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testColor [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testCrop [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testDefer [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testEnabled [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testFormat [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testFormatter [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testInside [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testNullFormat [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testNullFormatter [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testOverflow [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testPadding [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testPosition [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testRotation [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testShadow [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testShape [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testUseHTML [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testVerticalAlign [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testX [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testY [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockSeriesLinearregressionslopeDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeDataLabelsTest >> testZ [
+HighstockSeriesLinearregressionslopeDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

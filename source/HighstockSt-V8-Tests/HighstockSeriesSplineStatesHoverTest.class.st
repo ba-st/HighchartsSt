@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesHoverTest >> testBorderColor [
+HighstockSeriesSplineStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSplineStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSplineStatesHoverTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSplineStatesHover new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSplineStatesHoverTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSplineStatesHover new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSplineStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesSplineStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesHoverTest >> testBorderWidth [
+HighstockSeriesSplineStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesSplineStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesHoverTest >> testBrightness [
+HighstockSeriesSplineStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesSplineStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesHoverTest >> testColor [
+HighstockSeriesSplineStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesSplineStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesHoverTest >> testEnabled [
+HighstockSeriesSplineStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesSplineStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesHoverTest >> testLineWidth [
+HighstockSeriesSplineStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesSplineStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineStatesHoverTest >> testLineWidthPlus [
+HighstockSeriesSplineStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDragDropDragHandleTest >> testClassName [
+HighstockSeriesCandlestickDataDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesCandlestickDataDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDragDropDragHandleTest >> testColor [
+HighstockSeriesCandlestickDataDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesCandlestickDataDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDragDropDragHandleTest >> testCursor [
+HighstockSeriesCandlestickDataDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesCandlestickDataDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDragDropDragHandleTest >> testLineColor [
+HighstockSeriesCandlestickDataDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesCandlestickDataDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesCandlestickDataDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesCandlestickDataDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesCandlestickDataDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesCandlestickDataDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDragDropDragHandleTest >> testZIndex [
+HighstockSeriesCandlestickDataDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

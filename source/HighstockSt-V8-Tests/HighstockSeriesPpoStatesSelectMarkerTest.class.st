@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testEnabled [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testEnabledThreshold [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testFillColor [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testHeight [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testLineColor [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testLineWidth [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testRadius [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testSymbol [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPpoStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoStatesSelectMarkerTest >> testWidth [
+HighstockSeriesPpoStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

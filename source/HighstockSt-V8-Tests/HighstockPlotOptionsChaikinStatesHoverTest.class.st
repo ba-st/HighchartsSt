@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinStatesHoverTest >> testBorderColor [
+HighstockPlotOptionsChaikinStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsChaikinStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsChaikinStatesHoverTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsChaikinStatesHover new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsChaikinStatesHoverTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsChaikinStatesHover new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsChaikinStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsChaikinStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinStatesHoverTest >> testBorderWidth [
+HighstockPlotOptionsChaikinStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsChaikinStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinStatesHoverTest >> testBrightness [
+HighstockPlotOptionsChaikinStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsChaikinStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinStatesHoverTest >> testColor [
+HighstockPlotOptionsChaikinStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsChaikinStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinStatesHoverTest >> testEnabled [
+HighstockPlotOptionsChaikinStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsChaikinStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinStatesHoverTest >> testLineWidth [
+HighstockPlotOptionsChaikinStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsChaikinStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinStatesHoverTest >> testLineWidthPlus [
+HighstockPlotOptionsChaikinStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

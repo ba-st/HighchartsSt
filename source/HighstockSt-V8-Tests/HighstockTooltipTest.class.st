@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testAnimation [
+HighstockTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockTooltipTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockTooltip new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockTooltipTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockTooltipTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testBackgroundColor [
+HighstockTooltipTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockTooltipTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testBorderColor [
+HighstockTooltipTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockTooltipTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testBorderRadius [
+HighstockTooltipTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockTooltipTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testBorderWidth [
+HighstockTooltipTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockTooltipTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testChangeDecimals [
+HighstockTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testClassName [
+HighstockTooltipTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockTooltipTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testClusterFormat [
+HighstockTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testCrosshairs [
+HighstockTooltipTest >> testSetCrosshairs [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockTooltipTest >> testCrosshairs [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testDistance [
+HighstockTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testEnabled [
+HighstockTooltipTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockTooltipTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testFollowPointer [
+HighstockTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testFollowTouchMove [
+HighstockTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testFooterFormat [
+HighstockTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testFormatter [
+HighstockTooltipTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighstockTooltipTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testHeaderFormat [
+HighstockTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighstockTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testHeaderShape [
+HighstockTooltipTest >> testSetHeaderShape [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +271,7 @@ HighstockTooltipTest >> testHeaderShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testHideDelay [
+HighstockTooltipTest >> testSetHideDelay [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +285,7 @@ HighstockTooltipTest >> testHideDelay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testNullFormat [
+HighstockTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +299,7 @@ HighstockTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testNullFormatter [
+HighstockTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +313,7 @@ HighstockTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testOutside [
+HighstockTooltipTest >> testSetOutside [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +327,7 @@ HighstockTooltipTest >> testOutside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testPadding [
+HighstockTooltipTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +341,7 @@ HighstockTooltipTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testPointFormat [
+HighstockTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +355,7 @@ HighstockTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testPointFormatter [
+HighstockTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +369,7 @@ HighstockTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testPositioner [
+HighstockTooltipTest >> testSetPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +383,7 @@ HighstockTooltipTest >> testPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testShadow [
+HighstockTooltipTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +397,7 @@ HighstockTooltipTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testShape [
+HighstockTooltipTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +411,7 @@ HighstockTooltipTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testShared [
+HighstockTooltipTest >> testSetShared [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +425,7 @@ HighstockTooltipTest >> testShared [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testSnap [
+HighstockTooltipTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +439,7 @@ HighstockTooltipTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testSplit [
+HighstockTooltipTest >> testSetSplit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +453,21 @@ HighstockTooltipTest >> testSplit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testUseHTML [
+HighstockTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockTooltipTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +481,7 @@ HighstockTooltipTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testValueDecimals [
+HighstockTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +495,7 @@ HighstockTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testValuePrefix [
+HighstockTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +509,7 @@ HighstockTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testValueSuffix [
+HighstockTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +523,7 @@ HighstockTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipTest >> testXDateFormat [
+HighstockTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

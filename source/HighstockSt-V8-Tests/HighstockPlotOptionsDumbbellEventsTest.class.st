@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testAfterAnimate [
+HighstockPlotOptionsDumbbellEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsDumbbellEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testCheckboxClick [
+HighstockPlotOptionsDumbbellEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsDumbbellEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testClick [
+HighstockPlotOptionsDumbbellEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsDumbbellEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testHide [
+HighstockPlotOptionsDumbbellEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsDumbbellEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testLegendItemClick [
+HighstockPlotOptionsDumbbellEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsDumbbellEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testMouseOut [
+HighstockPlotOptionsDumbbellEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsDumbbellEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testMouseOver [
+HighstockPlotOptionsDumbbellEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsDumbbellEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellEventsTest >> testShow [
+HighstockPlotOptionsDumbbellEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

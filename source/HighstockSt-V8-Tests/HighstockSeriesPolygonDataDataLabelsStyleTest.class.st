@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataDataLabelsStyleTest >> testColor [
+HighstockSeriesPolygonDataDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPolygonDataDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataDataLabelsStyleTest >> testFontSize [
+HighstockSeriesPolygonDataDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPolygonDataDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataDataLabelsStyleTest >> testFontWeight [
+HighstockSeriesPolygonDataDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPolygonDataDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataDataLabelsStyleTest >> testTextOutline [
+HighstockSeriesPolygonDataDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

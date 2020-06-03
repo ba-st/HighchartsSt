@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsLinearregressionDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsLinearregressionDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

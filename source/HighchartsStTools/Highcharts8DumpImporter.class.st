@@ -44,6 +44,7 @@ Highcharts8DumpImporter >> generateCustomChanges [
 	self logToOutput: 'Custom Changes - Started'.
 	self generateCustomClassChangeOf: 'Highchart' for: 'Highchart'.
 	self generateCustomHighchartsNamespaceChanges.
+	self generateCustomHighchartWebViewChanges.
 	self generateCustomHighchartChanges.
 	self generateCustomLegendChanges.
 	self generateCustomLabelsChanges.
@@ -85,6 +86,19 @@ Highcharts8DumpImporter >> generateCustomHighchartChanges [
 ]
 
 { #category : #'private - custom changes' }
+Highcharts8DumpImporter >> generateCustomHighchartWebViewChanges [
+
+	self
+		generateCustomClassMethodChangeIn: 'HighchartWebView'
+		with:
+			'forSimpleChart
+
+	^ self buildingChartUsing: [ :canvas | canvas highcharts newChart ]'
+		classifiedAs: ( '*<1s>' expandMacrosWith: packageName )
+		for: 'HighchartWebView.forSimpleChart'
+]
+
+{ #category : #'private - custom changes' }
 Highcharts8DumpImporter >> generateCustomHighchartsNamespaceChanges [
 
 	self
@@ -93,7 +107,7 @@ Highcharts8DumpImporter >> generateCustomHighchartsNamespaceChanges [
 			'newChart
   
 	^ Highchart new'
-		classifiedAs: ('*<1s>' expandMacrosWith: packageName)
+		classifiedAs: ( '*<1s>' expandMacrosWith: packageName )
 		for: 'HighchartsNamespace.newChart'
 ]
 

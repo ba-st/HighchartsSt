@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testAlign [
+HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testVerticalAlign [
+HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testX [
+HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testY [
+HighchartsPlotOptionsTreemapTraverseUpButtonPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

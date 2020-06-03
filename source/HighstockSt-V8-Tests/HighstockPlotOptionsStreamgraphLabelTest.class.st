@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelTest >> testBoxesToAvoid [
+HighstockPlotOptionsStreamgraphLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStreamgraphLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStreamgraphLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsStreamgraphLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelTest >> testConnectorAllowed [
+HighstockPlotOptionsStreamgraphLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsStreamgraphLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelTest >> testConnectorNeighbourDistance [
+HighstockPlotOptionsStreamgraphLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsStreamgraphLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelTest >> testEnabled [
+HighstockPlotOptionsStreamgraphLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighstockPlotOptionsStreamgraphLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelTest >> testMaxFontSize [
+HighstockPlotOptionsStreamgraphLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStreamgraphLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStreamgraphLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsStreamgraphLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsStreamgraphLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsStreamgraphLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelTest >> testMinFontSize [
+HighstockPlotOptionsStreamgraphLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsStreamgraphLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphLabelTest >> testOnArea [
+HighstockPlotOptionsStreamgraphLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

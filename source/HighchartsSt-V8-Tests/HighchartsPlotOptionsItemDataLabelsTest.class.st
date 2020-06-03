@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testAlignTo [
+HighchartsPlotOptionsItemDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsItemDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsItemDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsItemDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsItemDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsItemDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsItemDataLabelsTest >> testSetAlignTo [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testAlignTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testClassName [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testColor [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testConnectorColor [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testConnectorPadding [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetConnectorPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testConnectorPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testConnectorShape [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetConnectorShape [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testConnectorShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testConnectorWidth [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testCrookDistance [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetCrookDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testCrookDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testCrop [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testDefer [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testDistance [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testFormat [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -257,21 +299,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testInside [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsItemDataLabels new.
-	component inside: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'inside' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +313,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +327,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +341,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testPadding [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +355,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testPosition [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +369,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testRotation [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +383,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testShadow [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +397,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testShape [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +411,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testSoftConnector [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetSoftConnector [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +425,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testSoftConnector [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +439,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +453,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testX [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +467,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testY [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +481,7 @@ HighchartsPlotOptionsItemDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsItemDataLabelsTest >> testZ [
+HighchartsPlotOptionsItemDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

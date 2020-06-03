@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelAccessibilityTest >> testDescription [
+HighchartsPlotOptionsFunnelAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsFunnelAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsFunnelAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsFunnelAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelAccessibilityTest >> testEnabled [
+HighchartsPlotOptionsFunnelAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsFunnelAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelAccessibilityTest >> testExposeAsGroupOnly [
+HighchartsPlotOptionsFunnelAccessibilityTest >> testSetExposeAsGroupOnly [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsFunnelAccessibilityTest >> testExposeAsGroupOnly [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelAccessibilityTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsFunnelAccessibilityTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 

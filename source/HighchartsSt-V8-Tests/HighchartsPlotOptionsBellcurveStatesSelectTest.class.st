@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesSelectTest >> testBorderColor [
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurveStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurveStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurveStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsBellcurveStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesSelectTest >> testBorderWidth [
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsBellcurveStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesSelectTest >> testColor [
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsBellcurveStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesSelectTest >> testEnabled [
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsBellcurveStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesSelectTest >> testLineWidth [
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsBellcurveStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesSelectTest >> testLineWidthPlus [
+HighchartsPlotOptionsBellcurveStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

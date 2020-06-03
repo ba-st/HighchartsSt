@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotLastVisiblePriceLabelTest >> testEnabled [
+HighchartsSeriesBoxplotLastVisiblePriceLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testClassName [
+HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testColor [
+HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testCursor [
+HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testLineColor [
+HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testLineWidth [
+HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testPathFormatter [
+HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testZIndex [
+HighstockPlotOptionsStreamgraphDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

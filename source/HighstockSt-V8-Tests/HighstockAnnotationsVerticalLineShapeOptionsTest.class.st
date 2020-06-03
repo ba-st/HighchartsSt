@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testFill [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsVerticalLineShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testHeight [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsVerticalLineShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testR [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsVerticalLineShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testSnap [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighstockAnnotationsVerticalLineShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testStroke [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockAnnotationsVerticalLineShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockAnnotationsVerticalLineShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testType [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockAnnotationsVerticalLineShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineShapeOptionsTest >> testWidth [
+HighstockAnnotationsVerticalLineShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

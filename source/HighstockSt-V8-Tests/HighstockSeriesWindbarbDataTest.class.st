@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testColor [
+HighstockSeriesWindbarbDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWindbarbData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWindbarbDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWindbarbData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWindbarbDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWindbarbData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWindbarbDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWindbarbData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWindbarbDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,21 @@ HighstockSeriesWindbarbDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testDescription [
+HighstockSeriesWindbarbDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWindbarbData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWindbarbDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighstockSeriesWindbarbDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testDirection [
+HighstockSeriesWindbarbDataTest >> testSetDirection [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,7 @@ HighstockSeriesWindbarbDataTest >> testDirection [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testEvents [
+HighstockSeriesWindbarbDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighstockSeriesWindbarbDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testId [
+HighstockSeriesWindbarbDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighstockSeriesWindbarbDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testLabelrank [
+HighstockSeriesWindbarbDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighstockSeriesWindbarbDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testName [
+HighstockSeriesWindbarbDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +173,7 @@ HighstockSeriesWindbarbDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testSelected [
+HighstockSeriesWindbarbDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +187,7 @@ HighstockSeriesWindbarbDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testValue [
+HighstockSeriesWindbarbDataTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +201,7 @@ HighstockSeriesWindbarbDataTest >> testValue [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testX [
+HighstockSeriesWindbarbDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +215,7 @@ HighstockSeriesWindbarbDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbDataTest >> testY [
+HighstockSeriesWindbarbDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testAlign [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testColor [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testEnabled [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testHeight [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testInside [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testLineColor [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testLineWidth [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testRadius [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testVerticalAlign [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesHeatmapConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapConnectorsMarkerTest >> testWidth [
+HighchartsSeriesHeatmapConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testClassName [
+HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testColor [
+HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testCursor [
+HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testLineColor [
+HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testLineWidth [
+HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testZIndex [
+HighstockSeriesMfiDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

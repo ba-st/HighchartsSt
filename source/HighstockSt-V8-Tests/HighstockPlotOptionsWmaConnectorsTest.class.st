@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsTest >> testDashStyle [
+HighstockPlotOptionsWmaConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsWmaConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsWmaConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsWmaConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsWmaConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsWmaConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsWmaConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsWmaConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsTest >> testLineColor [
+HighstockPlotOptionsWmaConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsWmaConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsTest >> testLineWidth [
+HighstockPlotOptionsWmaConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsWmaConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsTest >> testType [
+HighstockPlotOptionsWmaConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

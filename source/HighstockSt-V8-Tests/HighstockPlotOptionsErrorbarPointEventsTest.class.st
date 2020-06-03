@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testClick [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testDrag [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testDragStart [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testDrop [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testMouseOut [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testMouseOver [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testRemove [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testSelect [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testUnselect [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsErrorbarPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarPointEventsTest >> testUpdate [
+HighstockPlotOptionsErrorbarPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

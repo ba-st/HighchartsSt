@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonStatesSelectTest >> testBorderColor [
+HighchartsSeriesPolygonStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesPolygonStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonStatesSelectTest >> testBorderWidth [
+HighchartsSeriesPolygonStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesPolygonStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonStatesSelectTest >> testColor [
+HighchartsSeriesPolygonStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesPolygonStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonStatesSelectTest >> testEnabled [
+HighchartsSeriesPolygonStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesPolygonStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonStatesSelectTest >> testLineWidth [
+HighchartsSeriesPolygonStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesPolygonStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonStatesSelectTest >> testLineWidthPlus [
+HighchartsSeriesPolygonStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

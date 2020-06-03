@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testAlign [
+HighstockExportingButtonsContextButtonTest >> testGetTheme [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockExportingButtonsContextButton new.
+	component theme.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'theme' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockExportingButtonsContextButtonTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockExportingButtonsContextButtonTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testButtonSpacing [
+HighstockExportingButtonsContextButtonTest >> testSetButtonSpacing [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockExportingButtonsContextButtonTest >> testButtonSpacing [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testClassName [
+HighstockExportingButtonsContextButtonTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockExportingButtonsContextButtonTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testEnabled [
+HighstockExportingButtonsContextButtonTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockExportingButtonsContextButtonTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testHeight [
+HighstockExportingButtonsContextButtonTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockExportingButtonsContextButtonTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testMenuClassName [
+HighstockExportingButtonsContextButtonTest >> testSetMenuClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockExportingButtonsContextButtonTest >> testMenuClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testMenuItems [
+HighstockExportingButtonsContextButtonTest >> testSetMenuItems [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockExportingButtonsContextButtonTest >> testMenuItems [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testOnclick [
+HighstockExportingButtonsContextButtonTest >> testSetOnclick [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockExportingButtonsContextButtonTest >> testOnclick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testSymbol [
+HighstockExportingButtonsContextButtonTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockExportingButtonsContextButtonTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testSymbolFill [
+HighstockExportingButtonsContextButtonTest >> testSetSymbolFill [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockExportingButtonsContextButtonTest >> testSymbolFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testSymbolSize [
+HighstockExportingButtonsContextButtonTest >> testSetSymbolSize [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockExportingButtonsContextButtonTest >> testSymbolSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testSymbolStroke [
+HighstockExportingButtonsContextButtonTest >> testSetSymbolStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockExportingButtonsContextButtonTest >> testSymbolStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testSymbolStrokeWidth [
+HighstockExportingButtonsContextButtonTest >> testSetSymbolStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockExportingButtonsContextButtonTest >> testSymbolStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testSymbolX [
+HighstockExportingButtonsContextButtonTest >> testSetSymbolX [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockExportingButtonsContextButtonTest >> testSymbolX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testSymbolY [
+HighstockExportingButtonsContextButtonTest >> testSetSymbolY [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockExportingButtonsContextButtonTest >> testSymbolY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testText [
+HighstockExportingButtonsContextButtonTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighstockExportingButtonsContextButtonTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testTitleKey [
+HighstockExportingButtonsContextButtonTest >> testSetTitleKey [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighstockExportingButtonsContextButtonTest >> testTitleKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testVerticalAlign [
+HighstockExportingButtonsContextButtonTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighstockExportingButtonsContextButtonTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testWidth [
+HighstockExportingButtonsContextButtonTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighstockExportingButtonsContextButtonTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testX [
+HighstockExportingButtonsContextButtonTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighstockExportingButtonsContextButtonTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> testY [
+HighstockExportingButtonsContextButtonTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +313,7 @@ HighstockExportingButtonsContextButtonTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockExportingButtonsContextButtonTest >> test_titleKey [
+HighstockExportingButtonsContextButtonTest >> testSet_titleKey [
 
 	| component javascript expectedConfiguration |
 

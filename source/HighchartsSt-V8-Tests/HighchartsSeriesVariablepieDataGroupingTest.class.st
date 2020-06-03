@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testApproximation [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVariablepieDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVariablepieDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testEnabled [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVariablepieDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testForced [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVariablepieDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testGroupAll [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesVariablepieDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testGroupPixelWidth [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesVariablepieDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testSmoothed [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesVariablepieDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataGroupingTest >> testUnits [
+HighchartsSeriesVariablepieDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

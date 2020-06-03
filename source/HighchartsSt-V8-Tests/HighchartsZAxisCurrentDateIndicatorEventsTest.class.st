@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorEventsTest >> testClick [
+HighchartsZAxisCurrentDateIndicatorEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsZAxisCurrentDateIndicatorEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorEventsTest >> testMousemove [
+HighchartsZAxisCurrentDateIndicatorEventsTest >> testSetMousemove [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsZAxisCurrentDateIndicatorEventsTest >> testMousemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorEventsTest >> testMouseout [
+HighchartsZAxisCurrentDateIndicatorEventsTest >> testSetMouseout [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsZAxisCurrentDateIndicatorEventsTest >> testMouseout [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisCurrentDateIndicatorEventsTest >> testMouseover [
+HighchartsZAxisCurrentDateIndicatorEventsTest >> testSetMouseover [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testMillisecond
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsPyramid3dTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

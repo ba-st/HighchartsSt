@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testAllAreas [
+HighchartsSeriesHistogramTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -13,13 +223,14 @@ HighchartsSeriesHistogramTest >> testAllAreas [
 	component allAreas: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'allAreas' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testAllowPointSelect [
+HighchartsSeriesHistogramTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -27,13 +238,14 @@ HighchartsSeriesHistogramTest >> testAllowPointSelect [
 	component allowPointSelect: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'allowPointSelect' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testAnimationLimit [
+HighchartsSeriesHistogramTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -41,13 +253,14 @@ HighchartsSeriesHistogramTest >> testAnimationLimit [
 	component animationLimit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'animationLimit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBaseSeries [
+HighchartsSeriesHistogramTest >> testSetBaseSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -55,13 +268,14 @@ HighchartsSeriesHistogramTest >> testBaseSeries [
 	component baseSeries: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'baseSeries' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBinWidth [
+HighchartsSeriesHistogramTest >> testSetBinWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -69,13 +283,14 @@ HighchartsSeriesHistogramTest >> testBinWidth [
 	component binWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'binWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBinsNumber [
+HighchartsSeriesHistogramTest >> testSetBinsNumber [
 
 	| component javascript expectedConfiguration |
 
@@ -83,13 +298,14 @@ HighchartsSeriesHistogramTest >> testBinsNumber [
 	component binsNumber: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'binsNumber' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBoostBlending [
+HighchartsSeriesHistogramTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -97,13 +313,14 @@ HighchartsSeriesHistogramTest >> testBoostBlending [
 	component boostBlending: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBoostThreshold [
+HighchartsSeriesHistogramTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -111,13 +328,14 @@ HighchartsSeriesHistogramTest >> testBoostThreshold [
 	component boostThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'boostThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBorderColor [
+HighchartsSeriesHistogramTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -125,13 +343,14 @@ HighchartsSeriesHistogramTest >> testBorderColor [
 	component borderColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'borderColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBorderRadius [
+HighchartsSeriesHistogramTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -139,13 +358,14 @@ HighchartsSeriesHistogramTest >> testBorderRadius [
 	component borderRadius: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'borderRadius' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testBorderWidth [
+HighchartsSeriesHistogramTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -153,13 +373,14 @@ HighchartsSeriesHistogramTest >> testBorderWidth [
 	component borderWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'borderWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testClassName [
+HighchartsSeriesHistogramTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -167,13 +388,14 @@ HighchartsSeriesHistogramTest >> testClassName [
 	component className: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'className' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testClip [
+HighchartsSeriesHistogramTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -181,13 +403,14 @@ HighchartsSeriesHistogramTest >> testClip [
 	component clip: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testColor [
+HighchartsSeriesHistogramTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -195,13 +418,14 @@ HighchartsSeriesHistogramTest >> testColor [
 	component color: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'color' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testColorAxis [
+HighchartsSeriesHistogramTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -209,13 +433,14 @@ HighchartsSeriesHistogramTest >> testColorAxis [
 	component colorAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'colorAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testColorByPoint [
+HighchartsSeriesHistogramTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -223,13 +448,14 @@ HighchartsSeriesHistogramTest >> testColorByPoint [
 	component colorByPoint: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'colorByPoint' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testColorIndex [
+HighchartsSeriesHistogramTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -237,13 +463,14 @@ HighchartsSeriesHistogramTest >> testColorIndex [
 	component colorIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'colorIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testColorKey [
+HighchartsSeriesHistogramTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -251,13 +478,14 @@ HighchartsSeriesHistogramTest >> testColorKey [
 	component colorKey: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testColors [
+HighchartsSeriesHistogramTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -265,13 +493,14 @@ HighchartsSeriesHistogramTest >> testColors [
 	component colors: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'colors' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testCompare [
+HighchartsSeriesHistogramTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -279,13 +508,14 @@ HighchartsSeriesHistogramTest >> testCompare [
 	component compare: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'compare' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testCompareBase [
+HighchartsSeriesHistogramTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -293,13 +523,14 @@ HighchartsSeriesHistogramTest >> testCompareBase [
 	component compareBase: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'compareBase' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testCompareStart [
+HighchartsSeriesHistogramTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -307,13 +538,14 @@ HighchartsSeriesHistogramTest >> testCompareStart [
 	component compareStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'compareStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testConnectEnds [
+HighchartsSeriesHistogramTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -321,13 +553,14 @@ HighchartsSeriesHistogramTest >> testConnectEnds [
 	component connectEnds: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'connectEnds' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testConnectNulls [
+HighchartsSeriesHistogramTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -335,13 +568,14 @@ HighchartsSeriesHistogramTest >> testConnectNulls [
 	component connectNulls: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'connectNulls' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testCrisp [
+HighchartsSeriesHistogramTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -349,13 +583,14 @@ HighchartsSeriesHistogramTest >> testCrisp [
 	component crisp: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'crisp' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testCropThreshold [
+HighchartsSeriesHistogramTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -363,13 +598,14 @@ HighchartsSeriesHistogramTest >> testCropThreshold [
 	component cropThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testCursor [
+HighchartsSeriesHistogramTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -377,13 +613,29 @@ HighchartsSeriesHistogramTest >> testCursor [
 	component cursor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'cursor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testDashStyle [
+HighchartsSeriesHistogramTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -391,13 +643,29 @@ HighchartsSeriesHistogramTest >> testDashStyle [
 	component dashStyle: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'dashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testDepth [
+HighchartsSeriesHistogramTest >> testSetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component data: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -405,13 +673,14 @@ HighchartsSeriesHistogramTest >> testDepth [
 	component depth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'depth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testDescription [
+HighchartsSeriesHistogramTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -419,13 +688,14 @@ HighchartsSeriesHistogramTest >> testDescription [
 	component description: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'description' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testEdgeColor [
+HighchartsSeriesHistogramTest >> testSetEdgeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -433,13 +703,14 @@ HighchartsSeriesHistogramTest >> testEdgeColor [
 	component edgeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'edgeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testEdgeWidth [
+HighchartsSeriesHistogramTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -447,13 +718,14 @@ HighchartsSeriesHistogramTest >> testEdgeWidth [
 	component edgeWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'edgeWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testEnableMouseTracking [
+HighchartsSeriesHistogramTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -461,13 +733,14 @@ HighchartsSeriesHistogramTest >> testEnableMouseTracking [
 	component enableMouseTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'enableMouseTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testEvents [
+HighchartsSeriesHistogramTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -475,13 +748,14 @@ HighchartsSeriesHistogramTest >> testEvents [
 	component events: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'events' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testFindNearestPointBy [
+HighchartsSeriesHistogramTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -489,13 +763,14 @@ HighchartsSeriesHistogramTest >> testFindNearestPointBy [
 	component findNearestPointBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'findNearestPointBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testGapSize [
+HighchartsSeriesHistogramTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -503,13 +778,14 @@ HighchartsSeriesHistogramTest >> testGapSize [
 	component gapSize: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'gapSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testGapUnit [
+HighchartsSeriesHistogramTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -517,13 +793,14 @@ HighchartsSeriesHistogramTest >> testGapUnit [
 	component gapUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'gapUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testGetExtremesFromAll [
+HighchartsSeriesHistogramTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -531,13 +808,14 @@ HighchartsSeriesHistogramTest >> testGetExtremesFromAll [
 	component getExtremesFromAll: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'getExtremesFromAll' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testGroupPadding [
+HighchartsSeriesHistogramTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -545,13 +823,14 @@ HighchartsSeriesHistogramTest >> testGroupPadding [
 	component groupPadding: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'groupPadding' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testGroupZPadding [
+HighchartsSeriesHistogramTest >> testSetGroupZPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -559,13 +838,14 @@ HighchartsSeriesHistogramTest >> testGroupZPadding [
 	component groupZPadding: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'groupZPadding' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testGrouping [
+HighchartsSeriesHistogramTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -573,13 +853,14 @@ HighchartsSeriesHistogramTest >> testGrouping [
 	component grouping: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'grouping' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testId [
+HighchartsSeriesHistogramTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -587,13 +868,14 @@ HighchartsSeriesHistogramTest >> testId [
 	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testIncludeInDataExport [
+HighchartsSeriesHistogramTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -601,13 +883,14 @@ HighchartsSeriesHistogramTest >> testIncludeInDataExport [
 	component includeInDataExport: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testIndex [
+HighchartsSeriesHistogramTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -615,13 +898,14 @@ HighchartsSeriesHistogramTest >> testIndex [
 	component index: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'index' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testJoinBy [
+HighchartsSeriesHistogramTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -629,13 +913,14 @@ HighchartsSeriesHistogramTest >> testJoinBy [
 	component joinBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'joinBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testKeys [
+HighchartsSeriesHistogramTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -643,13 +928,14 @@ HighchartsSeriesHistogramTest >> testKeys [
 	component keys: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'keys' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testLegendIndex [
+HighchartsSeriesHistogramTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -657,13 +943,14 @@ HighchartsSeriesHistogramTest >> testLegendIndex [
 	component legendIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'legendIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testLineWidth [
+HighchartsSeriesHistogramTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -671,13 +958,14 @@ HighchartsSeriesHistogramTest >> testLineWidth [
 	component lineWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'lineWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testLinecap [
+HighchartsSeriesHistogramTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -685,13 +973,14 @@ HighchartsSeriesHistogramTest >> testLinecap [
 	component linecap: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'linecap' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testLinkedTo [
+HighchartsSeriesHistogramTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -699,13 +988,14 @@ HighchartsSeriesHistogramTest >> testLinkedTo [
 	component linkedTo: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'linkedTo' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testMapData [
+HighchartsSeriesHistogramTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -713,13 +1003,14 @@ HighchartsSeriesHistogramTest >> testMapData [
 	component mapData: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'mapData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testMaxPointWidth [
+HighchartsSeriesHistogramTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -727,13 +1018,14 @@ HighchartsSeriesHistogramTest >> testMaxPointWidth [
 	component maxPointWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'maxPointWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testMinPointLength [
+HighchartsSeriesHistogramTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -741,13 +1033,14 @@ HighchartsSeriesHistogramTest >> testMinPointLength [
 	component minPointLength: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'minPointLength' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testName [
+HighchartsSeriesHistogramTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -755,13 +1048,14 @@ HighchartsSeriesHistogramTest >> testName [
 	component name: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'name' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testNavigatorOptions [
+HighchartsSeriesHistogramTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -769,13 +1063,14 @@ HighchartsSeriesHistogramTest >> testNavigatorOptions [
 	component navigatorOptions: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'navigatorOptions' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testNegativeColor [
+HighchartsSeriesHistogramTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -783,13 +1078,14 @@ HighchartsSeriesHistogramTest >> testNegativeColor [
 	component negativeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'negativeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testOpacity [
+HighchartsSeriesHistogramTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -797,13 +1093,14 @@ HighchartsSeriesHistogramTest >> testOpacity [
 	component opacity: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointDescriptionFormatter [
+HighchartsSeriesHistogramTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -811,13 +1108,14 @@ HighchartsSeriesHistogramTest >> testPointDescriptionFormatter [
 	component pointDescriptionFormatter: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointDescriptionFormatter' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointInterval [
+HighchartsSeriesHistogramTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -825,13 +1123,14 @@ HighchartsSeriesHistogramTest >> testPointInterval [
 	component pointInterval: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointInterval' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointIntervalUnit [
+HighchartsSeriesHistogramTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -839,13 +1138,14 @@ HighchartsSeriesHistogramTest >> testPointIntervalUnit [
 	component pointIntervalUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointIntervalUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointPadding [
+HighchartsSeriesHistogramTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -853,13 +1153,14 @@ HighchartsSeriesHistogramTest >> testPointPadding [
 	component pointPadding: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointPadding' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointPlacement [
+HighchartsSeriesHistogramTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -867,13 +1168,14 @@ HighchartsSeriesHistogramTest >> testPointPlacement [
 	component pointPlacement: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointPlacement' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointRange [
+HighchartsSeriesHistogramTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -881,13 +1183,14 @@ HighchartsSeriesHistogramTest >> testPointRange [
 	component pointRange: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointRange' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointStart [
+HighchartsSeriesHistogramTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -895,13 +1198,14 @@ HighchartsSeriesHistogramTest >> testPointStart [
 	component pointStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testPointWidth [
+HighchartsSeriesHistogramTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -909,13 +1213,14 @@ HighchartsSeriesHistogramTest >> testPointWidth [
 	component pointWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'pointWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testSelected [
+HighchartsSeriesHistogramTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -923,13 +1228,14 @@ HighchartsSeriesHistogramTest >> testSelected [
 	component selected: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'selected' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testShadow [
+HighchartsSeriesHistogramTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -937,13 +1243,14 @@ HighchartsSeriesHistogramTest >> testShadow [
 	component shadow: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'shadow' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testShowCheckbox [
+HighchartsSeriesHistogramTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -951,13 +1258,14 @@ HighchartsSeriesHistogramTest >> testShowCheckbox [
 	component showCheckbox: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'showCheckbox' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testShowInLegend [
+HighchartsSeriesHistogramTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -965,13 +1273,14 @@ HighchartsSeriesHistogramTest >> testShowInLegend [
 	component showInLegend: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'showInLegend' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testShowInNavigator [
+HighchartsSeriesHistogramTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -979,13 +1288,14 @@ HighchartsSeriesHistogramTest >> testShowInNavigator [
 	component showInNavigator: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'showInNavigator' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testSkipKeyboardNavigation [
+HighchartsSeriesHistogramTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -993,13 +1303,14 @@ HighchartsSeriesHistogramTest >> testSkipKeyboardNavigation [
 	component skipKeyboardNavigation: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'skipKeyboardNavigation' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testSoftThreshold [
+HighchartsSeriesHistogramTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1007,13 +1318,14 @@ HighchartsSeriesHistogramTest >> testSoftThreshold [
 	component softThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'softThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testStack [
+HighchartsSeriesHistogramTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -1021,13 +1333,14 @@ HighchartsSeriesHistogramTest >> testStack [
 	component stack: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'stack' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testStacking [
+HighchartsSeriesHistogramTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1035,13 +1348,14 @@ HighchartsSeriesHistogramTest >> testStacking [
 	component stacking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'stacking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testStates [
+HighchartsSeriesHistogramTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1049,13 +1363,14 @@ HighchartsSeriesHistogramTest >> testStates [
 	component states: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'states' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testStep [
+HighchartsSeriesHistogramTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1063,13 +1378,14 @@ HighchartsSeriesHistogramTest >> testStep [
 	component step: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testStickyTracking [
+HighchartsSeriesHistogramTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1077,13 +1393,14 @@ HighchartsSeriesHistogramTest >> testStickyTracking [
 	component stickyTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'stickyTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testThreshold [
+HighchartsSeriesHistogramTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1091,13 +1408,14 @@ HighchartsSeriesHistogramTest >> testThreshold [
 	component threshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'threshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testTurboThreshold [
+HighchartsSeriesHistogramTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1105,13 +1423,14 @@ HighchartsSeriesHistogramTest >> testTurboThreshold [
 	component turboThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'turboThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testType [
+HighchartsSeriesHistogramTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1119,13 +1438,14 @@ HighchartsSeriesHistogramTest >> testType [
 	component type: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'type' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testVisible [
+HighchartsSeriesHistogramTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1133,13 +1453,14 @@ HighchartsSeriesHistogramTest >> testVisible [
 	component visible: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'visible' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testXAxis [
+HighchartsSeriesHistogramTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1147,13 +1468,14 @@ HighchartsSeriesHistogramTest >> testXAxis [
 	component xAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'xAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testYAxis [
+HighchartsSeriesHistogramTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1161,13 +1483,14 @@ HighchartsSeriesHistogramTest >> testYAxis [
 	component yAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'yAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testZIndex [
+HighchartsSeriesHistogramTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,13 +1498,14 @@ HighchartsSeriesHistogramTest >> testZIndex [
 	component zIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'zIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testZoneAxis [
+HighchartsSeriesHistogramTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1189,6 +1513,7 @@ HighchartsSeriesHistogramTest >> testZoneAxis [
 	component zoneAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
 		at: 'zoneAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript

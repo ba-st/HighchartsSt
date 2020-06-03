@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testEnabled [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testFillColor [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testHeight [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testLineColor [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testLineWidth [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testRadius [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testSymbol [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesAdStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAdStatesHoverMarkerTest >> testWidth [
+HighstockSeriesAdStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

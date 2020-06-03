@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testAllowPointSelect [
+HighstockSeriesPpoTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -13,13 +238,14 @@ HighstockSeriesPpoTest >> testAllowPointSelect [
 	component allowPointSelect: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'allowPointSelect' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testAnimationLimit [
+HighstockSeriesPpoTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -27,13 +253,14 @@ HighstockSeriesPpoTest >> testAnimationLimit [
 	component animationLimit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'animationLimit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testBoostBlending [
+HighstockSeriesPpoTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -41,13 +268,14 @@ HighstockSeriesPpoTest >> testBoostBlending [
 	component boostBlending: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testBoostThreshold [
+HighstockSeriesPpoTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -55,13 +283,14 @@ HighstockSeriesPpoTest >> testBoostThreshold [
 	component boostThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'boostThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testBorderColor [
+HighstockSeriesPpoTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -69,13 +298,14 @@ HighstockSeriesPpoTest >> testBorderColor [
 	component borderColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'borderColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testBorderWidth [
+HighstockSeriesPpoTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -83,13 +313,14 @@ HighstockSeriesPpoTest >> testBorderWidth [
 	component borderWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'borderWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testClassName [
+HighstockSeriesPpoTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -97,13 +328,14 @@ HighstockSeriesPpoTest >> testClassName [
 	component className: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'className' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testClip [
+HighstockSeriesPpoTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -111,13 +343,14 @@ HighstockSeriesPpoTest >> testClip [
 	component clip: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testColor [
+HighstockSeriesPpoTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -125,13 +358,14 @@ HighstockSeriesPpoTest >> testColor [
 	component color: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'color' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testColorIndex [
+HighstockSeriesPpoTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -139,13 +373,14 @@ HighstockSeriesPpoTest >> testColorIndex [
 	component colorIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'colorIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testColorKey [
+HighstockSeriesPpoTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -153,13 +388,14 @@ HighstockSeriesPpoTest >> testColorKey [
 	component colorKey: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testCompare [
+HighstockSeriesPpoTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -167,13 +403,14 @@ HighstockSeriesPpoTest >> testCompare [
 	component compare: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'compare' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testCompareBase [
+HighstockSeriesPpoTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -181,13 +418,14 @@ HighstockSeriesPpoTest >> testCompareBase [
 	component compareBase: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'compareBase' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testCompareStart [
+HighstockSeriesPpoTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -195,13 +433,14 @@ HighstockSeriesPpoTest >> testCompareStart [
 	component compareStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'compareStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testCompareToMain [
+HighstockSeriesPpoTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -209,13 +448,14 @@ HighstockSeriesPpoTest >> testCompareToMain [
 	component compareToMain: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'compareToMain' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testConnectEnds [
+HighstockSeriesPpoTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -223,13 +463,14 @@ HighstockSeriesPpoTest >> testConnectEnds [
 	component connectEnds: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'connectEnds' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testConnectNulls [
+HighstockSeriesPpoTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -237,13 +478,29 @@ HighstockSeriesPpoTest >> testConnectNulls [
 	component connectNulls: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'connectNulls' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testCropThreshold [
+HighstockSeriesPpoTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -251,13 +508,14 @@ HighstockSeriesPpoTest >> testCropThreshold [
 	component cropThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testCursor [
+HighstockSeriesPpoTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -265,13 +523,29 @@ HighstockSeriesPpoTest >> testCursor [
 	component cursor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'cursor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testDashStyle [
+HighstockSeriesPpoTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -279,13 +553,29 @@ HighstockSeriesPpoTest >> testDashStyle [
 	component dashStyle: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'dashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testDescription [
+HighstockSeriesPpoTest >> testSetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPpo new.
+	component data: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
+		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPpoTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -293,13 +583,14 @@ HighstockSeriesPpoTest >> testDescription [
 	component description: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'description' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testEnableMouseTracking [
+HighstockSeriesPpoTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -307,13 +598,14 @@ HighstockSeriesPpoTest >> testEnableMouseTracking [
 	component enableMouseTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'enableMouseTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testEvents [
+HighstockSeriesPpoTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -321,13 +613,14 @@ HighstockSeriesPpoTest >> testEvents [
 	component events: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'events' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testFindNearestPointBy [
+HighstockSeriesPpoTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -335,13 +628,14 @@ HighstockSeriesPpoTest >> testFindNearestPointBy [
 	component findNearestPointBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'findNearestPointBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testGapSize [
+HighstockSeriesPpoTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -349,13 +643,14 @@ HighstockSeriesPpoTest >> testGapSize [
 	component gapSize: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'gapSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testGapUnit [
+HighstockSeriesPpoTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -363,13 +658,14 @@ HighstockSeriesPpoTest >> testGapUnit [
 	component gapUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'gapUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testGetExtremesFromAll [
+HighstockSeriesPpoTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -377,13 +673,14 @@ HighstockSeriesPpoTest >> testGetExtremesFromAll [
 	component getExtremesFromAll: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'getExtremesFromAll' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testId [
+HighstockSeriesPpoTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -391,13 +688,14 @@ HighstockSeriesPpoTest >> testId [
 	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testIncludeInDataExport [
+HighstockSeriesPpoTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -405,13 +703,14 @@ HighstockSeriesPpoTest >> testIncludeInDataExport [
 	component includeInDataExport: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testIndex [
+HighstockSeriesPpoTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -419,13 +718,14 @@ HighstockSeriesPpoTest >> testIndex [
 	component index: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'index' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testLegendIndex [
+HighstockSeriesPpoTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -433,13 +733,14 @@ HighstockSeriesPpoTest >> testLegendIndex [
 	component legendIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'legendIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testLineWidth [
+HighstockSeriesPpoTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -447,13 +748,14 @@ HighstockSeriesPpoTest >> testLineWidth [
 	component lineWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'lineWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testLinecap [
+HighstockSeriesPpoTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -461,13 +763,14 @@ HighstockSeriesPpoTest >> testLinecap [
 	component linecap: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'linecap' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testLinkedTo [
+HighstockSeriesPpoTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -475,13 +778,14 @@ HighstockSeriesPpoTest >> testLinkedTo [
 	component linkedTo: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'linkedTo' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testMapData [
+HighstockSeriesPpoTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -489,13 +793,14 @@ HighstockSeriesPpoTest >> testMapData [
 	component mapData: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'mapData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testName [
+HighstockSeriesPpoTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -503,13 +808,14 @@ HighstockSeriesPpoTest >> testName [
 	component name: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'name' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testNegativeColor [
+HighstockSeriesPpoTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -517,13 +823,14 @@ HighstockSeriesPpoTest >> testNegativeColor [
 	component negativeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'negativeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testOpacity [
+HighstockSeriesPpoTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -531,13 +838,14 @@ HighstockSeriesPpoTest >> testOpacity [
 	component opacity: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testPointDescriptionFormatter [
+HighstockSeriesPpoTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -545,13 +853,14 @@ HighstockSeriesPpoTest >> testPointDescriptionFormatter [
 	component pointDescriptionFormatter: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'pointDescriptionFormatter' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testSelected [
+HighstockSeriesPpoTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -559,13 +868,14 @@ HighstockSeriesPpoTest >> testSelected [
 	component selected: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'selected' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testShadow [
+HighstockSeriesPpoTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -573,13 +883,14 @@ HighstockSeriesPpoTest >> testShadow [
 	component shadow: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'shadow' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testShowCheckbox [
+HighstockSeriesPpoTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -587,13 +898,14 @@ HighstockSeriesPpoTest >> testShowCheckbox [
 	component showCheckbox: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'showCheckbox' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testShowInLegend [
+HighstockSeriesPpoTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -601,13 +913,14 @@ HighstockSeriesPpoTest >> testShowInLegend [
 	component showInLegend: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'showInLegend' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testSkipKeyboardNavigation [
+HighstockSeriesPpoTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -615,13 +928,14 @@ HighstockSeriesPpoTest >> testSkipKeyboardNavigation [
 	component skipKeyboardNavigation: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'skipKeyboardNavigation' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testSoftThreshold [
+HighstockSeriesPpoTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -629,13 +943,14 @@ HighstockSeriesPpoTest >> testSoftThreshold [
 	component softThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'softThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testStack [
+HighstockSeriesPpoTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -643,13 +958,14 @@ HighstockSeriesPpoTest >> testStack [
 	component stack: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'stack' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testStates [
+HighstockSeriesPpoTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -657,13 +973,14 @@ HighstockSeriesPpoTest >> testStates [
 	component states: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'states' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testStep [
+HighstockSeriesPpoTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -671,13 +988,14 @@ HighstockSeriesPpoTest >> testStep [
 	component step: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testStickyTracking [
+HighstockSeriesPpoTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -685,13 +1003,14 @@ HighstockSeriesPpoTest >> testStickyTracking [
 	component stickyTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'stickyTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testThreshold [
+HighstockSeriesPpoTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -699,13 +1018,14 @@ HighstockSeriesPpoTest >> testThreshold [
 	component threshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'threshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testTurboThreshold [
+HighstockSeriesPpoTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -713,13 +1033,14 @@ HighstockSeriesPpoTest >> testTurboThreshold [
 	component turboThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'turboThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testType [
+HighstockSeriesPpoTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -727,13 +1048,14 @@ HighstockSeriesPpoTest >> testType [
 	component type: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'type' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testVisible [
+HighstockSeriesPpoTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -741,13 +1063,14 @@ HighstockSeriesPpoTest >> testVisible [
 	component visible: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'visible' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testXAxis [
+HighstockSeriesPpoTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -755,13 +1078,14 @@ HighstockSeriesPpoTest >> testXAxis [
 	component xAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'xAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testYAxis [
+HighstockSeriesPpoTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -769,13 +1093,14 @@ HighstockSeriesPpoTest >> testYAxis [
 	component yAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'yAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testZIndex [
+HighstockSeriesPpoTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -783,13 +1108,14 @@ HighstockSeriesPpoTest >> testZIndex [
 	component zIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'zIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPpoTest >> testZoneAxis [
+HighstockSeriesPpoTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -797,6 +1123,7 @@ HighstockSeriesPpoTest >> testZoneAxis [
 	component zoneAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'ppo';
 		at: 'zoneAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript

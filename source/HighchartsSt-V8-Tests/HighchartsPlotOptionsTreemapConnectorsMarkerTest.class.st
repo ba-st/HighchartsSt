@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testAlign [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testColor [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testEnabled [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testHeight [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testInside [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testLineColor [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testLineWidth [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testRadius [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testWidth [
+HighchartsPlotOptionsTreemapConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

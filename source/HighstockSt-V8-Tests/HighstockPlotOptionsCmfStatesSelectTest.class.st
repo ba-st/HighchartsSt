@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfStatesSelectTest >> testBorderColor [
+HighstockPlotOptionsCmfStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCmfStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCmfStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCmfStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCmfStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCmfStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCmfStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsCmfStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfStatesSelectTest >> testBorderWidth [
+HighstockPlotOptionsCmfStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsCmfStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfStatesSelectTest >> testColor [
+HighstockPlotOptionsCmfStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsCmfStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfStatesSelectTest >> testEnabled [
+HighstockPlotOptionsCmfStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsCmfStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsCmfStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsCmfStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfStatesSelectTest >> testLineWidthPlus [
+HighstockPlotOptionsCmfStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

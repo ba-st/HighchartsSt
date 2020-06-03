@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testAlign [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testColor [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testEnabled [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testHeight [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testInside [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testLineColor [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testLineWidth [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testRadius [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSymbol [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testWidth [
+HighstockPlotOptionsDumbbellConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

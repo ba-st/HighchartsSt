@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testAfterAnimate [
+HighchartsSeriesSankeyEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSankeyEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testCheckboxClick [
+HighchartsSeriesSankeyEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSankeyEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testClick [
+HighchartsSeriesSankeyEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSankeyEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testHide [
+HighchartsSeriesSankeyEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSankeyEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testLegendItemClick [
+HighchartsSeriesSankeyEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesSankeyEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testMouseOut [
+HighchartsSeriesSankeyEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesSankeyEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testMouseOver [
+HighchartsSeriesSankeyEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesSankeyEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyEventsTest >> testShow [
+HighchartsSeriesSankeyEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

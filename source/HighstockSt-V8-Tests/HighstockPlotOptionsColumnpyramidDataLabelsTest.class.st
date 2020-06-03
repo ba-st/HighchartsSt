@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testAlign [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramidDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramidDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramidDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testAllowOverlap [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBackgroundColor [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBorderColor [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBorderRadius [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBorderWidth [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testClassName [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testColor [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testCrop [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testDefer [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testEnabled [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testFormat [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testFormatter [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testInside [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testNullFormat [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testNullFormatter [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testOverflow [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testPadding [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testPosition [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testRotation [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testShadow [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testShape [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testUseHTML [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testVerticalAlign [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testX [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testY [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsTest >> testZ [
+HighstockPlotOptionsColumnpyramidDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

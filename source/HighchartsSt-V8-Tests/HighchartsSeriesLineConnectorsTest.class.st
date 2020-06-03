@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineConnectorsTest >> testDashStyle [
+HighchartsSeriesLineConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesLineConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineConnectorsTest >> testLineColor [
+HighchartsSeriesLineConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesLineConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineConnectorsTest >> testLineWidth [
+HighchartsSeriesLineConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesLineConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineConnectorsTest >> testType [
+HighchartsSeriesLineConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

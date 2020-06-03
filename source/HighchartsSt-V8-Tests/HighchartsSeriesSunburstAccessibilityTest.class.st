@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstAccessibilityTest >> testDescription [
+HighchartsSeriesSunburstAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesSunburstAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstAccessibilityTest >> testEnabled [
+HighchartsSeriesSunburstAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesSunburstAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstAccessibilityTest >> testExposeAsGroupOnly [
+HighchartsSeriesSunburstAccessibilityTest >> testSetExposeAsGroupOnly [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesSunburstAccessibilityTest >> testExposeAsGroupOnly [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstAccessibilityTest >> testPointDescriptionFormatter [
+HighchartsSeriesSunburstAccessibilityTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 

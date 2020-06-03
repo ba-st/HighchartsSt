@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testAlign [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testColor [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testEnabled [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testHeight [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testInside [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testLineColor [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testLineWidth [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testRadius [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSymbol [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testWidth [
+HighstockPlotOptionsVbpConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

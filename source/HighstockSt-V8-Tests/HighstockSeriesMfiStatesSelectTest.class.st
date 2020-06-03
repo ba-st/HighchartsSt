@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiStatesSelectTest >> testBorderColor [
+HighstockSeriesMfiStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesMfiStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesMfiStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesMfiStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesMfiStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesMfiStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesMfiStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesMfiStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiStatesSelectTest >> testBorderWidth [
+HighstockSeriesMfiStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesMfiStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiStatesSelectTest >> testColor [
+HighstockSeriesMfiStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesMfiStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiStatesSelectTest >> testEnabled [
+HighstockSeriesMfiStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesMfiStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiStatesSelectTest >> testLineWidth [
+HighstockSeriesMfiStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesMfiStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiStatesSelectTest >> testLineWidthPlus [
+HighstockSeriesMfiStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

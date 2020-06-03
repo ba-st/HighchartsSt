@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLineDataSortingTest >> testEnabled [
+HighchartsPlotOptionsLineDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsLineDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLineDataSortingTest >> testMatchByName [
+HighchartsPlotOptionsLineDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsLineDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLineDataSortingTest >> testSortKey [
+HighchartsPlotOptionsLineDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testClassName [
+HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testColor [
+HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testCursor [
+HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testLineColor [
+HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testLineWidth [
+HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testZIndex [
+HighchartsPlotOptionsBulletDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

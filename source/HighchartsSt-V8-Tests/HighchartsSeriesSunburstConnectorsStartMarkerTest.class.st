@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testAlign [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testColor [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testEnabled [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testHeight [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testInside [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testLineColor [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testLineWidth [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testRadius [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSymbol [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testVerticalAlign [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsSeriesSunburstConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstConnectorsStartMarkerTest >> testWidth [
+HighchartsSeriesSunburstConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testAfterAnimate [
+HighchartsSeriesVariwideEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVariwideEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testCheckboxClick [
+HighchartsSeriesVariwideEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVariwideEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testClick [
+HighchartsSeriesVariwideEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVariwideEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testHide [
+HighchartsSeriesVariwideEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVariwideEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testLegendItemClick [
+HighchartsSeriesVariwideEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesVariwideEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testMouseOut [
+HighchartsSeriesVariwideEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesVariwideEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testMouseOver [
+HighchartsSeriesVariwideEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesVariwideEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideEventsTest >> testShow [
+HighchartsSeriesVariwideEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

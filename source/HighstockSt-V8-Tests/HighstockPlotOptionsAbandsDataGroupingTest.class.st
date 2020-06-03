@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testApproximation [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAbandsDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAbandsDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testEnabled [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAbandsDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testForced [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAbandsDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAbandsDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAbandsDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAbandsDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAbandsDataGroupingTest >> testUnits [
+HighstockPlotOptionsAbandsDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

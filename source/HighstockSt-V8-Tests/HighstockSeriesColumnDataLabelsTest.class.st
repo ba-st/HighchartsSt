@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testAlign [
+HighstockSeriesColumnDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesColumnDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testAllowOverlap [
+HighstockSeriesColumnDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesColumnDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testBackgroundColor [
+HighstockSeriesColumnDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesColumnDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testBorderColor [
+HighstockSeriesColumnDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesColumnDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testBorderRadius [
+HighstockSeriesColumnDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesColumnDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testBorderWidth [
+HighstockSeriesColumnDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesColumnDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testClassName [
+HighstockSeriesColumnDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockSeriesColumnDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testColor [
+HighstockSeriesColumnDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockSeriesColumnDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testCrop [
+HighstockSeriesColumnDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockSeriesColumnDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testDefer [
+HighstockSeriesColumnDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockSeriesColumnDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testEnabled [
+HighstockSeriesColumnDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockSeriesColumnDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testFormat [
+HighstockSeriesColumnDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockSeriesColumnDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testFormatter [
+HighstockSeriesColumnDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockSeriesColumnDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testInside [
+HighstockSeriesColumnDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockSeriesColumnDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testNullFormat [
+HighstockSeriesColumnDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockSeriesColumnDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testNullFormatter [
+HighstockSeriesColumnDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockSeriesColumnDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testOverflow [
+HighstockSeriesColumnDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockSeriesColumnDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testPadding [
+HighstockSeriesColumnDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockSeriesColumnDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testPosition [
+HighstockSeriesColumnDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockSeriesColumnDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testRotation [
+HighstockSeriesColumnDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockSeriesColumnDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testShadow [
+HighstockSeriesColumnDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockSeriesColumnDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testShape [
+HighstockSeriesColumnDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockSeriesColumnDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testUseHTML [
+HighstockSeriesColumnDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockSeriesColumnDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testVerticalAlign [
+HighstockSeriesColumnDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockSeriesColumnDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testX [
+HighstockSeriesColumnDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockSeriesColumnDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testY [
+HighstockSeriesColumnDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockSeriesColumnDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataLabelsTest >> testZ [
+HighstockSeriesColumnDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

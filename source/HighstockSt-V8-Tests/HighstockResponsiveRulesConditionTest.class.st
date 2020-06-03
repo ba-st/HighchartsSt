@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockResponsiveRulesConditionTest >> testCallback [
+HighstockResponsiveRulesConditionTest >> testSetCallback [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockResponsiveRulesConditionTest >> testCallback [
 ]
 
 { #category : #'tests-accessing' }
-HighstockResponsiveRulesConditionTest >> testMaxHeight [
+HighstockResponsiveRulesConditionTest >> testSetMaxHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockResponsiveRulesConditionTest >> testMaxHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockResponsiveRulesConditionTest >> testMaxWidth [
+HighstockResponsiveRulesConditionTest >> testSetMaxWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockResponsiveRulesConditionTest >> testMaxWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockResponsiveRulesConditionTest >> testMinHeight [
+HighstockResponsiveRulesConditionTest >> testSetMinHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockResponsiveRulesConditionTest >> testMinHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockResponsiveRulesConditionTest >> testMinWidth [
+HighstockResponsiveRulesConditionTest >> testSetMinWidth [
 
 	| component javascript expectedConfiguration |
 

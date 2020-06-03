@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataDragDropDragHandleTest >> testClassName [
+HighstockSeriesFlagsDataDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesFlagsDataDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataDragDropDragHandleTest >> testColor [
+HighstockSeriesFlagsDataDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesFlagsDataDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataDragDropDragHandleTest >> testCursor [
+HighstockSeriesFlagsDataDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesFlagsDataDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataDragDropDragHandleTest >> testLineColor [
+HighstockSeriesFlagsDataDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesFlagsDataDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesFlagsDataDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesFlagsDataDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesFlagsDataDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesFlagsDataDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataDragDropDragHandleTest >> testZIndex [
+HighstockSeriesFlagsDataDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

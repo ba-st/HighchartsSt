@@ -13,9 +13,7 @@ Class {
 { #category : #accessing }
 HighstockExportingButtons >> contextButton [
 
-	"Options for the export button.
-In styled mode, export button styles can be applied with the
-.highcharts-contextbutton class.
+	"Options for the export button. In styled mode, export button styles can be applied with the .highcharts-contextbutton class.
 "
 	^ configurationOptions at: 'contextButton' ifAbsentPut: [ HighstockExportingButtonsContextButton new ]
 ]

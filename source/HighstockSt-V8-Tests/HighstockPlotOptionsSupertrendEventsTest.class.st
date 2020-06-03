@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testAfterAnimate [
+HighstockPlotOptionsSupertrendEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSupertrendEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testCheckboxClick [
+HighstockPlotOptionsSupertrendEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsSupertrendEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testClick [
+HighstockPlotOptionsSupertrendEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsSupertrendEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testHide [
+HighstockPlotOptionsSupertrendEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsSupertrendEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testLegendItemClick [
+HighstockPlotOptionsSupertrendEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsSupertrendEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testMouseOut [
+HighstockPlotOptionsSupertrendEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsSupertrendEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testMouseOver [
+HighstockPlotOptionsSupertrendEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsSupertrendEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendEventsTest >> testShow [
+HighstockPlotOptionsSupertrendEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testChangeDecimals [
+HighchartsSeriesWordcloudTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloudTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesWordcloudTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testClusterFormat [
+HighchartsSeriesWordcloudTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesWordcloudTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testDistance [
+HighchartsSeriesWordcloudTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesWordcloudTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testFollowPointer [
+HighchartsSeriesWordcloudTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesWordcloudTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testFollowTouchMove [
+HighchartsSeriesWordcloudTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesWordcloudTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testFooterFormat [
+HighchartsSeriesWordcloudTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesWordcloudTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testHeaderFormat [
+HighchartsSeriesWordcloudTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesWordcloudTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testNullFormat [
+HighchartsSeriesWordcloudTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesWordcloudTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testNullFormatter [
+HighchartsSeriesWordcloudTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsSeriesWordcloudTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testPointFormat [
+HighchartsSeriesWordcloudTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsSeriesWordcloudTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testPointFormatter [
+HighchartsSeriesWordcloudTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighchartsSeriesWordcloudTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testValueDecimals [
+HighchartsSeriesWordcloudTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloudTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsSeriesWordcloudTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testValuePrefix [
+HighchartsSeriesWordcloudTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsSeriesWordcloudTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testValueSuffix [
+HighchartsSeriesWordcloudTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsSeriesWordcloudTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTooltipTest >> testXDateFormat [
+HighchartsSeriesWordcloudTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

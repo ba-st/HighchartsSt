@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testClick [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testDrag [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testDragStart [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testDrop [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testMouseOut [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testMouseOver [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testRemove [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testSelect [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testUnselect [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsPackedbubblePointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubblePointEventsTest >> testUpdate [
+HighchartsPlotOptionsPackedbubblePointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesEmaLastVisiblePriceLabelTest >> testEnabled [
+HighstockSeriesEmaLastVisiblePriceLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

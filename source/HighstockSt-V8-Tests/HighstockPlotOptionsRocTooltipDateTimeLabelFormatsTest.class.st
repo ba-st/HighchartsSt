@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testMillisecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsRocTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

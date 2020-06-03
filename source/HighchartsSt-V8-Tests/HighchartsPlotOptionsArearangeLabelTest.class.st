@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelTest >> testBoxesToAvoid [
+HighchartsPlotOptionsArearangeLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsArearangeLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsArearangeLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsArearangeLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelTest >> testConnectorAllowed [
+HighchartsPlotOptionsArearangeLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsArearangeLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelTest >> testConnectorNeighbourDistance [
+HighchartsPlotOptionsArearangeLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsArearangeLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelTest >> testEnabled [
+HighchartsPlotOptionsArearangeLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighchartsPlotOptionsArearangeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelTest >> testMaxFontSize [
+HighchartsPlotOptionsArearangeLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsArearangeLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsArearangeLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsArearangeLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsArearangeLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsArearangeLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelTest >> testMinFontSize [
+HighchartsPlotOptionsArearangeLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsArearangeLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelTest >> testOnArea [
+HighchartsPlotOptionsArearangeLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testMillisecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsSeriesAreasplineTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

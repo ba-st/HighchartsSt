@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testEnabled [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testFillColor [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testHeight [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testLineColor [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testLineWidth [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testRadius [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testSymbol [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPsarStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarStatesHoverMarkerTest >> testWidth [
+HighstockSeriesPsarStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testAlign [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testColor [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testEnabled [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testHeight [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testInside [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testLineColor [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testLineWidth [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testRadius [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testSymbol [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testVerticalAlign [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsSeriesScatterConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterConnectorsEndMarkerTest >> testWidth [
+HighchartsSeriesScatterConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

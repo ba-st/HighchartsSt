@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBarStatesSelectTest >> testBorderColor [
+HighchartsSeriesBarStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBarStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBarStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesBarStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBarStatesSelectTest >> testBorderWidth [
+HighchartsSeriesBarStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesBarStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBarStatesSelectTest >> testColor [
+HighchartsSeriesBarStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesBarStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBarStatesSelectTest >> testEnabled [
+HighchartsSeriesBarStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

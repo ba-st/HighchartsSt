@@ -16,8 +16,7 @@ HighstockAnnotationsMeasureTypeOptions >> background [
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptions >> crosshairX [
 
-	"Configure a crosshair that is horizontally placed in middle of
-rectangle.
+	"Configure a crosshair that is horizontally placed in middle of rectangle.
 "
 	^ configurationOptions at: 'crosshairX' ifAbsentPut: [ HighstockAnnotationsMeasureTypeOptionsCrosshairX new ]
 ]
@@ -25,8 +24,7 @@ rectangle.
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptions >> crosshairY [
 
-	"Configure a crosshair that is vertically placed in middle of
-rectangle.
+	"Configure a crosshair that is vertically placed in middle of rectangle.
 "
 	^ configurationOptions at: 'crosshairY' ifAbsentPut: [ HighstockAnnotationsMeasureTypeOptionsCrosshairY new ]
 ]
@@ -54,8 +52,7 @@ HighstockAnnotationsMeasureTypeOptions >> points [
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptions >> selectType: aString [
 
-	"Decides in what dimensions the user can resize by dragging the
-mouse. Can be one of x, y or xy.
+	"Decides in what dimensions the user can resize by dragging the mouse. Can be one of x, y or xy.
 Defaults to xy."
 
 	configurationOptions at: 'selectType' put: aString
@@ -64,9 +61,7 @@ Defaults to xy."
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptions >> xAxis: aNumber [
 
-	"This number defines which xAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the xAxis array.
+	"This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'xAxis' put: aNumber
@@ -75,9 +70,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockAnnotationsMeasureTypeOptions >> yAxis: aNumber [
 
-	"This number defines which yAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the yAxis array.
+	"This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the yAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'yAxis' put: aNumber

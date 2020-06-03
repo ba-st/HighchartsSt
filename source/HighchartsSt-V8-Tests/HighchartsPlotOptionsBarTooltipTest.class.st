@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testChangeDecimals [
+HighchartsPlotOptionsBarTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBarTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBarTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsBarTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsBarTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsBarTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testDistance [
+HighchartsPlotOptionsBarTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsBarTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsBarTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsBarTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsBarTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsBarTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsBarTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsBarTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsBarTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsBarTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testNullFormat [
+HighchartsPlotOptionsBarTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsBarTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsBarTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsBarTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testPointFormat [
+HighchartsPlotOptionsBarTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsPlotOptionsBarTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsBarTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighchartsPlotOptionsBarTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsBarTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBarTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBarTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsPlotOptionsBarTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsBarTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsPlotOptionsBarTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsBarTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsPlotOptionsBarTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsBarTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

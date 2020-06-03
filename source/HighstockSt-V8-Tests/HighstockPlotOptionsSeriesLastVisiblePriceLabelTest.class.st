@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSeriesLastVisiblePriceLabelTest >> testEnabled [
+HighstockPlotOptionsSeriesLastVisiblePriceLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

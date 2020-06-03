@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testChangeDecimals [
+HighstockSeriesSupertrendTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSupertrendTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSupertrendTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesSupertrendTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testClusterFormat [
+HighstockSeriesSupertrendTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesSupertrendTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testDistance [
+HighstockSeriesSupertrendTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesSupertrendTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testFollowPointer [
+HighstockSeriesSupertrendTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesSupertrendTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testFollowTouchMove [
+HighstockSeriesSupertrendTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesSupertrendTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testFooterFormat [
+HighstockSeriesSupertrendTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesSupertrendTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testHeaderFormat [
+HighstockSeriesSupertrendTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesSupertrendTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testNullFormat [
+HighstockSeriesSupertrendTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesSupertrendTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testNullFormatter [
+HighstockSeriesSupertrendTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockSeriesSupertrendTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testPointFormat [
+HighstockSeriesSupertrendTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockSeriesSupertrendTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testPointFormatter [
+HighstockSeriesSupertrendTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockSeriesSupertrendTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testValueDecimals [
+HighstockSeriesSupertrendTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSupertrendTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSupertrendTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockSeriesSupertrendTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testValuePrefix [
+HighstockSeriesSupertrendTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockSeriesSupertrendTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testValueSuffix [
+HighstockSeriesSupertrendTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockSeriesSupertrendTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendTooltipTest >> testXDateFormat [
+HighstockSeriesSupertrendTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

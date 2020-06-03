@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testAllowPointSelect [
+HighstockPlotOptionsSupertrendTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetChangeTrendLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component changeTrendLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'changeTrendLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +229,7 @@ HighstockPlotOptionsSupertrendTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testAnimationLimit [
+HighstockPlotOptionsSupertrendTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +243,7 @@ HighstockPlotOptionsSupertrendTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testBoostBlending [
+HighstockPlotOptionsSupertrendTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +257,7 @@ HighstockPlotOptionsSupertrendTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testBoostThreshold [
+HighstockPlotOptionsSupertrendTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +271,7 @@ HighstockPlotOptionsSupertrendTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testBorderColor [
+HighstockPlotOptionsSupertrendTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +285,7 @@ HighstockPlotOptionsSupertrendTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testBorderWidth [
+HighstockPlotOptionsSupertrendTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +299,7 @@ HighstockPlotOptionsSupertrendTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testClassName [
+HighstockPlotOptionsSupertrendTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +313,7 @@ HighstockPlotOptionsSupertrendTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testClip [
+HighstockPlotOptionsSupertrendTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +327,7 @@ HighstockPlotOptionsSupertrendTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testColor [
+HighstockPlotOptionsSupertrendTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +341,7 @@ HighstockPlotOptionsSupertrendTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testColorIndex [
+HighstockPlotOptionsSupertrendTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +355,7 @@ HighstockPlotOptionsSupertrendTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testColorKey [
+HighstockPlotOptionsSupertrendTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +369,7 @@ HighstockPlotOptionsSupertrendTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testCompare [
+HighstockPlotOptionsSupertrendTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +383,7 @@ HighstockPlotOptionsSupertrendTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testCompareBase [
+HighstockPlotOptionsSupertrendTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +397,7 @@ HighstockPlotOptionsSupertrendTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testCompareStart [
+HighstockPlotOptionsSupertrendTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +411,7 @@ HighstockPlotOptionsSupertrendTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testCompareToMain [
+HighstockPlotOptionsSupertrendTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +425,7 @@ HighstockPlotOptionsSupertrendTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testConnectEnds [
+HighstockPlotOptionsSupertrendTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockPlotOptionsSupertrendTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testConnectNulls [
+HighstockPlotOptionsSupertrendTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,21 @@ HighstockPlotOptionsSupertrendTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testCursor [
+HighstockPlotOptionsSupertrendTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +481,21 @@ HighstockPlotOptionsSupertrendTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testDashStyle [
+HighstockPlotOptionsSupertrendTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrend new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +509,7 @@ HighstockPlotOptionsSupertrendTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testDescription [
+HighstockPlotOptionsSupertrendTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +523,7 @@ HighstockPlotOptionsSupertrendTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testEnableMouseTracking [
+HighstockPlotOptionsSupertrendTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +537,7 @@ HighstockPlotOptionsSupertrendTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testEvents [
+HighstockPlotOptionsSupertrendTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +551,7 @@ HighstockPlotOptionsSupertrendTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testFallingTrendColor [
+HighstockPlotOptionsSupertrendTest >> testSetFallingTrendColor [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +565,7 @@ HighstockPlotOptionsSupertrendTest >> testFallingTrendColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testFindNearestPointBy [
+HighstockPlotOptionsSupertrendTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +579,7 @@ HighstockPlotOptionsSupertrendTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testGapSize [
+HighstockPlotOptionsSupertrendTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +593,7 @@ HighstockPlotOptionsSupertrendTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testGapUnit [
+HighstockPlotOptionsSupertrendTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +607,7 @@ HighstockPlotOptionsSupertrendTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testGetExtremesFromAll [
+HighstockPlotOptionsSupertrendTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +621,7 @@ HighstockPlotOptionsSupertrendTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testIncludeInDataExport [
+HighstockPlotOptionsSupertrendTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +635,7 @@ HighstockPlotOptionsSupertrendTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testLineWidth [
+HighstockPlotOptionsSupertrendTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +649,7 @@ HighstockPlotOptionsSupertrendTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testLinecap [
+HighstockPlotOptionsSupertrendTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +663,7 @@ HighstockPlotOptionsSupertrendTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testLinkedTo [
+HighstockPlotOptionsSupertrendTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +677,7 @@ HighstockPlotOptionsSupertrendTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testName [
+HighstockPlotOptionsSupertrendTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +691,7 @@ HighstockPlotOptionsSupertrendTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testOpacity [
+HighstockPlotOptionsSupertrendTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +705,7 @@ HighstockPlotOptionsSupertrendTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsSupertrendTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +719,7 @@ HighstockPlotOptionsSupertrendTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testRisingTrendColor [
+HighstockPlotOptionsSupertrendTest >> testSetRisingTrendColor [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +733,7 @@ HighstockPlotOptionsSupertrendTest >> testRisingTrendColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testSelected [
+HighstockPlotOptionsSupertrendTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +747,7 @@ HighstockPlotOptionsSupertrendTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testShadow [
+HighstockPlotOptionsSupertrendTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +761,7 @@ HighstockPlotOptionsSupertrendTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testShowCheckbox [
+HighstockPlotOptionsSupertrendTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +775,7 @@ HighstockPlotOptionsSupertrendTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testShowInLegend [
+HighstockPlotOptionsSupertrendTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +789,7 @@ HighstockPlotOptionsSupertrendTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsSupertrendTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +803,7 @@ HighstockPlotOptionsSupertrendTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testSoftThreshold [
+HighstockPlotOptionsSupertrendTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +817,7 @@ HighstockPlotOptionsSupertrendTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testStates [
+HighstockPlotOptionsSupertrendTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +831,7 @@ HighstockPlotOptionsSupertrendTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testStep [
+HighstockPlotOptionsSupertrendTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +845,7 @@ HighstockPlotOptionsSupertrendTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testStickyTracking [
+HighstockPlotOptionsSupertrendTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +859,7 @@ HighstockPlotOptionsSupertrendTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testTurboThreshold [
+HighstockPlotOptionsSupertrendTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +873,7 @@ HighstockPlotOptionsSupertrendTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testVisible [
+HighstockPlotOptionsSupertrendTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +887,7 @@ HighstockPlotOptionsSupertrendTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testZIndex [
+HighstockPlotOptionsSupertrendTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +901,7 @@ HighstockPlotOptionsSupertrendTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTest >> testZoneAxis [
+HighstockPlotOptionsSupertrendTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testMillisecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsWindbarbTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

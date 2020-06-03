@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDragDropDragHandleTest >> testClassName [
+HighchartsSeriesFunnelDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesFunnelDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDragDropDragHandleTest >> testColor [
+HighchartsSeriesFunnelDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesFunnelDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDragDropDragHandleTest >> testCursor [
+HighchartsSeriesFunnelDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesFunnelDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDragDropDragHandleTest >> testLineColor [
+HighchartsSeriesFunnelDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesFunnelDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDragDropDragHandleTest >> testLineWidth [
+HighchartsSeriesFunnelDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesFunnelDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDragDropDragHandleTest >> testPathFormatter [
+HighchartsSeriesFunnelDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesFunnelDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDragDropDragHandleTest >> testZIndex [
+HighchartsSeriesFunnelDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

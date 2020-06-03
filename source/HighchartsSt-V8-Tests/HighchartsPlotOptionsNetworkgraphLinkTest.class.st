@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLinkTest >> testColor [
+HighchartsPlotOptionsNetworkgraphLinkTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphLinkTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLinkTest >> testDashStyle [
+HighchartsPlotOptionsNetworkgraphLinkTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphLinkTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphLinkTest >> testWidth [
+HighchartsPlotOptionsNetworkgraphLinkTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

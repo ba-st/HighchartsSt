@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testChangeDecimals [
+HighstockSeriesColumnTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesColumnTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testClusterFormat [
+HighstockSeriesColumnTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesColumnTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testDistance [
+HighstockSeriesColumnTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesColumnTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testFollowPointer [
+HighstockSeriesColumnTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesColumnTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testFollowTouchMove [
+HighstockSeriesColumnTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesColumnTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testFooterFormat [
+HighstockSeriesColumnTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesColumnTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testHeaderFormat [
+HighstockSeriesColumnTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesColumnTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testNullFormat [
+HighstockSeriesColumnTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesColumnTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testNullFormatter [
+HighstockSeriesColumnTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockSeriesColumnTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testPointFormat [
+HighstockSeriesColumnTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockSeriesColumnTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testPointFormatter [
+HighstockSeriesColumnTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockSeriesColumnTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testValueDecimals [
+HighstockSeriesColumnTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockSeriesColumnTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testValuePrefix [
+HighstockSeriesColumnTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockSeriesColumnTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testValueSuffix [
+HighstockSeriesColumnTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockSeriesColumnTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnTooltipTest >> testXDateFormat [
+HighstockSeriesColumnTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

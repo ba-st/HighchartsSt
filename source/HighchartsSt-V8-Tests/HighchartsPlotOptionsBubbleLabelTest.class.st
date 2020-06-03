@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleLabelTest >> testBoxesToAvoid [
+HighchartsPlotOptionsBubbleLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBubbleLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBubbleLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsBubbleLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleLabelTest >> testConnectorAllowed [
+HighchartsPlotOptionsBubbleLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsBubbleLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleLabelTest >> testConnectorNeighbourDistance [
+HighchartsPlotOptionsBubbleLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsBubbleLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleLabelTest >> testEnabled [
+HighchartsPlotOptionsBubbleLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighchartsPlotOptionsBubbleLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleLabelTest >> testMaxFontSize [
+HighchartsPlotOptionsBubbleLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBubbleLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBubbleLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBubbleLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBubbleLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsBubbleLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleLabelTest >> testMinFontSize [
+HighchartsPlotOptionsBubbleLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsBubbleLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleLabelTest >> testOnArea [
+HighchartsPlotOptionsBubbleLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

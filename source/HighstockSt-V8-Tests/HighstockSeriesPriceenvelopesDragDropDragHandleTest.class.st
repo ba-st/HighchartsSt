@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testClassName [
+HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testColor [
+HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testCursor [
+HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testLineColor [
+HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testZIndex [
+HighstockSeriesPriceenvelopesDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

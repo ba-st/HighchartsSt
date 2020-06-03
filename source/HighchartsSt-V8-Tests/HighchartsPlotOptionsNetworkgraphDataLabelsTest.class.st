@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testAlign [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testGetLinkTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphDataLabels new.
+	component linkTextPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'linkTextPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testAllowOverlap [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testClassName [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testColor [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testCrop [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testDefer [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testFormat [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +243,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testInside [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +257,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testLinkFormat [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetLinkFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +271,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testLinkFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testLinkFormatter [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetLinkFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +285,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testLinkFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +299,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +313,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +327,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testPadding [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +341,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testPosition [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +355,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testRotation [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +369,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testShadow [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +383,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testShape [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +397,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +411,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +425,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testX [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +439,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testY [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +453,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testZ [
+HighchartsPlotOptionsNetworkgraphDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

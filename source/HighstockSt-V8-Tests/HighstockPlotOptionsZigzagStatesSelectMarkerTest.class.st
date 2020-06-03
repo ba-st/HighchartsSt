@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testEnabled [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testFillColor [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testHeight [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testLineColor [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testLineWidth [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testRadius [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSymbol [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testWidth [
+HighstockPlotOptionsZigzagStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

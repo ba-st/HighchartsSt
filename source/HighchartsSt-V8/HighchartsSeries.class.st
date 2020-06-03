@@ -12,32 +12,7 @@ Class {
 { #category : #accessing }
 HighchartsSeries >> area [
 
-	"A area series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all area series are defined in
-plotOptions.area.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        area: {
-            // shared options for all area series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´area´
-    }]
-});
+	"A area series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all area series are defined in plotOptions.area. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         area: {             // shared options for all area series         }     },     series: [{         // specific options for this series instance         type: ´area´     }] });
 "
 	^ configurationOptions at: 'area' ifAbsentPut: [ HighchartsSeriesArea new ]
 ]
@@ -45,32 +20,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> arearange [
 
-	"A arearange series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all arearange series are defined in
-plotOptions.arearange.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        arearange: {
-            // shared options for all arearange series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´arearange´
-    }]
-});
+	"A arearange series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all arearange series are defined in plotOptions.arearange. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         arearange: {             // shared options for all arearange series         }     },     series: [{         // specific options for this series instance         type: ´arearange´     }] });
 "
 	^ configurationOptions at: 'arearange' ifAbsentPut: [ HighchartsSeriesArearange new ]
 ]
@@ -78,32 +28,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> areaspline [
 
-	"A areaspline series. If the type option
-is not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all areaspline series are defined in
-plotOptions.areaspline.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        areaspline: {
-            // shared options for all areaspline series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´areaspline´
-    }]
-});
+	"A areaspline series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all areaspline series are defined in plotOptions.areaspline. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         areaspline: {             // shared options for all areaspline series         }     },     series: [{         // specific options for this series instance         type: ´areaspline´     }] });
 "
 	^ configurationOptions at: 'areaspline' ifAbsentPut: [ HighchartsSeriesAreaspline new ]
 ]
@@ -111,32 +36,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> areasplinerange [
 
-	"A areasplinerange series. If the type
-option is not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all areasplinerange series are defined in
-plotOptions.areasplinerange.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        areasplinerange: {
-            // shared options for all areasplinerange series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´areasplinerange´
-    }]
-});
+	"A areasplinerange series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all areasplinerange series are defined in plotOptions.areasplinerange. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         areasplinerange: {             // shared options for all areasplinerange series         }     },     series: [{         // specific options for this series instance         type: ´areasplinerange´     }] });
 "
 	^ configurationOptions at: 'areasplinerange' ifAbsentPut: [ HighchartsSeriesAreasplinerange new ]
 ]
@@ -144,32 +44,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> bar [
 
-	"A bar series. If the type option is not specified,
-it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all bar series are defined in
-plotOptions.bar.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        bar: {
-            // shared options for all bar series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´bar´
-    }]
-});
+	"A bar series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all bar series are defined in plotOptions.bar. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         bar: {             // shared options for all bar series         }     },     series: [{         // specific options for this series instance         type: ´bar´     }] });
 "
 	^ configurationOptions at: 'bar' ifAbsentPut: [ HighchartsSeriesBar new ]
 ]
@@ -177,36 +52,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> bellcurve [
 
-	"A bellcurve series. If the type option is not
-specified, it is inherited from chart.type.
-For options that apply to multiple series, it is recommended to add
-them to the plotOptions.series options structure.
-To apply to all series of this specific type, apply it to
-plotOptions.bellcurve.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all bellcurve series are defined in
-plotOptions.bellcurve.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        bellcurve: {
-            // shared options for all bellcurve series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´bellcurve´
-    }]
-});
+	"A bellcurve series. If the type option is not specified, it is inherited from chart.type. For options that apply to multiple series, it is recommended to add them to the plotOptions.series options structure. To apply to all series of this specific type, apply it to plotOptions.bellcurve. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all bellcurve series are defined in plotOptions.bellcurve. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         bellcurve: {             // shared options for all bellcurve series         }     },     series: [{         // specific options for this series instance         type: ´bellcurve´     }] });
 "
 	^ configurationOptions at: 'bellcurve' ifAbsentPut: [ HighchartsSeriesBellcurve new ]
 ]
@@ -214,32 +60,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> boxplot [
 
-	"A boxplot series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all boxplot series are defined in
-plotOptions.boxplot.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        boxplot: {
-            // shared options for all boxplot series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´boxplot´
-    }]
-});
+	"A boxplot series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all boxplot series are defined in plotOptions.boxplot. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         boxplot: {             // shared options for all boxplot series         }     },     series: [{         // specific options for this series instance         type: ´boxplot´     }] });
 "
 	^ configurationOptions at: 'boxplot' ifAbsentPut: [ HighchartsSeriesBoxplot new ]
 ]
@@ -247,32 +68,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> bubble [
 
-	"A bubble series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all bubble series are defined in
-plotOptions.bubble.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        bubble: {
-            // shared options for all bubble series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´bubble´
-    }]
-});
+	"A bubble series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all bubble series are defined in plotOptions.bubble. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         bubble: {             // shared options for all bubble series         }     },     series: [{         // specific options for this series instance         type: ´bubble´     }] });
 "
 	^ configurationOptions at: 'bubble' ifAbsentPut: [ HighchartsSeriesBubble new ]
 ]
@@ -280,32 +76,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> bullet [
 
-	"A bullet series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all bullet series are defined in
-plotOptions.bullet.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        bullet: {
-            // shared options for all bullet series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´bullet´
-    }]
-});
+	"A bullet series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all bullet series are defined in plotOptions.bullet. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         bullet: {             // shared options for all bullet series         }     },     series: [{         // specific options for this series instance         type: ´bullet´     }] });
 "
 	^ configurationOptions at: 'bullet' ifAbsentPut: [ HighchartsSeriesBullet new ]
 ]
@@ -313,32 +84,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> column [
 
-	"A column series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all column series are defined in
-plotOptions.column.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        column: {
-            // shared options for all column series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´column´
-    }]
-});
+	"A column series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all column series are defined in plotOptions.column. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         column: {             // shared options for all column series         }     },     series: [{         // specific options for this series instance         type: ´column´     }] });
 "
 	^ configurationOptions at: 'column' ifAbsentPut: [ HighchartsSeriesColumn new ]
 ]
@@ -346,32 +92,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> columnpyramid [
 
-	"A columnpyramid series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all columnpyramid series are defined in
-plotOptions.columnpyramid.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        columnpyramid: {
-            // shared options for all columnpyramid series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´columnpyramid´
-    }]
-});
+	"A columnpyramid series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all columnpyramid series are defined in plotOptions.columnpyramid. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         columnpyramid: {             // shared options for all columnpyramid series         }     },     series: [{         // specific options for this series instance         type: ´columnpyramid´     }] });
 "
 	^ configurationOptions at: 'columnpyramid' ifAbsentPut: [ HighchartsSeriesColumnpyramid new ]
 ]
@@ -379,33 +100,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> columnrange [
 
-	"A columnrange series. If the type
-option is not specified, it is inherited from
-chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all columnrange series are defined in
-plotOptions.columnrange.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        columnrange: {
-            // shared options for all columnrange series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´columnrange´
-    }]
-});
+	"A columnrange series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all columnrange series are defined in plotOptions.columnrange. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         columnrange: {             // shared options for all columnrange series         }     },     series: [{         // specific options for this series instance         type: ´columnrange´     }] });
 "
 	^ configurationOptions at: 'columnrange' ifAbsentPut: [ HighchartsSeriesColumnrange new ]
 ]
@@ -413,32 +108,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> cylinder [
 
-	"A cylinder series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all cylinder series are defined in
-plotOptions.cylinder.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        cylinder: {
-            // shared options for all cylinder series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´cylinder´
-    }]
-});
+	"A cylinder series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all cylinder series are defined in plotOptions.cylinder. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         cylinder: {             // shared options for all cylinder series         }     },     series: [{         // specific options for this series instance         type: ´cylinder´     }] });
 "
 	^ configurationOptions at: 'cylinder' ifAbsentPut: [ HighchartsSeriesCylinder new ]
 ]
@@ -446,65 +116,23 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> dependencywheel [
 
-	"A dependencywheel series. If the type
-option is not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all dependencywheel series are defined in
-plotOptions.dependencywheel.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        dependencywheel: {
-            // shared options for all dependencywheel series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´dependencywheel´
-    }]
-});
+	"A dependencywheel series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all dependencywheel series are defined in plotOptions.dependencywheel. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         dependencywheel: {             // shared options for all dependencywheel series         }     },     series: [{         // specific options for this series instance         type: ´dependencywheel´     }] });
 "
 	^ configurationOptions at: 'dependencywheel' ifAbsentPut: [ HighchartsSeriesDependencywheel new ]
 ]
 
 { #category : #accessing }
+HighchartsSeries >> dumbbell [
+
+	"The dumbbell series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all dumbbell series are defined in plotOptions.dumbbell. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         dumbbell: {             // shared options for all dumbbell series         }     },     series: [{         // specific options for this series instance         type: ´dumbbell´     }] });
+"
+	^ configurationOptions at: 'dumbbell' ifAbsentPut: [ HighchartsSeriesDumbbell new ]
+]
+
+{ #category : #accessing }
 HighchartsSeries >> errorbar [
 
-	"A errorbar series. If the type option
-is not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all errorbar series are defined in
-plotOptions.errorbar.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        errorbar: {
-            // shared options for all errorbar series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´errorbar´
-    }]
-});
+	"A errorbar series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all errorbar series are defined in plotOptions.errorbar. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         errorbar: {             // shared options for all errorbar series         }     },     series: [{         // specific options for this series instance         type: ´errorbar´     }] });
 "
 	^ configurationOptions at: 'errorbar' ifAbsentPut: [ HighchartsSeriesErrorbar new ]
 ]
@@ -512,32 +140,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> funnel [
 
-	"A funnel series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all funnel series are defined in
-plotOptions.funnel.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        funnel: {
-            // shared options for all funnel series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´funnel´
-    }]
-});
+	"A funnel series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all funnel series are defined in plotOptions.funnel. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         funnel: {             // shared options for all funnel series         }     },     series: [{         // specific options for this series instance         type: ´funnel´     }] });
 "
 	^ configurationOptions at: 'funnel' ifAbsentPut: [ HighchartsSeriesFunnel new ]
 ]
@@ -545,32 +148,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> funnel3d [
 
-	"A funnel3d series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all funnel3d series are defined in
-plotOptions.funnel3d.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        funnel3d: {
-            // shared options for all funnel3d series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´funnel3d´
-    }]
-});
+	"A funnel3d series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all funnel3d series are defined in plotOptions.funnel3d. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         funnel3d: {             // shared options for all funnel3d series         }     },     series: [{         // specific options for this series instance         type: ´funnel3d´     }] });
 "
 	^ configurationOptions at: 'funnel3d' ifAbsentPut: [ HighchartsSeriesFunnel3d new ]
 ]
@@ -578,32 +156,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> gauge [
 
-	"A gauge series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all gauge series are defined in
-plotOptions.gauge.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        gauge: {
-            // shared options for all gauge series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´gauge´
-    }]
-});
+	"A gauge series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all gauge series are defined in plotOptions.gauge. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         gauge: {             // shared options for all gauge series         }     },     series: [{         // specific options for this series instance         type: ´gauge´     }] });
 "
 	^ configurationOptions at: 'gauge' ifAbsentPut: [ HighchartsSeriesGauge new ]
 ]
@@ -611,32 +164,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> heatmap [
 
-	"A heatmap series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all heatmap series are defined in
-plotOptions.heatmap.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        heatmap: {
-            // shared options for all heatmap series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´heatmap´
-    }]
-});
+	"A heatmap series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all heatmap series are defined in plotOptions.heatmap. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         heatmap: {             // shared options for all heatmap series         }     },     series: [{         // specific options for this series instance         type: ´heatmap´     }] });
 "
 	^ configurationOptions at: 'heatmap' ifAbsentPut: [ HighchartsSeriesHeatmap new ]
 ]
@@ -644,32 +172,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> histogram [
 
-	"A histogram series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all histogram series are defined in
-plotOptions.histogram.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        histogram: {
-            // shared options for all histogram series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´histogram´
-    }]
-});
+	"A histogram series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all histogram series are defined in plotOptions.histogram. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         histogram: {             // shared options for all histogram series         }     },     series: [{         // specific options for this series instance         type: ´histogram´     }] });
 "
 	^ configurationOptions at: 'histogram' ifAbsentPut: [ HighchartsSeriesHistogram new ]
 ]
@@ -677,32 +180,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> item [
 
-	"An item series. If the type option is not specified,
-it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all item series are defined in
-plotOptions.item.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        item: {
-            // shared options for all item series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´item´
-    }]
-});
+	"An item series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all item series are defined in plotOptions.item. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         item: {             // shared options for all item series         }     },     series: [{         // specific options for this series instance         type: ´item´     }] });
 "
 	^ configurationOptions at: 'item' ifAbsentPut: [ HighchartsSeriesItem new ]
 ]
@@ -716,65 +194,23 @@ HighchartsSeries >> javascriptContentOn: aStream [
 { #category : #accessing }
 HighchartsSeries >> line [
 
-	"A line series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all line series are defined in
-plotOptions.line.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        line: {
-            // shared options for all line series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´line´
-    }]
-});
+	"A line series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all line series are defined in plotOptions.line. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         line: {             // shared options for all line series         }     },     series: [{         // specific options for this series instance         type: ´line´     }] });
 "
 	^ configurationOptions at: 'line' ifAbsentPut: [ HighchartsSeriesLine new ]
 ]
 
 { #category : #accessing }
+HighchartsSeries >> lollipop [
+
+	"The lollipop series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all lollipop series are defined in plotOptions.lollipop. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         lollipop: {             // shared options for all lollipop series         }     },     series: [{         // specific options for this series instance         type: ´lollipop´     }] });
+"
+	^ configurationOptions at: 'lollipop' ifAbsentPut: [ HighchartsSeriesLollipop new ]
+]
+
+{ #category : #accessing }
 HighchartsSeries >> networkgraph [
 
-	"A networkgraph series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all networkgraph series are defined in
-plotOptions.networkgraph.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        networkgraph: {
-            // shared options for all networkgraph series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´networkgraph´
-    }]
-});
+	"A networkgraph series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all networkgraph series are defined in plotOptions.networkgraph. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         networkgraph: {             // shared options for all networkgraph series         }     },     series: [{         // specific options for this series instance         type: ´networkgraph´     }] });
 "
 	^ configurationOptions at: 'networkgraph' ifAbsentPut: [ HighchartsSeriesNetworkgraph new ]
 ]
@@ -782,32 +218,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> organization [
 
-	"An organization series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all organization series are defined in
-plotOptions.organization.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        organization: {
-            // shared options for all organization series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´organization´
-    }]
-});
+	"An organization series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all organization series are defined in plotOptions.organization. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         organization: {             // shared options for all organization series         }     },     series: [{         // specific options for this series instance         type: ´organization´     }] });
 "
 	^ configurationOptions at: 'organization' ifAbsentPut: [ HighchartsSeriesOrganization new ]
 ]
@@ -815,32 +226,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> packedbubble [
 
-	"A packedbubble series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all packedbubble series are defined in
-plotOptions.packedbubble.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        packedbubble: {
-            // shared options for all packedbubble series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´packedbubble´
-    }]
-});
+	"A packedbubble series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all packedbubble series are defined in plotOptions.packedbubble. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         packedbubble: {             // shared options for all packedbubble series         }     },     series: [{         // specific options for this series instance         type: ´packedbubble´     }] });
 "
 	^ configurationOptions at: 'packedbubble' ifAbsentPut: [ HighchartsSeriesPackedbubble new ]
 ]
@@ -848,32 +234,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> pareto [
 
-	"A pareto series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all pareto series are defined in
-plotOptions.pareto.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        pareto: {
-            // shared options for all pareto series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´pareto´
-    }]
-});
+	"A pareto series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all pareto series are defined in plotOptions.pareto. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         pareto: {             // shared options for all pareto series         }     },     series: [{         // specific options for this series instance         type: ´pareto´     }] });
 "
 	^ configurationOptions at: 'pareto' ifAbsentPut: [ HighchartsSeriesPareto new ]
 ]
@@ -881,32 +242,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> pie [
 
-	"A pie series. If the type option is not specified,
-it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all pie series are defined in
-plotOptions.pie.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        pie: {
-            // shared options for all pie series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´pie´
-    }]
-});
+	"A pie series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all pie series are defined in plotOptions.pie. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         pie: {             // shared options for all pie series         }     },     series: [{         // specific options for this series instance         type: ´pie´     }] });
 "
 	^ configurationOptions at: 'pie' ifAbsentPut: [ HighchartsSeriesPie new ]
 ]
@@ -914,32 +250,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> polygon [
 
-	"A polygon series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all polygon series are defined in
-plotOptions.polygon.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        polygon: {
-            // shared options for all polygon series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´polygon´
-    }]
-});
+	"A polygon series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all polygon series are defined in plotOptions.polygon. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         polygon: {             // shared options for all polygon series         }     },     series: [{         // specific options for this series instance         type: ´polygon´     }] });
 "
 	^ configurationOptions at: 'polygon' ifAbsentPut: [ HighchartsSeriesPolygon new ]
 ]
@@ -947,32 +258,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> pyramid [
 
-	"A pyramid series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all pyramid series are defined in
-plotOptions.pyramid.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        pyramid: {
-            // shared options for all pyramid series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´pyramid´
-    }]
-});
+	"A pyramid series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all pyramid series are defined in plotOptions.pyramid. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         pyramid: {             // shared options for all pyramid series         }     },     series: [{         // specific options for this series instance         type: ´pyramid´     }] });
 "
 	^ configurationOptions at: 'pyramid' ifAbsentPut: [ HighchartsSeriesPyramid new ]
 ]
@@ -980,32 +266,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> pyramid3d [
 
-	"A pyramid3d series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all pyramid3d series are defined in
-plotOptions.pyramid3d.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        pyramid3d: {
-            // shared options for all pyramid3d series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´pyramid3d´
-    }]
-});
+	"A pyramid3d series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all pyramid3d series are defined in plotOptions.pyramid3d. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         pyramid3d: {             // shared options for all pyramid3d series         }     },     series: [{         // specific options for this series instance         type: ´pyramid3d´     }] });
 "
 	^ configurationOptions at: 'pyramid3d' ifAbsentPut: [ HighchartsSeriesPyramid3d new ]
 ]
@@ -1013,32 +274,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> sankey [
 
-	"A sankey series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all sankey series are defined in
-plotOptions.sankey.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        sankey: {
-            // shared options for all sankey series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´sankey´
-    }]
-});
+	"A sankey series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all sankey series are defined in plotOptions.sankey. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         sankey: {             // shared options for all sankey series         }     },     series: [{         // specific options for this series instance         type: ´sankey´     }] });
 "
 	^ configurationOptions at: 'sankey' ifAbsentPut: [ HighchartsSeriesSankey new ]
 ]
@@ -1046,32 +282,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> scatter [
 
-	"A scatter series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all scatter series are defined in
-plotOptions.scatter.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        scatter: {
-            // shared options for all scatter series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´scatter´
-    }]
-});
+	"A scatter series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all scatter series are defined in plotOptions.scatter. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         scatter: {             // shared options for all scatter series         }     },     series: [{         // specific options for this series instance         type: ´scatter´     }] });
 "
 	^ configurationOptions at: 'scatter' ifAbsentPut: [ HighchartsSeriesScatter new ]
 ]
@@ -1079,33 +290,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> scatter3d [
 
-	"A scatter3d series. If the type option is
-not specified, it is inherited from chart.type.
-scatter3d](#plotOptions.scatter3d).
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all scatter3d series are defined in
-plotOptions.scatter3d.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        scatter3d: {
-            // shared options for all scatter3d series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´scatter3d´
-    }]
-});
+	"A scatter3d series. If the type option is not specified, it is inherited from chart.type. scatter3d](#plotOptions.scatter3d). In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all scatter3d series are defined in plotOptions.scatter3d. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         scatter3d: {             // shared options for all scatter3d series         }     },     series: [{         // specific options for this series instance         type: ´scatter3d´     }] });
 "
 	^ configurationOptions at: 'scatter3d' ifAbsentPut: [ HighchartsSeriesScatter3d new ]
 ]
@@ -1113,32 +298,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> solidgauge [
 
-	"A solidgauge series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all solidgauge series are defined in
-plotOptions.solidgauge.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        solidgauge: {
-            // shared options for all solidgauge series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´solidgauge´
-    }]
-});
+	"A solidgauge series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all solidgauge series are defined in plotOptions.solidgauge. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         solidgauge: {             // shared options for all solidgauge series         }     },     series: [{         // specific options for this series instance         type: ´solidgauge´     }] });
 "
 	^ configurationOptions at: 'solidgauge' ifAbsentPut: [ HighchartsSeriesSolidgauge new ]
 ]
@@ -1146,32 +306,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> spline [
 
-	"A spline series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all spline series are defined in
-plotOptions.spline.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        spline: {
-            // shared options for all spline series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´spline´
-    }]
-});
+	"A spline series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all spline series are defined in plotOptions.spline. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         spline: {             // shared options for all spline series         }     },     series: [{         // specific options for this series instance         type: ´spline´     }] });
 "
 	^ configurationOptions at: 'spline' ifAbsentPut: [ HighchartsSeriesSpline new ]
 ]
@@ -1179,32 +314,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> streamgraph [
 
-	"A streamgraph series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all streamgraph series are defined in
-plotOptions.streamgraph.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        streamgraph: {
-            // shared options for all streamgraph series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´streamgraph´
-    }]
-});
+	"A streamgraph series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all streamgraph series are defined in plotOptions.streamgraph. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         streamgraph: {             // shared options for all streamgraph series         }     },     series: [{         // specific options for this series instance         type: ´streamgraph´     }] });
 "
 	^ configurationOptions at: 'streamgraph' ifAbsentPut: [ HighchartsSeriesStreamgraph new ]
 ]
@@ -1212,32 +322,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> sunburst [
 
-	"A sunburst series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all sunburst series are defined in
-plotOptions.sunburst.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        sunburst: {
-            // shared options for all sunburst series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´sunburst´
-    }]
-});
+	"A sunburst series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all sunburst series are defined in plotOptions.sunburst. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         sunburst: {             // shared options for all sunburst series         }     },     series: [{         // specific options for this series instance         type: ´sunburst´     }] });
 "
 	^ configurationOptions at: 'sunburst' ifAbsentPut: [ HighchartsSeriesSunburst new ]
 ]
@@ -1245,32 +330,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> tilemap [
 
-	"A tilemap series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all tilemap series are defined in
-plotOptions.tilemap.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        tilemap: {
-            // shared options for all tilemap series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´tilemap´
-    }]
-});
+	"A tilemap series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all tilemap series are defined in plotOptions.tilemap. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         tilemap: {             // shared options for all tilemap series         }     },     series: [{         // specific options for this series instance         type: ´tilemap´     }] });
 "
 	^ configurationOptions at: 'tilemap' ifAbsentPut: [ HighchartsSeriesTilemap new ]
 ]
@@ -1278,32 +338,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> timeline [
 
-	"The timeline series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all timeline series are defined in
-plotOptions.timeline.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        timeline: {
-            // shared options for all timeline series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´timeline´
-    }]
-});
+	"The timeline series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all timeline series are defined in plotOptions.timeline. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         timeline: {             // shared options for all timeline series         }     },     series: [{         // specific options for this series instance         type: ´timeline´     }] });
 "
 	^ configurationOptions at: 'timeline' ifAbsentPut: [ HighchartsSeriesTimeline new ]
 ]
@@ -1311,32 +346,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> treemap [
 
-	"A treemap series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all treemap series are defined in
-plotOptions.treemap.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        treemap: {
-            // shared options for all treemap series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´treemap´
-    }]
-});
+	"A treemap series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all treemap series are defined in plotOptions.treemap. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         treemap: {             // shared options for all treemap series         }     },     series: [{         // specific options for this series instance         type: ´treemap´     }] });
 "
 	^ configurationOptions at: 'treemap' ifAbsentPut: [ HighchartsSeriesTreemap new ]
 ]
@@ -1344,32 +354,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> variablepie [
 
-	"A variablepie series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all variablepie series are defined in
-plotOptions.variablepie.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        variablepie: {
-            // shared options for all variablepie series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´variablepie´
-    }]
-});
+	"A variablepie series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all variablepie series are defined in plotOptions.variablepie. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         variablepie: {             // shared options for all variablepie series         }     },     series: [{         // specific options for this series instance         type: ´variablepie´     }] });
 "
 	^ configurationOptions at: 'variablepie' ifAbsentPut: [ HighchartsSeriesVariablepie new ]
 ]
@@ -1377,32 +362,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> variwide [
 
-	"A variwide series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all variwide series are defined in
-plotOptions.variwide.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        variwide: {
-            // shared options for all variwide series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´variwide´
-    }]
-});
+	"A variwide series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all variwide series are defined in plotOptions.variwide. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         variwide: {             // shared options for all variwide series         }     },     series: [{         // specific options for this series instance         type: ´variwide´     }] });
 "
 	^ configurationOptions at: 'variwide' ifAbsentPut: [ HighchartsSeriesVariwide new ]
 ]
@@ -1410,32 +370,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> vector [
 
-	"A vector series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all vector series are defined in
-plotOptions.vector.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        vector: {
-            // shared options for all vector series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´vector´
-    }]
-});
+	"A vector series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all vector series are defined in plotOptions.vector. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         vector: {             // shared options for all vector series         }     },     series: [{         // specific options for this series instance         type: ´vector´     }] });
 "
 	^ configurationOptions at: 'vector' ifAbsentPut: [ HighchartsSeriesVector new ]
 ]
@@ -1443,32 +378,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> venn [
 
-	"A venn series. If the type option is
-not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all venn series are defined in
-plotOptions.venn.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        venn: {
-            // shared options for all venn series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´venn´
-    }]
-});
+	"A venn series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all venn series are defined in plotOptions.venn. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         venn: {             // shared options for all venn series         }     },     series: [{         // specific options for this series instance         type: ´venn´     }] });
 "
 	^ configurationOptions at: 'venn' ifAbsentPut: [ HighchartsSeriesVenn new ]
 ]
@@ -1476,32 +386,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> waterfall [
 
-	"A waterfall series. If the type option
-is not specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all waterfall series are defined in
-plotOptions.waterfall.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        waterfall: {
-            // shared options for all waterfall series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´waterfall´
-    }]
-});
+	"A waterfall series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all waterfall series are defined in plotOptions.waterfall. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         waterfall: {             // shared options for all waterfall series         }     },     series: [{         // specific options for this series instance         type: ´waterfall´     }] });
 "
 	^ configurationOptions at: 'waterfall' ifAbsentPut: [ HighchartsSeriesWaterfall new ]
 ]
@@ -1509,32 +394,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> windbarb [
 
-	"A windbarb series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all windbarb series are defined in
-plotOptions.windbarb.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        windbarb: {
-            // shared options for all windbarb series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´windbarb´
-    }]
-});
+	"A windbarb series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all windbarb series are defined in plotOptions.windbarb. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         windbarb: {             // shared options for all windbarb series         }     },     series: [{         // specific options for this series instance         type: ´windbarb´     }] });
 "
 	^ configurationOptions at: 'windbarb' ifAbsentPut: [ HighchartsSeriesWindbarb new ]
 ]
@@ -1542,32 +402,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> wordcloud [
 
-	"A wordcloud series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all wordcloud series are defined in
-plotOptions.wordcloud.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        wordcloud: {
-            // shared options for all wordcloud series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´wordcloud´
-    }]
-});
+	"A wordcloud series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all wordcloud series are defined in plotOptions.wordcloud. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         wordcloud: {             // shared options for all wordcloud series         }     },     series: [{         // specific options for this series instance         type: ´wordcloud´     }] });
 "
 	^ configurationOptions at: 'wordcloud' ifAbsentPut: [ HighchartsSeriesWordcloud new ]
 ]
@@ -1575,32 +410,7 @@ Highcharts.chart(´container´, {
 { #category : #accessing }
 HighchartsSeries >> xrange [
 
-	"An xrange series. If the type option is not
-specified, it is inherited from chart.type.
-In TypeScript the type option must always be set.
-Configuration options for the series are given in three levels:
-
-Options for all series in a chart are defined in the
-plotOptions.series object.
-Options for all xrange series are defined in
-plotOptions.xrange.
-Options for one single series are given in
-the series instance array.
-
-Highcharts.chart(´container´, {
-    plotOptions: {
-        series: {
-            // general options for all series
-        },
-        xrange: {
-            // shared options for all xrange series
-        }
-    },
-    series: [{
-        // specific options for this series instance
-        type: ´xrange´
-    }]
-});
+	"An xrange series. If the type option is not specified, it is inherited from chart.type. In TypeScript the type option must always be set. Configuration options for the series are given in three levels:  Options for all series in a chart are defined in the plotOptions.series object. Options for all xrange series are defined in plotOptions.xrange. Options for one single series are given in the series instance array.  Highcharts.chart(´container´, {     plotOptions: {         series: {             // general options for all series         },         xrange: {             // shared options for all xrange series         }     },     series: [{         // specific options for this series instance         type: ´xrange´     }] });
 "
 	^ configurationOptions at: 'xrange' ifAbsentPut: [ HighchartsSeriesXrange new ]
 ]

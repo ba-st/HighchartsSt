@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testClick [
+HighchartsSeriesWindbarbDataEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testDrag [
+HighchartsSeriesWindbarbDataEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testDragStart [
+HighchartsSeriesWindbarbDataEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testDrop [
+HighchartsSeriesWindbarbDataEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testMouseOut [
+HighchartsSeriesWindbarbDataEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testMouseOver [
+HighchartsSeriesWindbarbDataEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testRemove [
+HighchartsSeriesWindbarbDataEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testSelect [
+HighchartsSeriesWindbarbDataEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testUnselect [
+HighchartsSeriesWindbarbDataEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesWindbarbDataEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbDataEventsTest >> testUpdate [
+HighchartsSeriesWindbarbDataEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

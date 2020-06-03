@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testBorderColor [
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAreasplinerangeStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAreasplinerangeStatesHover new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAreasplinerangeStatesHover new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testBorderWidth [
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testBrightness [
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testColor [
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testEnabled [
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testLineWidth [
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testLineWidthPlus [
+HighstockPlotOptionsAreasplinerangeStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

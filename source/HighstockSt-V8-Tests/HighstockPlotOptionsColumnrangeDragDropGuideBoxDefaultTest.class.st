@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testClassName [
+HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testColor [
+HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testCursor [
+HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testLineColor [
+HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testLineWidth [
+HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testZIndex [
+HighstockPlotOptionsColumnrangeDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

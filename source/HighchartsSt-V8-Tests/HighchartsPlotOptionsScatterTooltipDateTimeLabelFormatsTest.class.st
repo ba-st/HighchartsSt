@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testMillisecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsScatterTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

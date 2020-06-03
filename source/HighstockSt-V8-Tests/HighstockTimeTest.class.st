@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockTimeTest >> testDate [
+HighstockTimeTest >> testSetDate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockTimeTest >> testDate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTimeTest >> testGetTimezoneOffset [
+HighstockTimeTest >> testSetGetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockTimeTest >> testGetTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTimeTest >> testTimezone [
+HighstockTimeTest >> testSetTimezone [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockTimeTest >> testTimezone [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTimeTest >> testTimezoneOffset [
+HighstockTimeTest >> testSetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockTimeTest >> testTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTimeTest >> testUseUTC [
+HighstockTimeTest >> testSetUseUTC [
 
 	| component javascript expectedConfiguration |
 

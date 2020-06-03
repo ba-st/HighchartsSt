@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testAlign [
+HighstockPlotOptionsOhlcDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlcDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlcDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlcDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testAllowOverlap [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testBackgroundColor [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testBorderColor [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testBorderRadius [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testBorderWidth [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testClassName [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testColor [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testCrop [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testDefer [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testEnabled [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testFormat [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testFormatter [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testInside [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testNullFormat [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testNullFormatter [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testOverflow [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testPadding [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testPosition [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testRotation [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testShadow [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testShape [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testUseHTML [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testVerticalAlign [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testX [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testY [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockPlotOptionsOhlcDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcDataLabelsTest >> testZ [
+HighstockPlotOptionsOhlcDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

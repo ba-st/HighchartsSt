@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterTest >> testAllowOverlap [
+HighchartsPlotOptionsTreemapClusterTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTreemapCluster new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTreemapClusterTest >> testGetLayoutAlgorithm [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTreemapCluster new.
+	component layoutAlgorithm.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'layoutAlgorithm' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTreemapClusterTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTreemapCluster new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTreemapClusterTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTreemapCluster new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTreemapClusterTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsPlotOptionsTreemapClusterTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterTest >> testAnimation [
+HighchartsPlotOptionsTreemapClusterTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsPlotOptionsTreemapClusterTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterTest >> testDrillToCluster [
+HighchartsPlotOptionsTreemapClusterTest >> testSetDrillToCluster [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsPlotOptionsTreemapClusterTest >> testDrillToCluster [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterTest >> testEnabled [
+HighchartsPlotOptionsTreemapClusterTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsPlotOptionsTreemapClusterTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterTest >> testEvents [
+HighchartsPlotOptionsTreemapClusterTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsPlotOptionsTreemapClusterTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterTest >> testMinimumClusterSize [
+HighchartsPlotOptionsTreemapClusterTest >> testSetMinimumClusterSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsPlotOptionsTreemapClusterTest >> testMinimumClusterSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterTest >> testStates [
+HighchartsPlotOptionsTreemapClusterTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 

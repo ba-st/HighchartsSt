@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleZonesTest >> testClassName [
+HighstockPlotOptionsLinearregressionangleZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionangleZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleZonesTest >> testColor [
+HighstockPlotOptionsLinearregressionangleZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionangleZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleZonesTest >> testDashStyle [
+HighstockPlotOptionsLinearregressionangleZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressionangleZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleZonesTest >> testFillColor [
+HighstockPlotOptionsLinearregressionangleZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressionangleZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleZonesTest >> testValue [
+HighstockPlotOptionsLinearregressionangleZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

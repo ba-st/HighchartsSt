@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testBeforeParse [
+HighstockDataTest >> testSetBeforeParse [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockDataTest >> testBeforeParse [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testColumns [
+HighstockDataTest >> testSetColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockDataTest >> testColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testColumnsURL [
+HighstockDataTest >> testSetColumnsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockDataTest >> testColumnsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testComplete [
+HighstockDataTest >> testSetComplete [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockDataTest >> testComplete [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testCsv [
+HighstockDataTest >> testSetCsv [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockDataTest >> testCsv [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testCsvURL [
+HighstockDataTest >> testSetCsvURL [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockDataTest >> testCsvURL [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testDataRefreshRate [
+HighstockDataTest >> testSetDataRefreshRate [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockDataTest >> testDataRefreshRate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testDateFormat [
+HighstockDataTest >> testSetDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockDataTest >> testDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testDecimalPoint [
+HighstockDataTest >> testSetDecimalPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockDataTest >> testDecimalPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testEnablePolling [
+HighstockDataTest >> testSetEnablePolling [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockDataTest >> testEnablePolling [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testEndColumn [
+HighstockDataTest >> testSetEndColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockDataTest >> testEndColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testEndRow [
+HighstockDataTest >> testSetEndRow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockDataTest >> testEndRow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testFirstRowAsNames [
+HighstockDataTest >> testSetFirstRowAsNames [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockDataTest >> testFirstRowAsNames [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testGoogleSpreadsheetKey [
+HighstockDataTest >> testSetGoogleSpreadsheetKey [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockDataTest >> testGoogleSpreadsheetKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testGoogleSpreadsheetWorksheet [
+HighstockDataTest >> testSetGoogleSpreadsheetWorksheet [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockDataTest >> testGoogleSpreadsheetWorksheet [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testItemDelimiter [
+HighstockDataTest >> testSetItemDelimiter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockDataTest >> testItemDelimiter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testLineDelimiter [
+HighstockDataTest >> testSetLineDelimiter [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockDataTest >> testLineDelimiter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testParseDate [
+HighstockDataTest >> testSetParseDate [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockDataTest >> testParseDate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testParsed [
+HighstockDataTest >> testSetParsed [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockDataTest >> testParsed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testRows [
+HighstockDataTest >> testSetRows [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockDataTest >> testRows [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testRowsURL [
+HighstockDataTest >> testSetRowsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockDataTest >> testRowsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testSeriesMapping [
+HighstockDataTest >> testSetSeriesMapping [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighstockDataTest >> testSeriesMapping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testStartColumn [
+HighstockDataTest >> testSetStartColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighstockDataTest >> testStartColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testStartRow [
+HighstockDataTest >> testSetStartRow [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +341,7 @@ HighstockDataTest >> testStartRow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testSwitchRowsAndColumns [
+HighstockDataTest >> testSetSwitchRowsAndColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +355,7 @@ HighstockDataTest >> testSwitchRowsAndColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighstockDataTest >> testTable [
+HighstockDataTest >> testSetTable [
 
 	| component javascript expectedConfiguration |
 

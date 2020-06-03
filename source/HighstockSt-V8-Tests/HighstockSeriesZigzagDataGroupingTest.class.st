@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testApproximation [
+HighstockSeriesZigzagDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesZigzagDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesZigzagDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesZigzagDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testEnabled [
+HighstockSeriesZigzagDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesZigzagDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testForced [
+HighstockSeriesZigzagDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesZigzagDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testGroupAll [
+HighstockSeriesZigzagDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesZigzagDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesZigzagDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesZigzagDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testSmoothed [
+HighstockSeriesZigzagDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesZigzagDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataGroupingTest >> testUnits [
+HighstockSeriesZigzagDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testClick [
+HighstockSeriesVwapPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesVwapPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testDrag [
+HighstockSeriesVwapPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesVwapPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testDragStart [
+HighstockSeriesVwapPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesVwapPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testDrop [
+HighstockSeriesVwapPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesVwapPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testMouseOut [
+HighstockSeriesVwapPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesVwapPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testMouseOver [
+HighstockSeriesVwapPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesVwapPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testRemove [
+HighstockSeriesVwapPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesVwapPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testSelect [
+HighstockSeriesVwapPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesVwapPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testUnselect [
+HighstockSeriesVwapPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesVwapPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapPointEventsTest >> testUpdate [
+HighstockSeriesVwapPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

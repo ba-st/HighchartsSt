@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeLabelTest >> testBoxesToAvoid [
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressionslopeLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsLinearregressionslopeLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeLabelTest >> testConnectorAllowed [
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsLinearregressionslopeLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeLabelTest >> testConnectorNeighbourDistance [
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsLinearregressionslopeLabelTest >> testConnectorNeighbourDist
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeLabelTest >> testEnabled [
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighstockPlotOptionsLinearregressionslopeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeLabelTest >> testMaxFontSize [
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressionslopeLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressionslopeLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsLinearregressionslopeLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeLabelTest >> testMinFontSize [
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsLinearregressionslopeLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeLabelTest >> testOnArea [
+HighstockPlotOptionsLinearregressionslopeLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

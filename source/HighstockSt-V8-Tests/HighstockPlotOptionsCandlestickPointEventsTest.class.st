@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testClick [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testDrag [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testDragStart [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testDrop [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testMouseOut [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testMouseOver [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testRemove [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testSelect [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testUnselect [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsCandlestickPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickPointEventsTest >> testUpdate [
+HighstockPlotOptionsCandlestickPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

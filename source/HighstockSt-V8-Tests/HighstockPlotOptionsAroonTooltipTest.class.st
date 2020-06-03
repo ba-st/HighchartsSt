@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testChangeDecimals [
+HighstockPlotOptionsAroonTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsAroonTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testClusterFormat [
+HighstockPlotOptionsAroonTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsAroonTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testDistance [
+HighstockPlotOptionsAroonTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsAroonTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testFollowPointer [
+HighstockPlotOptionsAroonTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsAroonTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testFollowTouchMove [
+HighstockPlotOptionsAroonTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsAroonTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testFooterFormat [
+HighstockPlotOptionsAroonTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsAroonTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testHeaderFormat [
+HighstockPlotOptionsAroonTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsAroonTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testNullFormat [
+HighstockPlotOptionsAroonTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsAroonTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testNullFormatter [
+HighstockPlotOptionsAroonTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockPlotOptionsAroonTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testPointFormat [
+HighstockPlotOptionsAroonTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockPlotOptionsAroonTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testPointFormatter [
+HighstockPlotOptionsAroonTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockPlotOptionsAroonTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testValueDecimals [
+HighstockPlotOptionsAroonTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockPlotOptionsAroonTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testValuePrefix [
+HighstockPlotOptionsAroonTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockPlotOptionsAroonTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testValueSuffix [
+HighstockPlotOptionsAroonTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockPlotOptionsAroonTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonTooltipTest >> testXDateFormat [
+HighstockPlotOptionsAroonTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

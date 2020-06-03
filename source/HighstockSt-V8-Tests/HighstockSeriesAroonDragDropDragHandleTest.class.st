@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonDragDropDragHandleTest >> testClassName [
+HighstockSeriesAroonDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAroonDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonDragDropDragHandleTest >> testColor [
+HighstockSeriesAroonDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAroonDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonDragDropDragHandleTest >> testCursor [
+HighstockSeriesAroonDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAroonDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonDragDropDragHandleTest >> testLineColor [
+HighstockSeriesAroonDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAroonDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesAroonDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAroonDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesAroonDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAroonDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonDragDropDragHandleTest >> testZIndex [
+HighstockSeriesAroonDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testMillisecond
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsBellcurveTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

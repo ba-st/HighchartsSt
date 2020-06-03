@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testEnabled [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testEnabledThreshold [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testFillColor [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testHeight [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testLineColor [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testLineWidth [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testRadius [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testStates [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testSymbol [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesNetworkgraphMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphMarkerTest >> testWidth [
+HighchartsSeriesNetworkgraphMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

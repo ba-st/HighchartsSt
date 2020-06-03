@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testBorderColor [
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testBorderWidth [
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testColor [
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testEnabled [
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testLineWidth [
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testLineWidthPlus [
+HighchartsPlotOptionsNetworkgraphStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

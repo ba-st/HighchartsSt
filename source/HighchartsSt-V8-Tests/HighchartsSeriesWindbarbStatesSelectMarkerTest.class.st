@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testEnabled [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testEnabledThreshold [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testFillColor [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testHeight [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testLineColor [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testLineWidth [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testRadius [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSymbol [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbStatesSelectMarkerTest >> testWidth [
+HighchartsSeriesWindbarbStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

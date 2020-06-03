@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnLabelTest >> testBoxesToAvoid [
+HighchartsSeriesColumnLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesColumnLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnLabelTest >> testConnectorAllowed [
+HighchartsSeriesColumnLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesColumnLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnLabelTest >> testConnectorNeighbourDistance [
+HighchartsSeriesColumnLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesColumnLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnLabelTest >> testEnabled [
+HighchartsSeriesColumnLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighchartsSeriesColumnLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnLabelTest >> testMaxFontSize [
+HighchartsSeriesColumnLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesColumnLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnLabelTest >> testMinFontSize [
+HighchartsSeriesColumnLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesColumnLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnLabelTest >> testOnArea [
+HighchartsSeriesColumnLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

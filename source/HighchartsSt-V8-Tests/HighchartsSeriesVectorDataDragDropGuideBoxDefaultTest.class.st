@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testClassName [
+HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testColor [
+HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testCursor [
+HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testLineColor [
+HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testLineWidth [
+HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testZIndex [
+HighchartsSeriesVectorDataDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesWindbarbMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWindbarbMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesWindbarbMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWindbarbMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesWindbarbMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWindbarbMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesWindbarbMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesWindbarbMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbMarkerStatesSelectTest >> testRadius [
+HighchartsSeriesWindbarbMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

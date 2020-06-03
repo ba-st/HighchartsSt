@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsColumnEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsColumnEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsColumnEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testClick [
+HighchartsPlotOptionsColumnEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsColumnEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testHide [
+HighchartsPlotOptionsColumnEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsColumnEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsColumnEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsColumnEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testMouseOut [
+HighchartsPlotOptionsColumnEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsColumnEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testMouseOver [
+HighchartsPlotOptionsColumnEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsColumnEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnEventsTest >> testShow [
+HighchartsPlotOptionsColumnEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesSelectTest >> testBorderColor [
+HighchartsSeriesTimelineStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineStatesSelectTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineStatesSelect new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineStatesSelectTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineStatesSelect new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesTimelineStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesSelectTest >> testBorderWidth [
+HighchartsSeriesTimelineStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesTimelineStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesSelectTest >> testColor [
+HighchartsSeriesTimelineStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesTimelineStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesSelectTest >> testEnabled [
+HighchartsSeriesTimelineStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesTimelineStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesSelectTest >> testLineWidth [
+HighchartsSeriesTimelineStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesTimelineStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesSelectTest >> testLineWidthPlus [
+HighchartsSeriesTimelineStatesSelectTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

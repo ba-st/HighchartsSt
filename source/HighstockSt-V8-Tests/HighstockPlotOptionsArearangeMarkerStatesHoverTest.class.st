@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testEnabled [
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsArearangeMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testFillColor [
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testLineColor [
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testLineWidth [
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testLineWidthPlus [
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testRadius [
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testRadiusPlus [
+HighstockPlotOptionsArearangeMarkerStatesHoverTest >> testSetRadiusPlus [
 
 	| component javascript expectedConfiguration |
 

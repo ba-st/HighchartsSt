@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsXrangeDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsXrangeDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsXrangeDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsXrangeDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsXrangeDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsXrangeDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsXrangeDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

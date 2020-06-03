@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyNodesTest >> testColor [
+HighchartsSeriesSankeyNodesTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankeyNodes new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyNodesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesSankeyNodesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyNodesTest >> testColorIndex [
+HighchartsSeriesSankeyNodesTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesSankeyNodesTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyNodesTest >> testColumn [
+HighchartsSeriesSankeyNodesTest >> testSetColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesSankeyNodesTest >> testColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyNodesTest >> testId [
+HighchartsSeriesSankeyNodesTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesSankeyNodesTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyNodesTest >> testLevel [
+HighchartsSeriesSankeyNodesTest >> testSetLevel [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesSankeyNodesTest >> testLevel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyNodesTest >> testName [
+HighchartsSeriesSankeyNodesTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesSankeyNodesTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyNodesTest >> testOffset [
+HighchartsSeriesSankeyNodesTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testEnabled [
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressionangleMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testFillColor [
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testFillColor 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testLineColor [
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testLineColor 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testLineWidth [
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testLineWidth 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testLineWidthPlus [
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testLineWidthP
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testRadius [
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testRadiusPlus [
+HighstockPlotOptionsLinearregressionangleMarkerStatesHoverTest >> testSetRadiusPlus [
 
 	| component javascript expectedConfiguration |
 

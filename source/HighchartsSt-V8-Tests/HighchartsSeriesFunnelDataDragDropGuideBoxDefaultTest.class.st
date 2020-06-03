@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testClassName [
+HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testColor [
+HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testCursor [
+HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testLineColor [
+HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testLineWidth [
+HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testZIndex [
+HighchartsSeriesFunnelDataDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

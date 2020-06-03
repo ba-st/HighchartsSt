@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testMillisecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockSeriesWindbarbTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

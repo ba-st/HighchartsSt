@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsColumnpyramidDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

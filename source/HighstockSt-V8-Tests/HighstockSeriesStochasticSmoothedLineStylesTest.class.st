@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticSmoothedLineStylesTest >> testLineColor [
+HighstockSeriesStochasticSmoothedLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStochasticSmoothedLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticSmoothedLineStylesTest >> testLineWidth [
+HighstockSeriesStochasticSmoothedLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

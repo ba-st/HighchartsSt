@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testAlign [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testColor [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testEnabled [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testHeight [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testInside [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testLineColor [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testLineWidth [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testRadius [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSymbol [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testWidth [
+HighstockPlotOptionsDemaConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

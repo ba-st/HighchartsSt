@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testClick [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testDrag [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testDragStart [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testDrop [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testMouseOut [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testMouseOver [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testRemove [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testSelect [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testUnselect [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsStochasticPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStochasticPointEventsTest >> testUpdate [
+HighstockPlotOptionsStochasticPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

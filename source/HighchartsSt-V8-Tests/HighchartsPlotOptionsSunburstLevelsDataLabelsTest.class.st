@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testAlignTo [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstLevelsDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstLevelsDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSunburstLevelsDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetAlignTo [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testAlignTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testAllowOverlap [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testClassName [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testColor [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorColor [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorPadding [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetConnectorPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorShape [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetConnectorShape [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorWidth [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testCrookDistance [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetCrookDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testCrookDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testCrop [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testDefer [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testDistance [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testFormat [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -271,21 +313,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testInside [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsSunburstLevelsDataLabels new.
-	component inside: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'inside' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +327,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +341,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +355,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testPadding [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +369,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testPosition [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +383,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testRotation [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +397,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testRotationMode [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetRotationMode [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +411,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testRotationMode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testShadow [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +425,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testShape [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +439,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSoftConnector [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetSoftConnector [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +453,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSoftConnector [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +467,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +481,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testX [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +495,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testY [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +509,7 @@ HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testZ [
+HighchartsPlotOptionsSunburstLevelsDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

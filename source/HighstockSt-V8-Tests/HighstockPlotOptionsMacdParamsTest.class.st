@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdParamsTest >> testIndex [
+HighstockPlotOptionsMacdParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsMacdParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdParamsTest >> testLongPeriod [
+HighstockPlotOptionsMacdParamsTest >> testSetLongPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsMacdParamsTest >> testLongPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdParamsTest >> testPeriod [
+HighstockPlotOptionsMacdParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsMacdParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdParamsTest >> testShortPeriod [
+HighstockPlotOptionsMacdParamsTest >> testSetShortPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsMacdParamsTest >> testShortPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdParamsTest >> testSignalPeriod [
+HighstockPlotOptionsMacdParamsTest >> testSetSignalPeriod [
 
 	| component javascript expectedConfiguration |
 

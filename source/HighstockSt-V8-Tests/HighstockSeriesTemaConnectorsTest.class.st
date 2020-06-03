@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTemaConnectorsTest >> testDashStyle [
+HighstockSeriesTemaConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesTemaConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesTemaConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesTemaConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesTemaConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesTemaConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesTemaConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesTemaConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTemaConnectorsTest >> testLineColor [
+HighstockSeriesTemaConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesTemaConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTemaConnectorsTest >> testLineWidth [
+HighstockSeriesTemaConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesTemaConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTemaConnectorsTest >> testType [
+HighstockSeriesTemaConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

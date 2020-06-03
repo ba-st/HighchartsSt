@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockChartResetZoomButtonTest >> testRelativeTo [
+HighstockChartResetZoomButtonTest >> testGetPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChartResetZoomButton new.
+	component position.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'position' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockChartResetZoomButtonTest >> testGetTheme [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockChartResetZoomButton new.
+	component theme.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'theme' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockChartResetZoomButtonTest >> testSetRelativeTo [
 
 	| component javascript expectedConfiguration |
 

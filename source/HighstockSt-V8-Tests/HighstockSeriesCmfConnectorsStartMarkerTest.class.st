@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testAlign [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testColor [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testEnabled [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testHeight [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testInside [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testLineColor [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testLineWidth [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testRadius [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testSymbol [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesCmfConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCmfConnectorsStartMarkerTest >> testWidth [
+HighstockSeriesCmfConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testClassName [
+HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testColor [
+HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testCursor [
+HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testLineColor [
+HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testLineWidth [
+HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testZIndex [
+HighchartsPlotOptionsColumnpyramidDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

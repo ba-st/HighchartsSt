@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testAlign [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testColor [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testEnabled [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testHeight [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testInside [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testLineColor [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testLineWidth [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testRadius [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsWmaConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaConnectorsMarkerTest >> testWidth [
+HighstockPlotOptionsWmaConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

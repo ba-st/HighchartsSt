@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testAttributes [
+HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testOpacity [
+HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testSize [
+HighstockPlotOptionsLinearregressionangleStatesHoverHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

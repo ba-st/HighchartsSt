@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testAlign [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSankeyDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSankeyDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSankeyDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSankeyDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSankeyDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testAllowOverlap [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testClassName [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testColor [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testCrop [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testDefer [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testFormat [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testInside [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testNodeFormat [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetNodeFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testNodeFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testNodeFormatter [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetNodeFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testNodeFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testPadding [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testPosition [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testRotation [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testShadow [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testShape [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testX [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testY [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighchartsPlotOptionsSankeyDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataLabelsTest >> testZ [
+HighchartsPlotOptionsSankeyDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

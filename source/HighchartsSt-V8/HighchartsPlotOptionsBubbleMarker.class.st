@@ -16,8 +16,7 @@ Class {
 { #category : #accessing }
 HighchartsPlotOptionsBubbleMarker >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The fill color of the point marker. When undefined, the series´
-or point´s color is used.
+	"The fill color of the point marker. When undefined, the series´ or point´s color is used.
 "
 
 	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -35,8 +34,7 @@ Defaults to 0.5."
 { #category : #accessing }
 HighchartsPlotOptionsBubbleMarker >> lineColor: anObject [
 
-	"The color of the point marker´s outline. When undefined, the
-series´ or point´s color is used.
+	"The color of the point marker´s outline. When undefined, the series´ or point´s color is used.
 Defaults to nil."
 
 	configurationOptions at: 'lineColor' put: anObject
@@ -63,14 +61,7 @@ HighchartsPlotOptionsBubbleMarker >> states: anObject [
 { #category : #accessing }
 HighchartsPlotOptionsBubbleMarker >> symbol: aHighchartsSymbolKeyValueOrstring [
 
-	"A predefined shape or symbol for the marker. Possible values are
-&quot;circle&quot;, &quot;square&quot;, &quot;diamond&quot;, &quot;triangle&quot; and &quot;triangle-down&quot;.
-Additionally, the URL to a graphic can be given on the form
-url(graphic.png). Note that for the image to be applied to exported
-charts, its URL needs to be accessible by the export server.
-Custom callbacks for symbol path generation can also be added to
-Highcharts.SVGRenderer.prototype.symbols. The callback is then
-used by its method name, as shown in the demo.
+	"A predefined shape or symbol for the marker. Possible values are &quot;circle&quot;, &quot;square&quot;, &quot;diamond&quot;, &quot;triangle&quot; and &quot;triangle-down&quot;. Additionally, the URL to a graphic can be given on the form url(graphic.png). Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server. Custom callbacks for symbol path generation can also be added to Highcharts.SVGRenderer.prototype.symbols. The callback is then used by its method name, as shown in the demo.
 Defaults to circle."
 
 	configurationOptions at: 'symbol' put: aHighchartsSymbolKeyValueOrstring

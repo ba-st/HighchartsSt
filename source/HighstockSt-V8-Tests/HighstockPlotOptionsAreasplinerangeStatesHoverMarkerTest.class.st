@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testEnabled [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testEnabledThreshold
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testFillColor [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testHeight [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testLineColor [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testLineWidth [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testRadius [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSymbol [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testWidth [
+HighstockPlotOptionsAreasplinerangeStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

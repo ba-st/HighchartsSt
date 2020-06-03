@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testAlign [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testColor [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testEnabled [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testHeight [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testInside [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testLineColor [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testLineWidth [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testRadius [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsVennConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsMarkerTest >> testWidth [
+HighchartsPlotOptionsVennConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

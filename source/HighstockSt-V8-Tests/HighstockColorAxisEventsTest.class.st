@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisEventsTest >> testAfterSetExtremes [
+HighstockColorAxisEventsTest >> testSetAfterSetExtremes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockColorAxisEventsTest >> testAfterSetExtremes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisEventsTest >> testLegendItemClick [
+HighstockColorAxisEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockColorAxisEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisEventsTest >> testSetExtremes [
+HighstockColorAxisEventsTest >> testSetSetExtremes [
 
 	| component javascript expectedConfiguration |
 

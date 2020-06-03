@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangePartialFillTest >> testFill [
+HighchartsSeriesXrangePartialFillTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

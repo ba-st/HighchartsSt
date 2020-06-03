@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineAccessibilityKeyboardNavigationTest >> testEnabled [
+HighstockPlotOptionsLineAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

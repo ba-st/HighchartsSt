@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbMarkerStatesHoverTest >> testEnabled [
+HighstockSeriesBbMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesBbMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesBbMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesBbMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbMarkerStatesHoverTest >> testFillColor [
+HighstockSeriesBbMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesBbMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbMarkerStatesHoverTest >> testLineColor [
+HighstockSeriesBbMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesBbMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbMarkerStatesHoverTest >> testLineWidth [
+HighstockSeriesBbMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesBbMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbMarkerStatesHoverTest >> testLineWidthPlus [
+HighstockSeriesBbMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesBbMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbMarkerStatesHoverTest >> testRadius [
+HighstockSeriesBbMarkerStatesHoverTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesBbMarkerStatesHoverTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbMarkerStatesHoverTest >> testRadiusPlus [
+HighstockSeriesBbMarkerStatesHoverTest >> testSetRadiusPlus [
 
 	| component javascript expectedConfiguration |
 

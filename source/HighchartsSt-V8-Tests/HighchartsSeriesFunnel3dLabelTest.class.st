@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelTest >> testBoxesToAvoid [
+HighchartsSeriesFunnel3dLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesFunnel3dLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelTest >> testConnectorAllowed [
+HighchartsSeriesFunnel3dLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesFunnel3dLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelTest >> testConnectorNeighbourDistance [
+HighchartsSeriesFunnel3dLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesFunnel3dLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelTest >> testEnabled [
+HighchartsSeriesFunnel3dLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighchartsSeriesFunnel3dLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelTest >> testMaxFontSize [
+HighchartsSeriesFunnel3dLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesFunnel3dLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelTest >> testMinFontSize [
+HighchartsSeriesFunnel3dLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesFunnel3dLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dLabelTest >> testOnArea [
+HighchartsSeriesFunnel3dLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

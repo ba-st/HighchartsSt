@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testAlign [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testColor [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testEnabled [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testHeight [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testInside [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testLineColor [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testLineWidth [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testRadius [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testSymbol [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesStochasticConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStochasticConnectorsStartMarkerTest >> testWidth [
+HighstockSeriesStochasticConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testAlign [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testColor [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testEnabled [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testHeight [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testInside [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testLineColor [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testLineWidth [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testRadius [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testVerticalAlign [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesBellcurveConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBellcurveConnectorsMarkerTest >> testWidth [
+HighchartsSeriesBellcurveConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

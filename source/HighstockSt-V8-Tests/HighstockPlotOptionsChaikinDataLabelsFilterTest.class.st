@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsChaikinDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsChaikinDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsChaikinDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsChaikinDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsChaikinDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

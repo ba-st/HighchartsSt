@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testClick [
+HighstockSeriesAreaPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAreaPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testDrag [
+HighstockSeriesAreaPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAreaPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testDragStart [
+HighstockSeriesAreaPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAreaPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testDrop [
+HighstockSeriesAreaPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAreaPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testMouseOut [
+HighstockSeriesAreaPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAreaPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testMouseOver [
+HighstockSeriesAreaPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAreaPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testRemove [
+HighstockSeriesAreaPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAreaPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testSelect [
+HighstockSeriesAreaPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesAreaPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testUnselect [
+HighstockSeriesAreaPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesAreaPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaPointEventsTest >> testUpdate [
+HighstockSeriesAreaPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

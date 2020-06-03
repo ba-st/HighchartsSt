@@ -18,10 +18,10 @@ HighchartsNavigationAnnotationsOptionsControlPointOptions >> height: aNumber [
 ]
 
 { #category : #accessing }
-HighchartsNavigationAnnotationsOptionsControlPointOptions >> positioner: anObject [
+HighchartsNavigationAnnotationsOptionsControlPointOptions >> positioner: aHighchartsAnnotationControlPointPositionerFunction [
 
 
-	configurationOptions at: 'positioner' put: anObject
+	configurationOptions at: 'positioner' put: aHighchartsAnnotationControlPointPositionerFunction
 ]
 
 { #category : #accessing }

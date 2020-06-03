@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapMarkerStatesHoverTest >> testEnabled [
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemapMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesTreemapMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapMarkerStatesHoverTest >> testFillColor [
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesTreemapMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapMarkerStatesHoverTest >> testLineColor [
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesTreemapMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapMarkerStatesHoverTest >> testLineWidth [
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesTreemapMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapMarkerStatesHoverTest >> testLineWidthPlus [
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesTreemapMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapMarkerStatesHoverTest >> testRadius [
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesTreemapMarkerStatesHoverTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapMarkerStatesHoverTest >> testRadiusPlus [
+HighchartsSeriesTreemapMarkerStatesHoverTest >> testSetRadiusPlus [
 
 	| component javascript expectedConfiguration |
 

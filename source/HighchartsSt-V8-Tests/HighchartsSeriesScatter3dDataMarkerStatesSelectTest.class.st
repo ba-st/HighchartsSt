@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testRadius [
+HighchartsSeriesScatter3dDataMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownAnimationTest >> testDuration [
+HighchartsDrilldownAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

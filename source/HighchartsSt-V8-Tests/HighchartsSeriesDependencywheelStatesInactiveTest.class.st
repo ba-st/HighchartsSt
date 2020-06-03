@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelStatesInactiveTest >> testLinkOpacity [
+HighchartsSeriesDependencywheelStatesInactiveTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheelStatesInactive new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelStatesInactiveTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheelStatesInactive new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelStatesInactiveTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsSeriesDependencywheelStatesInactiveTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelStatesInactiveTest >> testOpacity [
+HighchartsSeriesDependencywheelStatesInactiveTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 

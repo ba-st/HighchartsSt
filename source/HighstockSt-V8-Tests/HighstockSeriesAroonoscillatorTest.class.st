@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testAllowPointSelect [
+HighstockSeriesAroonoscillatorTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -13,13 +238,14 @@ HighstockSeriesAroonoscillatorTest >> testAllowPointSelect [
 	component allowPointSelect: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'allowPointSelect' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testAnimationLimit [
+HighstockSeriesAroonoscillatorTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -27,13 +253,14 @@ HighstockSeriesAroonoscillatorTest >> testAnimationLimit [
 	component animationLimit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'animationLimit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBoostBlending [
+HighstockSeriesAroonoscillatorTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -41,13 +268,14 @@ HighstockSeriesAroonoscillatorTest >> testBoostBlending [
 	component boostBlending: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBoostThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -55,13 +283,14 @@ HighstockSeriesAroonoscillatorTest >> testBoostThreshold [
 	component boostThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'boostThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBorderColor [
+HighstockSeriesAroonoscillatorTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -69,13 +298,14 @@ HighstockSeriesAroonoscillatorTest >> testBorderColor [
 	component borderColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'borderColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testBorderWidth [
+HighstockSeriesAroonoscillatorTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -83,13 +313,14 @@ HighstockSeriesAroonoscillatorTest >> testBorderWidth [
 	component borderWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'borderWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testClassName [
+HighstockSeriesAroonoscillatorTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -97,13 +328,14 @@ HighstockSeriesAroonoscillatorTest >> testClassName [
 	component className: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'className' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testClip [
+HighstockSeriesAroonoscillatorTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -111,13 +343,14 @@ HighstockSeriesAroonoscillatorTest >> testClip [
 	component clip: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testColor [
+HighstockSeriesAroonoscillatorTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -125,13 +358,14 @@ HighstockSeriesAroonoscillatorTest >> testColor [
 	component color: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'color' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testColorIndex [
+HighstockSeriesAroonoscillatorTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -139,13 +373,14 @@ HighstockSeriesAroonoscillatorTest >> testColorIndex [
 	component colorIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'colorIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testColorKey [
+HighstockSeriesAroonoscillatorTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -153,13 +388,14 @@ HighstockSeriesAroonoscillatorTest >> testColorKey [
 	component colorKey: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCompareStart [
+HighstockSeriesAroonoscillatorTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -167,13 +403,14 @@ HighstockSeriesAroonoscillatorTest >> testCompareStart [
 	component compareStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'compareStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCompareToMain [
+HighstockSeriesAroonoscillatorTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -181,13 +418,14 @@ HighstockSeriesAroonoscillatorTest >> testCompareToMain [
 	component compareToMain: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'compareToMain' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testConnectEnds [
+HighstockSeriesAroonoscillatorTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -195,13 +433,14 @@ HighstockSeriesAroonoscillatorTest >> testConnectEnds [
 	component connectEnds: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'connectEnds' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testConnectNulls [
+HighstockSeriesAroonoscillatorTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -209,13 +448,29 @@ HighstockSeriesAroonoscillatorTest >> testConnectNulls [
 	component connectNulls: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'connectNulls' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCropThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -223,13 +478,14 @@ HighstockSeriesAroonoscillatorTest >> testCropThreshold [
 	component cropThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testCursor [
+HighstockSeriesAroonoscillatorTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -237,13 +493,29 @@ HighstockSeriesAroonoscillatorTest >> testCursor [
 	component cursor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'cursor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testDashStyle [
+HighstockSeriesAroonoscillatorTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -251,13 +523,29 @@ HighstockSeriesAroonoscillatorTest >> testDashStyle [
 	component dashStyle: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'dashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testDescription [
+HighstockSeriesAroonoscillatorTest >> testSetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAroonoscillator new.
+	component data: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
+		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAroonoscillatorTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -265,13 +553,14 @@ HighstockSeriesAroonoscillatorTest >> testDescription [
 	component description: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'description' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testEnableMouseTracking [
+HighstockSeriesAroonoscillatorTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -279,13 +568,14 @@ HighstockSeriesAroonoscillatorTest >> testEnableMouseTracking [
 	component enableMouseTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'enableMouseTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testEvents [
+HighstockSeriesAroonoscillatorTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -293,13 +583,14 @@ HighstockSeriesAroonoscillatorTest >> testEvents [
 	component events: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'events' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testFindNearestPointBy [
+HighstockSeriesAroonoscillatorTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -307,13 +598,14 @@ HighstockSeriesAroonoscillatorTest >> testFindNearestPointBy [
 	component findNearestPointBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'findNearestPointBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testGapSize [
+HighstockSeriesAroonoscillatorTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -321,13 +613,14 @@ HighstockSeriesAroonoscillatorTest >> testGapSize [
 	component gapSize: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'gapSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testGapUnit [
+HighstockSeriesAroonoscillatorTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -335,13 +628,14 @@ HighstockSeriesAroonoscillatorTest >> testGapUnit [
 	component gapUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'gapUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testGetExtremesFromAll [
+HighstockSeriesAroonoscillatorTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -349,13 +643,14 @@ HighstockSeriesAroonoscillatorTest >> testGetExtremesFromAll [
 	component getExtremesFromAll: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'getExtremesFromAll' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testId [
+HighstockSeriesAroonoscillatorTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -363,13 +658,14 @@ HighstockSeriesAroonoscillatorTest >> testId [
 	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testIncludeInDataExport [
+HighstockSeriesAroonoscillatorTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -377,13 +673,14 @@ HighstockSeriesAroonoscillatorTest >> testIncludeInDataExport [
 	component includeInDataExport: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testIndex [
+HighstockSeriesAroonoscillatorTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -391,13 +688,14 @@ HighstockSeriesAroonoscillatorTest >> testIndex [
 	component index: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'index' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLegendIndex [
+HighstockSeriesAroonoscillatorTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -405,13 +703,14 @@ HighstockSeriesAroonoscillatorTest >> testLegendIndex [
 	component legendIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'legendIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLineWidth [
+HighstockSeriesAroonoscillatorTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -419,13 +718,14 @@ HighstockSeriesAroonoscillatorTest >> testLineWidth [
 	component lineWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'lineWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLinecap [
+HighstockSeriesAroonoscillatorTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -433,13 +733,14 @@ HighstockSeriesAroonoscillatorTest >> testLinecap [
 	component linecap: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'linecap' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testLinkedTo [
+HighstockSeriesAroonoscillatorTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -447,13 +748,14 @@ HighstockSeriesAroonoscillatorTest >> testLinkedTo [
 	component linkedTo: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'linkedTo' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testMapData [
+HighstockSeriesAroonoscillatorTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -461,13 +763,14 @@ HighstockSeriesAroonoscillatorTest >> testMapData [
 	component mapData: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'mapData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testName [
+HighstockSeriesAroonoscillatorTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -475,13 +778,14 @@ HighstockSeriesAroonoscillatorTest >> testName [
 	component name: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'name' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testNegativeColor [
+HighstockSeriesAroonoscillatorTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -489,13 +793,14 @@ HighstockSeriesAroonoscillatorTest >> testNegativeColor [
 	component negativeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'negativeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testOpacity [
+HighstockSeriesAroonoscillatorTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -503,13 +808,14 @@ HighstockSeriesAroonoscillatorTest >> testOpacity [
 	component opacity: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testPointDescriptionFormatter [
+HighstockSeriesAroonoscillatorTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -517,13 +823,14 @@ HighstockSeriesAroonoscillatorTest >> testPointDescriptionFormatter [
 	component pointDescriptionFormatter: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'pointDescriptionFormatter' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testSelected [
+HighstockSeriesAroonoscillatorTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -531,13 +838,14 @@ HighstockSeriesAroonoscillatorTest >> testSelected [
 	component selected: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'selected' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testShadow [
+HighstockSeriesAroonoscillatorTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -545,13 +853,14 @@ HighstockSeriesAroonoscillatorTest >> testShadow [
 	component shadow: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'shadow' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testShowCheckbox [
+HighstockSeriesAroonoscillatorTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -559,13 +868,14 @@ HighstockSeriesAroonoscillatorTest >> testShowCheckbox [
 	component showCheckbox: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'showCheckbox' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testShowInLegend [
+HighstockSeriesAroonoscillatorTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -573,13 +883,14 @@ HighstockSeriesAroonoscillatorTest >> testShowInLegend [
 	component showInLegend: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'showInLegend' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testSkipKeyboardNavigation [
+HighstockSeriesAroonoscillatorTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -587,13 +898,14 @@ HighstockSeriesAroonoscillatorTest >> testSkipKeyboardNavigation [
 	component skipKeyboardNavigation: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'skipKeyboardNavigation' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testSoftThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -601,13 +913,14 @@ HighstockSeriesAroonoscillatorTest >> testSoftThreshold [
 	component softThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'softThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStack [
+HighstockSeriesAroonoscillatorTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -615,13 +928,14 @@ HighstockSeriesAroonoscillatorTest >> testStack [
 	component stack: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'stack' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStates [
+HighstockSeriesAroonoscillatorTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -629,13 +943,14 @@ HighstockSeriesAroonoscillatorTest >> testStates [
 	component states: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'states' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStep [
+HighstockSeriesAroonoscillatorTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -643,13 +958,14 @@ HighstockSeriesAroonoscillatorTest >> testStep [
 	component step: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testStickyTracking [
+HighstockSeriesAroonoscillatorTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -657,13 +973,14 @@ HighstockSeriesAroonoscillatorTest >> testStickyTracking [
 	component stickyTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'stickyTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -671,13 +988,14 @@ HighstockSeriesAroonoscillatorTest >> testThreshold [
 	component threshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'threshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testTurboThreshold [
+HighstockSeriesAroonoscillatorTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -685,13 +1003,14 @@ HighstockSeriesAroonoscillatorTest >> testTurboThreshold [
 	component turboThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'turboThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testType [
+HighstockSeriesAroonoscillatorTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -699,13 +1018,14 @@ HighstockSeriesAroonoscillatorTest >> testType [
 	component type: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'type' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testVisible [
+HighstockSeriesAroonoscillatorTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -713,13 +1033,14 @@ HighstockSeriesAroonoscillatorTest >> testVisible [
 	component visible: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'visible' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testXAxis [
+HighstockSeriesAroonoscillatorTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -727,13 +1048,14 @@ HighstockSeriesAroonoscillatorTest >> testXAxis [
 	component xAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'xAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testYAxis [
+HighstockSeriesAroonoscillatorTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -741,13 +1063,14 @@ HighstockSeriesAroonoscillatorTest >> testYAxis [
 	component yAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'yAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testZIndex [
+HighstockSeriesAroonoscillatorTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -755,13 +1078,14 @@ HighstockSeriesAroonoscillatorTest >> testZIndex [
 	component zIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'zIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorTest >> testZoneAxis [
+HighstockSeriesAroonoscillatorTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -769,6 +1093,7 @@ HighstockSeriesAroonoscillatorTest >> testZoneAxis [
 	component zoneAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'aroonoscillator';
 		at: 'zoneAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineAccessibilityKeyboardNavigationTest >> testEnabled [
+HighstockSeriesSplineAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

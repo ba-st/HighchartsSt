@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testForced [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testGroupAll [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testSmoothed [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsFunnelDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelDataGroupingTest >> testUnits [
+HighchartsPlotOptionsFunnelDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

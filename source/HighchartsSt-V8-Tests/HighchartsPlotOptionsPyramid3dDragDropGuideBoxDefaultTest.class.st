@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testClassName [
+HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testColor [
+HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testCursor [
+HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testLineColor [
+HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testLineWidth [
+HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testZIndex [
+HighchartsPlotOptionsPyramid3dDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testApproximation [
+HighstockSeriesNatrDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesNatrDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesNatrDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesNatrDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testEnabled [
+HighstockSeriesNatrDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesNatrDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testForced [
+HighstockSeriesNatrDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesNatrDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testGroupAll [
+HighstockSeriesNatrDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesNatrDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesNatrDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesNatrDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testSmoothed [
+HighstockSeriesNatrDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesNatrDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrDataGroupingTest >> testUnits [
+HighstockSeriesNatrDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

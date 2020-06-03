@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testClassName [
+HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testColor [
+HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testCursor [
+HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testLineColor [
+HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testLineWidth [
+HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testZIndex [
+HighchartsSeriesTilemapDataDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesHoverTest >> testBorderColor [
+HighchartsSeriesTimelineStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineStatesHoverTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineStatesHover new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineStatesHoverTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineStatesHover new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesTimelineStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesHoverTest >> testBorderWidth [
+HighchartsSeriesTimelineStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesTimelineStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesHoverTest >> testBrightness [
+HighchartsSeriesTimelineStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesTimelineStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesHoverTest >> testColor [
+HighchartsSeriesTimelineStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesTimelineStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesHoverTest >> testEnabled [
+HighchartsSeriesTimelineStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesTimelineStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesHoverTest >> testLineWidth [
+HighchartsSeriesTimelineStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesTimelineStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineStatesHoverTest >> testLineWidthPlus [
+HighchartsSeriesTimelineStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

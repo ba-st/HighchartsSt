@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testAlign [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testColor [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testEnabled [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testHeight [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testInside [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testLineColor [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testLineWidth [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testRadius [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testWidth [
+HighstockPlotOptionsErrorbarConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

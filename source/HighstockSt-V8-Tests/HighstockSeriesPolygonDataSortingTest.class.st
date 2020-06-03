@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataSortingTest >> testEnabled [
+HighstockSeriesPolygonDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPolygonDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataSortingTest >> testMatchByName [
+HighstockSeriesPolygonDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPolygonDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataSortingTest >> testSortKey [
+HighstockSeriesPolygonDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDragMaxX [
+HighstockSeriesXrangeDataDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeDataDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDataDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeDataDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDataDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDragMaxY [
+HighstockSeriesXrangeDataDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDragMinX [
+HighstockSeriesXrangeDataDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDragMinY [
+HighstockSeriesXrangeDataDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDragPrecisionX [
+HighstockSeriesXrangeDataDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDragPrecisionY [
+HighstockSeriesXrangeDataDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDragSensitivity [
+HighstockSeriesXrangeDataDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDraggableX [
+HighstockSeriesXrangeDataDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testDraggableY [
+HighstockSeriesXrangeDataDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockSeriesXrangeDataDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testGroupBy [
+HighstockSeriesXrangeDataDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockSeriesXrangeDataDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDataDragDropTest >> testLiveRedraw [
+HighstockSeriesXrangeDataDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

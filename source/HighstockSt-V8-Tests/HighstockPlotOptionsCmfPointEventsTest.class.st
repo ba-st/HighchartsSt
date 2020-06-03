@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testClick [
+HighstockPlotOptionsCmfPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testDrag [
+HighstockPlotOptionsCmfPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testDragStart [
+HighstockPlotOptionsCmfPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testDrop [
+HighstockPlotOptionsCmfPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testMouseOut [
+HighstockPlotOptionsCmfPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testMouseOver [
+HighstockPlotOptionsCmfPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testRemove [
+HighstockPlotOptionsCmfPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testSelect [
+HighstockPlotOptionsCmfPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testUnselect [
+HighstockPlotOptionsCmfPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsCmfPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfPointEventsTest >> testUpdate [
+HighstockPlotOptionsCmfPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

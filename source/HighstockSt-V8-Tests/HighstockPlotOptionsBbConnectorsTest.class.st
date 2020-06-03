@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBbConnectorsTest >> testDashStyle [
+HighstockPlotOptionsBbConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsBbConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsBbConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsBbConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsBbConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsBbConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsBbConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsBbConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBbConnectorsTest >> testLineColor [
+HighstockPlotOptionsBbConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsBbConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBbConnectorsTest >> testLineWidth [
+HighstockPlotOptionsBbConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsBbConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBbConnectorsTest >> testType [
+HighstockPlotOptionsBbConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

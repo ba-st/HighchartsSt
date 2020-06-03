@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testColor [
+HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testFontSize [
+HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testFontWeight [
+HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testTextOutline [
+HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 
@@ -56,6 +56,20 @@ HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testTextOutline [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'textOutline' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataLabelsStyleTest >> testSetTransition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleDataLabelsStyle new.
+	component transition: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'transition' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

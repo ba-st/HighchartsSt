@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataDragDropDragHandleTest >> testClassName [
+HighchartsSeriesPolygonDataDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPolygonDataDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataDragDropDragHandleTest >> testColor [
+HighchartsSeriesPolygonDataDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPolygonDataDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataDragDropDragHandleTest >> testCursor [
+HighchartsSeriesPolygonDataDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPolygonDataDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataDragDropDragHandleTest >> testLineColor [
+HighchartsSeriesPolygonDataDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesPolygonDataDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataDragDropDragHandleTest >> testLineWidth [
+HighchartsSeriesPolygonDataDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesPolygonDataDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataDragDropDragHandleTest >> testPathFormatter [
+HighchartsSeriesPolygonDataDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesPolygonDataDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataDragDropDragHandleTest >> testZIndex [
+HighchartsSeriesPolygonDataDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

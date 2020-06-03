@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testAlign [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testColor [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testEnabled [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testHeight [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testInside [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testLineColor [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testLineWidth [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testRadius [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testVerticalAlign [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testWidth [
+HighstockSeriesPriceenvelopesConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDragMaxX [
+HighstockSeriesSplineDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSplineDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSplineDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSplineDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSplineDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockSeriesSplineDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDragMaxY [
+HighstockSeriesSplineDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockSeriesSplineDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDragMinX [
+HighstockSeriesSplineDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockSeriesSplineDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDragMinY [
+HighstockSeriesSplineDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockSeriesSplineDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDragPrecisionX [
+HighstockSeriesSplineDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockSeriesSplineDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDragPrecisionY [
+HighstockSeriesSplineDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockSeriesSplineDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDragSensitivity [
+HighstockSeriesSplineDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockSeriesSplineDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDraggableX [
+HighstockSeriesSplineDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockSeriesSplineDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testDraggableY [
+HighstockSeriesSplineDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockSeriesSplineDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testGroupBy [
+HighstockSeriesSplineDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockSeriesSplineDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSplineDragDropTest >> testLiveRedraw [
+HighstockSeriesSplineDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

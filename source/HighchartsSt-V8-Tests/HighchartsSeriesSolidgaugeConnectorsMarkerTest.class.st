@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testAlign [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testColor [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testEnabled [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testHeight [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testInside [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testLineColor [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testLineWidth [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testRadius [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testVerticalAlign [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testWidth [
+HighchartsSeriesSolidgaugeConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

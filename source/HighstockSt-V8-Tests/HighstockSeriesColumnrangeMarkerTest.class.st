@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testEnabled [
+HighstockSeriesColumnrangeMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnrangeMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testEnabledThreshold [
+HighstockSeriesColumnrangeMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesColumnrangeMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testFillColor [
+HighstockSeriesColumnrangeMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesColumnrangeMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testHeight [
+HighstockSeriesColumnrangeMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesColumnrangeMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testLineColor [
+HighstockSeriesColumnrangeMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesColumnrangeMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testLineWidth [
+HighstockSeriesColumnrangeMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesColumnrangeMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testRadius [
+HighstockSeriesColumnrangeMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesColumnrangeMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testStates [
+HighstockSeriesColumnrangeMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesColumnrangeMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testSymbol [
+HighstockSeriesColumnrangeMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesColumnrangeMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangeMarkerTest >> testWidth [
+HighstockSeriesColumnrangeMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

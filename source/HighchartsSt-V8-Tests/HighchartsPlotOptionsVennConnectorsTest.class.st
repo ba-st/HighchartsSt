@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsTest >> testDashStyle [
+HighchartsPlotOptionsVennConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsVennConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsTest >> testLineColor [
+HighchartsPlotOptionsVennConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsVennConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsTest >> testLineWidth [
+HighchartsPlotOptionsVennConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsVennConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennConnectorsTest >> testType [
+HighchartsPlotOptionsVennConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

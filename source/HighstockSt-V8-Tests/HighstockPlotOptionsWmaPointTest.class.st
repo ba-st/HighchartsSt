@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaPointTest >> testEvents [
+HighstockPlotOptionsWmaPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

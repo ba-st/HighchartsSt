@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testEnabled [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testFillColor [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testHeight [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testLineColor [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testLineWidth [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testRadius [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSymbol [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennStatesHoverMarkerTest >> testWidth [
+HighchartsPlotOptionsVennStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

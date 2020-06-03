@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterLayoutAlgorithmTest >> testDistance [
+HighchartsSeriesVennClusterLayoutAlgorithmTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVennClusterLayoutAlgorithmTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterLayoutAlgorithmTest >> testGridSize [
+HighchartsSeriesVennClusterLayoutAlgorithmTest >> testSetGridSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVennClusterLayoutAlgorithmTest >> testGridSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterLayoutAlgorithmTest >> testIterations [
+HighchartsSeriesVennClusterLayoutAlgorithmTest >> testSetIterations [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVennClusterLayoutAlgorithmTest >> testIterations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterLayoutAlgorithmTest >> testKmeansThreshold [
+HighchartsSeriesVennClusterLayoutAlgorithmTest >> testSetKmeansThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVennClusterLayoutAlgorithmTest >> testKmeansThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterLayoutAlgorithmTest >> testType [
+HighchartsSeriesVennClusterLayoutAlgorithmTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

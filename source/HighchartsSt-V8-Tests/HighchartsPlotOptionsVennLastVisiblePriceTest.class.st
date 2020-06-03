@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennLastVisiblePriceTest >> testEnabled [
+HighchartsPlotOptionsVennLastVisiblePriceTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennLastVisiblePrice new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennLastVisiblePriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

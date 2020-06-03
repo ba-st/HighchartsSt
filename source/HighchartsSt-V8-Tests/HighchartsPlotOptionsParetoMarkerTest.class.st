@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testEnabled [
+HighchartsPlotOptionsParetoMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsParetoMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testFillColor [
+HighchartsPlotOptionsParetoMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testHeight [
+HighchartsPlotOptionsParetoMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testLineColor [
+HighchartsPlotOptionsParetoMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testLineWidth [
+HighchartsPlotOptionsParetoMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testRadius [
+HighchartsPlotOptionsParetoMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testStates [
+HighchartsPlotOptionsParetoMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testSymbol [
+HighchartsPlotOptionsParetoMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsParetoMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoMarkerTest >> testWidth [
+HighchartsPlotOptionsParetoMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

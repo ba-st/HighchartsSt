@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveLabelTest >> testBoxesToAvoid [
+HighchartsPlotOptionsBellcurveLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurveLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsBellcurveLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveLabelTest >> testConnectorAllowed [
+HighchartsPlotOptionsBellcurveLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsBellcurveLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveLabelTest >> testConnectorNeighbourDistance [
+HighchartsPlotOptionsBellcurveLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsBellcurveLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveLabelTest >> testEnabled [
+HighchartsPlotOptionsBellcurveLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighchartsPlotOptionsBellcurveLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveLabelTest >> testMaxFontSize [
+HighchartsPlotOptionsBellcurveLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurveLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBellcurveLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBellcurveLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsBellcurveLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveLabelTest >> testMinFontSize [
+HighchartsPlotOptionsBellcurveLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsBellcurveLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveLabelTest >> testOnArea [
+HighchartsPlotOptionsBellcurveLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

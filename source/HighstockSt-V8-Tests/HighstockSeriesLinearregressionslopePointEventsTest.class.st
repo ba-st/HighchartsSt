@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testClick [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testDrag [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testDragStart [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testDrop [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testMouseOut [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testMouseOver [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testRemove [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testSelect [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testUnselect [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesLinearregressionslopePointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopePointEventsTest >> testUpdate [
+HighstockSeriesLinearregressionslopePointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

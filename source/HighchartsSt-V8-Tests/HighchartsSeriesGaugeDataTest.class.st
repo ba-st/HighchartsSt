@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testClassName [
+HighchartsSeriesGaugeDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGaugeData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesGaugeDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGaugeData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesGaugeDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGaugeData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesGaugeDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesGaugeDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testColor [
+HighchartsSeriesGaugeDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesGaugeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testColorIndex [
+HighchartsSeriesGaugeDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,21 @@ HighchartsSeriesGaugeDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testDescription [
+HighchartsSeriesGaugeDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesGaugeData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesGaugeDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsSeriesGaugeDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testEvents [
+HighchartsSeriesGaugeDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsSeriesGaugeDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testId [
+HighchartsSeriesGaugeDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsSeriesGaugeDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testLabelrank [
+HighchartsSeriesGaugeDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsSeriesGaugeDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testName [
+HighchartsSeriesGaugeDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsSeriesGaugeDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testSelected [
+HighchartsSeriesGaugeDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsSeriesGaugeDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesGaugeDataTest >> testY [
+HighchartsSeriesGaugeDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testMillisecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockSeriesStreamgraphTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

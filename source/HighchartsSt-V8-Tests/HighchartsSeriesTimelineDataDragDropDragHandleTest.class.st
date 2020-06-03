@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataDragDropDragHandleTest >> testClassName [
+HighchartsSeriesTimelineDataDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTimelineDataDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataDragDropDragHandleTest >> testColor [
+HighchartsSeriesTimelineDataDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTimelineDataDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataDragDropDragHandleTest >> testCursor [
+HighchartsSeriesTimelineDataDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTimelineDataDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataDragDropDragHandleTest >> testLineColor [
+HighchartsSeriesTimelineDataDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTimelineDataDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataDragDropDragHandleTest >> testLineWidth [
+HighchartsSeriesTimelineDataDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesTimelineDataDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataDragDropDragHandleTest >> testPathFormatter [
+HighchartsSeriesTimelineDataDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesTimelineDataDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataDragDropDragHandleTest >> testZIndex [
+HighchartsSeriesTimelineDataDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

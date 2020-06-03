@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testAlign [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testColor [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testEnabled [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testHeight [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testInside [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testLineColor [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testLineWidth [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testRadius [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSymbol [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testVerticalAlig
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testWidth [
+HighstockPlotOptionsAreasplinerangeConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

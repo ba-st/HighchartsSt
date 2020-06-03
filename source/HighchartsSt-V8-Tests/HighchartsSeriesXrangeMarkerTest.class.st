@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testEnabled [
+HighchartsSeriesXrangeMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesXrangeMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testEnabledThreshold [
+HighchartsSeriesXrangeMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesXrangeMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testFillColor [
+HighchartsSeriesXrangeMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesXrangeMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testHeight [
+HighchartsSeriesXrangeMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesXrangeMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testLineColor [
+HighchartsSeriesXrangeMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesXrangeMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testLineWidth [
+HighchartsSeriesXrangeMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesXrangeMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testRadius [
+HighchartsSeriesXrangeMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesXrangeMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testStates [
+HighchartsSeriesXrangeMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesXrangeMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testSymbol [
+HighchartsSeriesXrangeMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesXrangeMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeMarkerTest >> testWidth [
+HighchartsSeriesXrangeMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

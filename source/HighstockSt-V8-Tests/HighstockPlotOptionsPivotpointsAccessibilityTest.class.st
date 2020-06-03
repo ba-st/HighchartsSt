@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsAccessibilityTest >> testDescription [
+HighstockPlotOptionsPivotpointsAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPivotpointsAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPivotpointsAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsPivotpointsAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsAccessibilityTest >> testEnabled [
+HighstockPlotOptionsPivotpointsAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsPivotpointsAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsAccessibilityTest >> testExposeAsGroupOnly [
+HighstockPlotOptionsPivotpointsAccessibilityTest >> testSetExposeAsGroupOnly [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsPivotpointsAccessibilityTest >> testExposeAsGroupOnly [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsAccessibilityTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsPivotpointsAccessibilityTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 

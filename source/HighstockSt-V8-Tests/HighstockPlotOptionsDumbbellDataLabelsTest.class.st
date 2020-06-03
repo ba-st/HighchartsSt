@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testAlign [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsDumbbellDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testAllowOverlap [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testBackgroundColor [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testBorderColor [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testBorderRadius [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testBorderWidth [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testClassName [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testColor [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testCrop [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testDefer [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testEnabled [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testFormat [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testFormatter [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testInside [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testNullFormat [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testNullFormatter [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testOverflow [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testPadding [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testPosition [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testRotation [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testShadow [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testShape [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testUseHTML [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testVerticalAlign [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testXHigh [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetXHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testXHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testXLow [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetXLow [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testXLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testYHigh [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetYHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testYHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testYLow [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetYLow [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighstockPlotOptionsDumbbellDataLabelsTest >> testYLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDumbbellDataLabelsTest >> testZ [
+HighstockPlotOptionsDumbbellDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

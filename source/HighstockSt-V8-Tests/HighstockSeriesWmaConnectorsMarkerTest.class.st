@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testAlign [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testColor [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testEnabled [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testHeight [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testInside [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testLineColor [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testLineWidth [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testRadius [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testVerticalAlign [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesWmaConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWmaConnectorsMarkerTest >> testWidth [
+HighstockSeriesWmaConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testClick [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testDrag [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testDragStart [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testDrop [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testMouseOut [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testMouseOver [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testRemove [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testSelect [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testUnselect [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsPivotpointsPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsPointEventsTest >> testUpdate [
+HighstockPlotOptionsPivotpointsPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testEnabled [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testEnabledThreshold [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testFillColor [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testHeight [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testLineColor [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testLineWidth [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testRadius [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSymbol [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudStatesSelectMarkerTest >> testWidth [
+HighchartsSeriesWordcloudStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

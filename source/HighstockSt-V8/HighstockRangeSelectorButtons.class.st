@@ -1,28 +1,28 @@
 "
 An array of configuration objects for the buttons.
-Defaults to
+Defaults to:
 buttons: [{
-    type: 'month',
+    type: ´month´,
     count: 1,
-    text: '1m'
+    text: ´1m´
 }, {
-    type: 'month',
+    type: ´month´,
     count: 3,
-    text: '3m'
+    text: ´3m´
 }, {
-    type: 'month',
+    type: ´month´,
     count: 6,
-    text: '6m'
+    text: ´6m´
 }, {
-    type: 'ytd',
-    text: 'YTD'
+    type: ´ytd´,
+    text: ´YTD´
 }, {
-    type: 'year',
+    type: ´year´,
     count: 1,
-    text: '1y'
+    text: ´1y´
 }, {
-    type: 'all',
-    text: 'All'
+    type: ´all´,
+    text: ´All´
 }]
 "
 Class {
@@ -34,8 +34,7 @@ Class {
 { #category : #accessing }
 HighstockRangeSelectorButtons >> count: aNumber [
 
-	"How many units of the defined type the button should span. If type
-is &quot;month&quot; and count is 3, the button spans three months.
+	"How many units of the defined type the button should span. If type is &quot;month&quot; and count is 3, the button spans three months.
 Defaults to 1."
 
 	configurationOptions at: 'count' put: aNumber
@@ -59,8 +58,7 @@ HighstockRangeSelectorButtons >> events: anObject [
 { #category : #accessing }
 HighstockRangeSelectorButtons >> offsetMax: aNumber [
 
-	"Additional range (in milliseconds) added to the end of the calculated
-time span.
+	"Additional range (in milliseconds) added to the end of the calculated time span.
 Defaults to 0."
 
 	configurationOptions at: 'offsetMax' put: aNumber
@@ -69,8 +67,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockRangeSelectorButtons >> offsetMin: aNumber [
 
-	"Additional range (in milliseconds) added to the start of the
-calculated time span.
+	"Additional range (in milliseconds) added to the start of the calculated time span.
 Defaults to 0."
 
 	configurationOptions at: 'offsetMin' put: aNumber
@@ -79,9 +76,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockRangeSelectorButtons >> preserveDataGrouping: aBoolean [
 
-	"When buttons apply dataGrouping on a series, by default zooming
-in/out will deselect buttons and unset dataGrouping. Enable this
-option to keep buttons selected when extremes change.
+	"When buttons apply dataGrouping on a series, by default zooming in/out will deselect buttons and unset dataGrouping. Enable this option to keep buttons selected when extremes change.
 Defaults to false."
 
 	configurationOptions at: 'preserveDataGrouping' put: aBoolean
@@ -99,9 +94,7 @@ HighstockRangeSelectorButtons >> text: aString [
 { #category : #accessing }
 HighstockRangeSelectorButtons >> type: aHighchartsRangeSelectorButtonTypeValue [
 
-	"Defined the time span for the button. Can be one of millisecond,
-second, minute, hour, day, week, month, year, ytd,
-and all.
+	"Defined the time span for the button. Can be one of millisecond, second, minute, hour, day, week, month, year, ytd, and all.
 "
 
 	configurationOptions at: 'type' put: aHighchartsRangeSelectorButtonTypeValue

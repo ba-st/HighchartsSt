@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testAlign [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testColor [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testEnabled [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testHeight [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testInside [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testLineColor [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testLineWidth [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testRadius [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSymbol [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testWidth [
+HighstockSeriesPivotpointsConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

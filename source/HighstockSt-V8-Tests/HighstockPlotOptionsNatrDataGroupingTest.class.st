@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testApproximation [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsNatrDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsNatrDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testEnabled [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsNatrDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testForced [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsNatrDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsNatrDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsNatrDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsNatrDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsNatrDataGroupingTest >> testUnits [
+HighstockPlotOptionsNatrDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

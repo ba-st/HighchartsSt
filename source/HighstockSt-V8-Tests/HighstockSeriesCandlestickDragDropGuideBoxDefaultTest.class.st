@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testClassName [
+HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testColor [
+HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testCursor [
+HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testLineColor [
+HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testLineWidth [
+HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testZIndex [
+HighstockSeriesCandlestickDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

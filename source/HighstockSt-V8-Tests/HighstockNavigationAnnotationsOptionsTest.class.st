@@ -5,7 +5,77 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsTest >> testDraggable [
+HighstockNavigationAnnotationsOptionsTest >> testGetControlPointOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptions new.
+	component controlPointOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'controlPointOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsTest >> testGetLabelOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptions new.
+	component labelOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labelOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptions new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsTest >> testGetShapeOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptions new.
+	component shapeOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'shapeOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsTest >> testGetShapes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptions new.
+	component shapes.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'shapes' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsTest >> testSetDraggable [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +89,7 @@ HighstockNavigationAnnotationsOptionsTest >> testDraggable [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsTest >> testEvents [
+HighstockNavigationAnnotationsOptionsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighstockNavigationAnnotationsOptionsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsTest >> testId [
+HighstockNavigationAnnotationsOptionsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,7 @@ HighstockNavigationAnnotationsOptionsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsTest >> testVisible [
+HighstockNavigationAnnotationsOptionsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighstockNavigationAnnotationsOptionsTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsTest >> testZIndex [
+HighstockNavigationAnnotationsOptionsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

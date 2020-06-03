@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testClick [
+HighchartsSeriesVectorDataEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVectorDataEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testDrag [
+HighchartsSeriesVectorDataEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVectorDataEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testDragStart [
+HighchartsSeriesVectorDataEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVectorDataEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testDrop [
+HighchartsSeriesVectorDataEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVectorDataEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testMouseOut [
+HighchartsSeriesVectorDataEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesVectorDataEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testMouseOver [
+HighchartsSeriesVectorDataEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesVectorDataEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testRemove [
+HighchartsSeriesVectorDataEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesVectorDataEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testSelect [
+HighchartsSeriesVectorDataEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesVectorDataEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testUnselect [
+HighchartsSeriesVectorDataEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesVectorDataEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorDataEventsTest >> testUpdate [
+HighchartsSeriesVectorDataEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

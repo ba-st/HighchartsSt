@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesHoverTest >> testBorderColor [
+HighchartsSeriesErrorbarStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarStatesHoverTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarStatesHover new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarStatesHoverTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarStatesHover new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesErrorbarStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesHoverTest >> testBorderWidth [
+HighchartsSeriesErrorbarStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesErrorbarStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesHoverTest >> testBrightness [
+HighchartsSeriesErrorbarStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesErrorbarStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesHoverTest >> testColor [
+HighchartsSeriesErrorbarStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesErrorbarStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesHoverTest >> testEnabled [
+HighchartsSeriesErrorbarStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesErrorbarStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesHoverTest >> testLineWidth [
+HighchartsSeriesErrorbarStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesErrorbarStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesHoverTest >> testLineWidthPlus [
+HighchartsSeriesErrorbarStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcZonesTest >> testClassName [
+HighstockPlotOptionsOhlcZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsOhlcZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcZonesTest >> testColor [
+HighstockPlotOptionsOhlcZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsOhlcZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcZonesTest >> testDashStyle [
+HighstockPlotOptionsOhlcZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsOhlcZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcZonesTest >> testFillColor [
+HighstockPlotOptionsOhlcZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsOhlcZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcZonesTest >> testValue [
+HighstockPlotOptionsOhlcZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

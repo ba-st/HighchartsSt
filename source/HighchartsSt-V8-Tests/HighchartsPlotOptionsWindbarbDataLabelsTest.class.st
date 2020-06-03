@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testAlign [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testAllowOverlap [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testClassName [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testColor [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testCrop [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testDefer [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testFormat [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testInside [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testPadding [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testPosition [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testRotation [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testShadow [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testShape [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testX [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testY [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsPlotOptionsWindbarbDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataLabelsTest >> testZ [
+HighchartsPlotOptionsWindbarbDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

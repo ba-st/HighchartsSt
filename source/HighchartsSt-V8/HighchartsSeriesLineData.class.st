@@ -34,6 +34,15 @@ data: [{
     name: &quot;Point1&quot;,
     color: &quot;#FF00FF&quot;
 }]
+
+
+Note: In TypeScript you have to extend PointOptionsObject with an
+additional declaration to allow custom data types:
+declare module `highcharts` {
+  interface PointOptionsObject {
+    custom: Record&lt;string, (boolean|number|string)&gt;;
+  }
+}
 "
 Class {
 	#name : #HighchartsSeriesLineData,
@@ -52,8 +61,7 @@ HighchartsSeriesLineData >> accessibility [
 { #category : #accessing }
 HighchartsSeriesLineData >> className: aString [
 
-	"An additional, individual class name for the data point´s graphic
-representation.
+	"An additional, individual class name for the data point´s graphic representation.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -62,10 +70,7 @@ representation.
 { #category : #accessing }
 HighchartsSeriesLineData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use
-colorIndex.
+	"Individual color for the point. By default the color is pulled from the global colors array. In styled mode, the color option doesn´t take effect. Instead, use colorIndex.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -74,21 +79,25 @@ colorIndex.
 { #category : #accessing }
 HighchartsSeriesLineData >> colorIndex: aNumber [
 
-	"A specific color index to use for the point, so its graphic representations
-are given the class name highcharts-color-{n}. In styled mode this will
-change the color of the graphic. In non-styled mode, the color by is set by
-the fill attribute, so the change in class name won´t have a visual effect
-by default.
+	"A specific color index to use for the point, so its graphic representations are given the class name highcharts-color-{n}. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the fill attribute, so the change in class name won´t have a visual effect by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
+HighchartsSeriesLineData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesLineData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesLineDataDataLabels new ]
 ]
@@ -96,8 +105,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighchartsSeriesLineData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -106,8 +114,7 @@ about the point.
 { #category : #accessing }
 HighchartsSeriesLineData >> dragDrop [
 
-	"Point specific options for the draggable-points module. Overrides options on
-series.dragDrop.
+	"Point specific options for the draggable-points module. Overrides options on series.dragDrop.
 "
 	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighchartsSeriesLineDataDragDrop new ]
 ]
@@ -115,8 +122,7 @@ series.dragDrop.
 { #category : #accessing }
 HighchartsSeriesLineData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series array to
-use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -134,8 +140,7 @@ HighchartsSeriesLineData >> events: anObject [
 { #category : #accessing }
 HighchartsSeriesLineData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -144,9 +149,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighchartsSeriesLineData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
@@ -181,8 +184,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesLineData >> x: aNumber [
 
-	"The x value of the point. For datetime axes, the X value is the timestamp
-in milliseconds since 1970.
+	"The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
 "
 
 	configurationOptions at: 'x' put: aNumber

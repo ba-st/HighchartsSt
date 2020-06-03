@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testAlign [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testColor [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testEnabled [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testHeight [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testInside [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testLineColor [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testLineWidth [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testRadius [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSymbol [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testWidth [
+HighstockSeriesWilliamsrConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

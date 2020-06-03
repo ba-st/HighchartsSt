@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testClassName [
+HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testColor [
+HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testCursor [
+HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testLineColor [
+HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testLineWidth [
+HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testPathFormatter [
+HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testZIndex [
+HighchartsSeriesVariablepieDataDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

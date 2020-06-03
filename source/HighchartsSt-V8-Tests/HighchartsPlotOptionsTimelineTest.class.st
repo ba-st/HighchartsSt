@@ -5,7 +5,175 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testAllAreas [
+HighchartsPlotOptionsTimelineTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +187,7 @@ HighchartsPlotOptionsTimelineTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testAllowPointSelect [
+HighchartsPlotOptionsTimelineTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +201,7 @@ HighchartsPlotOptionsTimelineTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testBoostBlending [
+HighchartsPlotOptionsTimelineTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +215,7 @@ HighchartsPlotOptionsTimelineTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testBorderColor [
+HighchartsPlotOptionsTimelineTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +229,7 @@ HighchartsPlotOptionsTimelineTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testBorderWidth [
+HighchartsPlotOptionsTimelineTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +243,7 @@ HighchartsPlotOptionsTimelineTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testClassName [
+HighchartsPlotOptionsTimelineTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +257,7 @@ HighchartsPlotOptionsTimelineTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testClip [
+HighchartsPlotOptionsTimelineTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +271,7 @@ HighchartsPlotOptionsTimelineTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testColor [
+HighchartsPlotOptionsTimelineTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +285,7 @@ HighchartsPlotOptionsTimelineTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testColorAxis [
+HighchartsPlotOptionsTimelineTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +299,7 @@ HighchartsPlotOptionsTimelineTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testColorByPoint [
+HighchartsPlotOptionsTimelineTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +313,7 @@ HighchartsPlotOptionsTimelineTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testColorIndex [
+HighchartsPlotOptionsTimelineTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +327,7 @@ HighchartsPlotOptionsTimelineTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testColorKey [
+HighchartsPlotOptionsTimelineTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +341,7 @@ HighchartsPlotOptionsTimelineTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testCompare [
+HighchartsPlotOptionsTimelineTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +355,7 @@ HighchartsPlotOptionsTimelineTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testCompareBase [
+HighchartsPlotOptionsTimelineTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +369,7 @@ HighchartsPlotOptionsTimelineTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testCompareStart [
+HighchartsPlotOptionsTimelineTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +383,21 @@ HighchartsPlotOptionsTimelineTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testCursor [
+HighchartsPlotOptionsTimelineTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +411,21 @@ HighchartsPlotOptionsTimelineTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testDescription [
+HighchartsPlotOptionsTimelineTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTimeline new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTimelineTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,7 @@ HighchartsPlotOptionsTimelineTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testEnableMouseTracking [
+HighchartsPlotOptionsTimelineTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +453,7 @@ HighchartsPlotOptionsTimelineTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testEvents [
+HighchartsPlotOptionsTimelineTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +467,7 @@ HighchartsPlotOptionsTimelineTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testGapSize [
+HighchartsPlotOptionsTimelineTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +481,7 @@ HighchartsPlotOptionsTimelineTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testGapUnit [
+HighchartsPlotOptionsTimelineTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +495,7 @@ HighchartsPlotOptionsTimelineTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testIgnoreHiddenPoint [
+HighchartsPlotOptionsTimelineTest >> testSetIgnoreHiddenPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +509,7 @@ HighchartsPlotOptionsTimelineTest >> testIgnoreHiddenPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testIncludeInDataExport [
+HighchartsPlotOptionsTimelineTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +523,7 @@ HighchartsPlotOptionsTimelineTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testJoinBy [
+HighchartsPlotOptionsTimelineTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +537,7 @@ HighchartsPlotOptionsTimelineTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testKeys [
+HighchartsPlotOptionsTimelineTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +551,7 @@ HighchartsPlotOptionsTimelineTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testLegendType [
+HighchartsPlotOptionsTimelineTest >> testSetLegendType [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +565,7 @@ HighchartsPlotOptionsTimelineTest >> testLegendType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testLinecap [
+HighchartsPlotOptionsTimelineTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +579,7 @@ HighchartsPlotOptionsTimelineTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testLinkedTo [
+HighchartsPlotOptionsTimelineTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +593,7 @@ HighchartsPlotOptionsTimelineTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testNavigatorOptions [
+HighchartsPlotOptionsTimelineTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +607,7 @@ HighchartsPlotOptionsTimelineTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testOpacity [
+HighchartsPlotOptionsTimelineTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +621,7 @@ HighchartsPlotOptionsTimelineTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsTimelineTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +635,7 @@ HighchartsPlotOptionsTimelineTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testPointRange [
+HighchartsPlotOptionsTimelineTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +649,7 @@ HighchartsPlotOptionsTimelineTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testSelected [
+HighchartsPlotOptionsTimelineTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +663,7 @@ HighchartsPlotOptionsTimelineTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testShadow [
+HighchartsPlotOptionsTimelineTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +677,7 @@ HighchartsPlotOptionsTimelineTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testShowCheckbox [
+HighchartsPlotOptionsTimelineTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +691,7 @@ HighchartsPlotOptionsTimelineTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testShowInLegend [
+HighchartsPlotOptionsTimelineTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +705,7 @@ HighchartsPlotOptionsTimelineTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testShowInNavigator [
+HighchartsPlotOptionsTimelineTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +719,7 @@ HighchartsPlotOptionsTimelineTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsTimelineTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +733,7 @@ HighchartsPlotOptionsTimelineTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testStates [
+HighchartsPlotOptionsTimelineTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +747,7 @@ HighchartsPlotOptionsTimelineTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testStickyTracking [
+HighchartsPlotOptionsTimelineTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +761,7 @@ HighchartsPlotOptionsTimelineTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testUseOhlcData [
+HighchartsPlotOptionsTimelineTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +775,7 @@ HighchartsPlotOptionsTimelineTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testVisible [
+HighchartsPlotOptionsTimelineTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +789,7 @@ HighchartsPlotOptionsTimelineTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineTest >> testZIndex [
+HighchartsPlotOptionsTimelineTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

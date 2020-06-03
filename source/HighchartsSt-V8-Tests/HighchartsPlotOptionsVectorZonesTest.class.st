@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorZonesTest >> testClassName [
+HighchartsPlotOptionsVectorZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVectorZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorZonesTest >> testColor [
+HighchartsPlotOptionsVectorZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsVectorZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorZonesTest >> testDashStyle [
+HighchartsPlotOptionsVectorZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsVectorZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorZonesTest >> testFillColor [
+HighchartsPlotOptionsVectorZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsVectorZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorZonesTest >> testValue [
+HighchartsPlotOptionsVectorZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

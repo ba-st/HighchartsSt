@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMfiDataSortingTest >> testEnabled [
+HighstockPlotOptionsMfiDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsMfiDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMfiDataSortingTest >> testMatchByName [
+HighstockPlotOptionsMfiDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsMfiDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMfiDataSortingTest >> testSortKey [
+HighstockPlotOptionsMfiDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

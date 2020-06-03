@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsMarkerStatesSelectTest >> testEnabled [
+HighstockSeriesPivotpointsMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPivotpointsMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsMarkerStatesSelectTest >> testFillColor [
+HighstockSeriesPivotpointsMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPivotpointsMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsMarkerStatesSelectTest >> testLineColor [
+HighstockSeriesPivotpointsMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPivotpointsMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsMarkerStatesSelectTest >> testLineWidth [
+HighstockSeriesPivotpointsMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPivotpointsMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsMarkerStatesSelectTest >> testRadius [
+HighstockSeriesPivotpointsMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testClick [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testDrag [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testDragStart [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testDrop [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testRemove [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testSelect [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testUnselect [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsCylinderPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderPointEventsTest >> testUpdate [
+HighchartsPlotOptionsCylinderPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

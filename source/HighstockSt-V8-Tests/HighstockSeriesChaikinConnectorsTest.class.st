@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinConnectorsTest >> testDashStyle [
+HighstockSeriesChaikinConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesChaikinConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesChaikinConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesChaikinConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesChaikinConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesChaikinConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesChaikinConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesChaikinConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinConnectorsTest >> testLineColor [
+HighstockSeriesChaikinConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesChaikinConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinConnectorsTest >> testLineWidth [
+HighstockSeriesChaikinConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesChaikinConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinConnectorsTest >> testType [
+HighstockSeriesChaikinConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

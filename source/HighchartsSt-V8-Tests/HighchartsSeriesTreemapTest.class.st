@@ -5,7 +5,277 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testAllAreas [
+HighchartsSeriesTreemapTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetCluster [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component cluster.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'cluster' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetDrillUpButton [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component drillUpButton.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'drillUpButton' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetLevels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component levels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'levels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetTraverseUpButton [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component traverseUpButton.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'traverseUpButton' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +290,7 @@ HighchartsSeriesTreemapTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testAllowDrillToNode [
+HighchartsSeriesTreemapTest >> testSetAllowDrillToNode [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +305,7 @@ HighchartsSeriesTreemapTest >> testAllowDrillToNode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testAllowPointSelect [
+HighchartsSeriesTreemapTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +320,7 @@ HighchartsSeriesTreemapTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testAllowTraversingTree [
+HighchartsSeriesTreemapTest >> testSetAllowTraversingTree [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +335,7 @@ HighchartsSeriesTreemapTest >> testAllowTraversingTree [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testAlternateStartingDirection [
+HighchartsSeriesTreemapTest >> testSetAlternateStartingDirection [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +350,7 @@ HighchartsSeriesTreemapTest >> testAlternateStartingDirection [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testAnimationLimit [
+HighchartsSeriesTreemapTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +365,7 @@ HighchartsSeriesTreemapTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testBoostBlending [
+HighchartsSeriesTreemapTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +380,7 @@ HighchartsSeriesTreemapTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testBoostThreshold [
+HighchartsSeriesTreemapTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +395,7 @@ HighchartsSeriesTreemapTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testBorderColor [
+HighchartsSeriesTreemapTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +410,7 @@ HighchartsSeriesTreemapTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testBorderWidth [
+HighchartsSeriesTreemapTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +425,7 @@ HighchartsSeriesTreemapTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testClassName [
+HighchartsSeriesTreemapTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +440,7 @@ HighchartsSeriesTreemapTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testClip [
+HighchartsSeriesTreemapTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +455,7 @@ HighchartsSeriesTreemapTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testColor [
+HighchartsSeriesTreemapTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +470,7 @@ HighchartsSeriesTreemapTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testColorAxis [
+HighchartsSeriesTreemapTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +485,7 @@ HighchartsSeriesTreemapTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testColorByPoint [
+HighchartsSeriesTreemapTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +500,7 @@ HighchartsSeriesTreemapTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testColorIndex [
+HighchartsSeriesTreemapTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +515,7 @@ HighchartsSeriesTreemapTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testColorKey [
+HighchartsSeriesTreemapTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +530,7 @@ HighchartsSeriesTreemapTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testColors [
+HighchartsSeriesTreemapTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +545,7 @@ HighchartsSeriesTreemapTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testCompare [
+HighchartsSeriesTreemapTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +560,7 @@ HighchartsSeriesTreemapTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testCompareBase [
+HighchartsSeriesTreemapTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +575,7 @@ HighchartsSeriesTreemapTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testCompareStart [
+HighchartsSeriesTreemapTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +590,7 @@ HighchartsSeriesTreemapTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testConnectEnds [
+HighchartsSeriesTreemapTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +605,7 @@ HighchartsSeriesTreemapTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testConnectNulls [
+HighchartsSeriesTreemapTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +620,22 @@ HighchartsSeriesTreemapTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testCropThreshold [
+HighchartsSeriesTreemapTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +650,7 @@ HighchartsSeriesTreemapTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testCursor [
+HighchartsSeriesTreemapTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +665,22 @@ HighchartsSeriesTreemapTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testDashStyle [
+HighchartsSeriesTreemapTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTreemap new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'treemap';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTreemapTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +695,7 @@ HighchartsSeriesTreemapTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testData [
+HighchartsSeriesTreemapTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +710,7 @@ HighchartsSeriesTreemapTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testDescription [
+HighchartsSeriesTreemapTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +725,7 @@ HighchartsSeriesTreemapTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testEnableMouseTracking [
+HighchartsSeriesTreemapTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +740,7 @@ HighchartsSeriesTreemapTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testEvents [
+HighchartsSeriesTreemapTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +755,7 @@ HighchartsSeriesTreemapTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testFindNearestPointBy [
+HighchartsSeriesTreemapTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +770,7 @@ HighchartsSeriesTreemapTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testGapSize [
+HighchartsSeriesTreemapTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +785,7 @@ HighchartsSeriesTreemapTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testGapUnit [
+HighchartsSeriesTreemapTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +800,7 @@ HighchartsSeriesTreemapTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testGetExtremesFromAll [
+HighchartsSeriesTreemapTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +815,7 @@ HighchartsSeriesTreemapTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testId [
+HighchartsSeriesTreemapTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +830,7 @@ HighchartsSeriesTreemapTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testIgnoreHiddenPoint [
+HighchartsSeriesTreemapTest >> testSetIgnoreHiddenPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +845,7 @@ HighchartsSeriesTreemapTest >> testIgnoreHiddenPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testIncludeInDataExport [
+HighchartsSeriesTreemapTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +860,7 @@ HighchartsSeriesTreemapTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testIndex [
+HighchartsSeriesTreemapTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +875,7 @@ HighchartsSeriesTreemapTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testInteractByLeaf [
+HighchartsSeriesTreemapTest >> testSetInteractByLeaf [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +890,7 @@ HighchartsSeriesTreemapTest >> testInteractByLeaf [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testJoinBy [
+HighchartsSeriesTreemapTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +905,7 @@ HighchartsSeriesTreemapTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testKeys [
+HighchartsSeriesTreemapTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +920,7 @@ HighchartsSeriesTreemapTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testLayoutAlgorithm [
+HighchartsSeriesTreemapTest >> testSetLayoutAlgorithm [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +935,7 @@ HighchartsSeriesTreemapTest >> testLayoutAlgorithm [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testLayoutStartingDirection [
+HighchartsSeriesTreemapTest >> testSetLayoutStartingDirection [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +950,7 @@ HighchartsSeriesTreemapTest >> testLayoutStartingDirection [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testLegendIndex [
+HighchartsSeriesTreemapTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +965,7 @@ HighchartsSeriesTreemapTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testLevelIsConstant [
+HighchartsSeriesTreemapTest >> testSetLevelIsConstant [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +980,7 @@ HighchartsSeriesTreemapTest >> testLevelIsConstant [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testLineWidth [
+HighchartsSeriesTreemapTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +995,7 @@ HighchartsSeriesTreemapTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testLinecap [
+HighchartsSeriesTreemapTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +1010,7 @@ HighchartsSeriesTreemapTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testLinkedTo [
+HighchartsSeriesTreemapTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +1025,7 @@ HighchartsSeriesTreemapTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testMapData [
+HighchartsSeriesTreemapTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +1040,7 @@ HighchartsSeriesTreemapTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testName [
+HighchartsSeriesTreemapTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1055,7 @@ HighchartsSeriesTreemapTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testNavigatorOptions [
+HighchartsSeriesTreemapTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1070,7 @@ HighchartsSeriesTreemapTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testNegativeColor [
+HighchartsSeriesTreemapTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1085,7 @@ HighchartsSeriesTreemapTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testOpacity [
+HighchartsSeriesTreemapTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1100,7 @@ HighchartsSeriesTreemapTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testPointDescriptionFormatter [
+HighchartsSeriesTreemapTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1115,7 @@ HighchartsSeriesTreemapTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testPointInterval [
+HighchartsSeriesTreemapTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1130,7 @@ HighchartsSeriesTreemapTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testPointIntervalUnit [
+HighchartsSeriesTreemapTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1145,7 @@ HighchartsSeriesTreemapTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testPointPlacement [
+HighchartsSeriesTreemapTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1160,7 @@ HighchartsSeriesTreemapTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testPointRange [
+HighchartsSeriesTreemapTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1175,7 @@ HighchartsSeriesTreemapTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testPointStart [
+HighchartsSeriesTreemapTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1190,7 @@ HighchartsSeriesTreemapTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testSelected [
+HighchartsSeriesTreemapTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1205,7 @@ HighchartsSeriesTreemapTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testShadow [
+HighchartsSeriesTreemapTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1220,7 @@ HighchartsSeriesTreemapTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testShowCheckbox [
+HighchartsSeriesTreemapTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1235,7 @@ HighchartsSeriesTreemapTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testShowInLegend [
+HighchartsSeriesTreemapTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1250,7 @@ HighchartsSeriesTreemapTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testShowInNavigator [
+HighchartsSeriesTreemapTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1265,7 @@ HighchartsSeriesTreemapTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testSkipKeyboardNavigation [
+HighchartsSeriesTreemapTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1280,7 @@ HighchartsSeriesTreemapTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testSoftThreshold [
+HighchartsSeriesTreemapTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1295,7 @@ HighchartsSeriesTreemapTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testSortIndex [
+HighchartsSeriesTreemapTest >> testSetSortIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1310,7 @@ HighchartsSeriesTreemapTest >> testSortIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testStacking [
+HighchartsSeriesTreemapTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1325,7 @@ HighchartsSeriesTreemapTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testStates [
+HighchartsSeriesTreemapTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1340,7 @@ HighchartsSeriesTreemapTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testStep [
+HighchartsSeriesTreemapTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1355,7 @@ HighchartsSeriesTreemapTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testStickyTracking [
+HighchartsSeriesTreemapTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1370,7 @@ HighchartsSeriesTreemapTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testThreshold [
+HighchartsSeriesTreemapTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1385,7 @@ HighchartsSeriesTreemapTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testTurboThreshold [
+HighchartsSeriesTreemapTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1400,7 @@ HighchartsSeriesTreemapTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testType [
+HighchartsSeriesTreemapTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1415,7 @@ HighchartsSeriesTreemapTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testVisible [
+HighchartsSeriesTreemapTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1430,7 @@ HighchartsSeriesTreemapTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testXAxis [
+HighchartsSeriesTreemapTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1445,7 @@ HighchartsSeriesTreemapTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testYAxis [
+HighchartsSeriesTreemapTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1460,7 @@ HighchartsSeriesTreemapTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testZIndex [
+HighchartsSeriesTreemapTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1475,7 @@ HighchartsSeriesTreemapTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapTest >> testZoneAxis [
+HighchartsSeriesTreemapTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

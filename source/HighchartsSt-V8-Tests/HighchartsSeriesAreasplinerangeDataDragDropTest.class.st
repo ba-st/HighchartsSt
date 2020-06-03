@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMaxX [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinerangeDataDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinerangeDataDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMaxY [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMinX [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMinY [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragPrecisionX [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragPrecisionY [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragSensitivity [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDraggableX [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testDraggableY [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testGroupBy [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsSeriesAreasplinerangeDataDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataDragDropTest >> testLiveRedraw [
+HighchartsSeriesAreasplinerangeDataDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

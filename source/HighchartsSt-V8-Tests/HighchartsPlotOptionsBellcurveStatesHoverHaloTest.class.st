@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testAttributes [
+HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testOpacity [
+HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testSize [
+HighchartsPlotOptionsBellcurveStatesHoverHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

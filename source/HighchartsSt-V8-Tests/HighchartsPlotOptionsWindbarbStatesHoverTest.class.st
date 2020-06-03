@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbStatesHoverTest >> testBorderColor [
+HighchartsPlotOptionsWindbarbStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsWindbarbStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbStatesHoverTest >> testBorderWidth [
+HighchartsPlotOptionsWindbarbStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsWindbarbStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbStatesHoverTest >> testBrightness [
+HighchartsPlotOptionsWindbarbStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsWindbarbStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbStatesHoverTest >> testColor [
+HighchartsPlotOptionsWindbarbStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsWindbarbStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbStatesHoverTest >> testEnabled [
+HighchartsPlotOptionsWindbarbStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsWindbarbStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbStatesHoverTest >> testLineWidthPlus [
+HighchartsPlotOptionsWindbarbStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

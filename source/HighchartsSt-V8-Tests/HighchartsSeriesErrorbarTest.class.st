@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testAllAreas [
+HighchartsSeriesErrorbarTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +245,7 @@ HighchartsSeriesErrorbarTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testAllowPointSelect [
+HighchartsSeriesErrorbarTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +260,7 @@ HighchartsSeriesErrorbarTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testAnimationLimit [
+HighchartsSeriesErrorbarTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +275,7 @@ HighchartsSeriesErrorbarTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testBoostBlending [
+HighchartsSeriesErrorbarTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +290,7 @@ HighchartsSeriesErrorbarTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testBoostThreshold [
+HighchartsSeriesErrorbarTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +305,7 @@ HighchartsSeriesErrorbarTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testBorderColor [
+HighchartsSeriesErrorbarTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +320,7 @@ HighchartsSeriesErrorbarTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testBorderWidth [
+HighchartsSeriesErrorbarTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +335,22 @@ HighchartsSeriesErrorbarTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testClassName [
+HighchartsSeriesErrorbarTest >> testSetBoxDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component boxDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'boxDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +365,7 @@ HighchartsSeriesErrorbarTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testClip [
+HighchartsSeriesErrorbarTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +380,7 @@ HighchartsSeriesErrorbarTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testColor [
+HighchartsSeriesErrorbarTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +395,7 @@ HighchartsSeriesErrorbarTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testColorAxis [
+HighchartsSeriesErrorbarTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +410,7 @@ HighchartsSeriesErrorbarTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testColorByPoint [
+HighchartsSeriesErrorbarTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +425,7 @@ HighchartsSeriesErrorbarTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testColorIndex [
+HighchartsSeriesErrorbarTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +440,7 @@ HighchartsSeriesErrorbarTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testColorKey [
+HighchartsSeriesErrorbarTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +455,7 @@ HighchartsSeriesErrorbarTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testColors [
+HighchartsSeriesErrorbarTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +470,7 @@ HighchartsSeriesErrorbarTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testCompare [
+HighchartsSeriesErrorbarTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +485,7 @@ HighchartsSeriesErrorbarTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testCompareBase [
+HighchartsSeriesErrorbarTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +500,7 @@ HighchartsSeriesErrorbarTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testCompareStart [
+HighchartsSeriesErrorbarTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +515,7 @@ HighchartsSeriesErrorbarTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testConnectEnds [
+HighchartsSeriesErrorbarTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +530,7 @@ HighchartsSeriesErrorbarTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testConnectNulls [
+HighchartsSeriesErrorbarTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +545,7 @@ HighchartsSeriesErrorbarTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testCrisp [
+HighchartsSeriesErrorbarTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +560,7 @@ HighchartsSeriesErrorbarTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testCropThreshold [
+HighchartsSeriesErrorbarTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +575,7 @@ HighchartsSeriesErrorbarTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testCursor [
+HighchartsSeriesErrorbarTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +590,22 @@ HighchartsSeriesErrorbarTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testDashStyle [
+HighchartsSeriesErrorbarTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +620,7 @@ HighchartsSeriesErrorbarTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testData [
+HighchartsSeriesErrorbarTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +635,7 @@ HighchartsSeriesErrorbarTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testDepth [
+HighchartsSeriesErrorbarTest >> testSetDepth [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +650,7 @@ HighchartsSeriesErrorbarTest >> testDepth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testDescription [
+HighchartsSeriesErrorbarTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +665,7 @@ HighchartsSeriesErrorbarTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testEdgeColor [
+HighchartsSeriesErrorbarTest >> testSetEdgeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +680,7 @@ HighchartsSeriesErrorbarTest >> testEdgeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testEdgeWidth [
+HighchartsSeriesErrorbarTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +695,7 @@ HighchartsSeriesErrorbarTest >> testEdgeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testEnableMouseTracking [
+HighchartsSeriesErrorbarTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +710,7 @@ HighchartsSeriesErrorbarTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testEvents [
+HighchartsSeriesErrorbarTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +725,7 @@ HighchartsSeriesErrorbarTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testFillColor [
+HighchartsSeriesErrorbarTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +740,7 @@ HighchartsSeriesErrorbarTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testFindNearestPointBy [
+HighchartsSeriesErrorbarTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +755,7 @@ HighchartsSeriesErrorbarTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testGapSize [
+HighchartsSeriesErrorbarTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +770,7 @@ HighchartsSeriesErrorbarTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testGapUnit [
+HighchartsSeriesErrorbarTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +785,7 @@ HighchartsSeriesErrorbarTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testGetExtremesFromAll [
+HighchartsSeriesErrorbarTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +800,7 @@ HighchartsSeriesErrorbarTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testGroupPadding [
+HighchartsSeriesErrorbarTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +815,7 @@ HighchartsSeriesErrorbarTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testGrouping [
+HighchartsSeriesErrorbarTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +830,7 @@ HighchartsSeriesErrorbarTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testId [
+HighchartsSeriesErrorbarTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +845,7 @@ HighchartsSeriesErrorbarTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testIncludeInDataExport [
+HighchartsSeriesErrorbarTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +860,7 @@ HighchartsSeriesErrorbarTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testIndex [
+HighchartsSeriesErrorbarTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +875,7 @@ HighchartsSeriesErrorbarTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testJoinBy [
+HighchartsSeriesErrorbarTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +890,7 @@ HighchartsSeriesErrorbarTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testKeys [
+HighchartsSeriesErrorbarTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +905,7 @@ HighchartsSeriesErrorbarTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testLegendIndex [
+HighchartsSeriesErrorbarTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +920,7 @@ HighchartsSeriesErrorbarTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testLineWidth [
+HighchartsSeriesErrorbarTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +935,7 @@ HighchartsSeriesErrorbarTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testLinecap [
+HighchartsSeriesErrorbarTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +950,7 @@ HighchartsSeriesErrorbarTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testLinkedTo [
+HighchartsSeriesErrorbarTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +965,7 @@ HighchartsSeriesErrorbarTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testMapData [
+HighchartsSeriesErrorbarTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +980,7 @@ HighchartsSeriesErrorbarTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testMaxPointWidth [
+HighchartsSeriesErrorbarTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +995,7 @@ HighchartsSeriesErrorbarTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testMedianColor [
+HighchartsSeriesErrorbarTest >> testSetMedianColor [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1010,22 @@ HighchartsSeriesErrorbarTest >> testMedianColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testMedianWidth [
+HighchartsSeriesErrorbarTest >> testSetMedianDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component medianDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'medianDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testSetMedianWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1040,7 @@ HighchartsSeriesErrorbarTest >> testMedianWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testMinPointLength [
+HighchartsSeriesErrorbarTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1055,7 @@ HighchartsSeriesErrorbarTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testName [
+HighchartsSeriesErrorbarTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1070,7 @@ HighchartsSeriesErrorbarTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testNavigatorOptions [
+HighchartsSeriesErrorbarTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1085,7 @@ HighchartsSeriesErrorbarTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testNegativeColor [
+HighchartsSeriesErrorbarTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1100,7 @@ HighchartsSeriesErrorbarTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testOpacity [
+HighchartsSeriesErrorbarTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1115,7 @@ HighchartsSeriesErrorbarTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointDescriptionFormatter [
+HighchartsSeriesErrorbarTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1130,7 @@ HighchartsSeriesErrorbarTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointInterval [
+HighchartsSeriesErrorbarTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1145,7 @@ HighchartsSeriesErrorbarTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointIntervalUnit [
+HighchartsSeriesErrorbarTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1160,7 @@ HighchartsSeriesErrorbarTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointPadding [
+HighchartsSeriesErrorbarTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1175,7 @@ HighchartsSeriesErrorbarTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointPlacement [
+HighchartsSeriesErrorbarTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1190,7 @@ HighchartsSeriesErrorbarTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointRange [
+HighchartsSeriesErrorbarTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1205,7 @@ HighchartsSeriesErrorbarTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointStart [
+HighchartsSeriesErrorbarTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1220,7 @@ HighchartsSeriesErrorbarTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testPointWidth [
+HighchartsSeriesErrorbarTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1235,7 @@ HighchartsSeriesErrorbarTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testSelected [
+HighchartsSeriesErrorbarTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1250,7 @@ HighchartsSeriesErrorbarTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testShadow [
+HighchartsSeriesErrorbarTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1265,7 @@ HighchartsSeriesErrorbarTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testShowCheckbox [
+HighchartsSeriesErrorbarTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1280,7 @@ HighchartsSeriesErrorbarTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testShowInLegend [
+HighchartsSeriesErrorbarTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1295,7 @@ HighchartsSeriesErrorbarTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testShowInNavigator [
+HighchartsSeriesErrorbarTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1310,7 @@ HighchartsSeriesErrorbarTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testSkipKeyboardNavigation [
+HighchartsSeriesErrorbarTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1325,7 @@ HighchartsSeriesErrorbarTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testSoftThreshold [
+HighchartsSeriesErrorbarTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1340,7 @@ HighchartsSeriesErrorbarTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testStates [
+HighchartsSeriesErrorbarTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1355,7 @@ HighchartsSeriesErrorbarTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testStemDashStyle [
+HighchartsSeriesErrorbarTest >> testSetStemDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1370,7 @@ HighchartsSeriesErrorbarTest >> testStemDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testStemWidth [
+HighchartsSeriesErrorbarTest >> testSetStemWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1385,7 @@ HighchartsSeriesErrorbarTest >> testStemWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testStep [
+HighchartsSeriesErrorbarTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1400,7 @@ HighchartsSeriesErrorbarTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testStickyTracking [
+HighchartsSeriesErrorbarTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1415,7 @@ HighchartsSeriesErrorbarTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testThreshold [
+HighchartsSeriesErrorbarTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1430,7 @@ HighchartsSeriesErrorbarTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testTurboThreshold [
+HighchartsSeriesErrorbarTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1445,7 @@ HighchartsSeriesErrorbarTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testType [
+HighchartsSeriesErrorbarTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1190,7 +1460,7 @@ HighchartsSeriesErrorbarTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testVisible [
+HighchartsSeriesErrorbarTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1205,7 +1475,7 @@ HighchartsSeriesErrorbarTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testWhiskerColor [
+HighchartsSeriesErrorbarTest >> testSetWhiskerColor [
 
 	| component javascript expectedConfiguration |
 
@@ -1220,7 +1490,22 @@ HighchartsSeriesErrorbarTest >> testWhiskerColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testWhiskerLength [
+HighchartsSeriesErrorbarTest >> testSetWhiskerDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component whiskerDashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'whiskerDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testSetWhiskerLength [
 
 	| component javascript expectedConfiguration |
 
@@ -1235,7 +1520,7 @@ HighchartsSeriesErrorbarTest >> testWhiskerLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testWhiskerWidth [
+HighchartsSeriesErrorbarTest >> testSetWhiskerWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -1250,7 +1535,7 @@ HighchartsSeriesErrorbarTest >> testWhiskerWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testXAxis [
+HighchartsSeriesErrorbarTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1265,7 +1550,7 @@ HighchartsSeriesErrorbarTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testYAxis [
+HighchartsSeriesErrorbarTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1280,7 +1565,7 @@ HighchartsSeriesErrorbarTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testZIndex [
+HighchartsSeriesErrorbarTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1295,7 +1580,7 @@ HighchartsSeriesErrorbarTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testZoneAxis [
+HighchartsSeriesErrorbarTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

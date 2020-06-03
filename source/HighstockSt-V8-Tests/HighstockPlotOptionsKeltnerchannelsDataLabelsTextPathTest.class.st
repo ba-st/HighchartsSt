@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsKeltnerchannelsDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsKeltnerchannelsDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

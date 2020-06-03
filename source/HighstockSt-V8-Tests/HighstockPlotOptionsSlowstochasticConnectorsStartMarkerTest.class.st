@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testAlign [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testColor [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testEnabled [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testHeight [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testInside [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testLineColor [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testLineWidth [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testRadius [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSymbol [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testVerticalAlign
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testWidth [
+HighstockPlotOptionsSlowstochasticConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

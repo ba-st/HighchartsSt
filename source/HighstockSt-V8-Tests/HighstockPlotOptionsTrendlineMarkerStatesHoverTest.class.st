@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testEnabled [
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendlineMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testFillColor [
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testLineColor [
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testLineWidth [
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testLineWidthPlus [
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testRadius [
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testRadiusPlus [
+HighstockPlotOptionsTrendlineMarkerStatesHoverTest >> testSetRadiusPlus [
 
 	| component javascript expectedConfiguration |
 

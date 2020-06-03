@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBulletStatesInactiveTest >> testOpacity [
+HighchartsSeriesBulletStatesInactiveTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBulletStatesInactive new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletStatesInactiveTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBulletStatesInactive new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBulletStatesInactiveTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 

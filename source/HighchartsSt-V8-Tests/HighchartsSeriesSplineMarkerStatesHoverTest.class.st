@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineMarkerStatesHoverTest >> testEnabled [
+HighchartsSeriesSplineMarkerStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSplineMarkerStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSplineMarkerStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesSplineMarkerStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineMarkerStatesHoverTest >> testFillColor [
+HighchartsSeriesSplineMarkerStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesSplineMarkerStatesHoverTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineMarkerStatesHoverTest >> testLineColor [
+HighchartsSeriesSplineMarkerStatesHoverTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesSplineMarkerStatesHoverTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineMarkerStatesHoverTest >> testLineWidth [
+HighchartsSeriesSplineMarkerStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesSplineMarkerStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineMarkerStatesHoverTest >> testLineWidthPlus [
+HighchartsSeriesSplineMarkerStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesSplineMarkerStatesHoverTest >> testLineWidthPlus [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineMarkerStatesHoverTest >> testRadius [
+HighchartsSeriesSplineMarkerStatesHoverTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesSplineMarkerStatesHoverTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineMarkerStatesHoverTest >> testRadiusPlus [
+HighchartsSeriesSplineMarkerStatesHoverTest >> testSetRadiusPlus [
 
 	| component javascript expectedConfiguration |
 

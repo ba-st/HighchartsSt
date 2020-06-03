@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsChaikinDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsChaikinDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsChaikinDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsChaikinDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsChaikinDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsChaikinDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsChaikinDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoMarkerStatesSelectTest >> testEnabled [
+HighstockPlotOptionsApoMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsApoMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoMarkerStatesSelectTest >> testFillColor [
+HighstockPlotOptionsApoMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsApoMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoMarkerStatesSelectTest >> testLineColor [
+HighstockPlotOptionsApoMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsApoMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoMarkerStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsApoMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsApoMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsApoMarkerStatesSelectTest >> testRadius [
+HighstockPlotOptionsApoMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

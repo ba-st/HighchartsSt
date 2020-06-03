@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testAlign [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testColor [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testEnabled [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testHeight [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testInside [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testLineColor [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testLineWidth [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testRadius [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSymbol [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testVerticalAlign [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testWidth [
+HighchartsSeriesErrorbarConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

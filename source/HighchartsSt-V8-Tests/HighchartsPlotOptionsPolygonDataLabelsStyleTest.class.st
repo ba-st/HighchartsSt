@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsPolygonDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

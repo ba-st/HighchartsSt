@@ -27,12 +27,6 @@ BaselineOfHighchartsSt >> baseline: spec [
 				package: 'HighchartsStTools' with: [ spec requires: 'HighchartsStCore' ];
 				group: 'Tools' with: #('Boardwalk-Tools' 'HighchartsStTools');
 				group: 'Development' with: #('Tests' 'Tools' 'Examples' 'Seaside3-Development')
-			].
-	spec
-		for: #pharo
-		do: [ spec
-				package: 'HighchartsStPharoExtensions';
-				package: 'HighchartsStExtensions' with: [ spec requires: 'HighchartsStPharoExtensions' ]
 			]
 ]
 
@@ -61,11 +55,9 @@ BaselineOfHighchartsSt >> baselineHighchartsCommon: spec [
 BaselineOfHighchartsSt >> baselineHighchartsExamples: spec [
 
 	spec
-		package: 'HighchartsStExtensions'
-			with: [ spec requires: #('HighchartsStCore' 'RenoirSt-Deployment') ];
-		group: 'Examples' with: 'HighchartsStExtensions';
 		package: 'HighchartsStExamples'
-			with: [ spec requires: #('Highcharts-Deployment' 'HighchartsStExtensions' 'Seaside3-JQuery') ];
+			with: [ spec
+				requires: #('HighchartsStCore' 'RenoirSt-Deployment' 'Highcharts-Deployment' 'Seaside3-JQuery') ];
 		group: 'Examples' with: 'HighchartsStExamples'
 ]
 
@@ -90,7 +82,7 @@ BaselineOfHighchartsSt >> baselineHighstockExamples: spec [
 
 	spec
 		package: 'HighstockStExamples'
-			with: [ spec requires: #('Highstock-Deployment' 'HighchartsStExtensions' 'Seaside3-JQuery') ];
+			with: [ spec requires: #('Highstock-Deployment' 'Seaside3-JQuery') ];
 		group: 'Examples' with: 'HighstockStExamples'
 ]
 

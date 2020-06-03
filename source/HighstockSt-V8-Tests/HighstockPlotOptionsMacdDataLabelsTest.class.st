@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testAlign [
+HighstockPlotOptionsMacdDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacdDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacdDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsMacdDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsMacdDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testAllowOverlap [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testBackgroundColor [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testBorderColor [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testBorderRadius [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testBorderWidth [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testClassName [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testColor [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testCrop [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testDefer [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testEnabled [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testFormat [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testFormatter [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testInside [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testNullFormat [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testNullFormatter [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testOverflow [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testPadding [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testPosition [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testRotation [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testShadow [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testShape [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testUseHTML [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testVerticalAlign [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testX [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testY [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockPlotOptionsMacdDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdDataLabelsTest >> testZ [
+HighstockPlotOptionsMacdDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

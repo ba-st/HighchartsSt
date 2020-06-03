@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testAllAreas [
+HighchartsSeriesWordcloudTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetRotation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component rotation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'rotation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +245,7 @@ HighchartsSeriesWordcloudTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testAllowExtendPlayingField [
+HighchartsSeriesWordcloudTest >> testSetAllowExtendPlayingField [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +260,7 @@ HighchartsSeriesWordcloudTest >> testAllowExtendPlayingField [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testAllowPointSelect [
+HighchartsSeriesWordcloudTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +275,7 @@ HighchartsSeriesWordcloudTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testAnimationLimit [
+HighchartsSeriesWordcloudTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +290,7 @@ HighchartsSeriesWordcloudTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testBoostBlending [
+HighchartsSeriesWordcloudTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +305,7 @@ HighchartsSeriesWordcloudTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testBoostThreshold [
+HighchartsSeriesWordcloudTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +320,7 @@ HighchartsSeriesWordcloudTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testBorderColor [
+HighchartsSeriesWordcloudTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +335,7 @@ HighchartsSeriesWordcloudTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testBorderRadius [
+HighchartsSeriesWordcloudTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +350,7 @@ HighchartsSeriesWordcloudTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testBorderWidth [
+HighchartsSeriesWordcloudTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +365,7 @@ HighchartsSeriesWordcloudTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testClassName [
+HighchartsSeriesWordcloudTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +380,7 @@ HighchartsSeriesWordcloudTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testClip [
+HighchartsSeriesWordcloudTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +395,7 @@ HighchartsSeriesWordcloudTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testColor [
+HighchartsSeriesWordcloudTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +410,7 @@ HighchartsSeriesWordcloudTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testColorAxis [
+HighchartsSeriesWordcloudTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +425,7 @@ HighchartsSeriesWordcloudTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testColorByPoint [
+HighchartsSeriesWordcloudTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +440,7 @@ HighchartsSeriesWordcloudTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testColorIndex [
+HighchartsSeriesWordcloudTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +455,7 @@ HighchartsSeriesWordcloudTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testColorKey [
+HighchartsSeriesWordcloudTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +470,7 @@ HighchartsSeriesWordcloudTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testColors [
+HighchartsSeriesWordcloudTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +485,7 @@ HighchartsSeriesWordcloudTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testCompare [
+HighchartsSeriesWordcloudTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +500,7 @@ HighchartsSeriesWordcloudTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testCompareBase [
+HighchartsSeriesWordcloudTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +515,7 @@ HighchartsSeriesWordcloudTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testCompareStart [
+HighchartsSeriesWordcloudTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +530,7 @@ HighchartsSeriesWordcloudTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testConnectEnds [
+HighchartsSeriesWordcloudTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +545,7 @@ HighchartsSeriesWordcloudTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testConnectNulls [
+HighchartsSeriesWordcloudTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +560,22 @@ HighchartsSeriesWordcloudTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testCropThreshold [
+HighchartsSeriesWordcloudTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +590,7 @@ HighchartsSeriesWordcloudTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testCursor [
+HighchartsSeriesWordcloudTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +605,22 @@ HighchartsSeriesWordcloudTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testDashStyle [
+HighchartsSeriesWordcloudTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesWordcloud new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'wordcloud';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesWordcloudTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +635,7 @@ HighchartsSeriesWordcloudTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testData [
+HighchartsSeriesWordcloudTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +650,7 @@ HighchartsSeriesWordcloudTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testDescription [
+HighchartsSeriesWordcloudTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +665,7 @@ HighchartsSeriesWordcloudTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testEdgeWidth [
+HighchartsSeriesWordcloudTest >> testSetEdgeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +680,7 @@ HighchartsSeriesWordcloudTest >> testEdgeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testEnableMouseTracking [
+HighchartsSeriesWordcloudTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +695,7 @@ HighchartsSeriesWordcloudTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testEvents [
+HighchartsSeriesWordcloudTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +710,7 @@ HighchartsSeriesWordcloudTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testFindNearestPointBy [
+HighchartsSeriesWordcloudTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +725,7 @@ HighchartsSeriesWordcloudTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testGapSize [
+HighchartsSeriesWordcloudTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +740,7 @@ HighchartsSeriesWordcloudTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testGapUnit [
+HighchartsSeriesWordcloudTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +755,7 @@ HighchartsSeriesWordcloudTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testGetExtremesFromAll [
+HighchartsSeriesWordcloudTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +770,7 @@ HighchartsSeriesWordcloudTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testId [
+HighchartsSeriesWordcloudTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +785,7 @@ HighchartsSeriesWordcloudTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testIncludeInDataExport [
+HighchartsSeriesWordcloudTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +800,7 @@ HighchartsSeriesWordcloudTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testIndex [
+HighchartsSeriesWordcloudTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +815,7 @@ HighchartsSeriesWordcloudTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testJoinBy [
+HighchartsSeriesWordcloudTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +830,7 @@ HighchartsSeriesWordcloudTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testKeys [
+HighchartsSeriesWordcloudTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +845,7 @@ HighchartsSeriesWordcloudTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testLegendIndex [
+HighchartsSeriesWordcloudTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +860,7 @@ HighchartsSeriesWordcloudTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testLineWidth [
+HighchartsSeriesWordcloudTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +875,7 @@ HighchartsSeriesWordcloudTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testLinecap [
+HighchartsSeriesWordcloudTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +890,7 @@ HighchartsSeriesWordcloudTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testLinkedTo [
+HighchartsSeriesWordcloudTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +905,7 @@ HighchartsSeriesWordcloudTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testMapData [
+HighchartsSeriesWordcloudTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +920,7 @@ HighchartsSeriesWordcloudTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testMaxFontSize [
+HighchartsSeriesWordcloudTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +935,7 @@ HighchartsSeriesWordcloudTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testMinFontSize [
+HighchartsSeriesWordcloudTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +950,7 @@ HighchartsSeriesWordcloudTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testName [
+HighchartsSeriesWordcloudTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +965,7 @@ HighchartsSeriesWordcloudTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testNavigatorOptions [
+HighchartsSeriesWordcloudTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +980,7 @@ HighchartsSeriesWordcloudTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testNegativeColor [
+HighchartsSeriesWordcloudTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +995,7 @@ HighchartsSeriesWordcloudTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testOpacity [
+HighchartsSeriesWordcloudTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1010,7 @@ HighchartsSeriesWordcloudTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testPlacementStrategy [
+HighchartsSeriesWordcloudTest >> testSetPlacementStrategy [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1025,7 @@ HighchartsSeriesWordcloudTest >> testPlacementStrategy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testPointDescriptionFormatter [
+HighchartsSeriesWordcloudTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1040,7 @@ HighchartsSeriesWordcloudTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testPointInterval [
+HighchartsSeriesWordcloudTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1055,7 @@ HighchartsSeriesWordcloudTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testPointIntervalUnit [
+HighchartsSeriesWordcloudTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1070,7 @@ HighchartsSeriesWordcloudTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testPointPlacement [
+HighchartsSeriesWordcloudTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1085,7 @@ HighchartsSeriesWordcloudTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testPointRange [
+HighchartsSeriesWordcloudTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1100,7 @@ HighchartsSeriesWordcloudTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testPointStart [
+HighchartsSeriesWordcloudTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1115,7 @@ HighchartsSeriesWordcloudTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testSelected [
+HighchartsSeriesWordcloudTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1130,7 @@ HighchartsSeriesWordcloudTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testShadow [
+HighchartsSeriesWordcloudTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1145,7 @@ HighchartsSeriesWordcloudTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testShowCheckbox [
+HighchartsSeriesWordcloudTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1160,7 @@ HighchartsSeriesWordcloudTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testShowInLegend [
+HighchartsSeriesWordcloudTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1175,7 @@ HighchartsSeriesWordcloudTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testShowInNavigator [
+HighchartsSeriesWordcloudTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1190,7 @@ HighchartsSeriesWordcloudTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testSkipKeyboardNavigation [
+HighchartsSeriesWordcloudTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1205,7 @@ HighchartsSeriesWordcloudTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testSoftThreshold [
+HighchartsSeriesWordcloudTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1220,7 @@ HighchartsSeriesWordcloudTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testSpiral [
+HighchartsSeriesWordcloudTest >> testSetSpiral [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1235,7 @@ HighchartsSeriesWordcloudTest >> testSpiral [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testStack [
+HighchartsSeriesWordcloudTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1250,7 @@ HighchartsSeriesWordcloudTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testStacking [
+HighchartsSeriesWordcloudTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1265,7 @@ HighchartsSeriesWordcloudTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testStates [
+HighchartsSeriesWordcloudTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1280,7 @@ HighchartsSeriesWordcloudTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testStep [
+HighchartsSeriesWordcloudTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1295,7 @@ HighchartsSeriesWordcloudTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testStickyTracking [
+HighchartsSeriesWordcloudTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1310,7 @@ HighchartsSeriesWordcloudTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testStyle [
+HighchartsSeriesWordcloudTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1325,7 @@ HighchartsSeriesWordcloudTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testThreshold [
+HighchartsSeriesWordcloudTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1340,7 @@ HighchartsSeriesWordcloudTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testTurboThreshold [
+HighchartsSeriesWordcloudTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1355,7 @@ HighchartsSeriesWordcloudTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testType [
+HighchartsSeriesWordcloudTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1370,7 @@ HighchartsSeriesWordcloudTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testVisible [
+HighchartsSeriesWordcloudTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1385,7 @@ HighchartsSeriesWordcloudTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testXAxis [
+HighchartsSeriesWordcloudTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1400,7 @@ HighchartsSeriesWordcloudTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testYAxis [
+HighchartsSeriesWordcloudTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1415,7 @@ HighchartsSeriesWordcloudTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testZIndex [
+HighchartsSeriesWordcloudTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1430,7 @@ HighchartsSeriesWordcloudTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudTest >> testZoneAxis [
+HighchartsSeriesWordcloudTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

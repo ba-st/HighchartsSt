@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testAfterAnimate [
+HighstockPlotOptionsWmaEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWmaEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testCheckboxClick [
+HighstockPlotOptionsWmaEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWmaEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testClick [
+HighstockPlotOptionsWmaEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsWmaEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testHide [
+HighstockPlotOptionsWmaEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsWmaEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testLegendItemClick [
+HighstockPlotOptionsWmaEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsWmaEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testMouseOut [
+HighstockPlotOptionsWmaEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsWmaEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testMouseOver [
+HighstockPlotOptionsWmaEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsWmaEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaEventsTest >> testShow [
+HighstockPlotOptionsWmaEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

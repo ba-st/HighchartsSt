@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickAccessibilityTest >> testDescription [
+HighstockPlotOptionsCandlestickAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestickAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsCandlestickAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickAccessibilityTest >> testEnabled [
+HighstockPlotOptionsCandlestickAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsCandlestickAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickAccessibilityTest >> testExposeAsGroupOnly [
+HighstockPlotOptionsCandlestickAccessibilityTest >> testSetExposeAsGroupOnly [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsCandlestickAccessibilityTest >> testExposeAsGroupOnly [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickAccessibilityTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsCandlestickAccessibilityTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 

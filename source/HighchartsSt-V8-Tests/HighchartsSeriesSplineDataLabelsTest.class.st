@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testAlign [
+HighchartsSeriesSplineDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSplineDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSplineDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSplineDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSplineDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSplineDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSplineDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesSplineDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testAllowOverlap [
+HighchartsSeriesSplineDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesSplineDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testBackgroundColor [
+HighchartsSeriesSplineDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesSplineDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testBorderColor [
+HighchartsSeriesSplineDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesSplineDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testBorderRadius [
+HighchartsSeriesSplineDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesSplineDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testBorderWidth [
+HighchartsSeriesSplineDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesSplineDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testClassName [
+HighchartsSeriesSplineDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesSplineDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testColor [
+HighchartsSeriesSplineDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesSplineDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testCrop [
+HighchartsSeriesSplineDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesSplineDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testDefer [
+HighchartsSeriesSplineDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesSplineDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testEnabled [
+HighchartsSeriesSplineDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesSplineDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testFormat [
+HighchartsSeriesSplineDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesSplineDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testFormatter [
+HighchartsSeriesSplineDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesSplineDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testInside [
+HighchartsSeriesSplineDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesSplineDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testNullFormat [
+HighchartsSeriesSplineDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesSplineDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testNullFormatter [
+HighchartsSeriesSplineDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesSplineDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testOverflow [
+HighchartsSeriesSplineDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesSplineDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testPadding [
+HighchartsSeriesSplineDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsSeriesSplineDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testPosition [
+HighchartsSeriesSplineDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsSeriesSplineDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testRotation [
+HighchartsSeriesSplineDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsSeriesSplineDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testShadow [
+HighchartsSeriesSplineDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsSeriesSplineDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testShape [
+HighchartsSeriesSplineDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsSeriesSplineDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testUseHTML [
+HighchartsSeriesSplineDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsSeriesSplineDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesSplineDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsSeriesSplineDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testX [
+HighchartsSeriesSplineDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsSeriesSplineDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testY [
+HighchartsSeriesSplineDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsSeriesSplineDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSplineDataLabelsTest >> testZ [
+HighchartsSeriesSplineDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testAdaptToUpdatedData [
+HighstockNavigatorTest >> testGetHandles [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigator new.
+	component handles.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'handles' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorTest >> testGetSeries [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigator new.
+	component series.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'series' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorTest >> testSetAdaptToUpdatedData [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockNavigatorTest >> testAdaptToUpdatedData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testBaseSeries [
+HighstockNavigatorTest >> testSetBaseSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockNavigatorTest >> testBaseSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testEnabled [
+HighstockNavigatorTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockNavigatorTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testHeight [
+HighstockNavigatorTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockNavigatorTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testMargin [
+HighstockNavigatorTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockNavigatorTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testMaskFill [
+HighstockNavigatorTest >> testSetMaskFill [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockNavigatorTest >> testMaskFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testMaskInside [
+HighstockNavigatorTest >> testSetMaskInside [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockNavigatorTest >> testMaskInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testOpposite [
+HighstockNavigatorTest >> testSetOpposite [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockNavigatorTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testOutlineColor [
+HighstockNavigatorTest >> testSetOutlineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockNavigatorTest >> testOutlineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorTest >> testOutlineWidth [
+HighstockNavigatorTest >> testSetOutlineWidth [
 
 	| component javascript expectedConfiguration |
 

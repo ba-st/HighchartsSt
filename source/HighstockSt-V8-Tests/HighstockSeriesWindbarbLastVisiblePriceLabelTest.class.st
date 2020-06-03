@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbLastVisiblePriceLabelTest >> testEnabled [
+HighstockSeriesWindbarbLastVisiblePriceLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

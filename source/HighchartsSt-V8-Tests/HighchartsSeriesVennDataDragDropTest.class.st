@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDragMaxX [
+HighchartsSeriesVennDataDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVennDataDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennDataDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVennDataDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennDataDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsSeriesVennDataDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDragMaxY [
+HighchartsSeriesVennDataDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsSeriesVennDataDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDragMinX [
+HighchartsSeriesVennDataDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsSeriesVennDataDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDragMinY [
+HighchartsSeriesVennDataDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsSeriesVennDataDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDragPrecisionX [
+HighchartsSeriesVennDataDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsSeriesVennDataDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDragPrecisionY [
+HighchartsSeriesVennDataDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsSeriesVennDataDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDragSensitivity [
+HighchartsSeriesVennDataDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsSeriesVennDataDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDraggableX [
+HighchartsSeriesVennDataDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsSeriesVennDataDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testDraggableY [
+HighchartsSeriesVennDataDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsSeriesVennDataDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testGroupBy [
+HighchartsSeriesVennDataDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsSeriesVennDataDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennDataDragDropTest >> testLiveRedraw [
+HighchartsSeriesVennDataDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

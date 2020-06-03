@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testFill [
+HighchartsAnnotationsShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsAnnotationsShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testHeight [
+HighchartsAnnotationsShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsAnnotationsShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testR [
+HighchartsAnnotationsShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsAnnotationsShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testSnap [
+HighchartsAnnotationsShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighchartsAnnotationsShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testStroke [
+HighchartsAnnotationsShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsAnnotationsShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testStrokeWidth [
+HighchartsAnnotationsShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsAnnotationsShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testType [
+HighchartsAnnotationsShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsAnnotationsShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapeOptionsTest >> testWidth [
+HighchartsAnnotationsShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

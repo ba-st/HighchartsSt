@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelConnectorsTest >> testDashStyle [
+HighchartsSeriesFunnelConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnelConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnelConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesFunnelConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelConnectorsTest >> testLineColor [
+HighchartsSeriesFunnelConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesFunnelConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelConnectorsTest >> testLineWidth [
+HighchartsSeriesFunnelConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesFunnelConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelConnectorsTest >> testType [
+HighchartsSeriesFunnelConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

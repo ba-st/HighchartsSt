@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testAlign [
+HighstockNavigatorYAxisTitleTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigatorYAxisTitle new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigatorYAxisTitleTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigatorYAxisTitleTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testEnabled [
+HighstockNavigatorYAxisTitleTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigatorYAxisTitleTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testMargin [
+HighstockNavigatorYAxisTitleTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigatorYAxisTitleTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testOffset [
+HighstockNavigatorYAxisTitleTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigatorYAxisTitleTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testPosition3d [
+HighstockNavigatorYAxisTitleTest >> testSetPosition3d [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockNavigatorYAxisTitleTest >> testPosition3d [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testReserveSpace [
+HighstockNavigatorYAxisTitleTest >> testSetReserveSpace [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockNavigatorYAxisTitleTest >> testReserveSpace [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testRotation [
+HighstockNavigatorYAxisTitleTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockNavigatorYAxisTitleTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testSkew3d [
+HighstockNavigatorYAxisTitleTest >> testSetSkew3d [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockNavigatorYAxisTitleTest >> testSkew3d [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testText [
+HighstockNavigatorYAxisTitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockNavigatorYAxisTitleTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testTextAlign [
+HighstockNavigatorYAxisTitleTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockNavigatorYAxisTitleTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testUseHTML [
+HighstockNavigatorYAxisTitleTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockNavigatorYAxisTitleTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testX [
+HighstockNavigatorYAxisTitleTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockNavigatorYAxisTitleTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisTitleTest >> testY [
+HighstockNavigatorYAxisTitleTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

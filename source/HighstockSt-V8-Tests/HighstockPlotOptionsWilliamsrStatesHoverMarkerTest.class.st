@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testEnabled [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testFillColor [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testHeight [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testLineColor [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testLineWidth [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testRadius [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSymbol [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testWidth [
+HighstockPlotOptionsWilliamsrStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

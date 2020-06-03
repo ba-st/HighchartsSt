@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testClassName [
+HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testColor [
+HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testCursor [
+HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testLineColor [
+HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testLineWidth [
+HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testPathFormatter [
+HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testPathFormatter 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testZIndex [
+HighchartsPlotOptionsAreasplinerangeDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

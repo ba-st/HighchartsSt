@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testClick [
+HighstockSeriesColumnDataEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnDataEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testDrag [
+HighstockSeriesColumnDataEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesColumnDataEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testDragStart [
+HighstockSeriesColumnDataEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesColumnDataEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testDrop [
+HighstockSeriesColumnDataEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesColumnDataEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testMouseOut [
+HighstockSeriesColumnDataEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesColumnDataEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testMouseOver [
+HighstockSeriesColumnDataEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesColumnDataEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testRemove [
+HighstockSeriesColumnDataEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesColumnDataEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testSelect [
+HighstockSeriesColumnDataEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesColumnDataEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testUnselect [
+HighstockSeriesColumnDataEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesColumnDataEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataEventsTest >> testUpdate [
+HighstockSeriesColumnDataEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

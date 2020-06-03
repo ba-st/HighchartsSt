@@ -5,7 +5,203 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testAllAreas [
+HighchartsPlotOptionsScatter3dTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetJitter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component jitter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'jitter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +215,7 @@ HighchartsPlotOptionsScatter3dTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testAllowPointSelect [
+HighchartsPlotOptionsScatter3dTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +229,7 @@ HighchartsPlotOptionsScatter3dTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testAnimationLimit [
+HighchartsPlotOptionsScatter3dTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +243,7 @@ HighchartsPlotOptionsScatter3dTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testBoostBlending [
+HighchartsPlotOptionsScatter3dTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +257,7 @@ HighchartsPlotOptionsScatter3dTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testBoostThreshold [
+HighchartsPlotOptionsScatter3dTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +271,7 @@ HighchartsPlotOptionsScatter3dTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testBorderColor [
+HighchartsPlotOptionsScatter3dTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +285,7 @@ HighchartsPlotOptionsScatter3dTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testBorderWidth [
+HighchartsPlotOptionsScatter3dTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +299,7 @@ HighchartsPlotOptionsScatter3dTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testClassName [
+HighchartsPlotOptionsScatter3dTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +313,7 @@ HighchartsPlotOptionsScatter3dTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testClip [
+HighchartsPlotOptionsScatter3dTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +327,7 @@ HighchartsPlotOptionsScatter3dTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testColor [
+HighchartsPlotOptionsScatter3dTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +341,7 @@ HighchartsPlotOptionsScatter3dTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testColorAxis [
+HighchartsPlotOptionsScatter3dTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +355,7 @@ HighchartsPlotOptionsScatter3dTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testColorIndex [
+HighchartsPlotOptionsScatter3dTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +369,7 @@ HighchartsPlotOptionsScatter3dTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testColorKey [
+HighchartsPlotOptionsScatter3dTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +383,7 @@ HighchartsPlotOptionsScatter3dTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testCompare [
+HighchartsPlotOptionsScatter3dTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +397,7 @@ HighchartsPlotOptionsScatter3dTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testCompareBase [
+HighchartsPlotOptionsScatter3dTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,7 @@ HighchartsPlotOptionsScatter3dTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testCompareStart [
+HighchartsPlotOptionsScatter3dTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +425,7 @@ HighchartsPlotOptionsScatter3dTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testConnectEnds [
+HighchartsPlotOptionsScatter3dTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,7 @@ HighchartsPlotOptionsScatter3dTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testConnectNulls [
+HighchartsPlotOptionsScatter3dTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +453,21 @@ HighchartsPlotOptionsScatter3dTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testCropThreshold [
+HighchartsPlotOptionsScatter3dTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,7 @@ HighchartsPlotOptionsScatter3dTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testCursor [
+HighchartsPlotOptionsScatter3dTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +495,21 @@ HighchartsPlotOptionsScatter3dTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testDashStyle [
+HighchartsPlotOptionsScatter3dTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3d new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +523,7 @@ HighchartsPlotOptionsScatter3dTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testDescription [
+HighchartsPlotOptionsScatter3dTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +537,7 @@ HighchartsPlotOptionsScatter3dTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testEnableMouseTracking [
+HighchartsPlotOptionsScatter3dTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +551,7 @@ HighchartsPlotOptionsScatter3dTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testEvents [
+HighchartsPlotOptionsScatter3dTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +565,7 @@ HighchartsPlotOptionsScatter3dTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testFindNearestPointBy [
+HighchartsPlotOptionsScatter3dTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +579,7 @@ HighchartsPlotOptionsScatter3dTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testGapSize [
+HighchartsPlotOptionsScatter3dTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +593,7 @@ HighchartsPlotOptionsScatter3dTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testGapUnit [
+HighchartsPlotOptionsScatter3dTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +607,7 @@ HighchartsPlotOptionsScatter3dTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsScatter3dTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +621,7 @@ HighchartsPlotOptionsScatter3dTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testIncludeInDataExport [
+HighchartsPlotOptionsScatter3dTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +635,7 @@ HighchartsPlotOptionsScatter3dTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testJoinBy [
+HighchartsPlotOptionsScatter3dTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +649,7 @@ HighchartsPlotOptionsScatter3dTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testKeys [
+HighchartsPlotOptionsScatter3dTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +663,7 @@ HighchartsPlotOptionsScatter3dTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testLineWidth [
+HighchartsPlotOptionsScatter3dTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +677,7 @@ HighchartsPlotOptionsScatter3dTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testLinecap [
+HighchartsPlotOptionsScatter3dTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +691,7 @@ HighchartsPlotOptionsScatter3dTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testLinkedTo [
+HighchartsPlotOptionsScatter3dTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +705,7 @@ HighchartsPlotOptionsScatter3dTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testNavigatorOptions [
+HighchartsPlotOptionsScatter3dTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +719,7 @@ HighchartsPlotOptionsScatter3dTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testNegativeColor [
+HighchartsPlotOptionsScatter3dTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +733,7 @@ HighchartsPlotOptionsScatter3dTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testOpacity [
+HighchartsPlotOptionsScatter3dTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +747,7 @@ HighchartsPlotOptionsScatter3dTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsScatter3dTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +761,7 @@ HighchartsPlotOptionsScatter3dTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testPointInterval [
+HighchartsPlotOptionsScatter3dTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +775,7 @@ HighchartsPlotOptionsScatter3dTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testPointIntervalUnit [
+HighchartsPlotOptionsScatter3dTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +789,7 @@ HighchartsPlotOptionsScatter3dTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testPointRange [
+HighchartsPlotOptionsScatter3dTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +803,7 @@ HighchartsPlotOptionsScatter3dTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testPointStart [
+HighchartsPlotOptionsScatter3dTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +817,7 @@ HighchartsPlotOptionsScatter3dTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testSelected [
+HighchartsPlotOptionsScatter3dTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +831,7 @@ HighchartsPlotOptionsScatter3dTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testShowCheckbox [
+HighchartsPlotOptionsScatter3dTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +845,7 @@ HighchartsPlotOptionsScatter3dTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testShowInLegend [
+HighchartsPlotOptionsScatter3dTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +859,7 @@ HighchartsPlotOptionsScatter3dTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testShowInNavigator [
+HighchartsPlotOptionsScatter3dTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +873,7 @@ HighchartsPlotOptionsScatter3dTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsScatter3dTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +887,7 @@ HighchartsPlotOptionsScatter3dTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testSoftThreshold [
+HighchartsPlotOptionsScatter3dTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +901,7 @@ HighchartsPlotOptionsScatter3dTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testStacking [
+HighchartsPlotOptionsScatter3dTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +915,7 @@ HighchartsPlotOptionsScatter3dTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testStates [
+HighchartsPlotOptionsScatter3dTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +929,7 @@ HighchartsPlotOptionsScatter3dTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testStep [
+HighchartsPlotOptionsScatter3dTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +943,7 @@ HighchartsPlotOptionsScatter3dTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testStickyTracking [
+HighchartsPlotOptionsScatter3dTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +957,7 @@ HighchartsPlotOptionsScatter3dTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testThreshold [
+HighchartsPlotOptionsScatter3dTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +971,7 @@ HighchartsPlotOptionsScatter3dTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testTurboThreshold [
+HighchartsPlotOptionsScatter3dTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +985,7 @@ HighchartsPlotOptionsScatter3dTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testVisible [
+HighchartsPlotOptionsScatter3dTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +999,7 @@ HighchartsPlotOptionsScatter3dTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testZIndex [
+HighchartsPlotOptionsScatter3dTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +1013,7 @@ HighchartsPlotOptionsScatter3dTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTest >> testZoneAxis [
+HighchartsPlotOptionsScatter3dTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

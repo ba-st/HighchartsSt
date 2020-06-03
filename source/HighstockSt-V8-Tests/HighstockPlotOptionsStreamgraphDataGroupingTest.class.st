@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testApproximation [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsStreamgraphDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsStreamgraphDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testEnabled [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsStreamgraphDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testForced [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsStreamgraphDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsStreamgraphDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsStreamgraphDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsStreamgraphDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataGroupingTest >> testUnits [
+HighstockPlotOptionsStreamgraphDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

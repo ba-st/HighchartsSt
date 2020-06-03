@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testClick [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testDrag [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testDragStart [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testDrop [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testRemove [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testSelect [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testUnselect [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsWindbarbPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbPointEventsTest >> testUpdate [
+HighchartsPlotOptionsWindbarbPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

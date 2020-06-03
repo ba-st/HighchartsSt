@@ -40,9 +40,7 @@ HighstockAnnotationsPitchforkTypeOptions >> points [
 { #category : #accessing }
 HighstockAnnotationsPitchforkTypeOptions >> xAxis: aNumber [
 
-	"This number defines which xAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the xAxis array.
+	"This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'xAxis' put: aNumber
@@ -51,9 +49,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockAnnotationsPitchforkTypeOptions >> yAxis: aNumber [
 
-	"This number defines which yAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the xAxis array.
+	"This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'yAxis' put: aNumber

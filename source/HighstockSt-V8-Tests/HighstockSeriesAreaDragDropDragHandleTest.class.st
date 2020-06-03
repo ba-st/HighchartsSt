@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDragDropDragHandleTest >> testClassName [
+HighstockSeriesAreaDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAreaDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDragDropDragHandleTest >> testColor [
+HighstockSeriesAreaDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAreaDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDragDropDragHandleTest >> testCursor [
+HighstockSeriesAreaDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAreaDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDragDropDragHandleTest >> testLineColor [
+HighstockSeriesAreaDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAreaDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesAreaDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAreaDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesAreaDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAreaDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDragDropDragHandleTest >> testZIndex [
+HighstockSeriesAreaDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

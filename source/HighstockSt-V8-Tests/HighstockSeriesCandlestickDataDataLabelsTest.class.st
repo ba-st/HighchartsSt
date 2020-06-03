@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testAlign [
+HighstockSeriesCandlestickDataDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestickDataDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCandlestickDataDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestickDataDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCandlestickDataDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesCandlestickDataDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testAllowOverlap [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testBackgroundColor [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testBorderColor [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testBorderRadius [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testBorderWidth [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testClassName [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testColor [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testCrop [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testDefer [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testEnabled [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testFormat [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testFormatter [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testInside [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testNullFormat [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testNullFormatter [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testOverflow [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testPadding [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testPosition [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testRotation [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testShadow [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testShape [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testUseHTML [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testVerticalAlign [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testX [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testXHigh [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetXHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testXHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testXLow [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetXLow [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testXLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testY [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testYHigh [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetYHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +453,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testYHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testYLow [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetYLow [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +467,7 @@ HighstockSeriesCandlestickDataDataLabelsTest >> testYLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataDataLabelsTest >> testZ [
+HighstockSeriesCandlestickDataDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

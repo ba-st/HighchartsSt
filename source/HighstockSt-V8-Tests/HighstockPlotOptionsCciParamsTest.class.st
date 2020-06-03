@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciParamsTest >> testIndex [
+HighstockPlotOptionsCciParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCciParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCciParamsTest >> testPeriod [
+HighstockPlotOptionsCciParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationStatesInactiveTest >> testLinkOpacity [
+HighchartsPlotOptionsOrganizationStatesInactiveTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsOrganizationStatesInactive new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsOrganizationStatesInactiveTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsOrganizationStatesInactive new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsOrganizationStatesInactiveTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsPlotOptionsOrganizationStatesInactiveTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationStatesInactiveTest >> testOpacity [
+HighchartsPlotOptionsOrganizationStatesInactiveTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 

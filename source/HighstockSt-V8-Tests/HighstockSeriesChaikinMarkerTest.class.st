@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testEnabled [
+HighstockSeriesChaikinMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesChaikinMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testEnabledThreshold [
+HighstockSeriesChaikinMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesChaikinMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testFillColor [
+HighstockSeriesChaikinMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesChaikinMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testHeight [
+HighstockSeriesChaikinMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesChaikinMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testLineColor [
+HighstockSeriesChaikinMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesChaikinMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testLineWidth [
+HighstockSeriesChaikinMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesChaikinMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testRadius [
+HighstockSeriesChaikinMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesChaikinMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testStates [
+HighstockSeriesChaikinMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesChaikinMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testSymbol [
+HighstockSeriesChaikinMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesChaikinMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinMarkerTest >> testWidth [
+HighstockSeriesChaikinMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

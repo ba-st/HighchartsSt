@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcLabelTest >> testBoxesToAvoid [
+HighstockPlotOptionsOhlcLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlcLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsOhlcLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcLabelTest >> testConnectorAllowed [
+HighstockPlotOptionsOhlcLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsOhlcLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcLabelTest >> testConnectorNeighbourDistance [
+HighstockPlotOptionsOhlcLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsOhlcLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcLabelTest >> testEnabled [
+HighstockPlotOptionsOhlcLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighstockPlotOptionsOhlcLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcLabelTest >> testMaxFontSize [
+HighstockPlotOptionsOhlcLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlcLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlcLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsOhlcLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcLabelTest >> testMinFontSize [
+HighstockPlotOptionsOhlcLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsOhlcLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsOhlcLabelTest >> testOnArea [
+HighstockPlotOptionsOhlcLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,77 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testAlignTicks [
+HighchartsChartTest >> testGetOptions3d [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChart new.
+	component options3d.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'options3d' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartTest >> testGetPanning [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChart new.
+	component panning.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'panning' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartTest >> testGetParallelAxes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChart new.
+	component parallelAxes.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'parallelAxes' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartTest >> testGetResetZoomButton [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChart new.
+	component resetZoomButton.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'resetZoomButton' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartTest >> testGetScrollablePlotArea [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChart new.
+	component scrollablePlotArea.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'scrollablePlotArea' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +89,7 @@ HighchartsChartTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testAnimation [
+HighchartsChartTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighchartsChartTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testBackgroundColor [
+HighchartsChartTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,7 @@ HighchartsChartTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testBorderColor [
+HighchartsChartTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighchartsChartTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testBorderRadius [
+HighchartsChartTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighchartsChartTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testBorderWidth [
+HighchartsChartTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighchartsChartTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testClassName [
+HighchartsChartTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +173,7 @@ HighchartsChartTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testColorCount [
+HighchartsChartTest >> testSetColorCount [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +187,7 @@ HighchartsChartTest >> testColorCount [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testDefaultSeriesType [
+HighchartsChartTest >> testSetDefaultSeriesType [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +201,7 @@ HighchartsChartTest >> testDefaultSeriesType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testDisplayErrors [
+HighchartsChartTest >> testSetDisplayErrors [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +215,7 @@ HighchartsChartTest >> testDisplayErrors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testEvents [
+HighchartsChartTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +229,7 @@ HighchartsChartTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testHeight [
+HighchartsChartTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +243,7 @@ HighchartsChartTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testIgnoreHiddenSeries [
+HighchartsChartTest >> testSetIgnoreHiddenSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +257,7 @@ HighchartsChartTest >> testIgnoreHiddenSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testInverted [
+HighchartsChartTest >> testSetInverted [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +271,7 @@ HighchartsChartTest >> testInverted [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testMargin [
+HighchartsChartTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +285,7 @@ HighchartsChartTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testMarginBottom [
+HighchartsChartTest >> testSetMarginBottom [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +299,7 @@ HighchartsChartTest >> testMarginBottom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testMarginLeft [
+HighchartsChartTest >> testSetMarginLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +313,7 @@ HighchartsChartTest >> testMarginLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testMarginRight [
+HighchartsChartTest >> testSetMarginRight [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +327,7 @@ HighchartsChartTest >> testMarginRight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testMarginTop [
+HighchartsChartTest >> testSetMarginTop [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +341,7 @@ HighchartsChartTest >> testMarginTop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testNumberFormatter [
+HighchartsChartTest >> testSetNumberFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +355,7 @@ HighchartsChartTest >> testNumberFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPanKey [
+HighchartsChartTest >> testSetPanKey [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +369,7 @@ HighchartsChartTest >> testPanKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testParallelCoordinates [
+HighchartsChartTest >> testSetParallelCoordinates [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +383,7 @@ HighchartsChartTest >> testParallelCoordinates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPinchType [
+HighchartsChartTest >> testSetPinchType [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +397,7 @@ HighchartsChartTest >> testPinchType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPlotBackgroundColor [
+HighchartsChartTest >> testSetPlotBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +411,7 @@ HighchartsChartTest >> testPlotBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPlotBackgroundImage [
+HighchartsChartTest >> testSetPlotBackgroundImage [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +425,7 @@ HighchartsChartTest >> testPlotBackgroundImage [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPlotBorderColor [
+HighchartsChartTest >> testSetPlotBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +439,7 @@ HighchartsChartTest >> testPlotBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPlotBorderWidth [
+HighchartsChartTest >> testSetPlotBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +453,7 @@ HighchartsChartTest >> testPlotBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPlotShadow [
+HighchartsChartTest >> testSetPlotShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +467,7 @@ HighchartsChartTest >> testPlotShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testPolar [
+HighchartsChartTest >> testSetPolar [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +481,7 @@ HighchartsChartTest >> testPolar [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testReflow [
+HighchartsChartTest >> testSetReflow [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +495,7 @@ HighchartsChartTest >> testReflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testRenderTo [
+HighchartsChartTest >> testSetRenderTo [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +509,7 @@ HighchartsChartTest >> testRenderTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testSelectionMarkerFill [
+HighchartsChartTest >> testSetSelectionMarkerFill [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +523,7 @@ HighchartsChartTest >> testSelectionMarkerFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testShadow [
+HighchartsChartTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +537,7 @@ HighchartsChartTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testShowAxes [
+HighchartsChartTest >> testSetShowAxes [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +551,7 @@ HighchartsChartTest >> testShowAxes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testSpacing [
+HighchartsChartTest >> testSetSpacing [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +565,7 @@ HighchartsChartTest >> testSpacing [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testSpacingBottom [
+HighchartsChartTest >> testSetSpacingBottom [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +579,7 @@ HighchartsChartTest >> testSpacingBottom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testSpacingLeft [
+HighchartsChartTest >> testSetSpacingLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +593,7 @@ HighchartsChartTest >> testSpacingLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testSpacingRight [
+HighchartsChartTest >> testSetSpacingRight [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +607,7 @@ HighchartsChartTest >> testSpacingRight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testSpacingTop [
+HighchartsChartTest >> testSetSpacingTop [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +621,7 @@ HighchartsChartTest >> testSpacingTop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testStyle [
+HighchartsChartTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +635,7 @@ HighchartsChartTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testStyledMode [
+HighchartsChartTest >> testSetStyledMode [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +649,7 @@ HighchartsChartTest >> testStyledMode [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testType [
+HighchartsChartTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +663,7 @@ HighchartsChartTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testWidth [
+HighchartsChartTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +677,7 @@ HighchartsChartTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testZoomKey [
+HighchartsChartTest >> testSetZoomKey [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +691,7 @@ HighchartsChartTest >> testZoomKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartTest >> testZoomType [
+HighchartsChartTest >> testSetZoomType [
 
 	| component javascript expectedConfiguration |
 

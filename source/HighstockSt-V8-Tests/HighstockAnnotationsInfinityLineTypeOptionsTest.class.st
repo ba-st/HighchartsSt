@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineTypeOptionsTest >> testXAxis [
+HighstockAnnotationsInfinityLineTypeOptionsTest >> testGetLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsInfinityLineTypeOptions new.
+	component line.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'line' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsInfinityLineTypeOptionsTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsInfinityLineTypeOptions new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsInfinityLineTypeOptionsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockAnnotationsInfinityLineTypeOptionsTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsInfinityLineTypeOptionsTest >> testYAxis [
+HighstockAnnotationsInfinityLineTypeOptionsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

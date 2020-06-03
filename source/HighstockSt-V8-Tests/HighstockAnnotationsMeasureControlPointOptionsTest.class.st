@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureControlPointOptionsTest >> testEvents [
+HighstockAnnotationsMeasureControlPointOptionsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testAlign [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testColor [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testEnabled [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testHeight [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testInside [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testLineColor [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testLineWidth [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testRadius [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSymbol [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testWidth [
+HighchartsPlotOptionsPyramidConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

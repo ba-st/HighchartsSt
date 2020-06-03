@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeLabelTest >> testBoxesToAvoid [
+HighstockPlotOptionsArearangeLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsArearangeLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsArearangeLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsArearangeLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeLabelTest >> testConnectorAllowed [
+HighstockPlotOptionsArearangeLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsArearangeLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeLabelTest >> testConnectorNeighbourDistance [
+HighstockPlotOptionsArearangeLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsArearangeLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeLabelTest >> testEnabled [
+HighstockPlotOptionsArearangeLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighstockPlotOptionsArearangeLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeLabelTest >> testMaxFontSize [
+HighstockPlotOptionsArearangeLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsArearangeLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsArearangeLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsArearangeLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsArearangeLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsArearangeLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeLabelTest >> testMinFontSize [
+HighstockPlotOptionsArearangeLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsArearangeLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsArearangeLabelTest >> testOnArea [
+HighstockPlotOptionsArearangeLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

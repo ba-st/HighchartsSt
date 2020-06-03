@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleConnectorsTest >> testDashStyle [
+HighstockSeriesBubbleConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesBubbleConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesBubbleConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesBubbleConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesBubbleConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesBubbleConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesBubbleConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesBubbleConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleConnectorsTest >> testLineColor [
+HighstockSeriesBubbleConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesBubbleConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleConnectorsTest >> testLineWidth [
+HighstockSeriesBubbleConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesBubbleConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleConnectorsTest >> testType [
+HighstockSeriesBubbleConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

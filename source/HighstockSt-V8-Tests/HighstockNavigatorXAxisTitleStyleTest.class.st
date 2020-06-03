@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisTitleStyleTest >> testColor [
+HighstockNavigatorXAxisTitleStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 

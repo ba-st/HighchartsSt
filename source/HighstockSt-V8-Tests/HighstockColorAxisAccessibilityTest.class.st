@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisAccessibilityTest >> testDescription [
+HighstockColorAxisAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockColorAxisAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisAccessibilityTest >> testEnabled [
+HighstockColorAxisAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockColorAxisAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisAccessibilityTest >> testRangeDescription [
+HighstockColorAxisAccessibilityTest >> testSetRangeDescription [
 
 	| component javascript expectedConfiguration |
 

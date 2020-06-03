@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testEnabled [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testFillColor [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testHeight [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testLineColor [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testLineWidth [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testRadius [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSymbol [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testWidth [
+HighchartsPlotOptionsBellcurveStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

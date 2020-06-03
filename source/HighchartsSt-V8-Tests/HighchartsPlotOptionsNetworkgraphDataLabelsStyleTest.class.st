@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 
@@ -56,6 +56,20 @@ HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testTextOutline [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'textOutline' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphDataLabelsStyleTest >> testSetTransition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraphDataLabelsStyle new.
+	component transition: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'transition' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

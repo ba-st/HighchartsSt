@@ -16,10 +16,18 @@ HighchartsSeriesOrganizationLevelsStatesInactive >> animation [
 ]
 
 { #category : #accessing }
+HighchartsSeriesOrganizationLevelsStatesInactive >> enabled: aBoolean [
+
+	"Enable or disable the inactive state for a series
+Defaults to true."
+
+	configurationOptions at: 'enabled' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsSeriesOrganizationLevelsStatesInactive >> linkOpacity: aNumber [
 
-	"Opacity for the links between nodes in the sankey diagram in
-inactive mode.
+	"Opacity for the links between nodes in the sankey diagram in inactive mode.
 Defaults to 0.1."
 
 	configurationOptions at: 'linkOpacity' put: aNumber
@@ -28,8 +36,7 @@ Defaults to 0.1."
 { #category : #accessing }
 HighchartsSeriesOrganizationLevelsStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area). Set to 1
-to disable inactive state.
+	"Opacity of series elements (dataLabels, line, area).
 Defaults to 0.1."
 
 	configurationOptions at: 'opacity' put: aNumber

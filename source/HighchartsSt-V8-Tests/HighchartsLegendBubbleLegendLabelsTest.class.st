@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testAlign [
+HighchartsLegendBubbleLegendLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLegendBubbleLegendLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testAllowOverlap [
+HighchartsLegendBubbleLegendLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLegendBubbleLegendLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testClassName [
+HighchartsLegendBubbleLegendLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLegendBubbleLegendLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testFormat [
+HighchartsLegendBubbleLegendLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLegendBubbleLegendLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testFormatter [
+HighchartsLegendBubbleLegendLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsLegendBubbleLegendLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testStyle [
+HighchartsLegendBubbleLegendLabelsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsLegendBubbleLegendLabelsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testX [
+HighchartsLegendBubbleLegendLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsLegendBubbleLegendLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendBubbleLegendLabelsTest >> testY [
+HighchartsLegendBubbleLegendLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

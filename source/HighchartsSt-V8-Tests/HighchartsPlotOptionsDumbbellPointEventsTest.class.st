@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testClick [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testDrag [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testDragStart [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testDrop [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testRemove [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testSelect [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testUnselect [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsDumbbellPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellPointEventsTest >> testUpdate [
+HighchartsPlotOptionsDumbbellPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

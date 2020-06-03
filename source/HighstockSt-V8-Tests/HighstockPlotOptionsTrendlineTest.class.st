@@ -5,7 +5,203 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testAllowPointSelect [
+HighstockPlotOptionsTrendlineTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +215,7 @@ HighstockPlotOptionsTrendlineTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testAnimationLimit [
+HighstockPlotOptionsTrendlineTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +229,7 @@ HighstockPlotOptionsTrendlineTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testBoostBlending [
+HighstockPlotOptionsTrendlineTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +243,7 @@ HighstockPlotOptionsTrendlineTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testBoostThreshold [
+HighstockPlotOptionsTrendlineTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +257,7 @@ HighstockPlotOptionsTrendlineTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testBorderColor [
+HighstockPlotOptionsTrendlineTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +271,7 @@ HighstockPlotOptionsTrendlineTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testBorderWidth [
+HighstockPlotOptionsTrendlineTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +285,7 @@ HighstockPlotOptionsTrendlineTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testClassName [
+HighstockPlotOptionsTrendlineTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +299,7 @@ HighstockPlotOptionsTrendlineTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testClip [
+HighstockPlotOptionsTrendlineTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +313,7 @@ HighstockPlotOptionsTrendlineTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testColor [
+HighstockPlotOptionsTrendlineTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +327,7 @@ HighstockPlotOptionsTrendlineTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testColorIndex [
+HighstockPlotOptionsTrendlineTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +341,7 @@ HighstockPlotOptionsTrendlineTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testColorKey [
+HighstockPlotOptionsTrendlineTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +355,7 @@ HighstockPlotOptionsTrendlineTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testCompare [
+HighstockPlotOptionsTrendlineTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +369,7 @@ HighstockPlotOptionsTrendlineTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testCompareBase [
+HighstockPlotOptionsTrendlineTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +383,7 @@ HighstockPlotOptionsTrendlineTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testCompareStart [
+HighstockPlotOptionsTrendlineTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +397,7 @@ HighstockPlotOptionsTrendlineTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testCompareToMain [
+HighstockPlotOptionsTrendlineTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,7 @@ HighstockPlotOptionsTrendlineTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testConnectEnds [
+HighstockPlotOptionsTrendlineTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +425,7 @@ HighstockPlotOptionsTrendlineTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testConnectNulls [
+HighstockPlotOptionsTrendlineTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,21 @@ HighstockPlotOptionsTrendlineTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testCropThreshold [
+HighstockPlotOptionsTrendlineTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockPlotOptionsTrendlineTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testCursor [
+HighstockPlotOptionsTrendlineTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,21 @@ HighstockPlotOptionsTrendlineTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testDashStyle [
+HighstockPlotOptionsTrendlineTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsTrendline new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsTrendlineTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +509,7 @@ HighstockPlotOptionsTrendlineTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testDescription [
+HighstockPlotOptionsTrendlineTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +523,7 @@ HighstockPlotOptionsTrendlineTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testEnableMouseTracking [
+HighstockPlotOptionsTrendlineTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +537,7 @@ HighstockPlotOptionsTrendlineTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testEvents [
+HighstockPlotOptionsTrendlineTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +551,7 @@ HighstockPlotOptionsTrendlineTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testFindNearestPointBy [
+HighstockPlotOptionsTrendlineTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +565,7 @@ HighstockPlotOptionsTrendlineTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testGapSize [
+HighstockPlotOptionsTrendlineTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +579,7 @@ HighstockPlotOptionsTrendlineTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testGapUnit [
+HighstockPlotOptionsTrendlineTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +593,7 @@ HighstockPlotOptionsTrendlineTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testGetExtremesFromAll [
+HighstockPlotOptionsTrendlineTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +607,7 @@ HighstockPlotOptionsTrendlineTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testIncludeInDataExport [
+HighstockPlotOptionsTrendlineTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +621,7 @@ HighstockPlotOptionsTrendlineTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testLineWidth [
+HighstockPlotOptionsTrendlineTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +635,7 @@ HighstockPlotOptionsTrendlineTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testLinecap [
+HighstockPlotOptionsTrendlineTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +649,7 @@ HighstockPlotOptionsTrendlineTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testLinkedTo [
+HighstockPlotOptionsTrendlineTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +663,7 @@ HighstockPlotOptionsTrendlineTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testName [
+HighstockPlotOptionsTrendlineTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +677,7 @@ HighstockPlotOptionsTrendlineTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testNegativeColor [
+HighstockPlotOptionsTrendlineTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +691,7 @@ HighstockPlotOptionsTrendlineTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testOpacity [
+HighstockPlotOptionsTrendlineTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +705,7 @@ HighstockPlotOptionsTrendlineTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsTrendlineTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +719,7 @@ HighstockPlotOptionsTrendlineTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testSelected [
+HighstockPlotOptionsTrendlineTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +733,7 @@ HighstockPlotOptionsTrendlineTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testShadow [
+HighstockPlotOptionsTrendlineTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +747,7 @@ HighstockPlotOptionsTrendlineTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testShowCheckbox [
+HighstockPlotOptionsTrendlineTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +761,7 @@ HighstockPlotOptionsTrendlineTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testShowInLegend [
+HighstockPlotOptionsTrendlineTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +775,7 @@ HighstockPlotOptionsTrendlineTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsTrendlineTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +789,7 @@ HighstockPlotOptionsTrendlineTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testSoftThreshold [
+HighstockPlotOptionsTrendlineTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +803,7 @@ HighstockPlotOptionsTrendlineTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testStates [
+HighstockPlotOptionsTrendlineTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +817,7 @@ HighstockPlotOptionsTrendlineTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testStep [
+HighstockPlotOptionsTrendlineTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +831,7 @@ HighstockPlotOptionsTrendlineTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testStickyTracking [
+HighstockPlotOptionsTrendlineTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +845,7 @@ HighstockPlotOptionsTrendlineTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testThreshold [
+HighstockPlotOptionsTrendlineTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +859,7 @@ HighstockPlotOptionsTrendlineTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testTurboThreshold [
+HighstockPlotOptionsTrendlineTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +873,7 @@ HighstockPlotOptionsTrendlineTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testVisible [
+HighstockPlotOptionsTrendlineTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +887,7 @@ HighstockPlotOptionsTrendlineTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testZIndex [
+HighstockPlotOptionsTrendlineTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +901,7 @@ HighstockPlotOptionsTrendlineTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineTest >> testZoneAxis [
+HighstockPlotOptionsTrendlineTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

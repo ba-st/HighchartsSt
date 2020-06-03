@@ -7,13 +7,8 @@ Class {
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsVerticalLabels >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'verticalCounter',
-  'verticalLabel',
-  'verticalArrow'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'verticalCounter',   'verticalLabel',   'verticalArrow' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

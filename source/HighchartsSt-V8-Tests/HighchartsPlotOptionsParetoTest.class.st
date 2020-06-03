@@ -5,7 +5,175 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testAllowPointSelect [
+HighchartsPlotOptionsParetoTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +187,7 @@ HighchartsPlotOptionsParetoTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testAnimationLimit [
+HighchartsPlotOptionsParetoTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +201,7 @@ HighchartsPlotOptionsParetoTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testBoostBlending [
+HighchartsPlotOptionsParetoTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +215,7 @@ HighchartsPlotOptionsParetoTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testClassName [
+HighchartsPlotOptionsParetoTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +229,7 @@ HighchartsPlotOptionsParetoTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testClip [
+HighchartsPlotOptionsParetoTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +243,7 @@ HighchartsPlotOptionsParetoTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testColor [
+HighchartsPlotOptionsParetoTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +257,7 @@ HighchartsPlotOptionsParetoTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testColorIndex [
+HighchartsPlotOptionsParetoTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +271,7 @@ HighchartsPlotOptionsParetoTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testColorKey [
+HighchartsPlotOptionsParetoTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +285,7 @@ HighchartsPlotOptionsParetoTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testCompare [
+HighchartsPlotOptionsParetoTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +299,7 @@ HighchartsPlotOptionsParetoTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testCompareBase [
+HighchartsPlotOptionsParetoTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +313,7 @@ HighchartsPlotOptionsParetoTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testCompareStart [
+HighchartsPlotOptionsParetoTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +327,7 @@ HighchartsPlotOptionsParetoTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testConnectEnds [
+HighchartsPlotOptionsParetoTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +341,7 @@ HighchartsPlotOptionsParetoTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testConnectNulls [
+HighchartsPlotOptionsParetoTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +355,7 @@ HighchartsPlotOptionsParetoTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testCropThreshold [
+HighchartsPlotOptionsParetoTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +369,7 @@ HighchartsPlotOptionsParetoTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testCursor [
+HighchartsPlotOptionsParetoTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +383,21 @@ HighchartsPlotOptionsParetoTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testDashStyle [
+HighchartsPlotOptionsParetoTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPareto new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsParetoTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +411,7 @@ HighchartsPlotOptionsParetoTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testDescription [
+HighchartsPlotOptionsParetoTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +425,7 @@ HighchartsPlotOptionsParetoTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testEnableMouseTracking [
+HighchartsPlotOptionsParetoTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighchartsPlotOptionsParetoTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testEvents [
+HighchartsPlotOptionsParetoTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighchartsPlotOptionsParetoTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsParetoTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighchartsPlotOptionsParetoTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testIncludeInDataExport [
+HighchartsPlotOptionsParetoTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighchartsPlotOptionsParetoTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testJoinBy [
+HighchartsPlotOptionsParetoTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighchartsPlotOptionsParetoTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testLineWidth [
+HighchartsPlotOptionsParetoTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighchartsPlotOptionsParetoTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testLinecap [
+HighchartsPlotOptionsParetoTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighchartsPlotOptionsParetoTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testLinkedTo [
+HighchartsPlotOptionsParetoTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighchartsPlotOptionsParetoTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testNavigatorOptions [
+HighchartsPlotOptionsParetoTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighchartsPlotOptionsParetoTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testOpacity [
+HighchartsPlotOptionsParetoTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighchartsPlotOptionsParetoTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsParetoTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighchartsPlotOptionsParetoTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testSelected [
+HighchartsPlotOptionsParetoTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighchartsPlotOptionsParetoTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testShowCheckbox [
+HighchartsPlotOptionsParetoTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighchartsPlotOptionsParetoTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testShowInLegend [
+HighchartsPlotOptionsParetoTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighchartsPlotOptionsParetoTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testShowInNavigator [
+HighchartsPlotOptionsParetoTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighchartsPlotOptionsParetoTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsParetoTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighchartsPlotOptionsParetoTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testStates [
+HighchartsPlotOptionsParetoTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighchartsPlotOptionsParetoTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testStickyTracking [
+HighchartsPlotOptionsParetoTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighchartsPlotOptionsParetoTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testTurboThreshold [
+HighchartsPlotOptionsParetoTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighchartsPlotOptionsParetoTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testUseOhlcData [
+HighchartsPlotOptionsParetoTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighchartsPlotOptionsParetoTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testVisible [
+HighchartsPlotOptionsParetoTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighchartsPlotOptionsParetoTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoTest >> testZIndex [
+HighchartsPlotOptionsParetoTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

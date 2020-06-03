@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverTest >> testBorderColor [
+HighstockSeriesSupertrendStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSupertrendStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSupertrendStatesHoverTest >> testGetHalo [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSupertrendStatesHover new.
+	component halo.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'halo' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSupertrendStatesHoverTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesSupertrendStatesHover new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesSupertrendStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesSupertrendStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverTest >> testBorderWidth [
+HighstockSeriesSupertrendStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesSupertrendStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverTest >> testBrightness [
+HighstockSeriesSupertrendStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesSupertrendStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverTest >> testColor [
+HighstockSeriesSupertrendStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesSupertrendStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverTest >> testEnabled [
+HighstockSeriesSupertrendStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesSupertrendStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverTest >> testLineWidth [
+HighstockSeriesSupertrendStatesHoverTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesSupertrendStatesHoverTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendStatesHoverTest >> testLineWidthPlus [
+HighstockSeriesSupertrendStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

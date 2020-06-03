@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testAlign [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testColor [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testEnabled [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testHeight [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testInside [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testLineColor [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testLineWidth [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testRadius [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSymbol [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testWidth [
+HighchartsPlotOptionsDumbbellConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

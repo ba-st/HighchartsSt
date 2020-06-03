@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testFill [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptionsShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testHeight [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testR [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSnap [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStroke [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptionsShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStrokeWidth [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testType [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testWidth [
+HighstockNavigationAnnotationsOptionsShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

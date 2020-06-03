@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsEmaStatesInactiveTest >> testOpacity [
+HighstockPlotOptionsEmaStatesInactiveTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsEmaStatesInactive new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsEmaStatesInactiveTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsEmaStatesInactive new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsEmaStatesInactiveTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 

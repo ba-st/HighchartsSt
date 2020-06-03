@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testApproximation [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPolygonDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPolygonDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testEnabled [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPolygonDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testForced [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPolygonDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPolygonDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPolygonDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsPolygonDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDataGroupingTest >> testUnits [
+HighstockPlotOptionsPolygonDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

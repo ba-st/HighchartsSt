@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testClick [
+HighchartsSeriesAreaPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesAreaPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testDrag [
+HighchartsSeriesAreaPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesAreaPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testDragStart [
+HighchartsSeriesAreaPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesAreaPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testDrop [
+HighchartsSeriesAreaPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesAreaPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testMouseOut [
+HighchartsSeriesAreaPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesAreaPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testMouseOver [
+HighchartsSeriesAreaPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesAreaPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testRemove [
+HighchartsSeriesAreaPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesAreaPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testSelect [
+HighchartsSeriesAreaPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesAreaPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testUnselect [
+HighchartsSeriesAreaPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesAreaPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaPointEventsTest >> testUpdate [
+HighchartsSeriesAreaPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

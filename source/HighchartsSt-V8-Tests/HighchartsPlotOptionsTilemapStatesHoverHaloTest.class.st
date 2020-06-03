@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testEnabled [
+HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testGetAttributes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTilemapStatesHoverHalo new.
+	component attributes.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'attributes' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testOpacity [
+HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testSize [
+HighchartsPlotOptionsTilemapStatesHoverHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

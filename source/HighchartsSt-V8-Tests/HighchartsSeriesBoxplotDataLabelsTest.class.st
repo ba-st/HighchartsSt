@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testAlign [
+HighchartsSeriesBoxplotDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBoxplotDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesBoxplotDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testAllowOverlap [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testBackgroundColor [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testBorderColor [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testBorderRadius [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testBorderWidth [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testClassName [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testColor [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testCrop [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testDefer [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testEnabled [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testFormat [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testFormatter [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testInside [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testNullFormat [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testNullFormatter [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testOverflow [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testPadding [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testPosition [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testRotation [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testShadow [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testShape [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testUseHTML [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testX [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testY [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsSeriesBoxplotDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotDataLabelsTest >> testZ [
+HighchartsSeriesBoxplotDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

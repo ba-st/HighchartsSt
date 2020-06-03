@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testAlign [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testColor [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testEnabled [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testHeight [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testInside [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testLineColor [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testLineWidth [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testRadius [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSymbol [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testWidth [
+HighstockPlotOptionsColumnpyramidConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

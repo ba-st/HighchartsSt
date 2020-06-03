@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testApproximation [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesDependencywheelDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesDependencywheelDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testEnabled [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesDependencywheelDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testForced [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesDependencywheelDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testGroupAll [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesDependencywheelDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testGroupPixelWidth [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesDependencywheelDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testSmoothed [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesDependencywheelDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelDataGroupingTest >> testUnits [
+HighchartsSeriesDependencywheelDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

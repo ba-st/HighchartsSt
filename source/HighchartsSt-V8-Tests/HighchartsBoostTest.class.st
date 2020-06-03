@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsBoostTest >> testAllowForce [
+HighchartsBoostTest >> testGetDebug [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsBoost new.
+	component debug.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'debug' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsBoostTest >> testSetAllowForce [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsBoostTest >> testAllowForce [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsBoostTest >> testEnabled [
+HighchartsBoostTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsBoostTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsBoostTest >> testSeriesThreshold [
+HighchartsBoostTest >> testSetSeriesThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsBoostTest >> testSeriesThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsBoostTest >> testUseGPUTranslations [
+HighchartsBoostTest >> testSetUseGPUTranslations [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsBoostTest >> testUseGPUTranslations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsBoostTest >> testUsePreallocated [
+HighchartsBoostTest >> testSetUsePreallocated [
 
 	| component javascript expectedConfiguration |
 

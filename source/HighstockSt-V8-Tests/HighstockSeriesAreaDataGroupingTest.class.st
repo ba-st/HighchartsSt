@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testApproximation [
+HighstockSeriesAreaDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAreaDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesAreaDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAreaDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testEnabled [
+HighstockSeriesAreaDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAreaDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testForced [
+HighstockSeriesAreaDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAreaDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testGroupAll [
+HighstockSeriesAreaDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAreaDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesAreaDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAreaDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testSmoothed [
+HighstockSeriesAreaDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAreaDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreaDataGroupingTest >> testUnits [
+HighstockSeriesAreaDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

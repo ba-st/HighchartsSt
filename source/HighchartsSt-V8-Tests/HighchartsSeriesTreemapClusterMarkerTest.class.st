@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testEnabled [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTreemapClusterMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testFillColor [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTreemapClusterMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testHeight [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTreemapClusterMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testLineColor [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTreemapClusterMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testLineWidth [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesTreemapClusterMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testRadius [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesTreemapClusterMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testSymbol [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesTreemapClusterMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapClusterMarkerTest >> testWidth [
+HighchartsSeriesTreemapClusterMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

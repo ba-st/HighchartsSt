@@ -5,7 +5,217 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testAllAreas [
+HighchartsSeriesPackedbubbleTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetLayoutAlgorithm [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component layoutAlgorithm.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'layoutAlgorithm' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +230,7 @@ HighchartsSeriesPackedbubbleTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testAllowPointSelect [
+HighchartsSeriesPackedbubbleTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +245,7 @@ HighchartsSeriesPackedbubbleTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testAnimationLimit [
+HighchartsSeriesPackedbubbleTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +260,7 @@ HighchartsSeriesPackedbubbleTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testBoostBlending [
+HighchartsSeriesPackedbubbleTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +275,7 @@ HighchartsSeriesPackedbubbleTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testBoostThreshold [
+HighchartsSeriesPackedbubbleTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +290,7 @@ HighchartsSeriesPackedbubbleTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testBorderColor [
+HighchartsSeriesPackedbubbleTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +305,7 @@ HighchartsSeriesPackedbubbleTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testBorderWidth [
+HighchartsSeriesPackedbubbleTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +320,7 @@ HighchartsSeriesPackedbubbleTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testClassName [
+HighchartsSeriesPackedbubbleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +335,7 @@ HighchartsSeriesPackedbubbleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testClip [
+HighchartsSeriesPackedbubbleTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +350,7 @@ HighchartsSeriesPackedbubbleTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testColor [
+HighchartsSeriesPackedbubbleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +365,7 @@ HighchartsSeriesPackedbubbleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testColorAxis [
+HighchartsSeriesPackedbubbleTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +380,7 @@ HighchartsSeriesPackedbubbleTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testColorIndex [
+HighchartsSeriesPackedbubbleTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +395,7 @@ HighchartsSeriesPackedbubbleTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testColorKey [
+HighchartsSeriesPackedbubbleTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +410,52 @@ HighchartsSeriesPackedbubbleTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testConnectEnds [
+HighchartsSeriesPackedbubbleTest >> testSetCompare [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component compare: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'compare' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetCompareBase [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component compareBase: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'compareBase' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetCompareStart [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component compareStart: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'compareStart' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +470,7 @@ HighchartsSeriesPackedbubbleTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testConnectNulls [
+HighchartsSeriesPackedbubbleTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +485,22 @@ HighchartsSeriesPackedbubbleTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testCropThreshold [
+HighchartsSeriesPackedbubbleTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +515,7 @@ HighchartsSeriesPackedbubbleTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testCursor [
+HighchartsSeriesPackedbubbleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +530,22 @@ HighchartsSeriesPackedbubbleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testDashStyle [
+HighchartsSeriesPackedbubbleTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +560,7 @@ HighchartsSeriesPackedbubbleTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testData [
+HighchartsSeriesPackedbubbleTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +575,7 @@ HighchartsSeriesPackedbubbleTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testDescription [
+HighchartsSeriesPackedbubbleTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +590,7 @@ HighchartsSeriesPackedbubbleTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testDisplayNegative [
+HighchartsSeriesPackedbubbleTest >> testSetDisplayNegative [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +605,7 @@ HighchartsSeriesPackedbubbleTest >> testDisplayNegative [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testDraggable [
+HighchartsSeriesPackedbubbleTest >> testSetDraggable [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +620,7 @@ HighchartsSeriesPackedbubbleTest >> testDraggable [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testEnableMouseTracking [
+HighchartsSeriesPackedbubbleTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +635,7 @@ HighchartsSeriesPackedbubbleTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testEvents [
+HighchartsSeriesPackedbubbleTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +650,7 @@ HighchartsSeriesPackedbubbleTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testFindNearestPointBy [
+HighchartsSeriesPackedbubbleTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +665,37 @@ HighchartsSeriesPackedbubbleTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testGetExtremesFromAll [
+HighchartsSeriesPackedbubbleTest >> testSetGapSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component gapSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'gapSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetGapUnit [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component gapUnit: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'gapUnit' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +710,7 @@ HighchartsSeriesPackedbubbleTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testId [
+HighchartsSeriesPackedbubbleTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +725,7 @@ HighchartsSeriesPackedbubbleTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testIncludeInDataExport [
+HighchartsSeriesPackedbubbleTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +740,7 @@ HighchartsSeriesPackedbubbleTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testIndex [
+HighchartsSeriesPackedbubbleTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +755,7 @@ HighchartsSeriesPackedbubbleTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testJoinBy [
+HighchartsSeriesPackedbubbleTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +770,7 @@ HighchartsSeriesPackedbubbleTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testKeys [
+HighchartsSeriesPackedbubbleTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +785,7 @@ HighchartsSeriesPackedbubbleTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testLegendIndex [
+HighchartsSeriesPackedbubbleTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +800,7 @@ HighchartsSeriesPackedbubbleTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testLineWidth [
+HighchartsSeriesPackedbubbleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +815,7 @@ HighchartsSeriesPackedbubbleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testLinecap [
+HighchartsSeriesPackedbubbleTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +830,7 @@ HighchartsSeriesPackedbubbleTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testLinkedTo [
+HighchartsSeriesPackedbubbleTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +845,7 @@ HighchartsSeriesPackedbubbleTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testMapData [
+HighchartsSeriesPackedbubbleTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +860,7 @@ HighchartsSeriesPackedbubbleTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testMaxSize [
+HighchartsSeriesPackedbubbleTest >> testSetMaxSize [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +875,7 @@ HighchartsSeriesPackedbubbleTest >> testMaxSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testMinSize [
+HighchartsSeriesPackedbubbleTest >> testSetMinSize [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +890,7 @@ HighchartsSeriesPackedbubbleTest >> testMinSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testName [
+HighchartsSeriesPackedbubbleTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +905,22 @@ HighchartsSeriesPackedbubbleTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testNegativeColor [
+HighchartsSeriesPackedbubbleTest >> testSetNavigatorOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component navigatorOptions: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'navigatorOptions' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +935,7 @@ HighchartsSeriesPackedbubbleTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testOpacity [
+HighchartsSeriesPackedbubbleTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +950,7 @@ HighchartsSeriesPackedbubbleTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testPointDescriptionFormatter [
+HighchartsSeriesPackedbubbleTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +965,7 @@ HighchartsSeriesPackedbubbleTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testPointInterval [
+HighchartsSeriesPackedbubbleTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +980,7 @@ HighchartsSeriesPackedbubbleTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testPointIntervalUnit [
+HighchartsSeriesPackedbubbleTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +995,7 @@ HighchartsSeriesPackedbubbleTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testPointPlacement [
+HighchartsSeriesPackedbubbleTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +1010,22 @@ HighchartsSeriesPackedbubbleTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testPointStart [
+HighchartsSeriesPackedbubbleTest >> testSetPointRange [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component pointRange: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'pointRange' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +1040,7 @@ HighchartsSeriesPackedbubbleTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testSelected [
+HighchartsSeriesPackedbubbleTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +1055,7 @@ HighchartsSeriesPackedbubbleTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testShadow [
+HighchartsSeriesPackedbubbleTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +1070,7 @@ HighchartsSeriesPackedbubbleTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testShowCheckbox [
+HighchartsSeriesPackedbubbleTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +1085,7 @@ HighchartsSeriesPackedbubbleTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testShowInLegend [
+HighchartsSeriesPackedbubbleTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1100,22 @@ HighchartsSeriesPackedbubbleTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testSizeBy [
+HighchartsSeriesPackedbubbleTest >> testSetShowInNavigator [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubble new.
+	component showInNavigator: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'packedbubble';
+		at: 'showInNavigator' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleTest >> testSetSizeBy [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1130,7 @@ HighchartsSeriesPackedbubbleTest >> testSizeBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testSkipKeyboardNavigation [
+HighchartsSeriesPackedbubbleTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1145,7 @@ HighchartsSeriesPackedbubbleTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testSoftThreshold [
+HighchartsSeriesPackedbubbleTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1160,7 @@ HighchartsSeriesPackedbubbleTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testStacking [
+HighchartsSeriesPackedbubbleTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1175,7 @@ HighchartsSeriesPackedbubbleTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testStates [
+HighchartsSeriesPackedbubbleTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1190,7 @@ HighchartsSeriesPackedbubbleTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testStep [
+HighchartsSeriesPackedbubbleTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1205,7 @@ HighchartsSeriesPackedbubbleTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testStickyTracking [
+HighchartsSeriesPackedbubbleTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1220,7 @@ HighchartsSeriesPackedbubbleTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testThreshold [
+HighchartsSeriesPackedbubbleTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1235,7 @@ HighchartsSeriesPackedbubbleTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testTurboThreshold [
+HighchartsSeriesPackedbubbleTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1250,7 @@ HighchartsSeriesPackedbubbleTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testType [
+HighchartsSeriesPackedbubbleTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1265,7 @@ HighchartsSeriesPackedbubbleTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testUseSimulation [
+HighchartsSeriesPackedbubbleTest >> testSetUseSimulation [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1280,7 @@ HighchartsSeriesPackedbubbleTest >> testUseSimulation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testVisible [
+HighchartsSeriesPackedbubbleTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1295,7 @@ HighchartsSeriesPackedbubbleTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testXAxis [
+HighchartsSeriesPackedbubbleTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1310,7 @@ HighchartsSeriesPackedbubbleTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testYAxis [
+HighchartsSeriesPackedbubbleTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1325,7 @@ HighchartsSeriesPackedbubbleTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testZIndex [
+HighchartsSeriesPackedbubbleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1340,7 @@ HighchartsSeriesPackedbubbleTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testZThreshold [
+HighchartsSeriesPackedbubbleTest >> testSetZThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1355,7 @@ HighchartsSeriesPackedbubbleTest >> testZThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleTest >> testZoneAxis [
+HighchartsSeriesPackedbubbleTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

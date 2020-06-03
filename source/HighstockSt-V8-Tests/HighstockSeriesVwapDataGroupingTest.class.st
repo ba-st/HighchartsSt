@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testApproximation [
+HighstockSeriesVwapDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesVwapDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesVwapDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesVwapDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testEnabled [
+HighstockSeriesVwapDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesVwapDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testForced [
+HighstockSeriesVwapDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesVwapDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testGroupAll [
+HighstockSeriesVwapDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesVwapDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesVwapDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesVwapDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testSmoothed [
+HighstockSeriesVwapDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesVwapDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVwapDataGroupingTest >> testUnits [
+HighstockSeriesVwapDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

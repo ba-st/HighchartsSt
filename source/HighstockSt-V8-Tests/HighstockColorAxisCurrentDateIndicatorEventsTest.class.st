@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorEventsTest >> testClick [
+HighstockColorAxisCurrentDateIndicatorEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockColorAxisCurrentDateIndicatorEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorEventsTest >> testMousemove [
+HighstockColorAxisCurrentDateIndicatorEventsTest >> testSetMousemove [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockColorAxisCurrentDateIndicatorEventsTest >> testMousemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorEventsTest >> testMouseout [
+HighstockColorAxisCurrentDateIndicatorEventsTest >> testSetMouseout [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockColorAxisCurrentDateIndicatorEventsTest >> testMouseout [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorEventsTest >> testMouseover [
+HighstockColorAxisCurrentDateIndicatorEventsTest >> testSetMouseover [
 
 	| component javascript expectedConfiguration |
 

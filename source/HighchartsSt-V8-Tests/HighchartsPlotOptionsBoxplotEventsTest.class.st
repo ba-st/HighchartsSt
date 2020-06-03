@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBoxplotEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBoxplotEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testClick [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsBoxplotEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testHide [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsBoxplotEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsBoxplotEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testMouseOut [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsBoxplotEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testMouseOver [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsBoxplotEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotEventsTest >> testShow [
+HighchartsPlotOptionsBoxplotEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

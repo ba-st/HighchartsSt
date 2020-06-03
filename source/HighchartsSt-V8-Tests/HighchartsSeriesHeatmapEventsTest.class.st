@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testAfterAnimate [
+HighchartsSeriesHeatmapEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesHeatmapEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testCheckboxClick [
+HighchartsSeriesHeatmapEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesHeatmapEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testClick [
+HighchartsSeriesHeatmapEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesHeatmapEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testHide [
+HighchartsSeriesHeatmapEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesHeatmapEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testLegendItemClick [
+HighchartsSeriesHeatmapEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesHeatmapEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testMouseOut [
+HighchartsSeriesHeatmapEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesHeatmapEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testMouseOver [
+HighchartsSeriesHeatmapEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesHeatmapEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapEventsTest >> testShow [
+HighchartsSeriesHeatmapEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

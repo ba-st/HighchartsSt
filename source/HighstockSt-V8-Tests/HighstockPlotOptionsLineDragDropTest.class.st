@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDragMaxX [
+HighstockPlotOptionsLineDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLineDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLineDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLineDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLineDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockPlotOptionsLineDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDragMaxY [
+HighstockPlotOptionsLineDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockPlotOptionsLineDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDragMinX [
+HighstockPlotOptionsLineDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockPlotOptionsLineDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDragMinY [
+HighstockPlotOptionsLineDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockPlotOptionsLineDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDragPrecisionX [
+HighstockPlotOptionsLineDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockPlotOptionsLineDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDragPrecisionY [
+HighstockPlotOptionsLineDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockPlotOptionsLineDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDragSensitivity [
+HighstockPlotOptionsLineDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockPlotOptionsLineDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDraggableX [
+HighstockPlotOptionsLineDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockPlotOptionsLineDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testDraggableY [
+HighstockPlotOptionsLineDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockPlotOptionsLineDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testGroupBy [
+HighstockPlotOptionsLineDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockPlotOptionsLineDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLineDragDropTest >> testLiveRedraw [
+HighstockPlotOptionsLineDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

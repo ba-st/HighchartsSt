@@ -5,7 +5,175 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testAllAreas [
+HighstockPlotOptionsColumnpyramidTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +187,7 @@ HighstockPlotOptionsColumnpyramidTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testAllowPointSelect [
+HighstockPlotOptionsColumnpyramidTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +201,7 @@ HighstockPlotOptionsColumnpyramidTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testAnimationLimit [
+HighstockPlotOptionsColumnpyramidTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +215,7 @@ HighstockPlotOptionsColumnpyramidTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testBoostBlending [
+HighstockPlotOptionsColumnpyramidTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +229,7 @@ HighstockPlotOptionsColumnpyramidTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testBorderColor [
+HighstockPlotOptionsColumnpyramidTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +243,7 @@ HighstockPlotOptionsColumnpyramidTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testBorderWidth [
+HighstockPlotOptionsColumnpyramidTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +257,7 @@ HighstockPlotOptionsColumnpyramidTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testClassName [
+HighstockPlotOptionsColumnpyramidTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +271,7 @@ HighstockPlotOptionsColumnpyramidTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testClip [
+HighstockPlotOptionsColumnpyramidTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +285,7 @@ HighstockPlotOptionsColumnpyramidTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testColor [
+HighstockPlotOptionsColumnpyramidTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +299,7 @@ HighstockPlotOptionsColumnpyramidTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testColorAxis [
+HighstockPlotOptionsColumnpyramidTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +313,7 @@ HighstockPlotOptionsColumnpyramidTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testColorByPoint [
+HighstockPlotOptionsColumnpyramidTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +327,7 @@ HighstockPlotOptionsColumnpyramidTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testColorIndex [
+HighstockPlotOptionsColumnpyramidTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +341,7 @@ HighstockPlotOptionsColumnpyramidTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testColorKey [
+HighstockPlotOptionsColumnpyramidTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +355,7 @@ HighstockPlotOptionsColumnpyramidTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testColors [
+HighstockPlotOptionsColumnpyramidTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +369,7 @@ HighstockPlotOptionsColumnpyramidTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testCompare [
+HighstockPlotOptionsColumnpyramidTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +383,7 @@ HighstockPlotOptionsColumnpyramidTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testCompareBase [
+HighstockPlotOptionsColumnpyramidTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +397,7 @@ HighstockPlotOptionsColumnpyramidTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testCompareStart [
+HighstockPlotOptionsColumnpyramidTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +411,7 @@ HighstockPlotOptionsColumnpyramidTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testCropThreshold [
+HighstockPlotOptionsColumnpyramidTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +425,7 @@ HighstockPlotOptionsColumnpyramidTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testCursor [
+HighstockPlotOptionsColumnpyramidTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +439,35 @@ HighstockPlotOptionsColumnpyramidTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testDescription [
+HighstockPlotOptionsColumnpyramidTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnpyramid new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnpyramidTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +481,7 @@ HighstockPlotOptionsColumnpyramidTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testEnableMouseTracking [
+HighstockPlotOptionsColumnpyramidTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +495,7 @@ HighstockPlotOptionsColumnpyramidTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testEvents [
+HighstockPlotOptionsColumnpyramidTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +509,7 @@ HighstockPlotOptionsColumnpyramidTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testFindNearestPointBy [
+HighstockPlotOptionsColumnpyramidTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +523,7 @@ HighstockPlotOptionsColumnpyramidTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testGetExtremesFromAll [
+HighstockPlotOptionsColumnpyramidTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +537,7 @@ HighstockPlotOptionsColumnpyramidTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testGroupPadding [
+HighstockPlotOptionsColumnpyramidTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +551,7 @@ HighstockPlotOptionsColumnpyramidTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testGrouping [
+HighstockPlotOptionsColumnpyramidTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +565,7 @@ HighstockPlotOptionsColumnpyramidTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testIncludeInDataExport [
+HighstockPlotOptionsColumnpyramidTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +579,7 @@ HighstockPlotOptionsColumnpyramidTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testJoinBy [
+HighstockPlotOptionsColumnpyramidTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +593,7 @@ HighstockPlotOptionsColumnpyramidTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testKeys [
+HighstockPlotOptionsColumnpyramidTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +607,7 @@ HighstockPlotOptionsColumnpyramidTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testLinkedTo [
+HighstockPlotOptionsColumnpyramidTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +621,7 @@ HighstockPlotOptionsColumnpyramidTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testMaxPointWidth [
+HighstockPlotOptionsColumnpyramidTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +635,7 @@ HighstockPlotOptionsColumnpyramidTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testMinPointLength [
+HighstockPlotOptionsColumnpyramidTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +649,7 @@ HighstockPlotOptionsColumnpyramidTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testNavigatorOptions [
+HighstockPlotOptionsColumnpyramidTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +663,7 @@ HighstockPlotOptionsColumnpyramidTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testOpacity [
+HighstockPlotOptionsColumnpyramidTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +677,7 @@ HighstockPlotOptionsColumnpyramidTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +691,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointInterval [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +705,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointIntervalUnit [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +719,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointPadding [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +733,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointPlacement [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +747,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointRange [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +761,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointStart [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +775,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testPointWidth [
+HighstockPlotOptionsColumnpyramidTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +789,7 @@ HighstockPlotOptionsColumnpyramidTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testSelected [
+HighstockPlotOptionsColumnpyramidTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +803,7 @@ HighstockPlotOptionsColumnpyramidTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testShadow [
+HighstockPlotOptionsColumnpyramidTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +817,7 @@ HighstockPlotOptionsColumnpyramidTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testShowCheckbox [
+HighstockPlotOptionsColumnpyramidTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +831,7 @@ HighstockPlotOptionsColumnpyramidTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testShowInLegend [
+HighstockPlotOptionsColumnpyramidTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +845,7 @@ HighstockPlotOptionsColumnpyramidTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testShowInNavigator [
+HighstockPlotOptionsColumnpyramidTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +859,7 @@ HighstockPlotOptionsColumnpyramidTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsColumnpyramidTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +873,7 @@ HighstockPlotOptionsColumnpyramidTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testStacking [
+HighstockPlotOptionsColumnpyramidTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +887,7 @@ HighstockPlotOptionsColumnpyramidTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testStates [
+HighstockPlotOptionsColumnpyramidTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +901,7 @@ HighstockPlotOptionsColumnpyramidTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testStickyTracking [
+HighstockPlotOptionsColumnpyramidTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +915,7 @@ HighstockPlotOptionsColumnpyramidTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testTurboThreshold [
+HighstockPlotOptionsColumnpyramidTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +929,7 @@ HighstockPlotOptionsColumnpyramidTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testVisible [
+HighstockPlotOptionsColumnpyramidTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +943,7 @@ HighstockPlotOptionsColumnpyramidTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidTest >> testZIndex [
+HighstockPlotOptionsColumnpyramidTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

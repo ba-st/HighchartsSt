@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testAlign [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testColor [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testEnabled [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testHeight [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testInside [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testLineColor [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testLineWidth [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testRadius [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSymbol [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testWidth [
+HighchartsPlotOptionsWordcloudConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

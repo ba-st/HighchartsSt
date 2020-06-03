@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataSortingTest >> testEnabled [
+HighstockPlotOptionsCandlestickDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCandlestickDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataSortingTest >> testMatchByName [
+HighstockPlotOptionsCandlestickDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsCandlestickDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCandlestickDataSortingTest >> testSortKey [
+HighstockPlotOptionsCandlestickDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

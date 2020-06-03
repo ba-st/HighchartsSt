@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendParamsTest >> testMultiplier [
+HighstockPlotOptionsSupertrendParamsTest >> testSetMultiplier [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSupertrendParamsTest >> testMultiplier [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendParamsTest >> testPeriod [
+HighstockPlotOptionsSupertrendParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

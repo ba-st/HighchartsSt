@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciTypeOptionsLineTest >> testFill [
+HighstockAnnotationsFibonacciTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

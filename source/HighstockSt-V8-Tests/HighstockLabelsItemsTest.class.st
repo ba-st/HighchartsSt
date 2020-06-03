@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLabelsItemsTest >> testHtml [
+HighstockLabelsItemsTest >> testSetHtml [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLabelsItemsTest >> testHtml [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLabelsItemsTest >> testStyle [
+HighstockLabelsItemsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

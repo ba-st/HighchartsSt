@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testClick [
+HighstockSeriesCandlestickDataEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesCandlestickDataEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testDrag [
+HighstockSeriesCandlestickDataEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesCandlestickDataEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testDragStart [
+HighstockSeriesCandlestickDataEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesCandlestickDataEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testDrop [
+HighstockSeriesCandlestickDataEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesCandlestickDataEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testMouseOut [
+HighstockSeriesCandlestickDataEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesCandlestickDataEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testMouseOver [
+HighstockSeriesCandlestickDataEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesCandlestickDataEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testRemove [
+HighstockSeriesCandlestickDataEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesCandlestickDataEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testSelect [
+HighstockSeriesCandlestickDataEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesCandlestickDataEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testUnselect [
+HighstockSeriesCandlestickDataEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesCandlestickDataEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesCandlestickDataEventsTest >> testUpdate [
+HighstockSeriesCandlestickDataEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

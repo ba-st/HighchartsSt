@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testAlign [
+HighchartsSeriesPyramid3dDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testAllowOverlap [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testBackgroundColor [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testBorderColor [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testBorderRadius [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testBorderWidth [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testClassName [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testColor [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testCrop [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testDefer [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testEnabled [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testFormat [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testFormatter [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testInside [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testNullFormat [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testNullFormatter [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testOverflow [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testPadding [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testPosition [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testRotation [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testShadow [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testShape [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testUseHTML [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testX [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testY [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsSeriesPyramid3dDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataLabelsTest >> testZ [
+HighchartsSeriesPyramid3dDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

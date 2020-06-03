@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMfiLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsMfiLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

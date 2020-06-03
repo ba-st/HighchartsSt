@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testClick [
+HighchartsSeriesSunburstDataEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSunburstDataEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testDrag [
+HighchartsSeriesSunburstDataEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSunburstDataEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testDragStart [
+HighchartsSeriesSunburstDataEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSunburstDataEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testDrop [
+HighchartsSeriesSunburstDataEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSunburstDataEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testMouseOut [
+HighchartsSeriesSunburstDataEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesSunburstDataEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testMouseOver [
+HighchartsSeriesSunburstDataEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesSunburstDataEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testRemove [
+HighchartsSeriesSunburstDataEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesSunburstDataEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testSelect [
+HighchartsSeriesSunburstDataEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesSunburstDataEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testUnselect [
+HighchartsSeriesSunburstDataEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesSunburstDataEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataEventsTest >> testUpdate [
+HighchartsSeriesSunburstDataEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

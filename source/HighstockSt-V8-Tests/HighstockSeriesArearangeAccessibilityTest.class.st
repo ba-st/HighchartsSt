@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeAccessibilityTest >> testDescription [
+HighstockSeriesArearangeAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesArearangeAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesArearangeAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesArearangeAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeAccessibilityTest >> testEnabled [
+HighstockSeriesArearangeAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesArearangeAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeAccessibilityTest >> testExposeAsGroupOnly [
+HighstockSeriesArearangeAccessibilityTest >> testSetExposeAsGroupOnly [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesArearangeAccessibilityTest >> testExposeAsGroupOnly [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeAccessibilityTest >> testPointDescriptionFormatter [
+HighstockSeriesArearangeAccessibilityTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 

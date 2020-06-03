@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testClick [
+HighstockSeriesTrendlinePointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesTrendlinePointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testDrag [
+HighstockSeriesTrendlinePointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesTrendlinePointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testDragStart [
+HighstockSeriesTrendlinePointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesTrendlinePointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testDrop [
+HighstockSeriesTrendlinePointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesTrendlinePointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testMouseOut [
+HighstockSeriesTrendlinePointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesTrendlinePointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testMouseOver [
+HighstockSeriesTrendlinePointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesTrendlinePointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testRemove [
+HighstockSeriesTrendlinePointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesTrendlinePointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testSelect [
+HighstockSeriesTrendlinePointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesTrendlinePointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testUnselect [
+HighstockSeriesTrendlinePointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesTrendlinePointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlinePointEventsTest >> testUpdate [
+HighstockSeriesTrendlinePointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

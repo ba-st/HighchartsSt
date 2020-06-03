@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsStyleTest >> testColor [
+HighchartsChartParallelAxesLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsStyleTest >> testCursor [
+HighchartsChartParallelAxesLabelsStyleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartParallelAxesLabelsStyleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsStyleTest >> testFontSize [
+HighchartsChartParallelAxesLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 

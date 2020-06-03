@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testChangeDecimals [
+HighstockPlotOptionsSupertrendTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrendTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testClusterFormat [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testDistance [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testFollowPointer [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testFollowTouchMove [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testFooterFormat [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testHeaderFormat [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testNullFormat [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testNullFormatter [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testPointFormat [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testPointFormatter [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockPlotOptionsSupertrendTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testValueDecimals [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSupertrendTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSupertrendTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testValuePrefix [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testValueSuffix [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockPlotOptionsSupertrendTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSupertrendTooltipTest >> testXDateFormat [
+HighstockPlotOptionsSupertrendTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDragDropDragHandleTest >> testClassName [
+HighstockSeriesSupertrendDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSupertrendDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDragDropDragHandleTest >> testColor [
+HighstockSeriesSupertrendDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSupertrendDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDragDropDragHandleTest >> testCursor [
+HighstockSeriesSupertrendDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSupertrendDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDragDropDragHandleTest >> testLineColor [
+HighstockSeriesSupertrendDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesSupertrendDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesSupertrendDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesSupertrendDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesSupertrendDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesSupertrendDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDragDropDragHandleTest >> testZIndex [
+HighstockSeriesSupertrendDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

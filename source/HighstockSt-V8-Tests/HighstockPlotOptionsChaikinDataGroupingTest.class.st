@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testApproximation [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsChaikinDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsChaikinDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testEnabled [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsChaikinDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testForced [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsChaikinDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsChaikinDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsChaikinDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsChaikinDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsChaikinDataGroupingTest >> testUnits [
+HighstockPlotOptionsChaikinDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

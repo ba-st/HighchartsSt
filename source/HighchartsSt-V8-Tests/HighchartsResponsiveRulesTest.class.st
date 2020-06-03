@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsResponsiveRulesTest >> testChartOptions [
+HighchartsResponsiveRulesTest >> testGetCondition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsResponsiveRules new.
+	component condition.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'condition' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsResponsiveRulesTest >> testSetChartOptions [
 
 	| component javascript expectedConfiguration |
 

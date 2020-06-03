@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testAlign [
+HighstockPlotOptionsPsarDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPsarDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPsarDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPsarDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPsarDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPsarDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPsarDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testAllowOverlap [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testBackgroundColor [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testBorderColor [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testBorderRadius [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testBorderWidth [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testClassName [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testColor [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testCrop [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testDefer [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testEnabled [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testFormat [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testFormatter [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testInside [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testNullFormat [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testNullFormatter [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testOverflow [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testPadding [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testPosition [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testRotation [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testShadow [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testShape [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testUseHTML [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testVerticalAlign [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testX [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testY [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockPlotOptionsPsarDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarDataLabelsTest >> testZ [
+HighstockPlotOptionsPsarDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

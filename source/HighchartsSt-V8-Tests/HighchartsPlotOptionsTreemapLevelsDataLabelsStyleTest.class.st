@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsTreemapLevelsDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

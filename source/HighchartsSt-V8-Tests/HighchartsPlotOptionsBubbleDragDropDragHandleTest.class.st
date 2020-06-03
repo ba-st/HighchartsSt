@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testClassName [
+HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testColor [
+HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testCursor [
+HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testLineColor [
+HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testLineWidth [
+HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testPathFormatter [
+HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testZIndex [
+HighchartsPlotOptionsBubbleDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

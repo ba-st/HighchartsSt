@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testClick [
+HighstockSeriesDemaPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesDemaPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testDrag [
+HighstockSeriesDemaPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesDemaPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testDragStart [
+HighstockSeriesDemaPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesDemaPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testDrop [
+HighstockSeriesDemaPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesDemaPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testMouseOut [
+HighstockSeriesDemaPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesDemaPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testMouseOver [
+HighstockSeriesDemaPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesDemaPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testRemove [
+HighstockSeriesDemaPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesDemaPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testSelect [
+HighstockSeriesDemaPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesDemaPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testUnselect [
+HighstockSeriesDemaPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesDemaPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaPointEventsTest >> testUpdate [
+HighstockSeriesDemaPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

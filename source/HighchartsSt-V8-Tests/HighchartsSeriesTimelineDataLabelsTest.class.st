@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testAlign [
+HighchartsSeriesTimelineDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesTimelineDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesTimelineDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testAllowOverlap [
+HighchartsSeriesTimelineDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testAlternate [
+HighchartsSeriesTimelineDataLabelsTest >> testSetAlternate [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testAlternate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testBackgroundColor [
+HighchartsSeriesTimelineDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testBorderColor [
+HighchartsSeriesTimelineDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testBorderRadius [
+HighchartsSeriesTimelineDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testBorderWidth [
+HighchartsSeriesTimelineDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testClassName [
+HighchartsSeriesTimelineDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testColor [
+HighchartsSeriesTimelineDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testConnectorColor [
+HighchartsSeriesTimelineDataLabelsTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testConnectorWidth [
+HighchartsSeriesTimelineDataLabelsTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testCrop [
+HighchartsSeriesTimelineDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testDefer [
+HighchartsSeriesTimelineDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testDistance [
+HighchartsSeriesTimelineDataLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testEnabled [
+HighchartsSeriesTimelineDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testFormat [
+HighchartsSeriesTimelineDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testFormatter [
+HighchartsSeriesTimelineDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testInside [
+HighchartsSeriesTimelineDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testNullFormat [
+HighchartsSeriesTimelineDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testNullFormatter [
+HighchartsSeriesTimelineDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testOverflow [
+HighchartsSeriesTimelineDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testPadding [
+HighchartsSeriesTimelineDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testPosition [
+HighchartsSeriesTimelineDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testRotation [
+HighchartsSeriesTimelineDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testShadow [
+HighchartsSeriesTimelineDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testShape [
+HighchartsSeriesTimelineDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testUseHTML [
+HighchartsSeriesTimelineDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesTimelineDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testWidth [
+HighchartsSeriesTimelineDataLabelsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +453,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testX [
+HighchartsSeriesTimelineDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +467,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testY [
+HighchartsSeriesTimelineDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +481,7 @@ HighchartsSeriesTimelineDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineDataLabelsTest >> testZ [
+HighchartsSeriesTimelineDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

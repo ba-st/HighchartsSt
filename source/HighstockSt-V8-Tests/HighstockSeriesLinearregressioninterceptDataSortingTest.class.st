@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataSortingTest >> testEnabled [
+HighstockSeriesLinearregressioninterceptDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataSortingTest >> testMatchByName [
+HighstockSeriesLinearregressioninterceptDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDataSortingTest >> testSortKey [
+HighstockSeriesLinearregressioninterceptDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

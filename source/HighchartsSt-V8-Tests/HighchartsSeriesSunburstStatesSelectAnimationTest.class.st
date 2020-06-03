@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstStatesSelectAnimationTest >> testDuration [
+HighchartsSeriesSunburstStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

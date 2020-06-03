@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testClassName [
+HighchartsSeriesSunburstDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsSeriesSunburstDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testColor [
+HighchartsSeriesSunburstDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsSeriesSunburstDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testColorIndex [
+HighchartsSeriesSunburstDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsSeriesSunburstDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testColorValue [
+HighchartsSeriesSunburstDataTest >> testSetColorValue [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,21 @@ HighchartsSeriesSunburstDataTest >> testColorValue [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testDescription [
+HighchartsSeriesSunburstDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSunburstData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSunburstDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighchartsSeriesSunburstDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testDrilldown [
+HighchartsSeriesSunburstDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighchartsSeriesSunburstDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testEvents [
+HighchartsSeriesSunburstDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +173,7 @@ HighchartsSeriesSunburstDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testId [
+HighchartsSeriesSunburstDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +187,7 @@ HighchartsSeriesSunburstDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testLabelrank [
+HighchartsSeriesSunburstDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +201,7 @@ HighchartsSeriesSunburstDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testName [
+HighchartsSeriesSunburstDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +215,7 @@ HighchartsSeriesSunburstDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testParent [
+HighchartsSeriesSunburstDataTest >> testSetParent [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +229,7 @@ HighchartsSeriesSunburstDataTest >> testParent [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testPointPadding [
+HighchartsSeriesSunburstDataTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +243,7 @@ HighchartsSeriesSunburstDataTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testSelected [
+HighchartsSeriesSunburstDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +257,7 @@ HighchartsSeriesSunburstDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testSliced [
+HighchartsSeriesSunburstDataTest >> testSetSliced [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +271,7 @@ HighchartsSeriesSunburstDataTest >> testSliced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testValue [
+HighchartsSeriesSunburstDataTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +285,7 @@ HighchartsSeriesSunburstDataTest >> testValue [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstDataTest >> testWeight [
+HighchartsSeriesSunburstDataTest >> testSetWeight [
 
 	| component javascript expectedConfiguration |
 

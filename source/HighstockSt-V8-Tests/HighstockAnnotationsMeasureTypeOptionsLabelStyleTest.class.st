@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsLabelStyleTest >> testColor [
+HighstockAnnotationsMeasureTypeOptionsLabelStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsMeasureTypeOptionsLabelStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsLabelStyleTest >> testFontSize [
+HighstockAnnotationsMeasureTypeOptionsLabelStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 

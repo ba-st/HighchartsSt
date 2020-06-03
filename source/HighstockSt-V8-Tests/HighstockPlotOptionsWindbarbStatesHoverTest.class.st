@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbStatesHoverTest >> testBorderWidth [
+HighstockPlotOptionsWindbarbStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsWindbarbStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsWindbarbStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsWindbarbStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbStatesHoverTest >> testBrightness [
+HighstockPlotOptionsWindbarbStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsWindbarbStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbStatesHoverTest >> testEnabled [
+HighstockPlotOptionsWindbarbStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsWindbarbStatesHoverTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbStatesHoverTest >> testLineWidthPlus [
+HighstockPlotOptionsWindbarbStatesHoverTest >> testSetLineWidthPlus [
 
 	| component javascript expectedConfiguration |
 

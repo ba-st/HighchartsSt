@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsEmaDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsEmaDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsEmaDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsEmaDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsEmaDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

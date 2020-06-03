@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,21 @@ HighchartsPlotOptionsWindbarbDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataGrouping new.
+	component dateTimeLabelFormats: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,35 @@ HighchartsPlotOptionsWindbarbDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetForced [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataGrouping new.
+	component forced: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'forced' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetGroupAll [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataGrouping new.
+	component groupAll: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupAll' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -42,6 +84,34 @@ HighchartsPlotOptionsWindbarbDataGroupingTest >> testGroupPixelWidth [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'groupPixelWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetSmoothed [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataGrouping new.
+	component smoothed: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'smoothed' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWindbarbDataGroupingTest >> testSetUnits [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWindbarbDataGrouping new.
+	component units: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'units' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

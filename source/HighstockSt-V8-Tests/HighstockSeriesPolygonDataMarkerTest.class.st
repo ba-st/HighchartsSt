@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testEnabled [
+HighstockSeriesPolygonDataMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPolygonDataMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testEnabledThreshold [
+HighstockSeriesPolygonDataMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPolygonDataMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testFillColor [
+HighstockSeriesPolygonDataMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPolygonDataMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testHeight [
+HighstockSeriesPolygonDataMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPolygonDataMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testLineColor [
+HighstockSeriesPolygonDataMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPolygonDataMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testLineWidth [
+HighstockSeriesPolygonDataMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPolygonDataMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testRadius [
+HighstockSeriesPolygonDataMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPolygonDataMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testStates [
+HighstockSeriesPolygonDataMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPolygonDataMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testSymbol [
+HighstockSeriesPolygonDataMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesPolygonDataMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonDataMarkerTest >> testWidth [
+HighstockSeriesPolygonDataMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

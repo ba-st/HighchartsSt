@@ -8,10 +8,10 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsLegendAccessibilityKeyboardNavigation >> enabled: anObject [
+HighchartsLegendAccessibilityKeyboardNavigation >> enabled: aBoolean [
 
 	"Enable keyboard navigation for the legend.
-"
+Defaults to true."
 
-	configurationOptions at: 'enabled' put: anObject
+	configurationOptions at: 'enabled' put: aBoolean
 ]

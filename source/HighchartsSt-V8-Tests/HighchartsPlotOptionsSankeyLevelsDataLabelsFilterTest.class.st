@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsSankeyLevelsDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

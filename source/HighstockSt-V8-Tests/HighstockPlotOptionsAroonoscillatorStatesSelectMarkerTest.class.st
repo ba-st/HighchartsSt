@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testEnabled [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testEnabledThreshol
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testFillColor [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testHeight [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testLineColor [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testLineWidth [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testRadius [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSymbol [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testWidth [
+HighstockPlotOptionsAroonoscillatorStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

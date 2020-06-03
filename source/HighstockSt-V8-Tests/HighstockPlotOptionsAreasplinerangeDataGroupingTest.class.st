@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testApproximation [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testDateTimeLabelFormats 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testEnabled [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testForced [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testUnits [
+HighstockPlotOptionsAreasplinerangeDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

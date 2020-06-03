@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testAlign [
+HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTreemapClusterDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testFormat [
+HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testInside [
+HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsTreemapClusterDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 

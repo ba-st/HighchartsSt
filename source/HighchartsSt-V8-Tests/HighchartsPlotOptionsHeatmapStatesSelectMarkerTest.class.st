@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testEnabled [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testFillColor [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testHeight [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testLineColor [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testLineWidth [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testRadius [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSymbol [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testWidth [
+HighchartsPlotOptionsHeatmapStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

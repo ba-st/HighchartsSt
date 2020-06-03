@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testAfterAnimate [
+HighchartsSeriesDependencywheelEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesDependencywheelEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testCheckboxClick [
+HighchartsSeriesDependencywheelEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesDependencywheelEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testClick [
+HighchartsSeriesDependencywheelEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesDependencywheelEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testHide [
+HighchartsSeriesDependencywheelEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesDependencywheelEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testLegendItemClick [
+HighchartsSeriesDependencywheelEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesDependencywheelEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testMouseOut [
+HighchartsSeriesDependencywheelEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesDependencywheelEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testMouseOver [
+HighchartsSeriesDependencywheelEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesDependencywheelEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelEventsTest >> testShow [
+HighchartsSeriesDependencywheelEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

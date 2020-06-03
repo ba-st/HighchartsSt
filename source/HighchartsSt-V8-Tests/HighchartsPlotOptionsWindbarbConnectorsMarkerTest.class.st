@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testAlign [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testColor [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testEnabled [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testHeight [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testInside [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testLineColor [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testLineWidth [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testRadius [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testWidth [
+HighchartsPlotOptionsWindbarbConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

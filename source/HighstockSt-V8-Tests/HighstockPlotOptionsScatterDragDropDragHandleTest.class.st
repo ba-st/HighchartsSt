@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropDragHandleTest >> testClassName [
+HighstockPlotOptionsScatterDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsScatterDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropDragHandleTest >> testColor [
+HighstockPlotOptionsScatterDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsScatterDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropDragHandleTest >> testCursor [
+HighstockPlotOptionsScatterDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsScatterDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropDragHandleTest >> testLineColor [
+HighstockPlotOptionsScatterDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsScatterDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropDragHandleTest >> testLineWidth [
+HighstockPlotOptionsScatterDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsScatterDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropDragHandleTest >> testPathFormatter [
+HighstockPlotOptionsScatterDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsScatterDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropDragHandleTest >> testZIndex [
+HighstockPlotOptionsScatterDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

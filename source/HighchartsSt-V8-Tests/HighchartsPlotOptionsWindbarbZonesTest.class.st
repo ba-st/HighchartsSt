@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbZonesTest >> testClassName [
+HighchartsPlotOptionsWindbarbZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWindbarbZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbZonesTest >> testColor [
+HighchartsPlotOptionsWindbarbZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWindbarbZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbZonesTest >> testDashStyle [
+HighchartsPlotOptionsWindbarbZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWindbarbZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbZonesTest >> testFillColor [
+HighchartsPlotOptionsWindbarbZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsWindbarbZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbZonesTest >> testValue [
+HighchartsPlotOptionsWindbarbZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

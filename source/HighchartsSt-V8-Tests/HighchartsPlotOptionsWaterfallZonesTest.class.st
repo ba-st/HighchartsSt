@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallZonesTest >> testClassName [
+HighchartsPlotOptionsWaterfallZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWaterfallZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallZonesTest >> testColor [
+HighchartsPlotOptionsWaterfallZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWaterfallZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallZonesTest >> testDashStyle [
+HighchartsPlotOptionsWaterfallZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWaterfallZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallZonesTest >> testFillColor [
+HighchartsPlotOptionsWaterfallZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsWaterfallZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallZonesTest >> testValue [
+HighchartsPlotOptionsWaterfallZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testApproximation [
+HighstockSeriesTrendlineDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesTrendlineDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesTrendlineDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesTrendlineDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testEnabled [
+HighstockSeriesTrendlineDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesTrendlineDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testForced [
+HighstockSeriesTrendlineDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesTrendlineDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testGroupAll [
+HighstockSeriesTrendlineDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesTrendlineDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesTrendlineDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesTrendlineDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testSmoothed [
+HighstockSeriesTrendlineDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesTrendlineDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataGroupingTest >> testUnits [
+HighstockSeriesTrendlineDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

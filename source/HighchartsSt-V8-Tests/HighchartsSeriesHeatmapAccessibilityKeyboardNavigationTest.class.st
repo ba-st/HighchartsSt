@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapAccessibilityKeyboardNavigationTest >> testEnabled [
+HighchartsSeriesHeatmapAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

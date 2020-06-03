@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testAfterAnimate [
+HighstockSeriesSupertrendEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSupertrendEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testCheckboxClick [
+HighstockSeriesSupertrendEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSupertrendEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testClick [
+HighstockSeriesSupertrendEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSupertrendEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testHide [
+HighstockSeriesSupertrendEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesSupertrendEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testLegendItemClick [
+HighstockSeriesSupertrendEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesSupertrendEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testMouseOut [
+HighstockSeriesSupertrendEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesSupertrendEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testMouseOver [
+HighstockSeriesSupertrendEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesSupertrendEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendEventsTest >> testShow [
+HighstockSeriesSupertrendEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

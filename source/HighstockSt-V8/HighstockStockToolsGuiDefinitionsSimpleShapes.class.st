@@ -13,13 +13,8 @@ HighstockStockToolsGuiDefinitionsSimpleShapes >> circle [
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsSimpleShapes >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'label',
-  'circle',
-  'rectangle'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'label',   'circle',   'rectangle' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

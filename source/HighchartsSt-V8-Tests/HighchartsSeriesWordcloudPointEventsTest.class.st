@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testClick [
+HighchartsSeriesWordcloudPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testDrag [
+HighchartsSeriesWordcloudPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testDragStart [
+HighchartsSeriesWordcloudPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testDrop [
+HighchartsSeriesWordcloudPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testMouseOut [
+HighchartsSeriesWordcloudPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testMouseOver [
+HighchartsSeriesWordcloudPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testRemove [
+HighchartsSeriesWordcloudPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testSelect [
+HighchartsSeriesWordcloudPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testUnselect [
+HighchartsSeriesWordcloudPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesWordcloudPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWordcloudPointEventsTest >> testUpdate [
+HighchartsSeriesWordcloudPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

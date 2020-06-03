@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelStatesNormalTest >> testAnimation [
+HighchartsSeriesDependencywheelStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

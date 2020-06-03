@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testClick [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testDrag [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testDragStart [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testDrop [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testMouseOut [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testMouseOver [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testRemove [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSelect [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testUnselect [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsPriceenvelopesPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesPointEventsTest >> testUpdate [
+HighstockPlotOptionsPriceenvelopesPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

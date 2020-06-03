@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsEventsTest >> testAdd [
+HighstockAnnotationsEventsTest >> testSetAdd [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsEventsTest >> testAdd [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsEventsTest >> testAfterUpdate [
+HighstockAnnotationsEventsTest >> testSetAfterUpdate [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsEventsTest >> testAfterUpdate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsEventsTest >> testRemove [
+HighstockAnnotationsEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 

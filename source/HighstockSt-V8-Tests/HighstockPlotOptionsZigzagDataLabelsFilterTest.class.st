@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsZigzagDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsZigzagDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsZigzagDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsZigzagDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsZigzagDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

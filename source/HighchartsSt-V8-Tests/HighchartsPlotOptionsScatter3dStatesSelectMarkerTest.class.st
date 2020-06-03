@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testEnabled [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testFillColor [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testHeight [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testLineColor [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testLineWidth [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testRadius [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSymbol [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testWidth [
+HighchartsPlotOptionsScatter3dStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

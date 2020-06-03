@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaLabelTest >> testBoxesToAvoid [
+HighstockSeriesDemaLabelTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDemaLabel new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDemaLabelTest >> testSetBoxesToAvoid [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesDemaLabelTest >> testBoxesToAvoid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaLabelTest >> testConnectorAllowed [
+HighstockSeriesDemaLabelTest >> testSetConnectorAllowed [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesDemaLabelTest >> testConnectorAllowed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaLabelTest >> testConnectorNeighbourDistance [
+HighstockSeriesDemaLabelTest >> testSetConnectorNeighbourDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesDemaLabelTest >> testConnectorNeighbourDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaLabelTest >> testEnabled [
+HighstockSeriesDemaLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,35 @@ HighstockSeriesDemaLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaLabelTest >> testMaxFontSize [
+HighstockSeriesDemaLabelTest >> testSetFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDemaLabel new.
+	component format: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'format' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDemaLabelTest >> testSetFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDemaLabel new.
+	component formatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'formatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDemaLabelTest >> testSetMaxFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesDemaLabelTest >> testMaxFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaLabelTest >> testMinFontSize [
+HighstockSeriesDemaLabelTest >> testSetMinFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesDemaLabelTest >> testMinFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDemaLabelTest >> testOnArea [
+HighstockSeriesDemaLabelTest >> testSetOnArea [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionAnimationTest >> testDuration [
+HighstockSeriesLinearregressionAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

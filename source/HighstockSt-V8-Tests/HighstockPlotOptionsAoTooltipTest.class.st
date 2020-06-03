@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testChangeDecimals [
+HighstockPlotOptionsAoTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAoTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAoTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsAoTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testClusterFormat [
+HighstockPlotOptionsAoTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsAoTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testDistance [
+HighstockPlotOptionsAoTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsAoTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testFollowPointer [
+HighstockPlotOptionsAoTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsAoTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testFollowTouchMove [
+HighstockPlotOptionsAoTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsAoTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testFooterFormat [
+HighstockPlotOptionsAoTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsAoTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testHeaderFormat [
+HighstockPlotOptionsAoTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsAoTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testNullFormat [
+HighstockPlotOptionsAoTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsAoTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testNullFormatter [
+HighstockPlotOptionsAoTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockPlotOptionsAoTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testPointFormat [
+HighstockPlotOptionsAoTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockPlotOptionsAoTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testPointFormatter [
+HighstockPlotOptionsAoTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockPlotOptionsAoTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testValueDecimals [
+HighstockPlotOptionsAoTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAoTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAoTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockPlotOptionsAoTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testValuePrefix [
+HighstockPlotOptionsAoTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockPlotOptionsAoTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testValueSuffix [
+HighstockPlotOptionsAoTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockPlotOptionsAoTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAoTooltipTest >> testXDateFormat [
+HighstockPlotOptionsAoTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

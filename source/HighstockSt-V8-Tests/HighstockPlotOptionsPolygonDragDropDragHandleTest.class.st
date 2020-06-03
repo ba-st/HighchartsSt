@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDragDropDragHandleTest >> testClassName [
+HighstockPlotOptionsPolygonDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPolygonDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDragDropDragHandleTest >> testColor [
+HighstockPlotOptionsPolygonDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPolygonDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDragDropDragHandleTest >> testCursor [
+HighstockPlotOptionsPolygonDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPolygonDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDragDropDragHandleTest >> testLineColor [
+HighstockPlotOptionsPolygonDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPolygonDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDragDropDragHandleTest >> testLineWidth [
+HighstockPlotOptionsPolygonDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPolygonDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDragDropDragHandleTest >> testPathFormatter [
+HighstockPlotOptionsPolygonDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPolygonDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPolygonDragDropDragHandleTest >> testZIndex [
+HighstockPlotOptionsPolygonDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

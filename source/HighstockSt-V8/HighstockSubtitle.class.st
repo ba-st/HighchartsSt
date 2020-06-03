@@ -13,8 +13,7 @@ Class {
 { #category : #accessing }
 HighstockSubtitle >> align: aHighchartsAlignValue [
 
-	"The horizontal alignment of the subtitle. Can be one of &quot;left&quot;,
- &quot;center&quot; and &quot;right&quot;.
+	"The horizontal alignment of the subtitle. Can be one of &quot;left&quot;,  &quot;center&quot; and &quot;right&quot;.
 Defaults to center."
 
 	configurationOptions at: 'align' put: aHighchartsAlignValue
@@ -23,8 +22,7 @@ Defaults to center."
 { #category : #accessing }
 HighstockSubtitle >> floating: aBoolean [
 
-	"When the subtitle is floating, the plot area will not move to make
-space for it.
+	"When the subtitle is floating, the plot area will not move to make space for it.
 Defaults to false."
 
 	configurationOptions at: 'floating' put: aBoolean
@@ -33,9 +31,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockSubtitle >> style: aHighchartsCSSObject [
 
-	"CSS styles for the title.
-In styled mode, the subtitle style is given in the
-.highcharts-subtitle class.
+	"CSS styles for the title. In styled mode, the subtitle style is given in the .highcharts-subtitle class.
 Defaults to {'color': '#666666'}."
 
 	configurationOptions at: 'style' put: aHighchartsCSSObject
@@ -53,9 +49,7 @@ Defaults to ."
 { #category : #accessing }
 HighstockSubtitle >> useHTML: aBoolean [
 
-	"Whether to
-use HTML
-to render the text.
+	"Whether to use HTML to render the text.
 Defaults to false."
 
 	configurationOptions at: 'useHTML' put: aBoolean
@@ -64,9 +58,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockSubtitle >> verticalAlign: aHighchartsVerticalAlignValue [
 
-	"The vertical alignment of the title. Can be one of &quot;top&quot;,
-&quot;middle&quot; and &quot;bottom&quot;. When middle, the subtitle behaves as
-floating.
+	"The vertical alignment of the title. Can be one of &quot;top&quot;, &quot;middle&quot; and &quot;bottom&quot;. When middle, the subtitle behaves as floating.
 "
 
 	configurationOptions at: 'verticalAlign' put: aHighchartsVerticalAlignValue
@@ -75,8 +67,7 @@ floating.
 { #category : #accessing }
 HighstockSubtitle >> widthAdjust: aNumber [
 
-	"Adjustment made to the subtitle width, normally to reserve space
-for the exporting burger menu.
+	"Adjustment made to the subtitle width, normally to reserve space for the exporting burger menu.
 Defaults to -44."
 
 	configurationOptions at: 'widthAdjust' put: aNumber
@@ -85,8 +76,7 @@ Defaults to -44."
 { #category : #accessing }
 HighstockSubtitle >> x: aNumber [
 
-	"The x position of the subtitle relative to the alignment within
-chart.spacingLeft and chart.spacingRight.
+	"The x position of the subtitle relative to the alignment within chart.spacingLeft and chart.spacingRight.
 Defaults to 0."
 
 	configurationOptions at: 'x' put: aNumber
@@ -95,9 +85,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockSubtitle >> y: aNumber [
 
-	"The y position of the subtitle relative to the alignment within
-chart.spacingTop and chart.spacingBottom. By default the subtitle
-is laid out below the title unless the title is floating.
+	"The y position of the subtitle relative to the alignment within chart.spacingTop and chart.spacingBottom. By default the subtitle is laid out below the title unless the title is floating.
 "
 
 	configurationOptions at: 'y' put: aNumber

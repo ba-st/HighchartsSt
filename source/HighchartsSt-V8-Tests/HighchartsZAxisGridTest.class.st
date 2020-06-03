@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisGridTest >> testBorderColor [
+HighchartsZAxisGridTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsZAxisGridTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisGridTest >> testBorderWidth [
+HighchartsZAxisGridTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsZAxisGridTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisGridTest >> testCellHeight [
+HighchartsZAxisGridTest >> testSetCellHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsZAxisGridTest >> testCellHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisGridTest >> testColumns [
+HighchartsZAxisGridTest >> testSetColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsZAxisGridTest >> testColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisGridTest >> testEnabled [
+HighchartsZAxisGridTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

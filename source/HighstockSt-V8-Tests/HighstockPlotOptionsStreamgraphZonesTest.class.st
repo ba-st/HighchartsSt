@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphZonesTest >> testClassName [
+HighstockPlotOptionsStreamgraphZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsStreamgraphZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphZonesTest >> testColor [
+HighstockPlotOptionsStreamgraphZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsStreamgraphZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphZonesTest >> testDashStyle [
+HighstockPlotOptionsStreamgraphZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsStreamgraphZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphZonesTest >> testFillColor [
+HighstockPlotOptionsStreamgraphZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsStreamgraphZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphZonesTest >> testValue [
+HighstockPlotOptionsStreamgraphZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

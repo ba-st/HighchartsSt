@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarStatesHoverTest >> testBorderColor [
+HighchartsPlotOptionsBarStatesHoverTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBarStatesHover new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBarStatesHoverTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsBarStatesHoverTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarStatesHoverTest >> testBorderWidth [
+HighchartsPlotOptionsBarStatesHoverTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsBarStatesHoverTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarStatesHoverTest >> testBrightness [
+HighchartsPlotOptionsBarStatesHoverTest >> testSetBrightness [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsBarStatesHoverTest >> testBrightness [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarStatesHoverTest >> testColor [
+HighchartsPlotOptionsBarStatesHoverTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsBarStatesHoverTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarStatesHoverTest >> testEnabled [
+HighchartsPlotOptionsBarStatesHoverTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

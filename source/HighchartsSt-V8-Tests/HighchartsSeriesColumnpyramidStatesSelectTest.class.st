@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnpyramidStatesSelectTest >> testBorderColor [
+HighchartsSeriesColumnpyramidStatesSelectTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesColumnpyramidStatesSelect new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesColumnpyramidStatesSelectTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesColumnpyramidStatesSelectTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnpyramidStatesSelectTest >> testBorderWidth [
+HighchartsSeriesColumnpyramidStatesSelectTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesColumnpyramidStatesSelectTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnpyramidStatesSelectTest >> testColor [
+HighchartsSeriesColumnpyramidStatesSelectTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesColumnpyramidStatesSelectTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnpyramidStatesSelectTest >> testEnabled [
+HighchartsSeriesColumnpyramidStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

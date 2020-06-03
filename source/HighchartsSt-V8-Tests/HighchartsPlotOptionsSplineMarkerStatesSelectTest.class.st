@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testEnabled [
+HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testFillColor [
+HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testLineColor [
+HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testLineWidth [
+HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testRadius [
+HighchartsPlotOptionsSplineMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

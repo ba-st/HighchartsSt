@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testClick [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testDrag [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testDragStart [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testDrop [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testMouseOut [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testMouseOver [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testRemove [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testSelect [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testUnselect [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesPriceenvelopesPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesPointEventsTest >> testUpdate [
+HighstockSeriesPriceenvelopesPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

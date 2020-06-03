@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testAttributes [
+HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testOpacity [
+HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testSize [
+HighstockPlotOptionsPriceenvelopesStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

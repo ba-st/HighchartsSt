@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPyramid3dEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPyramid3dEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testClick [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPyramid3dEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testHide [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPyramid3dEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPyramid3dEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testMouseOut [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPyramid3dEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testMouseOver [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPyramid3dEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dEventsTest >> testShow [
+HighchartsPlotOptionsPyramid3dEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

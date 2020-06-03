@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testEnabled [
+HighchartsSeriesFunnel3dMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testEnabledThreshold [
+HighchartsSeriesFunnel3dMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testFillColor [
+HighchartsSeriesFunnel3dMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testHeight [
+HighchartsSeriesFunnel3dMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testLineColor [
+HighchartsSeriesFunnel3dMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testLineWidth [
+HighchartsSeriesFunnel3dMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testRadius [
+HighchartsSeriesFunnel3dMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testStates [
+HighchartsSeriesFunnel3dMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testSymbol [
+HighchartsSeriesFunnel3dMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesFunnel3dMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dMarkerTest >> testWidth [
+HighchartsSeriesFunnel3dMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

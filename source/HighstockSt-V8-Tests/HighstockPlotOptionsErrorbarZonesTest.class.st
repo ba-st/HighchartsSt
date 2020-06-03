@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarZonesTest >> testClassName [
+HighstockPlotOptionsErrorbarZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsErrorbarZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarZonesTest >> testColor [
+HighstockPlotOptionsErrorbarZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsErrorbarZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarZonesTest >> testDashStyle [
+HighstockPlotOptionsErrorbarZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsErrorbarZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarZonesTest >> testFillColor [
+HighstockPlotOptionsErrorbarZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsErrorbarZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarZonesTest >> testValue [
+HighstockPlotOptionsErrorbarZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

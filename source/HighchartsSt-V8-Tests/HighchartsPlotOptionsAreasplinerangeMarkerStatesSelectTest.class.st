@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testEnabled [
+HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testFillColor [
+HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testLineColor [
+HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testLineWidth [
+HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testRadius [
+HighchartsPlotOptionsAreasplinerangeMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

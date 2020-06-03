@@ -21,8 +21,7 @@ HighchartsSeriesOrganizationNodes >> color: aHighchartsColorStringOrHighchartsGr
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> colorIndex: aNumber [
 
-	"The color index of the auto generated node, especially for use in styled
-mode.
+	"The color index of the auto generated node, especially for use in styled mode.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
@@ -31,10 +30,7 @@ mode.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> column: aNumber [
 
-	"An optional column index of where to place the node. The default behaviour is
-to place it next to the preceding node. Note that this option name is
-counter intuitive in inverted charts, like for example an organization chart
-rendered top down. In this case the &quot;columns&quot; are horizontal.
+	"An optional column index of where to place the node. The default behaviour is to place it next to the preceding node. Note that this option name is counter intuitive in inverted charts, like for example an organization chart rendered top down. In this case the &quot;columns&quot; are horizontal.
 "
 
 	configurationOptions at: 'column' put: aNumber
@@ -43,8 +39,7 @@ rendered top down. In this case the &quot;columns&quot; are horizontal.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> dataLabels [
 
-	"Individual data label for each node. The options are the same as
-the ones for series.organization.dataLabels.
+	"Individual data label for each node. The options are the same as the ones for series.organization.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesOrganizationNodesDataLabels new ]
 ]
@@ -52,8 +47,7 @@ the ones for series.organization.dataLabels.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> description: aString [
 
-	"The job description for the node card, will be inserted by the default
-dataLabel.nodeFormatter.
+	"The job description for the node card, will be inserted by the default dataLabel.nodeFormatter.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -62,8 +56,7 @@ dataLabel.nodeFormatter.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> id: aString [
 
-	"The id of the auto-generated node, refering to the from or to setting of
-the link.
+	"The id of the auto-generated node, refering to the from or to setting of the link.
 "
 
 	configurationOptions at: 'id' put: aString
@@ -72,8 +65,7 @@ the link.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> image: aString [
 
-	"An image for the node card, will be inserted by the default
-dataLabel.nodeFormatter.
+	"An image for the node card, will be inserted by the default dataLabel.nodeFormatter.
 "
 
 	configurationOptions at: 'image' put: aString
@@ -82,8 +74,7 @@ dataLabel.nodeFormatter.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> layout: aHighchartsSeriesOrganizationNodesLayoutValue [
 
-	"Layout for the node´s children. If hanging, this node´s children will hang
-below their parent, allowing a tighter packing of nodes in the diagram.
+	"Layout for the node´s children. If hanging, this node´s children will hang below their parent, allowing a tighter packing of nodes in the diagram.
 Defaults to normal."
 
 	configurationOptions at: 'layout' put: aHighchartsSeriesOrganizationNodesLayoutValue
@@ -92,9 +83,7 @@ Defaults to normal."
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> level: aNumber [
 
-	"An optional level index of where to place the node. The default behaviour is
-to place it next to the preceding node. Alias of nodes.column, but in
-inverted sankeys and org charts, the levels are laid out as rows.
+	"An optional level index of where to place the node. The default behaviour is to place it next to the preceding node. Alias of nodes.column, but in inverted sankeys and org charts, the levels are laid out as rows.
 "
 
 	configurationOptions at: 'level' put: aNumber
@@ -103,9 +92,7 @@ inverted sankeys and org charts, the levels are laid out as rows.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> name: aString [
 
-	"The name to display for the node in data labels and tooltips. Use this when
-the name is different from the id. Where the id must be unique for each
-node, this is not necessary for the name.
+	"The name to display for the node in data labels and tooltips. Use this when the name is different from the id. Where the id must be unique for each node, this is not necessary for the name.
 "
 
 	configurationOptions at: 'name' put: aString
@@ -114,11 +101,7 @@ node, this is not necessary for the name.
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> offset: aNumberOrstring [
 
-	"In a horizontal layout, the vertical offset of a node in terms of weight.
-Positive values shift the node downwards, negative shift it upwards. In a
-vertical layout, like organization chart, the offset is horizontal.
-If a percantage string is given, the node is offset by the percentage of the
-node size plus nodePadding.
+	"In a horizontal layout, the vertical offset of a node in terms of weight. Positive values shift the node downwards, negative shift it upwards. In a vertical layout, like organization chart, the offset is horizontal. If a percantage string is given, the node is offset by the percentage of the node size plus nodePadding.
 Defaults to 0."
 
 	configurationOptions at: 'offset' put: aNumberOrstring
@@ -127,8 +110,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesOrganizationNodes >> title: aString [
 
-	"The job title for the node card, will be inserted by the default
-dataLabel.nodeFormatter.
+	"The job title for the node card, will be inserted by the default dataLabel.nodeFormatter.
 "
 
 	configurationOptions at: 'title' put: aString

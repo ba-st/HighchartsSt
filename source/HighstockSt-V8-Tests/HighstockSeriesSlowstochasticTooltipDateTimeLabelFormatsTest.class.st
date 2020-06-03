@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testMillisecond 
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockSeriesSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

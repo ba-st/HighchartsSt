@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testAlign [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciLabelOptions new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciLabelOptionsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciLabelOptions new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testAllowOverlap [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testBackgroundColor [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testBorderColor [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testBorderRadius [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testBorderWidth [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testClassName [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testCrop [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testDistance [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testFormat [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testFormatter [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testOverflow [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testPadding [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testShadow [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testShape [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testText [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testUseHTML [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +271,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testVerticalAlign [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +285,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testX [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +299,7 @@ HighstockAnnotationsFibonacciLabelOptionsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsTest >> testY [
+HighstockAnnotationsFibonacciLabelOptionsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

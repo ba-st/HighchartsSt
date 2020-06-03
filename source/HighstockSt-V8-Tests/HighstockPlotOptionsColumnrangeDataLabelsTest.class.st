@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testAlign [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnrangeDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnrangeDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnrangeDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testAllowOverlap [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testBackgroundColor [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testBorderColor [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testBorderRadius [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testBorderWidth [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testClassName [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testColor [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testCrop [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testDefer [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testEnabled [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testFormat [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testFormatter [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testInside [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testNullFormat [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testNullFormatter [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testOverflow [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testPadding [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testPosition [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testRotation [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testShadow [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testShape [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testUseHTML [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testVerticalAlign [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testX [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testXHigh [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetXHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testXHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testXLow [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetXLow [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testXLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testY [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testYHigh [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetYHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +453,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testYHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testYLow [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetYLow [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +467,7 @@ HighstockPlotOptionsColumnrangeDataLabelsTest >> testYLow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeDataLabelsTest >> testZ [
+HighstockPlotOptionsColumnrangeDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

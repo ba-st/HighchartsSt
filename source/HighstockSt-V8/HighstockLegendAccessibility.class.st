@@ -9,12 +9,12 @@ Class {
 }
 
 { #category : #accessing }
-HighstockLegendAccessibility >> enabled: anObject [
+HighstockLegendAccessibility >> enabled: aBoolean [
 
 	"Enable accessibility support for the legend.
-"
+Defaults to true."
 
-	configurationOptions at: 'enabled' put: anObject
+	configurationOptions at: 'enabled' put: aBoolean
 ]
 
 { #category : #accessing }

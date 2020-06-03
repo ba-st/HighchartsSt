@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testEnabled [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testEnabledThreshold [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testFillColor [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testHeight [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testLineColor [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testLineWidth [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testRadius [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSymbol [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testWidth [
+HighchartsSeriesFunnel3dStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,147 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testAlignTicks [
+HighstockYAxisTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetBreaks [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component breaks.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'breaks' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetCrosshair [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component crosshair.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crosshair' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetPlotBands [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component plotBands.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotBands' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetPlotLines [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component plotLines.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'plotLines' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetResize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component resize.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'resize' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetScrollbar [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component scrollbar.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'scrollbar' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testGetTitle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxis new.
+	component title.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'title' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTest >> testSetAlignTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +159,7 @@ HighstockYAxisTest >> testAlignTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testAllowDecimals [
+HighstockYAxisTest >> testSetAllowDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +173,7 @@ HighstockYAxisTest >> testAllowDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testAlternateGridColor [
+HighstockYAxisTest >> testSetAlternateGridColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +187,7 @@ HighstockYAxisTest >> testAlternateGridColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testCeiling [
+HighstockYAxisTest >> testSetCeiling [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +201,7 @@ HighstockYAxisTest >> testCeiling [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testClassName [
+HighstockYAxisTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +215,7 @@ HighstockYAxisTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testEndOnTick [
+HighstockYAxisTest >> testSetEndOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +229,7 @@ HighstockYAxisTest >> testEndOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testEvents [
+HighstockYAxisTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +243,7 @@ HighstockYAxisTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testFloor [
+HighstockYAxisTest >> testSetFloor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +257,7 @@ HighstockYAxisTest >> testFloor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testGridLineColor [
+HighstockYAxisTest >> testSetGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +271,7 @@ HighstockYAxisTest >> testGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testGridLineDashStyle [
+HighstockYAxisTest >> testSetGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +285,7 @@ HighstockYAxisTest >> testGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testGridLineWidth [
+HighstockYAxisTest >> testSetGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +299,7 @@ HighstockYAxisTest >> testGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testGridZIndex [
+HighstockYAxisTest >> testSetGridZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +313,7 @@ HighstockYAxisTest >> testGridZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testHeight [
+HighstockYAxisTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +327,7 @@ HighstockYAxisTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testId [
+HighstockYAxisTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +341,7 @@ HighstockYAxisTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testLeft [
+HighstockYAxisTest >> testSetLeft [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +355,7 @@ HighstockYAxisTest >> testLeft [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testLineColor [
+HighstockYAxisTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +369,7 @@ HighstockYAxisTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testLineWidth [
+HighstockYAxisTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +383,7 @@ HighstockYAxisTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testLinkedTo [
+HighstockYAxisTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +397,7 @@ HighstockYAxisTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMargin [
+HighstockYAxisTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +411,7 @@ HighstockYAxisTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMax [
+HighstockYAxisTest >> testSetMax [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +425,7 @@ HighstockYAxisTest >> testMax [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMaxLength [
+HighstockYAxisTest >> testSetMaxLength [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +439,7 @@ HighstockYAxisTest >> testMaxLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMaxPadding [
+HighstockYAxisTest >> testSetMaxPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +453,7 @@ HighstockYAxisTest >> testMaxPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMaxRange [
+HighstockYAxisTest >> testSetMaxRange [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +467,7 @@ HighstockYAxisTest >> testMaxRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMaxZoom [
+HighstockYAxisTest >> testSetMaxZoom [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +481,7 @@ HighstockYAxisTest >> testMaxZoom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMin [
+HighstockYAxisTest >> testSetMin [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +495,7 @@ HighstockYAxisTest >> testMin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinLength [
+HighstockYAxisTest >> testSetMinLength [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +509,7 @@ HighstockYAxisTest >> testMinLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinPadding [
+HighstockYAxisTest >> testSetMinPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +523,7 @@ HighstockYAxisTest >> testMinPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinRange [
+HighstockYAxisTest >> testSetMinRange [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +537,7 @@ HighstockYAxisTest >> testMinRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinTickInterval [
+HighstockYAxisTest >> testSetMinTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +551,7 @@ HighstockYAxisTest >> testMinTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorGridLineColor [
+HighstockYAxisTest >> testSetMinorGridLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +565,7 @@ HighstockYAxisTest >> testMinorGridLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorGridLineDashStyle [
+HighstockYAxisTest >> testSetMinorGridLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +579,7 @@ HighstockYAxisTest >> testMinorGridLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorGridLineWidth [
+HighstockYAxisTest >> testSetMinorGridLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +593,7 @@ HighstockYAxisTest >> testMinorGridLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorTickColor [
+HighstockYAxisTest >> testSetMinorTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +607,7 @@ HighstockYAxisTest >> testMinorTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorTickInterval [
+HighstockYAxisTest >> testSetMinorTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +621,7 @@ HighstockYAxisTest >> testMinorTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorTickLength [
+HighstockYAxisTest >> testSetMinorTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +635,7 @@ HighstockYAxisTest >> testMinorTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorTickPosition [
+HighstockYAxisTest >> testSetMinorTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +649,7 @@ HighstockYAxisTest >> testMinorTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorTickWidth [
+HighstockYAxisTest >> testSetMinorTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +663,7 @@ HighstockYAxisTest >> testMinorTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testMinorTicks [
+HighstockYAxisTest >> testSetMinorTicks [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +677,7 @@ HighstockYAxisTest >> testMinorTicks [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testOffset [
+HighstockYAxisTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +691,7 @@ HighstockYAxisTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testOpposite [
+HighstockYAxisTest >> testSetOpposite [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +705,7 @@ HighstockYAxisTest >> testOpposite [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testRange [
+HighstockYAxisTest >> testSetRange [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +719,7 @@ HighstockYAxisTest >> testRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testReversed [
+HighstockYAxisTest >> testSetReversed [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +733,7 @@ HighstockYAxisTest >> testReversed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testReversedStacks [
+HighstockYAxisTest >> testSetReversedStacks [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +747,7 @@ HighstockYAxisTest >> testReversedStacks [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testShowEmpty [
+HighstockYAxisTest >> testSetShowEmpty [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +761,7 @@ HighstockYAxisTest >> testShowEmpty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testShowFirstLabel [
+HighstockYAxisTest >> testSetShowFirstLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +775,7 @@ HighstockYAxisTest >> testShowFirstLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testShowLastLabel [
+HighstockYAxisTest >> testSetShowLastLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +789,7 @@ HighstockYAxisTest >> testShowLastLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testSoftMax [
+HighstockYAxisTest >> testSetSoftMax [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +803,7 @@ HighstockYAxisTest >> testSoftMax [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testSoftMin [
+HighstockYAxisTest >> testSetSoftMin [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +817,7 @@ HighstockYAxisTest >> testSoftMin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testStartOfWeek [
+HighstockYAxisTest >> testSetStartOfWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +831,7 @@ HighstockYAxisTest >> testStartOfWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testStartOnTick [
+HighstockYAxisTest >> testSetStartOnTick [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +845,7 @@ HighstockYAxisTest >> testStartOnTick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickAmount [
+HighstockYAxisTest >> testSetTickAmount [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +859,7 @@ HighstockYAxisTest >> testTickAmount [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickColor [
+HighstockYAxisTest >> testSetTickColor [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +873,7 @@ HighstockYAxisTest >> testTickColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickInterval [
+HighstockYAxisTest >> testSetTickInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +887,7 @@ HighstockYAxisTest >> testTickInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickLength [
+HighstockYAxisTest >> testSetTickLength [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +901,7 @@ HighstockYAxisTest >> testTickLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickPixelInterval [
+HighstockYAxisTest >> testSetTickPixelInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +915,7 @@ HighstockYAxisTest >> testTickPixelInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickPosition [
+HighstockYAxisTest >> testSetTickPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +929,7 @@ HighstockYAxisTest >> testTickPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickPositioner [
+HighstockYAxisTest >> testSetTickPositioner [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +943,7 @@ HighstockYAxisTest >> testTickPositioner [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickPositions [
+HighstockYAxisTest >> testSetTickPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +957,7 @@ HighstockYAxisTest >> testTickPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTickWidth [
+HighstockYAxisTest >> testSetTickWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +971,7 @@ HighstockYAxisTest >> testTickWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testTop [
+HighstockYAxisTest >> testSetTop [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +985,7 @@ HighstockYAxisTest >> testTop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testUnits [
+HighstockYAxisTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +999,7 @@ HighstockYAxisTest >> testUnits [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testVisible [
+HighstockYAxisTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +1013,7 @@ HighstockYAxisTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testWidth [
+HighstockYAxisTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -887,7 +1027,7 @@ HighstockYAxisTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testZoomEnabled [
+HighstockYAxisTest >> testSetZoomEnabled [
 
 	| component javascript expectedConfiguration |
 

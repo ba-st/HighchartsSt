@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsWmaDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWmaDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsWmaDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWmaDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsWmaDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsWmaDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWmaDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsWmaDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

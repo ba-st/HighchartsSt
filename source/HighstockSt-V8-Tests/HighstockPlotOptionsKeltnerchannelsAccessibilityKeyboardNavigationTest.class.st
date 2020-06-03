@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsAccessibilityKeyboardNavigationTest >> testEnabled [
+HighstockPlotOptionsKeltnerchannelsAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

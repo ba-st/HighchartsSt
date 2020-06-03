@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testClick [
+HighstockSeriesChaikinPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesChaikinPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testDrag [
+HighstockSeriesChaikinPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesChaikinPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testDragStart [
+HighstockSeriesChaikinPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesChaikinPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testDrop [
+HighstockSeriesChaikinPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesChaikinPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testMouseOut [
+HighstockSeriesChaikinPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesChaikinPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testMouseOver [
+HighstockSeriesChaikinPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesChaikinPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testRemove [
+HighstockSeriesChaikinPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesChaikinPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testSelect [
+HighstockSeriesChaikinPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesChaikinPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testUnselect [
+HighstockSeriesChaikinPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesChaikinPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesChaikinPointEventsTest >> testUpdate [
+HighstockSeriesChaikinPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

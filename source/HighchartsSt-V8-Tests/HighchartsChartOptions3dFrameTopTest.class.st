@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dFrameTopTest >> testColor [
+HighchartsChartOptions3dFrameTopTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartOptions3dFrameTopTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dFrameTopTest >> testSize [
+HighchartsChartOptions3dFrameTopTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartOptions3dFrameTopTest >> testSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartOptions3dFrameTopTest >> testVisible [
+HighchartsChartOptions3dFrameTopTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testAfterAnimate [
+HighstockPlotOptionsTrixEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsTrixEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testCheckboxClick [
+HighstockPlotOptionsTrixEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsTrixEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testClick [
+HighstockPlotOptionsTrixEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsTrixEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testHide [
+HighstockPlotOptionsTrixEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsTrixEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testLegendItemClick [
+HighstockPlotOptionsTrixEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsTrixEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testMouseOut [
+HighstockPlotOptionsTrixEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsTrixEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testMouseOver [
+HighstockPlotOptionsTrixEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsTrixEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrixEventsTest >> testShow [
+HighstockPlotOptionsTrixEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -10,8 +10,7 @@ Class {
 { #category : #accessing }
 HighstockNavigationEvents >> closePopup: aFunction [
 
-	"A closePopup event. Fired when Popup should be hidden, for example
-when clicking on an annotation again.
+	"A closePopup event. Fired when Popup should be hidden, for example when clicking on an annotation again.
 "
 
 	configurationOptions at: 'closePopup' put: aFunction
@@ -20,8 +19,7 @@ when clicking on an annotation again.
 { #category : #accessing }
 HighstockNavigationEvents >> deselectButton: aFunction [
 
-	"Event fired when button state should change, for example after
-adding an annotation.
+	"Event fired when button state should change, for example after adding an annotation.
 "
 
 	configurationOptions at: 'deselectButton' put: aFunction

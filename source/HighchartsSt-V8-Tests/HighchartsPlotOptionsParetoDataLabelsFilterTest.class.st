@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsParetoDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsParetoDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsParetoDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsParetoDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsParetoDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

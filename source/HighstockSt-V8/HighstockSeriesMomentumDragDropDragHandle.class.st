@@ -28,9 +28,7 @@ Defaults to #fff."
 { #category : #accessing }
 HighstockSeriesMomentumDragDropDragHandle >> cursor: aString [
 
-	"The mouse cursor to use for the drag handles. By default this is
-intelligently switching between ew-resize and ns-resize depending on
-the direction the point is being dragged.
+	"The mouse cursor to use for the drag handles. By default this is intelligently switching between ew-resize and ns-resize depending on the direction the point is being dragged.
 "
 
 	configurationOptions at: 'cursor' put: aString
@@ -57,9 +55,7 @@ Defaults to 1."
 { #category : #accessing }
 HighstockSeriesMomentumDragDropDragHandle >> pathFormatter: aFunction [
 
-	"Function to define the SVG path to use for the drag handles. Takes the
-point as argument. Should return an SVG path in array format. The SVG
-path is automatically positioned on the point.
+	"Function to define the SVG path to use for the drag handles. Takes the point as argument. Should return an SVG path in array format. The SVG path is automatically positioned on the point.
 "
 
 	configurationOptions at: 'pathFormatter' put: aFunction

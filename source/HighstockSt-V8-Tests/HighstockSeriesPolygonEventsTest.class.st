@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testAfterAnimate [
+HighstockSeriesPolygonEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPolygonEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testCheckboxClick [
+HighstockSeriesPolygonEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPolygonEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testClick [
+HighstockSeriesPolygonEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPolygonEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testHide [
+HighstockSeriesPolygonEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPolygonEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testLegendItemClick [
+HighstockSeriesPolygonEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPolygonEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testMouseOut [
+HighstockSeriesPolygonEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPolygonEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testMouseOver [
+HighstockSeriesPolygonEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPolygonEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonEventsTest >> testShow [
+HighstockSeriesPolygonEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -16,11 +16,19 @@ HighchartsSeriesVennStatesInactive >> animation [
 ]
 
 { #category : #accessing }
+HighchartsSeriesVennStatesInactive >> enabled: aBoolean [
+
+	"Enable or disable the inactive state for a series
+Defaults to true."
+
+	configurationOptions at: 'enabled' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsSeriesVennStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area). Set to 1
-to disable inactive state.
-Defaults to 0.2."
+	"Opacity of series elements (dataLabels, line, area).
+Defaults to 0.075."
 
 	configurationOptions at: 'opacity' put: aNumber
 ]

@@ -16,6 +16,14 @@ HighchartsLangAccessibilityScreenReaderSection >> afterRegionLabel: aString [
 ]
 
 { #category : #accessing }
+HighchartsLangAccessibilityScreenReaderSection >> annotations [
+
+	"Language options for annotation descriptions.
+"
+	^ configurationOptions at: 'annotations' ifAbsentPut: [ HighchartsLangAccessibilityScreenReaderSectionAnnotations new ]
+]
+
+{ #category : #accessing }
 HighchartsLangAccessibilityScreenReaderSection >> beforeRegionLabel: aString [
 
 

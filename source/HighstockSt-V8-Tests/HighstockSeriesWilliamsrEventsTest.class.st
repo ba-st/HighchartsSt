@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testAfterAnimate [
+HighstockSeriesWilliamsrEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesWilliamsrEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testCheckboxClick [
+HighstockSeriesWilliamsrEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesWilliamsrEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testClick [
+HighstockSeriesWilliamsrEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesWilliamsrEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testHide [
+HighstockSeriesWilliamsrEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesWilliamsrEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testLegendItemClick [
+HighstockSeriesWilliamsrEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesWilliamsrEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testMouseOut [
+HighstockSeriesWilliamsrEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesWilliamsrEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testMouseOver [
+HighstockSeriesWilliamsrEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesWilliamsrEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWilliamsrEventsTest >> testShow [
+HighstockSeriesWilliamsrEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

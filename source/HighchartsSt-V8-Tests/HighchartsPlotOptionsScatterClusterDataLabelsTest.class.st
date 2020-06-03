@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterDataLabelsTest >> testAlign [
+HighchartsPlotOptionsScatterClusterDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatterClusterDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsScatterClusterDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsScatterClusterDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsScatterClusterDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsScatterClusterDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterDataLabelsTest >> testFormat [
+HighchartsPlotOptionsScatterClusterDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsScatterClusterDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterDataLabelsTest >> testInside [
+HighchartsPlotOptionsScatterClusterDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsScatterClusterDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatterClusterDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsScatterClusterDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 

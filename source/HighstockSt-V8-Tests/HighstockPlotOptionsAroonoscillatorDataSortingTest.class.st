@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataSortingTest >> testEnabled [
+HighstockPlotOptionsAroonoscillatorDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAroonoscillatorDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataSortingTest >> testMatchByName [
+HighstockPlotOptionsAroonoscillatorDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAroonoscillatorDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataSortingTest >> testSortKey [
+HighstockPlotOptionsAroonoscillatorDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

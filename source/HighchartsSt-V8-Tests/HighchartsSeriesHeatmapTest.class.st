@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testAllowPointSelect [
+HighchartsSeriesHeatmapTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +245,7 @@ HighchartsSeriesHeatmapTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testAnimationLimit [
+HighchartsSeriesHeatmapTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +260,7 @@ HighchartsSeriesHeatmapTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testBoostBlending [
+HighchartsSeriesHeatmapTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +275,7 @@ HighchartsSeriesHeatmapTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testBoostThreshold [
+HighchartsSeriesHeatmapTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +290,7 @@ HighchartsSeriesHeatmapTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testClassName [
+HighchartsSeriesHeatmapTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +305,7 @@ HighchartsSeriesHeatmapTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testClip [
+HighchartsSeriesHeatmapTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +320,7 @@ HighchartsSeriesHeatmapTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testColor [
+HighchartsSeriesHeatmapTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +335,7 @@ HighchartsSeriesHeatmapTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testColorAxis [
+HighchartsSeriesHeatmapTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +350,7 @@ HighchartsSeriesHeatmapTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testColorIndex [
+HighchartsSeriesHeatmapTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +365,7 @@ HighchartsSeriesHeatmapTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testColorKey [
+HighchartsSeriesHeatmapTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +380,7 @@ HighchartsSeriesHeatmapTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testColsize [
+HighchartsSeriesHeatmapTest >> testSetColsize [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +395,7 @@ HighchartsSeriesHeatmapTest >> testColsize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testCompare [
+HighchartsSeriesHeatmapTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +410,7 @@ HighchartsSeriesHeatmapTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testCompareBase [
+HighchartsSeriesHeatmapTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +425,7 @@ HighchartsSeriesHeatmapTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testCompareStart [
+HighchartsSeriesHeatmapTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +440,7 @@ HighchartsSeriesHeatmapTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testConnectEnds [
+HighchartsSeriesHeatmapTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +455,7 @@ HighchartsSeriesHeatmapTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testConnectNulls [
+HighchartsSeriesHeatmapTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +470,22 @@ HighchartsSeriesHeatmapTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testCropThreshold [
+HighchartsSeriesHeatmapTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +500,7 @@ HighchartsSeriesHeatmapTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testCursor [
+HighchartsSeriesHeatmapTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +515,22 @@ HighchartsSeriesHeatmapTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testDashStyle [
+HighchartsSeriesHeatmapTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHeatmap new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'heatmap';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHeatmapTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +545,7 @@ HighchartsSeriesHeatmapTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testData [
+HighchartsSeriesHeatmapTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +560,7 @@ HighchartsSeriesHeatmapTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testDescription [
+HighchartsSeriesHeatmapTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +575,7 @@ HighchartsSeriesHeatmapTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testEnableMouseTracking [
+HighchartsSeriesHeatmapTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +590,7 @@ HighchartsSeriesHeatmapTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testEvents [
+HighchartsSeriesHeatmapTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +605,7 @@ HighchartsSeriesHeatmapTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testFindNearestPointBy [
+HighchartsSeriesHeatmapTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +620,7 @@ HighchartsSeriesHeatmapTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testGapSize [
+HighchartsSeriesHeatmapTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +635,7 @@ HighchartsSeriesHeatmapTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testGapUnit [
+HighchartsSeriesHeatmapTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +650,7 @@ HighchartsSeriesHeatmapTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testGetExtremesFromAll [
+HighchartsSeriesHeatmapTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +665,7 @@ HighchartsSeriesHeatmapTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testId [
+HighchartsSeriesHeatmapTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +680,7 @@ HighchartsSeriesHeatmapTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testIncludeInDataExport [
+HighchartsSeriesHeatmapTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +695,7 @@ HighchartsSeriesHeatmapTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testIndex [
+HighchartsSeriesHeatmapTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +710,7 @@ HighchartsSeriesHeatmapTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testKeys [
+HighchartsSeriesHeatmapTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +725,7 @@ HighchartsSeriesHeatmapTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testLegendIndex [
+HighchartsSeriesHeatmapTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +740,7 @@ HighchartsSeriesHeatmapTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testLineWidth [
+HighchartsSeriesHeatmapTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +755,7 @@ HighchartsSeriesHeatmapTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testLinecap [
+HighchartsSeriesHeatmapTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +770,7 @@ HighchartsSeriesHeatmapTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testLinkedTo [
+HighchartsSeriesHeatmapTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +785,7 @@ HighchartsSeriesHeatmapTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testName [
+HighchartsSeriesHeatmapTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +800,7 @@ HighchartsSeriesHeatmapTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testNavigatorOptions [
+HighchartsSeriesHeatmapTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +815,7 @@ HighchartsSeriesHeatmapTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testNegativeColor [
+HighchartsSeriesHeatmapTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +830,7 @@ HighchartsSeriesHeatmapTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testNullColor [
+HighchartsSeriesHeatmapTest >> testSetNullColor [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +845,7 @@ HighchartsSeriesHeatmapTest >> testNullColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testOpacity [
+HighchartsSeriesHeatmapTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +860,7 @@ HighchartsSeriesHeatmapTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testPointDescriptionFormatter [
+HighchartsSeriesHeatmapTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +875,7 @@ HighchartsSeriesHeatmapTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testPointInterval [
+HighchartsSeriesHeatmapTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +890,7 @@ HighchartsSeriesHeatmapTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testPointIntervalUnit [
+HighchartsSeriesHeatmapTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +905,7 @@ HighchartsSeriesHeatmapTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testPointPadding [
+HighchartsSeriesHeatmapTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +920,7 @@ HighchartsSeriesHeatmapTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testPointPlacement [
+HighchartsSeriesHeatmapTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +935,7 @@ HighchartsSeriesHeatmapTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testPointStart [
+HighchartsSeriesHeatmapTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +950,7 @@ HighchartsSeriesHeatmapTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testRowsize [
+HighchartsSeriesHeatmapTest >> testSetRowsize [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +965,7 @@ HighchartsSeriesHeatmapTest >> testRowsize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testSelected [
+HighchartsSeriesHeatmapTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +980,7 @@ HighchartsSeriesHeatmapTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testShadow [
+HighchartsSeriesHeatmapTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +995,7 @@ HighchartsSeriesHeatmapTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testShowCheckbox [
+HighchartsSeriesHeatmapTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1010,7 @@ HighchartsSeriesHeatmapTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testShowInLegend [
+HighchartsSeriesHeatmapTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1025,7 @@ HighchartsSeriesHeatmapTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testShowInNavigator [
+HighchartsSeriesHeatmapTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1040,7 @@ HighchartsSeriesHeatmapTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testSkipKeyboardNavigation [
+HighchartsSeriesHeatmapTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1055,7 @@ HighchartsSeriesHeatmapTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testSoftThreshold [
+HighchartsSeriesHeatmapTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1070,7 @@ HighchartsSeriesHeatmapTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testStacking [
+HighchartsSeriesHeatmapTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1085,7 @@ HighchartsSeriesHeatmapTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testStates [
+HighchartsSeriesHeatmapTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1100,7 @@ HighchartsSeriesHeatmapTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testStep [
+HighchartsSeriesHeatmapTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1115,7 @@ HighchartsSeriesHeatmapTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testStickyTracking [
+HighchartsSeriesHeatmapTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1130,7 @@ HighchartsSeriesHeatmapTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testThreshold [
+HighchartsSeriesHeatmapTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1145,7 @@ HighchartsSeriesHeatmapTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testTurboThreshold [
+HighchartsSeriesHeatmapTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1160,7 @@ HighchartsSeriesHeatmapTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testType [
+HighchartsSeriesHeatmapTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1175,7 @@ HighchartsSeriesHeatmapTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testVisible [
+HighchartsSeriesHeatmapTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1190,7 @@ HighchartsSeriesHeatmapTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testXAxis [
+HighchartsSeriesHeatmapTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1205,7 @@ HighchartsSeriesHeatmapTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testYAxis [
+HighchartsSeriesHeatmapTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1220,7 @@ HighchartsSeriesHeatmapTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testZIndex [
+HighchartsSeriesHeatmapTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1235,7 @@ HighchartsSeriesHeatmapTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testZoneAxis [
+HighchartsSeriesHeatmapTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

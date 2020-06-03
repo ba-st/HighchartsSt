@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testAfterAnimate [
+HighstockPlotOptionsTemaEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsTemaEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testCheckboxClick [
+HighstockPlotOptionsTemaEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsTemaEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testClick [
+HighstockPlotOptionsTemaEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsTemaEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testHide [
+HighstockPlotOptionsTemaEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsTemaEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testLegendItemClick [
+HighstockPlotOptionsTemaEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsTemaEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testMouseOut [
+HighstockPlotOptionsTemaEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsTemaEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testMouseOver [
+HighstockPlotOptionsTemaEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsTemaEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTemaEventsTest >> testShow [
+HighstockPlotOptionsTemaEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

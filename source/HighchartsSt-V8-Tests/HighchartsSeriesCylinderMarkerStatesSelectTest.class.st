@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesCylinderMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesCylinderMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesCylinderMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesCylinderMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesCylinderMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesCylinderMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesCylinderMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesCylinderMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesCylinderMarkerStatesSelectTest >> testRadius [
+HighchartsSeriesCylinderMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

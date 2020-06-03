@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionLabelStyleTest >> testFontWeight [
+HighstockSeriesLinearregressionLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

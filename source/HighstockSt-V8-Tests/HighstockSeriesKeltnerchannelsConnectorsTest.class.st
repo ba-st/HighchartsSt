@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsTest >> testDashStyle [
+HighstockSeriesKeltnerchannelsConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannelsConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannelsConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannelsConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesKeltnerchannelsConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsTest >> testLineColor [
+HighstockSeriesKeltnerchannelsConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesKeltnerchannelsConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsTest >> testLineWidth [
+HighstockSeriesKeltnerchannelsConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesKeltnerchannelsConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsTest >> testType [
+HighstockSeriesKeltnerchannelsConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

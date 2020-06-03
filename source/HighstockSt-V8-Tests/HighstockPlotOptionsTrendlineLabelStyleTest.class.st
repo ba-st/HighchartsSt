@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsTrendlineLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

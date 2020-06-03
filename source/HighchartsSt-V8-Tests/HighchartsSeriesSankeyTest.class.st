@@ -5,7 +5,202 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testAllAreas [
+HighchartsSeriesSankeyTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetLevels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component levels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'levels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetNodes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component nodes.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'nodes' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +215,7 @@ HighchartsSeriesSankeyTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testAllowPointSelect [
+HighchartsSeriesSankeyTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +230,7 @@ HighchartsSeriesSankeyTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testClassName [
+HighchartsSeriesSankeyTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +245,7 @@ HighchartsSeriesSankeyTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testClip [
+HighchartsSeriesSankeyTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +260,7 @@ HighchartsSeriesSankeyTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testColor [
+HighchartsSeriesSankeyTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +275,7 @@ HighchartsSeriesSankeyTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testColorAxis [
+HighchartsSeriesSankeyTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +290,7 @@ HighchartsSeriesSankeyTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testColorByPoint [
+HighchartsSeriesSankeyTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +305,7 @@ HighchartsSeriesSankeyTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testColorIndex [
+HighchartsSeriesSankeyTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +320,7 @@ HighchartsSeriesSankeyTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testColorKey [
+HighchartsSeriesSankeyTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +335,7 @@ HighchartsSeriesSankeyTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testColors [
+HighchartsSeriesSankeyTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +350,7 @@ HighchartsSeriesSankeyTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testCompare [
+HighchartsSeriesSankeyTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +365,7 @@ HighchartsSeriesSankeyTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testCompareBase [
+HighchartsSeriesSankeyTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +380,7 @@ HighchartsSeriesSankeyTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testCompareStart [
+HighchartsSeriesSankeyTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +395,7 @@ HighchartsSeriesSankeyTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testConnectEnds [
+HighchartsSeriesSankeyTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +410,7 @@ HighchartsSeriesSankeyTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testConnectNulls [
+HighchartsSeriesSankeyTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +425,7 @@ HighchartsSeriesSankeyTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testCursor [
+HighchartsSeriesSankeyTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +440,7 @@ HighchartsSeriesSankeyTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testCurveFactor [
+HighchartsSeriesSankeyTest >> testSetCurveFactor [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +455,22 @@ HighchartsSeriesSankeyTest >> testCurveFactor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testDashStyle [
+HighchartsSeriesSankeyTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSankey new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'sankey';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSankeyTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +485,7 @@ HighchartsSeriesSankeyTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testData [
+HighchartsSeriesSankeyTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +500,7 @@ HighchartsSeriesSankeyTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testDescription [
+HighchartsSeriesSankeyTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +515,7 @@ HighchartsSeriesSankeyTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testEnableMouseTracking [
+HighchartsSeriesSankeyTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +530,7 @@ HighchartsSeriesSankeyTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testEvents [
+HighchartsSeriesSankeyTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +545,7 @@ HighchartsSeriesSankeyTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testGapSize [
+HighchartsSeriesSankeyTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +560,7 @@ HighchartsSeriesSankeyTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testGapUnit [
+HighchartsSeriesSankeyTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +575,7 @@ HighchartsSeriesSankeyTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testId [
+HighchartsSeriesSankeyTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +590,7 @@ HighchartsSeriesSankeyTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testIncludeInDataExport [
+HighchartsSeriesSankeyTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +605,7 @@ HighchartsSeriesSankeyTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testIndex [
+HighchartsSeriesSankeyTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +620,7 @@ HighchartsSeriesSankeyTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testJoinBy [
+HighchartsSeriesSankeyTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighchartsSeriesSankeyTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testKeys [
+HighchartsSeriesSankeyTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +650,7 @@ HighchartsSeriesSankeyTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testLegendIndex [
+HighchartsSeriesSankeyTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +665,7 @@ HighchartsSeriesSankeyTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testLineWidth [
+HighchartsSeriesSankeyTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +680,7 @@ HighchartsSeriesSankeyTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testLinecap [
+HighchartsSeriesSankeyTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +695,7 @@ HighchartsSeriesSankeyTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testLinkOpacity [
+HighchartsSeriesSankeyTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +710,7 @@ HighchartsSeriesSankeyTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testLinkedTo [
+HighchartsSeriesSankeyTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +725,7 @@ HighchartsSeriesSankeyTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testMapData [
+HighchartsSeriesSankeyTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +740,7 @@ HighchartsSeriesSankeyTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testMinLinkWidth [
+HighchartsSeriesSankeyTest >> testSetMinLinkWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +755,7 @@ HighchartsSeriesSankeyTest >> testMinLinkWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testName [
+HighchartsSeriesSankeyTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +770,7 @@ HighchartsSeriesSankeyTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testNavigatorOptions [
+HighchartsSeriesSankeyTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +785,7 @@ HighchartsSeriesSankeyTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testNodePadding [
+HighchartsSeriesSankeyTest >> testSetNodePadding [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +800,7 @@ HighchartsSeriesSankeyTest >> testNodePadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testNodeWidth [
+HighchartsSeriesSankeyTest >> testSetNodeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +815,7 @@ HighchartsSeriesSankeyTest >> testNodeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testOpacity [
+HighchartsSeriesSankeyTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +830,7 @@ HighchartsSeriesSankeyTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testPointDescriptionFormatter [
+HighchartsSeriesSankeyTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighchartsSeriesSankeyTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testSelected [
+HighchartsSeriesSankeyTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +860,7 @@ HighchartsSeriesSankeyTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testShowCheckbox [
+HighchartsSeriesSankeyTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +875,7 @@ HighchartsSeriesSankeyTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testShowInLegend [
+HighchartsSeriesSankeyTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +890,7 @@ HighchartsSeriesSankeyTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testShowInNavigator [
+HighchartsSeriesSankeyTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +905,7 @@ HighchartsSeriesSankeyTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testSkipKeyboardNavigation [
+HighchartsSeriesSankeyTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +920,7 @@ HighchartsSeriesSankeyTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testStack [
+HighchartsSeriesSankeyTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +935,7 @@ HighchartsSeriesSankeyTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testStates [
+HighchartsSeriesSankeyTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +950,7 @@ HighchartsSeriesSankeyTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testStep [
+HighchartsSeriesSankeyTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +965,7 @@ HighchartsSeriesSankeyTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testStickyTracking [
+HighchartsSeriesSankeyTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +980,7 @@ HighchartsSeriesSankeyTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testTurboThreshold [
+HighchartsSeriesSankeyTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +995,7 @@ HighchartsSeriesSankeyTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testType [
+HighchartsSeriesSankeyTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1010,7 @@ HighchartsSeriesSankeyTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testVisible [
+HighchartsSeriesSankeyTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1025,7 @@ HighchartsSeriesSankeyTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testXAxis [
+HighchartsSeriesSankeyTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1040,7 @@ HighchartsSeriesSankeyTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testYAxis [
+HighchartsSeriesSankeyTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1055,7 @@ HighchartsSeriesSankeyTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyTest >> testZIndex [
+HighchartsSeriesSankeyTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

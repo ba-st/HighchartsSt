@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testFill [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsFibonacciShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testHeight [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsFibonacciShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testR [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsFibonacciShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testSnap [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighstockAnnotationsFibonacciShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testStroke [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockAnnotationsFibonacciShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockAnnotationsFibonacciShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testType [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockAnnotationsFibonacciShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciShapeOptionsTest >> testWidth [
+HighstockAnnotationsFibonacciShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

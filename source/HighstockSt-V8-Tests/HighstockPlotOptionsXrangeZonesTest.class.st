@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeZonesTest >> testClassName [
+HighstockPlotOptionsXrangeZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsXrangeZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeZonesTest >> testColor [
+HighstockPlotOptionsXrangeZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsXrangeZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeZonesTest >> testDashStyle [
+HighstockPlotOptionsXrangeZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsXrangeZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeZonesTest >> testFillColor [
+HighstockPlotOptionsXrangeZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsXrangeZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeZonesTest >> testValue [
+HighstockPlotOptionsXrangeZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testAlign [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testColor [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testEnabled [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testHeight [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testInside [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testLineColor [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testLineWidth [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testRadius [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testWidth [
+HighchartsPlotOptionsFunnel3dConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testClick [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testDrag [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testDragStart [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testDrop [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testRemove [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testSelect [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testUnselect [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsFunnel3dPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dPointEventsTest >> testUpdate [
+HighchartsPlotOptionsFunnel3dPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

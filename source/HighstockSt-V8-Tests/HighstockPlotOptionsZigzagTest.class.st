@@ -5,7 +5,203 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testAllowPointSelect [
+HighstockPlotOptionsZigzagTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +215,7 @@ HighstockPlotOptionsZigzagTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testAnimationLimit [
+HighstockPlotOptionsZigzagTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +229,7 @@ HighstockPlotOptionsZigzagTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testBoostBlending [
+HighstockPlotOptionsZigzagTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +243,7 @@ HighstockPlotOptionsZigzagTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testBoostThreshold [
+HighstockPlotOptionsZigzagTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +257,7 @@ HighstockPlotOptionsZigzagTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testBorderColor [
+HighstockPlotOptionsZigzagTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +271,7 @@ HighstockPlotOptionsZigzagTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testBorderWidth [
+HighstockPlotOptionsZigzagTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +285,7 @@ HighstockPlotOptionsZigzagTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testClassName [
+HighstockPlotOptionsZigzagTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +299,7 @@ HighstockPlotOptionsZigzagTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testClip [
+HighstockPlotOptionsZigzagTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +313,7 @@ HighstockPlotOptionsZigzagTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testColor [
+HighstockPlotOptionsZigzagTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +327,7 @@ HighstockPlotOptionsZigzagTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testColorIndex [
+HighstockPlotOptionsZigzagTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +341,7 @@ HighstockPlotOptionsZigzagTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testColorKey [
+HighstockPlotOptionsZigzagTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +355,7 @@ HighstockPlotOptionsZigzagTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testCompare [
+HighstockPlotOptionsZigzagTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +369,7 @@ HighstockPlotOptionsZigzagTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testCompareBase [
+HighstockPlotOptionsZigzagTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +383,7 @@ HighstockPlotOptionsZigzagTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testCompareStart [
+HighstockPlotOptionsZigzagTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +397,7 @@ HighstockPlotOptionsZigzagTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testCompareToMain [
+HighstockPlotOptionsZigzagTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,7 @@ HighstockPlotOptionsZigzagTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testConnectEnds [
+HighstockPlotOptionsZigzagTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +425,7 @@ HighstockPlotOptionsZigzagTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testConnectNulls [
+HighstockPlotOptionsZigzagTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,21 @@ HighstockPlotOptionsZigzagTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testCropThreshold [
+HighstockPlotOptionsZigzagTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +467,7 @@ HighstockPlotOptionsZigzagTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testCursor [
+HighstockPlotOptionsZigzagTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +481,21 @@ HighstockPlotOptionsZigzagTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testDashStyle [
+HighstockPlotOptionsZigzagTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzag new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +509,7 @@ HighstockPlotOptionsZigzagTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testDescription [
+HighstockPlotOptionsZigzagTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +523,7 @@ HighstockPlotOptionsZigzagTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testEnableMouseTracking [
+HighstockPlotOptionsZigzagTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +537,7 @@ HighstockPlotOptionsZigzagTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testEvents [
+HighstockPlotOptionsZigzagTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +551,7 @@ HighstockPlotOptionsZigzagTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testFindNearestPointBy [
+HighstockPlotOptionsZigzagTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +565,7 @@ HighstockPlotOptionsZigzagTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testGapSize [
+HighstockPlotOptionsZigzagTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +579,7 @@ HighstockPlotOptionsZigzagTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testGapUnit [
+HighstockPlotOptionsZigzagTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +593,7 @@ HighstockPlotOptionsZigzagTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testGetExtremesFromAll [
+HighstockPlotOptionsZigzagTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +607,7 @@ HighstockPlotOptionsZigzagTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testIncludeInDataExport [
+HighstockPlotOptionsZigzagTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +621,7 @@ HighstockPlotOptionsZigzagTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testLineWidth [
+HighstockPlotOptionsZigzagTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +635,7 @@ HighstockPlotOptionsZigzagTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testLinecap [
+HighstockPlotOptionsZigzagTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +649,7 @@ HighstockPlotOptionsZigzagTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testLinkedTo [
+HighstockPlotOptionsZigzagTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +663,7 @@ HighstockPlotOptionsZigzagTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testName [
+HighstockPlotOptionsZigzagTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +677,7 @@ HighstockPlotOptionsZigzagTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testNegativeColor [
+HighstockPlotOptionsZigzagTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +691,7 @@ HighstockPlotOptionsZigzagTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testOpacity [
+HighstockPlotOptionsZigzagTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +705,7 @@ HighstockPlotOptionsZigzagTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsZigzagTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +719,7 @@ HighstockPlotOptionsZigzagTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testSelected [
+HighstockPlotOptionsZigzagTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +733,7 @@ HighstockPlotOptionsZigzagTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testShadow [
+HighstockPlotOptionsZigzagTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +747,7 @@ HighstockPlotOptionsZigzagTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testShowCheckbox [
+HighstockPlotOptionsZigzagTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +761,7 @@ HighstockPlotOptionsZigzagTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testShowInLegend [
+HighstockPlotOptionsZigzagTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +775,7 @@ HighstockPlotOptionsZigzagTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsZigzagTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +789,7 @@ HighstockPlotOptionsZigzagTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testSoftThreshold [
+HighstockPlotOptionsZigzagTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +803,7 @@ HighstockPlotOptionsZigzagTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testStates [
+HighstockPlotOptionsZigzagTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +817,7 @@ HighstockPlotOptionsZigzagTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testStep [
+HighstockPlotOptionsZigzagTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +831,7 @@ HighstockPlotOptionsZigzagTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testStickyTracking [
+HighstockPlotOptionsZigzagTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +845,7 @@ HighstockPlotOptionsZigzagTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testThreshold [
+HighstockPlotOptionsZigzagTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +859,7 @@ HighstockPlotOptionsZigzagTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testTurboThreshold [
+HighstockPlotOptionsZigzagTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +873,7 @@ HighstockPlotOptionsZigzagTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testVisible [
+HighstockPlotOptionsZigzagTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +887,7 @@ HighstockPlotOptionsZigzagTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testZIndex [
+HighstockPlotOptionsZigzagTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +901,7 @@ HighstockPlotOptionsZigzagTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagTest >> testZoneAxis [
+HighstockPlotOptionsZigzagTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

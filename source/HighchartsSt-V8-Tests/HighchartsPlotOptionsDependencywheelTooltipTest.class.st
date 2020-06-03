@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testChangeDecimals [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheelTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testDistance [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testNodeFormat [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetNodeFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testNodeFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testNodeFormatter [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetNodeFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testNodeFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testNullFormat [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testPointFormat [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,21 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheelTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighchartsPlotOptionsDependencywheelTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsDependencywheelTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

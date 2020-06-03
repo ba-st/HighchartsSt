@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testEnabled [
+HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testFillColor [
+HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testLineColor [
+HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testLineWidth [
+HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testRadius [
+HighstockSeriesAreasplineDataMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

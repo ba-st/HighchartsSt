@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphPointTest >> testEvents [
+HighstockSeriesStreamgraphPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

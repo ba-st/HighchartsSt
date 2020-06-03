@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeConnectorsTest >> testDashStyle [
+HighstockSeriesLinearregressionslopeConnectorsTest >> testGetEndMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeConnectors new.
+	component endMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'endMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeConnectorsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeConnectors new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeConnectorsTest >> testGetStartMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressionslopeConnectors new.
+	component startMarker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'startMarker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressionslopeConnectorsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesLinearregressionslopeConnectorsTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeConnectorsTest >> testLineColor [
+HighstockSeriesLinearregressionslopeConnectorsTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesLinearregressionslopeConnectorsTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeConnectorsTest >> testLineWidth [
+HighstockSeriesLinearregressionslopeConnectorsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighstockSeriesLinearregressionslopeConnectorsTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionslopeConnectorsTest >> testType [
+HighstockSeriesLinearregressionslopeConnectorsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

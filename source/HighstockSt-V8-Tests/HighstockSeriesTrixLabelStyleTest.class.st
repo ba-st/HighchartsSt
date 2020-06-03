@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixLabelStyleTest >> testFontWeight [
+HighstockSeriesTrixLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

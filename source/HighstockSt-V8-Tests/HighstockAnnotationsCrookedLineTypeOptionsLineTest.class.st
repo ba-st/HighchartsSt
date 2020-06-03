@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineTypeOptionsLineTest >> testFill [
+HighstockAnnotationsCrookedLineTypeOptionsLineTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

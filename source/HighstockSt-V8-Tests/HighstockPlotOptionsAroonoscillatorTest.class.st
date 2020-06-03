@@ -5,7 +5,203 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testAllowPointSelect [
+HighstockPlotOptionsAroonoscillatorTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +215,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testAnimationLimit [
+HighstockPlotOptionsAroonoscillatorTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +229,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testBoostBlending [
+HighstockPlotOptionsAroonoscillatorTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +243,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testBoostThreshold [
+HighstockPlotOptionsAroonoscillatorTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +257,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testBorderColor [
+HighstockPlotOptionsAroonoscillatorTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +271,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testBorderWidth [
+HighstockPlotOptionsAroonoscillatorTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +285,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testClassName [
+HighstockPlotOptionsAroonoscillatorTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +299,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testClip [
+HighstockPlotOptionsAroonoscillatorTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +313,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testColor [
+HighstockPlotOptionsAroonoscillatorTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +327,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testColorIndex [
+HighstockPlotOptionsAroonoscillatorTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +341,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testColorKey [
+HighstockPlotOptionsAroonoscillatorTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +355,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testCompareStart [
+HighstockPlotOptionsAroonoscillatorTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +369,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testCompareToMain [
+HighstockPlotOptionsAroonoscillatorTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +383,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testCompareToMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testConnectEnds [
+HighstockPlotOptionsAroonoscillatorTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +397,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testConnectNulls [
+HighstockPlotOptionsAroonoscillatorTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,21 @@ HighstockPlotOptionsAroonoscillatorTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testCropThreshold [
+HighstockPlotOptionsAroonoscillatorTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +439,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testCursor [
+HighstockPlotOptionsAroonoscillatorTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +453,21 @@ HighstockPlotOptionsAroonoscillatorTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testDashStyle [
+HighstockPlotOptionsAroonoscillatorTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsAroonoscillator new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsAroonoscillatorTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +481,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testDescription [
+HighstockPlotOptionsAroonoscillatorTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +495,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testEnableMouseTracking [
+HighstockPlotOptionsAroonoscillatorTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +509,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testEvents [
+HighstockPlotOptionsAroonoscillatorTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +523,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testFindNearestPointBy [
+HighstockPlotOptionsAroonoscillatorTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +537,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testGapSize [
+HighstockPlotOptionsAroonoscillatorTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +551,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testGapUnit [
+HighstockPlotOptionsAroonoscillatorTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +565,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testGetExtremesFromAll [
+HighstockPlotOptionsAroonoscillatorTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +579,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testIncludeInDataExport [
+HighstockPlotOptionsAroonoscillatorTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +593,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testLineWidth [
+HighstockPlotOptionsAroonoscillatorTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +607,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testLinecap [
+HighstockPlotOptionsAroonoscillatorTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +621,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testLinkedTo [
+HighstockPlotOptionsAroonoscillatorTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +635,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testName [
+HighstockPlotOptionsAroonoscillatorTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +649,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testNegativeColor [
+HighstockPlotOptionsAroonoscillatorTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +663,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testOpacity [
+HighstockPlotOptionsAroonoscillatorTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +677,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsAroonoscillatorTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +691,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testSelected [
+HighstockPlotOptionsAroonoscillatorTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +705,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testShadow [
+HighstockPlotOptionsAroonoscillatorTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +719,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testShowCheckbox [
+HighstockPlotOptionsAroonoscillatorTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +733,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testShowInLegend [
+HighstockPlotOptionsAroonoscillatorTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +747,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsAroonoscillatorTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +761,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testSoftThreshold [
+HighstockPlotOptionsAroonoscillatorTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +775,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testStates [
+HighstockPlotOptionsAroonoscillatorTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +789,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testStep [
+HighstockPlotOptionsAroonoscillatorTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +803,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testStickyTracking [
+HighstockPlotOptionsAroonoscillatorTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +817,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testThreshold [
+HighstockPlotOptionsAroonoscillatorTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +831,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testTurboThreshold [
+HighstockPlotOptionsAroonoscillatorTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +845,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testVisible [
+HighstockPlotOptionsAroonoscillatorTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +859,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testZIndex [
+HighstockPlotOptionsAroonoscillatorTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +873,7 @@ HighstockPlotOptionsAroonoscillatorTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorTest >> testZoneAxis [
+HighstockPlotOptionsAroonoscillatorTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

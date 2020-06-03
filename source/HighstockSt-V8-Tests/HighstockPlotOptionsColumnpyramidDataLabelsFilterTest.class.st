@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testOperator [
+HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testProperty [
+HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testValue [
+HighstockPlotOptionsColumnpyramidDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

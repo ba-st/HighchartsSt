@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagParamsTest >> testDeviation [
+HighstockPlotOptionsZigzagParamsTest >> testSetDeviation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsZigzagParamsTest >> testDeviation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagParamsTest >> testHighIndex [
+HighstockPlotOptionsZigzagParamsTest >> testSetHighIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsZigzagParamsTest >> testHighIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagParamsTest >> testLowIndex [
+HighstockPlotOptionsZigzagParamsTest >> testSetLowIndex [
 
 	| component javascript expectedConfiguration |
 

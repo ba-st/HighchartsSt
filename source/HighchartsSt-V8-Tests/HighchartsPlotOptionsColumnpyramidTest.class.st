@@ -5,7 +5,133 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testAllAreas [
+HighchartsPlotOptionsColumnpyramidTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +145,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testAllowPointSelect [
+HighchartsPlotOptionsColumnpyramidTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +159,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testAnimationLimit [
+HighchartsPlotOptionsColumnpyramidTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +173,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testBoostBlending [
+HighchartsPlotOptionsColumnpyramidTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +187,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testBorderColor [
+HighchartsPlotOptionsColumnpyramidTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +201,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testBorderWidth [
+HighchartsPlotOptionsColumnpyramidTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +215,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testClassName [
+HighchartsPlotOptionsColumnpyramidTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +229,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testClip [
+HighchartsPlotOptionsColumnpyramidTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +243,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testColor [
+HighchartsPlotOptionsColumnpyramidTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +257,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testColorAxis [
+HighchartsPlotOptionsColumnpyramidTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +271,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testColorByPoint [
+HighchartsPlotOptionsColumnpyramidTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +285,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testColorIndex [
+HighchartsPlotOptionsColumnpyramidTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +299,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testColorKey [
+HighchartsPlotOptionsColumnpyramidTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +313,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testColors [
+HighchartsPlotOptionsColumnpyramidTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +327,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testCropThreshold [
+HighchartsPlotOptionsColumnpyramidTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +341,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testCursor [
+HighchartsPlotOptionsColumnpyramidTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +355,35 @@ HighchartsPlotOptionsColumnpyramidTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testDescription [
+HighchartsPlotOptionsColumnpyramidTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnpyramid new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnpyramidTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +397,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testEnableMouseTracking [
+HighchartsPlotOptionsColumnpyramidTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +411,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testEvents [
+HighchartsPlotOptionsColumnpyramidTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +425,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testFindNearestPointBy [
+HighchartsPlotOptionsColumnpyramidTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +439,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsColumnpyramidTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +453,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testGroupPadding [
+HighchartsPlotOptionsColumnpyramidTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +467,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testGrouping [
+HighchartsPlotOptionsColumnpyramidTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +481,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testIncludeInDataExport [
+HighchartsPlotOptionsColumnpyramidTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +495,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testJoinBy [
+HighchartsPlotOptionsColumnpyramidTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +509,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testKeys [
+HighchartsPlotOptionsColumnpyramidTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +523,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testLinkedTo [
+HighchartsPlotOptionsColumnpyramidTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +537,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testMaxPointWidth [
+HighchartsPlotOptionsColumnpyramidTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +551,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testMinPointLength [
+HighchartsPlotOptionsColumnpyramidTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +565,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testOpacity [
+HighchartsPlotOptionsColumnpyramidTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +579,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +593,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointInterval [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +607,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointIntervalUnit [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +621,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointPadding [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +635,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointPlacement [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +649,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointRange [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +663,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointStart [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +677,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testPointWidth [
+HighchartsPlotOptionsColumnpyramidTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +691,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testSelected [
+HighchartsPlotOptionsColumnpyramidTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +705,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testShadow [
+HighchartsPlotOptionsColumnpyramidTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +719,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testShowCheckbox [
+HighchartsPlotOptionsColumnpyramidTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +733,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testShowInLegend [
+HighchartsPlotOptionsColumnpyramidTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +747,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsColumnpyramidTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +761,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testStacking [
+HighchartsPlotOptionsColumnpyramidTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +775,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testStates [
+HighchartsPlotOptionsColumnpyramidTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +789,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testStickyTracking [
+HighchartsPlotOptionsColumnpyramidTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +803,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testTurboThreshold [
+HighchartsPlotOptionsColumnpyramidTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +817,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testVisible [
+HighchartsPlotOptionsColumnpyramidTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +831,7 @@ HighchartsPlotOptionsColumnpyramidTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidTest >> testZIndex [
+HighchartsPlotOptionsColumnpyramidTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

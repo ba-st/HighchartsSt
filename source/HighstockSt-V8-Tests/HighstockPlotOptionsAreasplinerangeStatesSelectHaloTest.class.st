@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testAttributes [
+HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testOpacity [
+HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testSize [
+HighstockPlotOptionsAreasplinerangeStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

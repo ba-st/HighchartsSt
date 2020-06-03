@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisLabelsStyleTest >> testColor [
+HighchartsXAxisLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsXAxisLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisLabelsStyleTest >> testCursor [
+HighchartsXAxisLabelsStyleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsXAxisLabelsStyleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisLabelsStyleTest >> testFontSize [
+HighchartsXAxisLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 

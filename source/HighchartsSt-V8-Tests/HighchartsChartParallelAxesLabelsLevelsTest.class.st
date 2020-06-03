@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsLevelsTest >> testLevel [
+HighchartsChartParallelAxesLabelsLevelsTest >> testSetLevel [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesLabelsLevelsTest >> testLevel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesLabelsLevelsTest >> testStyle [
+HighchartsChartParallelAxesLabelsLevelsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

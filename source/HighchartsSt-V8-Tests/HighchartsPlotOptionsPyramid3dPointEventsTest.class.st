@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testClick [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testDrag [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testDragStart [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testDrop [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testRemove [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testSelect [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testUnselect [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsPyramid3dPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramid3dPointEventsTest >> testUpdate [
+HighchartsPlotOptionsPyramid3dPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

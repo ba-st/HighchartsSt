@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testEnabled [
+HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testFillColor [
+HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testLineColor [
+HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testLineWidth [
+HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testRadius [
+HighchartsPlotOptionsTimelineMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

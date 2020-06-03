@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticParamsTest >> testPeriods [
+HighstockSeriesSlowstochasticParamsTest >> testSetPeriods [
 
 	| component javascript expectedConfiguration |
 

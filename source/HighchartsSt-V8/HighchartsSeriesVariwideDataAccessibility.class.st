@@ -1,3 +1,6 @@
+"
+Accessibility options for a data point.
+"
 Class {
 	#name : #HighchartsSeriesVariwideDataAccessibility,
 	#superclass : #HighchartsComponent,

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testAlign [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testColor [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testEnabled [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testHeight [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testInside [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testLineColor [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testLineWidth [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testRadius [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSymbol [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testVerticalAlign
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testWidth [
+HighchartsPlotOptionsColumnpyramidConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

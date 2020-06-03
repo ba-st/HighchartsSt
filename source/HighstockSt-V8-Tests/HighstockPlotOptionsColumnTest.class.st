@@ -5,7 +5,189 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testAllAreas [
+HighstockPlotOptionsColumnTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +201,7 @@ HighstockPlotOptionsColumnTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testAllowPointSelect [
+HighstockPlotOptionsColumnTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +215,7 @@ HighstockPlotOptionsColumnTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testAnimationLimit [
+HighstockPlotOptionsColumnTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +229,7 @@ HighstockPlotOptionsColumnTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testBoostBlending [
+HighstockPlotOptionsColumnTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +243,7 @@ HighstockPlotOptionsColumnTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testBoostThreshold [
+HighstockPlotOptionsColumnTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +257,7 @@ HighstockPlotOptionsColumnTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testBorderColor [
+HighstockPlotOptionsColumnTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +271,7 @@ HighstockPlotOptionsColumnTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testBorderRadius [
+HighstockPlotOptionsColumnTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +285,7 @@ HighstockPlotOptionsColumnTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testBorderWidth [
+HighstockPlotOptionsColumnTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +299,7 @@ HighstockPlotOptionsColumnTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testClassName [
+HighstockPlotOptionsColumnTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +313,7 @@ HighstockPlotOptionsColumnTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testClip [
+HighstockPlotOptionsColumnTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +327,7 @@ HighstockPlotOptionsColumnTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testColor [
+HighstockPlotOptionsColumnTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +341,7 @@ HighstockPlotOptionsColumnTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testColorAxis [
+HighstockPlotOptionsColumnTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +355,7 @@ HighstockPlotOptionsColumnTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testColorByPoint [
+HighstockPlotOptionsColumnTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +369,7 @@ HighstockPlotOptionsColumnTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testColorIndex [
+HighstockPlotOptionsColumnTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +383,7 @@ HighstockPlotOptionsColumnTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testColorKey [
+HighstockPlotOptionsColumnTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +397,7 @@ HighstockPlotOptionsColumnTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testColors [
+HighstockPlotOptionsColumnTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +411,7 @@ HighstockPlotOptionsColumnTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testCompare [
+HighstockPlotOptionsColumnTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +425,7 @@ HighstockPlotOptionsColumnTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testCompareBase [
+HighstockPlotOptionsColumnTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighstockPlotOptionsColumnTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testCompareStart [
+HighstockPlotOptionsColumnTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighstockPlotOptionsColumnTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testCrisp [
+HighstockPlotOptionsColumnTest >> testSetCrisp [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighstockPlotOptionsColumnTest >> testCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testCropThreshold [
+HighstockPlotOptionsColumnTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighstockPlotOptionsColumnTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testCursor [
+HighstockPlotOptionsColumnTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,35 @@ HighstockPlotOptionsColumnTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testDescription [
+HighstockPlotOptionsColumnTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +537,7 @@ HighstockPlotOptionsColumnTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testEnableMouseTracking [
+HighstockPlotOptionsColumnTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +551,7 @@ HighstockPlotOptionsColumnTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testEvents [
+HighstockPlotOptionsColumnTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +565,7 @@ HighstockPlotOptionsColumnTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testFindNearestPointBy [
+HighstockPlotOptionsColumnTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +579,7 @@ HighstockPlotOptionsColumnTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testGetExtremesFromAll [
+HighstockPlotOptionsColumnTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +593,7 @@ HighstockPlotOptionsColumnTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testGroupPadding [
+HighstockPlotOptionsColumnTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +607,7 @@ HighstockPlotOptionsColumnTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testGrouping [
+HighstockPlotOptionsColumnTest >> testSetGrouping [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +621,7 @@ HighstockPlotOptionsColumnTest >> testGrouping [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testIncludeInDataExport [
+HighstockPlotOptionsColumnTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighstockPlotOptionsColumnTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testJoinBy [
+HighstockPlotOptionsColumnTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +649,7 @@ HighstockPlotOptionsColumnTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testKeys [
+HighstockPlotOptionsColumnTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +663,7 @@ HighstockPlotOptionsColumnTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testLinkedTo [
+HighstockPlotOptionsColumnTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +677,7 @@ HighstockPlotOptionsColumnTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testMaxPointWidth [
+HighstockPlotOptionsColumnTest >> testSetMaxPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +691,7 @@ HighstockPlotOptionsColumnTest >> testMaxPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testMinPointLength [
+HighstockPlotOptionsColumnTest >> testSetMinPointLength [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +705,7 @@ HighstockPlotOptionsColumnTest >> testMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testNavigatorOptions [
+HighstockPlotOptionsColumnTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +719,7 @@ HighstockPlotOptionsColumnTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testNegativeColor [
+HighstockPlotOptionsColumnTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +733,7 @@ HighstockPlotOptionsColumnTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testOpacity [
+HighstockPlotOptionsColumnTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +747,7 @@ HighstockPlotOptionsColumnTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsColumnTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +761,7 @@ HighstockPlotOptionsColumnTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointInterval [
+HighstockPlotOptionsColumnTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +775,7 @@ HighstockPlotOptionsColumnTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointIntervalUnit [
+HighstockPlotOptionsColumnTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +789,7 @@ HighstockPlotOptionsColumnTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointPadding [
+HighstockPlotOptionsColumnTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +803,7 @@ HighstockPlotOptionsColumnTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointPlacement [
+HighstockPlotOptionsColumnTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +817,7 @@ HighstockPlotOptionsColumnTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointRange [
+HighstockPlotOptionsColumnTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +831,7 @@ HighstockPlotOptionsColumnTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointStart [
+HighstockPlotOptionsColumnTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighstockPlotOptionsColumnTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testPointWidth [
+HighstockPlotOptionsColumnTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +859,7 @@ HighstockPlotOptionsColumnTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testSelected [
+HighstockPlotOptionsColumnTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +873,7 @@ HighstockPlotOptionsColumnTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testShadow [
+HighstockPlotOptionsColumnTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +887,7 @@ HighstockPlotOptionsColumnTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testShowCheckbox [
+HighstockPlotOptionsColumnTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +901,7 @@ HighstockPlotOptionsColumnTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testShowInLegend [
+HighstockPlotOptionsColumnTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +915,7 @@ HighstockPlotOptionsColumnTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testShowInNavigator [
+HighstockPlotOptionsColumnTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +929,7 @@ HighstockPlotOptionsColumnTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testSkipKeyboardNavigation [
+HighstockPlotOptionsColumnTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +943,7 @@ HighstockPlotOptionsColumnTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testSoftThreshold [
+HighstockPlotOptionsColumnTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +957,7 @@ HighstockPlotOptionsColumnTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testStacking [
+HighstockPlotOptionsColumnTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +971,7 @@ HighstockPlotOptionsColumnTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testStates [
+HighstockPlotOptionsColumnTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +985,7 @@ HighstockPlotOptionsColumnTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testStickyTracking [
+HighstockPlotOptionsColumnTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +999,7 @@ HighstockPlotOptionsColumnTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testTurboThreshold [
+HighstockPlotOptionsColumnTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +1013,7 @@ HighstockPlotOptionsColumnTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testVisible [
+HighstockPlotOptionsColumnTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +1027,7 @@ HighstockPlotOptionsColumnTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testZIndex [
+HighstockPlotOptionsColumnTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +1041,7 @@ HighstockPlotOptionsColumnTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnTest >> testZoneAxis [
+HighstockPlotOptionsColumnTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

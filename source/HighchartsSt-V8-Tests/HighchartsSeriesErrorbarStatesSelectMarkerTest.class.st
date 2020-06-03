@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testEnabled [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testEnabledThreshold [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testFillColor [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testHeight [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testLineColor [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testLineWidth [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testRadius [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSymbol [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarStatesSelectMarkerTest >> testWidth [
+HighchartsSeriesErrorbarStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

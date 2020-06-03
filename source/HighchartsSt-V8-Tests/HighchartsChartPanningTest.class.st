@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartPanningTest >> testEnabled [
+HighchartsChartPanningTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartPanningTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartPanningTest >> testType [
+HighchartsChartPanningTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testClick [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testDrag [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testDragStart [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testDrop [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testMouseOut [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testMouseOver [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testRemove [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testSelect [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testUnselect [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesColumnpyramidPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidPointEventsTest >> testUpdate [
+HighstockSeriesColumnpyramidPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

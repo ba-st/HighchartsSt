@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testRadius [
+HighchartsSeriesStreamgraphDataMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

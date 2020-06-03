@@ -18,8 +18,7 @@ HighchartsSeriesNetworkgraphMarkerStates >> hover [
 { #category : #accessing }
 HighchartsSeriesNetworkgraphMarkerStates >> inactive [
 
-	"The opposite state of a hover for a single point node.
-Applied to all not connected nodes to the hovered one.
+	"The opposite state of a hover for a single point node. Applied to all not connected nodes to the hovered one.
 "
 	^ configurationOptions at: 'inactive' ifAbsentPut: [ HighchartsSeriesNetworkgraphMarkerStatesInactive new ]
 ]
@@ -27,9 +26,7 @@ Applied to all not connected nodes to the hovered one.
 { #category : #accessing }
 HighchartsSeriesNetworkgraphMarkerStates >> normal [
 
-	"The normal state of a single point marker. Currently only
-used for setting animation when returning to normal state
-from hover.
+	"The normal state of a single point marker. Currently only used for setting animation when returning to normal state from hover.
 "
 	^ configurationOptions at: 'normal' ifAbsentPut: [ HighchartsSeriesNetworkgraphMarkerStatesNormal new ]
 ]
@@ -37,9 +34,7 @@ from hover.
 { #category : #accessing }
 HighchartsSeriesNetworkgraphMarkerStates >> select [
 
-	"The appearance of the point marker when selected. In order to
-allow a point to be selected, set the
-series.allowPointSelect option to true.
+	"The appearance of the point marker when selected. In order to allow a point to be selected, set the series.allowPointSelect option to true.
 "
 	^ configurationOptions at: 'select' ifAbsentPut: [ HighchartsSeriesNetworkgraphMarkerStatesSelect new ]
 ]

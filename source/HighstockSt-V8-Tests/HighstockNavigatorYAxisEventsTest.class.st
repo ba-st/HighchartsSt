@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisEventsTest >> testAfterSetExtremes [
+HighstockNavigatorYAxisEventsTest >> testSetAfterSetExtremes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigatorYAxisEventsTest >> testAfterSetExtremes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisEventsTest >> testPointInBreak [
+HighstockNavigatorYAxisEventsTest >> testSetPointInBreak [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigatorYAxisEventsTest >> testPointInBreak [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorYAxisEventsTest >> testSetExtremes [
+HighstockNavigatorYAxisEventsTest >> testSetSetExtremes [
 
 	| component javascript expectedConfiguration |
 

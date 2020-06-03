@@ -12,9 +12,7 @@ Class {
 { #category : #accessing }
 HighstockNavigatorXAxisCrosshairLabel >> align: aHighchartsAlignValue [
 
-	"Alignment of the label compared to the axis. Defaults to &quot;left&quot; for
-right-side axes, &quot;right&quot; for left-side axes and &quot;center&quot; for
-horizontal axes.
+	"Alignment of the label compared to the axis. Defaults to &quot;left&quot; for right-side axes, &quot;right&quot; for left-side axes and &quot;center&quot; for horizontal axes.
 "
 
 	configurationOptions at: 'align' put: aHighchartsAlignValue
@@ -23,8 +21,7 @@ horizontal axes.
 { #category : #accessing }
 HighstockNavigatorXAxisCrosshairLabel >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The background color for the label. Defaults to the related series
-color, or #666666 if that is not available.
+	"The background color for the label. Defaults to the related series color, or #666666 if that is not available.
 "
 
 	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -69,8 +66,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockNavigatorXAxisCrosshairLabel >> format: aString [
 
-	"A format string for the crosshair label. Defaults to {value} for
-numeric axes and {value:b d, Y} for datetime axes.
+	"A format string for the crosshair label. Defaults to {value} for numeric axes and {value:b d, Y} for datetime axes.
 "
 
 	configurationOptions at: 'format' put: aString

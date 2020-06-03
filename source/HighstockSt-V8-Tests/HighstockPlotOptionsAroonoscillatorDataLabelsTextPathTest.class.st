@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsAroonoscillatorDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAroonoscillatorDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsAroonoscillatorDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

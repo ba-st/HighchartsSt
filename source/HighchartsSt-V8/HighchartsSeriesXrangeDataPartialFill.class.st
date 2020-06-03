@@ -12,8 +12,7 @@ Class {
 { #category : #accessing }
 HighchartsSeriesXrangeDataPartialFill >> amount: aNumber [
 
-	"The amount of the X-range point to be filled. Values can be 0-1 and are
-converted to percentages in the default data label formatter.
+	"The amount of the X-range point to be filled. Values can be 0-1 and are converted to percentages in the default data label formatter.
 "
 
 	configurationOptions at: 'amount' put: aNumber
@@ -22,8 +21,7 @@ converted to percentages in the default data label formatter.
 { #category : #accessing }
 HighchartsSeriesXrangeDataPartialFill >> fill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The fill color to be used for partial fills. Defaults to a darker shade
-of the point color.
+	"The fill color to be used for partial fills. Defaults to a darker shade of the point color.
 "
 
 	configurationOptions at: 'fill' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionanglePointTest >> testEvents [
+HighstockPlotOptionsLinearregressionanglePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

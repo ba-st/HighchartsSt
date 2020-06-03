@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testEnabled [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testEnabledThreshold [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testFillColor [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testHeight [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testLineColor [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testLineWidth [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testRadius [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSymbol [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphStatesSelectMarkerTest >> testWidth [
+HighstockSeriesStreamgraphStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

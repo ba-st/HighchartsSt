@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testApproximation [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWilliamsrDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWilliamsrDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testEnabled [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsWilliamsrDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testForced [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsWilliamsrDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsWilliamsrDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsWilliamsrDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsWilliamsrDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrDataGroupingTest >> testUnits [
+HighstockPlotOptionsWilliamsrDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

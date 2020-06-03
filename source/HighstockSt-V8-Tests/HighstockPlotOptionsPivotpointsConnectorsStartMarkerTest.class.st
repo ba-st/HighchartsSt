@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testAlign [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testColor [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testEnabled [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testHeight [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testInside [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testLineColor [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testLineWidth [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testRadius [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSymbol [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testWidth [
+HighstockPlotOptionsPivotpointsConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

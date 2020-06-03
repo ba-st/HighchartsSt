@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testDescription [
+HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressionslopeAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testEnabled [
+HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testExposeAsGroupOnly [
+HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testSetExposeAsGroupOnly [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testExposeAsGroupO
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testPointDescriptionFormatter [
+HighstockPlotOptionsLinearregressionslopeAccessibilityTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 

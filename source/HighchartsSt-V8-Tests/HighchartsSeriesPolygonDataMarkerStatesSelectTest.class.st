@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testEnabled [
+HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testFillColor [
+HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testLineColor [
+HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testLineWidth [
+HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testRadius [
+HighchartsSeriesPolygonDataMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

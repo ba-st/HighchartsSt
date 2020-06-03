@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testAfterAnimate [
+HighchartsSeriesArearangeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesArearangeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testCheckboxClick [
+HighchartsSeriesArearangeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesArearangeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testClick [
+HighchartsSeriesArearangeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesArearangeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testHide [
+HighchartsSeriesArearangeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesArearangeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testLegendItemClick [
+HighchartsSeriesArearangeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesArearangeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testMouseOut [
+HighchartsSeriesArearangeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesArearangeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testMouseOver [
+HighchartsSeriesArearangeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesArearangeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeEventsTest >> testShow [
+HighchartsSeriesArearangeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsHistogramDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsHistogramDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsHistogramDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testForced [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsHistogramDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testGroupAll [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsHistogramDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsHistogramDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testSmoothed [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsHistogramDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHistogramDataGroupingTest >> testUnits [
+HighchartsPlotOptionsHistogramDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

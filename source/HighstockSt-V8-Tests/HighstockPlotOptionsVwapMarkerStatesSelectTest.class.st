@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVwapMarkerStatesSelectTest >> testEnabled [
+HighstockPlotOptionsVwapMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsVwapMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVwapMarkerStatesSelectTest >> testFillColor [
+HighstockPlotOptionsVwapMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsVwapMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVwapMarkerStatesSelectTest >> testLineColor [
+HighstockPlotOptionsVwapMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsVwapMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVwapMarkerStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsVwapMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsVwapMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVwapMarkerStatesSelectTest >> testRadius [
+HighstockPlotOptionsVwapMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

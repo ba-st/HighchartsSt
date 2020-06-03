@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testAlign [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineLabelOptions new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testAllowOverlap [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testBackgroundColor [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testBorderColor [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testBorderRadius [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testBorderWidth [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testClassName [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testCrop [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testDistance [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testFormat [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testFormatter [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testOverflow [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testPadding [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testShadow [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testShape [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testStyle [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testText [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testUseHTML [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testVerticalAlign [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testX [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighstockAnnotationsCrookedLineLabelOptionsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineLabelOptionsTest >> testY [
+HighstockAnnotationsCrookedLineLabelOptionsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

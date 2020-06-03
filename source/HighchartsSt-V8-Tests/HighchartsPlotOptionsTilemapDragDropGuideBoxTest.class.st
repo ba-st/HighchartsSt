@@ -1,0 +1,19 @@
+Class {
+	#name : #HighchartsPlotOptionsTilemapDragDropGuideBoxTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V8-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTilemapDragDropGuideBoxTest >> testGetDefault [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTilemapDragDropGuideBox new.
+	component default.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'default' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testAfterAnimate [
+HighstockSeriesPivotpointsEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPivotpointsEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testCheckboxClick [
+HighstockSeriesPivotpointsEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPivotpointsEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testClick [
+HighstockSeriesPivotpointsEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPivotpointsEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testHide [
+HighstockSeriesPivotpointsEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPivotpointsEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testLegendItemClick [
+HighstockSeriesPivotpointsEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPivotpointsEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testMouseOut [
+HighstockSeriesPivotpointsEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPivotpointsEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testMouseOver [
+HighstockSeriesPivotpointsEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPivotpointsEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPivotpointsEventsTest >> testShow [
+HighstockSeriesPivotpointsEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

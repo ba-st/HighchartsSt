@@ -1,5 +1,8 @@
 "
-An array of objects defining plot bands on the Y axis.
+An array of colored bands stretching across the plot area marking an
+interval on the axis.
+In styled mode, the plot bands are styled by the .highcharts-plot-band
+class in addition to the className option.
 "
 Class {
 	#name : #HighstockNavigatorYAxisPlotBands,
@@ -37,8 +40,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockNavigatorYAxisPlotBands >> className: aString [
 
-	"A custom class name, in addition to the default highcharts-plot-band,
-to apply to each individual band.
+	"A custom class name, in addition to the default highcharts-plot-band, to apply to each individual band.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -56,8 +58,7 @@ Defaults to #e6ebf5."
 { #category : #accessing }
 HighstockNavigatorYAxisPlotBands >> events: anObject [
 
-	"An object defining mouse events for the plot band. Supported properties
-are click, mouseover, mouseout, mousemove.
+	"An object defining mouse events for the plot band. Supported properties are click, mouseover, mouseout, mousemove.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -84,10 +85,7 @@ HighstockNavigatorYAxisPlotBands >> id: aString [
 { #category : #accessing }
 HighstockNavigatorYAxisPlotBands >> innerRadius: aNumberOrstring [
 
-	"In a gauge chart, this option determines the inner radius of the
-plot band that stretches along the perimeter. It can be given as
-a percentage string, like &quot;100&quot;, or as a pixel number, like 100.
-By default, the inner radius is controlled by the thickness option.
+	"In a gauge chart, this option determines the inner radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like &quot;100&quot;, or as a pixel number, like 100. By default, the inner radius is controlled by the thickness option.
 "
 
 	configurationOptions at: 'innerRadius' put: aNumberOrstring
@@ -104,9 +102,7 @@ HighstockNavigatorYAxisPlotBands >> label [
 { #category : #accessing }
 HighstockNavigatorYAxisPlotBands >> outerRadius: aNumberOrstring [
 
-	"In a gauge chart, this option determines the outer radius of the
-plot band that stretches along the perimeter. It can be given as
-a percentage string, like &quot;100&quot;, or as a pixel number, like 100.
+	"In a gauge chart, this option determines the outer radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like &quot;100&quot;, or as a pixel number, like 100.
 Defaults to 100%."
 
 	configurationOptions at: 'outerRadius' put: aNumberOrstring
@@ -115,11 +111,7 @@ Defaults to 100%."
 { #category : #accessing }
 HighstockNavigatorYAxisPlotBands >> thickness: aNumberOrstring [
 
-	"In a gauge chart, this option sets the width of the plot band
-stretching along the perimeter. It can be given as a percentage
-string, like &quot;10&quot;, or as a pixel number, like 10. The default
-value 10 is the same as the default tickLength,
-thus making the plot band act as a background for the tick markers.
+	"In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like &quot;10&quot;, or as a pixel number, like 10. The default value 10 is the same as the default tickLength, thus making the plot band act as a background for the tick markers.
 Defaults to 10."
 
 	configurationOptions at: 'thickness' put: aNumberOrstring
@@ -137,10 +129,7 @@ HighstockNavigatorYAxisPlotBands >> to: aNumber [
 { #category : #accessing }
 HighstockNavigatorYAxisPlotBands >> zIndex: aNumber [
 
-	"The z index of the plot band within the chart, relative to other
-elements. Using the same z index as another element may give
-unpredictable results, as the last rendered element will be on top.
-Values from 0 to 20 make sense.
+	"The z index of the plot band within the chart, relative to other elements. Using the same z index as another element may give unpredictable results, as the last rendered element will be on top. Values from 0 to 20 make sense.
 "
 
 	configurationOptions at: 'zIndex' put: aNumber

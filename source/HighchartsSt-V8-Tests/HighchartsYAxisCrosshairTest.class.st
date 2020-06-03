@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisCrosshairTest >> testClassName [
+HighchartsYAxisCrosshairTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsYAxisCrosshairTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisCrosshairTest >> testColor [
+HighchartsYAxisCrosshairTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsYAxisCrosshairTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisCrosshairTest >> testDashStyle [
+HighchartsYAxisCrosshairTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsYAxisCrosshairTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisCrosshairTest >> testSnap [
+HighchartsYAxisCrosshairTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsYAxisCrosshairTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisCrosshairTest >> testWidth [
+HighchartsYAxisCrosshairTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsYAxisCrosshairTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisCrosshairTest >> testZIndex [
+HighchartsYAxisCrosshairTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

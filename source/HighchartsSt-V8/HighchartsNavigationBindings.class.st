@@ -20,30 +20,28 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsNavigationBindings >> circleAnnotation: aHighchartsStockToolsBindingsObject [
+HighchartsNavigationBindings >> circleAnnotation: aHighchartsNavigationBindingsOptionsObject [
 
-	"A circle annotation bindings. Includes start and one event in
-steps array.
+	"A circle annotation bindings. Includes start and one event in steps array.
 "
 
-	configurationOptions at: 'circleAnnotation' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'circleAnnotation' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighchartsNavigationBindings >> labelAnnotation: aHighchartsStockToolsBindingsObject [
+HighchartsNavigationBindings >> labelAnnotation: aHighchartsNavigationBindingsOptionsObject [
 
 	"A label annotation bindings. Includes start event only.
 "
 
-	configurationOptions at: 'labelAnnotation' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'labelAnnotation' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighchartsNavigationBindings >> rectangleAnnotation: aHighchartsStockToolsBindingsObject [
+HighchartsNavigationBindings >> rectangleAnnotation: aHighchartsNavigationBindingsOptionsObject [
 
-	"A rectangle annotation bindings. Includes start and one event
-in steps array.
+	"A rectangle annotation bindings. Includes start and one event in steps array.
 "
 
-	configurationOptions at: 'rectangleAnnotation' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'rectangleAnnotation' put: aHighchartsNavigationBindingsOptionsObject
 ]

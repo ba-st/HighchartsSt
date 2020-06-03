@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellZonesTest >> testClassName [
+HighchartsPlotOptionsDumbbellZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDumbbellZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellZonesTest >> testColor [
+HighchartsPlotOptionsDumbbellZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDumbbellZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellZonesTest >> testDashStyle [
+HighchartsPlotOptionsDumbbellZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsDumbbellZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellZonesTest >> testFillColor [
+HighchartsPlotOptionsDumbbellZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsDumbbellZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellZonesTest >> testValue [
+HighchartsPlotOptionsDumbbellZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

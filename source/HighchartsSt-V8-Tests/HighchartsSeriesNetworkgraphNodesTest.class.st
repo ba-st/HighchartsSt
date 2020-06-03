@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphNodesTest >> testColor [
+HighchartsSeriesNetworkgraphNodesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesNetworkgraphNodesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphNodesTest >> testColorIndex [
+HighchartsSeriesNetworkgraphNodesTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesNetworkgraphNodesTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphNodesTest >> testDataLabels [
+HighchartsSeriesNetworkgraphNodesTest >> testSetDataLabels [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesNetworkgraphNodesTest >> testDataLabels [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphNodesTest >> testId [
+HighchartsSeriesNetworkgraphNodesTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesNetworkgraphNodesTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphNodesTest >> testMass [
+HighchartsSeriesNetworkgraphNodesTest >> testSetMass [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesNetworkgraphNodesTest >> testMass [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphNodesTest >> testName [
+HighchartsSeriesNetworkgraphNodesTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 

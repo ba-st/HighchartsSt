@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesMarkerStatesHoverAnimationTest >> testDuration [
+HighstockPlotOptionsPriceenvelopesMarkerStatesHoverAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

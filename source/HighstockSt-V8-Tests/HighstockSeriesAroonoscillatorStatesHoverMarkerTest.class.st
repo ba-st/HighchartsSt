@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testEnabled [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testEnabledThreshold [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testFillColor [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testHeight [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testLineColor [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testLineWidth [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testRadius [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSymbol [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testWidth [
+HighstockSeriesAroonoscillatorStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

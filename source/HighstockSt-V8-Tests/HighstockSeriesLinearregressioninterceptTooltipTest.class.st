@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testChangeDecimals [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressioninterceptTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testClusterFormat [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testDistance [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testFollowPointer [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testFollowTouchMove [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testFooterFormat [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testHeaderFormat [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testNullFormat [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testNullFormatter [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testPointFormat [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testPointFormatter [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testValueDecimals [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesLinearregressioninterceptTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testValuePrefix [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testValueSuffix [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockSeriesLinearregressioninterceptTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptTooltipTest >> testXDateFormat [
+HighstockSeriesLinearregressioninterceptTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

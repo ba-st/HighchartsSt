@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsDataLabelsTextPathTest >> testAttributes [
+HighchartsSeriesSunburstLevelsDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSunburstLevelsDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSunburstLevelsDataLabelsTextPathTest >> testEnabled [
+HighchartsSeriesSunburstLevelsDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

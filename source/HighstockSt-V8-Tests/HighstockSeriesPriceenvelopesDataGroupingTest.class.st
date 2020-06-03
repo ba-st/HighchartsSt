@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testApproximation [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testEnabled [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testForced [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPriceenvelopesDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testGroupAll [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPriceenvelopesDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPriceenvelopesDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testSmoothed [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPriceenvelopesDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesDataGroupingTest >> testUnits [
+HighstockSeriesPriceenvelopesDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

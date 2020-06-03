@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleMarkerTest >> testFillColor [
+HighstockSeriesBubbleMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesBubbleMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleMarkerTest >> testFillOpacity [
+HighstockSeriesBubbleMarkerTest >> testSetFillOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesBubbleMarkerTest >> testFillOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleMarkerTest >> testLineColor [
+HighstockSeriesBubbleMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesBubbleMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleMarkerTest >> testLineWidth [
+HighstockSeriesBubbleMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesBubbleMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleMarkerTest >> testStates [
+HighstockSeriesBubbleMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesBubbleMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBubbleMarkerTest >> testSymbol [
+HighstockSeriesBubbleMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

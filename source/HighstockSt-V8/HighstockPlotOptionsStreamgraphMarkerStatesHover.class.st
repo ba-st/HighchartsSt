@@ -27,9 +27,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockPlotOptionsStreamgraphMarkerStatesHover >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The fill color of the marker in hover state. When
-undefined, the series´ or point´s fillColor for normal
-state is used.
+	"The fill color of the marker in hover state. When undefined, the series´ or point´s fillColor for normal state is used.
 "
 
 	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -38,9 +36,7 @@ state is used.
 { #category : #accessing }
 HighstockPlotOptionsStreamgraphMarkerStatesHover >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the point marker´s outline. When
-undefined, the series´ or point´s lineColor for normal
-state is used.
+	"The color of the point marker´s outline. When undefined, the series´ or point´s lineColor for normal state is used.
 "
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -49,9 +45,7 @@ state is used.
 { #category : #accessing }
 HighstockPlotOptionsStreamgraphMarkerStatesHover >> lineWidth: aNumber [
 
-	"The width of the point marker´s outline. When
-undefined, the series´ or point´s lineWidth for normal
-state is used.
+	"The width of the point marker´s outline. When undefined, the series´ or point´s lineWidth for normal state is used.
 "
 
 	configurationOptions at: 'lineWidth' put: aNumber
@@ -69,10 +63,7 @@ Defaults to 1."
 { #category : #accessing }
 HighstockPlotOptionsStreamgraphMarkerStatesHover >> radius: aNumber [
 
-	"The radius of the point marker. In hover state, it
-defaults to the normal state´s radius + 2 as per the
-radiusPlus
-option.
+	"The radius of the point marker. In hover state, it defaults to the normal state´s radius + 2 as per the radiusPlus option.
 "
 
 	configurationOptions at: 'radius' put: aNumber
@@ -81,8 +72,7 @@ option.
 { #category : #accessing }
 HighstockPlotOptionsStreamgraphMarkerStatesHover >> radiusPlus: aNumber [
 
-	"The number of pixels to increase the radius of the
-hovered point.
+	"The number of pixels to increase the radius of the hovered point.
 Defaults to 2."
 
 	configurationOptions at: 'radiusPlus' put: aNumber

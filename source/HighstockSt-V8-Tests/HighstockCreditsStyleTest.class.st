@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockCreditsStyleTest >> testColor [
+HighstockCreditsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockCreditsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCreditsStyleTest >> testCursor [
+HighstockCreditsStyleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockCreditsStyleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockCreditsStyleTest >> testFontSize [
+HighstockCreditsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 

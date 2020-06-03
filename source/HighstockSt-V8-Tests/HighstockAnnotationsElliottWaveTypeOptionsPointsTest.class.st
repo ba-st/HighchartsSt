@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsElliottWaveTypeOptionsPoints new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testX [
+HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testY [
+HighstockAnnotationsElliottWaveTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

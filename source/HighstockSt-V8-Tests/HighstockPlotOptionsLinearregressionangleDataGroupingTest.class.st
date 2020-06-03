@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testApproximation [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testDateTimeLabelFormats [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testDateTimeLabelFo
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testEnabled [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testForced [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testGroupAll [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testGroupPixelWidth [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testGroupPixelWidth
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSmoothed [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testUnits [
+HighstockPlotOptionsLinearregressionangleDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

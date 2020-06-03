@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaDataLabelsTextPathTest >> testAttributes [
+HighchartsSeriesAreaDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesAreaDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaDataLabelsTextPathTest >> testEnabled [
+HighchartsSeriesAreaDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

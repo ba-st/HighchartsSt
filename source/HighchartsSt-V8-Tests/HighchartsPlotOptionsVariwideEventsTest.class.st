@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsVariwideEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVariwideEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsVariwideEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsVariwideEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testClick [
+HighchartsPlotOptionsVariwideEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsVariwideEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testHide [
+HighchartsPlotOptionsVariwideEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsVariwideEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsVariwideEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsVariwideEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testMouseOut [
+HighchartsPlotOptionsVariwideEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsVariwideEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testMouseOver [
+HighchartsPlotOptionsVariwideEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsVariwideEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariwideEventsTest >> testShow [
+HighchartsPlotOptionsVariwideEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,262 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testAllowPointSelect [
+HighstockSeriesKeltnerchannelsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetBottomLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component bottomLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'bottomLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetParams [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component params.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'params' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetTopLine [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component topLine.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'topLine' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -13,13 +268,14 @@ HighstockSeriesKeltnerchannelsTest >> testAllowPointSelect [
 	component allowPointSelect: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'allowPointSelect' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testAnimationLimit [
+HighstockSeriesKeltnerchannelsTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -27,13 +283,14 @@ HighstockSeriesKeltnerchannelsTest >> testAnimationLimit [
 	component animationLimit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'animationLimit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBoostBlending [
+HighstockSeriesKeltnerchannelsTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -41,13 +298,14 @@ HighstockSeriesKeltnerchannelsTest >> testBoostBlending [
 	component boostBlending: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'boostBlending' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBoostThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -55,13 +313,14 @@ HighstockSeriesKeltnerchannelsTest >> testBoostThreshold [
 	component boostThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'boostThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBorderColor [
+HighstockSeriesKeltnerchannelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -69,13 +328,14 @@ HighstockSeriesKeltnerchannelsTest >> testBorderColor [
 	component borderColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'borderColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testBorderWidth [
+HighstockSeriesKeltnerchannelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -83,13 +343,14 @@ HighstockSeriesKeltnerchannelsTest >> testBorderWidth [
 	component borderWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'borderWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testClassName [
+HighstockSeriesKeltnerchannelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -97,13 +358,14 @@ HighstockSeriesKeltnerchannelsTest >> testClassName [
 	component className: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'className' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testClip [
+HighstockSeriesKeltnerchannelsTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -111,13 +373,14 @@ HighstockSeriesKeltnerchannelsTest >> testClip [
 	component clip: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'clip' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testColor [
+HighstockSeriesKeltnerchannelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -125,13 +388,14 @@ HighstockSeriesKeltnerchannelsTest >> testColor [
 	component color: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'color' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testColorIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -139,13 +403,14 @@ HighstockSeriesKeltnerchannelsTest >> testColorIndex [
 	component colorIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'colorIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testColorKey [
+HighstockSeriesKeltnerchannelsTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -153,13 +418,14 @@ HighstockSeriesKeltnerchannelsTest >> testColorKey [
 	component colorKey: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'colorKey' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCompareStart [
+HighstockSeriesKeltnerchannelsTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -167,13 +433,14 @@ HighstockSeriesKeltnerchannelsTest >> testCompareStart [
 	component compareStart: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'compareStart' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCompareToMain [
+HighstockSeriesKeltnerchannelsTest >> testSetCompareToMain [
 
 	| component javascript expectedConfiguration |
 
@@ -181,13 +448,14 @@ HighstockSeriesKeltnerchannelsTest >> testCompareToMain [
 	component compareToMain: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'compareToMain' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testConnectEnds [
+HighstockSeriesKeltnerchannelsTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -195,13 +463,14 @@ HighstockSeriesKeltnerchannelsTest >> testConnectEnds [
 	component connectEnds: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'connectEnds' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testConnectNulls [
+HighstockSeriesKeltnerchannelsTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -209,13 +478,29 @@ HighstockSeriesKeltnerchannelsTest >> testConnectNulls [
 	component connectNulls: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'connectNulls' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCropThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -223,13 +508,14 @@ HighstockSeriesKeltnerchannelsTest >> testCropThreshold [
 	component cropThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testCursor [
+HighstockSeriesKeltnerchannelsTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -237,13 +523,29 @@ HighstockSeriesKeltnerchannelsTest >> testCursor [
 	component cursor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'cursor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testDashStyle [
+HighstockSeriesKeltnerchannelsTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -251,13 +553,29 @@ HighstockSeriesKeltnerchannelsTest >> testDashStyle [
 	component dashStyle: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'dashStyle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testDescription [
+HighstockSeriesKeltnerchannelsTest >> testSetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesKeltnerchannels new.
+	component data: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
+		at: 'data' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesKeltnerchannelsTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -265,13 +583,14 @@ HighstockSeriesKeltnerchannelsTest >> testDescription [
 	component description: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'description' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testEnableMouseTracking [
+HighstockSeriesKeltnerchannelsTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -279,13 +598,14 @@ HighstockSeriesKeltnerchannelsTest >> testEnableMouseTracking [
 	component enableMouseTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'enableMouseTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testEvents [
+HighstockSeriesKeltnerchannelsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -293,13 +613,14 @@ HighstockSeriesKeltnerchannelsTest >> testEvents [
 	component events: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'events' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testFindNearestPointBy [
+HighstockSeriesKeltnerchannelsTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -307,13 +628,14 @@ HighstockSeriesKeltnerchannelsTest >> testFindNearestPointBy [
 	component findNearestPointBy: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'findNearestPointBy' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testGapSize [
+HighstockSeriesKeltnerchannelsTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -321,13 +643,14 @@ HighstockSeriesKeltnerchannelsTest >> testGapSize [
 	component gapSize: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'gapSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testGapUnit [
+HighstockSeriesKeltnerchannelsTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -335,13 +658,14 @@ HighstockSeriesKeltnerchannelsTest >> testGapUnit [
 	component gapUnit: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'gapUnit' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testGetExtremesFromAll [
+HighstockSeriesKeltnerchannelsTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -349,13 +673,14 @@ HighstockSeriesKeltnerchannelsTest >> testGetExtremesFromAll [
 	component getExtremesFromAll: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'getExtremesFromAll' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testId [
+HighstockSeriesKeltnerchannelsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -363,13 +688,14 @@ HighstockSeriesKeltnerchannelsTest >> testId [
 	component id: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'id' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testIncludeInDataExport [
+HighstockSeriesKeltnerchannelsTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -377,13 +703,14 @@ HighstockSeriesKeltnerchannelsTest >> testIncludeInDataExport [
 	component includeInDataExport: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'includeInDataExport' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -391,13 +718,14 @@ HighstockSeriesKeltnerchannelsTest >> testIndex [
 	component index: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'index' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLegendIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -405,13 +733,14 @@ HighstockSeriesKeltnerchannelsTest >> testLegendIndex [
 	component legendIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'legendIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLineWidth [
+HighstockSeriesKeltnerchannelsTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -419,13 +748,14 @@ HighstockSeriesKeltnerchannelsTest >> testLineWidth [
 	component lineWidth: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'lineWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLinecap [
+HighstockSeriesKeltnerchannelsTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -433,13 +763,14 @@ HighstockSeriesKeltnerchannelsTest >> testLinecap [
 	component linecap: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'linecap' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testLinkedTo [
+HighstockSeriesKeltnerchannelsTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -447,13 +778,14 @@ HighstockSeriesKeltnerchannelsTest >> testLinkedTo [
 	component linkedTo: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'linkedTo' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testMapData [
+HighstockSeriesKeltnerchannelsTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -461,13 +793,14 @@ HighstockSeriesKeltnerchannelsTest >> testMapData [
 	component mapData: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'mapData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testName [
+HighstockSeriesKeltnerchannelsTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -475,13 +808,14 @@ HighstockSeriesKeltnerchannelsTest >> testName [
 	component name: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'name' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testNegativeColor [
+HighstockSeriesKeltnerchannelsTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -489,13 +823,14 @@ HighstockSeriesKeltnerchannelsTest >> testNegativeColor [
 	component negativeColor: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'negativeColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testOpacity [
+HighstockSeriesKeltnerchannelsTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -503,13 +838,14 @@ HighstockSeriesKeltnerchannelsTest >> testOpacity [
 	component opacity: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'opacity' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testPointDescriptionFormatter [
+HighstockSeriesKeltnerchannelsTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -517,13 +853,14 @@ HighstockSeriesKeltnerchannelsTest >> testPointDescriptionFormatter [
 	component pointDescriptionFormatter: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'pointDescriptionFormatter' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testSelected [
+HighstockSeriesKeltnerchannelsTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -531,13 +868,14 @@ HighstockSeriesKeltnerchannelsTest >> testSelected [
 	component selected: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'selected' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testShadow [
+HighstockSeriesKeltnerchannelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -545,13 +883,14 @@ HighstockSeriesKeltnerchannelsTest >> testShadow [
 	component shadow: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'shadow' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testShowCheckbox [
+HighstockSeriesKeltnerchannelsTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -559,13 +898,14 @@ HighstockSeriesKeltnerchannelsTest >> testShowCheckbox [
 	component showCheckbox: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'showCheckbox' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testShowInLegend [
+HighstockSeriesKeltnerchannelsTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -573,13 +913,14 @@ HighstockSeriesKeltnerchannelsTest >> testShowInLegend [
 	component showInLegend: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'showInLegend' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testSkipKeyboardNavigation [
+HighstockSeriesKeltnerchannelsTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -587,13 +928,14 @@ HighstockSeriesKeltnerchannelsTest >> testSkipKeyboardNavigation [
 	component skipKeyboardNavigation: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'skipKeyboardNavigation' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testSoftThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -601,13 +943,14 @@ HighstockSeriesKeltnerchannelsTest >> testSoftThreshold [
 	component softThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'softThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStack [
+HighstockSeriesKeltnerchannelsTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -615,13 +958,14 @@ HighstockSeriesKeltnerchannelsTest >> testStack [
 	component stack: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'stack' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStates [
+HighstockSeriesKeltnerchannelsTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -629,13 +973,14 @@ HighstockSeriesKeltnerchannelsTest >> testStates [
 	component states: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'states' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStep [
+HighstockSeriesKeltnerchannelsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -643,13 +988,14 @@ HighstockSeriesKeltnerchannelsTest >> testStep [
 	component step: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'step' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testStickyTracking [
+HighstockSeriesKeltnerchannelsTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -657,13 +1003,14 @@ HighstockSeriesKeltnerchannelsTest >> testStickyTracking [
 	component stickyTracking: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'stickyTracking' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -671,13 +1018,14 @@ HighstockSeriesKeltnerchannelsTest >> testThreshold [
 	component threshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'threshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testTurboThreshold [
+HighstockSeriesKeltnerchannelsTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -685,13 +1033,14 @@ HighstockSeriesKeltnerchannelsTest >> testTurboThreshold [
 	component turboThreshold: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'turboThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testType [
+HighstockSeriesKeltnerchannelsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -699,13 +1048,14 @@ HighstockSeriesKeltnerchannelsTest >> testType [
 	component type: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'type' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testVisible [
+HighstockSeriesKeltnerchannelsTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -713,13 +1063,14 @@ HighstockSeriesKeltnerchannelsTest >> testVisible [
 	component visible: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'visible' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testXAxis [
+HighstockSeriesKeltnerchannelsTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -727,13 +1078,14 @@ HighstockSeriesKeltnerchannelsTest >> testXAxis [
 	component xAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'xAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testYAxis [
+HighstockSeriesKeltnerchannelsTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -741,13 +1093,14 @@ HighstockSeriesKeltnerchannelsTest >> testYAxis [
 	component yAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'yAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testZIndex [
+HighstockSeriesKeltnerchannelsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -755,13 +1108,14 @@ HighstockSeriesKeltnerchannelsTest >> testZIndex [
 	component zIndex: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'zIndex' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsTest >> testZoneAxis [
+HighstockSeriesKeltnerchannelsTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -769,6 +1123,7 @@ HighstockSeriesKeltnerchannelsTest >> testZoneAxis [
 	component zoneAxis: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
+		at: 'type' put: 'keltnerchannels';
 		at: 'zoneAxis' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript

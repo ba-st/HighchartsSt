@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockChartResetZoomButtonPositionTest >> testAlign [
+HighstockChartResetZoomButtonPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockChartResetZoomButtonPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartResetZoomButtonPositionTest >> testVerticalAlign [
+HighstockChartResetZoomButtonPositionTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockChartResetZoomButtonPositionTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartResetZoomButtonPositionTest >> testX [
+HighstockChartResetZoomButtonPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockChartResetZoomButtonPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockChartResetZoomButtonPositionTest >> testY [
+HighstockChartResetZoomButtonPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

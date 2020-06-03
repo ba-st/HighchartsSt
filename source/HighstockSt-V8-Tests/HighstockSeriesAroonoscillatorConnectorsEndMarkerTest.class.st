@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testAlign [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testColor [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testEnabled [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testHeight [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testInside [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testLineColor [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testLineWidth [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testRadius [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSymbol [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testWidth [
+HighstockSeriesAroonoscillatorConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

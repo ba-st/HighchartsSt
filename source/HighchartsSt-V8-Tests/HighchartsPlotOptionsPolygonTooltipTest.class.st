@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsPolygonTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygonTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testDistance [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testNullFormat [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testPointFormat [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,21 @@ HighchartsPlotOptionsPolygonTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygonTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsPlotOptionsPolygonTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsPolygonTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

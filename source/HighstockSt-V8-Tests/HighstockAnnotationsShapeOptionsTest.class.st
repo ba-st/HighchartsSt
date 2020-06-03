@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testFill [
+HighstockAnnotationsShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testHeight [
+HighstockAnnotationsShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testR [
+HighstockAnnotationsShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testSnap [
+HighstockAnnotationsShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighstockAnnotationsShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testStroke [
+HighstockAnnotationsShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockAnnotationsShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockAnnotationsShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testType [
+HighstockAnnotationsShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockAnnotationsShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsShapeOptionsTest >> testWidth [
+HighstockAnnotationsShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

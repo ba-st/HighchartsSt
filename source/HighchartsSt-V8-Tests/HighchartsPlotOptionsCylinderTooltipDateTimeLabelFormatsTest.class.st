@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testMillisecond 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsCylinderTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testAddButton [
+HighchartsLangNavigationPopupTest >> testSetAddButton [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangNavigationPopupTest >> testAddButton [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testArrowLine [
+HighchartsLangNavigationPopupTest >> testSetArrowLine [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLangNavigationPopupTest >> testArrowLine [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testArrowRay [
+HighchartsLangNavigationPopupTest >> testSetArrowRay [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLangNavigationPopupTest >> testArrowRay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testArrowSegment [
+HighchartsLangNavigationPopupTest >> testSetArrowSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLangNavigationPopupTest >> testArrowSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testBackground [
+HighchartsLangNavigationPopupTest >> testSetBackground [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsLangNavigationPopupTest >> testBackground [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testBackgroundColor [
+HighchartsLangNavigationPopupTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsLangNavigationPopupTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testBackgroundColors [
+HighchartsLangNavigationPopupTest >> testSetBackgroundColors [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsLangNavigationPopupTest >> testBackgroundColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testBorderColor [
+HighchartsLangNavigationPopupTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsLangNavigationPopupTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testBorderRadius [
+HighchartsLangNavigationPopupTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsLangNavigationPopupTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testBorderWidth [
+HighchartsLangNavigationPopupTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsLangNavigationPopupTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testCircle [
+HighchartsLangNavigationPopupTest >> testSetCircle [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsLangNavigationPopupTest >> testCircle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testColor [
+HighchartsLangNavigationPopupTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighchartsLangNavigationPopupTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testConnector [
+HighchartsLangNavigationPopupTest >> testSetConnector [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighchartsLangNavigationPopupTest >> testConnector [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testCrooked3 [
+HighchartsLangNavigationPopupTest >> testSetCrooked3 [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighchartsLangNavigationPopupTest >> testCrooked3 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testCrooked5 [
+HighchartsLangNavigationPopupTest >> testSetCrooked5 [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighchartsLangNavigationPopupTest >> testCrooked5 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testCrosshairX [
+HighchartsLangNavigationPopupTest >> testSetCrosshairX [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighchartsLangNavigationPopupTest >> testCrosshairX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testCrosshairY [
+HighchartsLangNavigationPopupTest >> testSetCrosshairY [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighchartsLangNavigationPopupTest >> testCrosshairY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testEditButton [
+HighchartsLangNavigationPopupTest >> testSetEditButton [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighchartsLangNavigationPopupTest >> testEditButton [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testElliott3 [
+HighchartsLangNavigationPopupTest >> testSetElliott3 [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighchartsLangNavigationPopupTest >> testElliott3 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testElliott5 [
+HighchartsLangNavigationPopupTest >> testSetElliott5 [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighchartsLangNavigationPopupTest >> testElliott5 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testFibonacci [
+HighchartsLangNavigationPopupTest >> testSetFibonacci [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighchartsLangNavigationPopupTest >> testFibonacci [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testFill [
+HighchartsLangNavigationPopupTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighchartsLangNavigationPopupTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testFlags [
+HighchartsLangNavigationPopupTest >> testSetFlags [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighchartsLangNavigationPopupTest >> testFlags [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testFontSize [
+HighchartsLangNavigationPopupTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +341,7 @@ HighchartsLangNavigationPopupTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testFormat [
+HighchartsLangNavigationPopupTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +355,7 @@ HighchartsLangNavigationPopupTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testHeight [
+HighchartsLangNavigationPopupTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +369,7 @@ HighchartsLangNavigationPopupTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testHorizontalLine [
+HighchartsLangNavigationPopupTest >> testSetHorizontalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +383,7 @@ HighchartsLangNavigationPopupTest >> testHorizontalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testInfinityLine [
+HighchartsLangNavigationPopupTest >> testSetInfinityLine [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +397,7 @@ HighchartsLangNavigationPopupTest >> testInfinityLine [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testInnerBackground [
+HighchartsLangNavigationPopupTest >> testSetInnerBackground [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +411,7 @@ HighchartsLangNavigationPopupTest >> testInnerBackground [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testLabel [
+HighchartsLangNavigationPopupTest >> testSetLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +425,7 @@ HighchartsLangNavigationPopupTest >> testLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testLabelOptions [
+HighchartsLangNavigationPopupTest >> testSetLabelOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +439,7 @@ HighchartsLangNavigationPopupTest >> testLabelOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testLabels [
+HighchartsLangNavigationPopupTest >> testSetLabels [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +453,7 @@ HighchartsLangNavigationPopupTest >> testLabels [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testLine [
+HighchartsLangNavigationPopupTest >> testSetLine [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +467,7 @@ HighchartsLangNavigationPopupTest >> testLine [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testLines [
+HighchartsLangNavigationPopupTest >> testSetLines [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +481,7 @@ HighchartsLangNavigationPopupTest >> testLines [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testMeasure [
+HighchartsLangNavigationPopupTest >> testSetMeasure [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +495,7 @@ HighchartsLangNavigationPopupTest >> testMeasure [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testMeasureX [
+HighchartsLangNavigationPopupTest >> testSetMeasureX [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +509,7 @@ HighchartsLangNavigationPopupTest >> testMeasureX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testMeasureXY [
+HighchartsLangNavigationPopupTest >> testSetMeasureXY [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +523,7 @@ HighchartsLangNavigationPopupTest >> testMeasureXY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testMeasureY [
+HighchartsLangNavigationPopupTest >> testSetMeasureY [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +537,7 @@ HighchartsLangNavigationPopupTest >> testMeasureY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testName [
+HighchartsLangNavigationPopupTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +551,7 @@ HighchartsLangNavigationPopupTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testOuterBackground [
+HighchartsLangNavigationPopupTest >> testSetOuterBackground [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +565,7 @@ HighchartsLangNavigationPopupTest >> testOuterBackground [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testPadding [
+HighchartsLangNavigationPopupTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +579,7 @@ HighchartsLangNavigationPopupTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testParallelChannel [
+HighchartsLangNavigationPopupTest >> testSetParallelChannel [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +593,7 @@ HighchartsLangNavigationPopupTest >> testParallelChannel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testPitchfork [
+HighchartsLangNavigationPopupTest >> testSetPitchfork [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +607,7 @@ HighchartsLangNavigationPopupTest >> testPitchfork [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testRay [
+HighchartsLangNavigationPopupTest >> testSetRay [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +621,7 @@ HighchartsLangNavigationPopupTest >> testRay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testRectangle [
+HighchartsLangNavigationPopupTest >> testSetRectangle [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +635,7 @@ HighchartsLangNavigationPopupTest >> testRectangle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testRemoveButton [
+HighchartsLangNavigationPopupTest >> testSetRemoveButton [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +649,7 @@ HighchartsLangNavigationPopupTest >> testRemoveButton [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testSaveButton [
+HighchartsLangNavigationPopupTest >> testSetSaveButton [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +663,7 @@ HighchartsLangNavigationPopupTest >> testSaveButton [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testSegment [
+HighchartsLangNavigationPopupTest >> testSetSegment [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +677,7 @@ HighchartsLangNavigationPopupTest >> testSegment [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testSeries [
+HighchartsLangNavigationPopupTest >> testSetSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +691,7 @@ HighchartsLangNavigationPopupTest >> testSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testShapeOptions [
+HighchartsLangNavigationPopupTest >> testSetShapeOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +705,7 @@ HighchartsLangNavigationPopupTest >> testShapeOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testShapes [
+HighchartsLangNavigationPopupTest >> testSetShapes [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +719,7 @@ HighchartsLangNavigationPopupTest >> testShapes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testSimpleShapes [
+HighchartsLangNavigationPopupTest >> testSetSimpleShapes [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +733,7 @@ HighchartsLangNavigationPopupTest >> testSimpleShapes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testStroke [
+HighchartsLangNavigationPopupTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +747,7 @@ HighchartsLangNavigationPopupTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testStrokeWidth [
+HighchartsLangNavigationPopupTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +761,7 @@ HighchartsLangNavigationPopupTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testStyle [
+HighchartsLangNavigationPopupTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -775,7 +775,7 @@ HighchartsLangNavigationPopupTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testTitle [
+HighchartsLangNavigationPopupTest >> testSetTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -789,7 +789,7 @@ HighchartsLangNavigationPopupTest >> testTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testTunnel [
+HighchartsLangNavigationPopupTest >> testSetTunnel [
 
 	| component javascript expectedConfiguration |
 
@@ -803,7 +803,7 @@ HighchartsLangNavigationPopupTest >> testTunnel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testTypeOptions [
+HighchartsLangNavigationPopupTest >> testSetTypeOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -817,7 +817,7 @@ HighchartsLangNavigationPopupTest >> testTypeOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testVerticalArrow [
+HighchartsLangNavigationPopupTest >> testSetVerticalArrow [
 
 	| component javascript expectedConfiguration |
 
@@ -831,7 +831,7 @@ HighchartsLangNavigationPopupTest >> testVerticalArrow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testVerticalCounter [
+HighchartsLangNavigationPopupTest >> testSetVerticalCounter [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +845,7 @@ HighchartsLangNavigationPopupTest >> testVerticalCounter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testVerticalLabel [
+HighchartsLangNavigationPopupTest >> testSetVerticalLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -859,7 +859,7 @@ HighchartsLangNavigationPopupTest >> testVerticalLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testVerticalLine [
+HighchartsLangNavigationPopupTest >> testSetVerticalLine [
 
 	| component javascript expectedConfiguration |
 
@@ -873,7 +873,7 @@ HighchartsLangNavigationPopupTest >> testVerticalLine [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangNavigationPopupTest >> testVolume [
+HighchartsLangNavigationPopupTest >> testSetVolume [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testAlign [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testColor [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testEnabled [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testHeight [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testInside [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testLineColor [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testLineWidth [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testRadius [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSymbol [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testVerticalAlign [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testWidth [
+HighchartsSeriesDependencywheelConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

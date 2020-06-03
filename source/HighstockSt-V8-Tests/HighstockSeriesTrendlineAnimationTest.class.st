@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineAnimationTest >> testDuration [
+HighstockSeriesTrendlineAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

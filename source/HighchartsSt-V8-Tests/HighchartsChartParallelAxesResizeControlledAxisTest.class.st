@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeControlledAxisTest >> testNext [
+HighchartsChartParallelAxesResizeControlledAxisTest >> testSetNext [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesResizeControlledAxisTest >> testNext [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeControlledAxisTest >> testPrev [
+HighchartsChartParallelAxesResizeControlledAxisTest >> testSetPrev [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testAfterAnimate [
+HighchartsSeriesTilemapEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTilemapEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testCheckboxClick [
+HighchartsSeriesTilemapEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTilemapEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testClick [
+HighchartsSeriesTilemapEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTilemapEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testHide [
+HighchartsSeriesTilemapEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTilemapEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testLegendItemClick [
+HighchartsSeriesTilemapEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesTilemapEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testMouseOut [
+HighchartsSeriesTilemapEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesTilemapEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testMouseOver [
+HighchartsSeriesTilemapEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesTilemapEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTilemapEventsTest >> testShow [
+HighchartsSeriesTilemapEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

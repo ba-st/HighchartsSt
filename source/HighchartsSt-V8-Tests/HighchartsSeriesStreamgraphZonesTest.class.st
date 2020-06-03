@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphZonesTest >> testClassName [
+HighchartsSeriesStreamgraphZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesStreamgraphZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphZonesTest >> testColor [
+HighchartsSeriesStreamgraphZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesStreamgraphZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphZonesTest >> testDashStyle [
+HighchartsSeriesStreamgraphZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesStreamgraphZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphZonesTest >> testFillColor [
+HighchartsSeriesStreamgraphZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesStreamgraphZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesStreamgraphZonesTest >> testValue [
+HighchartsSeriesStreamgraphZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testFill [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineTypeOptionsConnector new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testMarkerEnd [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetMarkerEnd [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testMarkerEnd [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSnap [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,21 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testStroke [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsVerticalLineTypeOptionsConnector new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testStrokeWidth [
+HighstockAnnotationsVerticalLineTypeOptionsConnectorTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsFibonacciLabelOptionsStyleTest >> testColor [
+HighstockAnnotationsFibonacciLabelOptionsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 

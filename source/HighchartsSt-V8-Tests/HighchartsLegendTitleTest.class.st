@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLegendTitleTest >> testStyle [
+HighchartsLegendTitleTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLegendTitleTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLegendTitleTest >> testText [
+HighchartsLegendTitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testFill [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testHeight [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testR [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testSnap [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testStroke [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsCrookedLineShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testType [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockAnnotationsCrookedLineShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsCrookedLineShapeOptionsTest >> testWidth [
+HighstockAnnotationsCrookedLineShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

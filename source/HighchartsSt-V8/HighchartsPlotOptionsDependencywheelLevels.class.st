@@ -1,6 +1,6 @@
 "
 Set options on specific levels. Takes precedence over series options,
-but not point options.
+but not node and link options.
 "
 Class {
 	#name : #HighchartsPlotOptionsDependencywheelLevels,
@@ -55,8 +55,7 @@ HighchartsPlotOptionsDependencywheelLevels >> dataLabels [
 { #category : #accessing }
 HighchartsPlotOptionsDependencywheelLevels >> level: aNumber [
 
-	"Decides which level takes effect from the options set in the levels
-object.
+	"Decides which level takes effect from the options set in the levels object.
 "
 
 	configurationOptions at: 'level' put: aNumber

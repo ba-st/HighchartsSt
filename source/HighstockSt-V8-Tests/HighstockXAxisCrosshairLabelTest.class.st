@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testAlign [
+HighstockXAxisCrosshairLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockXAxisCrosshairLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testBackgroundColor [
+HighstockXAxisCrosshairLabelTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockXAxisCrosshairLabelTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testBorderColor [
+HighstockXAxisCrosshairLabelTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockXAxisCrosshairLabelTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testBorderRadius [
+HighstockXAxisCrosshairLabelTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockXAxisCrosshairLabelTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testBorderWidth [
+HighstockXAxisCrosshairLabelTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockXAxisCrosshairLabelTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testEnabled [
+HighstockXAxisCrosshairLabelTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockXAxisCrosshairLabelTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testFormat [
+HighstockXAxisCrosshairLabelTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockXAxisCrosshairLabelTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testFormatter [
+HighstockXAxisCrosshairLabelTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockXAxisCrosshairLabelTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testPadding [
+HighstockXAxisCrosshairLabelTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockXAxisCrosshairLabelTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testShape [
+HighstockXAxisCrosshairLabelTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockXAxisCrosshairLabelTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisCrosshairLabelTest >> testStyle [
+HighstockXAxisCrosshairLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

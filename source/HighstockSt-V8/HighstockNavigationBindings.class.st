@@ -20,364 +20,352 @@ Class {
 }
 
 { #category : #accessing }
-HighstockNavigationBindings >> arrowInfinityLine [
+HighstockNavigationBindings >> arrowInfinityLine: aHighchartsNavigationBindingsOptionsObject [
 
-	"A line with arrow annotation. Includes start and one event in steps
-array.
+	"A line with arrow annotation. Includes start and one event in steps array.
 "
-	^ configurationOptions at: 'arrowInfinityLine' ifAbsentPut: [ HighstockNavigationBindingsArrowInfinityLine new ]
+
+	configurationOptions at: 'arrowInfinityLine' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> arrowRay [
+HighstockNavigationBindings >> arrowRay: aHighchartsNavigationBindingsOptionsObject [
 
-	"A ray with an arrow annotation bindings. Includes start and one event
-in steps array.
+	"A ray with an arrow annotation bindings. Includes start and one event in steps array.
 "
-	^ configurationOptions at: 'arrowRay' ifAbsentPut: [ HighstockNavigationBindingsArrowRay new ]
+
+	configurationOptions at: 'arrowRay' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> arrowSegment [
+HighstockNavigationBindings >> arrowSegment: aHighchartsNavigationBindingsOptionsObject [
 
-	"A segment with an arrow annotation bindings. Includes start and one
-event in steps array.
+	"A segment with an arrow annotation bindings. Includes start and one event in steps array.
 "
-	^ configurationOptions at: 'arrowSegment' ifAbsentPut: [ HighstockNavigationBindingsArrowSegment new ]
+
+	configurationOptions at: 'arrowSegment' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> circleAnnotation: aHighchartsStockToolsBindingsObject [
+HighstockNavigationBindings >> circleAnnotation: aHighchartsNavigationBindingsOptionsObject [
 
-	"A circle annotation bindings. Includes start and one event in
-steps array.
+	"A circle annotation bindings. Includes start and one event in steps array.
 "
 
-	configurationOptions at: 'circleAnnotation' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'circleAnnotation' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> crooked3 [
+HighstockNavigationBindings >> crooked3: aHighchartsNavigationBindingsOptionsObject [
 
-	"Crooked line (three points) annotation bindings. Includes start and two
-events in steps (for second and third points in crooked line) array.
+	"Crooked line (three points) annotation bindings. Includes start and two events in steps (for second and third points in crooked line) array.
 "
-	^ configurationOptions at: 'crooked3' ifAbsentPut: [ HighstockNavigationBindingsCrooked3 new ]
+
+	configurationOptions at: 'crooked3' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> crooked5 [
+HighstockNavigationBindings >> crooked5: aHighchartsNavigationBindingsOptionsObject [
 
-	"Crooked line (five points) annotation bindings. Includes start and four
-events in steps (for all consequent points in crooked line) array.
+	"Crooked line (five points) annotation bindings. Includes start and four events in steps (for all consequent points in crooked line) array.
 "
-	^ configurationOptions at: 'crooked5' ifAbsentPut: [ HighstockNavigationBindingsCrooked5 new ]
+
+	configurationOptions at: 'crooked5' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> currentPriceIndicator [
+HighstockNavigationBindings >> currentPriceIndicator: aHighchartsNavigationBindingsOptionsObject [
 
-	"Hides/shows two price indicators:
-
-last price in the dataset
-last price in the selected range
+	"Hides/shows two price indicators:  last price in the dataset last price in the selected range
 "
-	^ configurationOptions at: 'currentPriceIndicator' ifAbsentPut: [ HighstockNavigationBindingsCurrentPriceIndicator new ]
+
+	configurationOptions at: 'currentPriceIndicator' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> elliott3 [
+HighstockNavigationBindings >> elliott3: aHighchartsNavigationBindingsOptionsObject [
 
-	"Elliott wave (three points) annotation bindings. Includes start and two
-events in steps (for second and third points) array.
+	"Elliott wave (three points) annotation bindings. Includes start and two events in steps (for second and third points) array.
 "
-	^ configurationOptions at: 'elliott3' ifAbsentPut: [ HighstockNavigationBindingsElliott3 new ]
+
+	configurationOptions at: 'elliott3' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> elliott5 [
+HighstockNavigationBindings >> elliott5: aHighchartsNavigationBindingsOptionsObject [
 
-	"Elliott wave (five points) annotation bindings. Includes start and four
-event in steps (for all consequent points in Elliott wave) array.
+	"Elliott wave (five points) annotation bindings. Includes start and four event in steps (for all consequent points in Elliott wave) array.
 "
-	^ configurationOptions at: 'elliott5' ifAbsentPut: [ HighstockNavigationBindingsElliott5 new ]
+
+	configurationOptions at: 'elliott5' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> fibonacci [
+HighstockNavigationBindings >> fibonacci: aHighchartsNavigationBindingsOptionsObject [
 
-	"A fibonacci annotation bindings. Includes start and two events in
-steps array (updates second point, then height).
+	"A fibonacci annotation bindings. Includes start and two events in steps array (updates second point, then height).
 "
-	^ configurationOptions at: 'fibonacci' ifAbsentPut: [ HighstockNavigationBindingsFibonacci new ]
+
+	configurationOptions at: 'fibonacci' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> flagCirclepin: aHighchartsStockToolsBindingsObject [
+HighstockNavigationBindings >> flagCirclepin: aHighchartsNavigationBindingsOptionsObject [
 
-	"A flag series bindings. Includes start event. On click, finds the
-closest point and marks it with a flag with ´circlepin´ shape.
+	"A flag series bindings. Includes start event. On click, finds the closest point and marks it with a flag with ´circlepin´ shape.
 "
 
-	configurationOptions at: 'flagCirclepin' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'flagCirclepin' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> flagDiamondpin: aHighchartsStockToolsBindingsObject [
+HighstockNavigationBindings >> flagDiamondpin: aHighchartsNavigationBindingsOptionsObject [
 
-	"A flag series bindings. Includes start event. On click, finds the
-closest point and marks it with a flag with ´diamondpin´ shape.
+	"A flag series bindings. Includes start event. On click, finds the closest point and marks it with a flag with ´diamondpin´ shape.
 "
 
-	configurationOptions at: 'flagDiamondpin' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'flagDiamondpin' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> flagSimplepin: aHighchartsStockToolsBindingsObject [
+HighstockNavigationBindings >> flagSimplepin: aHighchartsNavigationBindingsOptionsObject [
 
-	"A flag series bindings. Includes start event.
-On click, finds the closest point and marks it with a flag without pin
-shape.
+	"A flag series bindings. Includes start event. On click, finds the closest point and marks it with a flag without pin shape.
 "
 
-	configurationOptions at: 'flagSimplepin' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'flagSimplepin' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> flagSquarepin: aHighchartsStockToolsBindingsObject [
+HighstockNavigationBindings >> flagSquarepin: aHighchartsNavigationBindingsOptionsObject [
 
-	"A flag series bindings. Includes start event.
-On click, finds the closest point and marks it with a flag with
-´squarepin´ shape.
+	"A flag series bindings. Includes start event. On click, finds the closest point and marks it with a flag with ´squarepin´ shape.
 "
 
-	configurationOptions at: 'flagSquarepin' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'flagSquarepin' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> fullScreen [
+HighstockNavigationBindings >> fullScreen: aHighchartsNavigationBindingsOptionsObject [
 
 	"Displays chart in fullscreen.
 "
-	^ configurationOptions at: 'fullScreen' ifAbsentPut: [ HighstockNavigationBindingsFullScreen new ]
+
+	configurationOptions at: 'fullScreen' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> horizontalLine [
+HighstockNavigationBindings >> horizontalLine: aHighchartsNavigationBindingsOptionsObject [
 
 	"A horizontal line annotation. Includes start event.
 "
-	^ configurationOptions at: 'horizontalLine' ifAbsentPut: [ HighstockNavigationBindingsHorizontalLine new ]
+
+	configurationOptions at: 'horizontalLine' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> indicators [
+HighstockNavigationBindings >> indicators: aHighchartsNavigationBindingsOptionsObject [
 
-	"Indicators bindings. Includes init event to show a popup.
-Note: In order to show base series from the chart in the popup´s
-dropdown each series requires
-series.id to be
-defined.
+	"Indicators bindings. Includes init event to show a popup. Note: In order to show base series from the chart in the popup´s dropdown each series requires series.id to be defined.
 "
-	^ configurationOptions at: 'indicators' ifAbsentPut: [ HighstockNavigationBindingsIndicators new ]
+
+	configurationOptions at: 'indicators' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> infinityLine [
+HighstockNavigationBindings >> infinityLine: aHighchartsNavigationBindingsOptionsObject [
 
 	"A line annotation. Includes start and one event in steps array.
 "
-	^ configurationOptions at: 'infinityLine' ifAbsentPut: [ HighstockNavigationBindingsInfinityLine new ]
+
+	configurationOptions at: 'infinityLine' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> labelAnnotation: aHighchartsStockToolsBindingsObject [
+HighstockNavigationBindings >> labelAnnotation: aHighchartsNavigationBindingsOptionsObject [
 
 	"A label annotation bindings. Includes start event only.
 "
 
-	configurationOptions at: 'labelAnnotation' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'labelAnnotation' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> measureX [
+HighstockNavigationBindings >> measureX: aHighchartsNavigationBindingsOptionsObject [
 
-	"A measure (x-dimension) annotation bindings. Includes start and one
-event in steps array.
-"
-	^ configurationOptions at: 'measureX' ifAbsentPut: [ HighstockNavigationBindingsMeasureX new ]
-]
-
-{ #category : #accessing }
-HighstockNavigationBindings >> measureXY [
-
-	"A measure (xy-dimension) annotation bindings. Includes start and one
-event in steps array.
-"
-	^ configurationOptions at: 'measureXY' ifAbsentPut: [ HighstockNavigationBindingsMeasureXY new ]
-]
-
-{ #category : #accessing }
-HighstockNavigationBindings >> measureY [
-
-	"A measure (y-dimension) annotation bindings. Includes start and one
-event in steps array.
-"
-	^ configurationOptions at: 'measureY' ifAbsentPut: [ HighstockNavigationBindingsMeasureY new ]
-]
-
-{ #category : #accessing }
-HighstockNavigationBindings >> parallelChannel [
-
-	"A parallel channel (tunnel) annotation bindings. Includes start and
-two events in steps array (updates second point, then height).
-"
-	^ configurationOptions at: 'parallelChannel' ifAbsentPut: [ HighstockNavigationBindingsParallelChannel new ]
-]
-
-{ #category : #accessing }
-HighstockNavigationBindings >> pitchfork [
-
-	"An Andrew´s pitchfork annotation bindings. Includes start and two
-events in steps array (sets second and third control points).
-"
-	^ configurationOptions at: 'pitchfork' ifAbsentPut: [ HighstockNavigationBindingsPitchfork new ]
-]
-
-{ #category : #accessing }
-HighstockNavigationBindings >> ray [
-
-	"A ray annotation bindings. Includes start and one event in steps
-array.
-"
-	^ configurationOptions at: 'ray' ifAbsentPut: [ HighstockNavigationBindingsRay new ]
-]
-
-{ #category : #accessing }
-HighstockNavigationBindings >> rectangleAnnotation: aHighchartsStockToolsBindingsObject [
-
-	"A rectangle annotation bindings. Includes start and one event
-in steps array.
+	"A measure (x-dimension) annotation bindings. Includes start and one event in steps array.
 "
 
-	configurationOptions at: 'rectangleAnnotation' put: aHighchartsStockToolsBindingsObject
+	configurationOptions at: 'measureX' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> saveChart [
+HighstockNavigationBindings >> measureXY: aHighchartsNavigationBindingsOptionsObject [
 
-	"Save a chart in localStorage under highcharts-chart key.
-Stored items:
-
-annotations
-indicators (with yAxes)
-flags
+	"A measure (xy-dimension) annotation bindings. Includes start and one event in steps array.
 "
-	^ configurationOptions at: 'saveChart' ifAbsentPut: [ HighstockNavigationBindingsSaveChart new ]
+
+	configurationOptions at: 'measureXY' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> segment [
+HighstockNavigationBindings >> measureY: aHighchartsNavigationBindingsOptionsObject [
 
-	"A segment annotation bindings. Includes start and one event in steps
-array.
+	"A measure (y-dimension) annotation bindings. Includes start and one event in steps array.
 "
-	^ configurationOptions at: 'segment' ifAbsentPut: [ HighstockNavigationBindingsSegment new ]
+
+	configurationOptions at: 'measureY' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> seriesTypeCandlestick [
+HighstockNavigationBindings >> parallelChannel: aHighchartsNavigationBindingsOptionsObject [
+
+	"A parallel channel (tunnel) annotation bindings. Includes start and two events in steps array (updates second point, then height).
+"
+
+	configurationOptions at: 'parallelChannel' put: aHighchartsNavigationBindingsOptionsObject
+]
+
+{ #category : #accessing }
+HighstockNavigationBindings >> pitchfork: aHighchartsNavigationBindingsOptionsObject [
+
+	"An Andrew´s pitchfork annotation bindings. Includes start and two events in steps array (sets second and third control points).
+"
+
+	configurationOptions at: 'pitchfork' put: aHighchartsNavigationBindingsOptionsObject
+]
+
+{ #category : #accessing }
+HighstockNavigationBindings >> ray: aHighchartsNavigationBindingsOptionsObject [
+
+	"A ray annotation bindings. Includes start and one event in steps array.
+"
+
+	configurationOptions at: 'ray' put: aHighchartsNavigationBindingsOptionsObject
+]
+
+{ #category : #accessing }
+HighstockNavigationBindings >> rectangleAnnotation: aHighchartsNavigationBindingsOptionsObject [
+
+	"A rectangle annotation bindings. Includes start and one event in steps array.
+"
+
+	configurationOptions at: 'rectangleAnnotation' put: aHighchartsNavigationBindingsOptionsObject
+]
+
+{ #category : #accessing }
+HighstockNavigationBindings >> saveChart: aHighchartsNavigationBindingsOptionsObject [
+
+	"Save a chart in localStorage under highcharts-chart key. Stored items:  annotations indicators (with yAxes) flags
+"
+
+	configurationOptions at: 'saveChart' put: aHighchartsNavigationBindingsOptionsObject
+]
+
+{ #category : #accessing }
+HighstockNavigationBindings >> segment: aHighchartsNavigationBindingsOptionsObject [
+
+	"A segment annotation bindings. Includes start and one event in steps array.
+"
+
+	configurationOptions at: 'segment' put: aHighchartsNavigationBindingsOptionsObject
+]
+
+{ #category : #accessing }
+HighstockNavigationBindings >> seriesTypeCandlestick: aHighchartsNavigationBindingsOptionsObject [
 
 	"Changes main series to ´candlestick´ type.
 "
-	^ configurationOptions at: 'seriesTypeCandlestick' ifAbsentPut: [ HighstockNavigationBindingsSeriesTypeCandlestick new ]
+
+	configurationOptions at: 'seriesTypeCandlestick' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> seriesTypeLine [
+HighstockNavigationBindings >> seriesTypeLine: aHighchartsNavigationBindingsOptionsObject [
 
 	"Changes main series to ´line´ type.
 "
-	^ configurationOptions at: 'seriesTypeLine' ifAbsentPut: [ HighstockNavigationBindingsSeriesTypeLine new ]
+
+	configurationOptions at: 'seriesTypeLine' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> seriesTypeOhlc [
+HighstockNavigationBindings >> seriesTypeOhlc: aHighchartsNavigationBindingsOptionsObject [
 
 	"Changes main series to ´ohlc´ type.
 "
-	^ configurationOptions at: 'seriesTypeOhlc' ifAbsentPut: [ HighstockNavigationBindingsSeriesTypeOhlc new ]
+
+	configurationOptions at: 'seriesTypeOhlc' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> toggleAnnotations [
+HighstockNavigationBindings >> toggleAnnotations: aHighchartsNavigationBindingsOptionsObject [
 
 	"Hides/shows all annotations on a chart.
 "
-	^ configurationOptions at: 'toggleAnnotations' ifAbsentPut: [ HighstockNavigationBindingsToggleAnnotations new ]
+
+	configurationOptions at: 'toggleAnnotations' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> verticalArrow [
+HighstockNavigationBindings >> verticalArrow: aHighchartsNavigationBindingsOptionsObject [
 
-	"A vertical arrow annotation bindings. Includes start event. On click,
-finds the closest point and marks it with an arrow. Green arrow when
-pointing from above, red when pointing from below the point.
+	"A vertical arrow annotation bindings. Includes start event. On click, finds the closest point and marks it with an arrow. Green arrow when pointing from above, red when pointing from below the point.
 "
-	^ configurationOptions at: 'verticalArrow' ifAbsentPut: [ HighstockNavigationBindingsVerticalArrow new ]
+
+	configurationOptions at: 'verticalArrow' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> verticalCounter [
+HighstockNavigationBindings >> verticalCounter: aHighchartsNavigationBindingsOptionsObject [
 
-	"A vertical counter annotation bindings. Includes start event. On click,
-finds the closest point and marks it with a numeric annotation -
-incrementing counter on each add.
+	"A vertical counter annotation bindings. Includes start event. On click, finds the closest point and marks it with a numeric annotation - incrementing counter on each add.
 "
-	^ configurationOptions at: 'verticalCounter' ifAbsentPut: [ HighstockNavigationBindingsVerticalCounter new ]
+
+	configurationOptions at: 'verticalCounter' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> verticalLabel [
+HighstockNavigationBindings >> verticalLabel: aHighchartsNavigationBindingsOptionsObject [
 
-	"A vertical arrow annotation bindings. Includes start event. On click,
-finds the closest point and marks it with an arrow and a label with
-value.
+	"A vertical arrow annotation bindings. Includes start event. On click, finds the closest point and marks it with an arrow and a label with value.
 "
-	^ configurationOptions at: 'verticalLabel' ifAbsentPut: [ HighstockNavigationBindingsVerticalLabel new ]
+
+	configurationOptions at: 'verticalLabel' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> verticalLine [
+HighstockNavigationBindings >> verticalLine: aHighchartsNavigationBindingsOptionsObject [
 
 	"A vertical line annotation. Includes start event.
 "
-	^ configurationOptions at: 'verticalLine' ifAbsentPut: [ HighstockNavigationBindingsVerticalLine new ]
+
+	configurationOptions at: 'verticalLine' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> zoomX [
+HighstockNavigationBindings >> zoomX: aHighchartsNavigationBindingsOptionsObject [
 
-	"Enables zooming in xAxis on a chart. Includes start event which
-changes chart.zoomType.
+	"Enables zooming in xAxis on a chart. Includes start event which changes chart.zoomType.
 "
-	^ configurationOptions at: 'zoomX' ifAbsentPut: [ HighstockNavigationBindingsZoomX new ]
+
+	configurationOptions at: 'zoomX' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> zoomXY [
+HighstockNavigationBindings >> zoomXY: aHighchartsNavigationBindingsOptionsObject [
 
-	"Enables zooming in xAxis and yAxis on a chart. Includes start event
-which changes chart.zoomType.
+	"Enables zooming in xAxis and yAxis on a chart. Includes start event which changes chart.zoomType.
 "
-	^ configurationOptions at: 'zoomXY' ifAbsentPut: [ HighstockNavigationBindingsZoomXY new ]
+
+	configurationOptions at: 'zoomXY' put: aHighchartsNavigationBindingsOptionsObject
 ]
 
 { #category : #accessing }
-HighstockNavigationBindings >> zoomY [
+HighstockNavigationBindings >> zoomY: aHighchartsNavigationBindingsOptionsObject [
 
-	"Enables zooming in yAxis on a chart. Includes start event which
-changes chart.zoomType.
+	"Enables zooming in yAxis on a chart. Includes start event which changes chart.zoomType.
 "
-	^ configurationOptions at: 'zoomY' ifAbsentPut: [ HighstockNavigationBindingsZoomY new ]
+
+	configurationOptions at: 'zoomY' put: aHighchartsNavigationBindingsOptionsObject
 ]

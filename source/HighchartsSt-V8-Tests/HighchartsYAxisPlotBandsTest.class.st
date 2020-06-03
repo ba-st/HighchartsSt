@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testBorderColor [
+HighchartsYAxisPlotBandsTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsYAxisPlotBands new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsYAxisPlotBandsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsYAxisPlotBandsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testBorderWidth [
+HighchartsYAxisPlotBandsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsYAxisPlotBandsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testClassName [
+HighchartsYAxisPlotBandsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsYAxisPlotBandsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testColor [
+HighchartsYAxisPlotBandsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsYAxisPlotBandsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testEvents [
+HighchartsYAxisPlotBandsTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsYAxisPlotBandsTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testFrom [
+HighchartsYAxisPlotBandsTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsYAxisPlotBandsTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testId [
+HighchartsYAxisPlotBandsTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsYAxisPlotBandsTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testInnerRadius [
+HighchartsYAxisPlotBandsTest >> testSetInnerRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsYAxisPlotBandsTest >> testInnerRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testOuterRadius [
+HighchartsYAxisPlotBandsTest >> testSetOuterRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsYAxisPlotBandsTest >> testOuterRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testThickness [
+HighchartsYAxisPlotBandsTest >> testSetThickness [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsYAxisPlotBandsTest >> testThickness [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testTo [
+HighchartsYAxisPlotBandsTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsYAxisPlotBandsTest >> testTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisPlotBandsTest >> testZIndex [
+HighchartsYAxisPlotBandsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

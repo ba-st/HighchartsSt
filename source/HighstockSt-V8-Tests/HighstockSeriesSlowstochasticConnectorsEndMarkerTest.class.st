@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testAlign [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testColor [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testEnabled [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testHeight [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testInside [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testLineColor [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testLineWidth [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testRadius [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSymbol [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testWidth [
+HighstockSeriesSlowstochasticConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

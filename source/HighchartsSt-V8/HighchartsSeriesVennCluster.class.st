@@ -17,8 +17,7 @@ Class {
 { #category : #accessing }
 HighchartsSeriesVennCluster >> allowOverlap: aBoolean [
 
-	"When set to false prevent cluster overlapping - this option
-works only when layoutAlgorithm.type = &quot;grid&quot;.
+	"When set to false prevent cluster overlapping - this option works only when layoutAlgorithm.type = &quot;grid&quot;.
 Defaults to true."
 
 	configurationOptions at: 'allowOverlap' put: aBoolean
@@ -69,9 +68,7 @@ HighchartsSeriesVennCluster >> events: anObject [
 { #category : #accessing }
 HighchartsSeriesVennCluster >> layoutAlgorithm [
 
-	"Options for layout algorithm. Inside there
-are options to change the type of the algorithm, gridSize,
-distance or iterations.
+	"Options for layout algorithm. Inside there are options to change the type of the algorithm, gridSize, distance or iterations.
 "
 	^ configurationOptions at: 'layoutAlgorithm' ifAbsentPut: [ HighchartsSeriesVennClusterLayoutAlgorithm new ]
 ]
@@ -87,8 +84,7 @@ HighchartsSeriesVennCluster >> marker [
 { #category : #accessing }
 HighchartsSeriesVennCluster >> minimumClusterSize: aNumber [
 
-	"The minimum amount of points to be combined into a cluster.
-This value has to be greater or equal to 2.
+	"The minimum amount of points to be combined into a cluster. This value has to be greater or equal to 2.
 Defaults to 2."
 
 	configurationOptions at: 'minimumClusterSize' put: aNumber
@@ -104,11 +100,7 @@ HighchartsSeriesVennCluster >> states: anObject [
 { #category : #accessing }
 HighchartsSeriesVennCluster >> zones [
 
-	"An array defining zones within marker clusters.
-In styled mode, the color zones are styled with the
-.highcharts-cluster-zone-{n} class, or custom
-classed from the className
-option.
+	"An array defining zones within marker clusters. In styled mode, the color zones are styled with the .highcharts-cluster-zone-{n} class, or custom classed from the className option.
 "
 	^ configurationOptions at: 'zones' ifAbsentPut: [ HighchartsSeriesVennClusterZones new ]
 ]

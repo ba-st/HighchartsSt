@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDataLabelsTextPathTest >> testAttributes [
+HighchartsPlotOptionsStreamgraphDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsStreamgraphDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDataLabelsTextPathTest >> testEnabled [
+HighchartsPlotOptionsStreamgraphDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

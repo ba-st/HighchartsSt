@@ -4,7 +4,6 @@ presents the scale of the bubble series. Individual bubble ranges
 can be defined by user or calculated from series. In the case of
 automatically calculated ranges, a 1px margin of error is
 permitted.
-Requires highcharts-more.js.
 "
 Class {
 	#name : #HighchartsLegendBubbleLegend,
@@ -15,8 +14,7 @@ Class {
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the ranges borders, can be also defined for an
-individual range.
+	"The color of the ranges borders, can be also defined for an individual range.
 Defaults to undefined."
 
 	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -25,8 +23,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> borderWidth: aNumber [
 
-	"The width of the ranges borders in pixels, can be also
-defined for an individual range.
+	"The width of the ranges borders in pixels, can be also defined for an individual range.
 Defaults to 2."
 
 	configurationOptions at: 'borderWidth' put: aNumber
@@ -35,9 +32,7 @@ Defaults to 2."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> className: aString [
 
-	"An additional class name to apply to the bubble legend´
-circle graphical elements. This option does not replace
-default class names of the graphical element.
+	"An additional class name to apply to the bubble legend´ circle graphical elements. This option does not replace default class names of the graphical element.
 Defaults to undefined."
 
 	configurationOptions at: 'className' put: aString
@@ -46,8 +41,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The main color of the bubble legend. Applies to ranges, if
-individual color is not defined.
+	"The main color of the bubble legend. Applies to ranges, if individual color is not defined.
 Defaults to undefined."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -56,9 +50,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> connectorClassName: aString [
 
-	"An additional class name to apply to the bubble legend´s
-connector graphical elements. This option does not replace
-default class names of the graphical element.
+	"An additional class name to apply to the bubble legend´s connector graphical elements. This option does not replace default class names of the graphical element.
 Defaults to undefined."
 
 	configurationOptions at: 'connectorClassName' put: aString
@@ -67,8 +59,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> connectorColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the connector, can be also defined
-for an individual range.
+	"The color of the connector, can be also defined for an individual range.
 Defaults to undefined."
 
 	configurationOptions at: 'connectorColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -77,8 +68,7 @@ Defaults to undefined."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> connectorDistance: aNumber [
 
-	"The length of the connectors in pixels. If labels are
-centered, the distance is reduced to 0.
+	"The length of the connectors in pixels. If labels are centered, the distance is reduced to 0.
 Defaults to 60."
 
 	configurationOptions at: 'connectorDistance' put: aNumber
@@ -122,9 +112,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> maxSize: aNumber [
 
-	"Miximum bubble legend range size. If values for ranges are
-not specified, the minSize and the maxSize are calculated
-from bubble series.
+	"Miximum bubble legend range size. If values for ranges are not specified, the minSize and the maxSize are calculated from bubble series.
 Defaults to 60."
 
 	configurationOptions at: 'maxSize' put: aNumber
@@ -133,9 +121,7 @@ Defaults to 60."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> minSize: aNumber [
 
-	"Minimum bubble legend range size. If values for ranges are
-not specified, the minSize and the maxSize are calculated
-from bubble series.
+	"Minimum bubble legend range size. If values for ranges are not specified, the minSize and the maxSize are calculated from bubble series.
 Defaults to 10."
 
 	configurationOptions at: 'minSize' put: aNumber
@@ -144,8 +130,7 @@ Defaults to 10."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> ranges [
 
-	"Options for specific range. One range consists of bubble,
-label and connector.
+	"Options for specific range. One range consists of bubble, label and connector.
 "
 	^ configurationOptions at: 'ranges' ifAbsentPut: [ HighchartsLegendBubbleLegendRanges new ]
 ]
@@ -153,10 +138,7 @@ label and connector.
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> sizeBy: aHighchartsBubbleSizeByValue [
 
-	"Whether the bubble legend range value should be represented
-by the area or the width of the bubble. The default, area,
-corresponds best to the human perception of the size of each
-bubble.
+	"Whether the bubble legend range value should be represented by the area or the width of the bubble. The default, area, corresponds best to the human perception of the size of each bubble.
 Defaults to area."
 
 	configurationOptions at: 'sizeBy' put: aHighchartsBubbleSizeByValue
@@ -165,11 +147,7 @@ Defaults to area."
 { #category : #accessing }
 HighchartsLegendBubbleLegend >> sizeByAbsoluteValue: aBoolean [
 
-	"When this is true, the absolute value of z determines the
-size of the bubble. This means that with the default
-zThreshold of 0, a bubble of value -1 will have the same size
-as a bubble of value 1, while a bubble of value 0 will have a
-smaller size according to minSize.
+	"When this is true, the absolute value of z determines the size of the bubble. This means that with the default zThreshold of 0, a bubble of value -1 will have the same size as a bubble of value 1, while a bubble of value 0 will have a smaller size according to minSize.
 Defaults to false."
 
 	configurationOptions at: 'sizeByAbsoluteValue' put: aBoolean

@@ -10,5 +10,5 @@ Class {
 { #category : #'tests-versions' }
 Highstock8OnlineLibraryTest >> testVersion [
 
-	self assert: Highstock8OnlineLibrary new version equals: '8.0.0'
+	self assert: Highstock8OnlineLibrary new version equals: '8.1.0'
 ]

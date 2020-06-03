@@ -33,13 +33,6 @@ HighstockTooltipStyle >> fontSize: aString [
 ]
 
 { #category : #accessing }
-HighstockTooltipStyle >> pointerEvents: aString [
-
-
-	configurationOptions at: 'pointerEvents' put: aString
-]
-
-{ #category : #accessing }
 HighstockTooltipStyle >> whiteSpace: aString [
 
 

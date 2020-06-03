@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeAccessibilityKeyboardNavigationTest >> testEnabled [
+HighchartsPlotOptionsSolidgaugeAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

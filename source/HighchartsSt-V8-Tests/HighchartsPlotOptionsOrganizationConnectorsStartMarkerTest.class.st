@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testAlign [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testColor [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testEnabled [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testHeight [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testInside [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testLineColor [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testLineWidth [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testRadius [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSymbol [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testVerticalAlign 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testWidth [
+HighchartsPlotOptionsOrganizationConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

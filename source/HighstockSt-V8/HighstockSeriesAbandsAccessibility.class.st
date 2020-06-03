@@ -1,5 +1,5 @@
 "
-Accessibility options for a series. Requires the accessibility module.
+Accessibility options for a series.
 "
 Class {
 	#name : #HighstockSeriesAbandsAccessibility,
@@ -45,9 +45,7 @@ HighstockSeriesAbandsAccessibility >> keyboardNavigation [
 { #category : #accessing }
 HighstockSeriesAbandsAccessibility >> pointDescriptionFormatter: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Formatter function to use instead of the default for point
-descriptions. Same as accessibility.point.descriptionFormatter, but for
-a single series.
+	"Formatter function to use instead of the default for point descriptions. Same as accessibility.point.descriptionFormatter, but for a single series.
 "
 
 	configurationOptions at: 'pointDescriptionFormatter' put: aHighchartsScreenReaderFormatterCallbackFunctionOfHighchartsPoint

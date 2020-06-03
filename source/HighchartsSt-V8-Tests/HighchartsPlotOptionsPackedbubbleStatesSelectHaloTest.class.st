@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testAttributes [
+HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testOpacity [
+HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testSize [
+HighchartsPlotOptionsPackedbubbleStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

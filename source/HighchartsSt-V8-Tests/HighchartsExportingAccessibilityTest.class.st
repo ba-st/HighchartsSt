@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsExportingAccessibilityTest >> testEnabled [
+HighchartsExportingAccessibilityTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

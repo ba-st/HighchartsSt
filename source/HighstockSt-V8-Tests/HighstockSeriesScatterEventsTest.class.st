@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testAfterAnimate [
+HighstockSeriesScatterEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesScatterEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testCheckboxClick [
+HighstockSeriesScatterEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesScatterEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testClick [
+HighstockSeriesScatterEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesScatterEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testHide [
+HighstockSeriesScatterEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesScatterEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testLegendItemClick [
+HighstockSeriesScatterEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesScatterEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testMouseOut [
+HighstockSeriesScatterEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesScatterEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testMouseOver [
+HighstockSeriesScatterEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesScatterEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterEventsTest >> testShow [
+HighstockSeriesScatterEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

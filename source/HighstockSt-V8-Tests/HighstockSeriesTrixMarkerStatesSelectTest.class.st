@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixMarkerStatesSelectTest >> testEnabled [
+HighstockSeriesTrixMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesTrixMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixMarkerStatesSelectTest >> testFillColor [
+HighstockSeriesTrixMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesTrixMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixMarkerStatesSelectTest >> testLineColor [
+HighstockSeriesTrixMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesTrixMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixMarkerStatesSelectTest >> testLineWidth [
+HighstockSeriesTrixMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesTrixMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrixMarkerStatesSelectTest >> testRadius [
+HighstockSeriesTrixMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

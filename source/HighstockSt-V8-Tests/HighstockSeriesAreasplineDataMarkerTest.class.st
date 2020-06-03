@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testEnabled [
+HighstockSeriesAreasplineDataMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testEnabledThreshold [
+HighstockSeriesAreasplineDataMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testFillColor [
+HighstockSeriesAreasplineDataMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testHeight [
+HighstockSeriesAreasplineDataMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testLineColor [
+HighstockSeriesAreasplineDataMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testLineWidth [
+HighstockSeriesAreasplineDataMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testRadius [
+HighstockSeriesAreasplineDataMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testStates [
+HighstockSeriesAreasplineDataMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testSymbol [
+HighstockSeriesAreasplineDataMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesAreasplineDataMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplineDataMarkerTest >> testWidth [
+HighstockSeriesAreasplineDataMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

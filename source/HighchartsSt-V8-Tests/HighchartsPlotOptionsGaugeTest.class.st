@@ -5,7 +5,175 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testAllAreas [
+HighchartsPlotOptionsGaugeTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetDial [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component dial.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dial' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetPivot [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component pivot.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pivot' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +187,7 @@ HighchartsPlotOptionsGaugeTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testAllowPointSelect [
+HighchartsPlotOptionsGaugeTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +201,7 @@ HighchartsPlotOptionsGaugeTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testBoostBlending [
+HighchartsPlotOptionsGaugeTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +215,7 @@ HighchartsPlotOptionsGaugeTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testBorderColor [
+HighchartsPlotOptionsGaugeTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +229,7 @@ HighchartsPlotOptionsGaugeTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testBorderWidth [
+HighchartsPlotOptionsGaugeTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +243,7 @@ HighchartsPlotOptionsGaugeTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testClassName [
+HighchartsPlotOptionsGaugeTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +257,7 @@ HighchartsPlotOptionsGaugeTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testClip [
+HighchartsPlotOptionsGaugeTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +271,7 @@ HighchartsPlotOptionsGaugeTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testColor [
+HighchartsPlotOptionsGaugeTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +285,7 @@ HighchartsPlotOptionsGaugeTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testColorIndex [
+HighchartsPlotOptionsGaugeTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +299,7 @@ HighchartsPlotOptionsGaugeTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testCompare [
+HighchartsPlotOptionsGaugeTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +313,7 @@ HighchartsPlotOptionsGaugeTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testCompareBase [
+HighchartsPlotOptionsGaugeTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +327,7 @@ HighchartsPlotOptionsGaugeTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testCompareStart [
+HighchartsPlotOptionsGaugeTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +341,21 @@ HighchartsPlotOptionsGaugeTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testCursor [
+HighchartsPlotOptionsGaugeTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +369,21 @@ HighchartsPlotOptionsGaugeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testDescription [
+HighchartsPlotOptionsGaugeTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsGauge new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsGaugeTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +397,7 @@ HighchartsPlotOptionsGaugeTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testEnableMouseTracking [
+HighchartsPlotOptionsGaugeTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,7 @@ HighchartsPlotOptionsGaugeTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testEvents [
+HighchartsPlotOptionsGaugeTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +425,7 @@ HighchartsPlotOptionsGaugeTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testGapSize [
+HighchartsPlotOptionsGaugeTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,7 @@ HighchartsPlotOptionsGaugeTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testGapUnit [
+HighchartsPlotOptionsGaugeTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +453,7 @@ HighchartsPlotOptionsGaugeTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testIncludeInDataExport [
+HighchartsPlotOptionsGaugeTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +467,7 @@ HighchartsPlotOptionsGaugeTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testJoinBy [
+HighchartsPlotOptionsGaugeTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +481,7 @@ HighchartsPlotOptionsGaugeTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testKeys [
+HighchartsPlotOptionsGaugeTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +495,7 @@ HighchartsPlotOptionsGaugeTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testLineWidth [
+HighchartsPlotOptionsGaugeTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +509,7 @@ HighchartsPlotOptionsGaugeTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testLinecap [
+HighchartsPlotOptionsGaugeTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +523,7 @@ HighchartsPlotOptionsGaugeTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testLinkedTo [
+HighchartsPlotOptionsGaugeTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +537,7 @@ HighchartsPlotOptionsGaugeTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testNavigatorOptions [
+HighchartsPlotOptionsGaugeTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +551,7 @@ HighchartsPlotOptionsGaugeTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testOpacity [
+HighchartsPlotOptionsGaugeTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +565,7 @@ HighchartsPlotOptionsGaugeTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testOvershoot [
+HighchartsPlotOptionsGaugeTest >> testSetOvershoot [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +579,7 @@ HighchartsPlotOptionsGaugeTest >> testOvershoot [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsGaugeTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +593,7 @@ HighchartsPlotOptionsGaugeTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testPointInterval [
+HighchartsPlotOptionsGaugeTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +607,7 @@ HighchartsPlotOptionsGaugeTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testPointIntervalUnit [
+HighchartsPlotOptionsGaugeTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +621,7 @@ HighchartsPlotOptionsGaugeTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testPointRange [
+HighchartsPlotOptionsGaugeTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +635,7 @@ HighchartsPlotOptionsGaugeTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testPointStart [
+HighchartsPlotOptionsGaugeTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +649,7 @@ HighchartsPlotOptionsGaugeTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testSelected [
+HighchartsPlotOptionsGaugeTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +663,7 @@ HighchartsPlotOptionsGaugeTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testShowCheckbox [
+HighchartsPlotOptionsGaugeTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +677,7 @@ HighchartsPlotOptionsGaugeTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testShowInLegend [
+HighchartsPlotOptionsGaugeTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +691,7 @@ HighchartsPlotOptionsGaugeTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testShowInNavigator [
+HighchartsPlotOptionsGaugeTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +705,7 @@ HighchartsPlotOptionsGaugeTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsGaugeTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +719,7 @@ HighchartsPlotOptionsGaugeTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testStickyTracking [
+HighchartsPlotOptionsGaugeTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +733,7 @@ HighchartsPlotOptionsGaugeTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testUseOhlcData [
+HighchartsPlotOptionsGaugeTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +747,7 @@ HighchartsPlotOptionsGaugeTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testVisible [
+HighchartsPlotOptionsGaugeTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +761,7 @@ HighchartsPlotOptionsGaugeTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testWrap [
+HighchartsPlotOptionsGaugeTest >> testSetWrap [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +775,7 @@ HighchartsPlotOptionsGaugeTest >> testWrap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsGaugeTest >> testZIndex [
+HighchartsPlotOptionsGaugeTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

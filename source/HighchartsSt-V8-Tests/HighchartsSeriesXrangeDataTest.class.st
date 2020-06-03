@@ -5,7 +5,77 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testClassName [
+HighchartsSeriesXrangeDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrangeData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesXrangeDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrangeData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesXrangeDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrangeData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesXrangeDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrangeData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesXrangeDataTest >> testGetPartialFill [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrangeData new.
+	component partialFill.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'partialFill' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesXrangeDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +89,7 @@ HighchartsSeriesXrangeDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testColor [
+HighchartsSeriesXrangeDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +103,7 @@ HighchartsSeriesXrangeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testColorIndex [
+HighchartsSeriesXrangeDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +117,21 @@ HighchartsSeriesXrangeDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testDescription [
+HighchartsSeriesXrangeDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesXrangeData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesXrangeDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +145,7 @@ HighchartsSeriesXrangeDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testDrilldown [
+HighchartsSeriesXrangeDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +159,7 @@ HighchartsSeriesXrangeDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testEvents [
+HighchartsSeriesXrangeDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +173,7 @@ HighchartsSeriesXrangeDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testId [
+HighchartsSeriesXrangeDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +187,7 @@ HighchartsSeriesXrangeDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testLabelrank [
+HighchartsSeriesXrangeDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +201,7 @@ HighchartsSeriesXrangeDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testName [
+HighchartsSeriesXrangeDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +215,7 @@ HighchartsSeriesXrangeDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testSelected [
+HighchartsSeriesXrangeDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +229,7 @@ HighchartsSeriesXrangeDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testX [
+HighchartsSeriesXrangeDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +243,7 @@ HighchartsSeriesXrangeDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testX2 [
+HighchartsSeriesXrangeDataTest >> testSetX2 [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +257,7 @@ HighchartsSeriesXrangeDataTest >> testX2 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataTest >> testY [
+HighchartsSeriesXrangeDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

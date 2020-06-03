@@ -11,8 +11,7 @@ Class {
 { #category : #accessing }
 HighstockResponsive >> rules [
 
-	"A set of rules for responsive settings. The rules are executed from
-the top down.
+	"A set of rules for responsive settings. The rules are executed from the top down.
 "
 	^ configurationOptions at: 'rules' ifAbsentPut: [ HighstockResponsiveRules new ]
 ]

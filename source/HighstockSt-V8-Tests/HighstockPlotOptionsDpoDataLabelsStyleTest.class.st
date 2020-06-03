@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDpoDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsDpoDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsDpoDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDpoDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsDpoDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsDpoDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDpoDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsDpoDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsDpoDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDpoDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsDpoDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

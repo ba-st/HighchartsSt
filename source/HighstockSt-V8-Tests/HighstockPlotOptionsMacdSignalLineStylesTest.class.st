@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdSignalLineStylesTest >> testLineColor [
+HighstockPlotOptionsMacdSignalLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsMacdSignalLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdSignalLineStylesTest >> testLineWidth [
+HighstockPlotOptionsMacdSignalLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

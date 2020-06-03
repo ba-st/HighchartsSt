@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testAlign [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testColor [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testEnabled [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testHeight [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testInside [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testLineColor [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testLineWidth [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testRadius [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSymbol [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testVerticalAlig
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testWidth [
+HighstockPlotOptionsKeltnerchannelsConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

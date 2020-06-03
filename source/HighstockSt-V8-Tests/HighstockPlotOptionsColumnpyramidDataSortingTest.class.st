@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataSortingTest >> testEnabled [
+HighstockPlotOptionsColumnpyramidDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsColumnpyramidDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataSortingTest >> testMatchByName [
+HighstockPlotOptionsColumnpyramidDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsColumnpyramidDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnpyramidDataSortingTest >> testSortKey [
+HighstockPlotOptionsColumnpyramidDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

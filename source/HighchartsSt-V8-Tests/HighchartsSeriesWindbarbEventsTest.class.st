@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testAfterAnimate [
+HighchartsSeriesWindbarbEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWindbarbEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testCheckboxClick [
+HighchartsSeriesWindbarbEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWindbarbEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testClick [
+HighchartsSeriesWindbarbEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesWindbarbEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testHide [
+HighchartsSeriesWindbarbEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesWindbarbEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testLegendItemClick [
+HighchartsSeriesWindbarbEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesWindbarbEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testMouseOut [
+HighchartsSeriesWindbarbEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesWindbarbEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testMouseOver [
+HighchartsSeriesWindbarbEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesWindbarbEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWindbarbEventsTest >> testShow [
+HighchartsSeriesWindbarbEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

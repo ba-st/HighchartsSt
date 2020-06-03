@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockBoostTest >> testAllowForce [
+HighstockBoostTest >> testGetDebug [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockBoost new.
+	component debug.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'debug' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockBoostTest >> testSetAllowForce [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockBoostTest >> testAllowForce [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostTest >> testEnabled [
+HighstockBoostTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockBoostTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostTest >> testSeriesThreshold [
+HighstockBoostTest >> testSetSeriesThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockBoostTest >> testSeriesThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostTest >> testUseGPUTranslations [
+HighstockBoostTest >> testSetUseGPUTranslations [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockBoostTest >> testUseGPUTranslations [
 ]
 
 { #category : #'tests-accessing' }
-HighstockBoostTest >> testUsePreallocated [
+HighstockBoostTest >> testSetUsePreallocated [
 
 	| component javascript expectedConfiguration |
 

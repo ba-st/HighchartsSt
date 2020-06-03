@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendParamsTest >> testMultiplier [
+HighstockSeriesSupertrendParamsTest >> testSetMultiplier [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSupertrendParamsTest >> testMultiplier [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendParamsTest >> testPeriod [
+HighstockSeriesSupertrendParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

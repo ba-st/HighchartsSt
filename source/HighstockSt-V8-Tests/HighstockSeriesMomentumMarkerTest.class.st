@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testEnabled [
+HighstockSeriesMomentumMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMomentumMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testEnabledThreshold [
+HighstockSeriesMomentumMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesMomentumMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testFillColor [
+HighstockSeriesMomentumMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesMomentumMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testHeight [
+HighstockSeriesMomentumMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesMomentumMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testLineColor [
+HighstockSeriesMomentumMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesMomentumMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testLineWidth [
+HighstockSeriesMomentumMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesMomentumMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testRadius [
+HighstockSeriesMomentumMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesMomentumMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testStates [
+HighstockSeriesMomentumMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesMomentumMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testSymbol [
+HighstockSeriesMomentumMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesMomentumMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMomentumMarkerTest >> testWidth [
+HighstockSeriesMomentumMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testAlign [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testColor [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testEnabled [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testHeight [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testInside [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testLineColor [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testLineWidth [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testRadius [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSymbol [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testVerticalAlign 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testWidth [
+HighchartsPlotOptionsPackedbubbleConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

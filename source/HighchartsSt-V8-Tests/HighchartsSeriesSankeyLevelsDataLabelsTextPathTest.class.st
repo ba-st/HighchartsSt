@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyLevelsDataLabelsTextPathTest >> testAttributes [
+HighchartsSeriesSankeyLevelsDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSankeyLevelsDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyLevelsDataLabelsTextPathTest >> testEnabled [
+HighchartsSeriesSankeyLevelsDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

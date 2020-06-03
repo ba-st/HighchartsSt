@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataSortingTest >> testEnabled [
+HighstockSeriesTrendlineDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesTrendlineDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataSortingTest >> testMatchByName [
+HighstockSeriesTrendlineDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesTrendlineDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesTrendlineDataSortingTest >> testSortKey [
+HighstockSeriesTrendlineDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

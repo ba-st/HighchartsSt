@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testAlign [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheelDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheelDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheelDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testAllowOverlap [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testClassName [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testColor [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testCrop [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testDefer [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testFormat [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testInside [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNodeFormat [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetNodeFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNodeFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNodeFormatter [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetNodeFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNodeFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testPadding [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testPosition [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testRotation [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testShadow [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testShape [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testX [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testY [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighchartsPlotOptionsDependencywheelDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelDataLabelsTest >> testZ [
+HighchartsPlotOptionsDependencywheelDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

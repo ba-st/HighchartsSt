@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testClassName [
+HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testColor [
+HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testCursor [
+HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testLineColor [
+HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testZIndex [
+HighstockSeriesAreasplinerangeDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

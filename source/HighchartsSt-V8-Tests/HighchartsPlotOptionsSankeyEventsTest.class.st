@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsSankeyEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSankeyEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsSankeyEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSankeyEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testClick [
+HighchartsPlotOptionsSankeyEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSankeyEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testHide [
+HighchartsPlotOptionsSankeyEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSankeyEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsSankeyEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSankeyEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testMouseOut [
+HighchartsPlotOptionsSankeyEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSankeyEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testMouseOver [
+HighchartsPlotOptionsSankeyEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSankeyEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyEventsTest >> testShow [
+HighchartsPlotOptionsSankeyEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

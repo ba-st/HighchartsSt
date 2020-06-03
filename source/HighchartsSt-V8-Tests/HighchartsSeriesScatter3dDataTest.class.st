@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testClassName [
+HighchartsSeriesScatter3dDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesScatter3dData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesScatter3dDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesScatter3dData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesScatter3dDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesScatter3dData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesScatter3dDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesScatter3dData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesScatter3dDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsSeriesScatter3dDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testColor [
+HighchartsSeriesScatter3dDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsSeriesScatter3dDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testColorIndex [
+HighchartsSeriesScatter3dDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,21 @@ HighchartsSeriesScatter3dDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testDescription [
+HighchartsSeriesScatter3dDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesScatter3dData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesScatter3dDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighchartsSeriesScatter3dDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testDrilldown [
+HighchartsSeriesScatter3dDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighchartsSeriesScatter3dDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testEvents [
+HighchartsSeriesScatter3dDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighchartsSeriesScatter3dDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testId [
+HighchartsSeriesScatter3dDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +173,7 @@ HighchartsSeriesScatter3dDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testLabelrank [
+HighchartsSeriesScatter3dDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +187,7 @@ HighchartsSeriesScatter3dDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testName [
+HighchartsSeriesScatter3dDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +201,7 @@ HighchartsSeriesScatter3dDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testSelected [
+HighchartsSeriesScatter3dDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +215,7 @@ HighchartsSeriesScatter3dDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testX [
+HighchartsSeriesScatter3dDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +229,7 @@ HighchartsSeriesScatter3dDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testY [
+HighchartsSeriesScatter3dDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +243,7 @@ HighchartsSeriesScatter3dDataTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatter3dDataTest >> testZ [
+HighchartsSeriesScatter3dDataTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

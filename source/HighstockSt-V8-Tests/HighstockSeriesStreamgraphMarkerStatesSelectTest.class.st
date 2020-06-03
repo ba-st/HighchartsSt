@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphMarkerStatesSelectTest >> testEnabled [
+HighstockSeriesStreamgraphMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStreamgraphMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphMarkerStatesSelectTest >> testFillColor [
+HighstockSeriesStreamgraphMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesStreamgraphMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphMarkerStatesSelectTest >> testLineColor [
+HighstockSeriesStreamgraphMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesStreamgraphMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphMarkerStatesSelectTest >> testLineWidth [
+HighstockSeriesStreamgraphMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesStreamgraphMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphMarkerStatesSelectTest >> testRadius [
+HighstockSeriesStreamgraphMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

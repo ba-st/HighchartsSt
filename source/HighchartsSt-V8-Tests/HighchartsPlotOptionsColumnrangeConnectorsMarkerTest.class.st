@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testAlign [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testColor [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testEnabled [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testHeight [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testInside [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testLineColor [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testLineWidth [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testRadius [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testWidth [
+HighchartsPlotOptionsColumnrangeConnectorsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

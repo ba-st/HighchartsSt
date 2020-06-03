@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testAfterAnimate [
+HighchartsSeriesPolygonEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPolygonEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testCheckboxClick [
+HighchartsSeriesPolygonEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPolygonEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testClick [
+HighchartsSeriesPolygonEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPolygonEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testHide [
+HighchartsSeriesPolygonEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesPolygonEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testLegendItemClick [
+HighchartsSeriesPolygonEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesPolygonEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testMouseOut [
+HighchartsSeriesPolygonEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesPolygonEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testMouseOver [
+HighchartsSeriesPolygonEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesPolygonEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonEventsTest >> testShow [
+HighchartsSeriesPolygonEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

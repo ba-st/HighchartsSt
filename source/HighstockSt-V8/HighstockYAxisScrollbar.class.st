@@ -105,9 +105,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockYAxisScrollbar >> liveRedraw: aBoolean [
 
-	"Whether to redraw the main chart as the scrollbar or the navigator
-zoomed window is moved. Defaults to true for modern browsers and
-false for legacy IE browsers as well as mobile devices.
+	"Whether to redraw the main chart as the scrollbar or the navigator zoomed window is moved. Defaults to true for modern browsers and false for legacy IE browsers as well as mobile devices.
 Defaults to undefined."
 
 	configurationOptions at: 'liveRedraw' put: aBoolean
@@ -143,9 +141,7 @@ Defaults to #333333."
 { #category : #accessing }
 HighstockYAxisScrollbar >> showFull: aBoolean [
 
-	"Whether to show the scrollbar when it is fully zoomed out at max
-range. Setting it to false on the Y axis makes the scrollbar stay
-hidden until the user zooms in, like common in browsers.
+	"Whether to show the scrollbar when it is fully zoomed out at max range. Setting it to false on the Y axis makes the scrollbar stay hidden until the user zooms in, like common in browsers.
 Defaults to true."
 
 	configurationOptions at: 'showFull' put: aBoolean
@@ -154,8 +150,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockYAxisScrollbar >> size: aNumber [
 
-	"The width of a vertical scrollbar or height of a horizontal
-scrollbar. Defaults to 20 on touch devices.
+	"The width of a vertical scrollbar or height of a horizontal scrollbar. Defaults to 20 on touch devices.
 Defaults to 14."
 
 	configurationOptions at: 'size' put: aNumber

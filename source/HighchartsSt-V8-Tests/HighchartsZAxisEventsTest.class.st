@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisEventsTest >> testAfterBreaks [
+HighchartsZAxisEventsTest >> testSetAfterBreaks [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsZAxisEventsTest >> testAfterBreaks [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisEventsTest >> testAfterSetExtremes [
+HighchartsZAxisEventsTest >> testSetAfterSetExtremes [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsZAxisEventsTest >> testAfterSetExtremes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisEventsTest >> testPointBreak [
+HighchartsZAxisEventsTest >> testSetPointBreak [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsZAxisEventsTest >> testPointBreak [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisEventsTest >> testPointInBreak [
+HighchartsZAxisEventsTest >> testSetPointInBreak [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsZAxisEventsTest >> testPointInBreak [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisEventsTest >> testSetExtremes [
+HighchartsZAxisEventsTest >> testSetSetExtremes [
 
 	| component javascript expectedConfiguration |
 

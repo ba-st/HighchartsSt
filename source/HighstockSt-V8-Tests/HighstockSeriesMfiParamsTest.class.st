@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiParamsTest >> testDecimals [
+HighstockSeriesMfiParamsTest >> testSetDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMfiParamsTest >> testDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiParamsTest >> testPeriod [
+HighstockSeriesMfiParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesMfiParamsTest >> testPeriod [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMfiParamsTest >> testVolumeSeriesID [
+HighstockSeriesMfiParamsTest >> testSetVolumeSeriesID [
 
 	| component javascript expectedConfiguration |
 

@@ -21,8 +21,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsChartOptions3d >> axisLabelPosition: aStringOrNil [
 
-	"Set it to &quot;auto&quot; to automatically move the labels to the best
-edge.
+	"Set it to &quot;auto&quot; to automatically move the labels to the best edge.
 Defaults to nil."
 
 	configurationOptions at: 'axisLabelPosition' put: aStringOrNil
@@ -58,8 +57,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsChartOptions3d >> fitToPlot: aBoolean [
 
-	"Whether the 3d box should automatically adjust to the chart plot
-area.
+	"Whether the 3d box should automatically adjust to the chart plot area.
 Defaults to true."
 
 	configurationOptions at: 'fitToPlot' put: aBoolean
@@ -68,8 +66,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsChartOptions3d >> frame [
 
-	"Provides the option to draw a frame around the charts by defining
-a bottom, front and back panel.
+	"Provides the option to draw a frame around the charts by defining a bottom, front and back panel.
 "
 	^ configurationOptions at: 'frame' ifAbsentPut: [ HighchartsChartOptions3dFrame new ]
 ]
@@ -77,10 +74,7 @@ a bottom, front and back panel.
 { #category : #accessing }
 HighchartsChartOptions3d >> viewDistance: aNumber [
 
-	"Defines the distance the viewer is standing in front of the
-chart, this setting is important to calculate the perspective
-effect in column and scatter charts. It is not used for 3D pie
-charts.
+	"Defines the distance the viewer is standing in front of the chart, this setting is important to calculate the perspective effect in column and scatter charts. It is not used for 3D pie charts.
 Defaults to 25."
 
 	configurationOptions at: 'viewDistance' put: aNumber

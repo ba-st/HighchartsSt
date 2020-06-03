@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelsPointTest >> testX [
+HighstockNavigationAnnotationsOptionsLabelsPointTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigationAnnotationsOptionsLabelsPointTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelsPointTest >> testXAxis [
+HighstockNavigationAnnotationsOptionsLabelsPointTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigationAnnotationsOptionsLabelsPointTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelsPointTest >> testY [
+HighstockNavigationAnnotationsOptionsLabelsPointTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigationAnnotationsOptionsLabelsPointTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelsPointTest >> testYAxis [
+HighstockNavigationAnnotationsOptionsLabelsPointTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 

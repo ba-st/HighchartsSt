@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testFill [
+HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testStroke [
+HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testStrokeWidth [
+HighstockAnnotationsMeasureTypeOptionsBackgroundTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 

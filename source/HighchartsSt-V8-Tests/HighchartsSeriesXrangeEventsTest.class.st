@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testAfterAnimate [
+HighchartsSeriesXrangeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesXrangeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testCheckboxClick [
+HighchartsSeriesXrangeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesXrangeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testClick [
+HighchartsSeriesXrangeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesXrangeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testHide [
+HighchartsSeriesXrangeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesXrangeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testLegendItemClick [
+HighchartsSeriesXrangeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesXrangeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testMouseOut [
+HighchartsSeriesXrangeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesXrangeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testMouseOver [
+HighchartsSeriesXrangeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesXrangeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeEventsTest >> testShow [
+HighchartsSeriesXrangeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

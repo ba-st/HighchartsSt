@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testAlign [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockNavigationAnnotationsOptionsLabelOptions new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testAllowOverlap [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBackgroundColor [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBorderColor [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBorderRadius [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBorderWidth [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testClassName [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testCrop [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testDistance [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testFormat [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testFormatter [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testOverflow [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testPadding [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testShadow [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testShape [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +229,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testStyle [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +243,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testText [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +257,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testUseHTML [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +271,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testVerticalAlign [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +285,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testX [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +299,7 @@ HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testY [
+HighstockNavigationAnnotationsOptionsLabelOptionsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

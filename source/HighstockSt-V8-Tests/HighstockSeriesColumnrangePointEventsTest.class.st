@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testClick [
+HighstockSeriesColumnrangePointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnrangePointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testDrag [
+HighstockSeriesColumnrangePointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesColumnrangePointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testDragStart [
+HighstockSeriesColumnrangePointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesColumnrangePointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testDrop [
+HighstockSeriesColumnrangePointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesColumnrangePointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testMouseOut [
+HighstockSeriesColumnrangePointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesColumnrangePointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testMouseOver [
+HighstockSeriesColumnrangePointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesColumnrangePointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testRemove [
+HighstockSeriesColumnrangePointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesColumnrangePointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testSelect [
+HighstockSeriesColumnrangePointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesColumnrangePointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testUnselect [
+HighstockSeriesColumnrangePointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesColumnrangePointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnrangePointEventsTest >> testUpdate [
+HighstockSeriesColumnrangePointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

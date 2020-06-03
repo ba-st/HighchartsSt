@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationLevelsDataLabelsTextPathTest >> testAttributes [
+HighchartsSeriesOrganizationLevelsDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesOrganizationLevelsDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationLevelsDataLabelsTextPathTest >> testEnabled [
+HighchartsSeriesOrganizationLevelsDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

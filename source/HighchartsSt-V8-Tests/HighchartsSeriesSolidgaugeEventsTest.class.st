@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testAfterAnimate [
+HighchartsSeriesSolidgaugeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSolidgaugeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testCheckboxClick [
+HighchartsSeriesSolidgaugeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSolidgaugeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testClick [
+HighchartsSeriesSolidgaugeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSolidgaugeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testHide [
+HighchartsSeriesSolidgaugeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSolidgaugeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testLegendItemClick [
+HighchartsSeriesSolidgaugeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesSolidgaugeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testMouseOut [
+HighchartsSeriesSolidgaugeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesSolidgaugeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testMouseOver [
+HighchartsSeriesSolidgaugeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesSolidgaugeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeEventsTest >> testShow [
+HighchartsSeriesSolidgaugeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

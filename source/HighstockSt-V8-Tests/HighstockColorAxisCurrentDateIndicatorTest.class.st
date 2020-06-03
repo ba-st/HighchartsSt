@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testAcrossPanes [
+HighstockColorAxisCurrentDateIndicatorTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockColorAxisCurrentDateIndicator new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockColorAxisCurrentDateIndicatorTest >> testSetAcrossPanes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockColorAxisCurrentDateIndicatorTest >> testAcrossPanes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testClassName [
+HighstockColorAxisCurrentDateIndicatorTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockColorAxisCurrentDateIndicatorTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testColor [
+HighstockColorAxisCurrentDateIndicatorTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockColorAxisCurrentDateIndicatorTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testDashStyle [
+HighstockColorAxisCurrentDateIndicatorTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockColorAxisCurrentDateIndicatorTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testEvents [
+HighstockColorAxisCurrentDateIndicatorTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockColorAxisCurrentDateIndicatorTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testId [
+HighstockColorAxisCurrentDateIndicatorTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockColorAxisCurrentDateIndicatorTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testWidth [
+HighstockColorAxisCurrentDateIndicatorTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockColorAxisCurrentDateIndicatorTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisCurrentDateIndicatorTest >> testZIndex [
+HighstockColorAxisCurrentDateIndicatorTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testEnabled [
+HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testFillColor [
+HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testLineColor [
+HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testRadius [
+HighstockPlotOptionsBubbleMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

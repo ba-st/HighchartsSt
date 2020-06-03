@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testOperator [
+HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testProperty [
+HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testValue [
+HighchartsSeriesSolidgaugeDataDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

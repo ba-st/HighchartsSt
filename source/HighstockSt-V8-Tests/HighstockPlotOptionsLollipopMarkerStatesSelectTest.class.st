@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testEnabled [
+HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testFillColor [
+HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testLineColor [
+HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testLineWidth [
+HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testRadius [
+HighstockPlotOptionsLollipopMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsGlobalTest >> testCanvasToolsURL [
+HighchartsGlobalTest >> testSetCanvasToolsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsGlobalTest >> testCanvasToolsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsGlobalTest >> testDate [
+HighchartsGlobalTest >> testSetDate [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsGlobalTest >> testDate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsGlobalTest >> testGetTimezoneOffset [
+HighchartsGlobalTest >> testSetGetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsGlobalTest >> testGetTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsGlobalTest >> testTimezone [
+HighchartsGlobalTest >> testSetTimezone [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsGlobalTest >> testTimezone [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsGlobalTest >> testTimezoneOffset [
+HighchartsGlobalTest >> testSetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsGlobalTest >> testTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsGlobalTest >> testUseUTC [
+HighchartsGlobalTest >> testSetUseUTC [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsGlobalTest >> testUseUTC [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsGlobalTest >> testVMLRadialGradientURL [
+HighchartsGlobalTest >> testSetVMLRadialGradientURL [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testClassName [
+HighchartsSeriesAreasplinerangeDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinerangeData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinerangeDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinerangeData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinerangeDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinerangeData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinerangeDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testColor [
+HighchartsSeriesAreasplinerangeDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testColorIndex [
+HighchartsSeriesAreasplinerangeDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,21 @@ HighchartsSeriesAreasplinerangeDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testDescription [
+HighchartsSeriesAreasplinerangeDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesAreasplinerangeData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesAreasplinerangeDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testDrilldown [
+HighchartsSeriesAreasplinerangeDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testEvents [
+HighchartsSeriesAreasplinerangeDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testHigh [
+HighchartsSeriesAreasplinerangeDataTest >> testSetHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testId [
+HighchartsSeriesAreasplinerangeDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testLabelrank [
+HighchartsSeriesAreasplinerangeDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testLow [
+HighchartsSeriesAreasplinerangeDataTest >> testSetLow [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testName [
+HighchartsSeriesAreasplinerangeDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testSelected [
+HighchartsSeriesAreasplinerangeDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighchartsSeriesAreasplinerangeDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDataTest >> testX [
+HighchartsSeriesAreasplinerangeDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 

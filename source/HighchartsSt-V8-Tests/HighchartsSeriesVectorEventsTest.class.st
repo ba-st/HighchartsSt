@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testAfterAnimate [
+HighchartsSeriesVectorEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesVectorEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testCheckboxClick [
+HighchartsSeriesVectorEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesVectorEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testClick [
+HighchartsSeriesVectorEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesVectorEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testHide [
+HighchartsSeriesVectorEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesVectorEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testLegendItemClick [
+HighchartsSeriesVectorEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesVectorEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testMouseOut [
+HighchartsSeriesVectorEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesVectorEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testMouseOver [
+HighchartsSeriesVectorEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesVectorEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorEventsTest >> testShow [
+HighchartsSeriesVectorEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

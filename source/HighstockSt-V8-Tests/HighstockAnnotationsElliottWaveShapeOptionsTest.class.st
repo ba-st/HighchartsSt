@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testFill [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsElliottWaveShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testHeight [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testR [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testSnap [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testStroke [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsElliottWaveShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testStrokeWidth [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testType [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockAnnotationsElliottWaveShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsElliottWaveShapeOptionsTest >> testWidth [
+HighstockAnnotationsElliottWaveShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

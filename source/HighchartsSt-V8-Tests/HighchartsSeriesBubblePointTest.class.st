@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBubblePointTest >> testEvents [
+HighchartsSeriesBubblePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testAlign [
+HighchartsSeriesPieDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPieDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPieDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPieDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPieDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPieDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPieDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesPieDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testAlignTo [
+HighchartsSeriesPieDataLabelsTest >> testSetAlignTo [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesPieDataLabelsTest >> testAlignTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testAllowOverlap [
+HighchartsSeriesPieDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesPieDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testBackgroundColor [
+HighchartsSeriesPieDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesPieDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testBorderColor [
+HighchartsSeriesPieDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesPieDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testBorderRadius [
+HighchartsSeriesPieDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesPieDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testBorderWidth [
+HighchartsSeriesPieDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesPieDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testClassName [
+HighchartsSeriesPieDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesPieDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testColor [
+HighchartsSeriesPieDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesPieDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testConnectorColor [
+HighchartsSeriesPieDataLabelsTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesPieDataLabelsTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testConnectorPadding [
+HighchartsSeriesPieDataLabelsTest >> testSetConnectorPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesPieDataLabelsTest >> testConnectorPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testConnectorShape [
+HighchartsSeriesPieDataLabelsTest >> testSetConnectorShape [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesPieDataLabelsTest >> testConnectorShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testConnectorWidth [
+HighchartsSeriesPieDataLabelsTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesPieDataLabelsTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testCrookDistance [
+HighchartsSeriesPieDataLabelsTest >> testSetCrookDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesPieDataLabelsTest >> testCrookDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testCrop [
+HighchartsSeriesPieDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesPieDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testDefer [
+HighchartsSeriesPieDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesPieDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testDistance [
+HighchartsSeriesPieDataLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesPieDataLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testEnabled [
+HighchartsSeriesPieDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsSeriesPieDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testFormat [
+HighchartsSeriesPieDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsSeriesPieDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testFormatter [
+HighchartsSeriesPieDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsSeriesPieDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testInside [
+HighchartsSeriesPieDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsSeriesPieDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testNullFormat [
+HighchartsSeriesPieDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsSeriesPieDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testNullFormatter [
+HighchartsSeriesPieDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsSeriesPieDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testOverflow [
+HighchartsSeriesPieDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsSeriesPieDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testPadding [
+HighchartsSeriesPieDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsSeriesPieDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testPosition [
+HighchartsSeriesPieDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsSeriesPieDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testRotation [
+HighchartsSeriesPieDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighchartsSeriesPieDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testShadow [
+HighchartsSeriesPieDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighchartsSeriesPieDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testShape [
+HighchartsSeriesPieDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +453,7 @@ HighchartsSeriesPieDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testSoftConnector [
+HighchartsSeriesPieDataLabelsTest >> testSetSoftConnector [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +467,7 @@ HighchartsSeriesPieDataLabelsTest >> testSoftConnector [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testUseHTML [
+HighchartsSeriesPieDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +481,7 @@ HighchartsSeriesPieDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesPieDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +495,7 @@ HighchartsSeriesPieDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testX [
+HighchartsSeriesPieDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +509,7 @@ HighchartsSeriesPieDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testY [
+HighchartsSeriesPieDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +523,7 @@ HighchartsSeriesPieDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataLabelsTest >> testZ [
+HighchartsSeriesPieDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

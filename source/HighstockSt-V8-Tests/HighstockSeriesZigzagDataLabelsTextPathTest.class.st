@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsTextPathTest >> testAttributes [
+HighstockSeriesZigzagDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesZigzagDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsTextPathTest >> testEnabled [
+HighstockSeriesZigzagDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

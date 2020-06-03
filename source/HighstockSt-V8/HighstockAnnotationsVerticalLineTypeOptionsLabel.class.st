@@ -8,10 +8,17 @@ Class {
 }
 
 { #category : #accessing }
+HighstockAnnotationsVerticalLineTypeOptionsLabel >> accessibility [
+
+	"Accessibility options for an annotation label.
+"
+	^ configurationOptions at: 'accessibility' ifAbsentPut: [ HighstockAnnotationsVerticalLineTypeOptionsLabelAccessibility new ]
+]
+
+{ #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> align: aHighchartsAlignValue [
 
-	"The alignment of the annotation´s label. If right,
-the right side of the label should be touching the point.
+	"The alignment of the annotation´s label. If right, the right side of the label should be touching the point.
 Defaults to center."
 
 	configurationOptions at: 'align' put: aHighchartsAlignValue
@@ -20,9 +27,7 @@ Defaults to center."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> allowOverlap: aBoolean [
 
-	"Whether to allow the annotation´s labels to overlap.
-To make the labels less sensitive for overlapping,
-the can be set to 0.
+	"Whether to allow the annotation´s labels to overlap. To make the labels less sensitive for overlapping, the can be set to 0.
 Defaults to true."
 
 	configurationOptions at: 'allowOverlap' put: aBoolean
@@ -76,8 +81,7 @@ Defaults to ."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> crop: aBoolean [
 
-	"Whether to hide the annotation´s label
-that is outside the plot area.
+	"Whether to hide the annotation´s label that is outside the plot area.
 Defaults to true."
 
 	configurationOptions at: 'crop' put: aBoolean
@@ -95,9 +99,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabel >> distance: aNumber [
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> format: aString [
 
-	"A
-format
-string for the data label.
+	"A format string for the data label.
 "
 
 	configurationOptions at: 'format' put: aString
@@ -106,10 +108,7 @@ string for the data label.
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsPoint [
 
-	"Callback JavaScript function to format the annotation´s
-label. Note that if a format or text are defined, the
-format or text take precedence and the formatter is ignored.
-This refers to a point object.
+	"Callback JavaScript function to format the annotation´s label. Note that if a format or text are defined, the format or text take precedence and the formatter is ignored. This refers to a point object.
 Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; }."
 
 	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsPoint
@@ -125,9 +124,7 @@ HighstockAnnotationsVerticalLineTypeOptionsLabel >> offset: aNumber [
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> overflow: aString [
 
-	"How to handle the annotation´s label that flow outside the
-plot area. The justify option aligns the label inside the
-plot area.
+	"How to handle the annotation´s label that flow outside the plot area. The justify option aligns the label inside the plot area.
 Defaults to none."
 
 	configurationOptions at: 'overflow' put: aString
@@ -136,8 +133,7 @@ Defaults to none."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> padding: aNumber [
 
-	"When either the borderWidth or the backgroundColor is set,
-this    is the padding within the box.
+	"When either the borderWidth or the backgroundColor is set, this is the padding within the box.
 Defaults to 5."
 
 	configurationOptions at: 'padding' put: aNumber
@@ -146,9 +142,7 @@ Defaults to 5."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> shadow: aBooleanOrHighchartsShadowOptionsObject [
 
-	"The shadow of the box. The shadow can be an object
-configuration containing color, offsetX, offsetY,
-opacity and width.
+	"The shadow of the box. The shadow can be an object configuration containing color, offsetX, offsetY, opacity and width.
 Defaults to false."
 
 	configurationOptions at: 'shadow' put: aBooleanOrHighchartsShadowOptionsObject
@@ -157,8 +151,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> shape: aString [
 
-	"The name of a symbol to use for the border around the label.
-Symbols are predefined functions on the Renderer object.
+	"The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object.
 Defaults to rect."
 
 	configurationOptions at: 'shape' put: aString
@@ -185,8 +178,7 @@ Defaults to {y:.2f}."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> useHTML: aBoolean [
 
-	"Whether to use HTML
-to render the annotation´s label.
+	"Whether to use HTML to render the annotation´s label.
 Defaults to false."
 
 	configurationOptions at: 'useHTML' put: aBoolean
@@ -204,9 +196,7 @@ Defaults to bottom."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> x: aNumber [
 
-	"The x position offset of the label relative to the point.
-Note that if a distance is defined, the distance takes
-precedence over x and y options.
+	"The x position offset of the label relative to the point. Note that if a distance is defined, the distance takes precedence over x and y options.
 Defaults to 0."
 
 	configurationOptions at: 'x' put: aNumber
@@ -215,9 +205,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> y: aNumber [
 
-	"The y position offset of the label relative to the point.
-Note that if a distance is defined, the distance takes
-precedence over x and y options.
+	"The y position offset of the label relative to the point. Note that if a distance is defined, the distance takes precedence over x and y options.
 Defaults to -16."
 
 	configurationOptions at: 'y' put: aNumber

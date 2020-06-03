@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonAroonDownStylesTest >> testLineColor [
+HighstockSeriesAroonAroonDownStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAroonAroonDownStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonAroonDownStylesTest >> testLineWidth [
+HighstockSeriesAroonAroonDownStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

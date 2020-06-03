@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testAfterAnimate [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsLinearregressioninterceptEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testCheckboxClick [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsLinearregressioninterceptEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testClick [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsLinearregressioninterceptEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testHide [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsLinearregressioninterceptEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testLegendItemClick [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsLinearregressioninterceptEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testMouseOut [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsLinearregressioninterceptEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testMouseOver [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsLinearregressioninterceptEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptEventsTest >> testShow [
+HighstockPlotOptionsLinearregressioninterceptEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

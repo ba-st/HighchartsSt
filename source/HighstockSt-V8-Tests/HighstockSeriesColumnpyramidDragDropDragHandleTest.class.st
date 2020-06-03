@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDragDropDragHandleTest >> testClassName [
+HighstockSeriesColumnpyramidDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnpyramidDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDragDropDragHandleTest >> testColor [
+HighstockSeriesColumnpyramidDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesColumnpyramidDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDragDropDragHandleTest >> testCursor [
+HighstockSeriesColumnpyramidDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesColumnpyramidDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDragDropDragHandleTest >> testLineColor [
+HighstockSeriesColumnpyramidDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesColumnpyramidDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesColumnpyramidDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesColumnpyramidDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesColumnpyramidDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesColumnpyramidDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidDragDropDragHandleTest >> testZIndex [
+HighstockSeriesColumnpyramidDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -1,0 +1,33 @@
+Class {
+	#name : #HighchartsSeriesPackedbubbleLastPriceTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V8-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleLastPriceTest >> testSetColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleLastPrice new.
+	component color: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleLastPriceTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleLastPrice new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

@@ -5,7 +5,187 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testAllAreas [
+HighchartsSeriesVennTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetCluster [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component cluster.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'cluster' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +200,7 @@ HighchartsSeriesVennTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testAllowPointSelect [
+HighchartsSeriesVennTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +215,7 @@ HighchartsSeriesVennTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testAnimationLimit [
+HighchartsSeriesVennTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +230,7 @@ HighchartsSeriesVennTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testBoostBlending [
+HighchartsSeriesVennTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +245,7 @@ HighchartsSeriesVennTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testBoostThreshold [
+HighchartsSeriesVennTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +260,7 @@ HighchartsSeriesVennTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testBorderColor [
+HighchartsSeriesVennTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +275,7 @@ HighchartsSeriesVennTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testBorderDashStyle [
+HighchartsSeriesVennTest >> testSetBorderDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +290,7 @@ HighchartsSeriesVennTest >> testBorderDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testBorderWidth [
+HighchartsSeriesVennTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +305,7 @@ HighchartsSeriesVennTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testBrighten [
+HighchartsSeriesVennTest >> testSetBrighten [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +320,7 @@ HighchartsSeriesVennTest >> testBrighten [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testClassName [
+HighchartsSeriesVennTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +335,7 @@ HighchartsSeriesVennTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testClip [
+HighchartsSeriesVennTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +350,7 @@ HighchartsSeriesVennTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testColor [
+HighchartsSeriesVennTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +365,7 @@ HighchartsSeriesVennTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testColorAxis [
+HighchartsSeriesVennTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +380,7 @@ HighchartsSeriesVennTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testColorByPoint [
+HighchartsSeriesVennTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +395,7 @@ HighchartsSeriesVennTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testColorIndex [
+HighchartsSeriesVennTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +410,7 @@ HighchartsSeriesVennTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testColorKey [
+HighchartsSeriesVennTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +425,7 @@ HighchartsSeriesVennTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testCompare [
+HighchartsSeriesVennTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +440,7 @@ HighchartsSeriesVennTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testCompareBase [
+HighchartsSeriesVennTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +455,7 @@ HighchartsSeriesVennTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testCompareStart [
+HighchartsSeriesVennTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +470,22 @@ HighchartsSeriesVennTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testCursor [
+HighchartsSeriesVennTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +500,22 @@ HighchartsSeriesVennTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testDashStyle [
+HighchartsSeriesVennTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVenn new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'venn';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVennTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +530,7 @@ HighchartsSeriesVennTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testData [
+HighchartsSeriesVennTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +545,7 @@ HighchartsSeriesVennTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testDescription [
+HighchartsSeriesVennTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +560,7 @@ HighchartsSeriesVennTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testEnableMouseTracking [
+HighchartsSeriesVennTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +575,7 @@ HighchartsSeriesVennTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testEvents [
+HighchartsSeriesVennTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +590,7 @@ HighchartsSeriesVennTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testGapSize [
+HighchartsSeriesVennTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +605,7 @@ HighchartsSeriesVennTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testGapUnit [
+HighchartsSeriesVennTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +620,7 @@ HighchartsSeriesVennTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testId [
+HighchartsSeriesVennTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +635,7 @@ HighchartsSeriesVennTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testIncludeInDataExport [
+HighchartsSeriesVennTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +650,7 @@ HighchartsSeriesVennTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testIndex [
+HighchartsSeriesVennTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +665,7 @@ HighchartsSeriesVennTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testJoinBy [
+HighchartsSeriesVennTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +680,7 @@ HighchartsSeriesVennTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testKeys [
+HighchartsSeriesVennTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +695,7 @@ HighchartsSeriesVennTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testLegendIndex [
+HighchartsSeriesVennTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +710,7 @@ HighchartsSeriesVennTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testMapData [
+HighchartsSeriesVennTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +725,7 @@ HighchartsSeriesVennTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testName [
+HighchartsSeriesVennTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +740,7 @@ HighchartsSeriesVennTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testNavigatorOptions [
+HighchartsSeriesVennTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +755,7 @@ HighchartsSeriesVennTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testOpacity [
+HighchartsSeriesVennTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +770,7 @@ HighchartsSeriesVennTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testPointDescriptionFormatter [
+HighchartsSeriesVennTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +785,7 @@ HighchartsSeriesVennTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testPointRange [
+HighchartsSeriesVennTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +800,7 @@ HighchartsSeriesVennTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testSelected [
+HighchartsSeriesVennTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +815,7 @@ HighchartsSeriesVennTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testShadow [
+HighchartsSeriesVennTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +830,7 @@ HighchartsSeriesVennTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testShowCheckbox [
+HighchartsSeriesVennTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +845,7 @@ HighchartsSeriesVennTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testShowInLegend [
+HighchartsSeriesVennTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +860,7 @@ HighchartsSeriesVennTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testShowInNavigator [
+HighchartsSeriesVennTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +875,7 @@ HighchartsSeriesVennTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testSkipKeyboardNavigation [
+HighchartsSeriesVennTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +890,7 @@ HighchartsSeriesVennTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testStates [
+HighchartsSeriesVennTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +905,7 @@ HighchartsSeriesVennTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testStep [
+HighchartsSeriesVennTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +920,7 @@ HighchartsSeriesVennTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testStickyTracking [
+HighchartsSeriesVennTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +935,7 @@ HighchartsSeriesVennTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testTurboThreshold [
+HighchartsSeriesVennTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +950,7 @@ HighchartsSeriesVennTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testType [
+HighchartsSeriesVennTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +965,7 @@ HighchartsSeriesVennTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testVisible [
+HighchartsSeriesVennTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +980,7 @@ HighchartsSeriesVennTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennTest >> testZIndex [
+HighchartsSeriesVennTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSankeyDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSankeyDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSankeyDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testForced [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSankeyDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testGroupAll [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSankeyDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSankeyDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testSmoothed [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSankeyDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSankeyDataGroupingTest >> testUnits [
+HighchartsPlotOptionsSankeyDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

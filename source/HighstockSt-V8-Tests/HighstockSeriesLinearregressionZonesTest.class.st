@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionZonesTest >> testClassName [
+HighstockSeriesLinearregressionZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressionZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionZonesTest >> testColor [
+HighstockSeriesLinearregressionZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressionZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionZonesTest >> testDashStyle [
+HighstockSeriesLinearregressionZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressionZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionZonesTest >> testFillColor [
+HighstockSeriesLinearregressionZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressionZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionZonesTest >> testValue [
+HighstockSeriesLinearregressionZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

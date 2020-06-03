@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsOrganizationDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsOrganizationDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsOrganizationDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testForced [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsOrganizationDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testGroupAll [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsOrganizationDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsOrganizationDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testSmoothed [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsOrganizationDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationDataGroupingTest >> testUnits [
+HighchartsPlotOptionsOrganizationDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

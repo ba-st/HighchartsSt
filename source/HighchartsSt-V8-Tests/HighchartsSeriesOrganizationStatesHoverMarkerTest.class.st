@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testEnabled [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testEnabledThreshold [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testFillColor [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testHeight [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testLineColor [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testLineWidth [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testRadius [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSymbol [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationStatesHoverMarkerTest >> testWidth [
+HighchartsSeriesOrganizationStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

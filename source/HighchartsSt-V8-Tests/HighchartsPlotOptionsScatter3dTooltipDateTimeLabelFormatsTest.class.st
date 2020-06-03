@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testMillisecond
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsScatter3dTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

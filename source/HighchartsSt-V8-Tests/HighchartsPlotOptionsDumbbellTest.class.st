@@ -5,7 +5,161 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testAllAreas [
+HighchartsPlotOptionsDumbbellTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +173,7 @@ HighchartsPlotOptionsDumbbellTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testAllowPointSelect [
+HighchartsPlotOptionsDumbbellTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +187,7 @@ HighchartsPlotOptionsDumbbellTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testAnimationLimit [
+HighchartsPlotOptionsDumbbellTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +201,7 @@ HighchartsPlotOptionsDumbbellTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testBoostBlending [
+HighchartsPlotOptionsDumbbellTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +215,7 @@ HighchartsPlotOptionsDumbbellTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testBoostThreshold [
+HighchartsPlotOptionsDumbbellTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +229,7 @@ HighchartsPlotOptionsDumbbellTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testBorderColor [
+HighchartsPlotOptionsDumbbellTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +243,7 @@ HighchartsPlotOptionsDumbbellTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testBorderWidth [
+HighchartsPlotOptionsDumbbellTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +257,7 @@ HighchartsPlotOptionsDumbbellTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testClassName [
+HighchartsPlotOptionsDumbbellTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +271,7 @@ HighchartsPlotOptionsDumbbellTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testClip [
+HighchartsPlotOptionsDumbbellTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +285,7 @@ HighchartsPlotOptionsDumbbellTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testColor [
+HighchartsPlotOptionsDumbbellTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +299,7 @@ HighchartsPlotOptionsDumbbellTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testColorAxis [
+HighchartsPlotOptionsDumbbellTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +313,7 @@ HighchartsPlotOptionsDumbbellTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testColorIndex [
+HighchartsPlotOptionsDumbbellTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +327,7 @@ HighchartsPlotOptionsDumbbellTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testColorKey [
+HighchartsPlotOptionsDumbbellTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +341,7 @@ HighchartsPlotOptionsDumbbellTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testConnectEnds [
+HighchartsPlotOptionsDumbbellTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +355,7 @@ HighchartsPlotOptionsDumbbellTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testConnectNulls [
+HighchartsPlotOptionsDumbbellTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +369,7 @@ HighchartsPlotOptionsDumbbellTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testConnectorColor [
+HighchartsPlotOptionsDumbbellTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +383,7 @@ HighchartsPlotOptionsDumbbellTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testConnectorWidth [
+HighchartsPlotOptionsDumbbellTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +397,21 @@ HighchartsPlotOptionsDumbbellTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testCropThreshold [
+HighchartsPlotOptionsDumbbellTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +425,7 @@ HighchartsPlotOptionsDumbbellTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testCursor [
+HighchartsPlotOptionsDumbbellTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +439,21 @@ HighchartsPlotOptionsDumbbellTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testDashStyle [
+HighchartsPlotOptionsDumbbellTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDumbbell new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDumbbellTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighchartsPlotOptionsDumbbellTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testDescription [
+HighchartsPlotOptionsDumbbellTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighchartsPlotOptionsDumbbellTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testEnableMouseTracking [
+HighchartsPlotOptionsDumbbellTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighchartsPlotOptionsDumbbellTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testEvents [
+HighchartsPlotOptionsDumbbellTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighchartsPlotOptionsDumbbellTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testFindNearestPointBy [
+HighchartsPlotOptionsDumbbellTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighchartsPlotOptionsDumbbellTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsDumbbellTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighchartsPlotOptionsDumbbellTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testGroupPadding [
+HighchartsPlotOptionsDumbbellTest >> testSetGroupPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighchartsPlotOptionsDumbbellTest >> testGroupPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testIncludeInDataExport [
+HighchartsPlotOptionsDumbbellTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighchartsPlotOptionsDumbbellTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testJoinBy [
+HighchartsPlotOptionsDumbbellTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighchartsPlotOptionsDumbbellTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testKeys [
+HighchartsPlotOptionsDumbbellTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighchartsPlotOptionsDumbbellTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testLineColor [
+HighchartsPlotOptionsDumbbellTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighchartsPlotOptionsDumbbellTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testLinecap [
+HighchartsPlotOptionsDumbbellTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighchartsPlotOptionsDumbbellTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testLinkedTo [
+HighchartsPlotOptionsDumbbellTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighchartsPlotOptionsDumbbellTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testLowColor [
+HighchartsPlotOptionsDumbbellTest >> testSetLowColor [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighchartsPlotOptionsDumbbellTest >> testLowColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testNegativeColor [
+HighchartsPlotOptionsDumbbellTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighchartsPlotOptionsDumbbellTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testNegativeFillColor [
+HighchartsPlotOptionsDumbbellTest >> testSetNegativeFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighchartsPlotOptionsDumbbellTest >> testNegativeFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testOpacity [
+HighchartsPlotOptionsDumbbellTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighchartsPlotOptionsDumbbellTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsDumbbellTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighchartsPlotOptionsDumbbellTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testPointInterval [
+HighchartsPlotOptionsDumbbellTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighchartsPlotOptionsDumbbellTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testPointIntervalUnit [
+HighchartsPlotOptionsDumbbellTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +733,7 @@ HighchartsPlotOptionsDumbbellTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testPointPadding [
+HighchartsPlotOptionsDumbbellTest >> testSetPointPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +747,7 @@ HighchartsPlotOptionsDumbbellTest >> testPointPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testPointPlacement [
+HighchartsPlotOptionsDumbbellTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +761,7 @@ HighchartsPlotOptionsDumbbellTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testPointStart [
+HighchartsPlotOptionsDumbbellTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +775,7 @@ HighchartsPlotOptionsDumbbellTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testSelected [
+HighchartsPlotOptionsDumbbellTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +789,7 @@ HighchartsPlotOptionsDumbbellTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testShadow [
+HighchartsPlotOptionsDumbbellTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +803,7 @@ HighchartsPlotOptionsDumbbellTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testShowCheckbox [
+HighchartsPlotOptionsDumbbellTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +817,7 @@ HighchartsPlotOptionsDumbbellTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testShowInLegend [
+HighchartsPlotOptionsDumbbellTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +831,7 @@ HighchartsPlotOptionsDumbbellTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsDumbbellTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +845,7 @@ HighchartsPlotOptionsDumbbellTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testSoftThreshold [
+HighchartsPlotOptionsDumbbellTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +859,7 @@ HighchartsPlotOptionsDumbbellTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testStates [
+HighchartsPlotOptionsDumbbellTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +873,7 @@ HighchartsPlotOptionsDumbbellTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testStep [
+HighchartsPlotOptionsDumbbellTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -705,7 +887,7 @@ HighchartsPlotOptionsDumbbellTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testThreshold [
+HighchartsPlotOptionsDumbbellTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -719,7 +901,7 @@ HighchartsPlotOptionsDumbbellTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testTurboThreshold [
+HighchartsPlotOptionsDumbbellTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -733,7 +915,7 @@ HighchartsPlotOptionsDumbbellTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testVisible [
+HighchartsPlotOptionsDumbbellTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -747,7 +929,7 @@ HighchartsPlotOptionsDumbbellTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testZIndex [
+HighchartsPlotOptionsDumbbellTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -761,7 +943,7 @@ HighchartsPlotOptionsDumbbellTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testZoneAxis [
+HighchartsPlotOptionsDumbbellTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

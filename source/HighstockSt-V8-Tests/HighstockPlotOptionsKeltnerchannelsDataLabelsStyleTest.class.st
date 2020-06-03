@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsKeltnerchannelsDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

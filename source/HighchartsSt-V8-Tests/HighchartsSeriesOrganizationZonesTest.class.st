@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationZonesTest >> testClassName [
+HighchartsSeriesOrganizationZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesOrganizationZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationZonesTest >> testColor [
+HighchartsSeriesOrganizationZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesOrganizationZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationZonesTest >> testDashStyle [
+HighchartsSeriesOrganizationZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesOrganizationZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationZonesTest >> testFillColor [
+HighchartsSeriesOrganizationZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesOrganizationZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationZonesTest >> testValue [
+HighchartsSeriesOrganizationZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

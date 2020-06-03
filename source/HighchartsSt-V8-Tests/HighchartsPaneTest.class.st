@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPaneTest >> testCenter [
+HighchartsPaneTest >> testGetBackground [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPane new.
+	component background.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'background' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPaneTest >> testSetCenter [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPaneTest >> testCenter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneTest >> testEndAngle [
+HighchartsPaneTest >> testSetEndAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,21 @@ HighchartsPaneTest >> testEndAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneTest >> testSize [
+HighchartsPaneTest >> testSetInnerSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPane new.
+	component innerSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'innerSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPaneTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsPaneTest >> testSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPaneTest >> testStartAngle [
+HighchartsPaneTest >> testSetStartAngle [
 
 	| component javascript expectedConfiguration |
 

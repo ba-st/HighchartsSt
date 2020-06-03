@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterTest >> testAllowOverlap [
+HighchartsPlotOptionsVennClusterTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennCluster new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennClusterTest >> testGetLayoutAlgorithm [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennCluster new.
+	component layoutAlgorithm.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'layoutAlgorithm' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennClusterTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennCluster new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennClusterTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVennCluster new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVennClusterTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsPlotOptionsVennClusterTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterTest >> testAnimation [
+HighchartsPlotOptionsVennClusterTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsPlotOptionsVennClusterTest >> testAnimation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterTest >> testDrillToCluster [
+HighchartsPlotOptionsVennClusterTest >> testSetDrillToCluster [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,7 @@ HighchartsPlotOptionsVennClusterTest >> testDrillToCluster [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterTest >> testEnabled [
+HighchartsPlotOptionsVennClusterTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsPlotOptionsVennClusterTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterTest >> testEvents [
+HighchartsPlotOptionsVennClusterTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsPlotOptionsVennClusterTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterTest >> testMinimumClusterSize [
+HighchartsPlotOptionsVennClusterTest >> testSetMinimumClusterSize [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsPlotOptionsVennClusterTest >> testMinimumClusterSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVennClusterTest >> testStates [
+HighchartsPlotOptionsVennClusterTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 

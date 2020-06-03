@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testBarMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetBarMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilityChartTypesTest >> testBarMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testBarSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetBarSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLangAccessibilityChartTypesTest >> testBarSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testBoxplotMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetBoxplotMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLangAccessibilityChartTypesTest >> testBoxplotMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testBoxplotSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetBoxplotSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsLangAccessibilityChartTypesTest >> testBoxplotSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testBubbleMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetBubbleMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsLangAccessibilityChartTypesTest >> testBubbleMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testBubbleSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetBubbleSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsLangAccessibilityChartTypesTest >> testBubbleSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testColumnMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetColumnMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsLangAccessibilityChartTypesTest >> testColumnMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testColumnSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetColumnSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsLangAccessibilityChartTypesTest >> testColumnSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testCombinationChart [
+HighchartsLangAccessibilityChartTypesTest >> testSetCombinationChart [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsLangAccessibilityChartTypesTest >> testCombinationChart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testDefaultMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetDefaultMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsLangAccessibilityChartTypesTest >> testDefaultMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testDefaultSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetDefaultSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsLangAccessibilityChartTypesTest >> testDefaultSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testEmptyChart [
+HighchartsLangAccessibilityChartTypesTest >> testSetEmptyChart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighchartsLangAccessibilityChartTypesTest >> testEmptyChart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testLineMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetLineMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighchartsLangAccessibilityChartTypesTest >> testLineMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testLineSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetLineSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighchartsLangAccessibilityChartTypesTest >> testLineSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testMapTypeDescription [
+HighchartsLangAccessibilityChartTypesTest >> testSetMapTypeDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighchartsLangAccessibilityChartTypesTest >> testMapTypeDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testPieMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetPieMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighchartsLangAccessibilityChartTypesTest >> testPieMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testPieSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetPieSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighchartsLangAccessibilityChartTypesTest >> testPieSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testScatterMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetScatterMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighchartsLangAccessibilityChartTypesTest >> testScatterMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testScatterSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetScatterSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighchartsLangAccessibilityChartTypesTest >> testScatterSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testSplineMultiple [
+HighchartsLangAccessibilityChartTypesTest >> testSetSplineMultiple [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighchartsLangAccessibilityChartTypesTest >> testSplineMultiple [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testSplineSingle [
+HighchartsLangAccessibilityChartTypesTest >> testSetSplineSingle [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighchartsLangAccessibilityChartTypesTest >> testSplineSingle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityChartTypesTest >> testUnknownMap [
+HighchartsLangAccessibilityChartTypesTest >> testSetUnknownMap [
 
 	| component javascript expectedConfiguration |
 

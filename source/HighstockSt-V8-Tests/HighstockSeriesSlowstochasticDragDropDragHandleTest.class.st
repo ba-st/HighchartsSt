@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDragDropDragHandleTest >> testClassName [
+HighstockSeriesSlowstochasticDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSlowstochasticDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDragDropDragHandleTest >> testColor [
+HighstockSeriesSlowstochasticDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSlowstochasticDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDragDropDragHandleTest >> testCursor [
+HighstockSeriesSlowstochasticDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSlowstochasticDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDragDropDragHandleTest >> testLineColor [
+HighstockSeriesSlowstochasticDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesSlowstochasticDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesSlowstochasticDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesSlowstochasticDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesSlowstochasticDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesSlowstochasticDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDragDropDragHandleTest >> testZIndex [
+HighstockSeriesSlowstochasticDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

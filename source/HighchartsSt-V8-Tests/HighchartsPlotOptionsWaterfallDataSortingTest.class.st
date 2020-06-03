@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDataSortingTest >> testEnabled [
+HighchartsPlotOptionsWaterfallDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWaterfallDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDataSortingTest >> testMatchByName [
+HighchartsPlotOptionsWaterfallDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWaterfallDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDataSortingTest >> testSortKey [
+HighchartsPlotOptionsWaterfallDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

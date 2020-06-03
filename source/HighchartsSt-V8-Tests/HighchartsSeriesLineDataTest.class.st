@@ -5,7 +5,63 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testClassName [
+HighchartsSeriesLineDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineDataTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineData new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +75,7 @@ HighchartsSeriesLineDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testColor [
+HighchartsSeriesLineDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +89,7 @@ HighchartsSeriesLineDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testColorIndex [
+HighchartsSeriesLineDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +103,21 @@ HighchartsSeriesLineDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testDescription [
+HighchartsSeriesLineDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesLineData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesLineDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +131,7 @@ HighchartsSeriesLineDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testDrilldown [
+HighchartsSeriesLineDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +145,7 @@ HighchartsSeriesLineDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testEvents [
+HighchartsSeriesLineDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +159,7 @@ HighchartsSeriesLineDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testId [
+HighchartsSeriesLineDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +173,7 @@ HighchartsSeriesLineDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testLabelrank [
+HighchartsSeriesLineDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +187,7 @@ HighchartsSeriesLineDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testName [
+HighchartsSeriesLineDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +201,7 @@ HighchartsSeriesLineDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testSelected [
+HighchartsSeriesLineDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +215,7 @@ HighchartsSeriesLineDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testX [
+HighchartsSeriesLineDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +229,7 @@ HighchartsSeriesLineDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLineDataTest >> testY [
+HighchartsSeriesLineDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

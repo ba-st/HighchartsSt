@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testEnabled [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testEnabledThreshold [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testFillColor [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testHeight [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testLineColor [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testLineWidth [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testRadius [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testStates [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testSymbol [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsSlowstochasticMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticMarkerTest >> testWidth [
+HighstockPlotOptionsSlowstochasticMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

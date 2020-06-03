@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineParamsTest >> testIndex [
+HighstockPlotOptionsTrendlineParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 

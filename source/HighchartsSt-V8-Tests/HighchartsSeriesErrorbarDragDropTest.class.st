@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDragMaxX [
+HighchartsSeriesErrorbarDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDragMaxY [
+HighchartsSeriesErrorbarDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDragMinX [
+HighchartsSeriesErrorbarDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDragMinY [
+HighchartsSeriesErrorbarDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDragPrecisionX [
+HighchartsSeriesErrorbarDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDragPrecisionY [
+HighchartsSeriesErrorbarDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDragSensitivity [
+HighchartsSeriesErrorbarDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDraggableHigh [
+HighchartsSeriesErrorbarDragDropTest >> testSetDraggableHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDraggableHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDraggableLow [
+HighchartsSeriesErrorbarDragDropTest >> testSetDraggableLow [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDraggableLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDraggableQ1 [
+HighchartsSeriesErrorbarDragDropTest >> testSetDraggableQ1 [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDraggableQ1 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDraggableQ3 [
+HighchartsSeriesErrorbarDragDropTest >> testSetDraggableQ3 [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDraggableQ3 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDraggableX [
+HighchartsSeriesErrorbarDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testDraggableY [
+HighchartsSeriesErrorbarDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsSeriesErrorbarDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testGroupBy [
+HighchartsSeriesErrorbarDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsSeriesErrorbarDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDragDropTest >> testLiveRedraw [
+HighchartsSeriesErrorbarDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

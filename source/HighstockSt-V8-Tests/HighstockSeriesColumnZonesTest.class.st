@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnZonesTest >> testClassName [
+HighstockSeriesColumnZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnZonesTest >> testColor [
+HighstockSeriesColumnZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesColumnZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnZonesTest >> testDashStyle [
+HighstockSeriesColumnZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesColumnZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnZonesTest >> testFillColor [
+HighstockSeriesColumnZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesColumnZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnZonesTest >> testValue [
+HighstockSeriesColumnZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

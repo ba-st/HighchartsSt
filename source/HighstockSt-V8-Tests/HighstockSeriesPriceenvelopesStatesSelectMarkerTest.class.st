@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testEnabled [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testEnabledThreshold [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testFillColor [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testHeight [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testLineColor [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testLineWidth [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testRadius [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSymbol [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testWidth [
+HighstockSeriesPriceenvelopesStatesSelectMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

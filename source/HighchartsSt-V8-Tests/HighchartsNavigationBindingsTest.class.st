@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationBindingsTest >> testCircleAnnotation [
+HighchartsNavigationBindingsTest >> testSetCircleAnnotation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsNavigationBindingsTest >> testCircleAnnotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationBindingsTest >> testLabelAnnotation [
+HighchartsNavigationBindingsTest >> testSetLabelAnnotation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsNavigationBindingsTest >> testLabelAnnotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationBindingsTest >> testRectangleAnnotation [
+HighchartsNavigationBindingsTest >> testSetRectangleAnnotation [
 
 	| component javascript expectedConfiguration |
 

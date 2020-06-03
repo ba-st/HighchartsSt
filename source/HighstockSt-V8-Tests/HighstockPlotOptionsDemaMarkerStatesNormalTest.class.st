@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsDemaMarkerStatesNormalTest >> testAnimation [
+HighstockPlotOptionsDemaMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

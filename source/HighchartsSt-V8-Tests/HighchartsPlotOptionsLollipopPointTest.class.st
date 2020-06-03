@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopPointTest >> testEvents [
+HighchartsPlotOptionsLollipopPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

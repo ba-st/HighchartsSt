@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testApproximation [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesHeatmapDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesHeatmapDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testEnabled [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesHeatmapDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testForced [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesHeatmapDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testGroupAll [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesHeatmapDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testGroupPixelWidth [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesHeatmapDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testSmoothed [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesHeatmapDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapDataGroupingTest >> testUnits [
+HighchartsSeriesHeatmapDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

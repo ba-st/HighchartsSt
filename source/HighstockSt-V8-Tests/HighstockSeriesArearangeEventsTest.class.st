@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testAfterAnimate [
+HighstockSeriesArearangeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesArearangeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testCheckboxClick [
+HighstockSeriesArearangeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesArearangeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testClick [
+HighstockSeriesArearangeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesArearangeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testHide [
+HighstockSeriesArearangeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesArearangeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testLegendItemClick [
+HighstockSeriesArearangeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesArearangeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testMouseOut [
+HighstockSeriesArearangeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesArearangeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testMouseOver [
+HighstockSeriesArearangeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesArearangeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeEventsTest >> testShow [
+HighstockSeriesArearangeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

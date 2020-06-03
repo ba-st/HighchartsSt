@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineAnimationTest >> testDuration [
+HighchartsPlotOptionsSplineAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

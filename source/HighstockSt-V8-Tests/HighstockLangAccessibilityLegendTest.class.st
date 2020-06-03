@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityLegendTest >> testLegendItem [
+HighstockLangAccessibilityLegendTest >> testSetLegendItem [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityLegendTest >> testLegendItem [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityLegendTest >> testLegendLabel [
+HighstockLangAccessibilityLegendTest >> testSetLegendLabel [
 
 	| component javascript expectedConfiguration |
 

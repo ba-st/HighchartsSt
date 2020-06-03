@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsVariablepieDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

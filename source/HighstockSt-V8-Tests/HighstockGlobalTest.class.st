@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockGlobalTest >> testDate [
+HighstockGlobalTest >> testSetDate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockGlobalTest >> testDate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockGlobalTest >> testGetTimezoneOffset [
+HighstockGlobalTest >> testSetGetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockGlobalTest >> testGetTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockGlobalTest >> testTimezone [
+HighstockGlobalTest >> testSetTimezone [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockGlobalTest >> testTimezone [
 ]
 
 { #category : #'tests-accessing' }
-HighstockGlobalTest >> testTimezoneOffset [
+HighstockGlobalTest >> testSetTimezoneOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockGlobalTest >> testTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockGlobalTest >> testUseUTC [
+HighstockGlobalTest >> testSetUseUTC [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockGlobalTest >> testUseUTC [
 ]
 
 { #category : #'tests-accessing' }
-HighstockGlobalTest >> testVMLRadialGradientURL [
+HighstockGlobalTest >> testSetVMLRadialGradientURL [
 
 	| component javascript expectedConfiguration |
 

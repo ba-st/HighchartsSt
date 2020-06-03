@@ -7,13 +7,8 @@ Class {
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsZoomChange >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'zoomX',
-  'zoomY',
-  'zoomXY'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'zoomX',   'zoomY',   'zoomXY' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLastPriceTest >> testColor [
+HighstockSeriesKeltnerchannelsLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsLastPriceTest >> testEnabled [
+HighstockSeriesKeltnerchannelsLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testEnabled [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testEnabledThreshold [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testFillColor [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testHeight [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testLineColor [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testLineWidth [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testRadius [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testStates [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testSymbol [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesStreamgraphDataMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphDataMarkerTest >> testWidth [
+HighstockSeriesStreamgraphDataMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

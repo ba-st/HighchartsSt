@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdMacdLineZonesTest >> testClassName [
+HighstockPlotOptionsMacdMacdLineZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsMacdMacdLineZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdMacdLineZonesTest >> testColor [
+HighstockPlotOptionsMacdMacdLineZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsMacdMacdLineZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdMacdLineZonesTest >> testDashStyle [
+HighstockPlotOptionsMacdMacdLineZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsMacdMacdLineZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdMacdLineZonesTest >> testFillColor [
+HighstockPlotOptionsMacdMacdLineZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsMacdMacdLineZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsMacdMacdLineZonesTest >> testValue [
+HighstockPlotOptionsMacdMacdLineZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

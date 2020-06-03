@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidLastPriceTest >> testColor [
+HighchartsPlotOptionsPyramidLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPyramidLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidLastPriceTest >> testEnabled [
+HighchartsPlotOptionsPyramidLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

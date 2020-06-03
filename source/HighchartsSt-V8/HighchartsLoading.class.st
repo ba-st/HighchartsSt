@@ -43,9 +43,7 @@ Defaults to 100."
 { #category : #accessing }
 HighchartsLoading >> style: aHighchartsCSSObject [
 
-	"CSS styles for the loading screen that covers the plot area.
-In styled mode, the loading label is styled with the
-.highcharts-loading class.
+	"CSS styles for the loading screen that covers the plot area. In styled mode, the loading label is styled with the .highcharts-loading class.
 Defaults to {'position': 'absolute', 'backgroundColor': '#ffffff', 'opacity': 0.5, 'textAlign': 'center'}."
 
 	configurationOptions at: 'style' put: aHighchartsCSSObject

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisDateTimeLabelFormatsHourTest >> testMain [
+HighchartsXAxisDateTimeLabelFormatsHourTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsXAxisDateTimeLabelFormatsHourTest >> testMain [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisDateTimeLabelFormatsHourTest >> testRange [
+HighchartsXAxisDateTimeLabelFormatsHourTest >> testSetRange [
 
 	| component javascript expectedConfiguration |
 

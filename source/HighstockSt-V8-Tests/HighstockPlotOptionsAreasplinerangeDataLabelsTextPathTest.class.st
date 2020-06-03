@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsAreasplinerangeDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAreasplinerangeDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsAreasplinerangeDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

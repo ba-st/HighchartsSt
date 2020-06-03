@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testAfterAnimate [
+HighchartsSeriesTimelineEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTimelineEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testCheckboxClick [
+HighchartsSeriesTimelineEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTimelineEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testClick [
+HighchartsSeriesTimelineEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTimelineEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testHide [
+HighchartsSeriesTimelineEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesTimelineEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testLegendItemClick [
+HighchartsSeriesTimelineEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesTimelineEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testMouseOut [
+HighchartsSeriesTimelineEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesTimelineEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testMouseOver [
+HighchartsSeriesTimelineEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesTimelineEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTimelineEventsTest >> testShow [
+HighchartsSeriesTimelineEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -10,8 +10,7 @@ Class {
 { #category : #accessing }
 HighchartsSeriesDependencywheelLevelsStates >> hover [
 
-	"Options for the hovered point. These settings override the normal
-state options when a point is moused over or touched.
+	"Options for the hovered point. These settings override the normal state options when a point is moused over or touched.
 "
 	^ configurationOptions at: 'hover' ifAbsentPut: [ HighchartsSeriesDependencywheelLevelsStatesHover new ]
 ]
@@ -27,9 +26,7 @@ HighchartsSeriesDependencywheelLevelsStates >> inactive [
 { #category : #accessing }
 HighchartsSeriesDependencywheelLevelsStates >> normal [
 
-	"The normal state of a series, or for point items in column, pie
-and similar series. Currently only used for setting animation
-when returning to normal state from hover.
+	"The normal state of a series, or for point items in column, pie and similar series. Currently only used for setting animation when returning to normal state from hover.
 "
 	^ configurationOptions at: 'normal' ifAbsentPut: [ HighchartsSeriesDependencywheelLevelsStatesNormal new ]
 ]
@@ -37,8 +34,7 @@ when returning to normal state from hover.
 { #category : #accessing }
 HighchartsSeriesDependencywheelLevelsStates >> select [
 
-	"Options for the selected point. These settings override the
-normal state options when a point is selected.
+	"Options for the selected point. These settings override the normal state options when a point is selected.
 "
 	^ configurationOptions at: 'select' ifAbsentPut: [ HighchartsSeriesDependencywheelLevelsStatesSelect new ]
 ]

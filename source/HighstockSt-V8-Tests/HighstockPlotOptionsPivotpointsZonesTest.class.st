@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsZonesTest >> testClassName [
+HighstockPlotOptionsPivotpointsZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPivotpointsZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsZonesTest >> testColor [
+HighstockPlotOptionsPivotpointsZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPivotpointsZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsZonesTest >> testDashStyle [
+HighstockPlotOptionsPivotpointsZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPivotpointsZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsZonesTest >> testFillColor [
+HighstockPlotOptionsPivotpointsZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPivotpointsZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPivotpointsZonesTest >> testValue [
+HighstockPlotOptionsPivotpointsZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

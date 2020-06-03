@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownDrillUpButtonTest >> testRelativeTo [
+HighchartsDrilldownDrillUpButtonTest >> testGetPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsDrilldownDrillUpButton new.
+	component position.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'position' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsDrilldownDrillUpButtonTest >> testSetRelativeTo [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsDrilldownDrillUpButtonTest >> testRelativeTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDrilldownDrillUpButtonTest >> testTheme [
+HighchartsDrilldownDrillUpButtonTest >> testSetTheme [
 
 	| component javascript expectedConfiguration |
 

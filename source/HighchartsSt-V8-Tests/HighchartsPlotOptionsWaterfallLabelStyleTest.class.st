@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsWaterfallLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

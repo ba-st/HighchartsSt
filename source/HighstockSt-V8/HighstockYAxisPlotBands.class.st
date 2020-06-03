@@ -1,5 +1,8 @@
 "
-An array of objects defining plot bands on the Y axis.
+An array of colored bands stretching across the plot area marking an
+interval on the axis.
+In styled mode, the plot bands are styled by the .highcharts-plot-band
+class in addition to the className option.
 "
 Class {
 	#name : #HighstockYAxisPlotBands,
@@ -37,8 +40,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockYAxisPlotBands >> className: aString [
 
-	"A custom class name, in addition to the default highcharts-plot-band,
-to apply to each individual band.
+	"A custom class name, in addition to the default highcharts-plot-band, to apply to each individual band.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -56,8 +58,7 @@ Defaults to #e6ebf5."
 { #category : #accessing }
 HighstockYAxisPlotBands >> events: anObject [
 
-	"An object defining mouse events for the plot band. Supported properties
-are click, mouseover, mouseout, mousemove.
+	"An object defining mouse events for the plot band. Supported properties are click, mouseover, mouseout, mousemove.
 "
 
 	configurationOptions at: 'events' put: anObject
@@ -101,10 +102,7 @@ HighstockYAxisPlotBands >> to: aNumber [
 { #category : #accessing }
 HighstockYAxisPlotBands >> zIndex: aNumber [
 
-	"The z index of the plot band within the chart, relative to other
-elements. Using the same z index as another element may give
-unpredictable results, as the last rendered element will be on top.
-Values from 0 to 20 make sense.
+	"The z index of the plot band within the chart, relative to other elements. Using the same z index as another element may give unpredictable results, as the last rendered element will be on top. Values from 0 to 20 make sense.
 "
 
 	configurationOptions at: 'zIndex' put: aNumber

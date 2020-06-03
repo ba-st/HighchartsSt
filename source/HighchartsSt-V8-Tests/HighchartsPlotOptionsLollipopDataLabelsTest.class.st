@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testAlign [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsLollipopDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsLollipopDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsLollipopDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsLollipopDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsLollipopDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testAllowOverlap [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testClassName [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testColor [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testCrop [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testDefer [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testFormat [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testInside [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testPadding [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testPosition [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testRotation [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testShadow [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testShape [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testXHigh [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetXHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testXHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testXLow [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetXLow [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testXLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testYHigh [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetYHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testYHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testYLow [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetYLow [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighchartsPlotOptionsLollipopDataLabelsTest >> testYLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsLollipopDataLabelsTest >> testZ [
+HighchartsPlotOptionsLollipopDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

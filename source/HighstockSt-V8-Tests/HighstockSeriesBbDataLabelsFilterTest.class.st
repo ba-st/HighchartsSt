@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbDataLabelsFilterTest >> testOperator [
+HighstockSeriesBbDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesBbDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbDataLabelsFilterTest >> testProperty [
+HighstockSeriesBbDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesBbDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesBbDataLabelsFilterTest >> testValue [
+HighstockSeriesBbDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

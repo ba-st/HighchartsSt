@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityScreenReaderSectionTest >> testAfterChartFormat [
+HighstockAccessibilityScreenReaderSectionTest >> testSetAfterChartFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAccessibilityScreenReaderSectionTest >> testAfterChartFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityScreenReaderSectionTest >> testAfterChartFormatter [
+HighstockAccessibilityScreenReaderSectionTest >> testSetAfterChartFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAccessibilityScreenReaderSectionTest >> testAfterChartFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityScreenReaderSectionTest >> testAxisRangeDateFormat [
+HighstockAccessibilityScreenReaderSectionTest >> testSetAxisRangeDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAccessibilityScreenReaderSectionTest >> testAxisRangeDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityScreenReaderSectionTest >> testBeforeChartFormat [
+HighstockAccessibilityScreenReaderSectionTest >> testSetBeforeChartFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockAccessibilityScreenReaderSectionTest >> testBeforeChartFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityScreenReaderSectionTest >> testBeforeChartFormatter [
+HighstockAccessibilityScreenReaderSectionTest >> testSetBeforeChartFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,21 @@ HighstockAccessibilityScreenReaderSectionTest >> testBeforeChartFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityScreenReaderSectionTest >> testOnViewDataTableClick [
+HighstockAccessibilityScreenReaderSectionTest >> testSetOnPlayAsSoundClick [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAccessibilityScreenReaderSection new.
+	component onPlayAsSoundClick: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'onPlayAsSoundClick' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAccessibilityScreenReaderSectionTest >> testSetOnViewDataTableClick [
 
 	| component javascript expectedConfiguration |
 

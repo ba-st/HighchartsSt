@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsColorVariationTest >> testKey [
+HighchartsPlotOptionsSunburstLevelsColorVariationTest >> testSetKey [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSunburstLevelsColorVariationTest >> testKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstLevelsColorVariationTest >> testTo [
+HighchartsPlotOptionsSunburstLevelsColorVariationTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

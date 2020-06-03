@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataSortingTest >> testEnabled [
+HighstockPlotOptionsAreasplinerangeDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAreasplinerangeDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataSortingTest >> testMatchByName [
+HighstockPlotOptionsAreasplinerangeDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAreasplinerangeDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDataSortingTest >> testSortKey [
+HighstockPlotOptionsAreasplinerangeDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

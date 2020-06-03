@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnrangeLabelStyleTest >> testFontWeight [
+HighchartsSeriesColumnrangeLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

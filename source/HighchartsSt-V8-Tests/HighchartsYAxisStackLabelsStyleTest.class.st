@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsStyleTest >> testColor [
+HighchartsYAxisStackLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsYAxisStackLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsStyleTest >> testFontSize [
+HighchartsYAxisStackLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsYAxisStackLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsStyleTest >> testFontWeight [
+HighchartsYAxisStackLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsYAxisStackLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsYAxisStackLabelsStyleTest >> testTextOutline [
+HighchartsYAxisStackLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

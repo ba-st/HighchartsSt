@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsArearangeLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsArearangeLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

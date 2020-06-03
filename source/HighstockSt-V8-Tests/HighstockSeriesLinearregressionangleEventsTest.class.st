@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testAfterAnimate [
+HighstockSeriesLinearregressionangleEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressionangleEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testCheckboxClick [
+HighstockSeriesLinearregressionangleEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressionangleEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testClick [
+HighstockSeriesLinearregressionangleEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressionangleEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testHide [
+HighstockSeriesLinearregressionangleEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressionangleEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testLegendItemClick [
+HighstockSeriesLinearregressionangleEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressionangleEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testMouseOut [
+HighstockSeriesLinearregressionangleEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressionangleEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testMouseOver [
+HighstockSeriesLinearregressionangleEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLinearregressionangleEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressionangleEventsTest >> testShow [
+HighstockSeriesLinearregressionangleEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

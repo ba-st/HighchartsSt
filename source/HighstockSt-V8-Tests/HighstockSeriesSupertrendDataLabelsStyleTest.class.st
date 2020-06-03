@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDataLabelsStyleTest >> testColor [
+HighstockSeriesSupertrendDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSupertrendDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDataLabelsStyleTest >> testFontSize [
+HighstockSeriesSupertrendDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSupertrendDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDataLabelsStyleTest >> testFontWeight [
+HighstockSeriesSupertrendDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSupertrendDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSupertrendDataLabelsStyleTest >> testTextOutline [
+HighstockSeriesSupertrendDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

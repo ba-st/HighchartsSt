@@ -53,8 +53,7 @@ HighstockPlotOptionsWilliamsrZones >> fillColor: aHighchartsColorStringOrHighcha
 { #category : #accessing }
 HighstockPlotOptionsWilliamsrZones >> value: aNumber [
 
-	"The value up to where the zone extends, if undefined the zones
-stretches to the last value in the series.
+	"The value up to where the zone extends, if undefined the zones stretches to the last value in the series.
 "
 
 	configurationOptions at: 'value' put: aNumber

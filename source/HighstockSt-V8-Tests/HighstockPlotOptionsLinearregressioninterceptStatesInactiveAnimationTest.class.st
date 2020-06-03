@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptStatesInactiveAnimationTest >> testDuration [
+HighstockPlotOptionsLinearregressioninterceptStatesInactiveAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

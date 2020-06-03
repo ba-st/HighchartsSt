@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testApproximation [
+HighchartsSeriesItemDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesItemDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsSeriesItemDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesItemDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testEnabled [
+HighchartsSeriesItemDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesItemDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testForced [
+HighchartsSeriesItemDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesItemDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testGroupAll [
+HighchartsSeriesItemDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesItemDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testGroupPixelWidth [
+HighchartsSeriesItemDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesItemDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testSmoothed [
+HighchartsSeriesItemDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesItemDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesItemDataGroupingTest >> testUnits [
+HighchartsSeriesItemDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

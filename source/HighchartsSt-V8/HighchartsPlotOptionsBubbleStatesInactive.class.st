@@ -16,10 +16,18 @@ HighchartsPlotOptionsBubbleStatesInactive >> animation [
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsBubbleStatesInactive >> enabled: aBoolean [
+
+	"Enable or disable the inactive state for a series
+Defaults to true."
+
+	configurationOptions at: 'enabled' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsBubbleStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area). Set to 1
-to disable inactive state.
+	"Opacity of series elements (dataLabels, line, area).
 Defaults to 0.2."
 
 	configurationOptions at: 'opacity' put: aNumber

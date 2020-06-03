@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testAlign [
+HighchartsSeriesArearangeDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesArearangeDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesArearangeDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesArearangeDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesArearangeDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesArearangeDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesArearangeDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testAllowOverlap [
+HighchartsSeriesArearangeDataLabelsTest >> testSetAllowOverlap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testAllowOverlap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testBackgroundColor [
+HighchartsSeriesArearangeDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testBorderColor [
+HighchartsSeriesArearangeDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testBorderRadius [
+HighchartsSeriesArearangeDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testBorderWidth [
+HighchartsSeriesArearangeDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testClassName [
+HighchartsSeriesArearangeDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testColor [
+HighchartsSeriesArearangeDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testCrop [
+HighchartsSeriesArearangeDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testDefer [
+HighchartsSeriesArearangeDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testEnabled [
+HighchartsSeriesArearangeDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testFormat [
+HighchartsSeriesArearangeDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testFormatter [
+HighchartsSeriesArearangeDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testInside [
+HighchartsSeriesArearangeDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testNullFormat [
+HighchartsSeriesArearangeDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testNullFormatter [
+HighchartsSeriesArearangeDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testOverflow [
+HighchartsSeriesArearangeDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testPadding [
+HighchartsSeriesArearangeDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testPosition [
+HighchartsSeriesArearangeDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testRotation [
+HighchartsSeriesArearangeDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testShadow [
+HighchartsSeriesArearangeDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testShape [
+HighchartsSeriesArearangeDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testUseHTML [
+HighchartsSeriesArearangeDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesArearangeDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testX [
+HighchartsSeriesArearangeDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +397,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testXHigh [
+HighchartsSeriesArearangeDataLabelsTest >> testSetXHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +411,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testXHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testXLow [
+HighchartsSeriesArearangeDataLabelsTest >> testSetXLow [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +425,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testXLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testY [
+HighchartsSeriesArearangeDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +439,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testYHigh [
+HighchartsSeriesArearangeDataLabelsTest >> testSetYHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +453,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testYHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testYLow [
+HighchartsSeriesArearangeDataLabelsTest >> testSetYLow [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +467,7 @@ HighchartsSeriesArearangeDataLabelsTest >> testYLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesArearangeDataLabelsTest >> testZ [
+HighchartsSeriesArearangeDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

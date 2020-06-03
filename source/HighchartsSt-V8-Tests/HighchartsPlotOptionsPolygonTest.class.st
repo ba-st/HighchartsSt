@@ -5,7 +5,161 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testAllAreas [
+HighchartsPlotOptionsPolygonTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +173,7 @@ HighchartsPlotOptionsPolygonTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testAllowPointSelect [
+HighchartsPlotOptionsPolygonTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +187,7 @@ HighchartsPlotOptionsPolygonTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testAnimationLimit [
+HighchartsPlotOptionsPolygonTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +201,7 @@ HighchartsPlotOptionsPolygonTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testBoostBlending [
+HighchartsPlotOptionsPolygonTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +215,7 @@ HighchartsPlotOptionsPolygonTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testBoostThreshold [
+HighchartsPlotOptionsPolygonTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +229,7 @@ HighchartsPlotOptionsPolygonTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testBorderColor [
+HighchartsPlotOptionsPolygonTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +243,7 @@ HighchartsPlotOptionsPolygonTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testBorderWidth [
+HighchartsPlotOptionsPolygonTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +257,7 @@ HighchartsPlotOptionsPolygonTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testClassName [
+HighchartsPlotOptionsPolygonTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +271,7 @@ HighchartsPlotOptionsPolygonTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testClip [
+HighchartsPlotOptionsPolygonTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +285,7 @@ HighchartsPlotOptionsPolygonTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testColor [
+HighchartsPlotOptionsPolygonTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +299,7 @@ HighchartsPlotOptionsPolygonTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testColorAxis [
+HighchartsPlotOptionsPolygonTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +313,7 @@ HighchartsPlotOptionsPolygonTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testColorIndex [
+HighchartsPlotOptionsPolygonTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +327,7 @@ HighchartsPlotOptionsPolygonTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testColorKey [
+HighchartsPlotOptionsPolygonTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +341,7 @@ HighchartsPlotOptionsPolygonTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testConnectEnds [
+HighchartsPlotOptionsPolygonTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +355,7 @@ HighchartsPlotOptionsPolygonTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testConnectNulls [
+HighchartsPlotOptionsPolygonTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +369,21 @@ HighchartsPlotOptionsPolygonTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testCropThreshold [
+HighchartsPlotOptionsPolygonTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +397,7 @@ HighchartsPlotOptionsPolygonTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testCursor [
+HighchartsPlotOptionsPolygonTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +411,21 @@ HighchartsPlotOptionsPolygonTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testDashStyle [
+HighchartsPlotOptionsPolygonTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPolygon new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsPolygonTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighchartsPlotOptionsPolygonTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testDescription [
+HighchartsPlotOptionsPolygonTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighchartsPlotOptionsPolygonTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testEnableMouseTracking [
+HighchartsPlotOptionsPolygonTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighchartsPlotOptionsPolygonTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testEvents [
+HighchartsPlotOptionsPolygonTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighchartsPlotOptionsPolygonTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testFindNearestPointBy [
+HighchartsPlotOptionsPolygonTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighchartsPlotOptionsPolygonTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsPolygonTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighchartsPlotOptionsPolygonTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testIncludeInDataExport [
+HighchartsPlotOptionsPolygonTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighchartsPlotOptionsPolygonTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testJoinBy [
+HighchartsPlotOptionsPolygonTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighchartsPlotOptionsPolygonTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testKeys [
+HighchartsPlotOptionsPolygonTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighchartsPlotOptionsPolygonTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testLineWidth [
+HighchartsPlotOptionsPolygonTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighchartsPlotOptionsPolygonTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testLinecap [
+HighchartsPlotOptionsPolygonTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighchartsPlotOptionsPolygonTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testLinkedTo [
+HighchartsPlotOptionsPolygonTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighchartsPlotOptionsPolygonTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testNegativeColor [
+HighchartsPlotOptionsPolygonTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighchartsPlotOptionsPolygonTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testOpacity [
+HighchartsPlotOptionsPolygonTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighchartsPlotOptionsPolygonTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsPolygonTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighchartsPlotOptionsPolygonTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testPointInterval [
+HighchartsPlotOptionsPolygonTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighchartsPlotOptionsPolygonTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testPointIntervalUnit [
+HighchartsPlotOptionsPolygonTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighchartsPlotOptionsPolygonTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testPointStart [
+HighchartsPlotOptionsPolygonTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighchartsPlotOptionsPolygonTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testSelected [
+HighchartsPlotOptionsPolygonTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighchartsPlotOptionsPolygonTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testShowCheckbox [
+HighchartsPlotOptionsPolygonTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighchartsPlotOptionsPolygonTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testShowInLegend [
+HighchartsPlotOptionsPolygonTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighchartsPlotOptionsPolygonTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsPolygonTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +733,7 @@ HighchartsPlotOptionsPolygonTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testStacking [
+HighchartsPlotOptionsPolygonTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +747,7 @@ HighchartsPlotOptionsPolygonTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testStates [
+HighchartsPlotOptionsPolygonTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +761,7 @@ HighchartsPlotOptionsPolygonTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testStep [
+HighchartsPlotOptionsPolygonTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +775,7 @@ HighchartsPlotOptionsPolygonTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testStickyTracking [
+HighchartsPlotOptionsPolygonTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +789,7 @@ HighchartsPlotOptionsPolygonTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testTrackByArea [
+HighchartsPlotOptionsPolygonTest >> testSetTrackByArea [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +803,7 @@ HighchartsPlotOptionsPolygonTest >> testTrackByArea [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testTurboThreshold [
+HighchartsPlotOptionsPolygonTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +817,7 @@ HighchartsPlotOptionsPolygonTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testVisible [
+HighchartsPlotOptionsPolygonTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +831,7 @@ HighchartsPlotOptionsPolygonTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testZIndex [
+HighchartsPlotOptionsPolygonTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +845,7 @@ HighchartsPlotOptionsPolygonTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonTest >> testZoneAxis [
+HighchartsPlotOptionsPolygonTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

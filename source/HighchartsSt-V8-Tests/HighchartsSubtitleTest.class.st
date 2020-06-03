@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testAlign [
+HighchartsSubtitleTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSubtitleTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testFloating [
+HighchartsSubtitleTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSubtitleTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testStyle [
+HighchartsSubtitleTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSubtitleTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testText [
+HighchartsSubtitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSubtitleTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testUseHTML [
+HighchartsSubtitleTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSubtitleTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testVerticalAlign [
+HighchartsSubtitleTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSubtitleTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testWidthAdjust [
+HighchartsSubtitleTest >> testSetWidthAdjust [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSubtitleTest >> testWidthAdjust [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testX [
+HighchartsSubtitleTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSubtitleTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSubtitleTest >> testY [
+HighchartsSubtitleTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

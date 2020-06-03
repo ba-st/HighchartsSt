@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testDistance [
+HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testGridSize [
+HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testSetGridSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testGridSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testIterations [
+HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testSetIterations [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testIterations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testKmeansThreshold [
+HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testSetKmeansThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testKmeansThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testType [
+HighchartsSeriesScatterClusterLayoutAlgorithmTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testFill [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptionsShapeOptions new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testHeight [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testR [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSnap [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,21 @@ HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testStroke [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNavigationAnnotationsOptionsShapeOptions new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testStrokeWidth [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testType [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testWidth [
+HighchartsNavigationAnnotationsOptionsShapeOptionsTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

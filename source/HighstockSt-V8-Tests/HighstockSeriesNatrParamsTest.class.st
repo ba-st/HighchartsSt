@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrParamsTest >> testIndex [
+HighstockSeriesNatrParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesNatrParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesNatrParamsTest >> testPeriod [
+HighstockSeriesNatrParamsTest >> testSetPeriod [
 
 	| component javascript expectedConfiguration |
 

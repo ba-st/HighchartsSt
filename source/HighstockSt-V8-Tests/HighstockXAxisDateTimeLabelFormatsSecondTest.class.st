@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockXAxisDateTimeLabelFormatsSecondTest >> testMain [
+HighstockXAxisDateTimeLabelFormatsSecondTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockXAxisDateTimeLabelFormatsSecondTest >> testMain [
 ]
 
 { #category : #'tests-accessing' }
-HighstockXAxisDateTimeLabelFormatsSecondTest >> testRange [
+HighstockXAxisDateTimeLabelFormatsSecondTest >> testSetRange [
 
 	| component javascript expectedConfiguration |
 

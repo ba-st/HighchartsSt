@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsParetoLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsParetoLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

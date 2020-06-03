@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsZoomChangeTest >> testItems [
+HighstockStockToolsGuiDefinitionsZoomChangeTest >> testGetZoomX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockStockToolsGuiDefinitionsZoomChange new.
+	component zoomX.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomX' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockStockToolsGuiDefinitionsZoomChangeTest >> testGetZoomXY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockStockToolsGuiDefinitionsZoomChange new.
+	component zoomXY.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomXY' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockStockToolsGuiDefinitionsZoomChangeTest >> testGetZoomY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockStockToolsGuiDefinitionsZoomChange new.
+	component zoomY.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zoomY' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockStockToolsGuiDefinitionsZoomChangeTest >> testSetItems [
 
 	| component javascript expectedConfiguration |
 

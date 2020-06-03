@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreaStatesHoverAnimationTest >> testDuration [
+HighchartsSeriesAreaStatesHoverAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

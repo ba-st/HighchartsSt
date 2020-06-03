@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testFill [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsPitchforkTypeOptionsInnerBackground new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSnap [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,21 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testStroke [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsPitchforkTypeOptionsInnerBackground new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testStrokeWidth [
+HighstockAnnotationsPitchforkTypeOptionsInnerBackgroundTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 

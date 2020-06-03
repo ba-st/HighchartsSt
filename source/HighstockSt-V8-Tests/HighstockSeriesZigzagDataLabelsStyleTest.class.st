@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsStyleTest >> testColor [
+HighstockSeriesZigzagDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesZigzagDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsStyleTest >> testFontSize [
+HighstockSeriesZigzagDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesZigzagDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsStyleTest >> testFontWeight [
+HighstockSeriesZigzagDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesZigzagDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagDataLabelsStyleTest >> testTextOutline [
+HighstockSeriesZigzagDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

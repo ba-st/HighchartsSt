@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testApproximation [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesPyramid3dDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesPyramid3dDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testEnabled [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesPyramid3dDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testForced [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesPyramid3dDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testGroupAll [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesPyramid3dDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testGroupPixelWidth [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesPyramid3dDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testSmoothed [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesPyramid3dDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dDataGroupingTest >> testUnits [
+HighchartsSeriesPyramid3dDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

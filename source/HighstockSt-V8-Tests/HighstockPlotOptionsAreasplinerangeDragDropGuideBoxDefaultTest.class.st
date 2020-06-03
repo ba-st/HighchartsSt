@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testClassName [
+HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testClassName 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testColor [
+HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testCursor [
+HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testLineColor [
+HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testLineColor 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testLineWidth [
+HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testLineWidth 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testZIndex [
+HighstockPlotOptionsAreasplinerangeDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

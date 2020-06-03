@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testEnabled [
+HighstockSeriesOhlcMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesOhlcMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testEnabledThreshold [
+HighstockSeriesOhlcMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesOhlcMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testFillColor [
+HighstockSeriesOhlcMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesOhlcMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testHeight [
+HighstockSeriesOhlcMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesOhlcMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testLineColor [
+HighstockSeriesOhlcMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesOhlcMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testLineWidth [
+HighstockSeriesOhlcMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesOhlcMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testRadius [
+HighstockSeriesOhlcMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesOhlcMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testStates [
+HighstockSeriesOhlcMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesOhlcMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testSymbol [
+HighstockSeriesOhlcMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesOhlcMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesOhlcMarkerTest >> testWidth [
+HighstockSeriesOhlcMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testClick [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testDrag [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testDragStart [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testDrop [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testRemove [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testSelect [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testUnselect [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsDependencywheelPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelPointEventsTest >> testUpdate [
+HighchartsPlotOptionsDependencywheelPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testAlign [
+HighstockYAxisTitleTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxisTitle new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisTitleTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockYAxisTitleTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testMargin [
+HighstockYAxisTitleTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockYAxisTitleTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testOffset [
+HighstockYAxisTitleTest >> testSetOffset [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockYAxisTitleTest >> testOffset [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testReserveSpace [
+HighstockYAxisTitleTest >> testSetReserveSpace [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockYAxisTitleTest >> testReserveSpace [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testRotation [
+HighstockYAxisTitleTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockYAxisTitleTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testText [
+HighstockYAxisTitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockYAxisTitleTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testTextAlign [
+HighstockYAxisTitleTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockYAxisTitleTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testUseHTML [
+HighstockYAxisTitleTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockYAxisTitleTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testX [
+HighstockYAxisTitleTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockYAxisTitleTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTitleTest >> testY [
+HighstockYAxisTitleTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

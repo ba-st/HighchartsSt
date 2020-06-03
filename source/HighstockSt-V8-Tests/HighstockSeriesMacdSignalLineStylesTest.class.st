@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdSignalLineStylesTest >> testLineColor [
+HighstockSeriesMacdSignalLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesMacdSignalLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesMacdSignalLineStylesTest >> testLineWidth [
+HighstockSeriesMacdSignalLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

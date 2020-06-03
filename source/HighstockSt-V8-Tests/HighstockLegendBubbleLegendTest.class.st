@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testBorderColor [
+HighstockLegendBubbleLegendTest >> testGetLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegendBubbleLegend new.
+	component labels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'labels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendBubbleLegendTest >> testGetRanges [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLegendBubbleLegend new.
+	component ranges.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'ranges' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockLegendBubbleLegendTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockLegendBubbleLegendTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testBorderWidth [
+HighstockLegendBubbleLegendTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockLegendBubbleLegendTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testClassName [
+HighstockLegendBubbleLegendTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockLegendBubbleLegendTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testColor [
+HighstockLegendBubbleLegendTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockLegendBubbleLegendTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testConnectorClassName [
+HighstockLegendBubbleLegendTest >> testSetConnectorClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockLegendBubbleLegendTest >> testConnectorClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testConnectorColor [
+HighstockLegendBubbleLegendTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockLegendBubbleLegendTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testConnectorDistance [
+HighstockLegendBubbleLegendTest >> testSetConnectorDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockLegendBubbleLegendTest >> testConnectorDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testConnectorWidth [
+HighstockLegendBubbleLegendTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockLegendBubbleLegendTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testEnabled [
+HighstockLegendBubbleLegendTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockLegendBubbleLegendTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testLegendIndex [
+HighstockLegendBubbleLegendTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockLegendBubbleLegendTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testMaxSize [
+HighstockLegendBubbleLegendTest >> testSetMaxSize [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockLegendBubbleLegendTest >> testMaxSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testMinSize [
+HighstockLegendBubbleLegendTest >> testSetMinSize [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockLegendBubbleLegendTest >> testMinSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testSizeBy [
+HighstockLegendBubbleLegendTest >> testSetSizeBy [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockLegendBubbleLegendTest >> testSizeBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testSizeByAbsoluteValue [
+HighstockLegendBubbleLegendTest >> testSetSizeByAbsoluteValue [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockLegendBubbleLegendTest >> testSizeByAbsoluteValue [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testZIndex [
+HighstockLegendBubbleLegendTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighstockLegendBubbleLegendTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLegendBubbleLegendTest >> testZThreshold [
+HighstockLegendBubbleLegendTest >> testSetZThreshold [
 
 	| component javascript expectedConfiguration |
 

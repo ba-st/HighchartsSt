@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testContextButtonTitle [
+HighchartsLangTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLang new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLangTest >> testGetExportData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLang new.
+	component exportData.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exportData' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLangTest >> testGetNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLang new.
+	component navigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'navigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLangTest >> testSetContextButtonTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsLangTest >> testContextButtonTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDecimalPoint [
+HighchartsLangTest >> testSetDecimalPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsLangTest >> testDecimalPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDownloadCSV [
+HighchartsLangTest >> testSetDownloadCSV [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsLangTest >> testDownloadCSV [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDownloadJPEG [
+HighchartsLangTest >> testSetDownloadJPEG [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsLangTest >> testDownloadJPEG [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDownloadPDF [
+HighchartsLangTest >> testSetDownloadPDF [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsLangTest >> testDownloadPDF [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDownloadPNG [
+HighchartsLangTest >> testSetDownloadPNG [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsLangTest >> testDownloadPNG [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDownloadSVG [
+HighchartsLangTest >> testSetDownloadSVG [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsLangTest >> testDownloadSVG [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDownloadXLS [
+HighchartsLangTest >> testSetDownloadXLS [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsLangTest >> testDownloadXLS [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testDrillUpText [
+HighchartsLangTest >> testSetDrillUpText [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,21 @@ HighchartsLangTest >> testDrillUpText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testInvalidDate [
+HighchartsLangTest >> testSetExitFullscreen [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLang new.
+	component exitFullscreen: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exitFullscreen' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsLangTest >> testSetInvalidDate [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighchartsLangTest >> testInvalidDate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testLoading [
+HighchartsLangTest >> testSetLoading [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighchartsLangTest >> testLoading [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testMonths [
+HighchartsLangTest >> testSetMonths [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighchartsLangTest >> testMonths [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testNoData [
+HighchartsLangTest >> testSetNoData [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +243,7 @@ HighchartsLangTest >> testNoData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testNumericSymbolMagnitude [
+HighchartsLangTest >> testSetNumericSymbolMagnitude [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +257,7 @@ HighchartsLangTest >> testNumericSymbolMagnitude [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testNumericSymbols [
+HighchartsLangTest >> testSetNumericSymbols [
 
 	| component javascript expectedConfiguration |
 
@@ -215,21 +271,7 @@ HighchartsLangTest >> testNumericSymbols [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testOpenInCloud [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsLang new.
-	component openInCloud: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'openInCloud' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsLangTest >> testPrintChart [
+HighchartsLangTest >> testSetPrintChart [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsLangTest >> testPrintChart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testResetZoom [
+HighchartsLangTest >> testSetResetZoom [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +299,7 @@ HighchartsLangTest >> testResetZoom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testResetZoomTitle [
+HighchartsLangTest >> testSetResetZoomTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +313,7 @@ HighchartsLangTest >> testResetZoomTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testShortMonths [
+HighchartsLangTest >> testSetShortMonths [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +327,7 @@ HighchartsLangTest >> testShortMonths [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testShortWeekdays [
+HighchartsLangTest >> testSetShortWeekdays [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +341,7 @@ HighchartsLangTest >> testShortWeekdays [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testThousandsSep [
+HighchartsLangTest >> testSetThousandsSep [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +355,7 @@ HighchartsLangTest >> testThousandsSep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testViewData [
+HighchartsLangTest >> testSetViewData [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +369,7 @@ HighchartsLangTest >> testViewData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testViewFullscreen [
+HighchartsLangTest >> testSetViewFullscreen [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +383,7 @@ HighchartsLangTest >> testViewFullscreen [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangTest >> testWeekdays [
+HighchartsLangTest >> testSetWeekdays [
 
 	| component javascript expectedConfiguration |
 

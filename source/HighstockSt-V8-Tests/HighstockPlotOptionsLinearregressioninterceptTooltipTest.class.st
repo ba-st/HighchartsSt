@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testChangeDecimals [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressioninterceptTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testClusterFormat [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testDistance [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testFollowPointer [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testFollowTouchMove [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testFollowTouchMove 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testFooterFormat [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testHeaderFormat [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testNullFormat [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testNullFormatter [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testPointFormat [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testPointFormatter [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,21 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testValueDecimals [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsLinearregressioninterceptTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testValuePrefix [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testValueSuffix [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testXDateFormat [
+HighstockPlotOptionsLinearregressioninterceptTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

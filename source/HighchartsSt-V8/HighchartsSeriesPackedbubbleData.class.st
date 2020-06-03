@@ -36,8 +36,7 @@ HighchartsSeriesPackedbubbleData >> accessibility [
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> className: aString [
 
-	"An additional, individual class name for the data point´s graphic
-representation.
+	"An additional, individual class name for the data point´s graphic representation.
 "
 
 	configurationOptions at: 'className' put: aString
@@ -46,10 +45,7 @@ representation.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use
-colorIndex.
+	"Individual color for the point. By default the color is pulled from the global colors array. In styled mode, the color option doesn´t take effect. Instead, use colorIndex.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -58,21 +54,25 @@ colorIndex.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> colorIndex: aNumber [
 
-	"A specific color index to use for the point, so its graphic representations
-are given the class name highcharts-color-{n}. In styled mode this will
-change the color of the graphic. In non-styled mode, the color by is set by
-the fill attribute, so the change in class name won´t have a visual effect
-by default.
+	"A specific color index to use for the point, so its graphic representations are given the class name highcharts-color-{n}. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the fill attribute, so the change in class name won´t have a visual effect by default.
 "
 
 	configurationOptions at: 'colorIndex' put: aNumber
 ]
 
 { #category : #accessing }
+HighchartsSeriesPackedbubbleData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighchartsSeriesPackedbubbleData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighchartsSeriesPackedbubbleDataDataLabels new ]
 ]
@@ -80,8 +80,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -90,8 +89,7 @@ about the point.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> dragDrop [
 
-	"Point specific options for the draggable-points module. Overrides options on
-series.dragDrop.
+	"Point specific options for the draggable-points module. Overrides options on series.dragDrop.
 "
 	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighchartsSeriesPackedbubbleDataDragDrop new ]
 ]
@@ -99,8 +97,7 @@ series.dragDrop.
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> drilldown: aString [
 
-	"The id of a series in the drilldown.series array to
-use for a drilldown for this point.
+	"The id of a series in the drilldown.series array to use for a drilldown for this point.
 "
 
 	configurationOptions at: 'drilldown' put: aString
@@ -118,8 +115,7 @@ HighchartsSeriesPackedbubbleData >> events: anObject [
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -128,9 +124,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighchartsSeriesPackedbubbleData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber

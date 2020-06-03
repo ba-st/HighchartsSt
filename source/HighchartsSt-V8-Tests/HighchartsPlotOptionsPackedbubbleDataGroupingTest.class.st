@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testForced [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testGroupAll [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSmoothed [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testUnits [
+HighchartsPlotOptionsPackedbubbleDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

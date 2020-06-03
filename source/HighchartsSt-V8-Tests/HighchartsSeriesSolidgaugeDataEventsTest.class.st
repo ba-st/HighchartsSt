@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testClick [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testDrag [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testDragStart [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testDrop [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testMouseOut [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testMouseOver [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testRemove [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testSelect [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testUnselect [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsSeriesSolidgaugeDataEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataEventsTest >> testUpdate [
+HighchartsSeriesSolidgaugeDataEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

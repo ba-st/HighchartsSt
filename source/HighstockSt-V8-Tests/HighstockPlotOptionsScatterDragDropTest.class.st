@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDragMaxX [
+HighstockPlotOptionsScatterDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsScatterDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsScatterDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsScatterDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsScatterDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDragMaxY [
+HighstockPlotOptionsScatterDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDragMinX [
+HighstockPlotOptionsScatterDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDragMinY [
+HighstockPlotOptionsScatterDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDragPrecisionX [
+HighstockPlotOptionsScatterDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDragPrecisionY [
+HighstockPlotOptionsScatterDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDragSensitivity [
+HighstockPlotOptionsScatterDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDraggableX [
+HighstockPlotOptionsScatterDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testDraggableY [
+HighstockPlotOptionsScatterDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockPlotOptionsScatterDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testGroupBy [
+HighstockPlotOptionsScatterDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockPlotOptionsScatterDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsScatterDragDropTest >> testLiveRedraw [
+HighstockPlotOptionsScatterDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

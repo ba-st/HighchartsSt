@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testBarBackgroundColor [
+HighchartsZAxisScrollbarTest >> testSetBarBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsZAxisScrollbarTest >> testBarBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testBarBorderColor [
+HighchartsZAxisScrollbarTest >> testSetBarBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsZAxisScrollbarTest >> testBarBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testBarBorderRadius [
+HighchartsZAxisScrollbarTest >> testSetBarBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsZAxisScrollbarTest >> testBarBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testBarBorderWidth [
+HighchartsZAxisScrollbarTest >> testSetBarBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsZAxisScrollbarTest >> testBarBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testButtonArrowColor [
+HighchartsZAxisScrollbarTest >> testSetButtonArrowColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsZAxisScrollbarTest >> testButtonArrowColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testButtonBackgroundColor [
+HighchartsZAxisScrollbarTest >> testSetButtonBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsZAxisScrollbarTest >> testButtonBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testButtonBorderColor [
+HighchartsZAxisScrollbarTest >> testSetButtonBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsZAxisScrollbarTest >> testButtonBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testButtonBorderRadius [
+HighchartsZAxisScrollbarTest >> testSetButtonBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsZAxisScrollbarTest >> testButtonBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testButtonBorderWidth [
+HighchartsZAxisScrollbarTest >> testSetButtonBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsZAxisScrollbarTest >> testButtonBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testEnabled [
+HighchartsZAxisScrollbarTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsZAxisScrollbarTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testHeight [
+HighchartsZAxisScrollbarTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsZAxisScrollbarTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testLiveRedraw [
+HighchartsZAxisScrollbarTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighchartsZAxisScrollbarTest >> testLiveRedraw [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testMargin [
+HighchartsZAxisScrollbarTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighchartsZAxisScrollbarTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testMinWidth [
+HighchartsZAxisScrollbarTest >> testSetMinWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighchartsZAxisScrollbarTest >> testMinWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testRifleColor [
+HighchartsZAxisScrollbarTest >> testSetRifleColor [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighchartsZAxisScrollbarTest >> testRifleColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testShowFull [
+HighchartsZAxisScrollbarTest >> testSetShowFull [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighchartsZAxisScrollbarTest >> testShowFull [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testStep [
+HighchartsZAxisScrollbarTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighchartsZAxisScrollbarTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testTrackBackgroundColor [
+HighchartsZAxisScrollbarTest >> testSetTrackBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighchartsZAxisScrollbarTest >> testTrackBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testTrackBorderColor [
+HighchartsZAxisScrollbarTest >> testSetTrackBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighchartsZAxisScrollbarTest >> testTrackBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testTrackBorderRadius [
+HighchartsZAxisScrollbarTest >> testSetTrackBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighchartsZAxisScrollbarTest >> testTrackBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testTrackBorderWidth [
+HighchartsZAxisScrollbarTest >> testSetTrackBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighchartsZAxisScrollbarTest >> testTrackBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsZAxisScrollbarTest >> testZIndex [
+HighchartsZAxisScrollbarTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

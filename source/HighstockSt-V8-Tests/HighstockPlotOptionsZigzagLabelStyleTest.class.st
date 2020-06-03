@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagLabelStyleTest >> testFontWeight [
+HighstockPlotOptionsZigzagLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

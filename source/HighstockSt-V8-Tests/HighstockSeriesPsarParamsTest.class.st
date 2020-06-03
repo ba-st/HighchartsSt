@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarParamsTest >> testDecimals [
+HighstockSeriesPsarParamsTest >> testSetDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPsarParamsTest >> testDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarParamsTest >> testIncrement [
+HighstockSeriesPsarParamsTest >> testSetIncrement [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPsarParamsTest >> testIncrement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarParamsTest >> testIndex [
+HighstockSeriesPsarParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPsarParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarParamsTest >> testInitialAccelerationFactor [
+HighstockSeriesPsarParamsTest >> testSetInitialAccelerationFactor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPsarParamsTest >> testInitialAccelerationFactor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPsarParamsTest >> testMaxAccelerationFactor [
+HighstockSeriesPsarParamsTest >> testSetMaxAccelerationFactor [
 
 	| component javascript expectedConfiguration |
 

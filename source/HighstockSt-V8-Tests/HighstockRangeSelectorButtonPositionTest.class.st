@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonPositionTest >> testAlign [
+HighstockRangeSelectorButtonPositionTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockRangeSelectorButtonPositionTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonPositionTest >> testX [
+HighstockRangeSelectorButtonPositionTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockRangeSelectorButtonPositionTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockRangeSelectorButtonPositionTest >> testY [
+HighstockRangeSelectorButtonPositionTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelLastPriceTest >> testColor [
+HighchartsPlotOptionsFunnelLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsFunnelLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnelLastPriceTest >> testEnabled [
+HighchartsPlotOptionsFunnelLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

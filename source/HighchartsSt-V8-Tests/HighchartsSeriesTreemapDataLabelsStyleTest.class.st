@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataLabelsStyleTest >> testColor [
+HighchartsSeriesTreemapDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTreemapDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataLabelsStyleTest >> testFontSize [
+HighchartsSeriesTreemapDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTreemapDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataLabelsStyleTest >> testFontWeight [
+HighchartsSeriesTreemapDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesTreemapDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapDataLabelsStyleTest >> testTextOutline [
+HighchartsSeriesTreemapDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

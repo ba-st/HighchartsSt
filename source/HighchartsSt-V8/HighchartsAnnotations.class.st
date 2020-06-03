@@ -1,7 +1,7 @@
 "
-Options for configuring annotations, for example labels, arrows or
-shapes. Annotations can be tied to points, axis coordinates or chart
-pixel coordinates.
+A basic type of an annotation. It allows to add custom labels
+or shapes. The items  can be tied to points, axis coordinates
+or chart pixel coordinates.
 "
 Class {
 	#name : #HighchartsAnnotations,
@@ -12,22 +12,18 @@ Class {
 { #category : #accessing }
 HighchartsAnnotations >> controlPointOptions [
 
-	"Options for annotation´s control points. Each control point
-inherits options from controlPointOptions object.
-Options from the controlPointOptions can be overwritten
-by options in a specific control point.
+	"Options for annotation´s control points. Each control point inherits options from controlPointOptions object. Options from the controlPointOptions can be overwritten by options in a specific control point.
 "
 	^ configurationOptions at: 'controlPointOptions' ifAbsentPut: [ HighchartsAnnotationsControlPointOptions new ]
 ]
 
 { #category : #accessing }
-HighchartsAnnotations >> draggable: aString [
+HighchartsAnnotations >> draggable: aHighchartsAnnotationDraggableValue [
 
-	"Allow an annotation to be draggable by a user. Possible
-values are &quot;x&quot;, &quot;xy&quot;, &quot;y&quot; and &quot;&quot; (disabled).
+	"Allow an annotation to be draggable by a user. Possible values are ´x´, ´xy´, ´y´ and ´´ (disabled).
 Defaults to xy."
 
-	configurationOptions at: 'draggable' put: aString
+	configurationOptions at: 'draggable' put: aHighchartsAnnotationDraggableValue
 ]
 
 { #category : #accessing }
@@ -40,21 +36,18 @@ HighchartsAnnotations >> events: anObject [
 ]
 
 { #category : #accessing }
-HighchartsAnnotations >> id: aStringOrnumber [
+HighchartsAnnotations >> id: aNumberOrstring [
 
-	"Sets an ID for an annotation. Can be user later when removing an
-annotation in Chart#removeAnnotation(id) method.
+	"Sets an ID for an annotation. Can be user later when removing an annotation in Chart#removeAnnotation(id) method.
 "
 
-	configurationOptions at: 'id' put: aStringOrnumber
+	configurationOptions at: 'id' put: aNumberOrstring
 ]
 
 { #category : #accessing }
 HighchartsAnnotations >> labelOptions [
 
-	"Options for annotation´s labels. Each label inherits options
-from the labelOptions object. An option from the labelOptions
-can be overwritten by config for a specific label.
+	"Options for annotation´s labels. Each label inherits options from the labelOptions object. An option from the labelOptions can be overwritten by config for a specific label.
 "
 	^ configurationOptions at: 'labelOptions' ifAbsentPut: [ HighchartsAnnotationsLabelOptions new ]
 ]
@@ -62,9 +55,7 @@ can be overwritten by config for a specific label.
 { #category : #accessing }
 HighchartsAnnotations >> labels [
 
-	"An array of labels for the annotation. For options that apply to
-multiple labels, they can be added to the
-labelOptions.
+	"An array of labels for the annotation. For options that apply to multiple labels, they can be added to the labelOptions.
 "
 	^ configurationOptions at: 'labels' ifAbsentPut: [ HighchartsAnnotationsLabels new ]
 ]
@@ -72,9 +63,7 @@ labelOptions.
 { #category : #accessing }
 HighchartsAnnotations >> shapeOptions [
 
-	"Options for annotation´s shapes. Each shape inherits options from
-the shapeOptions object. An option from the shapeOptions can be
-overwritten by config for a specific shape.
+	"Options for annotation´s shapes. Each shape inherits options from the shapeOptions object. An option from the shapeOptions can be overwritten by config for a specific shape.
 "
 	^ configurationOptions at: 'shapeOptions' ifAbsentPut: [ HighchartsAnnotationsShapeOptions new ]
 ]
@@ -82,9 +71,7 @@ overwritten by config for a specific shape.
 { #category : #accessing }
 HighchartsAnnotations >> shapes [
 
-	"An array of shapes for the annotation. For options that apply to
-multiple shapes, then can be added to the
-shapeOptions.
+	"An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the shapeOptions.
 "
 	^ configurationOptions at: 'shapes' ifAbsentPut: [ HighchartsAnnotationsShapes new ]
 ]

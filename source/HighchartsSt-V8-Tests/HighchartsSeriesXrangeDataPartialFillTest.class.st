@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataPartialFillTest >> testAmount [
+HighchartsSeriesXrangeDataPartialFillTest >> testSetAmount [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesXrangeDataPartialFillTest >> testAmount [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesXrangeDataPartialFillTest >> testFill [
+HighchartsSeriesXrangeDataPartialFillTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

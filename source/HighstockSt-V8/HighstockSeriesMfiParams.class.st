@@ -19,9 +19,7 @@ Defaults to 4."
 { #category : #accessing }
 HighstockSeriesMfiParams >> period: aNumber [
 
-	"The base period for indicator calculations. This is the number of
-data points which are taken into account for the indicator
-calculations.
+	"The base period for indicator calculations. This is the number of data points which are taken into account for the indicator calculations.
 Defaults to 14."
 
 	configurationOptions at: 'period' put: aNumber
@@ -30,9 +28,7 @@ Defaults to 14."
 { #category : #accessing }
 HighstockSeriesMfiParams >> volumeSeriesID: aString [
 
-	"The id of volume series which is mandatory.
-For example using OHLC data, volumeSeriesID=´volume´ means
-the indicator will be calculated using OHLC and volume values.
+	"The id of volume series which is mandatory. For example using OHLC data, volumeSeriesID=´volume´ means the indicator will be calculated using OHLC and volume values.
 Defaults to volume."
 
 	configurationOptions at: 'volumeSeriesID' put: aString

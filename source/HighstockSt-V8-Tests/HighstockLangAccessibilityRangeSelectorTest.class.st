@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityRangeSelectorTest >> testButtonText [
+HighstockLangAccessibilityRangeSelectorTest >> testSetButtonText [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityRangeSelectorTest >> testButtonText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityRangeSelectorTest >> testMaxInputLabel [
+HighstockLangAccessibilityRangeSelectorTest >> testSetMaxInputLabel [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilityRangeSelectorTest >> testMaxInputLabel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityRangeSelectorTest >> testMinInputLabel [
+HighstockLangAccessibilityRangeSelectorTest >> testSetMinInputLabel [
 
 	| component javascript expectedConfiguration |
 

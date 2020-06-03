@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeAccessibilityKeyboardNavigationTest >> testEnabled [
+HighchartsPlotOptionsColumnrangeAccessibilityKeyboardNavigationTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

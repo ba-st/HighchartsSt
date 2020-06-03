@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMillisecon
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

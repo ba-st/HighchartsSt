@@ -43,20 +43,25 @@ HighstockSeriesWindbarbData >> accessibility [
 { #category : #accessing }
 HighstockSeriesWindbarbData >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Individual color for the point. By default the color is pulled from
-the global colors array.
-In styled mode, the color option doesn´t take effect. Instead, use
-colorIndex.
+	"Individual color for the point. By default the color is pulled from the global colors array. In styled mode, the color option doesn´t take effect. Instead, use colorIndex.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
+HighstockSeriesWindbarbData >> custom: anObject [
+
+	"A reserved subspace to store options and values for customized functionality. Here you can add additional data for your own event callbacks and formatter callbacks.
+"
+
+	configurationOptions at: 'custom' put: anObject
+]
+
+{ #category : #accessing }
 HighstockSeriesWindbarbData >> dataLabels [
 
-	"Individual data label for each point. The options are the same as
-the ones for plotOptions.series.dataLabels.
+	"Individual data label for each point. The options are the same as the ones for plotOptions.series.dataLabels.
 "
 	^ configurationOptions at: 'dataLabels' ifAbsentPut: [ HighstockSeriesWindbarbDataDataLabels new ]
 ]
@@ -64,8 +69,7 @@ the ones for plotOptions.series.dataLabels.
 { #category : #accessing }
 HighstockSeriesWindbarbData >> description: aString [
 
-	"A description of the point to add to the screen reader information
-about the point.
+	"A description of the point to add to the screen reader information about the point.
 "
 
 	configurationOptions at: 'description' put: aString
@@ -83,8 +87,7 @@ HighstockSeriesWindbarbData >> direction: aNumber [
 { #category : #accessing }
 HighstockSeriesWindbarbData >> dragDrop [
 
-	"Point specific options for the draggable-points module. Overrides options on
-series.dragDrop.
+	"Point specific options for the draggable-points module. Overrides options on series.dragDrop.
 "
 	^ configurationOptions at: 'dragDrop' ifAbsentPut: [ HighstockSeriesWindbarbDataDragDrop new ]
 ]
@@ -101,8 +104,7 @@ HighstockSeriesWindbarbData >> events: anObject [
 { #category : #accessing }
 HighstockSeriesWindbarbData >> id: aString [
 
-	"An id for the point. This can be used after render time to get a
-pointer to the point object through chart.get().
+	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
 "
 
 	configurationOptions at: 'id' put: aString
@@ -111,9 +113,7 @@ pointer to the point object through chart.get().
 { #category : #accessing }
 HighstockSeriesWindbarbData >> labelrank: aNumber [
 
-	"The rank for this point´s data label in case of collision. If two
-data labels are about to overlap, only the one with the highest labelrank
-will be drawn.
+	"The rank for this point´s data label in case of collision. If two data labels are about to overlap, only the one with the highest labelrank will be drawn.
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
@@ -146,19 +146,18 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockSeriesWindbarbData >> value: aNumber [
+HighstockSeriesWindbarbData >> value: aNumberOrNil [
 
 	"The wind speed in meters per second.
 "
 
-	configurationOptions at: 'value' put: aNumber
+	configurationOptions at: 'value' put: aNumberOrNil
 ]
 
 { #category : #accessing }
 HighstockSeriesWindbarbData >> x: aNumber [
 
-	"The x value of the point. For datetime axes, the X value is the timestamp
-in milliseconds since 1970.
+	"The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.
 "
 
 	configurationOptions at: 'x' put: aNumber

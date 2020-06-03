@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsStreamgraphDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

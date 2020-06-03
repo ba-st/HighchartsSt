@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisEventsTest >> testAfterSetExtremes [
+HighchartsColorAxisEventsTest >> testSetAfterSetExtremes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsColorAxisEventsTest >> testAfterSetExtremes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisEventsTest >> testLegendItemClick [
+HighchartsColorAxisEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsColorAxisEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsColorAxisEventsTest >> testSetExtremes [
+HighchartsColorAxisEventsTest >> testSetSetExtremes [
 
 	| component javascript expectedConfiguration |
 

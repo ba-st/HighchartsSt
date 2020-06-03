@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testBarBackgroundColor [
+HighstockScrollbarTest >> testSetBarBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockScrollbarTest >> testBarBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testBarBorderColor [
+HighstockScrollbarTest >> testSetBarBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockScrollbarTest >> testBarBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testBarBorderRadius [
+HighstockScrollbarTest >> testSetBarBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockScrollbarTest >> testBarBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testBarBorderWidth [
+HighstockScrollbarTest >> testSetBarBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockScrollbarTest >> testBarBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testButtonArrowColor [
+HighstockScrollbarTest >> testSetButtonArrowColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockScrollbarTest >> testButtonArrowColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testButtonBackgroundColor [
+HighstockScrollbarTest >> testSetButtonBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockScrollbarTest >> testButtonBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testButtonBorderColor [
+HighstockScrollbarTest >> testSetButtonBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockScrollbarTest >> testButtonBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testButtonBorderRadius [
+HighstockScrollbarTest >> testSetButtonBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockScrollbarTest >> testButtonBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testButtonBorderWidth [
+HighstockScrollbarTest >> testSetButtonBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockScrollbarTest >> testButtonBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testEnabled [
+HighstockScrollbarTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockScrollbarTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testHeight [
+HighstockScrollbarTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockScrollbarTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testLiveRedraw [
+HighstockScrollbarTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockScrollbarTest >> testLiveRedraw [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testMargin [
+HighstockScrollbarTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockScrollbarTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testMinWidth [
+HighstockScrollbarTest >> testSetMinWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockScrollbarTest >> testMinWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testRifleColor [
+HighstockScrollbarTest >> testSetRifleColor [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockScrollbarTest >> testRifleColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testShowFull [
+HighstockScrollbarTest >> testSetShowFull [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockScrollbarTest >> testShowFull [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testStep [
+HighstockScrollbarTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockScrollbarTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testTrackBackgroundColor [
+HighstockScrollbarTest >> testSetTrackBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockScrollbarTest >> testTrackBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testTrackBorderColor [
+HighstockScrollbarTest >> testSetTrackBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockScrollbarTest >> testTrackBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testTrackBorderRadius [
+HighstockScrollbarTest >> testSetTrackBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockScrollbarTest >> testTrackBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testTrackBorderWidth [
+HighstockScrollbarTest >> testSetTrackBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockScrollbarTest >> testTrackBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockScrollbarTest >> testZIndex [
+HighstockScrollbarTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

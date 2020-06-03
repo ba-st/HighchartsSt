@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testClassName [
+HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testColor [
+HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testCursor [
+HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testLineColor [
+HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testLineWidth [
+HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testPathFormatter [
+HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testZIndex [
+HighchartsPlotOptionsWaterfallDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

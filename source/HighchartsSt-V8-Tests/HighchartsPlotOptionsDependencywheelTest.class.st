@@ -5,7 +5,161 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testAllAreas [
+HighchartsPlotOptionsDependencywheelTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetLevels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component levels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'levels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +173,7 @@ HighchartsPlotOptionsDependencywheelTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testAllowPointSelect [
+HighchartsPlotOptionsDependencywheelTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +187,7 @@ HighchartsPlotOptionsDependencywheelTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testBoostBlending [
+HighchartsPlotOptionsDependencywheelTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +201,7 @@ HighchartsPlotOptionsDependencywheelTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testBorderColor [
+HighchartsPlotOptionsDependencywheelTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +215,7 @@ HighchartsPlotOptionsDependencywheelTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testBorderWidth [
+HighchartsPlotOptionsDependencywheelTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +229,7 @@ HighchartsPlotOptionsDependencywheelTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testCenter [
+HighchartsPlotOptionsDependencywheelTest >> testSetCenter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +243,7 @@ HighchartsPlotOptionsDependencywheelTest >> testCenter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testClassName [
+HighchartsPlotOptionsDependencywheelTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +257,7 @@ HighchartsPlotOptionsDependencywheelTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testClip [
+HighchartsPlotOptionsDependencywheelTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +271,7 @@ HighchartsPlotOptionsDependencywheelTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testColor [
+HighchartsPlotOptionsDependencywheelTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +285,7 @@ HighchartsPlotOptionsDependencywheelTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testColorByPoint [
+HighchartsPlotOptionsDependencywheelTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +299,7 @@ HighchartsPlotOptionsDependencywheelTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testColorIndex [
+HighchartsPlotOptionsDependencywheelTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +313,7 @@ HighchartsPlotOptionsDependencywheelTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testColors [
+HighchartsPlotOptionsDependencywheelTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +327,7 @@ HighchartsPlotOptionsDependencywheelTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testCompare [
+HighchartsPlotOptionsDependencywheelTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +341,7 @@ HighchartsPlotOptionsDependencywheelTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testCompareBase [
+HighchartsPlotOptionsDependencywheelTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +355,7 @@ HighchartsPlotOptionsDependencywheelTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testCompareStart [
+HighchartsPlotOptionsDependencywheelTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +369,7 @@ HighchartsPlotOptionsDependencywheelTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testCursor [
+HighchartsPlotOptionsDependencywheelTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +383,7 @@ HighchartsPlotOptionsDependencywheelTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testCurveFactor [
+HighchartsPlotOptionsDependencywheelTest >> testSetCurveFactor [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +397,35 @@ HighchartsPlotOptionsDependencywheelTest >> testCurveFactor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testDescription [
+HighchartsPlotOptionsDependencywheelTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsDependencywheel new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsDependencywheelTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighchartsPlotOptionsDependencywheelTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testEnableMouseTracking [
+HighchartsPlotOptionsDependencywheelTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighchartsPlotOptionsDependencywheelTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testEvents [
+HighchartsPlotOptionsDependencywheelTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighchartsPlotOptionsDependencywheelTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsDependencywheelTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighchartsPlotOptionsDependencywheelTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testIncludeInDataExport [
+HighchartsPlotOptionsDependencywheelTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighchartsPlotOptionsDependencywheelTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testJoinBy [
+HighchartsPlotOptionsDependencywheelTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighchartsPlotOptionsDependencywheelTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testKeys [
+HighchartsPlotOptionsDependencywheelTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighchartsPlotOptionsDependencywheelTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testLinkOpacity [
+HighchartsPlotOptionsDependencywheelTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighchartsPlotOptionsDependencywheelTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testLinkedTo [
+HighchartsPlotOptionsDependencywheelTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighchartsPlotOptionsDependencywheelTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testMinLinkWidth [
+HighchartsPlotOptionsDependencywheelTest >> testSetMinLinkWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighchartsPlotOptionsDependencywheelTest >> testMinLinkWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testNavigatorOptions [
+HighchartsPlotOptionsDependencywheelTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighchartsPlotOptionsDependencywheelTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testNodePadding [
+HighchartsPlotOptionsDependencywheelTest >> testSetNodePadding [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighchartsPlotOptionsDependencywheelTest >> testNodePadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testNodeWidth [
+HighchartsPlotOptionsDependencywheelTest >> testSetNodeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighchartsPlotOptionsDependencywheelTest >> testNodeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testOpacity [
+HighchartsPlotOptionsDependencywheelTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighchartsPlotOptionsDependencywheelTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsDependencywheelTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighchartsPlotOptionsDependencywheelTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testSelected [
+HighchartsPlotOptionsDependencywheelTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighchartsPlotOptionsDependencywheelTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testShowCheckbox [
+HighchartsPlotOptionsDependencywheelTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighchartsPlotOptionsDependencywheelTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testShowInLegend [
+HighchartsPlotOptionsDependencywheelTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighchartsPlotOptionsDependencywheelTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testShowInNavigator [
+HighchartsPlotOptionsDependencywheelTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighchartsPlotOptionsDependencywheelTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsDependencywheelTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighchartsPlotOptionsDependencywheelTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testStartAngle [
+HighchartsPlotOptionsDependencywheelTest >> testSetStartAngle [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighchartsPlotOptionsDependencywheelTest >> testStartAngle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testStates [
+HighchartsPlotOptionsDependencywheelTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +733,7 @@ HighchartsPlotOptionsDependencywheelTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testStickyTracking [
+HighchartsPlotOptionsDependencywheelTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +747,7 @@ HighchartsPlotOptionsDependencywheelTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testTurboThreshold [
+HighchartsPlotOptionsDependencywheelTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +761,7 @@ HighchartsPlotOptionsDependencywheelTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testVisible [
+HighchartsPlotOptionsDependencywheelTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +775,7 @@ HighchartsPlotOptionsDependencywheelTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDependencywheelTest >> testZIndex [
+HighchartsPlotOptionsDependencywheelTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

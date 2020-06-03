@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisDateTimeLabelFormatsYearTest >> testMain [
+HighchartsYAxisDateTimeLabelFormatsYearTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 

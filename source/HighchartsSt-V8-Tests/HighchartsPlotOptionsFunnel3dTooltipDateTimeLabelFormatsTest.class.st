@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testMillisecond 
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsFunnel3dTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

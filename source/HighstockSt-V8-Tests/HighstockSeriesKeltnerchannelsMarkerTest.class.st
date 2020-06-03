@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testEnabled [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testEnabledThreshold [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testFillColor [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testHeight [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testLineColor [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testLineWidth [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testRadius [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testStates [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testSymbol [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesKeltnerchannelsMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsMarkerTest >> testWidth [
+HighstockSeriesKeltnerchannelsMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

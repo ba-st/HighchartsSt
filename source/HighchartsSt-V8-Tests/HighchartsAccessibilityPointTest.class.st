@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityPointTest >> testDateFormat [
+HighchartsAccessibilityPointTest >> testSetDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsAccessibilityPointTest >> testDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityPointTest >> testDateFormatter [
+HighchartsAccessibilityPointTest >> testSetDateFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsAccessibilityPointTest >> testDateFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityPointTest >> testDescriptionFormatter [
+HighchartsAccessibilityPointTest >> testSetDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsAccessibilityPointTest >> testDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityPointTest >> testValueDecimals [
+HighchartsAccessibilityPointTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,21 @@ HighchartsAccessibilityPointTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityPointTest >> testValuePrefix [
+HighchartsAccessibilityPointTest >> testSetValueDescriptionFormat [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAccessibilityPoint new.
+	component valueDescriptionFormat: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'valueDescriptionFormat' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAccessibilityPointTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsAccessibilityPointTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAccessibilityPointTest >> testValueSuffix [
+HighchartsAccessibilityPointTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 

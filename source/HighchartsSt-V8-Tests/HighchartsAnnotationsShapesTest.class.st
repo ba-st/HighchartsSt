@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testFill [
+HighchartsAnnotationsShapesTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsShapes new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsShapesTest >> testGetPoints [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsShapes new.
+	component points.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'points' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsShapesTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsShapes new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsShapesTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsAnnotationsShapesTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testHeight [
+HighchartsAnnotationsShapesTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsAnnotationsShapesTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testMarkerEnd [
+HighchartsAnnotationsShapesTest >> testSetMarkerEnd [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsAnnotationsShapesTest >> testMarkerEnd [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testMarkerStart [
+HighchartsAnnotationsShapesTest >> testSetMarkerStart [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsAnnotationsShapesTest >> testMarkerStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testR [
+HighchartsAnnotationsShapesTest >> testSetR [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsAnnotationsShapesTest >> testR [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testSnap [
+HighchartsAnnotationsShapesTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,21 @@ HighchartsAnnotationsShapesTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testStroke [
+HighchartsAnnotationsShapesTest >> testSetSrc [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotationsShapes new.
+	component src: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'src' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsAnnotationsShapesTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsAnnotationsShapesTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testStrokeWidth [
+HighchartsAnnotationsShapesTest >> testSetStrokeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsAnnotationsShapesTest >> testStrokeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testType [
+HighchartsAnnotationsShapesTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsAnnotationsShapesTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsAnnotationsShapesTest >> testWidth [
+HighchartsAnnotationsShapesTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

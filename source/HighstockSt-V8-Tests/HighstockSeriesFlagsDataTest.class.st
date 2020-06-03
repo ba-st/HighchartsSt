@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testClassName [
+HighstockSeriesFlagsDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlagsData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlagsData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockSeriesFlagsDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testColor [
+HighstockSeriesFlagsDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockSeriesFlagsDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testColorIndex [
+HighstockSeriesFlagsDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,21 @@ HighstockSeriesFlagsDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testDescription [
+HighstockSeriesFlagsDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlagsData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesFlagsDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighstockSeriesFlagsDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testDrilldown [
+HighstockSeriesFlagsDataTest >> testSetDrilldown [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighstockSeriesFlagsDataTest >> testDrilldown [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testEvents [
+HighstockSeriesFlagsDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighstockSeriesFlagsDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testFillColor [
+HighstockSeriesFlagsDataTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighstockSeriesFlagsDataTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testId [
+HighstockSeriesFlagsDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighstockSeriesFlagsDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testLabelrank [
+HighstockSeriesFlagsDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighstockSeriesFlagsDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testSelected [
+HighstockSeriesFlagsDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighstockSeriesFlagsDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testText [
+HighstockSeriesFlagsDataTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighstockSeriesFlagsDataTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testTitle [
+HighstockSeriesFlagsDataTest >> testSetTitle [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighstockSeriesFlagsDataTest >> testTitle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesFlagsDataTest >> testX [
+HighstockSeriesFlagsDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 

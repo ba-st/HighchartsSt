@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testClassName [
+HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testColor [
+HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testCursor [
+HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testLineColor [
+HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testLineWidth [
+HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testPathFormatter [
+HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testZIndex [
+HighchartsSeriesAreasplinerangeDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

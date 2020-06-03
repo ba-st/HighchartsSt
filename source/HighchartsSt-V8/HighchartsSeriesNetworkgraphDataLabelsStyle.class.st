@@ -52,3 +52,10 @@ HighchartsSeriesNetworkgraphDataLabelsStyle >> textOutline: aString [
 
 	configurationOptions at: 'textOutline' put: aString
 ]
+
+{ #category : #accessing }
+HighchartsSeriesNetworkgraphDataLabelsStyle >> transition: aString [
+
+
+	configurationOptions at: 'transition' put: aString
+]

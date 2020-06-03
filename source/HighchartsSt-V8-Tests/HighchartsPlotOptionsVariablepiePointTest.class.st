@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointTest >> testEvents [
+HighchartsPlotOptionsVariablepiePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

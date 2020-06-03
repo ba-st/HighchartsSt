@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testClick [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testDrag [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testDragStart [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testDrop [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testMouseOut [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testMouseOver [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testRemove [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testSelect [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testUnselect [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsSunburstPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstPointEventsTest >> testUpdate [
+HighchartsPlotOptionsSunburstPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

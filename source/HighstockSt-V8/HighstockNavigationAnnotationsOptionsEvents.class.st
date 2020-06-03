@@ -1,3 +1,6 @@
+"
+Events available in annotations.
+"
 Class {
 	#name : #HighstockNavigationAnnotationsOptionsEvents,
 	#superclass : #HighchartsComponent,
@@ -16,8 +19,7 @@ HighstockNavigationAnnotationsOptionsEvents >> add: aHighchartsEventCallbackFunc
 { #category : #accessing }
 HighstockNavigationAnnotationsOptionsEvents >> afterUpdate: aHighchartsEventCallbackFunctionOfHighchartsAnnotation [
 
-	"Event callback when annotation is updated (e.g. drag and
-droppped or resized by control points).
+	"Event callback when annotation is updated (e.g. drag and droppped or resized by control points).
 "
 
 	configurationOptions at: 'afterUpdate' put: aHighchartsEventCallbackFunctionOfHighchartsAnnotation

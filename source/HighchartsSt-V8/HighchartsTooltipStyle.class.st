@@ -33,13 +33,6 @@ HighchartsTooltipStyle >> fontSize: aString [
 ]
 
 { #category : #accessing }
-HighchartsTooltipStyle >> pointerEvents: aString [
-
-
-	configurationOptions at: 'pointerEvents' put: aString
-]
-
-{ #category : #accessing }
 HighchartsTooltipStyle >> whiteSpace: aString [
 
 

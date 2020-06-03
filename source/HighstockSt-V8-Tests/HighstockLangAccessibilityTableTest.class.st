@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityTableTest >> testTableSummary [
+HighstockLangAccessibilityTableTest >> testSetTableSummary [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilityTableTest >> testTableSummary [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilityTableTest >> testViewAsDataTableButtonText [
+HighstockLangAccessibilityTableTest >> testSetViewAsDataTableButtonText [
 
 	| component javascript expectedConfiguration |
 

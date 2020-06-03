@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testAfterAnimate [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsStreamgraphEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testCheckboxClick [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsStreamgraphEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testClick [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsStreamgraphEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testHide [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsStreamgraphEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsStreamgraphEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testMouseOut [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsStreamgraphEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testMouseOver [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsStreamgraphEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphEventsTest >> testShow [
+HighchartsPlotOptionsStreamgraphEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testBarBackgroundColor [
+HighstockColorAxisScrollbarTest >> testSetBarBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockColorAxisScrollbarTest >> testBarBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testBarBorderColor [
+HighstockColorAxisScrollbarTest >> testSetBarBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockColorAxisScrollbarTest >> testBarBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testBarBorderRadius [
+HighstockColorAxisScrollbarTest >> testSetBarBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockColorAxisScrollbarTest >> testBarBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testBarBorderWidth [
+HighstockColorAxisScrollbarTest >> testSetBarBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockColorAxisScrollbarTest >> testBarBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testButtonArrowColor [
+HighstockColorAxisScrollbarTest >> testSetButtonArrowColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockColorAxisScrollbarTest >> testButtonArrowColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testButtonBackgroundColor [
+HighstockColorAxisScrollbarTest >> testSetButtonBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockColorAxisScrollbarTest >> testButtonBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testButtonBorderColor [
+HighstockColorAxisScrollbarTest >> testSetButtonBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockColorAxisScrollbarTest >> testButtonBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testButtonBorderRadius [
+HighstockColorAxisScrollbarTest >> testSetButtonBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockColorAxisScrollbarTest >> testButtonBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testButtonBorderWidth [
+HighstockColorAxisScrollbarTest >> testSetButtonBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockColorAxisScrollbarTest >> testButtonBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testEnabled [
+HighstockColorAxisScrollbarTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockColorAxisScrollbarTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testHeight [
+HighstockColorAxisScrollbarTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighstockColorAxisScrollbarTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testLiveRedraw [
+HighstockColorAxisScrollbarTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighstockColorAxisScrollbarTest >> testLiveRedraw [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testMargin [
+HighstockColorAxisScrollbarTest >> testSetMargin [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighstockColorAxisScrollbarTest >> testMargin [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testMinWidth [
+HighstockColorAxisScrollbarTest >> testSetMinWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighstockColorAxisScrollbarTest >> testMinWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testRifleColor [
+HighstockColorAxisScrollbarTest >> testSetRifleColor [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighstockColorAxisScrollbarTest >> testRifleColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testShowFull [
+HighstockColorAxisScrollbarTest >> testSetShowFull [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighstockColorAxisScrollbarTest >> testShowFull [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testStep [
+HighstockColorAxisScrollbarTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighstockColorAxisScrollbarTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testTrackBackgroundColor [
+HighstockColorAxisScrollbarTest >> testSetTrackBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighstockColorAxisScrollbarTest >> testTrackBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testTrackBorderColor [
+HighstockColorAxisScrollbarTest >> testSetTrackBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighstockColorAxisScrollbarTest >> testTrackBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testTrackBorderRadius [
+HighstockColorAxisScrollbarTest >> testSetTrackBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighstockColorAxisScrollbarTest >> testTrackBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testTrackBorderWidth [
+HighstockColorAxisScrollbarTest >> testSetTrackBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighstockColorAxisScrollbarTest >> testTrackBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisScrollbarTest >> testZIndex [
+HighstockColorAxisScrollbarTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

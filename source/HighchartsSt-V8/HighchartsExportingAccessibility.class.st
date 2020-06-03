@@ -9,10 +9,10 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsExportingAccessibility >> enabled: anObject [
+HighchartsExportingAccessibility >> enabled: aBoolean [
 
 	"Enable accessibility support for the export menu.
-"
+Defaults to true."
 
-	configurationOptions at: 'enabled' put: anObject
+	configurationOptions at: 'enabled' put: aBoolean
 ]

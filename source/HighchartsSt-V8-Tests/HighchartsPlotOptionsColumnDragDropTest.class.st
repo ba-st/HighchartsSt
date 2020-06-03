@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDragMaxX [
+HighchartsPlotOptionsColumnDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDragMaxY [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDragMinX [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDragMinY [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDragPrecisionX [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDragPrecisionY [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDragSensitivity [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDraggableX [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testDraggableY [
+HighchartsPlotOptionsColumnDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testGroupBy [
+HighchartsPlotOptionsColumnDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsPlotOptionsColumnDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnDragDropTest >> testLiveRedraw [
+HighchartsPlotOptionsColumnDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

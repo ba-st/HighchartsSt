@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerTest >> testFillColor [
+HighstockPlotOptionsBubbleMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsBubbleMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerTest >> testFillOpacity [
+HighstockPlotOptionsBubbleMarkerTest >> testSetFillOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsBubbleMarkerTest >> testFillOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerTest >> testLineColor [
+HighstockPlotOptionsBubbleMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsBubbleMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerTest >> testLineWidth [
+HighstockPlotOptionsBubbleMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsBubbleMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerTest >> testStates [
+HighstockPlotOptionsBubbleMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsBubbleMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsBubbleMarkerTest >> testSymbol [
+HighstockPlotOptionsBubbleMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

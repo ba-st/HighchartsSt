@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testClick [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testDrag [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testDragStart [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testDrop [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testMouseOut [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testMouseOver [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testRemove [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSelect [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testUnselect [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsAroonoscillatorPointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorPointEventsTest >> testUpdate [
+HighstockPlotOptionsAroonoscillatorPointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

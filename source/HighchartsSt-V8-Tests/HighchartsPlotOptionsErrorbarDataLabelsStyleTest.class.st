@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testColor [
+HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testFontSize [
+HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testFontWeight [
+HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testTextOutline [
+HighchartsPlotOptionsErrorbarDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

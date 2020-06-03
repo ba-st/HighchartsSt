@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeMarkerStatesSelectTest >> testEnabled [
+HighstockSeriesArearangeMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesArearangeMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeMarkerStatesSelectTest >> testFillColor [
+HighstockSeriesArearangeMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesArearangeMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeMarkerStatesSelectTest >> testLineColor [
+HighstockSeriesArearangeMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesArearangeMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeMarkerStatesSelectTest >> testLineWidth [
+HighstockSeriesArearangeMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesArearangeMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesArearangeMarkerStatesSelectTest >> testRadius [
+HighstockSeriesArearangeMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

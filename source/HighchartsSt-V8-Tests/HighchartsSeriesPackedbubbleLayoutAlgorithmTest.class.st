@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testBubblePadding [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testGetParentNodeOptions [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleLayoutAlgorithm new.
+	component parentNodeOptions.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'parentNodeOptions' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetBubblePadding [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testBubblePadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testDragBetweenSeries [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetDragBetweenSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testDragBetweenSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testEnableSimulation [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetEnableSimulation [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testEnableSimulation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testFriction [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetFriction [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testFriction [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testGravitationalConstant [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetGravitationalConstant [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testGravitationalConstant [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testInitialPositionRadius [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetInitialPositionRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testInitialPositionRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testInitialPositions [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetInitialPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testInitialPositions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testIntegration [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetIntegration [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testIntegration [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testLinkLength [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetLinkLength [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testLinkLength [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testMaxIterations [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetMaxIterations [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testMaxIterations [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testMaxSpeed [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetMaxSpeed [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testMaxSpeed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testParentNodeLimit [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetParentNodeLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testParentNodeLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSeriesInteraction [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetSeriesInteraction [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSeriesInteraction [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSplitSeries [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetSplitSeries [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSplitSeries [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testType [
+HighchartsSeriesPackedbubbleLayoutAlgorithmTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

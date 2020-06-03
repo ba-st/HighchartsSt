@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testClassName [
+HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testColor [
+HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testCursor [
+HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testLineColor [
+HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testZIndex [
+HighstockSeriesKeltnerchannelsDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

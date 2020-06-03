@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dJitterTest >> testX [
+HighchartsPlotOptionsScatter3dJitterTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsScatter3dJitterTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsScatter3dJitterTest >> testY [
+HighchartsPlotOptionsScatter3dJitterTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

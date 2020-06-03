@@ -5,7 +5,161 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testAllAreas [
+HighchartsPlotOptionsSplineTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +173,7 @@ HighchartsPlotOptionsSplineTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testAllowPointSelect [
+HighchartsPlotOptionsSplineTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +187,7 @@ HighchartsPlotOptionsSplineTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testAnimationLimit [
+HighchartsPlotOptionsSplineTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +201,7 @@ HighchartsPlotOptionsSplineTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testBoostBlending [
+HighchartsPlotOptionsSplineTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +215,7 @@ HighchartsPlotOptionsSplineTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testBoostThreshold [
+HighchartsPlotOptionsSplineTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +229,7 @@ HighchartsPlotOptionsSplineTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testBorderColor [
+HighchartsPlotOptionsSplineTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +243,7 @@ HighchartsPlotOptionsSplineTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testBorderWidth [
+HighchartsPlotOptionsSplineTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +257,7 @@ HighchartsPlotOptionsSplineTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testClassName [
+HighchartsPlotOptionsSplineTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +271,7 @@ HighchartsPlotOptionsSplineTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testClip [
+HighchartsPlotOptionsSplineTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +285,7 @@ HighchartsPlotOptionsSplineTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testColor [
+HighchartsPlotOptionsSplineTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +299,7 @@ HighchartsPlotOptionsSplineTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testColorAxis [
+HighchartsPlotOptionsSplineTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +313,7 @@ HighchartsPlotOptionsSplineTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testColorIndex [
+HighchartsPlotOptionsSplineTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +327,7 @@ HighchartsPlotOptionsSplineTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testColorKey [
+HighchartsPlotOptionsSplineTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +341,7 @@ HighchartsPlotOptionsSplineTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testConnectEnds [
+HighchartsPlotOptionsSplineTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +355,7 @@ HighchartsPlotOptionsSplineTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testConnectNulls [
+HighchartsPlotOptionsSplineTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +369,21 @@ HighchartsPlotOptionsSplineTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testCropThreshold [
+HighchartsPlotOptionsSplineTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +397,7 @@ HighchartsPlotOptionsSplineTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testCursor [
+HighchartsPlotOptionsSplineTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +411,21 @@ HighchartsPlotOptionsSplineTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testDashStyle [
+HighchartsPlotOptionsSplineTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsSpline new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsSplineTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +439,7 @@ HighchartsPlotOptionsSplineTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testDescription [
+HighchartsPlotOptionsSplineTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +453,7 @@ HighchartsPlotOptionsSplineTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testEnableMouseTracking [
+HighchartsPlotOptionsSplineTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +467,7 @@ HighchartsPlotOptionsSplineTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testEvents [
+HighchartsPlotOptionsSplineTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +481,7 @@ HighchartsPlotOptionsSplineTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testFindNearestPointBy [
+HighchartsPlotOptionsSplineTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +495,7 @@ HighchartsPlotOptionsSplineTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testGetExtremesFromAll [
+HighchartsPlotOptionsSplineTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +509,7 @@ HighchartsPlotOptionsSplineTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testIncludeInDataExport [
+HighchartsPlotOptionsSplineTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +523,7 @@ HighchartsPlotOptionsSplineTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testJoinBy [
+HighchartsPlotOptionsSplineTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +537,7 @@ HighchartsPlotOptionsSplineTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testKeys [
+HighchartsPlotOptionsSplineTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +551,7 @@ HighchartsPlotOptionsSplineTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testLineWidth [
+HighchartsPlotOptionsSplineTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +565,7 @@ HighchartsPlotOptionsSplineTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testLinecap [
+HighchartsPlotOptionsSplineTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +579,7 @@ HighchartsPlotOptionsSplineTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testLinkedTo [
+HighchartsPlotOptionsSplineTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +593,7 @@ HighchartsPlotOptionsSplineTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testNegativeColor [
+HighchartsPlotOptionsSplineTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +607,7 @@ HighchartsPlotOptionsSplineTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testOpacity [
+HighchartsPlotOptionsSplineTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +621,7 @@ HighchartsPlotOptionsSplineTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsSplineTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +635,7 @@ HighchartsPlotOptionsSplineTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testPointInterval [
+HighchartsPlotOptionsSplineTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +649,7 @@ HighchartsPlotOptionsSplineTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testPointIntervalUnit [
+HighchartsPlotOptionsSplineTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +663,7 @@ HighchartsPlotOptionsSplineTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testPointPlacement [
+HighchartsPlotOptionsSplineTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +677,7 @@ HighchartsPlotOptionsSplineTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testPointStart [
+HighchartsPlotOptionsSplineTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +691,7 @@ HighchartsPlotOptionsSplineTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testSelected [
+HighchartsPlotOptionsSplineTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +705,7 @@ HighchartsPlotOptionsSplineTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testShadow [
+HighchartsPlotOptionsSplineTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +719,7 @@ HighchartsPlotOptionsSplineTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testShowCheckbox [
+HighchartsPlotOptionsSplineTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +733,7 @@ HighchartsPlotOptionsSplineTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testShowInLegend [
+HighchartsPlotOptionsSplineTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +747,7 @@ HighchartsPlotOptionsSplineTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsSplineTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +761,7 @@ HighchartsPlotOptionsSplineTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testSoftThreshold [
+HighchartsPlotOptionsSplineTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +775,7 @@ HighchartsPlotOptionsSplineTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testStacking [
+HighchartsPlotOptionsSplineTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -607,7 +789,7 @@ HighchartsPlotOptionsSplineTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testStates [
+HighchartsPlotOptionsSplineTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -621,7 +803,7 @@ HighchartsPlotOptionsSplineTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testStickyTracking [
+HighchartsPlotOptionsSplineTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +817,7 @@ HighchartsPlotOptionsSplineTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testThreshold [
+HighchartsPlotOptionsSplineTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -649,7 +831,7 @@ HighchartsPlotOptionsSplineTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testTurboThreshold [
+HighchartsPlotOptionsSplineTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -663,7 +845,7 @@ HighchartsPlotOptionsSplineTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testVisible [
+HighchartsPlotOptionsSplineTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -677,7 +859,7 @@ HighchartsPlotOptionsSplineTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testZIndex [
+HighchartsPlotOptionsSplineTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -691,7 +873,7 @@ HighchartsPlotOptionsSplineTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSplineTest >> testZoneAxis [
+HighchartsPlotOptionsSplineTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

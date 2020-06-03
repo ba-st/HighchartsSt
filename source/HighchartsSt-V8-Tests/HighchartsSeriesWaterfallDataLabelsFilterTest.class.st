@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallDataLabelsFilterTest >> testOperator [
+HighchartsSeriesWaterfallDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesWaterfallDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallDataLabelsFilterTest >> testProperty [
+HighchartsSeriesWaterfallDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesWaterfallDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesWaterfallDataLabelsFilterTest >> testValue [
+HighchartsSeriesWaterfallDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

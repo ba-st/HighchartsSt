@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testClassName [
+HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testColor [
+HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testCursor [
+HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testLineColor [
+HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testLineWidth [
+HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testPathFormatter [
+HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testSetPathFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testPathFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testZIndex [
+HighstockSeriesAroonoscillatorDragDropDragHandleTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

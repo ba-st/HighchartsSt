@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testAlign [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testRotation [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testStyle [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testText [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testTextAlign [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testUseHTML [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testVerticalAlign [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testX [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockNavigatorXAxisPlotBandsLabelTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisPlotBandsLabelTest >> testY [
+HighstockNavigatorXAxisPlotBandsLabelTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

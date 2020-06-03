@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnDataLabelsStyleTest >> testColor [
+HighstockPlotOptionsColumnDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsColumnDataLabelsStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnDataLabelsStyleTest >> testFontSize [
+HighstockPlotOptionsColumnDataLabelsStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsColumnDataLabelsStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnDataLabelsStyleTest >> testFontWeight [
+HighstockPlotOptionsColumnDataLabelsStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsColumnDataLabelsStyleTest >> testFontWeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsColumnDataLabelsStyleTest >> testTextOutline [
+HighstockPlotOptionsColumnDataLabelsStyleTest >> testSetTextOutline [
 
 	| component javascript expectedConfiguration |
 

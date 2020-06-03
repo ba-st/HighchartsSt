@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testBeforeParse [
+HighchartsDataTest >> testSetBeforeParse [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsDataTest >> testBeforeParse [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testColumns [
+HighchartsDataTest >> testSetColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsDataTest >> testColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testColumnsURL [
+HighchartsDataTest >> testSetColumnsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsDataTest >> testColumnsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testComplete [
+HighchartsDataTest >> testSetComplete [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsDataTest >> testComplete [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testCsv [
+HighchartsDataTest >> testSetCsv [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsDataTest >> testCsv [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testCsvURL [
+HighchartsDataTest >> testSetCsvURL [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsDataTest >> testCsvURL [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testDataRefreshRate [
+HighchartsDataTest >> testSetDataRefreshRate [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsDataTest >> testDataRefreshRate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testDateFormat [
+HighchartsDataTest >> testSetDateFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsDataTest >> testDateFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testDecimalPoint [
+HighchartsDataTest >> testSetDecimalPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsDataTest >> testDecimalPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testEnablePolling [
+HighchartsDataTest >> testSetEnablePolling [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsDataTest >> testEnablePolling [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testEndColumn [
+HighchartsDataTest >> testSetEndColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +159,7 @@ HighchartsDataTest >> testEndColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testEndRow [
+HighchartsDataTest >> testSetEndRow [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +173,7 @@ HighchartsDataTest >> testEndRow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testFirstRowAsNames [
+HighchartsDataTest >> testSetFirstRowAsNames [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +187,7 @@ HighchartsDataTest >> testFirstRowAsNames [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testGoogleSpreadsheetKey [
+HighchartsDataTest >> testSetGoogleSpreadsheetKey [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +201,7 @@ HighchartsDataTest >> testGoogleSpreadsheetKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testGoogleSpreadsheetWorksheet [
+HighchartsDataTest >> testSetGoogleSpreadsheetWorksheet [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +215,7 @@ HighchartsDataTest >> testGoogleSpreadsheetWorksheet [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testItemDelimiter [
+HighchartsDataTest >> testSetItemDelimiter [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +229,7 @@ HighchartsDataTest >> testItemDelimiter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testLineDelimiter [
+HighchartsDataTest >> testSetLineDelimiter [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +243,7 @@ HighchartsDataTest >> testLineDelimiter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testParseDate [
+HighchartsDataTest >> testSetParseDate [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +257,7 @@ HighchartsDataTest >> testParseDate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testParsed [
+HighchartsDataTest >> testSetParsed [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +271,7 @@ HighchartsDataTest >> testParsed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testRows [
+HighchartsDataTest >> testSetRows [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +285,7 @@ HighchartsDataTest >> testRows [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testRowsURL [
+HighchartsDataTest >> testSetRowsURL [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +299,7 @@ HighchartsDataTest >> testRowsURL [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testSeriesMapping [
+HighchartsDataTest >> testSetSeriesMapping [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +313,7 @@ HighchartsDataTest >> testSeriesMapping [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testStartColumn [
+HighchartsDataTest >> testSetStartColumn [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +327,7 @@ HighchartsDataTest >> testStartColumn [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testStartRow [
+HighchartsDataTest >> testSetStartRow [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +341,7 @@ HighchartsDataTest >> testStartRow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testSwitchRowsAndColumns [
+HighchartsDataTest >> testSetSwitchRowsAndColumns [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +355,7 @@ HighchartsDataTest >> testSwitchRowsAndColumns [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsDataTest >> testTable [
+HighchartsDataTest >> testSetTable [
 
 	| component javascript expectedConfiguration |
 

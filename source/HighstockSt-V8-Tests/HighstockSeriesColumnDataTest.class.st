@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testBorderColor [
+HighstockSeriesColumnDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnDataTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighstockSeriesColumnDataTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testBorderWidth [
+HighstockSeriesColumnDataTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighstockSeriesColumnDataTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testColor [
+HighstockSeriesColumnDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,21 @@ HighstockSeriesColumnDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testDashStyle [
+HighstockSeriesColumnDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesColumnDataTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighstockSeriesColumnDataTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testDescription [
+HighstockSeriesColumnDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighstockSeriesColumnDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testEvents [
+HighstockSeriesColumnDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighstockSeriesColumnDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testId [
+HighstockSeriesColumnDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighstockSeriesColumnDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testLabelrank [
+HighstockSeriesColumnDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighstockSeriesColumnDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testName [
+HighstockSeriesColumnDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighstockSeriesColumnDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testPointWidth [
+HighstockSeriesColumnDataTest >> testSetPointWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighstockSeriesColumnDataTest >> testPointWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testSelected [
+HighstockSeriesColumnDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighstockSeriesColumnDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testX [
+HighstockSeriesColumnDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +229,7 @@ HighstockSeriesColumnDataTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnDataTest >> testY [
+HighstockSeriesColumnDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

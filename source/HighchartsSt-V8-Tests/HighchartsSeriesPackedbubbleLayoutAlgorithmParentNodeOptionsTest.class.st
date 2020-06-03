@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testFriction [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptions new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetFriction [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testFriction
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testGravitationalConstant [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetGravitationalConstant [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testGravitat
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testInitialPositionRadius [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetInitialPositionRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testInitialP
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testInitialPositions [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetInitialPositions [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testInitialP
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testIntegration [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetIntegration [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testIntegrat
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testLinkLength [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetLinkLength [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testLinkLeng
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testMaxIterations [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetMaxIterations [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testMaxItera
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testMaxSpeed [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetMaxSpeed [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testMaxSpeed
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSeriesInteraction [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetSeriesInteraction [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSeriesIn
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testType [
+HighchartsSeriesPackedbubbleLayoutAlgorithmParentNodeOptionsTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 

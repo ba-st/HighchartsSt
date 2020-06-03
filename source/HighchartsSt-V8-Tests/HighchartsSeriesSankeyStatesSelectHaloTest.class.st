@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyStatesSelectHaloTest >> testAttributes [
+HighchartsSeriesSankeyStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesSankeyStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyStatesSelectHaloTest >> testOpacity [
+HighchartsSeriesSankeyStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesSankeyStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSankeyStatesSelectHaloTest >> testSize [
+HighchartsSeriesSankeyStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

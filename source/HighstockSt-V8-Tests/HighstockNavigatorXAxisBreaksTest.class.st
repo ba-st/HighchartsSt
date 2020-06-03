@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisBreaksTest >> testBreakSize [
+HighstockNavigatorXAxisBreaksTest >> testSetBreakSize [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockNavigatorXAxisBreaksTest >> testBreakSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisBreaksTest >> testFrom [
+HighstockNavigatorXAxisBreaksTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockNavigatorXAxisBreaksTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisBreaksTest >> testRepeat [
+HighstockNavigatorXAxisBreaksTest >> testSetRepeat [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockNavigatorXAxisBreaksTest >> testRepeat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockNavigatorXAxisBreaksTest >> testTo [
+HighstockNavigatorXAxisBreaksTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

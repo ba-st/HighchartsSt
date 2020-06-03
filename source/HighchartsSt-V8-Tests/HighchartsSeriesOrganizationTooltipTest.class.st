@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testChangeDecimals [
+HighchartsSeriesOrganizationTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganizationTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesOrganizationTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testClusterFormat [
+HighchartsSeriesOrganizationTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesOrganizationTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testDistance [
+HighchartsSeriesOrganizationTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesOrganizationTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testFollowPointer [
+HighchartsSeriesOrganizationTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesOrganizationTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testFollowTouchMove [
+HighchartsSeriesOrganizationTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsSeriesOrganizationTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testFooterFormat [
+HighchartsSeriesOrganizationTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsSeriesOrganizationTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testHeaderFormat [
+HighchartsSeriesOrganizationTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsSeriesOrganizationTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testNodeFormat [
+HighchartsSeriesOrganizationTooltipTest >> testSetNodeFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsSeriesOrganizationTooltipTest >> testNodeFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testNodeFormatter [
+HighchartsSeriesOrganizationTooltipTest >> testSetNodeFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsSeriesOrganizationTooltipTest >> testNodeFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testNullFormat [
+HighchartsSeriesOrganizationTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsSeriesOrganizationTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testNullFormatter [
+HighchartsSeriesOrganizationTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsSeriesOrganizationTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testPointFormat [
+HighchartsSeriesOrganizationTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsSeriesOrganizationTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testPointFormatter [
+HighchartsSeriesOrganizationTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,21 @@ HighchartsSeriesOrganizationTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testValueDecimals [
+HighchartsSeriesOrganizationTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganizationTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsSeriesOrganizationTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testValuePrefix [
+HighchartsSeriesOrganizationTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighchartsSeriesOrganizationTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testValueSuffix [
+HighchartsSeriesOrganizationTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighchartsSeriesOrganizationTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTooltipTest >> testXDateFormat [
+HighchartsSeriesOrganizationTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

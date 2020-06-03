@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testMillise
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testMinute 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSecond 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsPriceenvelopesTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineDataSortingTest >> testEnabled [
+HighstockPlotOptionsTrendlineDataSortingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsTrendlineDataSortingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineDataSortingTest >> testMatchByName [
+HighstockPlotOptionsTrendlineDataSortingTest >> testSetMatchByName [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsTrendlineDataSortingTest >> testMatchByName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsTrendlineDataSortingTest >> testSortKey [
+HighstockPlotOptionsTrendlineDataSortingTest >> testSetSortKey [
 
 	| component javascript expectedConfiguration |
 

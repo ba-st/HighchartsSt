@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDragMaxX [
+HighstockPlotOptionsSplineDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSplineDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSplineDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsSplineDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsSplineDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDragMaxY [
+HighstockPlotOptionsSplineDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDragMinX [
+HighstockPlotOptionsSplineDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDragMinY [
+HighstockPlotOptionsSplineDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDragPrecisionX [
+HighstockPlotOptionsSplineDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDragPrecisionY [
+HighstockPlotOptionsSplineDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDragSensitivity [
+HighstockPlotOptionsSplineDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDraggableX [
+HighstockPlotOptionsSplineDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testDraggableY [
+HighstockPlotOptionsSplineDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockPlotOptionsSplineDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testGroupBy [
+HighstockPlotOptionsSplineDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockPlotOptionsSplineDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDragDropTest >> testLiveRedraw [
+HighstockPlotOptionsSplineDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

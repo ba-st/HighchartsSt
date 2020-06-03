@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectHaloTest >> testAttributes [
+HighstockPlotOptionsZigzagStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsZigzagStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectHaloTest >> testOpacity [
+HighstockPlotOptionsZigzagStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsZigzagStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagStatesSelectHaloTest >> testSize [
+HighstockPlotOptionsZigzagStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

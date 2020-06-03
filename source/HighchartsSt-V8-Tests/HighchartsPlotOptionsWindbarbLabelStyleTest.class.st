@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsWindbarbLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsWindbarbLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

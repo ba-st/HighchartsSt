@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsStatesInactiveAnimationTest >> testDuration [
+HighstockPlotOptionsKeltnerchannelsStatesInactiveAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

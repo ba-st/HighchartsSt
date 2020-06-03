@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testEnabled [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testFillColor [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testHeight [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testLineColor [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testLineWidth [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testRadius [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testStates [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testSymbol [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsTimelineMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTimelineMarkerTest >> testWidth [
+HighchartsPlotOptionsTimelineMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

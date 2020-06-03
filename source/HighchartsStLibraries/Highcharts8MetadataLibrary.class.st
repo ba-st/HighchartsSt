@@ -28,7 +28,7 @@ Highcharts8MetadataLibrary class >> libraryName [
 { #category : #versions }
 Highcharts8MetadataLibrary class >> version [
 
-	^ '8.0.0'
+	^ '8.1.0'
 ]
 
 { #category : #'uploaded metadata' }

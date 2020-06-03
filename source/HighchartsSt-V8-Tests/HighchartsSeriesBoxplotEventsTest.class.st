@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testAfterAnimate [
+HighchartsSeriesBoxplotEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesBoxplotEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testCheckboxClick [
+HighchartsSeriesBoxplotEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesBoxplotEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testClick [
+HighchartsSeriesBoxplotEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesBoxplotEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testHide [
+HighchartsSeriesBoxplotEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesBoxplotEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testLegendItemClick [
+HighchartsSeriesBoxplotEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesBoxplotEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testMouseOut [
+HighchartsSeriesBoxplotEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesBoxplotEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testMouseOver [
+HighchartsSeriesBoxplotEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesBoxplotEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesBoxplotEventsTest >> testShow [
+HighchartsSeriesBoxplotEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

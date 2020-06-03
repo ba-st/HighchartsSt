@@ -28,7 +28,7 @@ Highstock8MetadataLibrary class >> libraryName [
 { #category : #versions }
 Highstock8MetadataLibrary class >> version [
 
-	^ '8.0.0'
+	^ '8.1.0'
 ]
 
 { #category : #'uploaded metadata' }

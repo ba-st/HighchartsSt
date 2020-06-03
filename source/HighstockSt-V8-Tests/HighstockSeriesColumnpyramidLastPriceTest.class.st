@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidLastPriceTest >> testColor [
+HighstockSeriesColumnpyramidLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnpyramidLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidLastPriceTest >> testEnabled [
+HighstockSeriesColumnpyramidLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testAlign [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testColor [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testEnabled [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testHeight [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testInside [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testLineColor [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testLineWidth [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testRadius [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSymbol [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testVerticalAlign [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testWidth [
+HighstockSeriesKeltnerchannelsConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

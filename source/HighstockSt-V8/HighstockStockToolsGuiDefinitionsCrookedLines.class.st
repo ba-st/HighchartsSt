@@ -31,14 +31,8 @@ HighstockStockToolsGuiDefinitionsCrookedLines >> elliott5 [
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsCrookedLines >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'elliott3',
-  'elliott5',
-  'crooked3',
-  'crooked5'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'elliott3',   'elliott5',   'crooked3',   'crooked5' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]

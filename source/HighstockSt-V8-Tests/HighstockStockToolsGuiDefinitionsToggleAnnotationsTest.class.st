@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockStockToolsGuiDefinitionsToggleAnnotationsTest >> testSymbol [
+HighstockStockToolsGuiDefinitionsToggleAnnotationsTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 

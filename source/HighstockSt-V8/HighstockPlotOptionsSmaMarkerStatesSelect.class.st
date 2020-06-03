@@ -30,8 +30,7 @@ Defaults to #cccccc."
 { #category : #accessing }
 HighstockPlotOptionsSmaMarkerStatesSelect >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the point marker´s outline. When
-undefined, the series´ or point´s color is used.
+	"The color of the point marker´s outline. When undefined, the series´ or point´s color is used.
 Defaults to #000000."
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -49,8 +48,7 @@ Defaults to 2."
 { #category : #accessing }
 HighstockPlotOptionsSmaMarkerStatesSelect >> radius: aNumber [
 
-	"The radius of the point marker. In hover state, it
-defaults to the normal state´s radius + 2.
+	"The radius of the point marker. In hover state, it defaults to the normal state´s radius + 2.
 "
 
 	configurationOptions at: 'radius' put: aNumber

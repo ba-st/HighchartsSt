@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLabelStyleTest >> testFontWeight [
+HighchartsPlotOptionsTreemapLabelStyleTest >> testSetFontWeight [
 
 	| component javascript expectedConfiguration |
 

@@ -10,16 +10,7 @@ Class {
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptions >> backgroundColors: anObject [
 
-	"An array of background colors:
-Default to:
-[
-´rgba(130, 170, 255, 0.4)´,
-´rgba(139, 191, 216, 0.4)´,
-´rgba(150, 216, 192, 0.4)´,
-´rgba(156, 229, 161, 0.4)´,
-´rgba(162, 241, 130, 0.4)´,
-´rgba(169, 255, 101, 0.4)´
-]
+	"An array of background colors: Default to: [ ´rgba(130, 170, 255, 0.4)´, ´rgba(139, 191, 216, 0.4)´, ´rgba(150, 216, 192, 0.4)´, ´rgba(156, 229, 161, 0.4)´, ´rgba(162, 241, 130, 0.4)´, ´rgba(169, 255, 101, 0.4)´ ]
 "
 
 	configurationOptions at: 'backgroundColors' put: anObject
@@ -77,9 +68,7 @@ HighstockAnnotationsFibonacciTypeOptions >> points [
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptions >> xAxis: aNumber [
 
-	"This number defines which xAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the xAxis array.
+	"This number defines which xAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'xAxis' put: aNumber
@@ -88,9 +77,7 @@ Defaults to 0."
 { #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptions >> yAxis: aNumber [
 
-	"This number defines which yAxis the point is connected to.
-It refers to either the axis id or the index of the axis
-in the xAxis array.
+	"This number defines which yAxis the point is connected to. It refers to either the axis id or the index of the axis in the xAxis array.
 Defaults to 0."
 
 	configurationOptions at: 'yAxis' put: aNumber

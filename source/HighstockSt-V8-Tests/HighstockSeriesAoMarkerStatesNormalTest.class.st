@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAoMarkerStatesNormalTest >> testAnimation [
+HighstockSeriesAoMarkerStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsStyleTest >> testFill [
+HighstockAnnotationsControlPointOptionsStyleTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsControlPointOptionsStyleTest >> testFill [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsStyleTest >> testStroke [
+HighstockAnnotationsControlPointOptionsStyleTest >> testSetStroke [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsControlPointOptionsStyleTest >> testStroke [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsControlPointOptionsStyleTest >> testWidth [
+HighstockAnnotationsControlPointOptionsStyleTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

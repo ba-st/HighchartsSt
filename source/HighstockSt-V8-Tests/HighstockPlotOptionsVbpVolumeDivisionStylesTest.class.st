@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpVolumeDivisionStylesTest >> testNegativeColor [
+HighstockPlotOptionsVbpVolumeDivisionStylesTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsVbpVolumeDivisionStylesTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVbpVolumeDivisionStylesTest >> testPositiveColor [
+HighstockPlotOptionsVbpVolumeDivisionStylesTest >> testSetPositiveColor [
 
 	| component javascript expectedConfiguration |
 

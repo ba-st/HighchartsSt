@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarLastPriceTest >> testColor [
+HighchartsPlotOptionsBarLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBarLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBarLastPriceTest >> testEnabled [
+HighchartsPlotOptionsBarLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

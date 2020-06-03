@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisDateTimeLabelFormatsMonthTest >> testMain [
+HighchartsXAxisDateTimeLabelFormatsMonthTest >> testSetMain [
 
 	| component javascript expectedConfiguration |
 

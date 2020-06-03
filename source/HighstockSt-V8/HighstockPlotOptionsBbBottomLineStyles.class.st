@@ -10,8 +10,7 @@ Class {
 { #category : #accessing }
 HighstockPlotOptionsBbBottomLineStyles >> lineColor: aHighchartsColorString [
 
-	"Color of the line. If not set, it´s inherited from
-plotOptions.bb.color.
+	"Color of the line. If not set, it´s inherited from plotOptions.bb.color.
 Defaults to undefined."
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorString

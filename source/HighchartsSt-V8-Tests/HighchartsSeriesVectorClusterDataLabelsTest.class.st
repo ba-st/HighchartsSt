@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterDataLabelsTest >> testAlign [
+HighchartsSeriesVectorClusterDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVectorClusterDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVectorClusterDataLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsSeriesVectorClusterDataLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterDataLabelsTest >> testEnabled [
+HighchartsSeriesVectorClusterDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsSeriesVectorClusterDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterDataLabelsTest >> testFormat [
+HighchartsSeriesVectorClusterDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsSeriesVectorClusterDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterDataLabelsTest >> testInside [
+HighchartsSeriesVectorClusterDataLabelsTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsSeriesVectorClusterDataLabelsTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVectorClusterDataLabelsTest >> testVerticalAlign [
+HighchartsSeriesVectorClusterDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMaxX [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsStreamgraphDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsStreamgraphDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsStreamgraphDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMaxY [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMinX [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMinY [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDragPrecisionX [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDragPrecisionY [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDragSensitivity [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDraggableX [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testDraggableY [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testGroupBy [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsPlotOptionsStreamgraphDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphDragDropTest >> testLiveRedraw [
+HighchartsPlotOptionsStreamgraphDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

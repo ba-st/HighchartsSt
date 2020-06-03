@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testAlign [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testColor [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testEnabled [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testHeight [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testInside [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testLineColor [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testLineWidth [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testRadius [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSymbol [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testVerticalAlign 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testWidth [
+HighstockPlotOptionsAroonoscillatorConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

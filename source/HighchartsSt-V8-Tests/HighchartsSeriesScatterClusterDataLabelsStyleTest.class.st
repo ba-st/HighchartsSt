@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesScatterClusterDataLabelsStyleTest >> testColor [
+HighchartsSeriesScatterClusterDataLabelsStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsErrorbarDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsErrorbarDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsErrorbarDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testAlign [
+HighstockSubtitleTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSubtitleTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testFloating [
+HighstockSubtitleTest >> testSetFloating [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSubtitleTest >> testFloating [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testStyle [
+HighstockSubtitleTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSubtitleTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testText [
+HighstockSubtitleTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSubtitleTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testUseHTML [
+HighstockSubtitleTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSubtitleTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testVerticalAlign [
+HighstockSubtitleTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSubtitleTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testWidthAdjust [
+HighstockSubtitleTest >> testSetWidthAdjust [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSubtitleTest >> testWidthAdjust [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testX [
+HighstockSubtitleTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSubtitleTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSubtitleTest >> testY [
+HighstockSubtitleTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

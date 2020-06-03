@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testDay [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testHour [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testMillise
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testMinute [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testMinute 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testMonth [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSecond [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSecond 
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testWeek [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testYear [
+HighstockPlotOptionsSlowstochasticTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

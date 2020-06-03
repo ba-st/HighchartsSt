@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testClick [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testDrag [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetDrag [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testDrag [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testDragStart [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetDragStart [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testDragStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testDrop [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetDrop [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testDrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testLegendItemClick [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testMouseOut [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testMouseOver [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testRemove [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetRemove [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testRemove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testSelect [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testUnselect [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetUnselect [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsVariablepiePointEventsTest >> testUnselect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepiePointEventsTest >> testUpdate [
+HighchartsPlotOptionsVariablepiePointEventsTest >> testSetUpdate [
 
 	| component javascript expectedConfiguration |
 

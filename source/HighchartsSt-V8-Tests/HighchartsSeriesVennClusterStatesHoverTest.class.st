@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVennClusterStatesHoverTest >> testFillColor [
+HighchartsSeriesVennClusterStatesHoverTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 

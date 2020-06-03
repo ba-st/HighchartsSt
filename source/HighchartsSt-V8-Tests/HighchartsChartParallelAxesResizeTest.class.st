@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeTest >> testCursor [
+HighchartsChartParallelAxesResizeTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsChartParallelAxesResizeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeTest >> testEnabled [
+HighchartsChartParallelAxesResizeTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsChartParallelAxesResizeTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeTest >> testLineColor [
+HighchartsChartParallelAxesResizeTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsChartParallelAxesResizeTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeTest >> testLineDashStyle [
+HighchartsChartParallelAxesResizeTest >> testSetLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsChartParallelAxesResizeTest >> testLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeTest >> testLineWidth [
+HighchartsChartParallelAxesResizeTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsChartParallelAxesResizeTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeTest >> testX [
+HighchartsChartParallelAxesResizeTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsChartParallelAxesResizeTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesResizeTest >> testY [
+HighchartsChartParallelAxesResizeTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

@@ -19,8 +19,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesWordcloudRotation >> orientations: aNumber [
 
-	"The number of possible orientations for a word, within the range of
-rotation.from and rotation.to. Must be a number larger than 0.
+	"The number of possible orientations for a word, within the range of rotation.from and rotation.to. Must be a number larger than 0.
 Defaults to 2."
 
 	configurationOptions at: 'orientations' put: aNumber

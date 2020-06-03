@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testAfterAnimate [
+HighchartsSeriesFunnelEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesFunnelEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testCheckboxClick [
+HighchartsSeriesFunnelEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesFunnelEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testClick [
+HighchartsSeriesFunnelEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesFunnelEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testHide [
+HighchartsSeriesFunnelEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesFunnelEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testLegendItemClick [
+HighchartsSeriesFunnelEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesFunnelEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testMouseOut [
+HighchartsSeriesFunnelEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesFunnelEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testMouseOver [
+HighchartsSeriesFunnelEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesFunnelEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnelEventsTest >> testShow [
+HighchartsSeriesFunnelEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

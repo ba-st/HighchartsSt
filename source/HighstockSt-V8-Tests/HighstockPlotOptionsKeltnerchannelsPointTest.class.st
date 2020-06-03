@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsKeltnerchannelsPointTest >> testEvents [
+HighstockPlotOptionsKeltnerchannelsPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

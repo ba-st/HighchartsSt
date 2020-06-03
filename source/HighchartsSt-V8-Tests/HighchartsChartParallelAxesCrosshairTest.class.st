@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairTest >> testClassName [
+HighchartsChartParallelAxesCrosshairTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsChartParallelAxesCrosshair new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsChartParallelAxesCrosshairTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsChartParallelAxesCrosshairTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairTest >> testColor [
+HighchartsChartParallelAxesCrosshairTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsChartParallelAxesCrosshairTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairTest >> testDashStyle [
+HighchartsChartParallelAxesCrosshairTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsChartParallelAxesCrosshairTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairTest >> testSnap [
+HighchartsChartParallelAxesCrosshairTest >> testSetSnap [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsChartParallelAxesCrosshairTest >> testSnap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairTest >> testWidth [
+HighchartsChartParallelAxesCrosshairTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsChartParallelAxesCrosshairTest >> testWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsChartParallelAxesCrosshairTest >> testZIndex [
+HighchartsChartParallelAxesCrosshairTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testAlign [
+HighchartsXAxisPlotBandsLabelTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsXAxisPlotBandsLabelTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testRotation [
+HighchartsXAxisPlotBandsLabelTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsXAxisPlotBandsLabelTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testStyle [
+HighchartsXAxisPlotBandsLabelTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsXAxisPlotBandsLabelTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testText [
+HighchartsXAxisPlotBandsLabelTest >> testSetText [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsXAxisPlotBandsLabelTest >> testText [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testTextAlign [
+HighchartsXAxisPlotBandsLabelTest >> testSetTextAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsXAxisPlotBandsLabelTest >> testTextAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testUseHTML [
+HighchartsXAxisPlotBandsLabelTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsXAxisPlotBandsLabelTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testVerticalAlign [
+HighchartsXAxisPlotBandsLabelTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsXAxisPlotBandsLabelTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testX [
+HighchartsXAxisPlotBandsLabelTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsXAxisPlotBandsLabelTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisPlotBandsLabelTest >> testY [
+HighchartsXAxisPlotBandsLabelTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

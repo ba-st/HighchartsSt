@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagLastPriceTest >> testColor [
+HighstockPlotOptionsZigzagLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsZigzagLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsZigzagLastPriceTest >> testEnabled [
+HighstockPlotOptionsZigzagLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

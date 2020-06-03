@@ -19,8 +19,7 @@ HighchartsPlotOptionsOrganizationLevelsStatesHover >> animation [
 { #category : #accessing }
 HighchartsPlotOptionsOrganizationLevelsStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"A specific border color for the hovered point. Defaults to
-inherit the normal state border color.
+	"A specific border color for the hovered point. Defaults to inherit the normal state border color.
 "
 
 	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -38,11 +37,7 @@ HighchartsPlotOptionsOrganizationLevelsStatesHover >> borderWidth: aNumber [
 { #category : #accessing }
 HighchartsPlotOptionsOrganizationLevelsStatesHover >> brightness: aNumber [
 
-	"How much to brighten the point on interaction. Requires the
-main color to be defined in hex or rgb(a) format.
-In styled mode, the hover brightening is by default replaced
-with a fill-opacity set in the .highcharts-point:hover
-rule.
+	"How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format. In styled mode, the hover brightening is by default replaced with a fill-opacity set in the .highcharts-point:hover rule.
 Defaults to 0.1."
 
 	configurationOptions at: 'brightness' put: aNumber
@@ -60,8 +55,7 @@ HighchartsPlotOptionsOrganizationLevelsStatesHover >> color: aHighchartsColorStr
 { #category : #accessing }
 HighchartsPlotOptionsOrganizationLevelsStatesHover >> enabled: aBoolean [
 
-	"Enable separate styles for the hovered series to visualize
-that the user hovers either the series itself or the legend.
+	"Enable separate styles for the hovered series to visualize that the user hovers either the series itself or the legend.
 Defaults to true."
 
 	configurationOptions at: 'enabled' put: aBoolean
@@ -70,8 +64,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsPlotOptionsOrganizationLevelsStatesHover >> linkOpacity: aNumber [
 
-	"Opacity for the links between nodes in the sankey diagram in
-hover mode.
+	"Opacity for the links between nodes in the sankey diagram in hover mode.
 Defaults to 1."
 
 	configurationOptions at: 'linkOpacity' put: aNumber

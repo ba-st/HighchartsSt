@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarParamsTest >> testDecimals [
+HighstockPlotOptionsPsarParamsTest >> testSetDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsPsarParamsTest >> testDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarParamsTest >> testIncrement [
+HighstockPlotOptionsPsarParamsTest >> testSetIncrement [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsPsarParamsTest >> testIncrement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarParamsTest >> testIndex [
+HighstockPlotOptionsPsarParamsTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsPsarParamsTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarParamsTest >> testInitialAccelerationFactor [
+HighstockPlotOptionsPsarParamsTest >> testSetInitialAccelerationFactor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsPsarParamsTest >> testInitialAccelerationFactor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsPsarParamsTest >> testMaxAccelerationFactor [
+HighstockPlotOptionsPsarParamsTest >> testSetMaxAccelerationFactor [
 
 	| component javascript expectedConfiguration |
 

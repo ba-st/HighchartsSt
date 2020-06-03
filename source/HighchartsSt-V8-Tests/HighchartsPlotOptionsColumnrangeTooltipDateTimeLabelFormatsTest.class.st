@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testDay [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetDay [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testDay [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testHour [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetHour [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testHour [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMillisecond [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetMillisecond [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMilliseco
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMinute [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetMinute [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMinute [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMonth [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetMonth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testMonth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSecond [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetSecond [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSecond [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testWeek [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetWeek [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testWeek [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testYear [
+HighchartsPlotOptionsColumnrangeTooltipDateTimeLabelFormatsTest >> testSetYear [
 
 	| component javascript expectedConfiguration |
 

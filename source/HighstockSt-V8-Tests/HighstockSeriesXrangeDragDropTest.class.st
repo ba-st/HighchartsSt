@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDragMaxX [
+HighstockSeriesXrangeDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesXrangeDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesXrangeDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighstockSeriesXrangeDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDragMaxY [
+HighstockSeriesXrangeDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighstockSeriesXrangeDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDragMinX [
+HighstockSeriesXrangeDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighstockSeriesXrangeDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDragMinY [
+HighstockSeriesXrangeDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighstockSeriesXrangeDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDragPrecisionX [
+HighstockSeriesXrangeDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighstockSeriesXrangeDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDragPrecisionY [
+HighstockSeriesXrangeDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighstockSeriesXrangeDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDragSensitivity [
+HighstockSeriesXrangeDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighstockSeriesXrangeDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDraggableX [
+HighstockSeriesXrangeDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighstockSeriesXrangeDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDraggableX1 [
+HighstockSeriesXrangeDragDropTest >> testSetDraggableX1 [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighstockSeriesXrangeDragDropTest >> testDraggableX1 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDraggableX2 [
+HighstockSeriesXrangeDragDropTest >> testSetDraggableX2 [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighstockSeriesXrangeDragDropTest >> testDraggableX2 [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testDraggableY [
+HighstockSeriesXrangeDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighstockSeriesXrangeDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testGroupBy [
+HighstockSeriesXrangeDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighstockSeriesXrangeDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesXrangeDragDropTest >> testLiveRedraw [
+HighstockSeriesXrangeDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

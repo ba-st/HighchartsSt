@@ -5,7 +5,247 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testAllAreas [
+HighchartsSeriesOrganizationTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetLevels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component levels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'levels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetNodes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component nodes.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'nodes' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +260,7 @@ HighchartsSeriesOrganizationTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testAllowPointSelect [
+HighchartsSeriesOrganizationTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +275,7 @@ HighchartsSeriesOrganizationTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testAnimationLimit [
+HighchartsSeriesOrganizationTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +290,7 @@ HighchartsSeriesOrganizationTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testBoostBlending [
+HighchartsSeriesOrganizationTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +305,7 @@ HighchartsSeriesOrganizationTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testBoostThreshold [
+HighchartsSeriesOrganizationTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +320,7 @@ HighchartsSeriesOrganizationTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testBorderColor [
+HighchartsSeriesOrganizationTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +335,7 @@ HighchartsSeriesOrganizationTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testBorderRadius [
+HighchartsSeriesOrganizationTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +350,7 @@ HighchartsSeriesOrganizationTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testBorderWidth [
+HighchartsSeriesOrganizationTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +365,7 @@ HighchartsSeriesOrganizationTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testClassName [
+HighchartsSeriesOrganizationTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +380,7 @@ HighchartsSeriesOrganizationTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testClip [
+HighchartsSeriesOrganizationTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +395,7 @@ HighchartsSeriesOrganizationTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testColor [
+HighchartsSeriesOrganizationTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +410,7 @@ HighchartsSeriesOrganizationTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testColorAxis [
+HighchartsSeriesOrganizationTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +425,7 @@ HighchartsSeriesOrganizationTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testColorByPoint [
+HighchartsSeriesOrganizationTest >> testSetColorByPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +440,7 @@ HighchartsSeriesOrganizationTest >> testColorByPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testColorIndex [
+HighchartsSeriesOrganizationTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +455,7 @@ HighchartsSeriesOrganizationTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testColorKey [
+HighchartsSeriesOrganizationTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +470,7 @@ HighchartsSeriesOrganizationTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testColors [
+HighchartsSeriesOrganizationTest >> testSetColors [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +485,7 @@ HighchartsSeriesOrganizationTest >> testColors [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testCompare [
+HighchartsSeriesOrganizationTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +500,7 @@ HighchartsSeriesOrganizationTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testCompareBase [
+HighchartsSeriesOrganizationTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +515,7 @@ HighchartsSeriesOrganizationTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testCompareStart [
+HighchartsSeriesOrganizationTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +530,7 @@ HighchartsSeriesOrganizationTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testConnectEnds [
+HighchartsSeriesOrganizationTest >> testSetConnectEnds [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +545,7 @@ HighchartsSeriesOrganizationTest >> testConnectEnds [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testConnectNulls [
+HighchartsSeriesOrganizationTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +560,22 @@ HighchartsSeriesOrganizationTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testCropThreshold [
+HighchartsSeriesOrganizationTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +590,7 @@ HighchartsSeriesOrganizationTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testCursor [
+HighchartsSeriesOrganizationTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +605,22 @@ HighchartsSeriesOrganizationTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testDashStyle [
+HighchartsSeriesOrganizationTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesOrganization new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'organization';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesOrganizationTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +635,7 @@ HighchartsSeriesOrganizationTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testData [
+HighchartsSeriesOrganizationTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +650,7 @@ HighchartsSeriesOrganizationTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testDescription [
+HighchartsSeriesOrganizationTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +665,7 @@ HighchartsSeriesOrganizationTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testEnableMouseTracking [
+HighchartsSeriesOrganizationTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +680,7 @@ HighchartsSeriesOrganizationTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testEvents [
+HighchartsSeriesOrganizationTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +695,7 @@ HighchartsSeriesOrganizationTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testFindNearestPointBy [
+HighchartsSeriesOrganizationTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +710,7 @@ HighchartsSeriesOrganizationTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testGapSize [
+HighchartsSeriesOrganizationTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +725,7 @@ HighchartsSeriesOrganizationTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testGapUnit [
+HighchartsSeriesOrganizationTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +740,7 @@ HighchartsSeriesOrganizationTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testGetExtremesFromAll [
+HighchartsSeriesOrganizationTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +755,7 @@ HighchartsSeriesOrganizationTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testHangingIndent [
+HighchartsSeriesOrganizationTest >> testSetHangingIndent [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +770,7 @@ HighchartsSeriesOrganizationTest >> testHangingIndent [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testId [
+HighchartsSeriesOrganizationTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +785,7 @@ HighchartsSeriesOrganizationTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testIncludeInDataExport [
+HighchartsSeriesOrganizationTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +800,7 @@ HighchartsSeriesOrganizationTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testIndex [
+HighchartsSeriesOrganizationTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +815,7 @@ HighchartsSeriesOrganizationTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testJoinBy [
+HighchartsSeriesOrganizationTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +830,7 @@ HighchartsSeriesOrganizationTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testKeys [
+HighchartsSeriesOrganizationTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +845,7 @@ HighchartsSeriesOrganizationTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLegendIndex [
+HighchartsSeriesOrganizationTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +860,7 @@ HighchartsSeriesOrganizationTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLineWidth [
+HighchartsSeriesOrganizationTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +875,7 @@ HighchartsSeriesOrganizationTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLinecap [
+HighchartsSeriesOrganizationTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +890,7 @@ HighchartsSeriesOrganizationTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLinkColor [
+HighchartsSeriesOrganizationTest >> testSetLinkColor [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +905,7 @@ HighchartsSeriesOrganizationTest >> testLinkColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLinkLineWidth [
+HighchartsSeriesOrganizationTest >> testSetLinkLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +920,7 @@ HighchartsSeriesOrganizationTest >> testLinkLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLinkOpacity [
+HighchartsSeriesOrganizationTest >> testSetLinkOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +935,7 @@ HighchartsSeriesOrganizationTest >> testLinkOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLinkRadius [
+HighchartsSeriesOrganizationTest >> testSetLinkRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +950,7 @@ HighchartsSeriesOrganizationTest >> testLinkRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testLinkedTo [
+HighchartsSeriesOrganizationTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +965,7 @@ HighchartsSeriesOrganizationTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testMapData [
+HighchartsSeriesOrganizationTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +980,7 @@ HighchartsSeriesOrganizationTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testMinLinkWidth [
+HighchartsSeriesOrganizationTest >> testSetMinLinkWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +995,7 @@ HighchartsSeriesOrganizationTest >> testMinLinkWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testName [
+HighchartsSeriesOrganizationTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +1010,7 @@ HighchartsSeriesOrganizationTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testNavigatorOptions [
+HighchartsSeriesOrganizationTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1025,7 @@ HighchartsSeriesOrganizationTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testNegativeColor [
+HighchartsSeriesOrganizationTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1040,7 @@ HighchartsSeriesOrganizationTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testNodePadding [
+HighchartsSeriesOrganizationTest >> testSetNodePadding [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1055,7 @@ HighchartsSeriesOrganizationTest >> testNodePadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testNodeWidth [
+HighchartsSeriesOrganizationTest >> testSetNodeWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1070,7 @@ HighchartsSeriesOrganizationTest >> testNodeWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testOpacity [
+HighchartsSeriesOrganizationTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1085,7 @@ HighchartsSeriesOrganizationTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testPointDescriptionFormatter [
+HighchartsSeriesOrganizationTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1100,7 @@ HighchartsSeriesOrganizationTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testPointInterval [
+HighchartsSeriesOrganizationTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1115,7 @@ HighchartsSeriesOrganizationTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testPointIntervalUnit [
+HighchartsSeriesOrganizationTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1130,7 @@ HighchartsSeriesOrganizationTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testPointPlacement [
+HighchartsSeriesOrganizationTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1145,7 @@ HighchartsSeriesOrganizationTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testPointRange [
+HighchartsSeriesOrganizationTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1160,7 @@ HighchartsSeriesOrganizationTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testPointStart [
+HighchartsSeriesOrganizationTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1175,7 @@ HighchartsSeriesOrganizationTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testSelected [
+HighchartsSeriesOrganizationTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1190,7 @@ HighchartsSeriesOrganizationTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testShadow [
+HighchartsSeriesOrganizationTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1205,7 @@ HighchartsSeriesOrganizationTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testShowCheckbox [
+HighchartsSeriesOrganizationTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1220,7 @@ HighchartsSeriesOrganizationTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testShowInLegend [
+HighchartsSeriesOrganizationTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1235,7 @@ HighchartsSeriesOrganizationTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testShowInNavigator [
+HighchartsSeriesOrganizationTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1250,7 @@ HighchartsSeriesOrganizationTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testSkipKeyboardNavigation [
+HighchartsSeriesOrganizationTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1265,7 @@ HighchartsSeriesOrganizationTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testSoftThreshold [
+HighchartsSeriesOrganizationTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1280,7 @@ HighchartsSeriesOrganizationTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testStack [
+HighchartsSeriesOrganizationTest >> testSetStack [
 
 	| component javascript expectedConfiguration |
 
@@ -1025,7 +1295,7 @@ HighchartsSeriesOrganizationTest >> testStack [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testStacking [
+HighchartsSeriesOrganizationTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -1040,7 +1310,7 @@ HighchartsSeriesOrganizationTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testStates [
+HighchartsSeriesOrganizationTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -1055,7 +1325,7 @@ HighchartsSeriesOrganizationTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testStep [
+HighchartsSeriesOrganizationTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -1070,7 +1340,7 @@ HighchartsSeriesOrganizationTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testStickyTracking [
+HighchartsSeriesOrganizationTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -1085,7 +1355,7 @@ HighchartsSeriesOrganizationTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testThreshold [
+HighchartsSeriesOrganizationTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1100,7 +1370,7 @@ HighchartsSeriesOrganizationTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testTurboThreshold [
+HighchartsSeriesOrganizationTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -1115,7 +1385,7 @@ HighchartsSeriesOrganizationTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testType [
+HighchartsSeriesOrganizationTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -1130,7 +1400,7 @@ HighchartsSeriesOrganizationTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testVisible [
+HighchartsSeriesOrganizationTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -1145,7 +1415,7 @@ HighchartsSeriesOrganizationTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testXAxis [
+HighchartsSeriesOrganizationTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1160,7 +1430,7 @@ HighchartsSeriesOrganizationTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testYAxis [
+HighchartsSeriesOrganizationTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -1175,7 +1445,7 @@ HighchartsSeriesOrganizationTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testZIndex [
+HighchartsSeriesOrganizationTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1190,7 +1460,7 @@ HighchartsSeriesOrganizationTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesOrganizationTest >> testZoneAxis [
+HighchartsSeriesOrganizationTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

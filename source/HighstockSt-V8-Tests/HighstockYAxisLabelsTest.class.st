@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testAlign [
+HighstockYAxisLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockYAxisLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockYAxisLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockYAxisLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testAutoRotation [
+HighstockYAxisLabelsTest >> testSetAutoRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockYAxisLabelsTest >> testAutoRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testEnabled [
+HighstockYAxisLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockYAxisLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testFormat [
+HighstockYAxisLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockYAxisLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testFormatter [
+HighstockYAxisLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockYAxisLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testMaxStaggerLines [
+HighstockYAxisLabelsTest >> testSetMaxStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockYAxisLabelsTest >> testMaxStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testOverflow [
+HighstockYAxisLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockYAxisLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testRotation [
+HighstockYAxisLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockYAxisLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testStaggerLines [
+HighstockYAxisLabelsTest >> testSetStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockYAxisLabelsTest >> testStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testStep [
+HighstockYAxisLabelsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockYAxisLabelsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testUseHTML [
+HighstockYAxisLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockYAxisLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testX [
+HighstockYAxisLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockYAxisLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testY [
+HighstockYAxisLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockYAxisLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisLabelsTest >> testZIndex [
+HighstockYAxisLabelsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

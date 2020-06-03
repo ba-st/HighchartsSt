@@ -10,22 +10,18 @@ Class {
 { #category : #accessing }
 HighstockNavigationAnnotationsOptions >> controlPointOptions [
 
-	"Options for annotation´s control points. Each control point
-inherits options from controlPointOptions object.
-Options from the controlPointOptions can be overwritten
-by options in a specific control point.
+	"Options for annotation´s control points. Each control point inherits options from controlPointOptions object. Options from the controlPointOptions can be overwritten by options in a specific control point.
 "
 	^ configurationOptions at: 'controlPointOptions' ifAbsentPut: [ HighstockNavigationAnnotationsOptionsControlPointOptions new ]
 ]
 
 { #category : #accessing }
-HighstockNavigationAnnotationsOptions >> draggable: aString [
+HighstockNavigationAnnotationsOptions >> draggable: aHighchartsAnnotationDraggableValue [
 
-	"Allow an annotation to be draggable by a user. Possible
-values are &quot;x&quot;, &quot;xy&quot;, &quot;y&quot; and &quot;&quot; (disabled).
+	"Allow an annotation to be draggable by a user. Possible values are ´x´, ´xy´, ´y´ and ´´ (disabled).
 Defaults to xy."
 
-	configurationOptions at: 'draggable' put: aString
+	configurationOptions at: 'draggable' put: aHighchartsAnnotationDraggableValue
 ]
 
 { #category : #accessing }
@@ -38,21 +34,18 @@ HighstockNavigationAnnotationsOptions >> events: anObject [
 ]
 
 { #category : #accessing }
-HighstockNavigationAnnotationsOptions >> id: aStringOrnumber [
+HighstockNavigationAnnotationsOptions >> id: aNumberOrstring [
 
-	"Sets an ID for an annotation. Can be user later when removing an
-annotation in Chart#removeAnnotation(id) method.
+	"Sets an ID for an annotation. Can be user later when removing an annotation in Chart#removeAnnotation(id) method.
 "
 
-	configurationOptions at: 'id' put: aStringOrnumber
+	configurationOptions at: 'id' put: aNumberOrstring
 ]
 
 { #category : #accessing }
 HighstockNavigationAnnotationsOptions >> labelOptions [
 
-	"Options for annotation´s labels. Each label inherits options
-from the labelOptions object. An option from the labelOptions
-can be overwritten by config for a specific label.
+	"Options for annotation´s labels. Each label inherits options from the labelOptions object. An option from the labelOptions can be overwritten by config for a specific label.
 "
 	^ configurationOptions at: 'labelOptions' ifAbsentPut: [ HighstockNavigationAnnotationsOptionsLabelOptions new ]
 ]
@@ -60,9 +53,7 @@ can be overwritten by config for a specific label.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptions >> labels [
 
-	"An array of labels for the annotation. For options that apply to
-multiple labels, they can be added to the
-labelOptions.
+	"An array of labels for the annotation. For options that apply to multiple labels, they can be added to the labelOptions.
 "
 	^ configurationOptions at: 'labels' ifAbsentPut: [ HighstockNavigationAnnotationsOptionsLabels new ]
 ]
@@ -70,9 +61,7 @@ labelOptions.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptions >> shapeOptions [
 
-	"Options for annotation´s shapes. Each shape inherits options from
-the shapeOptions object. An option from the shapeOptions can be
-overwritten by config for a specific shape.
+	"Options for annotation´s shapes. Each shape inherits options from the shapeOptions object. An option from the shapeOptions can be overwritten by config for a specific shape.
 "
 	^ configurationOptions at: 'shapeOptions' ifAbsentPut: [ HighstockNavigationAnnotationsOptionsShapeOptions new ]
 ]
@@ -80,9 +69,7 @@ overwritten by config for a specific shape.
 { #category : #accessing }
 HighstockNavigationAnnotationsOptions >> shapes [
 
-	"An array of shapes for the annotation. For options that apply to
-multiple shapes, then can be added to the
-shapeOptions.
+	"An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the shapeOptions.
 "
 	^ configurationOptions at: 'shapes' ifAbsentPut: [ HighstockNavigationAnnotationsOptionsShapes new ]
 ]

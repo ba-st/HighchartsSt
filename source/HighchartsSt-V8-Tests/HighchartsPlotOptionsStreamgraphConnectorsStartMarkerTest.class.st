@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testAlign [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testColor [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testEnabled [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testHeight [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testInside [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testLineColor [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testLineWidth [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testRadius [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSymbol [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testVerticalAlign [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testWidth [
+HighchartsPlotOptionsStreamgraphConnectorsStartMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

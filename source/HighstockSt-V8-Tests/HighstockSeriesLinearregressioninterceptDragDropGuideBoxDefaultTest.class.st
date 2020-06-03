@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testClassName [
+HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testClass
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testColor [
+HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testColor
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testCursor [
+HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testCurso
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testLineColor [
+HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testLineC
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testLineWidth [
+HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testLineW
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testZIndex [
+HighstockSeriesLinearregressioninterceptDragDropGuideBoxDefaultTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testAlign [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testColor [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testEnabled [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testHeight [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testInside [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetInside [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testInside [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testLineColor [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testLineColor
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testLineWidth [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testLineWidth
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testRadius [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSymbol [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testVerticalAlign [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +145,7 @@ HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testVerticalA
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testWidth [
+HighstockSeriesLinearregressioninterceptConnectorsEndMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityLegendTest >> testLegendItem [
+HighchartsLangAccessibilityLegendTest >> testSetLegendItem [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLangAccessibilityLegendTest >> testLegendItem [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLangAccessibilityLegendTest >> testLegendLabel [
+HighchartsLangAccessibilityLegendTest >> testSetLegendLabel [
 
 	| component javascript expectedConfiguration |
 

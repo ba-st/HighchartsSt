@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbPointTest >> testEvents [
+HighstockSeriesWindbarbPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

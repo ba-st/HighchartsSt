@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testEnabled [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testFillColor [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testHeight [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testLineColor [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testLineWidth [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testRadius [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testStates [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testSymbol [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighchartsPlotOptionsPolygonMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPolygonMarkerTest >> testWidth [
+HighchartsPlotOptionsPolygonMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

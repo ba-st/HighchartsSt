@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleJitterTest >> testX [
+HighchartsPlotOptionsBubbleJitterTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsBubbleJitterTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBubbleJitterTest >> testY [
+HighchartsPlotOptionsBubbleJitterTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

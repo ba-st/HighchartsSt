@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplinePointTest >> testEvents [
+HighstockPlotOptionsAreasplinePointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

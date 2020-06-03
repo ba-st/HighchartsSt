@@ -24,30 +24,30 @@ Highsoft8TestGenerator >> addClassChangeFor: aClassName [
 
 	^ RBAddClassChange
 		definition:
-			('<1s> subclass: #<2s>
+			( '<1s> subclass: #<2s>
 	instanceVariableNames: ''''
 	classVariableNames: ''''
 	poolDictionaries: ''''
 	category: ''<3s>'''
 				expandMacrosWith: TestCase greaseString
 				with: aClassName
-				with: self testPackageName)
+				with: self testPackageName )
 ]
 
 { #category : #'private - accessing' }
 Highsoft8TestGenerator >> addMethodChangeFor: aSelector of: aModelClass in: aTestClassName [
 
 	^ RBAddMethodChange
-		compile: (self sourceCodeToTest: aSelector of: aModelClass)
-		in: (RBClass named: aTestClassName asSymbol)
+		compile: ( self sourceCodeToTest: aSelector of: aModelClass )
+		in: ( RBClass named: aTestClassName asSymbol )
 		classified: 'tests-accessing'
 ]
 
 { #category : #'private - processing' }
-Highsoft8TestGenerator >> addSettersIn: aClass to: settersByClass [
+Highsoft8TestGenerator >> addSelectorsIn: aClass to: selectorsByClass [
 
-	(self settersIn: aClass)
-		do: [ :setter | (settersByClass at: aClass ifAbsentPut: [ Set new ]) add: setter ]
+	( self selectorsIn: aClass )
+		do: [ :selector | ( selectorsByClass at: aClass ifAbsentPut: [ Set new ] ) add: selector ]
 ]
 
 { #category : #'private - accessing' }
@@ -73,27 +73,29 @@ Highsoft8TestGenerator >> extraCodeInSourceToTest: aModelClass [
 	| extraCode |
 
 	extraCode := ''.
-	(aModelClass name beginsWith: seriesClassName)
-		and: [ (aModelClass includesSelector: #data)
-				and: [ ((RBClass existingNamed: seriesClassName asSymbol)
-						whichSelectorsReferToClass: (RBClass existingNamed: aModelClass name))
+	( aModelClass name beginsWithSubCollection: seriesClassName )
+		and: [ ( aModelClass includesSelector: #type: )
+				and: [ ( ( RBClass existingNamed: seriesClassName asSymbol )
+						whichSelectorsReferToClass: ( RBClass existingNamed: aModelClass name ) )
 						ifNotEmpty: [ :selectors | 
 							extraCode := '
-		at: ''type'' put: ''<1s>'';' expandMacrosWith: selectors any ] ] ].
+		at: ''type'' put: ''<1s>'';' expandMacrosWith: selectors any
+							]
+					]
+			].
 	^ extraCode
 ]
 
 { #category : #'private - processing' }
 Highsoft8TestGenerator >> generateChanges [
 
-	| settersByClass |
+	| selectorsByClass |
 
 	self logToOutput: 'Changes generation - Started'.
-	settersByClass := Dictionary new.
-	self classesOfInterest
-		do: [ :definedClass | self addSettersIn: definedClass to: settersByClass ].
-	settersByClass
-		keysAndValuesDo: [ :class :setters | self generateChangesToTestAll: setters of: class ].
+	selectorsByClass := Dictionary new.
+	self classesOfInterest do: [ :definedClass | self addSelectorsIn: definedClass to: selectorsByClass ].
+	selectorsByClass
+		keysAndValuesDo: [ :class :selectors | self generateChangesToTestAll: selectors of: class ].
 	self removeUnwantedChanges.
 	self logToOutput: 'Changes generation - Finished'
 ]
@@ -101,9 +103,7 @@ Highsoft8TestGenerator >> generateChanges [
 { #category : #'private - processing' }
 Highsoft8TestGenerator >> generateChangesToAdd: aClassName [
 
-	Smalltalk
-		at: aClassName
-		ifAbsent: [ classChanges add: (self addClassChangeFor: aClassName) ]
+	Smalltalk at: aClassName ifAbsent: [ classChanges add: ( self addClassChangeFor: aClassName ) ]
 ]
 
 { #category : #'private - processing' }
@@ -113,25 +113,26 @@ Highsoft8TestGenerator >> generateChangesToAddTestFor: aSelector of: aModelClass
 		at: aTestClassName
 		ifPresent: [ :class | 
 			class
-				compiledMethodAt: aSelector
+				compiledMethodAt: ( self testSelectorFor: aSelector )
 				ifPresent: [ :method | 
-					method sourceCode ~= (self sourceCodeToTest: aSelector of: aModelClass)
-						ifTrue: [ ^ self ] ]
-				ifAbsent: [ "Go on" ] ].
+					method sourceCode ~= ( self sourceCodeToTest: aSelector of: aModelClass )
+						ifTrue: [ ^ self ]
+					]
+				ifAbsent: [ "Go on" ]
+			].
 
-	methodChanges
-		add: (self addMethodChangeFor: aSelector of: aModelClass in: aTestClassName)
+	methodChanges add: ( self addMethodChangeFor: aSelector of: aModelClass in: aTestClassName )
 ]
 
 { #category : #'private - processing' }
-Highsoft8TestGenerator >> generateChangesToTestAll: aSetterSelectorCollection of: aClass [
+Highsoft8TestGenerator >> generateChangesToTestAll: aSelectorCollection of: aClass [
 
 	| testClassName |
 
 	testClassName := self testClassNameFor: aClass.
 	self generateChangesToAdd: testClassName.
-	aSetterSelectorCollection
-		do: [ :setter | self generateChangesToAddTestFor: setter of: aClass to: testClassName ]
+	aSelectorCollection
+		do: [ :selector | self generateChangesToAddTestFor: selector of: aClass to: testClassName ]
 ]
 
 { #category : #processing }
@@ -151,22 +152,58 @@ Highsoft8TestGenerator >> initializeDefinedIn: aPackageName withSeriesNamed: aSe
 ]
 
 { #category : #'private - testing' }
+Highsoft8TestGenerator >> isConsideredGetter: aSelector [
+
+	^ ( aSelector includes: $: ) not
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isConsideredSeriesAccessing: aSelector of: aModelClass [
+
+	^ aModelClass name = #HighchartsSeries or: [ aModelClass name = #HighstockSeries ]
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isConsideredSeriesGetter: aSelector of: aModelClass [
+
+	^ aSelector = #series and: [ aModelClass name = #Highchart or: [ aModelClass name = #Highstock ] ]
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isConsideredSetter: selector [
+
+	^ ( selector indexOf: $: ) = selector size
+]
+
+{ #category : #'private - testing' }
 Highsoft8TestGenerator >> isForTestingAddSeriesOf: aChange [
 
-	^ aChange selector = 'testAddSeriesOf'
+	^ aChange selector = 'testSetAddSeriesOf'
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isForTestingAxisAccessing: aChange [
+
+	^ ( aChange selector beginsWith: 'testGet' ) and: [ aChange selector endsWith: 'Axis' ]
 ]
 
 { #category : #'private - testing' }
 Highsoft8TestGenerator >> isForTestingChartId: aChange [
 
-	^ (aChange changeClassName = #HighchartTest
-		or: [ aChange changeClassName = #HighstockTest ]) and: [ aChange selector = 'testId' ]
+	^ ( aChange changeClassName = #HighchartTest or: [ aChange changeClassName = #HighstockTest ] )
+		and: [ aChange selector = 'testSetId' ]
+]
+
+{ #category : #'private - testing' }
+Highsoft8TestGenerator >> isForTestingInitialize: aChange [
+
+	^ aChange selector = 'testGetInitialize'
 ]
 
 { #category : #'private - testing' }
 Highsoft8TestGenerator >> isForTestingJavascriptContent: aChange [
 
-	^ aChange selector = 'testJavascriptContentOn'
+	^ aChange selector = 'testSetJavascriptContentOn'
 ]
 
 { #category : #'private - processing' }
@@ -180,8 +217,8 @@ Highsoft8TestGenerator >> logToOutput: aText [
 { #category : #'private - processing' }
 Highsoft8TestGenerator >> registerPackage [
 
-	(RPackageSet named: self testPackageName) packages
-		ifEmpty: [ (RPackage named: self testPackageName) register ]
+	( RPackageSet named: self testPackageName ) packages
+		ifEmpty: [ ( RPackage named: self testPackageName ) register ]
 ]
 
 { #category : #'private - processing' }
@@ -191,19 +228,27 @@ Highsoft8TestGenerator >> removeUnwantedChanges [
 
 	unwantedChanges := methodChanges
 		select: [ :change | 
-			(self isForTestingChartId: change)
-				or: [ (self isForTestingJavascriptContent: change) or: [ self isForTestingAddSeriesOf: change ] ] ].
+			( self isForTestingChartId: change )
+				or: [ ( self isForTestingJavascriptContent: change )
+						or: [ ( self isForTestingAddSeriesOf: change )
+								or:
+									[ ( self isForTestingAxisAccessing: change ) or: [ self isForTestingInitialize: change ] ]
+							]
+					]
+			].
 
 	methodChanges removeAll: unwantedChanges
 ]
 
-{ #category : #'private - processing' }
-Highsoft8TestGenerator >> settersIn: aClass [
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> selectorsIn: aClass [
 
 	| selectors |
 
-	selectors := packageSet collectFromAllPackages: #definedSelectorsForClass: with: aClass.
-	^ selectors select: [ :selector | (selector indexOf: $:) = selector size ]
+	selectors := packageSet packages
+		flatCollect: [ :package | package definedSelectorsForClass: aClass ].
+	^ selectors
+		select: [ :selector | ( self isConsideredSetter: selector ) or: [ self isConsideredGetter: selector ] ]
 ]
 
 { #category : #'private - accessing' }
@@ -212,13 +257,102 @@ Highsoft8TestGenerator >> sourceCodeToTest: aSelector of: aModelClass [
 	^ self
 		sourceCodeToTest: aSelector
 		of: aModelClass
-		appending: (self extraCodeInSourceToTest: aModelClass)
+		appending: ( self extraCodeInSourceToTest: aModelClass )
 ]
 
 { #category : #'private - accessing' }
 Highsoft8TestGenerator >> sourceCodeToTest: aSelector of: aModelClass appending: anExtraContent [
 
-	^ 'test<1s>
+	( self isConsideredSetter: aSelector )
+		ifTrue: [ ^ self sourceCodeToTestSetter: aSelector of: aModelClass appending: anExtraContent ].
+	( self isConsideredGetter: aSelector )
+		ifTrue: [ ^ self sourceCodeToTestGetter: aSelector of: aModelClass appending: anExtraContent ].
+	self error: 'Selector that are not setters nor getters should have been excluded at this point'
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestDefaultGetter: aSelector of: aModelClass appending: anExtraContent [
+
+	^ 'testGet<1s>
+
+	| component javascript expectedConfiguration |
+
+	component := <2s> new.
+	component <3s>.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new<4s>
+		at: ''<3s>'' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript'
+		expandMacrosWithArguments:
+			( OrderedCollection new
+				add: aSelector capitalized;
+				add: aModelClass greaseString;
+				add: aSelector;
+				add: anExtraContent;
+				yourself )
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestGetter: aSelector of: aModelClass appending: anExtraContent [
+
+	( self isConsideredSeriesAccessing: aSelector of: aModelClass )
+		ifTrue: [ ^ self sourceCodeToTestSeriesAccessing: aSelector of: aModelClass appending: anExtraContent ].
+	( self isConsideredSeriesGetter: aSelector of: aModelClass )
+		ifTrue: [ ^ self sourceCodeToTestSeriesGetter: aSelector of: aModelClass appending: anExtraContent ].
+	^ self sourceCodeToTestDefaultGetter: aSelector of: aModelClass appending: anExtraContent
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestSeriesAccessing: aSelector of: aModelClass appending: anExtraContent [
+
+	^ 'testGet<1s>
+
+	| component javascript expectedConfiguration |
+
+	component := <2s> new.
+	component <3s>.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new<4s>
+		at: ''type'' put: ''<3s>'';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript'
+		expandMacrosWithArguments:
+			( OrderedCollection new
+				add: aSelector capitalized;
+				add: aModelClass greaseString;
+				add: aSelector;
+				add: anExtraContent;
+				yourself )
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestSeriesGetter: aSelector of: aModelClass appending: anExtraContent [
+
+	^ 'testGet<1s>
+
+	| component javascript expectedConfiguration |
+
+	component := <2s> new.
+	component <3s>.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new<4s>
+		at: ''<3s>'' put: #();
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript'
+		expandMacrosWithArguments:
+			( OrderedCollection new
+				add: aSelector capitalized;
+				add: aModelClass greaseString;
+				add: aSelector;
+				add: anExtraContent;
+				yourself )
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> sourceCodeToTestSetter: aSelector of: aModelClass appending: anExtraContent [
+
+	^ 'testSet<1s>
 
 	| component javascript expectedConfiguration |
 
@@ -230,13 +364,13 @@ Highsoft8TestGenerator >> sourceCodeToTest: aSelector of: aModelClass appending:
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript'
 		expandMacrosWithArguments:
-			(OrderedCollection new
+			( OrderedCollection new
 				add: aSelector allButLast capitalized;
 				add: aModelClass greaseString;
 				add: aSelector;
 				add: anExtraContent;
 				add: aSelector allButLast;
-				yourself)
+				yourself )
 ]
 
 { #category : #'private - accessing' }
@@ -249,4 +383,14 @@ Highsoft8TestGenerator >> testClassNameFor: aClass [
 Highsoft8TestGenerator >> testPackageName [
 
 	^ '<1s>-Tests' expandMacrosWith: packageSet packageName
+]
+
+{ #category : #'private - accessing' }
+Highsoft8TestGenerator >> testSelectorFor: aSelector [
+
+	( self isConsideredSetter: aSelector )
+		ifTrue: [ ^ 'testSet<1s>' expandMacrosWith: aSelector allButLast capitalized ].
+	( self isConsideredGetter: aSelector )
+		ifTrue: [ ^ 'testGet<1s>' expandMacrosWith: aSelector capitalized ].
+	self error: 'Selector that are not setters nor getters should have been excluded at this point'
 ]

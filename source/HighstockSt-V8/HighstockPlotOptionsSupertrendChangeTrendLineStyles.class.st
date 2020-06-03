@@ -7,9 +7,7 @@ Class {
 { #category : #accessing }
 HighstockPlotOptionsSupertrendChangeTrendLineStyles >> dashStyle: aHighchartsDashStyleValue [
 
-	"The dash or dot style of the grid lines. For possible
-values, see
-this demonstration.
+	"The dash or dot style of the grid lines. For possible values, see this demonstration.
 Defaults to LongDash."
 
 	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue

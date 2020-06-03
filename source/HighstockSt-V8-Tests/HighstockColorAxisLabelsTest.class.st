@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testAlign [
+HighstockColorAxisLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockColorAxisLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockColorAxisLabelsTest >> testSetAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighstockColorAxisLabelsTest >> testAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testAutoRotation [
+HighstockColorAxisLabelsTest >> testSetAutoRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighstockColorAxisLabelsTest >> testAutoRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testEnabled [
+HighstockColorAxisLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighstockColorAxisLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testFormat [
+HighstockColorAxisLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighstockColorAxisLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testFormatter [
+HighstockColorAxisLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighstockColorAxisLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testIndentation [
+HighstockColorAxisLabelsTest >> testSetIndentation [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighstockColorAxisLabelsTest >> testIndentation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testMaxStaggerLines [
+HighstockColorAxisLabelsTest >> testSetMaxStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighstockColorAxisLabelsTest >> testMaxStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testOverflow [
+HighstockColorAxisLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighstockColorAxisLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testRotation [
+HighstockColorAxisLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighstockColorAxisLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testStaggerLines [
+HighstockColorAxisLabelsTest >> testSetStaggerLines [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighstockColorAxisLabelsTest >> testStaggerLines [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testStep [
+HighstockColorAxisLabelsTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighstockColorAxisLabelsTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testUseHTML [
+HighstockColorAxisLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighstockColorAxisLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testX [
+HighstockColorAxisLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,7 @@ HighstockColorAxisLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testY [
+HighstockColorAxisLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +215,7 @@ HighstockColorAxisLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighstockColorAxisLabelsTest >> testZIndex [
+HighstockColorAxisLabelsTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

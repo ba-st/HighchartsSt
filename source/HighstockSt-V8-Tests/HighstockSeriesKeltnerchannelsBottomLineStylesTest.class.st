@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsBottomLineStylesTest >> testLineColor [
+HighstockSeriesKeltnerchannelsBottomLineStylesTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesKeltnerchannelsBottomLineStylesTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesKeltnerchannelsBottomLineStylesTest >> testLineWidth [
+HighstockSeriesKeltnerchannelsBottomLineStylesTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 

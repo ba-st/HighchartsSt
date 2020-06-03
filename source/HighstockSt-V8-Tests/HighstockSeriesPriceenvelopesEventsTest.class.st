@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testAfterAnimate [
+HighstockSeriesPriceenvelopesEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesPriceenvelopesEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testCheckboxClick [
+HighstockSeriesPriceenvelopesEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesPriceenvelopesEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testClick [
+HighstockSeriesPriceenvelopesEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesPriceenvelopesEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testHide [
+HighstockSeriesPriceenvelopesEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesPriceenvelopesEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testLegendItemClick [
+HighstockSeriesPriceenvelopesEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesPriceenvelopesEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testMouseOut [
+HighstockSeriesPriceenvelopesEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesPriceenvelopesEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testMouseOver [
+HighstockSeriesPriceenvelopesEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesPriceenvelopesEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPriceenvelopesEventsTest >> testShow [
+HighstockSeriesPriceenvelopesEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

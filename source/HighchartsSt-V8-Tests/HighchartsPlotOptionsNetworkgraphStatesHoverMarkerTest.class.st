@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testEnabled [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testEnabledThreshold [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testFillColor [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testHeight [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testLineColor [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testLineWidth [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testRadius [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSymbol [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testWidth [
+HighchartsPlotOptionsNetworkgraphStatesHoverMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

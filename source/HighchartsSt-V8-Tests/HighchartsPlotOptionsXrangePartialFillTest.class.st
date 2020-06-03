@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsXrangePartialFillTest >> testFill [
+HighchartsPlotOptionsXrangePartialFillTest >> testSetFill [
 
 	| component javascript expectedConfiguration |
 

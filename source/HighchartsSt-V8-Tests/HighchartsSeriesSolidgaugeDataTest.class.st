@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testClassName [
+HighchartsSeriesSolidgaugeDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgaugeData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeDataTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgaugeData new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgaugeData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsSeriesSolidgaugeDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testColor [
+HighchartsSeriesSolidgaugeDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsSeriesSolidgaugeDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testColorIndex [
+HighchartsSeriesSolidgaugeDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,21 @@ HighchartsSeriesSolidgaugeDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testDescription [
+HighchartsSeriesSolidgaugeDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesSolidgaugeData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesSolidgaugeDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +117,7 @@ HighchartsSeriesSolidgaugeDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testEvents [
+HighchartsSeriesSolidgaugeDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +131,7 @@ HighchartsSeriesSolidgaugeDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testId [
+HighchartsSeriesSolidgaugeDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +145,7 @@ HighchartsSeriesSolidgaugeDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testInnerRadius [
+HighchartsSeriesSolidgaugeDataTest >> testSetInnerRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +159,7 @@ HighchartsSeriesSolidgaugeDataTest >> testInnerRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testLabelrank [
+HighchartsSeriesSolidgaugeDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +173,7 @@ HighchartsSeriesSolidgaugeDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testName [
+HighchartsSeriesSolidgaugeDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +187,7 @@ HighchartsSeriesSolidgaugeDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testRadius [
+HighchartsSeriesSolidgaugeDataTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +201,7 @@ HighchartsSeriesSolidgaugeDataTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testSelected [
+HighchartsSeriesSolidgaugeDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +215,7 @@ HighchartsSeriesSolidgaugeDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeDataTest >> testY [
+HighchartsSeriesSolidgaugeDataTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

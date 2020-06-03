@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPieDataAccessibilityTest >> testDescription [
+HighchartsSeriesPieDataAccessibilityTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 

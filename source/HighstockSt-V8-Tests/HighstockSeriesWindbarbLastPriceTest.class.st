@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbLastPriceTest >> testColor [
+HighstockSeriesWindbarbLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesWindbarbLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbLastPriceTest >> testEnabled [
+HighstockSeriesWindbarbLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testEnabled [
+HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testFillColor [
+HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testLineColor [
+HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testLineWidth [
+HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testRadius [
+HighchartsPlotOptionsNetworkgraphMarkerStatesSelectTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 

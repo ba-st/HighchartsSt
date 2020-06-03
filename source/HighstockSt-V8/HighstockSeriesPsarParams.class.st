@@ -19,8 +19,7 @@ Defaults to 4."
 { #category : #accessing }
 HighstockSeriesPsarParams >> increment: aNumber [
 
-	"Acceleration factor increases by increment each time
-the extreme point makes a new high.
+	"Acceleration factor increases by increment each time the extreme point makes a new high.
 Defaults to 0.02."
 
 	configurationOptions at: 'increment' put: aNumber
@@ -38,12 +37,7 @@ Defaults to 2."
 { #category : #accessing }
 HighstockSeriesPsarParams >> initialAccelerationFactor: aNumber [
 
-	"The initial value for acceleration factor.
-Acceleration factor is starting with this value
-and increases by specified increment each time
-the extreme point makes a new high.
-AF can reach a maximum of maxAccelerationFactor,
-no matter how long the uptrend extends.
+	"The initial value for acceleration factor. Acceleration factor is starting with this value and increases by specified increment each time the extreme point makes a new high. AF can reach a maximum of maxAccelerationFactor, no matter how long the uptrend extends.
 Defaults to 0.02."
 
 	configurationOptions at: 'initialAccelerationFactor' put: aNumber
@@ -52,9 +46,7 @@ Defaults to 0.02."
 { #category : #accessing }
 HighstockSeriesPsarParams >> maxAccelerationFactor: aNumber [
 
-	"The Maximum value for acceleration factor.
-AF can reach a maximum of maxAccelerationFactor,
-no matter how long the uptrend extends.
+	"The Maximum value for acceleration factor. AF can reach a maximum of maxAccelerationFactor, no matter how long the uptrend extends.
 Defaults to 0.2."
 
 	configurationOptions at: 'maxAccelerationFactor' put: aNumber

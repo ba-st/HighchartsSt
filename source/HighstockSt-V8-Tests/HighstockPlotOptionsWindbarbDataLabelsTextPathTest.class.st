@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsWindbarbDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWindbarbDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWindbarbDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsWindbarbDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

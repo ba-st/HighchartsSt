@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDataLabelsTextPathTest >> testAttributes [
+HighstockPlotOptionsSplineDataLabelsTextPathTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsSplineDataLabelsTextPathTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineDataLabelsTextPathTest >> testEnabled [
+HighstockPlotOptionsSplineDataLabelsTextPathTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

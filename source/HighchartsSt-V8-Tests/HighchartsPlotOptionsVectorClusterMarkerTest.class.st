@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testEnabled [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsVectorClusterMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testFillColor [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsVectorClusterMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testHeight [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsVectorClusterMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testLineColor [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsVectorClusterMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testLineWidth [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsVectorClusterMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testRadius [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsVectorClusterMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testSymbol [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsVectorClusterMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorClusterMarkerTest >> testWidth [
+HighchartsPlotOptionsVectorClusterMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

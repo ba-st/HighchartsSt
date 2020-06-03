@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsYAxisTitleStyleTest >> testColor [
+HighchartsYAxisTitleStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testApproximation [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testDateTimeLabelFormats [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testEnabled [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testForced [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testGroupAll [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testGroupPixelWidth [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSmoothed [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testUnits [
+HighchartsPlotOptionsSolidgaugeDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

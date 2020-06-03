@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockTooltipStyleTest >> testColor [
+HighstockTooltipStyleTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockTooltipStyleTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipStyleTest >> testCursor [
+HighstockTooltipStyleTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockTooltipStyleTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipStyleTest >> testFontSize [
+HighstockTooltipStyleTest >> testSetFontSize [
 
 	| component javascript expectedConfiguration |
 
@@ -47,21 +47,7 @@ HighstockTooltipStyleTest >> testFontSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockTooltipStyleTest >> testPointerEvents [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockTooltipStyle new.
-	component pointerEvents: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'pointerEvents' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockTooltipStyleTest >> testWhiteSpace [
+HighstockTooltipStyleTest >> testSetWhiteSpace [
 
 	| component javascript expectedConfiguration |
 

@@ -83,11 +83,13 @@ Highsoft8DumpImporter >> addMethodChangeToInitializeTypeOf: anElement for: aSele
 { #category : #'private - custom changes' }
 Highsoft8DumpImporter >> addSeriesTypeSelectorOf: definedClass to: selectorsOfInterest [
 
-	(definedClass name beginsWith: self seriesClassName)
-		and: [ (definedClass includesSelector: #data)
-				and: [ ((RBClass existingNamed: self seriesClassName asSymbol)
-						whichSelectorsReferToClass: (RBClass existingNamed: definedClass name))
-						ifNotEmpty: [ :selectors | selectorsOfInterest add: selectors any ] ] ]
+	( definedClass name beginsWithSubCollection: self seriesClassName )
+		and: [ ( definedClass includesSelector: #type: )
+				and: [ ( ( RBClass existingNamed: self seriesClassName asSymbol )
+						whichSelectorsReferToClass: ( RBClass existingNamed: definedClass name ) )
+						ifNotEmpty: [ :selectors | selectorsOfInterest add: selectors any ]
+					]
+			]
 ]
 
 { #category : #'private - argument type' }
@@ -104,7 +106,7 @@ Highsoft8DumpImporter >> argumentTypeFrom: anElement [
 { #category : #'private - accessing' }
 Highsoft8DumpImporter >> classNameFor: anElement accessedFrom: aClassName [
 
-	^ '<1s><2s>' expandMacrosWith: aClassName with: (self selectorFrom: anElement) capitalized
+	^ '<1s><2s>' expandMacrosWith: aClassName with: ( self selectorFrom: anElement ) capitalized
 ]
 
 { #category : #'private - accessing' }
@@ -203,7 +205,11 @@ Highsoft8DumpImporter >> doesModifyCurrentSource: aChange [
 
 	changeClass := aChange changeClass.
 	^ changeClass isNil
-		or: [ changeClass compiledMethodAt: aChange selector ifPresent: [ :method | method sourceCode ~= aChange source ] ifAbsent: [ true ] ]
+		or: [ changeClass
+				compiledMethodAt: aChange selector
+				ifPresent: [ :method | method sourceCode ~= aChange source ]
+				ifAbsent: [ true ]
+			]
 ]
 
 { #category : #processing }
@@ -356,20 +362,38 @@ Highsoft8DumpImporter >> generateCustomClassChangeOf: aClassName for: aFullName 
 
 	self
 		register:
-			(RBAddClassChange
+			( RBAddClassChange
 				definition:
-					('<1s> subclass: #<2s>
+					( '<1s> subclass: #<2s>
 	instanceVariableNames: ''''
 	classVariableNames: ''''
 	poolDictionaries: ''''
 	category: ''<3s>'''
 						expandMacrosWith: self abstractComponentClass greaseString
 						with: aClassName
-						with: packageName))
+						with: packageName ) )
 		asClassChangeFor:
-			(Dictionary new
+			( Dictionary new
 				at: 'fullname' put: aFullName;
-				yourself)
+				yourself )
+]
+
+{ #category : #'private - custom changes' }
+Highsoft8DumpImporter >> generateCustomClassMethodChangeIn: aClassName with: aSourceCode classifiedAs: aCategory for: aFullName [
+
+	self
+		register:
+			( RBAddMethodChange
+				compile: aSourceCode
+				in:
+					( ( RBMetaclass existingNamed: aClassName asSymbol )
+						model: ( RBNamespace onEnvironment: RBBrowserEnvironment new );
+						yourself )
+				classified: aCategory )
+		asMethodChangeFor:
+			( Dictionary new
+				at: 'fullname' put: aFullName;
+				yourself )
 ]
 
 { #category : #'private - custom changes' }
@@ -377,14 +401,14 @@ Highsoft8DumpImporter >> generateCustomMethodChangeIn: aClassName with: aSourceC
 
 	self
 		register:
-			(RBAddMethodChange
+			( RBAddMethodChange
 				compile: aSourceCode
-				in: (RBClass named: aClassName asSymbol)
-				classified: aCategory)
+				in: ( RBClass named: aClassName asSymbol )
+				classified: aCategory )
 		asMethodChangeFor:
-			(Dictionary new
+			( Dictionary new
 				at: 'fullname' put: aFullName;
-				yourself)
+				yourself )
 ]
 
 { #category : #'private - custom changes' }
@@ -529,6 +553,14 @@ Highsoft8DumpImporter >> markAsUsedSelectorOf: aChange [
 { #category : #'private - comment' }
 Highsoft8DumpImporter >> methodCommentFrom: anElement [
 
+	^ ( self methodCommentWithLineFeedsFrom: anElement )
+		copyReplaceAll: ( String with: Character linefeed )
+		with: ' '
+]
+
+{ #category : #'private - comment' }
+Highsoft8DumpImporter >> methodCommentWithLineFeedsFrom: anElement [
+
 	anElement
 		at: 'description'
 		ifPresent: [ :description | 
@@ -600,7 +632,7 @@ Highsoft8DumpImporter >> registerCommentChangeUsing: aString withClassDefinedBy:
 { #category : #'private - processing' }
 Highsoft8DumpImporter >> registerPackage [
 
-	[ (RPackage named: packageName) register ]
+	[ ( RPackage named: packageName ) register ]
 		on: RPackageConflictError
 		do: [ :ex | "Package already created" ex return ]
 ]
@@ -662,8 +694,7 @@ Highsoft8DumpImporter >> selectorFrom: anElement [
 Highsoft8DumpImporter >> selectorsOf: componentClass definedIn: packageSet [
 
 	^ OrderedCollection
-		withAll:
-			(packageSet collectFromAllPackages: #definedSelectorsForClass: with: componentClass)
+		withAll: ( packageSet packages flatCollect: [ :package | package definedSelectorsForClass: componentClass ] )
 ]
 
 { #category : #'private - accessing' }
@@ -677,23 +708,24 @@ Highsoft8DumpImporter >> shouldAlsoGenerateChangesToConfigure: anElement [
 
 	"We want support to configure events and states on all series that provide access to them"
 
-	^ #(events states) includes: (self selectorFrom: anElement)
+	^ #(events states) includes: ( self selectorFrom: anElement )
 ]
 
 { #category : #'private - testing' }
 Highsoft8DumpImporter >> shouldGenerateChangesFor: anElement [
 
-	^ (self isOfInterest: anElement)
-		and: [ (anElement at: 'products')
+	^ ( self isOfInterest: anElement )
+		and: [ ( anElement at: 'products' )
 				ifEmpty: [ true ]
-				ifNotEmpty: [ :products | products includes: productName ] ]
+				ifNotEmpty: [ :products | products includes: productName ]
+			]
 ]
 
 { #category : #'private - testing' }
 Highsoft8DumpImporter >> shouldIgnore: elementName basedOn: ignoredName [
 
 	^ elementName = ignoredName
-		or: [ elementName beginsWith: ('<1s>.' expandMacrosWith: ignoredName) ]
+		or: [ elementName beginsWith: ( '<1s>.' expandMacrosWith: ignoredName ) ]
 ]
 
 { #category : #'private - testing' }

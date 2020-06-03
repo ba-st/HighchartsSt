@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityAnnounceNewDataTest >> testAnnouncementFormatter [
+HighstockAccessibilityAnnounceNewDataTest >> testSetAnnouncementFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAccessibilityAnnounceNewDataTest >> testAnnouncementFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityAnnounceNewDataTest >> testEnabled [
+HighstockAccessibilityAnnounceNewDataTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAccessibilityAnnounceNewDataTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityAnnounceNewDataTest >> testInterruptUser [
+HighstockAccessibilityAnnounceNewDataTest >> testSetInterruptUser [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockAccessibilityAnnounceNewDataTest >> testInterruptUser [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAccessibilityAnnounceNewDataTest >> testMinAnnounceInterval [
+HighstockAccessibilityAnnounceNewDataTest >> testSetMinAnnounceInterval [
 
 	| component javascript expectedConfiguration |
 

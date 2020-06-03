@@ -5,7 +5,49 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testAlignTo [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testGetFilter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVariablepieDataLabels new.
+	component filter.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'filter' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testGetStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVariablepieDataLabels new.
+	component style.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'style' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testGetTextPath [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsVariablepieDataLabels new.
+	component textPath.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'textPath' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetAlignTo [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +61,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testAlignTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testBackgroundColor [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetBackgroundColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +75,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testBackgroundColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testBorderColor [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +89,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testBorderRadius [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetBorderRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testBorderRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testBorderWidth [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testClassName [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testColor [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorColor [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetConnectorColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorPadding [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetConnectorPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorShape [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetConnectorShape [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorWidth [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetConnectorWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testConnectorWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testCrookDistance [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetCrookDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +215,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testCrookDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testCrop [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetCrop [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +229,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testCrop [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testDefer [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetDefer [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +243,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testDefer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testDistance [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +257,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testEnabled [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +271,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testFormat [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +285,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testFormatter [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -257,21 +299,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testInside [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsVariablepieDataLabels new.
-	component inside: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'inside' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testNullFormat [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +313,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testNullFormatter [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +327,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testOverflow [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +341,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testOverflow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testPadding [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetPadding [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +355,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testPadding [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testPosition [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetPosition [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +369,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testPosition [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testRotation [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetRotation [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +383,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testRotation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testShadow [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +397,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testShape [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetShape [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +411,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testShape [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testSoftConnector [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetSoftConnector [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +425,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testSoftConnector [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testUseHTML [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +439,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testUseHTML [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testVerticalAlign [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetVerticalAlign [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +453,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testVerticalAlign [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testX [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +467,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testY [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +481,7 @@ HighchartsPlotOptionsVariablepieDataLabelsTest >> testY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVariablepieDataLabelsTest >> testZ [
+HighchartsPlotOptionsVariablepieDataLabelsTest >> testSetZ [
 
 	| component javascript expectedConfiguration |
 

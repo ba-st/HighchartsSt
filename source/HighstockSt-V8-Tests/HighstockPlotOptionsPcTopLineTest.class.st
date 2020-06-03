@@ -1,0 +1,19 @@
+Class {
+	#name : #HighstockPlotOptionsPcTopLineTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsPcTopLineTest >> testGetStyles [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsPcTopLine new.
+	component styles.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'styles' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

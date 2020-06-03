@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testChangeDecimals [
+HighchartsPlotOptionsOrganizationTooltipTest >> testGetDateTimeLabelFormats [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsOrganizationTooltip new.
+	component dateTimeLabelFormats.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dateTimeLabelFormats' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetChangeDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testChangeDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testClusterFormat [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetClusterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testClusterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testDistance [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetDistance [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +61,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testDistance [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testFollowPointer [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetFollowPointer [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +75,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testFollowPointer [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testFollowTouchMove [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetFollowTouchMove [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +89,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testFollowTouchMove [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testFooterFormat [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetFooterFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +103,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testFooterFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testHeaderFormat [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetHeaderFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +117,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testHeaderFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testNodeFormat [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetNodeFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +131,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testNodeFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testNodeFormatter [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetNodeFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +145,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testNodeFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testNullFormat [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetNullFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +159,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testNullFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testNullFormatter [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetNullFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +173,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testNullFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testPointFormat [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetPointFormat [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +187,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testPointFormat [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testPointFormatter [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetPointFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +201,21 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testPointFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testValueDecimals [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetStickOnContact [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsOrganizationTooltip new.
+	component stickOnContact: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'stickOnContact' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetValueDecimals [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testValueDecimals [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testValuePrefix [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetValuePrefix [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +243,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testValuePrefix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testValueSuffix [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetValueSuffix [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +257,7 @@ HighchartsPlotOptionsOrganizationTooltipTest >> testValueSuffix [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsOrganizationTooltipTest >> testXDateFormat [
+HighchartsPlotOptionsOrganizationTooltipTest >> testSetXDateFormat [
 
 	| component javascript expectedConfiguration |
 

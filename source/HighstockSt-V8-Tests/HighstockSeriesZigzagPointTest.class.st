@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagPointTest >> testEvents [
+HighstockSeriesZigzagPointTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testAfterAnimate [
+HighstockSeriesColumnpyramidEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesColumnpyramidEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testCheckboxClick [
+HighstockSeriesColumnpyramidEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesColumnpyramidEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testClick [
+HighstockSeriesColumnpyramidEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesColumnpyramidEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testHide [
+HighstockSeriesColumnpyramidEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesColumnpyramidEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testLegendItemClick [
+HighstockSeriesColumnpyramidEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesColumnpyramidEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testMouseOut [
+HighstockSeriesColumnpyramidEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesColumnpyramidEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testMouseOver [
+HighstockSeriesColumnpyramidEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesColumnpyramidEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesColumnpyramidEventsTest >> testShow [
+HighstockSeriesColumnpyramidEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

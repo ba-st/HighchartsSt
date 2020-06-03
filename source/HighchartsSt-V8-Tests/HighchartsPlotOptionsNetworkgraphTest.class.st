@@ -5,7 +5,175 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testAllAreas [
+HighchartsPlotOptionsNetworkgraphTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetLayoutAlgorithm [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component layoutAlgorithm.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'layoutAlgorithm' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetLink [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component link.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'link' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +187,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testAllowPointSelect [
+HighchartsPlotOptionsNetworkgraphTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +201,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testBoostBlending [
+HighchartsPlotOptionsNetworkgraphTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +215,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testBorderColor [
+HighchartsPlotOptionsNetworkgraphTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +229,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testBorderWidth [
+HighchartsPlotOptionsNetworkgraphTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +243,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testClassName [
+HighchartsPlotOptionsNetworkgraphTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +257,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testClip [
+HighchartsPlotOptionsNetworkgraphTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +271,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testColor [
+HighchartsPlotOptionsNetworkgraphTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +285,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testColorIndex [
+HighchartsPlotOptionsNetworkgraphTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +299,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testCompare [
+HighchartsPlotOptionsNetworkgraphTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +313,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testCompareBase [
+HighchartsPlotOptionsNetworkgraphTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +327,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testCompareStart [
+HighchartsPlotOptionsNetworkgraphTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +341,21 @@ HighchartsPlotOptionsNetworkgraphTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testCropThreshold [
+HighchartsPlotOptionsNetworkgraphTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +369,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testCursor [
+HighchartsPlotOptionsNetworkgraphTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +383,21 @@ HighchartsPlotOptionsNetworkgraphTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testDashStyle [
+HighchartsPlotOptionsNetworkgraphTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsNetworkgraph new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsNetworkgraphTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +411,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testDescription [
+HighchartsPlotOptionsNetworkgraphTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -229,7 +425,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testDraggable [
+HighchartsPlotOptionsNetworkgraphTest >> testSetDraggable [
 
 	| component javascript expectedConfiguration |
 
@@ -243,7 +439,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testDraggable [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testEnableMouseTracking [
+HighchartsPlotOptionsNetworkgraphTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -257,7 +453,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testEvents [
+HighchartsPlotOptionsNetworkgraphTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -271,7 +467,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testFindNearestPointBy [
+HighchartsPlotOptionsNetworkgraphTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -285,7 +481,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testGapSize [
+HighchartsPlotOptionsNetworkgraphTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -299,7 +495,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testGapUnit [
+HighchartsPlotOptionsNetworkgraphTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -313,7 +509,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testIncludeInDataExport [
+HighchartsPlotOptionsNetworkgraphTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -327,7 +523,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testJoinBy [
+HighchartsPlotOptionsNetworkgraphTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -341,7 +537,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testKeys [
+HighchartsPlotOptionsNetworkgraphTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -355,7 +551,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testLineWidth [
+HighchartsPlotOptionsNetworkgraphTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -369,7 +565,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testLinkedTo [
+HighchartsPlotOptionsNetworkgraphTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -383,7 +579,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testNavigatorOptions [
+HighchartsPlotOptionsNetworkgraphTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -397,7 +593,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testOpacity [
+HighchartsPlotOptionsNetworkgraphTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -411,7 +607,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testPointDescriptionFormatter [
+HighchartsPlotOptionsNetworkgraphTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +621,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testPointRange [
+HighchartsPlotOptionsNetworkgraphTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -439,7 +635,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testSelected [
+HighchartsPlotOptionsNetworkgraphTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -453,7 +649,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testShadow [
+HighchartsPlotOptionsNetworkgraphTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -467,7 +663,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testShowCheckbox [
+HighchartsPlotOptionsNetworkgraphTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -481,7 +677,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testShowInLegend [
+HighchartsPlotOptionsNetworkgraphTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -495,7 +691,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testShowInNavigator [
+HighchartsPlotOptionsNetworkgraphTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -509,7 +705,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testSkipKeyboardNavigation [
+HighchartsPlotOptionsNetworkgraphTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -523,7 +719,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testStates [
+HighchartsPlotOptionsNetworkgraphTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -537,7 +733,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testStickyTracking [
+HighchartsPlotOptionsNetworkgraphTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -551,7 +747,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testTurboThreshold [
+HighchartsPlotOptionsNetworkgraphTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -565,7 +761,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testUseOhlcData [
+HighchartsPlotOptionsNetworkgraphTest >> testSetUseOhlcData [
 
 	| component javascript expectedConfiguration |
 
@@ -579,7 +775,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testUseOhlcData [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testVisible [
+HighchartsPlotOptionsNetworkgraphTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -593,7 +789,7 @@ HighchartsPlotOptionsNetworkgraphTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsNetworkgraphTest >> testZIndex [
+HighchartsPlotOptionsNetworkgraphTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 

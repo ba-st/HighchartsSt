@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsLoadingTest >> testHideDuration [
+HighchartsLoadingTest >> testSetHideDuration [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsLoadingTest >> testHideDuration [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLoadingTest >> testLabelStyle [
+HighchartsLoadingTest >> testSetLabelStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsLoadingTest >> testLabelStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLoadingTest >> testShowDuration [
+HighchartsLoadingTest >> testSetShowDuration [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsLoadingTest >> testShowDuration [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsLoadingTest >> testStyle [
+HighchartsLoadingTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 

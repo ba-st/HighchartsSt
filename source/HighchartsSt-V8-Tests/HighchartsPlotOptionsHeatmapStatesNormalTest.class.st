@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsHeatmapStatesNormalTest >> testAnimation [
+HighchartsPlotOptionsHeatmapStatesNormalTest >> testSetAnimation [
 
 	| component javascript expectedConfiguration |
 

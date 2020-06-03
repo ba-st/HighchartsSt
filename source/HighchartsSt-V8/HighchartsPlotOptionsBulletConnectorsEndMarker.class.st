@@ -20,8 +20,7 @@ Defaults to center."
 { #category : #accessing }
 HighchartsPlotOptionsBulletConnectorsEndMarker >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"Set the color of the connector markers. By default this is the
-same as the connector color.
+	"Set the color of the connector markers. By default this is the same as the connector color.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -39,8 +38,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsBulletConnectorsEndMarker >> height: aNumber [
 
-	"Set the height of the connector markers. If not supplied, this
-is inferred from the marker radius.
+	"Set the height of the connector markers. If not supplied, this is inferred from the marker radius.
 "
 
 	configurationOptions at: 'height' put: aNumber
@@ -58,8 +56,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsBulletConnectorsEndMarker >> lineColor: aHighchartsColorString [
 
-	"Set the line/border color of the connector markers. By default
-this is the same as the marker color.
+	"Set the line/border color of the connector markers. By default this is the same as the marker color.
 "
 
 	configurationOptions at: 'lineColor' put: aHighchartsColorString
@@ -77,10 +74,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsPlotOptionsBulletConnectorsEndMarker >> radius: aNumber [
 
-	"Set the radius of the connector markers. The default is
-automatically computed based on the algorithmMargin setting.
-Setting marker.width and marker.height will override this
-setting.
+	"Set the radius of the connector markers. The default is automatically computed based on the algorithmMargin setting. Setting marker.width and marker.height will override this setting.
 "
 
 	configurationOptions at: 'radius' put: aNumber
@@ -107,8 +101,7 @@ Defaults to middle."
 { #category : #accessing }
 HighchartsPlotOptionsBulletConnectorsEndMarker >> width: aNumber [
 
-	"Set the width of the connector markers. If not supplied, this
-is inferred from the marker radius.
+	"Set the width of the connector markers. If not supplied, this is inferred from the marker radius.
 "
 
 	configurationOptions at: 'width' put: aNumber

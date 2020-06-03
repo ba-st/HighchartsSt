@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeTest >> testCursor [
+HighstockYAxisResizeTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockYAxisResizeTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeTest >> testEnabled [
+HighstockYAxisResizeTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockYAxisResizeTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeTest >> testLineColor [
+HighstockYAxisResizeTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockYAxisResizeTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeTest >> testLineDashStyle [
+HighstockYAxisResizeTest >> testSetLineDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockYAxisResizeTest >> testLineDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeTest >> testLineWidth [
+HighstockYAxisResizeTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockYAxisResizeTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeTest >> testX [
+HighstockYAxisResizeTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockYAxisResizeTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisResizeTest >> testY [
+HighstockYAxisResizeTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

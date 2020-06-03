@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testEnabled [
+HighstockSeriesZigzagMarkerTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesZigzagMarkerTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testEnabledThreshold [
+HighstockSeriesZigzagMarkerTest >> testSetEnabledThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesZigzagMarkerTest >> testEnabledThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testFillColor [
+HighstockSeriesZigzagMarkerTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesZigzagMarkerTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testHeight [
+HighstockSeriesZigzagMarkerTest >> testSetHeight [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesZigzagMarkerTest >> testHeight [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testLineColor [
+HighstockSeriesZigzagMarkerTest >> testSetLineColor [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesZigzagMarkerTest >> testLineColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testLineWidth [
+HighstockSeriesZigzagMarkerTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesZigzagMarkerTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testRadius [
+HighstockSeriesZigzagMarkerTest >> testSetRadius [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesZigzagMarkerTest >> testRadius [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testStates [
+HighstockSeriesZigzagMarkerTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockSeriesZigzagMarkerTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testSymbol [
+HighstockSeriesZigzagMarkerTest >> testSetSymbol [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +131,7 @@ HighstockSeriesZigzagMarkerTest >> testSymbol [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesZigzagMarkerTest >> testWidth [
+HighstockSeriesZigzagMarkerTest >> testSetWidth [
 
 	| component javascript expectedConfiguration |
 

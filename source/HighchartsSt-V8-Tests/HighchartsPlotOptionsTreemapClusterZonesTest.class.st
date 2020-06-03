@@ -5,7 +5,21 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesTest >> testClassName [
+HighchartsPlotOptionsTreemapClusterZonesTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTreemapClusterZones new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsTreemapClusterZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +33,7 @@ HighchartsPlotOptionsTreemapClusterZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesTest >> testFrom [
+HighchartsPlotOptionsTreemapClusterZonesTest >> testSetFrom [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +47,7 @@ HighchartsPlotOptionsTreemapClusterZonesTest >> testFrom [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapClusterZonesTest >> testTo [
+HighchartsPlotOptionsTreemapClusterZonesTest >> testSetTo [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testApproximation [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetApproximation [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesSlowstochasticDataGroupingTest >> testApproximation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testDateTimeLabelFormats [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetDateTimeLabelFormats [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesSlowstochasticDataGroupingTest >> testDateTimeLabelFormats [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testEnabled [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesSlowstochasticDataGroupingTest >> testEnabled [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testForced [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetForced [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesSlowstochasticDataGroupingTest >> testForced [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testGroupAll [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetGroupAll [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesSlowstochasticDataGroupingTest >> testGroupAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testGroupPixelWidth [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetGroupPixelWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesSlowstochasticDataGroupingTest >> testGroupPixelWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testSmoothed [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetSmoothed [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesSlowstochasticDataGroupingTest >> testSmoothed [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesSlowstochasticDataGroupingTest >> testUnits [
+HighstockSeriesSlowstochasticDataGroupingTest >> testSetUnits [
 
 	| component javascript expectedConfiguration |
 

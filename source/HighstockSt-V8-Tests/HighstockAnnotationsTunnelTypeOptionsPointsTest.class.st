@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsPointsTest >> testControlPoint [
+HighstockAnnotationsTunnelTypeOptionsPointsTest >> testSetControlPoint [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockAnnotationsTunnelTypeOptionsPointsTest >> testControlPoint [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsPointsTest >> testX [
+HighstockAnnotationsTunnelTypeOptionsPointsTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockAnnotationsTunnelTypeOptionsPointsTest >> testX [
 ]
 
 { #category : #'tests-accessing' }
-HighstockAnnotationsTunnelTypeOptionsPointsTest >> testY [
+HighstockAnnotationsTunnelTypeOptionsPointsTest >> testSetY [
 
 	| component javascript expectedConfiguration |
 

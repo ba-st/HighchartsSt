@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testArearange [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetArearange [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testArearange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testAreasplinerange [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetAreasplinerange [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testAreasplinerange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testBoxplot [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetBoxplot [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testBoxplot [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testBubble [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetBubble [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testBubble [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testColumnrange [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetColumnrange [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testColumnrange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testErrorbar [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetErrorbar [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testErrorbar [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testFunnel [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetFunnel [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testFunnel [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testPyramid [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetPyramid [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +117,7 @@ HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testPyramid [
 ]
 
 { #category : #'tests-accessing' }
-HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testWaterfall [
+HighstockLangAccessibilitySeriesTypeDescriptionsTest >> testSetWaterfall [
 
 	| component javascript expectedConfiguration |
 

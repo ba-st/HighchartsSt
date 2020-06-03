@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testAfterAnimate [
+HighstockSeriesAreasplinerangeEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockSeriesAreasplinerangeEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testCheckboxClick [
+HighstockSeriesAreasplinerangeEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockSeriesAreasplinerangeEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testClick [
+HighstockSeriesAreasplinerangeEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockSeriesAreasplinerangeEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testHide [
+HighstockSeriesAreasplinerangeEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockSeriesAreasplinerangeEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testLegendItemClick [
+HighstockSeriesAreasplinerangeEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighstockSeriesAreasplinerangeEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testMouseOut [
+HighstockSeriesAreasplinerangeEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighstockSeriesAreasplinerangeEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testMouseOver [
+HighstockSeriesAreasplinerangeEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighstockSeriesAreasplinerangeEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesAreasplinerangeEventsTest >> testShow [
+HighstockSeriesAreasplinerangeEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsNoDataTest >> testStyle [
+HighchartsNoDataTest >> testGetAttr [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNoData new.
+	component attr.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'attr' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNoDataTest >> testGetPosition [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsNoData new.
+	component position.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'position' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsNoDataTest >> testSetStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsNoDataTest >> testStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsNoDataTest >> testUseHTML [
+HighchartsNoDataTest >> testSetUseHTML [
 
 	| component javascript expectedConfiguration |
 

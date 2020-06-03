@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapStatesSelectHaloTest >> testAttributes [
+HighchartsSeriesTreemapStatesSelectHaloTest >> testSetAttributes [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesTreemapStatesSelectHaloTest >> testAttributes [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapStatesSelectHaloTest >> testOpacity [
+HighchartsSeriesTreemapStatesSelectHaloTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesTreemapStatesSelectHaloTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesTreemapStatesSelectHaloTest >> testSize [
+HighchartsSeriesTreemapStatesSelectHaloTest >> testSetSize [
 
 	| component javascript expectedConfiguration |
 

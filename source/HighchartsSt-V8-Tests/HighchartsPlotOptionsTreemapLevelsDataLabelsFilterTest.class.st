@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testOperator [
+HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testSetOperator [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testOperator [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testProperty [
+HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testSetProperty [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testProperty [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testValue [
+HighchartsPlotOptionsTreemapLevelsDataLabelsFilterTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

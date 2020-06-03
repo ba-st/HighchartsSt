@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDragMaxX [
+HighchartsPlotOptionsBoxplotDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBoxplotDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBoxplotDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsBoxplotDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDragMaxX [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDragMaxX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDragMaxY [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDragMaxY [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDragMaxY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDragMinX [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDragMinX [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDragMinX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDragMinY [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDragMinY [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +89,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDragMinY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDragPrecisionX [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDragPrecisionX [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +103,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDragPrecisionX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDragPrecisionY [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDragPrecisionY [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +117,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDragPrecisionY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDragSensitivity [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDragSensitivity [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +131,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDragSensitivity [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableHigh [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDraggableHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +145,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableLow [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDraggableLow [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +159,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableQ1 [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDraggableQ1 [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +173,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableQ1 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableQ3 [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDraggableQ3 [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +187,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableQ3 [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableX [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDraggableX [
 
 	| component javascript expectedConfiguration |
 
@@ -173,7 +201,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableX [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableY [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetDraggableY [
 
 	| component javascript expectedConfiguration |
 
@@ -187,7 +215,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testDraggableY [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testGroupBy [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetGroupBy [
 
 	| component javascript expectedConfiguration |
 
@@ -201,7 +229,7 @@ HighchartsPlotOptionsBoxplotDragDropTest >> testGroupBy [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsBoxplotDragDropTest >> testLiveRedraw [
+HighchartsPlotOptionsBoxplotDragDropTest >> testSetLiveRedraw [
 
 	| component javascript expectedConfiguration |
 

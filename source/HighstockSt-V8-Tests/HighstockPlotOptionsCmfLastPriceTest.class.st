@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLastPriceTest >> testColor [
+HighstockPlotOptionsCmfLastPriceTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsCmfLastPriceTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsCmfLastPriceTest >> testEnabled [
+HighstockPlotOptionsCmfLastPriceTest >> testSetEnabled [
 
 	| component javascript expectedConfiguration |
 

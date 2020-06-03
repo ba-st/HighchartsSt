@@ -5,7 +5,232 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testAllAreas [
+HighstockSeriesPolygonTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetConnectors [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component connectors.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'connectors' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component data.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'data' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetDataGrouping [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component dataGrouping.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'dataGrouping' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetDataLabels [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component dataLabels.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'dataLabels' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetDataSorting [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component dataSorting.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'dataSorting' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetLastPrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component lastPrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'lastPrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetLastVisiblePrice [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component lastVisiblePrice.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'lastVisiblePrice' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetMarker [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component marker.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'marker' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component point.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'point' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetTooltip [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component tooltip.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'tooltip' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testGetZones [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component zones.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'zones' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testSetAllAreas [
 
 	| component javascript expectedConfiguration |
 
@@ -20,7 +245,7 @@ HighstockSeriesPolygonTest >> testAllAreas [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testAllowPointSelect [
+HighstockSeriesPolygonTest >> testSetAllowPointSelect [
 
 	| component javascript expectedConfiguration |
 
@@ -35,7 +260,7 @@ HighstockSeriesPolygonTest >> testAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testAnimationLimit [
+HighstockSeriesPolygonTest >> testSetAnimationLimit [
 
 	| component javascript expectedConfiguration |
 
@@ -50,7 +275,7 @@ HighstockSeriesPolygonTest >> testAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testBoostBlending [
+HighstockSeriesPolygonTest >> testSetBoostBlending [
 
 	| component javascript expectedConfiguration |
 
@@ -65,7 +290,7 @@ HighstockSeriesPolygonTest >> testBoostBlending [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testBoostThreshold [
+HighstockSeriesPolygonTest >> testSetBoostThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -80,7 +305,7 @@ HighstockSeriesPolygonTest >> testBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testBorderColor [
+HighstockSeriesPolygonTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
 
@@ -95,7 +320,7 @@ HighstockSeriesPolygonTest >> testBorderColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testBorderWidth [
+HighstockSeriesPolygonTest >> testSetBorderWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -110,7 +335,7 @@ HighstockSeriesPolygonTest >> testBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testClassName [
+HighstockSeriesPolygonTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -125,7 +350,7 @@ HighstockSeriesPolygonTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testClip [
+HighstockSeriesPolygonTest >> testSetClip [
 
 	| component javascript expectedConfiguration |
 
@@ -140,7 +365,7 @@ HighstockSeriesPolygonTest >> testClip [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testColor [
+HighstockSeriesPolygonTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -155,7 +380,7 @@ HighstockSeriesPolygonTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testColorAxis [
+HighstockSeriesPolygonTest >> testSetColorAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -170,7 +395,7 @@ HighstockSeriesPolygonTest >> testColorAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testColorIndex [
+HighstockSeriesPolygonTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -185,7 +410,7 @@ HighstockSeriesPolygonTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testColorKey [
+HighstockSeriesPolygonTest >> testSetColorKey [
 
 	| component javascript expectedConfiguration |
 
@@ -200,7 +425,7 @@ HighstockSeriesPolygonTest >> testColorKey [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testCompare [
+HighstockSeriesPolygonTest >> testSetCompare [
 
 	| component javascript expectedConfiguration |
 
@@ -215,7 +440,7 @@ HighstockSeriesPolygonTest >> testCompare [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testCompareBase [
+HighstockSeriesPolygonTest >> testSetCompareBase [
 
 	| component javascript expectedConfiguration |
 
@@ -230,7 +455,7 @@ HighstockSeriesPolygonTest >> testCompareBase [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testCompareStart [
+HighstockSeriesPolygonTest >> testSetCompareStart [
 
 	| component javascript expectedConfiguration |
 
@@ -245,7 +470,7 @@ HighstockSeriesPolygonTest >> testCompareStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testConnectNulls [
+HighstockSeriesPolygonTest >> testSetConnectNulls [
 
 	| component javascript expectedConfiguration |
 
@@ -260,7 +485,22 @@ HighstockSeriesPolygonTest >> testConnectNulls [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testCropThreshold [
+HighstockSeriesPolygonTest >> testSetCrisp [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component crisp: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'crisp' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testSetCropThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -275,7 +515,7 @@ HighstockSeriesPolygonTest >> testCropThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testCursor [
+HighstockSeriesPolygonTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
 
@@ -290,7 +530,22 @@ HighstockSeriesPolygonTest >> testCursor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testDashStyle [
+HighstockSeriesPolygonTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPolygon new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'polygon';
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPolygonTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -305,7 +560,7 @@ HighstockSeriesPolygonTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testData [
+HighstockSeriesPolygonTest >> testSetData [
 
 	| component javascript expectedConfiguration |
 
@@ -320,7 +575,7 @@ HighstockSeriesPolygonTest >> testData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testDescription [
+HighstockSeriesPolygonTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -335,7 +590,7 @@ HighstockSeriesPolygonTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testEnableMouseTracking [
+HighstockSeriesPolygonTest >> testSetEnableMouseTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -350,7 +605,7 @@ HighstockSeriesPolygonTest >> testEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testEvents [
+HighstockSeriesPolygonTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -365,7 +620,7 @@ HighstockSeriesPolygonTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testFindNearestPointBy [
+HighstockSeriesPolygonTest >> testSetFindNearestPointBy [
 
 	| component javascript expectedConfiguration |
 
@@ -380,7 +635,7 @@ HighstockSeriesPolygonTest >> testFindNearestPointBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testGapSize [
+HighstockSeriesPolygonTest >> testSetGapSize [
 
 	| component javascript expectedConfiguration |
 
@@ -395,7 +650,7 @@ HighstockSeriesPolygonTest >> testGapSize [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testGapUnit [
+HighstockSeriesPolygonTest >> testSetGapUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -410,7 +665,7 @@ HighstockSeriesPolygonTest >> testGapUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testGetExtremesFromAll [
+HighstockSeriesPolygonTest >> testSetGetExtremesFromAll [
 
 	| component javascript expectedConfiguration |
 
@@ -425,7 +680,7 @@ HighstockSeriesPolygonTest >> testGetExtremesFromAll [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testId [
+HighstockSeriesPolygonTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -440,7 +695,7 @@ HighstockSeriesPolygonTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testIncludeInDataExport [
+HighstockSeriesPolygonTest >> testSetIncludeInDataExport [
 
 	| component javascript expectedConfiguration |
 
@@ -455,7 +710,7 @@ HighstockSeriesPolygonTest >> testIncludeInDataExport [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testIndex [
+HighstockSeriesPolygonTest >> testSetIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -470,7 +725,7 @@ HighstockSeriesPolygonTest >> testIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testJoinBy [
+HighstockSeriesPolygonTest >> testSetJoinBy [
 
 	| component javascript expectedConfiguration |
 
@@ -485,7 +740,7 @@ HighstockSeriesPolygonTest >> testJoinBy [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testKeys [
+HighstockSeriesPolygonTest >> testSetKeys [
 
 	| component javascript expectedConfiguration |
 
@@ -500,7 +755,7 @@ HighstockSeriesPolygonTest >> testKeys [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testLegendIndex [
+HighstockSeriesPolygonTest >> testSetLegendIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -515,7 +770,7 @@ HighstockSeriesPolygonTest >> testLegendIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testLineWidth [
+HighstockSeriesPolygonTest >> testSetLineWidth [
 
 	| component javascript expectedConfiguration |
 
@@ -530,7 +785,7 @@ HighstockSeriesPolygonTest >> testLineWidth [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testLinecap [
+HighstockSeriesPolygonTest >> testSetLinecap [
 
 	| component javascript expectedConfiguration |
 
@@ -545,7 +800,7 @@ HighstockSeriesPolygonTest >> testLinecap [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testLinkedTo [
+HighstockSeriesPolygonTest >> testSetLinkedTo [
 
 	| component javascript expectedConfiguration |
 
@@ -560,7 +815,7 @@ HighstockSeriesPolygonTest >> testLinkedTo [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testMapData [
+HighstockSeriesPolygonTest >> testSetMapData [
 
 	| component javascript expectedConfiguration |
 
@@ -575,7 +830,7 @@ HighstockSeriesPolygonTest >> testMapData [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testName [
+HighstockSeriesPolygonTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -590,7 +845,7 @@ HighstockSeriesPolygonTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testNavigatorOptions [
+HighstockSeriesPolygonTest >> testSetNavigatorOptions [
 
 	| component javascript expectedConfiguration |
 
@@ -605,7 +860,7 @@ HighstockSeriesPolygonTest >> testNavigatorOptions [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testNegativeColor [
+HighstockSeriesPolygonTest >> testSetNegativeColor [
 
 	| component javascript expectedConfiguration |
 
@@ -620,7 +875,7 @@ HighstockSeriesPolygonTest >> testNegativeColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testOpacity [
+HighstockSeriesPolygonTest >> testSetOpacity [
 
 	| component javascript expectedConfiguration |
 
@@ -635,7 +890,7 @@ HighstockSeriesPolygonTest >> testOpacity [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testPointDescriptionFormatter [
+HighstockSeriesPolygonTest >> testSetPointDescriptionFormatter [
 
 	| component javascript expectedConfiguration |
 
@@ -650,7 +905,7 @@ HighstockSeriesPolygonTest >> testPointDescriptionFormatter [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testPointInterval [
+HighstockSeriesPolygonTest >> testSetPointInterval [
 
 	| component javascript expectedConfiguration |
 
@@ -665,7 +920,7 @@ HighstockSeriesPolygonTest >> testPointInterval [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testPointIntervalUnit [
+HighstockSeriesPolygonTest >> testSetPointIntervalUnit [
 
 	| component javascript expectedConfiguration |
 
@@ -680,7 +935,7 @@ HighstockSeriesPolygonTest >> testPointIntervalUnit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testPointPlacement [
+HighstockSeriesPolygonTest >> testSetPointPlacement [
 
 	| component javascript expectedConfiguration |
 
@@ -695,7 +950,7 @@ HighstockSeriesPolygonTest >> testPointPlacement [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testPointRange [
+HighstockSeriesPolygonTest >> testSetPointRange [
 
 	| component javascript expectedConfiguration |
 
@@ -710,7 +965,7 @@ HighstockSeriesPolygonTest >> testPointRange [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testPointStart [
+HighstockSeriesPolygonTest >> testSetPointStart [
 
 	| component javascript expectedConfiguration |
 
@@ -725,7 +980,7 @@ HighstockSeriesPolygonTest >> testPointStart [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testSelected [
+HighstockSeriesPolygonTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -740,7 +995,7 @@ HighstockSeriesPolygonTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testShadow [
+HighstockSeriesPolygonTest >> testSetShadow [
 
 	| component javascript expectedConfiguration |
 
@@ -755,7 +1010,7 @@ HighstockSeriesPolygonTest >> testShadow [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testShowCheckbox [
+HighstockSeriesPolygonTest >> testSetShowCheckbox [
 
 	| component javascript expectedConfiguration |
 
@@ -770,7 +1025,7 @@ HighstockSeriesPolygonTest >> testShowCheckbox [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testShowInLegend [
+HighstockSeriesPolygonTest >> testSetShowInLegend [
 
 	| component javascript expectedConfiguration |
 
@@ -785,7 +1040,7 @@ HighstockSeriesPolygonTest >> testShowInLegend [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testShowInNavigator [
+HighstockSeriesPolygonTest >> testSetShowInNavigator [
 
 	| component javascript expectedConfiguration |
 
@@ -800,7 +1055,7 @@ HighstockSeriesPolygonTest >> testShowInNavigator [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testSkipKeyboardNavigation [
+HighstockSeriesPolygonTest >> testSetSkipKeyboardNavigation [
 
 	| component javascript expectedConfiguration |
 
@@ -815,7 +1070,7 @@ HighstockSeriesPolygonTest >> testSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testSoftThreshold [
+HighstockSeriesPolygonTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -830,7 +1085,7 @@ HighstockSeriesPolygonTest >> testSoftThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testStacking [
+HighstockSeriesPolygonTest >> testSetStacking [
 
 	| component javascript expectedConfiguration |
 
@@ -845,7 +1100,7 @@ HighstockSeriesPolygonTest >> testStacking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testStates [
+HighstockSeriesPolygonTest >> testSetStates [
 
 	| component javascript expectedConfiguration |
 
@@ -860,7 +1115,7 @@ HighstockSeriesPolygonTest >> testStates [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testStep [
+HighstockSeriesPolygonTest >> testSetStep [
 
 	| component javascript expectedConfiguration |
 
@@ -875,7 +1130,7 @@ HighstockSeriesPolygonTest >> testStep [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testStickyTracking [
+HighstockSeriesPolygonTest >> testSetStickyTracking [
 
 	| component javascript expectedConfiguration |
 
@@ -890,7 +1145,7 @@ HighstockSeriesPolygonTest >> testStickyTracking [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testThreshold [
+HighstockSeriesPolygonTest >> testSetThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -905,7 +1160,7 @@ HighstockSeriesPolygonTest >> testThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testTrackByArea [
+HighstockSeriesPolygonTest >> testSetTrackByArea [
 
 	| component javascript expectedConfiguration |
 
@@ -920,7 +1175,7 @@ HighstockSeriesPolygonTest >> testTrackByArea [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testTurboThreshold [
+HighstockSeriesPolygonTest >> testSetTurboThreshold [
 
 	| component javascript expectedConfiguration |
 
@@ -935,7 +1190,7 @@ HighstockSeriesPolygonTest >> testTurboThreshold [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testType [
+HighstockSeriesPolygonTest >> testSetType [
 
 	| component javascript expectedConfiguration |
 
@@ -950,7 +1205,7 @@ HighstockSeriesPolygonTest >> testType [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testVisible [
+HighstockSeriesPolygonTest >> testSetVisible [
 
 	| component javascript expectedConfiguration |
 
@@ -965,7 +1220,7 @@ HighstockSeriesPolygonTest >> testVisible [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testXAxis [
+HighstockSeriesPolygonTest >> testSetXAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -980,7 +1235,7 @@ HighstockSeriesPolygonTest >> testXAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testYAxis [
+HighstockSeriesPolygonTest >> testSetYAxis [
 
 	| component javascript expectedConfiguration |
 
@@ -995,7 +1250,7 @@ HighstockSeriesPolygonTest >> testYAxis [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testZIndex [
+HighstockSeriesPolygonTest >> testSetZIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -1010,7 +1265,7 @@ HighstockSeriesPolygonTest >> testZIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesPolygonTest >> testZoneAxis [
+HighstockSeriesPolygonTest >> testSetZoneAxis [
 
 	| component javascript expectedConfiguration |
 

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testAfterAnimate [
+HighchartsSeriesColumnEventsTest >> testSetAfterAnimate [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighchartsSeriesColumnEventsTest >> testAfterAnimate [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testCheckboxClick [
+HighchartsSeriesColumnEventsTest >> testSetCheckboxClick [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighchartsSeriesColumnEventsTest >> testCheckboxClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testClick [
+HighchartsSeriesColumnEventsTest >> testSetClick [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighchartsSeriesColumnEventsTest >> testClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testHide [
+HighchartsSeriesColumnEventsTest >> testSetHide [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighchartsSeriesColumnEventsTest >> testHide [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testLegendItemClick [
+HighchartsSeriesColumnEventsTest >> testSetLegendItemClick [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +75,7 @@ HighchartsSeriesColumnEventsTest >> testLegendItemClick [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testMouseOut [
+HighchartsSeriesColumnEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +89,7 @@ HighchartsSeriesColumnEventsTest >> testMouseOut [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testMouseOver [
+HighchartsSeriesColumnEventsTest >> testSetMouseOver [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +103,7 @@ HighchartsSeriesColumnEventsTest >> testMouseOver [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesColumnEventsTest >> testShow [
+HighchartsSeriesColumnEventsTest >> testSetShow [
 
 	| component javascript expectedConfiguration |
 

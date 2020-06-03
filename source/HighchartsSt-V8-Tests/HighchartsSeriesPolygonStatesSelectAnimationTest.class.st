@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPolygonStatesSelectAnimationTest >> testDuration [
+HighchartsSeriesPolygonStatesSelectAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |
 

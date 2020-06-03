@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrZonesTest >> testClassName [
+HighstockPlotOptionsWilliamsrZonesTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +19,7 @@ HighstockPlotOptionsWilliamsrZonesTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrZonesTest >> testColor [
+HighstockPlotOptionsWilliamsrZonesTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +33,7 @@ HighstockPlotOptionsWilliamsrZonesTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrZonesTest >> testDashStyle [
+HighstockPlotOptionsWilliamsrZonesTest >> testSetDashStyle [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +47,7 @@ HighstockPlotOptionsWilliamsrZonesTest >> testDashStyle [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrZonesTest >> testFillColor [
+HighstockPlotOptionsWilliamsrZonesTest >> testSetFillColor [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +61,7 @@ HighstockPlotOptionsWilliamsrZonesTest >> testFillColor [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsWilliamsrZonesTest >> testValue [
+HighstockPlotOptionsWilliamsrZonesTest >> testSetValue [
 
 	| component javascript expectedConfiguration |
 

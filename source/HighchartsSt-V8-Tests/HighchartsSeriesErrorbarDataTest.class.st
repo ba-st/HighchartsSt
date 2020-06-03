@@ -5,7 +5,35 @@ Class {
 }
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testClassName [
+HighchartsSeriesErrorbarDataTest >> testGetAccessibility [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarData new.
+	component accessibility.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'accessibility' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarDataTest >> testGetDragDrop [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarData new.
+	component dragDrop.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragDrop' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarDataTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |
 
@@ -19,7 +47,7 @@ HighchartsSeriesErrorbarDataTest >> testClassName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testColor [
+HighchartsSeriesErrorbarDataTest >> testSetColor [
 
 	| component javascript expectedConfiguration |
 
@@ -33,7 +61,7 @@ HighchartsSeriesErrorbarDataTest >> testColor [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testColorIndex [
+HighchartsSeriesErrorbarDataTest >> testSetColorIndex [
 
 	| component javascript expectedConfiguration |
 
@@ -47,7 +75,21 @@ HighchartsSeriesErrorbarDataTest >> testColorIndex [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testDescription [
+HighchartsSeriesErrorbarDataTest >> testSetCustom [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbarData new.
+	component custom: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'custom' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarDataTest >> testSetDescription [
 
 	| component javascript expectedConfiguration |
 
@@ -61,7 +103,7 @@ HighchartsSeriesErrorbarDataTest >> testDescription [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testEvents [
+HighchartsSeriesErrorbarDataTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
 
@@ -75,7 +117,7 @@ HighchartsSeriesErrorbarDataTest >> testEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testHigh [
+HighchartsSeriesErrorbarDataTest >> testSetHigh [
 
 	| component javascript expectedConfiguration |
 
@@ -89,7 +131,7 @@ HighchartsSeriesErrorbarDataTest >> testHigh [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testId [
+HighchartsSeriesErrorbarDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
 
@@ -103,7 +145,7 @@ HighchartsSeriesErrorbarDataTest >> testId [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testLabelrank [
+HighchartsSeriesErrorbarDataTest >> testSetLabelrank [
 
 	| component javascript expectedConfiguration |
 
@@ -117,7 +159,7 @@ HighchartsSeriesErrorbarDataTest >> testLabelrank [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testLow [
+HighchartsSeriesErrorbarDataTest >> testSetLow [
 
 	| component javascript expectedConfiguration |
 
@@ -131,7 +173,7 @@ HighchartsSeriesErrorbarDataTest >> testLow [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testName [
+HighchartsSeriesErrorbarDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |
 
@@ -145,7 +187,7 @@ HighchartsSeriesErrorbarDataTest >> testName [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testSelected [
+HighchartsSeriesErrorbarDataTest >> testSetSelected [
 
 	| component javascript expectedConfiguration |
 
@@ -159,7 +201,7 @@ HighchartsSeriesErrorbarDataTest >> testSelected [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarDataTest >> testX [
+HighchartsSeriesErrorbarDataTest >> testSetX [
 
 	| component javascript expectedConfiguration |
 

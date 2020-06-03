@@ -1,6 +1,6 @@
 "
-An array of shapes for the annotation. For options that apply to
-multiple shapes, then can be added to the
+An array of shapes for the annotation. For options that apply
+to multiple shapes, then can be added to the
 shapeOptions.
 "
 Class {
@@ -8,6 +8,15 @@ Class {
 	#superclass : #HighchartsComponent,
 	#category : #'HighchartsSt-V8'
 }
+
+{ #category : #accessing }
+HighchartsNavigationAnnotationsOptionsShapes >> dashStyle: aHighchartsDashStyleValue [
+
+	"Name of the dash style to use for the shape´s stroke.
+"
+
+	configurationOptions at: 'dashStyle' put: aHighchartsDashStyleValue
+]
 
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapes >> fill: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
@@ -30,8 +39,7 @@ HighchartsNavigationAnnotationsOptionsShapes >> height: aNumber [
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapes >> markerEnd: aString [
 
-	"Id of the marker which will be drawn at the final vertex of the
-path. Custom markers can be defined in defs property.
+	"Id of the marker which will be drawn at the final vertex of the path. Custom markers can be defined in defs property.
 "
 
 	configurationOptions at: 'markerEnd' put: aString
@@ -40,8 +48,7 @@ path. Custom markers can be defined in defs property.
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapes >> markerStart: aString [
 
-	"Id of the marker which will be drawn at the first vertex of the
-path. Custom markers can be defined in defs property.
+	"Id of the marker which will be drawn at the first vertex of the path. Custom markers can be defined in defs property.
 "
 
 	configurationOptions at: 'markerStart' put: aString
@@ -50,10 +57,7 @@ path. Custom markers can be defined in defs property.
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapes >> point [
 
-	"This option defines the point to which the shape will be
-connected. It can be either the point which exists in the
-series - it is referenced by the point´s id - or a new point with
-defined x, y properties and optionally axes.
+	"This option defines the point to which the shape will be connected. It can be either the point which exists in the series - it is referenced by the point´s id - or a new point with defined x, y properties and optionally axes.
 "
 	^ configurationOptions at: 'point' ifAbsentPut: [ HighchartsNavigationAnnotationsOptionsShapesPoint new ]
 ]
@@ -61,9 +65,7 @@ defined x, y properties and optionally axes.
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapes >> points [
 
-	"An array of points for the shape. This option is available for
-shapes which can use multiple points such as path. A point can be
-either a point object or a point´s id.
+	"An array of points for the shape. This option is available for shapes which can use multiple points such as path. A point can be either a point object or a point´s id.
 "
 	^ configurationOptions at: 'points' ifAbsentPut: [ HighchartsNavigationAnnotationsOptionsShapesPoints new ]
 ]
@@ -80,11 +82,19 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsNavigationAnnotationsOptionsShapes >> snap: aNumber [
 
-	"Defines additional snapping area around an annotation
-making this annotation to focus. Defined in pixels.
+	"Defines additional snapping area around an annotation making this annotation to focus. Defined in pixels.
 Defaults to 2."
 
 	configurationOptions at: 'snap' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsNavigationAnnotationsOptionsShapes >> src: aString [
+
+	"The URL for an image to use as the annotation shape. Note, type has to be set to ´image´.
+"
+
+	configurationOptions at: 'src' put: aString
 ]
 
 { #category : #accessing }

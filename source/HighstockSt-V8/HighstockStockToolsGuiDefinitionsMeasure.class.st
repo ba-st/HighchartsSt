@@ -7,13 +7,8 @@ Class {
 { #category : #accessing }
 HighstockStockToolsGuiDefinitionsMeasure >> items: anArray [
 
-	"A collection of strings pointing to config options for
-the items.
-Defaults to [
-  'measureXY',
-  'measureX',
-  'measureY'
-]."
+	"A collection of strings pointing to config options for the items.
+Defaults to [   'measureXY',   'measureX',   'measureY' ]."
 
 	configurationOptions at: 'items' put: anArray
 ]
