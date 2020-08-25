@@ -4,7 +4,7 @@
   "author": "Buenos Aires Smalltalk contributors",
   "license": "MIT",
   "dependencies": {
-    "highcharts": "8.0.0"
+    "highcharts": "8.2.0"
   }
   ,
   "description": "A Highcharts Js API wrapper for Smalltalk.",
