@@ -275,6 +275,21 @@ HighstockSeriesFlagsTest >> testSetBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesFlagsTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesFlags new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'flags';
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesFlagsTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

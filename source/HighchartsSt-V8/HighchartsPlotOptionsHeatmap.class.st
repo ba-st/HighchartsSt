@@ -183,15 +183,6 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsHeatmap >> cropThreshold: aNumber [
-
-	"When the series contains less points than the crop threshold, all points are drawn, even if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
-Defaults to 300."
-
-	configurationOptions at: 'cropThreshold' put: aNumber
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsHeatmap >> cursor: aStringOrHighchartsCursorValue [
 
 	"You can set the cursor to &quot;pointer&quot; if you have click events attached to the series, to signal to the user that the points and lines can be clicked. In styled mode, the series cursor can be set with the same classes as listed under series.color.

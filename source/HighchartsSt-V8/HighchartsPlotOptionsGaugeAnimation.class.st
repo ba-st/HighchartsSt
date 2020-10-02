@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsGaugeAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsGaugeAnimation >> duration: aNumber [
 
 

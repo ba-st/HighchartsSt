@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsCandlestickAnimationTest >> testSetDefer [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsCandlestickAnimation new.
+	component defer: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'defer' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsCandlestickAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |

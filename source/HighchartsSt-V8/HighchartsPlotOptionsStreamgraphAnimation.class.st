@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsStreamgraphAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsStreamgraphAnimation >> duration: aNumber [
 
 

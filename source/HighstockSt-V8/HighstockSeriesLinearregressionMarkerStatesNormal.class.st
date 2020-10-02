@@ -10,10 +10,10 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesLinearregressionMarkerStatesNormal >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighstockSeriesLinearregressionMarkerStatesNormal >> animation: aBooleanOrPartialOfHighchartsAnimationOptionsObject [
 
 	"Animation when returning to normal state after hovering.
 Defaults to true."
 
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+	configurationOptions at: 'animation' put: aBooleanOrPartialOfHighchartsAnimationOptionsObject
 ]

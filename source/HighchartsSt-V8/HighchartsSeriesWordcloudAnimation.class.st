@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesWordcloudAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesWordcloudAnimation >> duration: aNumber [
 
 

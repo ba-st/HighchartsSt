@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsCylinderAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsCylinderAnimation >> duration: aNumber [
 
 

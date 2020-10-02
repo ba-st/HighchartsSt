@@ -275,36 +275,6 @@ HighchartsSeriesErrorbarTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesErrorbar new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'errorbar';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsSeriesErrorbarTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesErrorbar new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'errorbar';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesErrorbarTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -345,6 +315,21 @@ HighchartsSeriesErrorbarTest >> testSetBoxDashStyle [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'errorbar';
 		at: 'boxDashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesErrorbarTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesErrorbar new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'errorbar';
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

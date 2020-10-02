@@ -215,21 +215,6 @@ HighchartsSeriesSolidgaugeTest >> testSetAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesSolidgaugeTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesSolidgauge new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'solidgauge';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesSolidgaugeTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

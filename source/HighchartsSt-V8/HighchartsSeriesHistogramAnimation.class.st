@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesHistogramAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesHistogramAnimation >> duration: aNumber [
 
 

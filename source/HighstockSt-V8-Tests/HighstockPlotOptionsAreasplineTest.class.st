@@ -243,34 +243,6 @@ HighstockPlotOptionsAreasplineTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplineTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockPlotOptionsAreaspline new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockPlotOptionsAreasplineTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockPlotOptionsAreaspline new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockPlotOptionsAreasplineTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

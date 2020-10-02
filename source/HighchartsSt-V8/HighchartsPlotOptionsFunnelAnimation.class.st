@@ -8,6 +8,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsFunnelAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsFunnelAnimation >> duration: aNumber [
 
 

@@ -173,6 +173,20 @@ HighstockAnnotationsFibonacciTypeOptionsLabelsTest >> testSetFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsFibonacciTypeOptionsLabelsTest >> testSetIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsFibonacciTypeOptionsLabels new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsFibonacciTypeOptionsLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |

@@ -275,36 +275,6 @@ HighstockSeriesWindbarbTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesWindbarbTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesWindbarb new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'windbarb';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesWindbarbTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesWindbarb new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'windbarb';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesWindbarbTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -345,6 +315,21 @@ HighstockSeriesWindbarbTest >> testSetBorderWidth [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'windbarb';
 		at: 'borderWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesWindbarbTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesWindbarb new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'windbarb';
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

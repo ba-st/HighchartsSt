@@ -8,6 +8,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsHeatmapAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsHeatmapAnimation >> duration: aNumber [
 
 

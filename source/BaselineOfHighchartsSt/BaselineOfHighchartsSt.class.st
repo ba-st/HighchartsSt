@@ -37,9 +37,13 @@ BaselineOfHighchartsSt >> baselineHighcharts: spec [
 		package: 'HighchartsStLibraries' with: [ spec requires: 'HighchartsStCore' ];
 		group: 'Highcharts-Deployment' with: 'HighchartsStLibraries';
 		package: 'HighchartsSt-V8' with: [ spec requires: 'HighchartsStCore' ];
-		group: 'Highcharts-Deployment' with: 'HighchartsSt-V8';
+		group: 'Highcharts-Deployment' with: 'HighchartsSt-V8'.
+
+	spec
 		package: 'HighchartsSt-V8-Tests' with: [ spec requires: 'HighchartsSt-V8' ];
-		group: 'Tests' with: 'HighchartsSt-V8-Tests'
+		group: 'Tests' with: 'HighchartsSt-V8-Tests';
+		package: 'HighchartsStibraries-Tests' with: [ spec requires: 'HighchartsStLibraries' ];
+		group: 'Tests' with: 'HighchartsStibraries-Tests'
 ]
 
 { #category : #baseline }

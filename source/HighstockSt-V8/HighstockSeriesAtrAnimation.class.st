@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighstockSeriesAtrAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockSeriesAtrAnimation >> duration: aNumber [
 
 

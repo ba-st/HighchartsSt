@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighstockSeriesAroonoscillatorAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockSeriesAroonoscillatorAnimation >> duration: aNumber [
 
 

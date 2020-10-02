@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesWaterfallAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesWaterfallAnimation >> duration: aNumber [
 
 

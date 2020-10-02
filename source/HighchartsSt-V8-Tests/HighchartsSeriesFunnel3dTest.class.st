@@ -95,21 +95,6 @@ HighchartsSeriesFunnel3dTest >> testGetDataLabels [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTest >> testGetDataSorting [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesFunnel3d new.
-	component dataSorting.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'funnel3d';
-		at: 'dataSorting' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesFunnel3dTest >> testGetDragDrop [
 
 	| component javascript expectedConfiguration |
@@ -260,21 +245,6 @@ HighchartsSeriesFunnel3dTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesFunnel3dTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesFunnel3d new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'funnel3d';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesFunnel3dTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -315,6 +285,36 @@ HighchartsSeriesFunnel3dTest >> testSetBorderWidth [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'funnel3d';
 		at: 'borderWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetCenter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component center: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'center' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -635,6 +635,21 @@ HighchartsSeriesFunnel3dTest >> testSetEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetEndAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component endAngle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'endAngle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnel3dTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
@@ -645,6 +660,21 @@ HighchartsSeriesFunnel3dTest >> testSetEvents [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'funnel3d';
 		at: 'events' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetFillColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component fillColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'fillColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -795,6 +825,21 @@ HighchartsSeriesFunnel3dTest >> testSetId [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'funnel3d';
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetIgnoreHiddenPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component ignoreHiddenPoint: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'ignoreHiddenPoint' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -960,6 +1005,21 @@ HighchartsSeriesFunnel3dTest >> testSetMinPointLength [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'funnel3d';
 		at: 'minPointLength' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetMinSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component minSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'minSize' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1280,6 +1340,21 @@ HighchartsSeriesFunnel3dTest >> testSetSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetSlicedOffset [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component slicedOffset: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'slicedOffset' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnel3dTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
@@ -1320,6 +1395,21 @@ HighchartsSeriesFunnel3dTest >> testSetStacking [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'funnel3d';
 		at: 'stacking' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetStartAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component startAngle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'startAngle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1410,6 +1500,21 @@ HighchartsSeriesFunnel3dTest >> testSetType [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'funnel3d';
 		at: 'type' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dTest >> testSetUseOhlcData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3d new.
+	component useOhlcData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'funnel3d';
+		at: 'useOhlcData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

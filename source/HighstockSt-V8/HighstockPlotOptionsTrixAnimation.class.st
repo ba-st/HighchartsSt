@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighstockPlotOptionsTrixAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsTrixAnimation >> duration: aNumber [
 
 

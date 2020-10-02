@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighstockPlotOptionsVwapAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsVwapAnimation >> duration: aNumber [
 
 

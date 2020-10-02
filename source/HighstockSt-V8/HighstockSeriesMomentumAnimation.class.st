@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighstockSeriesMomentumAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockSeriesMomentumAnimation >> duration: aNumber [
 
 

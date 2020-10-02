@@ -46,12 +46,12 @@ Defaults to {value}."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxisLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsAxisLabelsFormatterContextObject [
+HighstockNavigatorXAxisLabels >> formatter: aHighchartsAxisLabelsFormatterCallbackFunction [
 
 	"Callback JavaScript function to format the label. The value is given by this.value. Additional properties for this are axis, chart, isFirst and isLast. The value of the default label formatter can be retrieved by calling this.axis.defaultLabelFormatter.call(this) within the function. Defaults to: function() {     return this.value; }
 "
 
-	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsAxisLabelsFormatterContextObject
+	configurationOptions at: 'formatter' put: aHighchartsAxisLabelsFormatterCallbackFunction
 ]
 
 { #category : #accessing }
@@ -137,7 +137,7 @@ Defaults to false."
 { #category : #accessing }
 HighstockNavigatorXAxisLabels >> x: aNumber [
 
-	"The x position offset of the label relative to the tick position on the axis.
+	"The x position offset of all labels relative to the tick positions on the axis.
 Defaults to 3."
 
 	configurationOptions at: 'x' put: aNumber
@@ -146,7 +146,7 @@ Defaults to 3."
 { #category : #accessing }
 HighstockNavigatorXAxisLabels >> y: aNumber [
 
-	"The y position offset of the label relative to the tick position on the axis. The default makes it adapt to the font size on bottom axis.
+	"The y position offset of all labels relative to the tick positions on the axis. The default makes it adapt to the font size of the bottom axis.
 Defaults to -4."
 
 	configurationOptions at: 'y' put: aNumber

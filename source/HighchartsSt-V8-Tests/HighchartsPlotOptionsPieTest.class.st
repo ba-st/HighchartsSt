@@ -159,20 +159,6 @@ HighchartsPlotOptionsPieTest >> testSetAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPieTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsPie new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPieTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

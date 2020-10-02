@@ -159,20 +159,6 @@ HighchartsPlotOptionsPyramidTest >> testSetAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsPyramidTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsPyramid new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPyramidTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

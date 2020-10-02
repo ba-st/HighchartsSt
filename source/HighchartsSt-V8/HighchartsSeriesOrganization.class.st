@@ -61,7 +61,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesOrganization >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsSeriesOrganizationAnimation new ]
 ]
@@ -73,24 +73,6 @@ HighchartsSeriesOrganization >> animationLimit: aNumber [
 "
 
 	configurationOptions at: 'animationLimit' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsSeriesOrganization >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
-]
-
-{ #category : #accessing }
-HighchartsSeriesOrganization >> boostThreshold: aNumber [
-
-	"Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the boostThreshold to 0. Setting it to 1 will force boosting. Note that the cropThreshold also affects this setting. When zooming in on a series that has fewer points than the cropThreshold, all points are rendered although outside the visible plot area, and the boostThreshold won´t take effect.
-Defaults to 5000."
-
-	configurationOptions at: 'boostThreshold' put: aNumber
 ]
 
 { #category : #accessing }
@@ -118,6 +100,15 @@ HighchartsSeriesOrganization >> borderWidth: aNumber [
 Defaults to 1."
 
 	configurationOptions at: 'borderWidth' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesOrganization >> centerInCategory: aBoolean [
+
+	"When true, the columns will center in the category, ignoring null or missing points. When false, space will be reserved for null or missing points.
+Defaults to false."
+
+	configurationOptions at: 'centerInCategory' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -293,7 +284,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsSeriesOrganization >> data [
 
-	"An array of data points for the series. For the organization series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.     data: [{         from: ´Category1´,         to: ´Category2´,         weight: 2     }, {         from: ´Category1´,         to: ´Category3´,         weight: 5     }]
+	"An array of data points for the series. For the organization series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.    data: [{        from: ´Category1´,        to: ´Category2´,        weight: 2    }, {        from: ´Category1´,        to: ´Category3´,        weight: 5    }]
 "
 	^ configurationOptions at: 'data' ifAbsentPut: [ HighchartsSeriesOrganizationData new ]
 ]
@@ -665,7 +656,7 @@ HighchartsSeriesOrganization >> pointDescriptionFormatter: aFunction [
 { #category : #accessing }
 HighchartsSeriesOrganization >> pointInterval: aNumber [
 
-	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 Defaults to 1."
 
 	configurationOptions at: 'pointInterval' put: aNumber
@@ -674,7 +665,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsSeriesOrganization >> pointIntervalUnit: aString [
 
-	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 "
 
 	configurationOptions at: 'pointIntervalUnit' put: aString
@@ -782,7 +773,7 @@ HighchartsSeriesOrganization >> stack: aNumberOrstring [
 { #category : #accessing }
 HighchartsSeriesOrganization >> stacking: aString [
 
-	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. A special stacking option is with the streamgraph series type, where the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
+	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. Some stacking options are related to specific series types. In the streamgraph series type, the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
 "
 
 	configurationOptions at: 'stacking' put: aString

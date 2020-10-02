@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsPlotOptionsVennAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsVennAnimation >> duration: aNumber [
 
 

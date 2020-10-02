@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighstockPlotOptionsLinearregressionAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighstockPlotOptionsLinearregressionAnimation >> duration: aNumber [
 
 

@@ -187,20 +187,6 @@ HighchartsPlotOptionsVectorTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsVectorTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsVector new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsPlotOptionsVectorTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

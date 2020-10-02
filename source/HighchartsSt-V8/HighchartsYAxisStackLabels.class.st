@@ -30,21 +30,29 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsYAxisStackLabels >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsYAxisStackLabels >> animation [
+
+	"Enable or disable the initial animation when a series is displayed for the stackLabels. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.
+"
+	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsYAxisStackLabelsAnimation new ]
+]
+
+{ #category : #accessing }
+HighchartsYAxisStackLabels >> backgroundColor: aHighchartsColorType [
 
 	"The background color or gradient for the stack label.
 "
 
-	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
-HighchartsYAxisStackLabels >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsYAxisStackLabels >> borderColor: aHighchartsColorType [
 
 	"The border color for the stack label. Defaults to undefined.
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'borderColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }

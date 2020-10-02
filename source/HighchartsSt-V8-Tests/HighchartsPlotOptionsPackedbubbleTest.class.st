@@ -145,6 +145,20 @@ HighchartsPlotOptionsPackedbubbleTest >> testGetMarker [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsPackedbubbleTest >> testGetParentNode [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsPackedbubble new.
+	component parentNode.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'parentNode' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsPackedbubbleTest >> testGetPoint [
 
 	| component javascript expectedConfiguration |
@@ -224,34 +238,6 @@ HighchartsPlotOptionsPackedbubbleTest >> testSetAnimationLimit [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'animationLimit' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsPackedbubble new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsPackedbubble new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -420,20 +406,6 @@ HighchartsPlotOptionsPackedbubbleTest >> testSetCrisp [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'crisp' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsPlotOptionsPackedbubbleTest >> testSetCropThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsPackedbubble new.
-	component cropThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

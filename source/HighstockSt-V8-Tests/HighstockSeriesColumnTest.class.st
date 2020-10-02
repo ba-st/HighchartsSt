@@ -335,6 +335,21 @@ HighstockSeriesColumnTest >> testSetBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesColumnTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumn new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'column';
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesColumnTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

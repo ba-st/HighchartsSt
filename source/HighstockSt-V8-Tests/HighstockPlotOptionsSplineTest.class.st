@@ -243,34 +243,6 @@ HighstockPlotOptionsSplineTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsSplineTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockPlotOptionsSpline new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockPlotOptionsSplineTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockPlotOptionsSpline new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockPlotOptionsSplineTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

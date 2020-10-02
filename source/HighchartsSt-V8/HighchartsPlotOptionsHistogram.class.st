@@ -62,7 +62,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsHistogram >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsPlotOptionsHistogramAnimation new ]
 ]
@@ -95,15 +95,6 @@ Defaults to square-root."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsHistogram >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsHistogram >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The color of the border surrounding each column or bar. In styled mode, the border stroke can be set with the .highcharts-point rule.
@@ -128,6 +119,15 @@ HighchartsPlotOptionsHistogram >> borderWidth: aNumber [
 Defaults to undefined."
 
 	configurationOptions at: 'borderWidth' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsHistogram >> centerInCategory: aBoolean [
+
+	"When true, the columns will center in the category, ignoring null or missing points. When false, space will be reserved for null or missing points.
+Defaults to false."
+
+	configurationOptions at: 'centerInCategory' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -566,7 +566,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsPlotOptionsHistogram >> pointWidth: aNumber [
 
-	"A pixel value specifying a fixed width for each column or bar. When null, the width is calculated from the pointPadding and groupPadding.
+	"A pixel value specifying a fixed width for each column or bar point. When null, the width is calculated from the pointPadding and groupPadding. The width effects the dimension that is not based on the point value. For column series it is the hoizontal length and for bar series it is the vertical length.
 "
 
 	configurationOptions at: 'pointWidth' put: aNumber
@@ -630,7 +630,7 @@ HighchartsPlotOptionsHistogram >> skipKeyboardNavigation: aBoolean [
 HighchartsPlotOptionsHistogram >> softThreshold: aBoolean [
 
 	"When this is true, the series will not cause the Y axis to cross the zero plane (or threshold option) unless the data actually crosses the plane. For example, if softThreshold is false, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the minPadding option. If softThreshold is true, the Y axis starts at 0.
-Defaults to false."
+Defaults to true."
 
 	configurationOptions at: 'softThreshold' put: aBoolean
 ]

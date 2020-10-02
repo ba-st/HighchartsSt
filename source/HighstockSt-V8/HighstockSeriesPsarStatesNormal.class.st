@@ -10,10 +10,10 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesPsarStatesNormal >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighstockSeriesPsarStatesNormal >> animation: aBooleanOrPartialOfHighchartsAnimationOptionsObject [
 
 	"Animation when returning to normal state after hovering.
 Defaults to true."
 
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+	configurationOptions at: 'animation' put: aBooleanOrPartialOfHighchartsAnimationOptionsObject
 ]

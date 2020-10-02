@@ -305,36 +305,6 @@ HighchartsSeriesHistogramTest >> testSetBinsNumber [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesHistogram new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'histogram';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsSeriesHistogramTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesHistogram new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'histogram';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesHistogramTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -375,6 +345,21 @@ HighchartsSeriesHistogramTest >> testSetBorderWidth [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'histogram';
 		at: 'borderWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesHistogramTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesHistogram new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'histogram';
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

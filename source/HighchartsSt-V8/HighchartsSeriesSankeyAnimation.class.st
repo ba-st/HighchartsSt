@@ -22,6 +22,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesSankeyAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesSankeyAnimation >> duration: aNumber [
 
 

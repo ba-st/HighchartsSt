@@ -275,36 +275,6 @@ HighstockSeriesStreamgraphTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesStreamgraph new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'streamgraph';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesStreamgraphTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesStreamgraph new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'streamgraph';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesStreamgraphTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

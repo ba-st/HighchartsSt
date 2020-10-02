@@ -8,6 +8,15 @@ Class {
 }
 
 { #category : #accessing }
+HighstockLangExportData >> annotationHeader: aString [
+
+	"The annotation column title.
+Defaults to Annotations."
+
+	configurationOptions at: 'annotationHeader' put: aString
+]
+
+{ #category : #accessing }
 HighstockLangExportData >> categoryDatetimeHeader: aString [
 
 	"The category column title when axis type set to &quot;datetime&quot;.

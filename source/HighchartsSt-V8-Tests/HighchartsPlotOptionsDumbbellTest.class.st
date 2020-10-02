@@ -201,34 +201,6 @@ HighchartsPlotOptionsDumbbellTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsDumbbell new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsPlotOptionsDumbbellTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsDumbbell new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsPlotOptionsDumbbellTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

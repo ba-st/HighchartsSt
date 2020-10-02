@@ -19,21 +19,21 @@ HighchartsChartParallelAxesCrosshairLabel >> align: aHighchartsAlignValue [
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesCrosshairLabel >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsChartParallelAxesCrosshairLabel >> backgroundColor: aHighchartsColorType [
 
 	"The background color for the label. Defaults to the related series color, or #666666 if that is not available.
 "
 
-	configurationOptions at: 'backgroundColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'backgroundColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
-HighchartsChartParallelAxesCrosshairLabel >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsChartParallelAxesCrosshairLabel >> borderColor: aHighchartsColorType [
 
 	"The border color for the crosshair label
 "
 
-	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'borderColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }

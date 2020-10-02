@@ -485,21 +485,6 @@ HighchartsSeriesHeatmapTest >> testSetCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesHeatmapTest >> testSetCropThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesHeatmap new.
-	component cropThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'heatmap';
-		at: 'cropThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesHeatmapTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |

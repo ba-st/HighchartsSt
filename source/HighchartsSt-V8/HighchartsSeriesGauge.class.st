@@ -61,18 +61,9 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesGauge >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsSeriesGaugeAnimation new ]
-]
-
-{ #category : #accessing }
-HighchartsSeriesGauge >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
 ]
 
 { #category : #accessing }
@@ -486,7 +477,7 @@ HighchartsSeriesGauge >> pointDescriptionFormatter: aFunction [
 { #category : #accessing }
 HighchartsSeriesGauge >> pointInterval: aNumber [
 
-	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 Defaults to 1."
 
 	configurationOptions at: 'pointInterval' put: aNumber
@@ -495,7 +486,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsSeriesGauge >> pointIntervalUnit: aString [
 
-	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 "
 
 	configurationOptions at: 'pointIntervalUnit' put: aString

@@ -275,36 +275,6 @@ HighchartsSeriesVariwideTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesVariwideTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesVariwide new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'variwide';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsSeriesVariwideTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesVariwide new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'variwide';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesVariwideTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -345,6 +315,21 @@ HighchartsSeriesVariwideTest >> testSetBorderWidth [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'variwide';
 		at: 'borderWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesVariwideTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesVariwide new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'variwide';
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

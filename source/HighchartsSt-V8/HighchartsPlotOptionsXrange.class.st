@@ -61,7 +61,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsXrange >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsPlotOptionsXrangeAnimation new ]
 ]
@@ -73,15 +73,6 @@ HighchartsPlotOptionsXrange >> animationLimit: aNumber [
 "
 
 	configurationOptions at: 'animationLimit' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsXrange >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
 ]
 
 { #category : #accessing }
@@ -109,6 +100,15 @@ HighchartsPlotOptionsXrange >> borderWidth: aNumber [
 Defaults to undefined."
 
 	configurationOptions at: 'borderWidth' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsPlotOptionsXrange >> centerInCategory: aBoolean [
+
+	"When true, the columns will center in the category, ignoring null or missing points. When false, space will be reserved for null or missing points.
+Defaults to false."
+
+	configurationOptions at: 'centerInCategory' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -388,7 +388,7 @@ Defaults to 0.1."
 { #category : #accessing }
 HighchartsPlotOptionsXrange >> pointWidth: aNumber [
 
-	"A pixel value specifying a fixed width for each column or bar. When null, the width is calculated from the pointPadding and groupPadding.
+	"A pixel value specifying a fixed width for each column or bar point. When null, the width is calculated from the pointPadding and groupPadding. The width effects the dimension that is not based on the point value. For column series it is the hoizontal length and for bar series it is the vertical length.
 "
 
 	configurationOptions at: 'pointWidth' put: aNumber

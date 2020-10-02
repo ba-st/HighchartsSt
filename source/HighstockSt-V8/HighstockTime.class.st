@@ -56,6 +56,15 @@ Defaults to undefined."
 ]
 
 { #category : #accessing }
+HighstockTime >> moment: aFunction [
+
+	"Allows to manually load the moment.js library from Highcharts options instead of the window. In case of loading the library from a script tag, this option is not needed, it will be loaded from there by default.
+"
+
+	configurationOptions at: 'moment' put: aFunction
+]
+
+{ #category : #accessing }
 HighstockTime >> timezone: aString [
 
 	"Requires moment.js. If the timezone option is specified, it creates a default getTimezoneOffset function that looks up the specified timezone in moment.js. If moment.js is not included, this throws a Highcharts error in the console, but does not crash the chart.

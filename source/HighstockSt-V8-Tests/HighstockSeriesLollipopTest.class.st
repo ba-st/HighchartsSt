@@ -275,36 +275,6 @@ HighstockSeriesLollipopTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesLollipopTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesLollipop new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'lollipop';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesLollipopTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesLollipop new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'lollipop';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesLollipopTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

@@ -61,7 +61,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesScatter >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsSeriesScatterAnimation new ]
 ]
@@ -206,15 +206,6 @@ HighchartsSeriesScatter >> crisp: aBoolean [
 Defaults to true."
 
 	configurationOptions at: 'crisp' put: aBoolean
-]
-
-{ #category : #accessing }
-HighchartsSeriesScatter >> cropThreshold: aNumber [
-
-	"When the series contains less points than the crop threshold, all points are drawn, even if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
-Defaults to 300."
-
-	configurationOptions at: 'cropThreshold' put: aNumber
 ]
 
 { #category : #accessing }
@@ -496,7 +487,7 @@ HighchartsSeriesScatter >> pointDescriptionFormatter: aFunction [
 { #category : #accessing }
 HighchartsSeriesScatter >> pointInterval: aNumber [
 
-	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 Defaults to 1."
 
 	configurationOptions at: 'pointInterval' put: aNumber
@@ -505,7 +496,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsSeriesScatter >> pointIntervalUnit: aString [
 
-	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 "
 
 	configurationOptions at: 'pointIntervalUnit' put: aString
@@ -595,7 +586,7 @@ HighchartsSeriesScatter >> stack: aNumberOrstring [
 { #category : #accessing }
 HighchartsSeriesScatter >> stacking: aString [
 
-	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. A special stacking option is with the streamgraph series type, where the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
+	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. Some stacking options are related to specific series types. In the streamgraph series type, the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
 "
 
 	configurationOptions at: 'stacking' put: aString

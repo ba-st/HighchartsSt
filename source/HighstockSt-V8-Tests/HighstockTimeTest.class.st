@@ -33,6 +33,20 @@ HighstockTimeTest >> testSetGetTimezoneOffset [
 ]
 
 { #category : #'tests-accessing' }
+HighstockTimeTest >> testSetMoment [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockTime new.
+	component moment: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'moment' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockTimeTest >> testSetTimezone [
 
 	| component javascript expectedConfiguration |

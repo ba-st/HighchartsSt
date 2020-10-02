@@ -275,36 +275,6 @@ HighstockSeriesVectorTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesVectorTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesVector new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'vector';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesVectorTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesVector new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'vector';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesVectorTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

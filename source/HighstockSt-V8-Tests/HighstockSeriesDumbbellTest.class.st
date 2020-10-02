@@ -275,36 +275,6 @@ HighstockSeriesDumbbellTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesDumbbellTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesDumbbell new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'dumbbell';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockSeriesDumbbellTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesDumbbell new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'dumbbell';
-		at: 'boostThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesDumbbellTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

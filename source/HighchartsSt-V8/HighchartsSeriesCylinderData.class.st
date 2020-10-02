@@ -185,7 +185,7 @@ HighchartsSeriesCylinderData >> name: aString [
 { #category : #accessing }
 HighchartsSeriesCylinderData >> pointWidth: aNumber [
 
-	"A pixel value specifying a fixed width for the column or bar. Overrides pointWidth on the series.
+	"A pixel value specifying a fixed width for the column or bar. Overrides pointWidth on the series. The width effects the dimension that is not based on the point value.
 Defaults to undefined."
 
 	configurationOptions at: 'pointWidth' put: aNumber

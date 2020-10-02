@@ -10,19 +10,19 @@ Class {
 { #category : #accessing }
 HighstockChart >> alignTicks: aBoolean [
 
-	"When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if tickAmount were specified. This can be prevented by setting alignTicks to false. If the grid lines look messy, it´s a good idea to hide them for the secondary axis by setting gridLineWidth to 0. If startOnTick or endOnTick in an Axis options are set to false, then the alignTicks will be disabled for the Axis. Disabled for logarithmic axes.
+	"When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if tickAmount were specified. This can be prevented by setting alignTicks to false. If the grid lines look messy, it´s a good idea to hide them for the secondary axis by setting gridLineWidth to 0. If startOnTick or endOnTick in an Axis options are set to false, then the alignTicks  will be disabled for the Axis. Disabled for logarithmic axes.
 Defaults to true."
 
 	configurationOptions at: 'alignTicks' put: aBoolean
 ]
 
 { #category : #accessing }
-HighstockChart >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighstockChart >> animation: aBooleanOrPartialOfHighchartsAnimationOptionsObject [
 
-	"Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see plotOptions.series.animation. The animation can either be set as a boolean or a configuration object. If true, it will use the ´swing´ jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:  duration: The duration of the animation in milliseconds.  easing: A string reference to an easing function set on the Math object. See the easing demo.   When zooming on a series with less than 100 points, the chart redraw will be done with animation, but in case of more data points, it is necessary to set this option to ensure animation on zoom.
+	"Set the overall animation for all chart updating. Animation can be disabled throughout the chart by setting it to false here. It can be overridden for each individual API method as a function parameter. The only animation not affected by this option is the initial series animation, see plotOptions.series.animation. The animation can either be set as a boolean or a configuration object. If true, it will use the ´swing´ jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: A string reference to an easing function set on the Math object. See the easing demo.   When zooming on a series with less than 100 points, the chart redraw will be done with animation, but in case of more data points, it is necessary to set this option to ensure animation on zoom.
 Defaults to undefined."
 
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+	configurationOptions at: 'animation' put: aBooleanOrPartialOfHighchartsAnimationOptionsObject
 ]
 
 { #category : #accessing }
@@ -100,7 +100,7 @@ HighstockChart >> events: anObject [
 { #category : #accessing }
 HighstockChart >> height: aNilOrnumberOrstring [
 
-	"An explicit height for the chart. If a number_, the height is given in pixels. If given a _percentage string (for example ´56´), the height is given as the percentage of the actual chart width. This allows for preserving the aspect ratio across responsive sizes. By default (when null) the height is calculated from the offset height of the containing element, or 400 pixels if the containing element´s height is 0.
+	"An explicit height for the chart. If a number, the height is given in pixels. If given a percentage string (for example ´56´), the height is given as the percentage of the actual chart width. This allows for preserving the aspect ratio across responsive sizes. By default (when null) the height is calculated from the offset height of the containing element, or 400 pixels if the containing element´s height is 0.
 Defaults to nil."
 
 	configurationOptions at: 'height' put: aNilOrnumberOrstring

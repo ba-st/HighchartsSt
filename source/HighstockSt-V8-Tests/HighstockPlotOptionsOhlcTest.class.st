@@ -257,6 +257,20 @@ HighstockPlotOptionsOhlcTest >> testSetBoostThreshold [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsOhlcTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsOhlc new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsOhlcTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

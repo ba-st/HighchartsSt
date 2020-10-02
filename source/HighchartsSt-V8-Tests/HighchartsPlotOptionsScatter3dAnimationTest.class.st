@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsScatter3dAnimationTest >> testSetDefer [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsScatter3dAnimation new.
+	component defer: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'defer' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsScatter3dAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |

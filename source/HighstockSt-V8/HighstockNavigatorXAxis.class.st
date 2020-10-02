@@ -33,7 +33,7 @@ HighstockNavigatorXAxis >> accessibility [
 { #category : #accessing }
 HighstockNavigatorXAxis >> alignTicks: aBoolean [
 
-	"When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if tickAmount were specified. This can be prevented by setting alignTicks to false. If the grid lines look messy, it´s a good idea to hide them for the secondary axis by setting gridLineWidth to 0. If startOnTick or endOnTick in an Axis options are set to false, then the alignTicks will be disabled for the Axis. Disabled for logarithmic axes.
+	"When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if tickAmount were specified. This can be prevented by setting alignTicks to false. If the grid lines look messy, it´s a good idea to hide them for the secondary axis by setting gridLineWidth to 0. If startOnTick or endOnTick in an Axis options are set to false, then the alignTicks  will be disabled for the Axis. Disabled for logarithmic axes.
 Defaults to true."
 
 	configurationOptions at: 'alignTicks' put: aBoolean
@@ -49,12 +49,12 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> alternateGridColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockNavigatorXAxis >> alternateGridColor: aHighchartsColorType [
 
 	"When using an alternate grid color, a band is painted across the plot area between every other grid line.
 "
 
-	configurationOptions at: 'alternateGridColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'alternateGridColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -98,14 +98,6 @@ HighstockNavigatorXAxis >> crosshair [
 	"Configure a crosshair that follows either the mouse pointer or the hovered point. In styled mode, the crosshairs are styled in the .highcharts-crosshair, .highcharts-crosshair-thin or .highcharts-xaxis-category classes.
 Defaults to false."
 	^ configurationOptions at: 'crosshair' ifAbsentPut: [ HighstockNavigatorXAxisCrosshair new ]
-]
-
-{ #category : #accessing }
-HighstockNavigatorXAxis >> dateTimeLabelFormats [
-
-	"For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the day unit can be used on midnight and hour unit be used for intermediate values on the same axis. For an overview of the replacement codes, see dateFormat. Defaults to: {     millisecond: ´H:M:S.L´,     second: ´H:M:S´,     minute: ´H:M´,     hour: ´H:M´,     day: ´e. b´,     week: ´e. b´,     month: ´b \´y´,     year: ´Y´ }
-"
-	^ configurationOptions at: 'dateTimeLabelFormats' ifAbsentPut: [ HighstockNavigatorXAxisDateTimeLabelFormats new ]
 ]
 
 { #category : #accessing }
@@ -216,12 +208,12 @@ HighstockNavigatorXAxis >> left: aNumberOrstring [
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockNavigatorXAxis >> lineColor: aHighchartsColorType [
 
 	"The color of the line marking the axis itself. In styled mode, the line stroke is given in the .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'lineColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -288,12 +280,12 @@ HighstockNavigatorXAxis >> minTickInterval: aNumber [
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorGridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockNavigatorXAxis >> minorGridLineColor: aHighchartsColorType [
 
 	"Color of the minor, secondary grid lines. In styled mode, the stroke width is given in the .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -315,12 +307,12 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> minorTickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockNavigatorXAxis >> minorTickColor: aHighchartsColorType [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -502,12 +494,12 @@ HighstockNavigatorXAxis >> tickAmount: aNumber [
 ]
 
 { #category : #accessing }
-HighstockNavigatorXAxis >> tickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockNavigatorXAxis >> tickColor: aHighchartsColorType [
 
 	"Color for the main tick marks. In styled mode, the stroke is given in the .highcharts-tick class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'tickColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }

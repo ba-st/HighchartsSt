@@ -173,20 +173,6 @@ HighchartsSeriesLollipopDataTest >> testSetEvents [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesLollipopDataTest >> testSetHigh [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesLollipopData new.
-	component high: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'high' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesLollipopDataTest >> testSetId [
 
 	| component javascript expectedConfiguration |
@@ -210,20 +196,6 @@ HighchartsSeriesLollipopDataTest >> testSetLabelrank [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'labelrank' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsSeriesLollipopDataTest >> testSetLow [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesLollipopData new.
-	component low: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'low' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

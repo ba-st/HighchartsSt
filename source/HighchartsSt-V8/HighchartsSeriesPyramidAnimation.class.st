@@ -8,6 +8,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesPyramidAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesPyramidAnimation >> duration: aNumber [
 
 

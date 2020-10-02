@@ -335,6 +335,21 @@ HighchartsSeriesBarTest >> testSetBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesBarTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesBar new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'bar';
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesBarTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

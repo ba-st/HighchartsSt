@@ -201,20 +201,6 @@ HighstockPlotOptionsVectorTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsVectorTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockPlotOptionsVector new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockPlotOptionsVectorTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

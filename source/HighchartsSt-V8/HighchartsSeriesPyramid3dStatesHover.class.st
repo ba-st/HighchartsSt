@@ -19,7 +19,7 @@ HighchartsSeriesPyramid3dStatesHover >> animation [
 { #category : #accessing }
 HighchartsSeriesPyramid3dStatesHover >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"A specific border color for the hovered point. Defaults to inherit the normal state border color.
+	"The border color of the point in this state.
 "
 
 	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -37,7 +37,7 @@ HighchartsSeriesPyramid3dStatesHover >> borderWidth: aNumber [
 { #category : #accessing }
 HighchartsSeriesPyramid3dStatesHover >> brightness: aNumber [
 
-	"How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format. In styled mode, the hover brightening is by default replaced with a fill-opacity set in the .highcharts-point:hover rule.
+	"How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format. In styled mode, the hover brightness is by default replaced by a fill-opacity given in the .highcharts-point-hover class.
 Defaults to 0.1."
 
 	configurationOptions at: 'brightness' put: aNumber
@@ -46,7 +46,7 @@ Defaults to 0.1."
 { #category : #accessing }
 HighchartsSeriesPyramid3dStatesHover >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"A specific color for the hovered point.
+	"The color of the shape in this state.
 "
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject

@@ -201,20 +201,6 @@ HighchartsPlotOptionsSunburstTest >> testSetAllowTraversingTree [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsPlotOptionsSunburstTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsPlotOptionsSunburst new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsPlotOptionsSunburstTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |

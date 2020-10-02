@@ -148,7 +148,7 @@ HighstockNavigationBindings >> flagSquarepin: aHighchartsNavigationBindingsOptio
 { #category : #accessing }
 HighstockNavigationBindings >> fullScreen: aHighchartsNavigationBindingsOptionsObject [
 
-	"Displays chart in fullscreen.
+	"Displays chart in fullscreen. Note: Fullscreen is not supported on iPhone due to iOS limitations.
 "
 
 	configurationOptions at: 'fullScreen' put: aHighchartsNavigationBindingsOptionsObject

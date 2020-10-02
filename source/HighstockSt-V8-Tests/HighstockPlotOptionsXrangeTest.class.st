@@ -215,20 +215,6 @@ HighstockPlotOptionsXrangeTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsXrangeTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockPlotOptionsXrange new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockPlotOptionsXrangeTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -266,6 +252,20 @@ HighstockPlotOptionsXrangeTest >> testSetBorderWidth [
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
 		at: 'borderWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsXrangeTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsXrange new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

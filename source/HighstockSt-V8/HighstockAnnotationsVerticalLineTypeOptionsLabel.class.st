@@ -115,6 +115,15 @@ Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; 
 ]
 
 { #category : #accessing }
+HighstockAnnotationsVerticalLineTypeOptionsLabel >> includeInDataExport: aBoolean [
+
+	"Whether the annotation is visible in the exported data table.
+Defaults to true."
+
+	configurationOptions at: 'includeInDataExport' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockAnnotationsVerticalLineTypeOptionsLabel >> offset: aNumber [
 
 

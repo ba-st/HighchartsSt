@@ -187,6 +187,20 @@ HighstockAnnotationsLabelsTest >> testSetFormatter [
 ]
 
 { #category : #'tests-accessing' }
+HighstockAnnotationsLabelsTest >> testSetIncludeInDataExport [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockAnnotationsLabels new.
+	component includeInDataExport: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'includeInDataExport' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockAnnotationsLabelsTest >> testSetOverflow [
 
 	| component javascript expectedConfiguration |

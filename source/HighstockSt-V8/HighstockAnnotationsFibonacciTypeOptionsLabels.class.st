@@ -115,6 +115,15 @@ Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; 
 ]
 
 { #category : #accessing }
+HighstockAnnotationsFibonacciTypeOptionsLabels >> includeInDataExport: aBoolean [
+
+	"Whether the annotation is visible in the exported data table.
+Defaults to true."
+
+	configurationOptions at: 'includeInDataExport' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockAnnotationsFibonacciTypeOptionsLabels >> overflow: aString [
 
 	"How to handle the annotation´s label that flow outside the plot area. The justify option aligns the label inside the plot area.

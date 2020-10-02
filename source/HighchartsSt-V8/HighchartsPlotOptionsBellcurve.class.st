@@ -63,7 +63,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsBellcurve >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsPlotOptionsBellcurveAnimation new ]
 ]
@@ -75,15 +75,6 @@ HighchartsPlotOptionsBellcurve >> animationLimit: aNumber [
 "
 
 	configurationOptions at: 'animationLimit' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsBellcurve >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
 ]
 
 { #category : #accessing }
@@ -603,7 +594,7 @@ HighchartsPlotOptionsBellcurve >> skipKeyboardNavigation: aBoolean [
 HighchartsPlotOptionsBellcurve >> softThreshold: aBoolean [
 
 	"When this is true, the series will not cause the Y axis to cross the zero plane (or threshold option) unless the data actually crosses the plane. For example, if softThreshold is false, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the minPadding option. If softThreshold is true, the Y axis starts at 0.
-Defaults to false."
+Defaults to true."
 
 	configurationOptions at: 'softThreshold' put: aBoolean
 ]

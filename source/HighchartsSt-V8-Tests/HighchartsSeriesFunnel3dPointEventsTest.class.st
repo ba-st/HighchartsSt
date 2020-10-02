@@ -61,6 +61,20 @@ HighchartsSeriesFunnel3dPointEventsTest >> testSetDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesFunnel3dPointEventsTest >> testSetLegendItemClick [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesFunnel3dPointEvents new.
+	component legendItemClick: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'legendItemClick' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesFunnel3dPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |

@@ -39,7 +39,7 @@ HighchartsSeriesFunnel3dTooltip >> dateTimeLabelFormats [
 HighchartsSeriesFunnel3dTooltip >> distance: aNumber [
 
 	"Distance from point to tooltip in pixels.
-Defaults to 6."
+Defaults to 16."
 
 	configurationOptions at: 'distance' put: aNumber
 ]
@@ -48,7 +48,7 @@ Defaults to 6."
 HighchartsSeriesFunnel3dTooltip >> followPointer: aBoolean [
 
 	"Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for pie, polygon, map, sankey and wordcloud series by override in the plotOptions for those series types. For touch moves to behave the same way, followTouchMove must be true also.
-"
+Defaults to true."
 
 	configurationOptions at: 'followPointer' put: aBoolean
 ]

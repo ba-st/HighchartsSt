@@ -229,29 +229,15 @@ HighstockPlotOptionsErrorbarTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testSetBoostBlending [
+HighstockPlotOptionsErrorbarTest >> testSetCenterInCategory [
 
 	| component javascript expectedConfiguration |
 
 	component := HighstockPlotOptionsErrorbar new.
-	component boostBlending: 'test'.
+	component centerInCategory: 'test'.
 	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
 	expectedConfiguration := Dictionary new
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighstockPlotOptionsErrorbarTest >> testSetBoostThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockPlotOptionsErrorbar new.
-	component boostThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'boostThreshold' put: 'test';
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

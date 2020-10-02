@@ -187,6 +187,20 @@ HighstockLangTest >> testSetExitFullscreen [
 ]
 
 { #category : #'tests-accessing' }
+HighstockLangTest >> testSetHideData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockLang new.
+	component hideData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'hideData' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockLangTest >> testSetInvalidDate [
 
 	| component javascript expectedConfiguration |

@@ -154,12 +154,12 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsLegend >> itemStyle: aHighchartsCSSObject [
+HighchartsLegend >> itemStyle: aCssDeclarationBlock [
 
-	"CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default textOverflow property makes long texts truncate. Set it to undefined to wrap text instead. A width property can be added to control the text width.
-Defaults to {'color': '#333333', 'cursor': 'pointer', 'fontSize': '12px', 'fontWeight': 'bold', 'textOverflow': 'ellipsis'}."
+	"CSS styles for each legend item. Only a subset of CSS is supported, notably those options related to text. The default textOverflow property makes long texts truncate. Set it to null to wrap text instead. A width property can be added to control the text width. 
+Defaults to { 'color': '#333333', 'cursor': 'pointer', 'fontSize': '12px', 'fontWeight': 'bold', 'textOverflow': 'ellipsis' }."
 
-	configurationOptions at: 'itemStyle' put: aHighchartsCSSObject
+	configurationOptions at: 'itemStyle' put: aCssDeclarationBlock
 ]
 
 { #category : #accessing }
@@ -352,7 +352,7 @@ Defaults to bottom."
 { #category : #accessing }
 HighchartsLegend >> width: aNumberOrstring [
 
-	"The width of the legend box. If a number is set, it translates to pixels. Since v7.0.2 it allows setting a percent string of the full chart width, for example 40. Defaults to the full chart width from legends below or above the chart, half the chart width for legends to the left and right.
+	"The width of the legend box. If a number is set, it translates to pixels. Since v7.0.2 it allows setting a percent string of the full chart width, for example 40. Defaults to the full chart width for legends below or above the chart, half the chart width for legends to the left and right.
 "
 
 	configurationOptions at: 'width' put: aNumberOrstring

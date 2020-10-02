@@ -52,7 +52,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Initial animation is by default disabled for the funnel chart.
 Defaults to false."
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsSeriesPyramid3dAnimation new ]
 ]
@@ -67,18 +67,9 @@ HighchartsSeriesPyramid3d >> animationLimit: aNumber [
 ]
 
 { #category : #accessing }
-HighchartsSeriesPyramid3d >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
-]
-
-{ #category : #accessing }
 HighchartsSeriesPyramid3d >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The color of the border surrounding each column or bar. In styled mode, the border stroke can be set with the .highcharts-point rule.
+	"The color of the border surrounding each slice. When null, the border takes the same color as the slice fill. This can be used together with a borderWidth to fill drawing gaps created by antialiazing artefacts in borderless pies. In styled mode, the border stroke is given in the .highcharts-point class.
 Defaults to #ffffff."
 
 	configurationOptions at: 'borderColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -96,10 +87,28 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> borderWidth: aNumber [
 
-	"The width of the border surrounding each column or bar. Defaults to 1 when there is room for a border, but to 0 when the columns are so dense that a border would cover the next column. In styled mode, the stroke width can be set with the .highcharts-point rule.
-Defaults to undefined."
+	"The width of the border surrounding each slice. When setting the border width to 0, there may be small gaps between the slices due to SVG antialiasing artefacts. To work around this, keep the border width at 0.5 or 1, but set the borderColor to null instead. In styled mode, the border stroke width is given in the .highcharts-point class.
+Defaults to 1."
 
 	configurationOptions at: 'borderWidth' put: aNumber
+]
+
+{ #category : #accessing }
+HighchartsSeriesPyramid3d >> center: anArrayOfnumberOrstring [
+
+	"The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height.
+Defaults to ['50%', '50%']."
+
+	configurationOptions at: 'center' put: anArrayOfnumberOrstring
+]
+
+{ #category : #accessing }
+HighchartsSeriesPyramid3d >> centerInCategory: aBoolean [
+
+	"When true, the columns will center in the category, ignoring null or missing points. When false, space will be reserved for null or missing points.
+Defaults to false."
+
+	configurationOptions at: 'centerInCategory' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -115,7 +124,7 @@ HighchartsSeriesPyramid3d >> className: aString [
 HighchartsSeriesPyramid3d >> clip: aBoolean [
 
 	"Disable this option to allow series rendering in the whole plotting area. Note: Clipping should be always enabled when chart.zoomType is set
-Defaults to true."
+Defaults to false."
 
 	configurationOptions at: 'clip' put: aBoolean
 ]
@@ -123,8 +132,8 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> color: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"The main color of the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the options.colors array. In styled mode, the color can be defined by the colorIndex option. Also, the series color can be set with the .highcharts-series, .highcharts-color-{n}, .highcharts-{type}-series or .highcharts-series-{n} class, or individual classes given by the className option.
-"
+	"The color of the pie series. A pie series is represented as an empty circle if the total sum of its values is 0. Use this property to define the color of its border. In styled mode, the color can be defined by the colorIndex option. Also, the series color can be set with the .highcharts-series, .highcharts-color-{n}, .highcharts-{type}-series or .highcharts-series-{n} class, or individual classes given by the className option.
+Defaults to #cccccc."
 
 	configurationOptions at: 'color' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
@@ -159,7 +168,7 @@ Defaults to y."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> colors: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
-	"A series specific or series type specific color set to apply instead of the global colors when colorByPoint is true.
+	"A series specific or series type specific color set to use instead of the global colors.
 "
 
 	configurationOptions at: 'colors' put: anArrayOfHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
@@ -212,8 +221,8 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> cropThreshold: aNumber [
 
-	"When the series contains less points than the crop threshold, all points are drawn, event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
-Defaults to 50."
+	"When the series contains less points than the crop threshold, all points are drawn, even if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
+Defaults to 300."
 
 	configurationOptions at: 'cropThreshold' put: aNumber
 ]
@@ -279,8 +288,8 @@ HighchartsSeriesPyramid3d >> dataLabels [
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> depth: aNumber [
 
-	"Depth of the columns in a 3D column chart.
-Defaults to 25."
+	"The thickness of a 3D pie.
+Defaults to 0."
 
 	configurationOptions at: 'depth' put: aNumber
 ]
@@ -330,12 +339,30 @@ Defaults to true."
 ]
 
 { #category : #accessing }
+HighchartsSeriesPyramid3d >> endAngle: aNumber [
+
+	"The end angle of the pie in degrees where 0 is top and 90 is right. Defaults to startAngle plus 360.
+"
+
+	configurationOptions at: 'endAngle' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesPyramid3d >> events: anObject [
 
 	"General event handlers for the series items. These event hooks can also be attached to the series at run time using the Highcharts.addEvent function.
 "
 
 	configurationOptions at: 'events' put: anObject
+]
+
+{ #category : #accessing }
+HighchartsSeriesPyramid3d >> fillColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+
+	"If the total sum of the pie´s values is 0, the series is represented as an empty circle . The fillColor option defines the color of that circle. Use pie.borderWidth to set the border thickness.
+Defaults to undefined."
+
+	configurationOptions at: 'fillColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
 ]
 
 { #category : #accessing }
@@ -413,7 +440,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> height: aNumberOrstring [
 
-	"The height of the series. If it is a number it defines the pixel height, if it is a percentage string it is the percentage of the plot area height.
+	"The height of the funnel or pyramid. If it is a number it defines the pixel height, if it is a percentage string it is the percentage of the plot area height.
 Defaults to 100%."
 
 	configurationOptions at: 'height' put: aNumberOrstring
@@ -426,6 +453,15 @@ HighchartsSeriesPyramid3d >> id: aString [
 "
 
 	configurationOptions at: 'id' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesPyramid3d >> ignoreHiddenPoint: aBoolean [
+
+	"Equivalent to chart.ignoreHiddenSeries, this option tells whether the series shall be redrawn as if the hidden point were null. The default value changed from false to true with Highcharts 3.0.
+Defaults to true."
+
+	configurationOptions at: 'ignoreHiddenPoint' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -516,7 +552,7 @@ Defaults to 2."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> linecap: aHighchartsSeriesLinecapValue [
 
-	"The line cap used for line ends and line joins on the graph.
+	"The SVG value used for the stroke-linecap and stroke-linejoin of a line graph. Round means that lines are rounded in the ends and bends.
 Defaults to round."
 
 	configurationOptions at: 'linecap' put: aHighchartsSeriesLinecapValue
@@ -567,6 +603,15 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
+HighchartsSeriesPyramid3d >> minSize: aNumberOrstring [
+
+	"The minimum size for a pie in response to auto margins. The pie will try to shrink to make room for data labels in side the plot area,  but only to this size.
+Defaults to 80."
+
+	configurationOptions at: 'minSize' put: aNumberOrstring
+]
+
+{ #category : #accessing }
 HighchartsSeriesPyramid3d >> name: aString [
 
 	"The name of the series as shown in the legend, tooltip etc.
@@ -582,6 +627,24 @@ HighchartsSeriesPyramid3d >> navigatorOptions: aHighchartsPlotSeriesOptions [
 "
 
 	configurationOptions at: 'navigatorOptions' put: aHighchartsPlotSeriesOptions
+]
+
+{ #category : #accessing }
+HighchartsSeriesPyramid3d >> neckHeight: aString [
+
+	"The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic.
+Defaults to 0%."
+
+	configurationOptions at: 'neckHeight' put: aString
+]
+
+{ #category : #accessing }
+HighchartsSeriesPyramid3d >> neckWidth: aString [
+
+	"The pyramid neck width is zero by default, as opposed to the funnel, which shares the same layout logic.
+Defaults to 0%."
+
+	configurationOptions at: 'neckWidth' put: aString
 ]
 
 { #category : #accessing }
@@ -622,7 +685,7 @@ HighchartsSeriesPyramid3d >> pointDescriptionFormatter: aFunction [
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> pointInterval: aNumber [
 
-	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 Defaults to 1."
 
 	configurationOptions at: 'pointInterval' put: aNumber
@@ -631,7 +694,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> pointIntervalUnit: aString [
 
-	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 "
 
 	configurationOptions at: 'pointIntervalUnit' put: aString
@@ -656,12 +719,12 @@ HighchartsSeriesPyramid3d >> pointPlacement: aStringOrnumber [
 ]
 
 { #category : #accessing }
-HighchartsSeriesPyramid3d >> pointRange: aNumberOrNil [
+HighchartsSeriesPyramid3d >> pointRange: aNumber [
 
-	"The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points. The default null means it is computed automatically, but this option can be used to override the automatic value. This option is set by default to 1 if data sorting is enabled.
-Defaults to nil."
+	"The width of each point on the x axis. For example in a column chart with one value each day, the pointRange would be 1 day (= 24 * 3600  1000 milliseconds). This is normally computed automatically, but this option can be used to override the automatic value.
+Defaults to 0."
 
-	configurationOptions at: 'pointRange' put: aNumberOrNil
+	configurationOptions at: 'pointRange' put: aNumber
 ]
 
 { #category : #accessing }
@@ -676,7 +739,7 @@ Defaults to 0."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> pointWidth: aNumber [
 
-	"A pixel value specifying a fixed width for each column or bar. When null, the width is calculated from the pointPadding and groupPadding.
+	"A pixel value specifying a fixed width for each column or bar point. When null, the width is calculated from the pointPadding and groupPadding. The width effects the dimension that is not based on the point value. For column series it is the hoizontal length and for bar series it is the vertical length.
 "
 
 	configurationOptions at: 'pointWidth' put: aNumber
@@ -685,7 +748,7 @@ HighchartsSeriesPyramid3d >> pointWidth: aNumber [
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> reversed: aBoolean [
 
-	"A reversed pyramid3d is funnel3d, but the latter supports neck related options: neckHeight and neckWidth
+	"The pyramid is reversed by default, as opposed to the funnel, which shares the layout engine, and is not reversed.
 Defaults to true."
 
 	configurationOptions at: 'reversed' put: aBoolean
@@ -721,7 +784,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> showInLegend: aBoolean [
 
-	"Whether to display this particular series or series type in the legend. Standalone series are shown in legend by default, and linked series are not. Since v7.2.0 it is possible to show series that use colorAxis by setting this option to true.
+	"Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default.
 Defaults to false."
 
 	configurationOptions at: 'showInLegend' put: aBoolean
@@ -746,10 +809,19 @@ HighchartsSeriesPyramid3d >> skipKeyboardNavigation: aBoolean [
 ]
 
 { #category : #accessing }
+HighchartsSeriesPyramid3d >> slicedOffset: aNumber [
+
+	"If a point is sliced, moved out from the center, how many pixels should it be moved?.
+Defaults to 10."
+
+	configurationOptions at: 'slicedOffset' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesPyramid3d >> softThreshold: aBoolean [
 
 	"When this is true, the series will not cause the Y axis to cross the zero plane (or threshold option) unless the data actually crosses the plane. For example, if softThreshold is false, a series of 0, 1, 2, 3 will make the Y axis show negative values according to the minPadding option. If softThreshold is true, the Y axis starts at 0.
-Defaults to false."
+Defaults to true."
 
 	configurationOptions at: 'softThreshold' put: aBoolean
 ]
@@ -766,15 +838,26 @@ HighchartsSeriesPyramid3d >> stack: aNumberOrstring [
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> stacking: aString [
 
-	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. A special stacking option is with the streamgraph series type, where the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
+	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. Some stacking options are related to specific series types. In the streamgraph series type, the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
 "
 
 	configurationOptions at: 'stacking' put: aString
 ]
 
 { #category : #accessing }
+HighchartsSeriesPyramid3d >> startAngle: aNumber [
+
+	"The start angle of the pie slices in degrees where 0 is top and 90 right.
+Defaults to 0."
+
+	configurationOptions at: 'startAngle' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesPyramid3d >> states: anObject [
 
+	"Options for the series states.
+"
 
 	configurationOptions at: 'states' put: anObject
 ]
@@ -791,19 +874,19 @@ HighchartsSeriesPyramid3d >> step: aString [
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> stickyTracking: aBoolean [
 
-	"Sticky tracking of mouse events. When true, the mouseOut event on a series isn´t triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series´ graph or markers. This also implies the tooltip when not shared. When stickyTracking is false and tooltip.shared is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. Note: The boost module will force this option because of technical limitations.
+	"Sticky tracking of mouse events. When true, the mouseOut event on a series isn´t triggered until the mouse moves over another series, or out of the plot area. When false, the mouseOut event on a series is triggered when the mouse leaves the area around the series´  graph or markers. This also implies the tooltip. When stickyTracking is false and tooltip.shared is false, the tooltip will be hidden when moving the mouse between series.
 Defaults to false."
 
 	configurationOptions at: 'stickyTracking' put: aBoolean
 ]
 
 { #category : #accessing }
-HighchartsSeriesPyramid3d >> threshold: aNumberOrNil [
+HighchartsSeriesPyramid3d >> threshold: aNumber [
 
-	"The Y axis value to serve as the base for the columns, for distinguishing between values above and below a threshold. If null, the columns extend from the padding Y axis minimum.
+	"The threshold, also called zero level or base level. For line type series this is only used in conjunction with negativeColor.
 Defaults to 0."
 
-	configurationOptions at: 'threshold' put: aNumberOrNil
+	configurationOptions at: 'threshold' put: aNumber
 ]
 
 { #category : #accessing }
@@ -833,6 +916,15 @@ HighchartsSeriesPyramid3d >> type: aString [
 ]
 
 { #category : #accessing }
+HighchartsSeriesPyramid3d >> useOhlcData: aBoolean [
+
+	"The parameter allows setting line series type and use OHLC indicators. Data in OHLC format is required.
+"
+
+	configurationOptions at: 'useOhlcData' put: aBoolean
+]
+
+{ #category : #accessing }
 HighchartsSeriesPyramid3d >> visible: aBoolean [
 
 	"Set the initial visibility of the series.
@@ -844,7 +936,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsSeriesPyramid3d >> width: aNumberOrstring [
 
-	"The max width of the series compared to the width of the plot area, or the pixel width if it is a number.
+	"The width of the funnel compared to the width of the plot area, or the pixel width if it is a number.
 Defaults to 90%."
 
 	configurationOptions at: 'width' put: aNumberOrstring

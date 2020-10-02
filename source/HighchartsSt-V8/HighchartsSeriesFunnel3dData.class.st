@@ -171,6 +171,15 @@ HighchartsSeriesFunnel3dData >> labelrank: aNumber [
 ]
 
 { #category : #accessing }
+HighchartsSeriesFunnel3dData >> legendIndex: aNumber [
+
+	"The sequential index of the data point in the legend.
+"
+
+	configurationOptions at: 'legendIndex' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesFunnel3dData >> name: aString [
 
 	"The name of the point as shown in the legend, tooltip, dataLabels, etc.
@@ -182,7 +191,7 @@ HighchartsSeriesFunnel3dData >> name: aString [
 { #category : #accessing }
 HighchartsSeriesFunnel3dData >> pointWidth: aNumber [
 
-	"A pixel value specifying a fixed width for the column or bar. Overrides pointWidth on the series.
+	"A pixel value specifying a fixed width for the column or bar. Overrides pointWidth on the series. The width effects the dimension that is not based on the point value.
 Defaults to undefined."
 
 	configurationOptions at: 'pointWidth' put: aNumber

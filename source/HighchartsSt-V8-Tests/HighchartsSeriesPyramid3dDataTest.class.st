@@ -229,6 +229,20 @@ HighchartsSeriesPyramid3dDataTest >> testSetLabelrank [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dDataTest >> testSetLegendIndex [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dData new.
+	component legendIndex: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'legendIndex' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dDataTest >> testSetName [
 
 	| component javascript expectedConfiguration |

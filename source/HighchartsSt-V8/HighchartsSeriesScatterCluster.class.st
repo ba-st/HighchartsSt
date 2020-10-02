@@ -24,12 +24,12 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsSeriesScatterCluster >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighchartsSeriesScatterCluster >> animation: aBooleanOrPartialOfHighchartsAnimationOptionsObject [
 
 	"Options for the cluster marker animation.
 Defaults to { 'duration': 500 }."
 
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+	configurationOptions at: 'animation' put: aBooleanOrPartialOfHighchartsAnimationOptionsObject
 ]
 
 { #category : #accessing }

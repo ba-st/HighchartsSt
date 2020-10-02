@@ -122,15 +122,6 @@ HighstockSeriesLollipopData >> events: anObject [
 ]
 
 { #category : #accessing }
-HighstockSeriesLollipopData >> high: aNumber [
-
-	"The high or maximum value for each data point.
-"
-
-	configurationOptions at: 'high' put: aNumber
-]
-
-{ #category : #accessing }
 HighstockSeriesLollipopData >> id: aString [
 
 	"An id for the point. This can be used after render time to get a pointer to the point object through chart.get().
@@ -146,15 +137,6 @@ HighstockSeriesLollipopData >> labelrank: aNumber [
 "
 
 	configurationOptions at: 'labelrank' put: aNumber
-]
-
-{ #category : #accessing }
-HighstockSeriesLollipopData >> low: aNumber [
-
-	"The low or minimum value for each data point.
-"
-
-	configurationOptions at: 'low' put: aNumber
 ]
 
 { #category : #accessing }

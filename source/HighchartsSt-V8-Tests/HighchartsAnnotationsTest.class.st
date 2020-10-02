@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsAnnotationsTest >> testGetAnimation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsAnnotations new.
+	component animation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'animation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsAnnotationsTest >> testGetControlPointOptions [
 
 	| component javascript expectedConfiguration |

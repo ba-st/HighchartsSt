@@ -199,12 +199,12 @@ HighchartsColorAxis >> layout: aStringOrundefined [
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsColorAxis >> lineColor: aHighchartsColorType [
 
 	"The color of the line marking the axis itself. In styled mode, the line stroke is given in the .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'lineColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -279,12 +279,12 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorGridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsColorAxis >> minorGridLineColor: aHighchartsColorType [
 
 	"Color of the minor, secondary grid lines. In styled mode, the stroke width is given in the .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -306,12 +306,12 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> minorTickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsColorAxis >> minorTickColor: aHighchartsColorType [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -450,12 +450,12 @@ HighchartsColorAxis >> tickAmount: aNumber [
 ]
 
 { #category : #accessing }
-HighchartsColorAxis >> tickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighchartsColorAxis >> tickColor: aHighchartsColorType [
 
 	"Color for the main tick marks. In styled mode, the stroke is given in the .highcharts-tick class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'tickColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }

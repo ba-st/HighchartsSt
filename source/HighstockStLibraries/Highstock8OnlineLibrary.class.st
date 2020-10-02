@@ -30,5 +30,5 @@ Highstock8OnlineLibrary >> updateRoot: aRoot [
 { #category : #versions }
 Highstock8OnlineLibrary >> version [
 
-	^ '8.1.0'
+	^ '8.2.0'
 ]

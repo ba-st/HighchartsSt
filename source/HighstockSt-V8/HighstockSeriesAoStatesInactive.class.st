@@ -10,7 +10,7 @@ Class {
 { #category : #accessing }
 HighstockSeriesAoStatesInactive >> animation [
 
-	"The animation for entering the inactive state.
+	"Animation when not hovering over the marker.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighstockSeriesAoStatesInactiveAnimation new ]
 ]
@@ -27,7 +27,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockSeriesAoStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area).
+	"Opacity of inactive markers.
 Defaults to 0.2."
 
 	configurationOptions at: 'opacity' put: aNumber

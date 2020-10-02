@@ -61,7 +61,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesDependencywheel >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsSeriesDependencywheelAnimation new ]
 ]
@@ -118,6 +118,15 @@ HighchartsSeriesDependencywheel >> center: anArrayOfnumberOrstringOrNil [
 Defaults to [null, null]."
 
 	configurationOptions at: 'center' put: anArrayOfnumberOrstringOrNil
+]
+
+{ #category : #accessing }
+HighchartsSeriesDependencywheel >> centerInCategory: aBoolean [
+
+	"When true, the columns will center in the category, ignoring null or missing points. When false, space will be reserved for null or missing points.
+Defaults to false."
+
+	configurationOptions at: 'centerInCategory' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -302,7 +311,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsSeriesDependencywheel >> data [
 
-	"An array of data points for the series. For the dependencywheel series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.     data: [{         from: ´Category1´,         to: ´Category2´,         weight: 2     }, {         from: ´Category1´,         to: ´Category3´,         weight: 5     }]
+	"An array of data points for the series. For the dependencywheel series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.    data: [{        from: ´Category1´,        to: ´Category2´,        weight: 2    }, {        from: ´Category1´,        to: ´Category3´,        weight: 5    }]
 "
 	^ configurationOptions at: 'data' ifAbsentPut: [ HighchartsSeriesDependencywheelData new ]
 ]
@@ -638,7 +647,7 @@ HighchartsSeriesDependencywheel >> pointDescriptionFormatter: aFunction [
 { #category : #accessing }
 HighchartsSeriesDependencywheel >> pointInterval: aNumber [
 
-	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10. In true datetime axes, the pointInterval is set in milliseconds. It can be also be combined with pointIntervalUnit to draw irregular time intervals. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 Defaults to 1."
 
 	configurationOptions at: 'pointInterval' put: aNumber
@@ -647,7 +656,7 @@ Defaults to 1."
 { #category : #accessing }
 HighchartsSeriesDependencywheel >> pointIntervalUnit: aString [
 
-	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the _series data_, not the interval of the axis ticks, which is independent.
+	"On datetime series, this allows for setting the pointInterval to irregular time units, day, month and year. A day is usually the same as 24 hours, but pointIntervalUnit also takes the DST crossover into consideration when dealing with local time. Combine this option with pointInterval to draw weeks, quarters, 6 months, 10 years etc. Please note that this options applies to the series data, not the interval of the axis ticks, which is independent.
 "
 
 	configurationOptions at: 'pointIntervalUnit' put: aString
@@ -755,7 +764,7 @@ HighchartsSeriesDependencywheel >> stack: aNumberOrstring [
 { #category : #accessing }
 HighchartsSeriesDependencywheel >> stacking: aString [
 
-	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. A special stacking option is with the streamgraph series type, where the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
+	"Whether to stack the values of each series on top of each other. Possible values are undefined to disable, &quot;normal&quot; to stack by value or &quot;percent&quot;. When stacking is enabled, data must be sorted in ascending X order. Some stacking options are related to specific series types. In the streamgraph series type, the stacking option is set to &quot;stream&quot;. The second one is &quot;overlap&quot;, which only applies to waterfall series.
 "
 
 	configurationOptions at: 'stacking' put: aString

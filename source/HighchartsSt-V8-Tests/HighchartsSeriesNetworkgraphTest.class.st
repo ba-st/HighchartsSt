@@ -245,21 +245,6 @@ HighchartsSeriesNetworkgraphTest >> testSetAllowPointSelect [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesNetworkgraph new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'networkgraph';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesNetworkgraphTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -435,21 +420,6 @@ HighchartsSeriesNetworkgraphTest >> testSetCrisp [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'networkgraph';
 		at: 'crisp' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
-HighchartsSeriesNetworkgraphTest >> testSetCropThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesNetworkgraph new.
-	component cropThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'networkgraph';
-		at: 'cropThreshold' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

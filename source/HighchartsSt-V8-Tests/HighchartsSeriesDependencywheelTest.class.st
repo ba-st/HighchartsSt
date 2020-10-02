@@ -365,6 +365,21 @@ HighchartsSeriesDependencywheelTest >> testSetCenter [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesDependencywheelTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesDependencywheel new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'dependencywheel';
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesDependencywheelTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

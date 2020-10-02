@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsTilemapAnimationTest >> testSetDefer [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsTilemapAnimation new.
+	component defer: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'defer' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsTilemapAnimationTest >> testSetDuration [
 
 	| component javascript expectedConfiguration |

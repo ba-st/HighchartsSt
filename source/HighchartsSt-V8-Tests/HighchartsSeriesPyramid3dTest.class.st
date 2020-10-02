@@ -245,21 +245,6 @@ HighchartsSeriesPyramid3dTest >> testSetAnimationLimit [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsSeriesPyramid3dTest >> testSetBoostBlending [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsSeriesPyramid3d new.
-	component boostBlending: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'pyramid3d';
-		at: 'boostBlending' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dTest >> testSetBorderColor [
 
 	| component javascript expectedConfiguration |
@@ -300,6 +285,36 @@ HighchartsSeriesPyramid3dTest >> testSetBorderWidth [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pyramid3d';
 		at: 'borderWidth' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetCenter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component center: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'center' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'centerInCategory' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -620,6 +635,21 @@ HighchartsSeriesPyramid3dTest >> testSetEnableMouseTracking [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetEndAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component endAngle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'endAngle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dTest >> testSetEvents [
 
 	| component javascript expectedConfiguration |
@@ -630,6 +660,21 @@ HighchartsSeriesPyramid3dTest >> testSetEvents [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pyramid3d';
 		at: 'events' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetFillColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component fillColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'fillColor' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -780,6 +825,21 @@ HighchartsSeriesPyramid3dTest >> testSetId [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pyramid3d';
 		at: 'id' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetIgnoreHiddenPoint [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component ignoreHiddenPoint: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'ignoreHiddenPoint' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -950,6 +1010,21 @@ HighchartsSeriesPyramid3dTest >> testSetMinPointLength [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetMinSize [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component minSize: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'minSize' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dTest >> testSetName [
 
 	| component javascript expectedConfiguration |
@@ -975,6 +1050,36 @@ HighchartsSeriesPyramid3dTest >> testSetNavigatorOptions [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pyramid3d';
 		at: 'navigatorOptions' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetNeckHeight [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component neckHeight: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'neckHeight' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetNeckWidth [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component neckWidth: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'neckWidth' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1235,6 +1340,21 @@ HighchartsSeriesPyramid3dTest >> testSetSkipKeyboardNavigation [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetSlicedOffset [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component slicedOffset: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'slicedOffset' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dTest >> testSetSoftThreshold [
 
 	| component javascript expectedConfiguration |
@@ -1275,6 +1395,21 @@ HighchartsSeriesPyramid3dTest >> testSetStacking [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pyramid3d';
 		at: 'stacking' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetStartAngle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component startAngle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'startAngle' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]
@@ -1365,6 +1500,21 @@ HighchartsSeriesPyramid3dTest >> testSetType [
 	expectedConfiguration := Dictionary new
 		at: 'type' put: 'pyramid3d';
 		at: 'type' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dTest >> testSetUseOhlcData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3d new.
+	component useOhlcData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'pyramid3d';
+		at: 'useOhlcData' put: 'test';
 		yourself.
 	self assert: javascript equals: expectedConfiguration asJavascript
 ]

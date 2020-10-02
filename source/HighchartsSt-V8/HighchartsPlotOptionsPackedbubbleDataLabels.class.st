@@ -32,6 +32,14 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsPackedbubbleDataLabels >> animation [
+
+	"Enable or disable the initial animation when a series is displayed for the dataLabels. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.
+"
+	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsPlotOptionsPackedbubbleDataLabelsAnimation new ]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsPackedbubbleDataLabels >> attributes: aHighchartsSVGAttributes [
 
 	"Presentation attributes for the text path.
@@ -106,7 +114,7 @@ Defaults to true."
 { #category : #accessing }
 HighchartsPlotOptionsPackedbubbleDataLabels >> defer: aBoolean [
 
-	"Whether to defer displaying the data labels until the initial series animation has finished.
+	"Whether to defer displaying the data labels until the initial series animation has finished. Setting to false renders the data label immediately. If set to true inherits the defer time set in plotOptions.series.animation.
 Defaults to true."
 
 	configurationOptions at: 'defer' put: aBoolean
@@ -202,8 +210,6 @@ HighchartsPlotOptionsPackedbubbleDataLabels >> parentNodeFormat: aString [
 { #category : #accessing }
 HighchartsPlotOptionsPackedbubbleDataLabels >> parentNodeFormatter: aHighchartsSeriesPackedBubbleDataLabelsFormatterCallbackFunction [
 
-	"Callback to format data labels for parentNodes. The parentNodeFormat option takes precedence over the parentNodeFormatter.
-"
 
 	configurationOptions at: 'parentNodeFormatter' put: aHighchartsSeriesPackedBubbleDataLabelsFormatterCallbackFunction
 ]
@@ -211,8 +217,6 @@ HighchartsPlotOptionsPackedbubbleDataLabels >> parentNodeFormatter: aHighchartsS
 { #category : #accessing }
 HighchartsPlotOptionsPackedbubbleDataLabels >> parentNodeTextPath [
 
-	"Options for a parentNode label text. Note: Only SVG-based renderer supports this option.
-"
 	^ configurationOptions at: 'parentNodeTextPath' ifAbsentPut: [ HighchartsPlotOptionsPackedbubbleDataLabelsParentNodeTextPath new ]
 ]
 

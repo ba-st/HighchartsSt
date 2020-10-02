@@ -59,15 +59,6 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsSeriesNetworkgraph >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
-]
-
-{ #category : #accessing }
 HighchartsSeriesNetworkgraph >> borderColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The border color of the map areas. In styled mode, the border stroke is given in the .highcharts-point class.
@@ -184,15 +175,6 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighchartsSeriesNetworkgraph >> cropThreshold: aNumber [
-
-	"When the series contains less points than the crop threshold, all points are drawn, even if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
-Defaults to 300."
-
-	configurationOptions at: 'cropThreshold' put: aNumber
-]
-
-{ #category : #accessing }
 HighchartsSeriesNetworkgraph >> cursor: aStringOrHighchartsCursorValue [
 
 	"You can set the cursor to &quot;pointer&quot; if you have click events attached to the series, to signal to the user that the points and lines can be clicked. In styled mode, the series cursor can be set with the same classes as listed under series.color.
@@ -222,7 +204,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsSeriesNetworkgraph >> data [
 
-	"An array of data points for the series. For the networkgraph series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.     data: [{         from: ´Category1´,         to: ´Category2´     }, {         from: ´Category1´,         to: ´Category3´     }]
+	"An array of data points for the series. For the networkgraph series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.    data: [{        from: ´Category1´,        to: ´Category2´    }, {        from: ´Category1´,        to: ´Category3´    }]
 "
 	^ configurationOptions at: 'data' ifAbsentPut: [ HighchartsSeriesNetworkgraphData new ]
 ]

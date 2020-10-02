@@ -10,7 +10,7 @@ Class {
 { #category : #accessing }
 HighchartsSeriesDependencywheelLevelsStatesInactive >> animation [
 
-	"The animation for entering the inactive state.
+	"Animation when not hovering over the marker.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsSeriesDependencywheelLevelsStatesInactiveAnimation new ]
 ]
@@ -36,7 +36,7 @@ Defaults to 0.1."
 { #category : #accessing }
 HighchartsSeriesDependencywheelLevelsStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area).
+	"Opacity of inactive markers.
 Defaults to 0.1."
 
 	configurationOptions at: 'opacity' put: aNumber

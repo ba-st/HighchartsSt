@@ -61,6 +61,20 @@ HighchartsSeriesPyramid3dPointEventsTest >> testSetDrop [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsSeriesPyramid3dPointEventsTest >> testSetLegendItemClick [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPyramid3dPointEvents new.
+	component legendItemClick: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'legendItemClick' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsSeriesPyramid3dPointEventsTest >> testSetMouseOut [
 
 	| component javascript expectedConfiguration |

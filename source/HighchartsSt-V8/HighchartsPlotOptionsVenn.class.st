@@ -64,7 +64,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsVenn >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsPlotOptionsVennAnimation new ]
 ]
@@ -76,24 +76,6 @@ HighchartsPlotOptionsVenn >> animationLimit: aNumber [
 "
 
 	configurationOptions at: 'animationLimit' put: aNumber
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsVenn >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsVenn >> boostThreshold: aNumber [
-
-	"Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the boostThreshold to 0. Setting it to 1 will force boosting. Note that the cropThreshold also affects this setting. When zooming in on a series that has fewer points than the cropThreshold, all points are rendered although outside the visible plot area, and the boostThreshold won´t take effect.
-Defaults to 5000."
-
-	configurationOptions at: 'boostThreshold' put: aNumber
 ]
 
 { #category : #accessing }

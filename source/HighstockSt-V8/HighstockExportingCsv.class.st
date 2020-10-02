@@ -16,6 +16,14 @@ Class {
 }
 
 { #category : #accessing }
+HighstockExportingCsv >> annotations [
+
+	"Options for annotations in the export-data table.
+"
+	^ configurationOptions at: 'annotations' ifAbsentPut: [ HighstockExportingCsvAnnotations new ]
+]
+
+{ #category : #accessing }
 HighstockExportingCsv >> columnHeaderFormatter: aFunctionOrNil [
 
 	"Formatter callback for the column headers. Parameters are:  item - The series or axis object) key -  The point key, for example y or z keyLength - The amount of value keys for this item, for example a range series has the keys low and high so the key length is 2.  If useMultiLevelHeaders is true, columnHeaderFormatter by default returns an object with columnTitle and topLevelColumnTitle for each key. Columns with the same topLevelColumnTitle have their titles merged into a single cell with colspan for table/Excel export. If useMultiLevelHeaders is false, or for CSV export, it returns the series name, followed by the key if there is more than one key. For the axis it returns the axis title or &quot;Category&quot; or &quot;DateTime&quot; by default. Return false to use Highcharts´ proposed header.

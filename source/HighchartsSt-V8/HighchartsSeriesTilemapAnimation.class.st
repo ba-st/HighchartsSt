@@ -8,6 +8,13 @@ Class {
 }
 
 { #category : #accessing }
+HighchartsSeriesTilemapAnimation >> defer: aNumber [
+
+
+	configurationOptions at: 'defer' put: aNumber
+]
+
+{ #category : #accessing }
 HighchartsSeriesTilemapAnimation >> duration: aNumber [
 
 

@@ -23,7 +23,7 @@ HighstockYAxis >> accessibility [
 { #category : #accessing }
 HighstockYAxis >> alignTicks: aBoolean [
 
-	"When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if tickAmount were specified. This can be prevented by setting alignTicks to false. If the grid lines look messy, it´s a good idea to hide them for the secondary axis by setting gridLineWidth to 0. If startOnTick or endOnTick in an Axis options are set to false, then the alignTicks will be disabled for the Axis. Disabled for logarithmic axes.
+	"When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if tickAmount were specified. This can be prevented by setting alignTicks to false. If the grid lines look messy, it´s a good idea to hide them for the secondary axis by setting gridLineWidth to 0. If startOnTick or endOnTick in an Axis options are set to false, then the alignTicks  will be disabled for the Axis. Disabled for logarithmic axes.
 Defaults to true."
 
 	configurationOptions at: 'alignTicks' put: aBoolean
@@ -39,12 +39,12 @@ Defaults to true."
 ]
 
 { #category : #accessing }
-HighstockYAxis >> alternateGridColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockYAxis >> alternateGridColor: aHighchartsColorType [
 
 	"When using an alternate grid color, a band is painted across the plot area between every other grid line.
 "
 
-	configurationOptions at: 'alternateGridColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'alternateGridColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -82,14 +82,6 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockYAxis >> dateTimeLabelFormats [
-
-	"For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the day unit can be used on midnight and hour unit be used for intermediate values on the same axis. For an overview of the replacement codes, see dateFormat. Defaults to: {     millisecond: ´H:M:S.L´,     second: ´H:M:S´,     minute: ´H:M´,     hour: ´H:M´,     day: ´e. b´,     week: ´e. b´,     month: ´b \´y´,     year: ´Y´ }
-"
-	^ configurationOptions at: 'dateTimeLabelFormats' ifAbsentPut: [ HighstockYAxisDateTimeLabelFormats new ]
-]
-
-{ #category : #accessing }
 HighstockYAxis >> endOnTick: aBoolean [
 
 	"Whether to force the axis to end on a tick. Use this option with the maxPadding option to control the axis end. This option is always disabled, when panning type is either y or xy.
@@ -117,12 +109,12 @@ HighstockYAxis >> floor: aNumber [
 ]
 
 { #category : #accessing }
-HighstockYAxis >> gridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockYAxis >> gridLineColor: aHighchartsColorType [
 
 	"Color of the grid lines extending the ticks across the plot area. In styled mode, the stroke is given in the .highcharts-grid-line class.
 Defaults to #e6e6e6."
 
-	configurationOptions at: 'gridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'gridLineColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -188,12 +180,12 @@ HighstockYAxis >> left: aNumberOrstring [
 ]
 
 { #category : #accessing }
-HighstockYAxis >> lineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockYAxis >> lineColor: aHighchartsColorType [
 
 	"The color of the line marking the axis itself. In styled mode, the line stroke is given in the .highcharts-axis-line or .highcharts-xaxis-line class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'lineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'lineColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -298,7 +290,7 @@ Defaults to 0.05."
 { #category : #accessing }
 HighstockYAxis >> minRange: aNumber [
 
-	"The minimum range to display on this axis. The entire axis will not be allowed to span over a smaller interval than this. For example, for a datetime axis the main unit is milliseconds. If minRange is set to 3600000, you can´t zoom in more than to one hour. The default minRange for the x axis is five times the smallest interval between any of the data points. On a logarithmic axis, the unit for the minimum range is the power. So a minRange of 1 means that the axis can be zoomed to 10-100, 100-1000, 1000-10000 etc. Note that the minPadding, maxPadding, startOnTick and endOnTick settings also affect how the extremes of the axis are computed.
+	"The minimum range to display on this axis. The entire axis will not be allowed to span over a smaller interval than this. For example, for a datetime axis the main unit is milliseconds. If minRange is set to 3600000, you can´t zoom in more than to one hour. The default minRange for the x axis is five times the smallest interval between any of the data points. On a logarithmic axis, the unit for the minimum range is the power. So a minRange of 1 means that the axis can be zoomed to 10-100, 100-1000, 1000-10000 etc. Note: The minPadding, maxPadding, startOnTick and endOnTick settings also affect how the extremes of the axis are computed.
 "
 
 	configurationOptions at: 'minRange' put: aNumber
@@ -314,12 +306,12 @@ HighstockYAxis >> minTickInterval: aNumber [
 ]
 
 { #category : #accessing }
-HighstockYAxis >> minorGridLineColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockYAxis >> minorGridLineColor: aHighchartsColorType [
 
 	"Color of the minor, secondary grid lines. In styled mode, the stroke width is given in the .highcharts-minor-grid-line class.
 Defaults to #f2f2f2."
 
-	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'minorGridLineColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -341,12 +333,12 @@ Defaults to 1."
 ]
 
 { #category : #accessing }
-HighstockYAxis >> minorTickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockYAxis >> minorTickColor: aHighchartsColorType [
 
 	"Color for the minor tick marks.
 Defaults to #999999."
 
-	configurationOptions at: 'minorTickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'minorTickColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }
@@ -544,12 +536,12 @@ HighstockYAxis >> tickAmount: aNumber [
 ]
 
 { #category : #accessing }
-HighstockYAxis >> tickColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
+HighstockYAxis >> tickColor: aHighchartsColorType [
 
 	"Color for the main tick marks. In styled mode, the stroke is given in the .highcharts-tick class.
 Defaults to #ccd6eb."
 
-	configurationOptions at: 'tickColor' put: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject
+	configurationOptions at: 'tickColor' put: aHighchartsColorType
 ]
 
 { #category : #accessing }

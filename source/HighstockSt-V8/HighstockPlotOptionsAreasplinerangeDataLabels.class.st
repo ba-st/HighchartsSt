@@ -11,12 +11,12 @@ Class {
 }
 
 { #category : #accessing }
-HighstockPlotOptionsAreasplinerangeDataLabels >> align: anObject [
+HighstockPlotOptionsAreasplinerangeDataLabels >> align: aString [
 
 	"The alignment of the data label compared to the point. If right, the right side of the label should be touching the point. For points with an extent, like columns, the alignments also dictates how to align it inside the box, as given with the inside option. Can be one of left, center or right.
-Defaults to nil."
+Defaults to undefined."
 
-	configurationOptions at: 'align' put: anObject
+	configurationOptions at: 'align' put: aString
 ]
 
 { #category : #accessing }
@@ -26,6 +26,14 @@ HighstockPlotOptionsAreasplinerangeDataLabels >> allowOverlap: aBoolean [
 Defaults to false."
 
 	configurationOptions at: 'allowOverlap' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockPlotOptionsAreasplinerangeDataLabels >> animation [
+
+	"Enable or disable the initial animation when a series is displayed for the dataLabels. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.
+"
+	^ configurationOptions at: 'animation' ifAbsentPut: [ HighstockPlotOptionsAreasplinerangeDataLabelsAnimation new ]
 ]
 
 { #category : #accessing }
@@ -94,7 +102,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockPlotOptionsAreasplinerangeDataLabels >> defer: aBoolean [
 
-	"Whether to defer displaying the data labels until the initial series animation has finished.
+	"Whether to defer displaying the data labels until the initial series animation has finished. Setting to false renders the data label immediately. If set to true inherits the defer time set in plotOptions.series.animation.
 Defaults to true."
 
 	configurationOptions at: 'defer' put: aBoolean
@@ -242,12 +250,12 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighstockPlotOptionsAreasplinerangeDataLabels >> verticalAlign: anObject [
+HighstockPlotOptionsAreasplinerangeDataLabels >> verticalAlign: aString [
 
 	"The vertical alignment of a data label. Can be one of top, middle or bottom. The default value depends on the data, for instance in a column chart, the label is above positive values and below negative values.
-Defaults to nil."
+Defaults to undefined."
 
-	configurationOptions at: 'verticalAlign' put: anObject
+	configurationOptions at: 'verticalAlign' put: aString
 ]
 
 { #category : #accessing }

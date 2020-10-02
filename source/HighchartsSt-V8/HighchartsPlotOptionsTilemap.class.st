@@ -58,24 +58,6 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsTilemap >> boostBlending: aString [
-
-	"Sets the color blending in the boost module.
-Defaults to undefined."
-
-	configurationOptions at: 'boostBlending' put: aString
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsTilemap >> boostThreshold: aNumber [
-
-	"Set the point threshold for when a series should enter boost mode. Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series. To disable boosting on the series, set the boostThreshold to 0. Setting it to 1 will force boosting. Note that the cropThreshold also affects this setting. When zooming in on a series that has fewer points than the cropThreshold, all points are rendered although outside the visible plot area, and the boostThreshold won´t take effect.
-Defaults to 5000."
-
-	configurationOptions at: 'boostThreshold' put: aNumber
-]
-
-{ #category : #accessing }
 HighchartsPlotOptionsTilemap >> className: aString [
 
 	"An additional class name to apply to the series´ graphical elements. This option does not replace default class names of the graphical element.
@@ -180,15 +162,6 @@ HighchartsPlotOptionsTilemap >> crisp: aBoolean [
 Defaults to true."
 
 	configurationOptions at: 'crisp' put: aBoolean
-]
-
-{ #category : #accessing }
-HighchartsPlotOptionsTilemap >> cropThreshold: aNumber [
-
-	"When the series contains less points than the crop threshold, all points are drawn, even if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.
-Defaults to 300."
-
-	configurationOptions at: 'cropThreshold' put: aNumber
 ]
 
 { #category : #accessing }

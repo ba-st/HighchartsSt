@@ -64,12 +64,12 @@ Defaults to {value}."
 ]
 
 { #category : #accessing }
-HighchartsYAxisLabels >> formatter: aHighchartsFormatterCallbackFunctionOfHighchartsAxisLabelsFormatterContextObject [
+HighchartsYAxisLabels >> formatter: aHighchartsAxisLabelsFormatterCallbackFunction [
 
 	"Callback JavaScript function to format the label. The value is given by this.value. Additional properties for this are axis, chart, isFirst and isLast. The value of the default label formatter can be retrieved by calling this.axis.defaultLabelFormatter.call(this) within the function. Defaults to: function() {     return this.value; }
 "
 
-	configurationOptions at: 'formatter' put: aHighchartsFormatterCallbackFunctionOfHighchartsAxisLabelsFormatterContextObject
+	configurationOptions at: 'formatter' put: aHighchartsAxisLabelsFormatterCallbackFunction
 ]
 
 { #category : #accessing }
@@ -173,7 +173,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsYAxisLabels >> x: aNumber [
 
-	"The x position offset of the label relative to the tick position on the axis. Defaults to -15 for left axis, 15 for right axis.
+	"The x position offset of all labels relative to the tick positions on the axis. Defaults to -15 for left axis, 15 for right axis.
 Defaults to -8."
 
 	configurationOptions at: 'x' put: aNumber
@@ -182,7 +182,7 @@ Defaults to -8."
 { #category : #accessing }
 HighchartsYAxisLabels >> y: aNumber [
 
-	"The y position offset of the label relative to the tick position on the axis.
+	"The y position offset of all labels relative to the tick positions on the axis. For polar and radial axis consider the use of the distance option.
 "
 
 	configurationOptions at: 'y' put: aNumber

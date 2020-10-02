@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsLangExportDataTest >> testSetAnnotationHeader [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLangExportData new.
+	component annotationHeader: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'annotationHeader' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLangExportDataTest >> testSetCategoryDatetimeHeader [
 
 	| component javascript expectedConfiguration |

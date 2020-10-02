@@ -350,6 +350,21 @@ HighstockSeriesColumnrangeTest >> testSetBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockSeriesColumnrangeTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesColumnrange new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'type' put: 'columnrange';
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockSeriesColumnrangeTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'tests-accessing' }
+HighchartsExportingCsvTest >> testGetAnnotations [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsExportingCsv new.
+	component annotations.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'annotations' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsExportingCsvTest >> testSetColumnHeaderFormatter [
 
 	| component javascript expectedConfiguration |

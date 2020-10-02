@@ -299,6 +299,20 @@ HighstockPlotOptionsColumnTest >> testSetBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighstockPlotOptionsColumnTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumn new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighstockPlotOptionsColumnTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

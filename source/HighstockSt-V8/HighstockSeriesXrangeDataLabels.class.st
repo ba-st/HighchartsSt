@@ -14,12 +14,12 @@ Class {
 }
 
 { #category : #accessing }
-HighstockSeriesXrangeDataLabels >> align: anObject [
+HighstockSeriesXrangeDataLabels >> align: aString [
 
 	"The alignment of the data label compared to the point. If right, the right side of the label should be touching the point. For points with an extent, like columns, the alignments also dictates how to align it inside the box, as given with the inside option. Can be one of left, center or right.
-Defaults to nil."
+Defaults to undefined."
 
-	configurationOptions at: 'align' put: anObject
+	configurationOptions at: 'align' put: aString
 ]
 
 { #category : #accessing }
@@ -29,6 +29,14 @@ HighstockSeriesXrangeDataLabels >> allowOverlap: aBoolean [
 Defaults to false."
 
 	configurationOptions at: 'allowOverlap' put: aBoolean
+]
+
+{ #category : #accessing }
+HighstockSeriesXrangeDataLabels >> animation [
+
+	"Enable or disable the initial animation when a series is displayed for the dataLabels. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.
+"
+	^ configurationOptions at: 'animation' ifAbsentPut: [ HighstockSeriesXrangeDataLabelsAnimation new ]
 ]
 
 { #category : #accessing }
@@ -97,7 +105,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockSeriesXrangeDataLabels >> defer: aBoolean [
 
-	"Whether to defer displaying the data labels until the initial series animation has finished.
+	"Whether to defer displaying the data labels until the initial series animation has finished. Setting to false renders the data label immediately. If set to true inherits the defer time set in plotOptions.series.animation.
 Defaults to true."
 
 	configurationOptions at: 'defer' put: aBoolean
@@ -263,12 +271,12 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighstockSeriesXrangeDataLabels >> y: anObject [
+HighstockSeriesXrangeDataLabels >> y: aNumber [
 
 	"The y position offset of the label relative to the point in pixels.
-Defaults to nil."
+Defaults to undefined."
 
-	configurationOptions at: 'y' put: anObject
+	configurationOptions at: 'y' put: aNumber
 ]
 
 { #category : #accessing }

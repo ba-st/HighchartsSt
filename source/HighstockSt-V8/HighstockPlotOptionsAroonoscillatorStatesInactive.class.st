@@ -10,7 +10,7 @@ Class {
 { #category : #accessing }
 HighstockPlotOptionsAroonoscillatorStatesInactive >> animation [
 
-	"The animation for entering the inactive state.
+	"Animation when not hovering over the marker.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighstockPlotOptionsAroonoscillatorStatesInactiveAnimation new ]
 ]
@@ -27,7 +27,7 @@ Defaults to true."
 { #category : #accessing }
 HighstockPlotOptionsAroonoscillatorStatesInactive >> opacity: aNumber [
 
-	"Opacity of series elements (dataLabels, line, area).
+	"Opacity of inactive markers.
 Defaults to 0.2."
 
 	configurationOptions at: 'opacity' put: aNumber

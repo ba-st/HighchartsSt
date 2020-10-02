@@ -32,6 +32,14 @@ Defaults to false."
 ]
 
 { #category : #accessing }
+HighchartsPlotOptionsFunnel3dDataLabels >> animation [
+
+	"Enable or disable the initial animation when a series is displayed for the dataLabels. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.
+"
+	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsPlotOptionsFunnel3dDataLabelsAnimation new ]
+]
+
+{ #category : #accessing }
 HighchartsPlotOptionsFunnel3dDataLabels >> backgroundColor: aHighchartsColorStringOrHighchartsGradientColorObjectOrHighchartsPatternObject [
 
 	"The background color or gradient for the data label.
@@ -97,7 +105,7 @@ Defaults to false."
 { #category : #accessing }
 HighchartsPlotOptionsFunnel3dDataLabels >> defer: aBoolean [
 
-	"Whether to defer displaying the data labels until the initial series animation has finished.
+	"Whether to defer displaying the data labels until the initial series animation has finished. Setting to false renders the data label immediately. If set to true inherits the defer time set in plotOptions.series.animation.
 Defaults to true."
 
 	configurationOptions at: 'defer' put: aBoolean
@@ -245,12 +253,12 @@ Defaults to false."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsFunnel3dDataLabels >> verticalAlign: anObject [
+HighchartsPlotOptionsFunnel3dDataLabels >> verticalAlign: aString [
 
 	"The vertical alignment of a data label. Can be one of top, middle or bottom. The default value depends on the data, for instance in a column chart, the label is above positive values and below negative values.
-Defaults to nil."
+Defaults to undefined."
 
-	configurationOptions at: 'verticalAlign' put: anObject
+	configurationOptions at: 'verticalAlign' put: aString
 ]
 
 { #category : #accessing }
@@ -263,12 +271,12 @@ Defaults to 0."
 ]
 
 { #category : #accessing }
-HighchartsPlotOptionsFunnel3dDataLabels >> y: anObject [
+HighchartsPlotOptionsFunnel3dDataLabels >> y: aNumber [
 
 	"The y position offset of the label relative to the point in pixels.
-Defaults to nil."
+Defaults to undefined."
 
-	configurationOptions at: 'y' put: anObject
+	configurationOptions at: 'y' put: aNumber
 ]
 
 { #category : #accessing }

@@ -129,6 +129,15 @@ HighchartsLang >> exportData [
 ]
 
 { #category : #accessing }
+HighchartsLang >> hideData: aString [
+
+	"The text for the menu item.
+Defaults to Hide data table."
+
+	configurationOptions at: 'hideData' put: aString
+]
+
+{ #category : #accessing }
 HighchartsLang >> invalidDate: aString [
 
 	"What to show in a date field for invalid dates. Defaults to an empty string.

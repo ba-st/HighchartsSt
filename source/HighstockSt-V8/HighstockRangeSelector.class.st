@@ -128,7 +128,7 @@ Defaults to %b %e, %Y."
 { #category : #accessing }
 HighstockRangeSelector >> inputDateParser: aHighchartsRangeSelectorParseCallbackFunction [
 
-	"A custom callback function to parse values entered in the input boxes and return a valid JavaScript time as milliseconds since 1970.
+	"A custom callback function to parse values entered in the input boxes and return a valid JavaScript time as milliseconds since 1970. The first argument passed is a value to parse, second is a boolean indicating use of the UTC time.
 "
 
 	configurationOptions at: 'inputDateParser' put: aHighchartsRangeSelectorParseCallbackFunction

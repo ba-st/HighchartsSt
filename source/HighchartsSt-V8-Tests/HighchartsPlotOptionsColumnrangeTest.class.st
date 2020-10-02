@@ -257,6 +257,20 @@ HighchartsPlotOptionsColumnrangeTest >> testSetBorderWidth [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsPlotOptionsColumnrangeTest >> testSetCenterInCategory [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsColumnrange new.
+	component centerInCategory: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'centerInCategory' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsPlotOptionsColumnrangeTest >> testSetClassName [
 
 	| component javascript expectedConfiguration |

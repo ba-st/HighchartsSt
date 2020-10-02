@@ -187,6 +187,20 @@ HighchartsLangTest >> testSetExitFullscreen [
 ]
 
 { #category : #'tests-accessing' }
+HighchartsLangTest >> testSetHideData [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsLang new.
+	component hideData: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'hideData' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
 HighchartsLangTest >> testSetInvalidDate [
 
 	| component javascript expectedConfiguration |

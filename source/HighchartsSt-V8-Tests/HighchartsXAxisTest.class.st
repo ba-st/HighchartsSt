@@ -47,20 +47,6 @@ HighchartsXAxisTest >> testGetCrosshair [
 ]
 
 { #category : #'tests-accessing' }
-HighchartsXAxisTest >> testGetDateTimeLabelFormats [
-
-	| component javascript expectedConfiguration |
-
-	component := HighchartsXAxis new.
-	component dateTimeLabelFormats.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'dateTimeLabelFormats' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighchartsXAxisTest >> testGetLabels [
 
 	| component javascript expectedConfiguration |

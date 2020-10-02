@@ -10,10 +10,10 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsSeriesWindbarbStatesNormal >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighchartsSeriesWindbarbStatesNormal >> animation: aBooleanOrPartialOfHighchartsAnimationOptionsObject [
 
 	"Animation when returning to normal state after hovering.
 Defaults to true."
 
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+	configurationOptions at: 'animation' put: aBooleanOrPartialOfHighchartsAnimationOptionsObject
 ]

@@ -112,6 +112,15 @@ Defaults to function () { return defined(this.y) ? this.y : 'Annotation label'; 
 ]
 
 { #category : #accessing }
+HighstockAnnotationsPitchforkLabelOptions >> includeInDataExport: aBoolean [
+
+	"Whether the annotation is visible in the exported data table.
+Defaults to true."
+
+	configurationOptions at: 'includeInDataExport' put: aBoolean
+]
+
+{ #category : #accessing }
 HighstockAnnotationsPitchforkLabelOptions >> overflow: aString [
 
 	"How to handle the annotation´s label that flow outside the plot area. The justify option aligns the label inside the plot area.

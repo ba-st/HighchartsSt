@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 HighchartsSeriesPyramid3dStates >> hover [
 
-	"Options for the hovered point. These settings override the normal state options when a point is moused over or touched.
+	"Options for the hovered series. These settings override the normal state options when a series is moused over or touched.
 "
 	^ configurationOptions at: 'hover' ifAbsentPut: [ HighchartsSeriesPyramid3dStatesHover new ]
 ]
@@ -31,7 +31,7 @@ HighchartsSeriesPyramid3dStates >> normal [
 { #category : #accessing }
 HighchartsSeriesPyramid3dStates >> select [
 
-	"Options for the selected point. These settings override the normal state options when a point is selected.
+	"Options for a selected funnel item.
 "
 	^ configurationOptions at: 'select' ifAbsentPut: [ HighchartsSeriesPyramid3dStatesSelect new ]
 ]

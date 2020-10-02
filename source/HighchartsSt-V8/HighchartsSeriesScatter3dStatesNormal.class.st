@@ -10,10 +10,10 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsSeriesScatter3dStatesNormal >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighchartsSeriesScatter3dStatesNormal >> animation: aBooleanOrPartialOfHighchartsAnimationOptionsObject [
 
 	"Animation when returning to normal state after hovering.
 Defaults to true."
 
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+	configurationOptions at: 'animation' put: aBooleanOrPartialOfHighchartsAnimationOptionsObject
 ]

@@ -61,9 +61,18 @@ Defaults to false."
 { #category : #accessing }
 HighchartsSeriesSankey >> animation [
 
-	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
+	"Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see chart.animation and the animation parameter under the API methods. The following properties are supported:  defer: The animation delay time in milliseconds.  duration: The duration of the animation in milliseconds.  easing: Can be a string reference to an easing function set on the Math object or a function. See the Custom easing function demo below.   Due to poor performance, animation is disabled in old IE browsers for several chart types.
 "
 	^ configurationOptions at: 'animation' ifAbsentPut: [ HighchartsSeriesSankeyAnimation new ]
+]
+
+{ #category : #accessing }
+HighchartsSeriesSankey >> centerInCategory: aBoolean [
+
+	"When true, the columns will center in the category, ignoring null or missing points. When false, space will be reserved for null or missing points.
+Defaults to false."
+
+	configurationOptions at: 'centerInCategory' put: aBoolean
 ]
 
 { #category : #accessing }
@@ -230,7 +239,7 @@ Defaults to Solid."
 { #category : #accessing }
 HighchartsSeriesSankey >> data [
 
-	"An array of data points for the series. For the sankey series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.     data: [{         from: ´Category1´,         to: ´Category2´,         weight: 2     }, {         from: ´Category1´,         to: ´Category3´,         weight: 5     }]
+	"An array of data points for the series. For the sankey series type, points can be given in the following way: An array of objects with named values. The following snippet shows only a few settings, see the complete options set below. If the total number of data points exceeds the series´ turboThreshold, this option is not available.    data: [{        from: ´Category1´,        to: ´Category2´,        weight: 2    }, {        from: ´Category1´,        to: ´Category3´,        weight: 5    }]
 "
 	^ configurationOptions at: 'data' ifAbsentPut: [ HighchartsSeriesSankeyData new ]
 ]

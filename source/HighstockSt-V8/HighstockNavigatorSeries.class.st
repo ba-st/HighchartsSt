@@ -125,8 +125,8 @@ Defaults to nil."
 { #category : #accessing }
 HighstockNavigatorSeries >> type: aString [
 
-	"The type of the navigator series. Defaults to areaspline if defined, otherwise line. Heads up: In column-type navigator, zooming is limited to at least one point with its pointRange.
-Defaults to areaspline."
+	"The type of the navigator series. Heads up: In column-type navigator, zooming is limited to at least one point with its pointRange.
+"
 
 	configurationOptions at: 'type' put: aString
 ]

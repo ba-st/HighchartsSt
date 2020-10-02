@@ -47,20 +47,6 @@ HighstockYAxisTest >> testGetCrosshair [
 ]
 
 { #category : #'tests-accessing' }
-HighstockYAxisTest >> testGetDateTimeLabelFormats [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockYAxis new.
-	component dateTimeLabelFormats.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'dateTimeLabelFormats' put: Dictionary new;
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockYAxisTest >> testGetLabels [
 
 	| component javascript expectedConfiguration |

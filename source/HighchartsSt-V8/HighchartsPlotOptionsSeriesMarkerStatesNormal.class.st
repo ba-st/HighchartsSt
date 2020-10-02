@@ -10,10 +10,10 @@ Class {
 }
 
 { #category : #accessing }
-HighchartsPlotOptionsSeriesMarkerStatesNormal >> animation: aBooleanOrHighchartsAnimationOptionsObject [
+HighchartsPlotOptionsSeriesMarkerStatesNormal >> animation: aBooleanOrPartialOfHighchartsAnimationOptionsObject [
 
 	"Animation when returning to normal state after hovering.
 Defaults to true."
 
-	configurationOptions at: 'animation' put: aBooleanOrHighchartsAnimationOptionsObject
+	configurationOptions at: 'animation' put: aBooleanOrPartialOfHighchartsAnimationOptionsObject
 ]

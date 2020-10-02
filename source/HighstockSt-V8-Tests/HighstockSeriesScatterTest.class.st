@@ -515,21 +515,6 @@ HighstockSeriesScatterTest >> testSetCrisp [
 ]
 
 { #category : #'tests-accessing' }
-HighstockSeriesScatterTest >> testSetCropThreshold [
-
-	| component javascript expectedConfiguration |
-
-	component := HighstockSeriesScatter new.
-	component cropThreshold: 'test'.
-	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
-	expectedConfiguration := Dictionary new
-		at: 'type' put: 'scatter';
-		at: 'cropThreshold' put: 'test';
-		yourself.
-	self assert: javascript equals: expectedConfiguration asJavascript
-]
-
-{ #category : #'tests-accessing' }
 HighstockSeriesScatterTest >> testSetCursor [
 
 	| component javascript expectedConfiguration |
