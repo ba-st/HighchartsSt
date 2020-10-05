@@ -1,0 +1,33 @@
+Class {
+	#name : #HighchartsSeriesPackedbubbleDataDataLabelsTextPathTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V8-Series-Packedbubble-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataDataLabelsTextPathTest >> testSetAttributes [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleDataDataLabelsTextPath new.
+	component attributes: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'attributes' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPackedbubbleDataDataLabelsTextPathTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPackedbubbleDataDataLabelsTextPath new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

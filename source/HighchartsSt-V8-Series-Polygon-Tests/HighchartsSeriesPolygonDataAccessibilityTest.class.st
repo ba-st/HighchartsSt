@@ -1,0 +1,19 @@
+Class {
+	#name : #HighchartsSeriesPolygonDataAccessibilityTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V8-Series-Polygon-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsSeriesPolygonDataAccessibilityTest >> testSetDescription [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsSeriesPolygonDataAccessibility new.
+	component description: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'description' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

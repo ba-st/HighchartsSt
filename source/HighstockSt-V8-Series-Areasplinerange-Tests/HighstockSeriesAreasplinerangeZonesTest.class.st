@@ -1,0 +1,75 @@
+Class {
+	#name : #HighstockSeriesAreasplinerangeZonesTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Series-Areasplinerange-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeZonesTest >> testSetClassName [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeZones new.
+	component className: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'className' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeZonesTest >> testSetColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeZones new.
+	component color: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'color' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeZonesTest >> testSetDashStyle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeZones new.
+	component dashStyle: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dashStyle' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeZonesTest >> testSetFillColor [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeZones new.
+	component fillColor: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'fillColor' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAreasplinerangeZonesTest >> testSetValue [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAreasplinerangeZones new.
+	component value: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'value' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

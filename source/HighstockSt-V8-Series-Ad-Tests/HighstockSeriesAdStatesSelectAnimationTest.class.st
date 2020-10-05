@@ -1,0 +1,19 @@
+Class {
+	#name : #HighstockSeriesAdStatesSelectAnimationTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Series-Ad-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockSeriesAdStatesSelectAnimationTest >> testSetDuration [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesAdStatesSelectAnimation new.
+	component duration: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'duration' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

@@ -1,0 +1,75 @@
+Class {
+	#name : #HighstockSeriesDpoAccessibilityTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Series-Dpo-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDpoAccessibilityTest >> testGetKeyboardNavigation [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDpoAccessibility new.
+	component keyboardNavigation.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'keyboardNavigation' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDpoAccessibilityTest >> testSetDescription [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDpoAccessibility new.
+	component description: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'description' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDpoAccessibilityTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDpoAccessibility new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDpoAccessibilityTest >> testSetExposeAsGroupOnly [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDpoAccessibility new.
+	component exposeAsGroupOnly: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'exposeAsGroupOnly' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesDpoAccessibilityTest >> testSetPointDescriptionFormatter [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesDpoAccessibility new.
+	component pointDescriptionFormatter: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'pointDescriptionFormatter' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

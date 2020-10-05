@@ -1,0 +1,17 @@
+"
+Animation setting for hovering the graph in line-type series.
+"
+Class {
+	#name : #HighchartsPlotOptionsWordcloudStatesSelectAnimation,
+	#superclass : #HighchartsComponent,
+	#category : #'HighchartsSt-V8-Series-Wordcloud'
+}
+
+{ #category : #accessing }
+HighchartsPlotOptionsWordcloudStatesSelectAnimation >> duration: aNumber [
+
+	"The duration of the hover animation in milliseconds. By default the hover state animates quickly in, and slowly back to normal.
+Defaults to 0."
+
+	configurationOptions at: 'duration' put: aNumber
+]

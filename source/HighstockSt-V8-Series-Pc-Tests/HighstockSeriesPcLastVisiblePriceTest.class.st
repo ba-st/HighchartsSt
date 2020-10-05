@@ -1,0 +1,33 @@
+Class {
+	#name : #HighstockSeriesPcLastVisiblePriceTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Series-Pc-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPcLastVisiblePriceTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPcLastVisiblePrice new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockSeriesPcLastVisiblePriceTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesPcLastVisiblePrice new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
