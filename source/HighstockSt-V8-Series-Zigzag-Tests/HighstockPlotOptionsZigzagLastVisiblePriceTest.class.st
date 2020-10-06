@@ -1,0 +1,33 @@
+Class {
+	#name : #HighstockPlotOptionsZigzagLastVisiblePriceTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Series-Zigzag-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagLastVisiblePriceTest >> testGetLabel [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzagLastVisiblePrice new.
+	component label.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'label' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsZigzagLastVisiblePriceTest >> testSetEnabled [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsZigzagLastVisiblePrice new.
+	component enabled: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'enabled' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

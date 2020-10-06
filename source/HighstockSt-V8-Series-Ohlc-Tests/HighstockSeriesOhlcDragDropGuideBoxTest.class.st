@@ -1,0 +1,19 @@
+Class {
+	#name : #HighstockSeriesOhlcDragDropGuideBoxTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Series-Ohlc-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockSeriesOhlcDragDropGuideBoxTest >> testGetDefault [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockSeriesOhlcDragDropGuideBox new.
+	component default.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'default' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

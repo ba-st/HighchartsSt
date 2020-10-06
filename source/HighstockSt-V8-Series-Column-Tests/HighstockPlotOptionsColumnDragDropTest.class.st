@@ -1,0 +1,187 @@
+Class {
+	#name : #HighstockPlotOptionsColumnDragDropTest,
+	#superclass : #TestCase,
+	#category : #'HighstockSt-V8-Series-Column-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testGetDragHandle [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragHandle.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragHandle' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testGetGuideBox [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component guideBox.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'guideBox' put: Dictionary new;
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDragMaxX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragMaxX: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragMaxX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDragMaxY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragMaxY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragMaxY' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDragMinX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragMinX: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragMinX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDragMinY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragMinY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragMinY' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDragPrecisionX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragPrecisionX: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragPrecisionX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDragPrecisionY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragPrecisionY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragPrecisionY' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDragSensitivity [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component dragSensitivity: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'dragSensitivity' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDraggableX [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component draggableX: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'draggableX' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetDraggableY [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component draggableY: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'draggableY' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetGroupBy [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component groupBy: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'groupBy' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighstockPlotOptionsColumnDragDropTest >> testSetLiveRedraw [
+
+	| component javascript expectedConfiguration |
+
+	component := HighstockPlotOptionsColumnDragDrop new.
+	component liveRedraw: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'liveRedraw' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]

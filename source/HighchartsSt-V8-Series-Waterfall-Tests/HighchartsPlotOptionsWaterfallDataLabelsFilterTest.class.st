@@ -1,0 +1,47 @@
+Class {
+	#name : #HighchartsPlotOptionsWaterfallDataLabelsFilterTest,
+	#superclass : #TestCase,
+	#category : #'HighchartsSt-V8-Series-Waterfall-Tests'
+}
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWaterfallDataLabelsFilterTest >> testSetOperator [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWaterfallDataLabelsFilter new.
+	component operator: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'operator' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWaterfallDataLabelsFilterTest >> testSetProperty [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWaterfallDataLabelsFilter new.
+	component property: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'property' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
+
+{ #category : #'tests-accessing' }
+HighchartsPlotOptionsWaterfallDataLabelsFilterTest >> testSetValue [
+
+	| component javascript expectedConfiguration |
+
+	component := HighchartsPlotOptionsWaterfallDataLabelsFilter new.
+	component value: 'test'.
+	javascript := String streamContents: [ :stream | component javascriptContentOn: stream ].
+	expectedConfiguration := Dictionary new
+		at: 'value' put: 'test';
+		yourself.
+	self assert: javascript equals: expectedConfiguration asJavascript
+]
