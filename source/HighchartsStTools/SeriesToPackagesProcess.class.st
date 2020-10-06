@@ -249,7 +249,7 @@ SeriesToPackagesProcess >> writeModelSpecFor: seriesPackageName into: stream [
 		cr;
 		cr;
 		nextPutAll:
-			( '	spec
+			( '	spec 
 		package: ''<1s>'' with: [ spec requires: ''<2s>'' ];
 		group: ''<3s>-Deployment'' with: ''<1s>''.'
 				expandMacrosWith: seriesPackageName
@@ -266,5 +266,7 @@ SeriesToPackagesProcess >> writeTestSpecFor: seriesPackageName into: stream [
 		nextPutAll:
 			( '	spec
 		package: ''<1s>'' with: [ spec requires: ''<2s>'' ];
-		group: ''Tests'' with: ''<1s>''.' expandMacrosWith: seriesPackageName with: packageName )
+		group: ''Tests'' with: ''<1s>''.'
+				expandMacrosWith: seriesPackageName
+				with: ( seriesPackageName allButLast: self testPackageSuffix size ) )
 ]
