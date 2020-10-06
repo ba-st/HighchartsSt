@@ -2,7 +2,7 @@
 I can help with changing the packages for the series classes and send them to their specific packages.
 "
 Class {
-	#name : #Highsoft8MoveTool,
+	#name : #SeriesToPackagesProcess,
 	#superclass : #Object,
 	#instVars : [
 		'packageName',
@@ -12,25 +12,25 @@ Class {
 }
 
 { #category : #'instance creation' }
-Highsoft8MoveTool class >> onHighcharts [
+SeriesToPackagesProcess class >> onHighcharts [
 
 	^ self onPackageNamed: 'HighchartsSt-V8' forClassesPrefixedBy: 'Highcharts'
 ]
 
 { #category : #'instance creation' }
-Highsoft8MoveTool class >> onHighstock [
+SeriesToPackagesProcess class >> onHighstock [
 
 	^ self onPackageNamed: 'HighstockSt-V8' forClassesPrefixedBy: 'Highstock'
 ]
 
 { #category : #'instance creation' }
-Highsoft8MoveTool class >> onPackageNamed: aName forClassesPrefixedBy: aPrefix [
+SeriesToPackagesProcess class >> onPackageNamed: aName forClassesPrefixedBy: aPrefix [
 
 	^ self new initializeOnPackageNamed: aName forClassesPrefixedBy: aPrefix
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> classesDefinedIn: aPackageName belongingWith: aSeriesClassName or: aPlotOptionsClassName [
+SeriesToPackagesProcess >> classesDefinedIn: aPackageName belongingWith: aSeriesClassName or: aPlotOptionsClassName [
 
 	^ ( self classesDefinedInPackageNamed: aPackageName )
 		select: [ :eachClass | 
@@ -40,13 +40,13 @@ Highsoft8MoveTool >> classesDefinedIn: aPackageName belongingWith: aSeriesClassN
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> classesDefinedInPackageNamed: aPackageName [
+SeriesToPackagesProcess >> classesDefinedInPackageNamed: aPackageName [
 
 	^ ( RPackageOrganizer default packageNamed: aPackageName ) definedClasses
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> classesRepresentingSeries [
+SeriesToPackagesProcess >> classesRepresentingSeries [
 
 	| seriesPrefix |
 
@@ -56,7 +56,7 @@ Highsoft8MoveTool >> classesRepresentingSeries [
 ]
 
 { #category : #processing }
-Highsoft8MoveTool >> compilePackageSpecInBaseline [
+SeriesToPackagesProcess >> compilePackageSpecInBaseline [
 
 	| source methodChange |
 
@@ -70,20 +70,20 @@ Highsoft8MoveTool >> compilePackageSpecInBaseline [
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> compiledMethodFor: aSeriesName in: aSeriesProviderClass [
+SeriesToPackagesProcess >> compiledMethodFor: aSeriesName in: aSeriesProviderClass [
 
 	^ ( Smalltalk at: aSeriesName asSymbol ) >> aSeriesProviderClass asLowercase asSymbol
 ]
 
 { #category : #'private - testing' }
-Highsoft8MoveTool >> does: aClass belongWith: aSeriesClassName [
+SeriesToPackagesProcess >> does: aClass belongWith: aSeriesClassName [
 
 	^ ( aClass name beginsWith: aSeriesClassName )
 		and: [ aClass name = aSeriesClassName or: [ ( aClass name at: aSeriesClassName size + 1 ) isUppercase ] ]
 ]
 
 { #category : #'private - testing' }
-Highsoft8MoveTool >> does: aClass representSeriesPrefixedBy: aPrefix [
+SeriesToPackagesProcess >> does: aClass representSeriesPrefixedBy: aPrefix [
 
 	^ ( aClass name beginsWith: aPrefix )
 		and: [ ( ( aClass name copyFrom: aPrefix size + 1 to: aClass name size )
@@ -92,7 +92,7 @@ Highsoft8MoveTool >> does: aClass representSeriesPrefixedBy: aPrefix [
 ]
 
 { #category : #processing }
-Highsoft8MoveTool >> executeMove [
+SeriesToPackagesProcess >> executeMove [
 
 	| seriesPrefix seriesNames |
 
@@ -104,14 +104,14 @@ Highsoft8MoveTool >> executeMove [
 ]
 
 { #category : #initialization }
-Highsoft8MoveTool >> initializeOnPackageNamed: aName forClassesPrefixedBy: aPrefix [
+SeriesToPackagesProcess >> initializeOnPackageNamed: aName forClassesPrefixedBy: aPrefix [
 
 	classPrefix := aPrefix.
 	packageName := aName
 ]
 
 { #category : #'private - processing' }
-Highsoft8MoveTool >> moveClassesAndMethodsFor: seriesName seriesPrefixedBy: seriesPrefix [
+SeriesToPackagesProcess >> moveClassesAndMethodsFor: seriesName seriesPrefixedBy: seriesPrefix [
 
 	| seriesPackage seriesPackageName |
 
@@ -125,7 +125,7 @@ Highsoft8MoveTool >> moveClassesAndMethodsFor: seriesName seriesPrefixedBy: seri
 ]
 
 { #category : #'private - processing' }
-Highsoft8MoveTool >> moveClassesFor: seriesName seriesPrefixedBy: seriesPrefix to: aPackage [
+SeriesToPackagesProcess >> moveClassesFor: seriesName seriesPrefixedBy: seriesPrefix to: aPackage [
 
 	| seriesClasses eachSeriesPrefix eachPlotOptionsPrefix |
 
@@ -139,7 +139,7 @@ Highsoft8MoveTool >> moveClassesFor: seriesName seriesPrefixedBy: seriesPrefix t
 ]
 
 { #category : #'private - processing' }
-Highsoft8MoveTool >> moveMethodFor: seriesName seriesPrefixedBy: seriesPrefix to: aPackage [
+SeriesToPackagesProcess >> moveMethodFor: seriesName seriesPrefixedBy: seriesPrefix to: aPackage [
 
 	| compiledMethod |
 
@@ -149,7 +149,7 @@ Highsoft8MoveTool >> moveMethodFor: seriesName seriesPrefixedBy: seriesPrefix to
 ]
 
 { #category : #'private - processing' }
-Highsoft8MoveTool >> moveTestClassesFor: seriesName seriesPrefixedBy: seriesPrefix to: aPackage [
+SeriesToPackagesProcess >> moveTestClassesFor: seriesName seriesPrefixedBy: seriesPrefix to: aPackage [
 
 	| seriesClasses eachSeriesPrefix eachPlotOptionsPrefix |
 
@@ -163,13 +163,13 @@ Highsoft8MoveTool >> moveTestClassesFor: seriesName seriesPrefixedBy: seriesPref
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> packageNameFor: aSeriesName [
+SeriesToPackagesProcess >> packageNameFor: aSeriesName [
 
 	^ '<1s>-Series-<2s>' expandMacrosWith: packageName with: aSeriesName
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> packageSpecSourceCodeForModel [
+SeriesToPackagesProcess >> packageSpecSourceCodeForModel [
 
 	^ String
 		streamContents: [ :stream | 
@@ -180,7 +180,7 @@ Highsoft8MoveTool >> packageSpecSourceCodeForModel [
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> packageSpecSourceCodeForTests [
+SeriesToPackagesProcess >> packageSpecSourceCodeForTests [
 
 	^ String
 		streamContents: [ :stream | 
@@ -191,13 +191,13 @@ Highsoft8MoveTool >> packageSpecSourceCodeForTests [
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> plotOptionsPrefix [
+SeriesToPackagesProcess >> plotOptionsPrefix [
 
 	^ '<1s>PlotOptions' expandMacrosWith: classPrefix
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> seriesModelPackageNames [
+SeriesToPackagesProcess >> seriesModelPackageNames [
 
 	| prefix |
 
@@ -207,7 +207,7 @@ Highsoft8MoveTool >> seriesModelPackageNames [
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> seriesPackageNamed: seriesPackageName [
+SeriesToPackagesProcess >> seriesPackageNamed: seriesPackageName [
 
 	^ [ ( RPackage named: seriesPackageName ) register ]
 		on: RPackageConflictError
@@ -215,13 +215,13 @@ Highsoft8MoveTool >> seriesPackageNamed: seriesPackageName [
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> seriesPrefix [
+SeriesToPackagesProcess >> seriesPrefix [
 
 	^ '<1s>Series' expandMacrosWith: classPrefix
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> seriesTestPackageNames [
+SeriesToPackagesProcess >> seriesTestPackageNames [
 
 	| prefix |
 
@@ -231,19 +231,19 @@ Highsoft8MoveTool >> seriesTestPackageNames [
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> testPackageNameFrom: aPackageName [
+SeriesToPackagesProcess >> testPackageNameFrom: aPackageName [
 
 	^ '<1s><2s>' expandMacrosWith: aPackageName with: self testPackageSuffix
 ]
 
 { #category : #'private - accessing' }
-Highsoft8MoveTool >> testPackageSuffix [
+SeriesToPackagesProcess >> testPackageSuffix [
 
 	^ '-Tests'
 ]
 
 { #category : #'private - processing' }
-Highsoft8MoveTool >> writeModelSpecFor: seriesPackageName into: stream [
+SeriesToPackagesProcess >> writeModelSpecFor: seriesPackageName into: stream [
 
 	stream
 		cr;
@@ -258,7 +258,7 @@ Highsoft8MoveTool >> writeModelSpecFor: seriesPackageName into: stream [
 ]
 
 { #category : #'private - processing' }
-Highsoft8MoveTool >> writeTestSpecFor: seriesPackageName into: stream [
+SeriesToPackagesProcess >> writeTestSpecFor: seriesPackageName into: stream [
 
 	stream
 		cr;
