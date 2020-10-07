@@ -72,7 +72,7 @@ SeriesToPackagesProcess >> compilePackageSpecInBaseline [
 { #category : #'private - accessing' }
 SeriesToPackagesProcess >> compiledMethodFor: aSeriesName in: aSeriesProviderClass [
 
-	^ ( Smalltalk at: aSeriesName asSymbol ) >> aSeriesProviderClass asLowercase asSymbol
+	^ ( Smalltalk at: aSeriesProviderClass asSymbol ) >> aSeriesName asLowercase asSymbol
 ]
 
 { #category : #'private - testing' }
@@ -143,9 +143,26 @@ SeriesToPackagesProcess >> moveMethodFor: seriesName seriesPrefixedBy: seriesPre
 
 	| compiledMethod |
 
-	compiledMethod := self compiledMethodFor: seriesPrefix in: seriesName.
+	compiledMethod := self compiledMethodFor: seriesName in: seriesPrefix.
 	aPackage addMethod: compiledMethod.
 	compiledMethod tagWith: ( '*<1s>' expandMacrosWith: aPackage name ) asSymbol
+]
+
+{ #category : #processing }
+SeriesToPackagesProcess >> movePlotOptionsSelectors [
+
+	| packagePrefix |
+
+	packagePrefix := '<1s>-Series-' expandMacrosWith: packageName.
+	self seriesModelPackageNames
+		do: [ :seriesPackageName | 
+			| plotOptionsClassName seriesName package |
+
+			package := RPackageOrganizer default packageNamed: seriesPackageName.
+			plotOptionsClassName := '<1s>PlotOptions' expandMacrosWith: classPrefix.
+			seriesName := seriesPackageName allButFirst: packagePrefix size.
+			self moveMethodFor: seriesName seriesPrefixedBy: plotOptionsClassName to: package
+			]
 ]
 
 { #category : #'private - processing' }
